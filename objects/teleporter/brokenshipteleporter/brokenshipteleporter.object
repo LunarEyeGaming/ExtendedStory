@@ -1,0 +1,42 @@
+{
+  "objectName" : "brokenshipteleporter",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "rarity" : "Common",
+
+  "category" : "decorative",
+  "description" : "A ship teleporter that is broken.",
+  "shortdescription" : "Broken Ship Teleporter",
+  "race" : "generic",
+
+  "apexDescription" : "The original teleporter for the Novabot Facility. Its neglect resulted in a total breakdown.",
+  "avianDescription" : "The main Novabot Facility teleporter; it has unfortunately broken beyond function.",
+  "floranDescription" : "Ship teleporter isss no longer working.",
+  "glitchDescription" : "Annoyed. This teleporter has completely stopped working.",
+  "humanDescription" : "The teleporter for the Novabot Facility. It has seen better days.",
+  "hylotlDescription" : "This teleporter has, at one point, been working.",
+  "novakidDescription" : "This teleporter ain't goin' to send me nowhere.",
+
+  "inventoryIcon" : "brokenshipteleportericon.png",
+  "orientations" : [
+    {
+      "image" : "brokenshipteleporter.png:<color>",
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid"
+    }
+  ],
+
+  "animation" : "/objects/noisy/noisy.animation",
+
+  "scripts" : [
+    "/objects/noisy/noisy.lua"
+  ],
+
+  "sounds" : [ "/sfx/interface/clickon_error.ogg" ]
+}

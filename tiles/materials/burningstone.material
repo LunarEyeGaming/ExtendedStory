@@ -1,0 +1,25 @@
+{
+  "materialId" : 1996,
+  "materialName" : "burningblock",
+  "particleColor" : [128, 64, 0, 255],
+  "itemDrop" : "burningblock",
+  "description" : "A cobble block that is on fire!",
+  "shortdescription" : "Eternally Burning Stone Block",
+  "glitchDescription" : "Surprised. This cobble block is eternally burning!",
+  "floranDescription" : "Burning ssstone.",
+  "novakidDescription" : "A burnin' rock.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "burningstone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 20,
+    "radiantLight" : [128, 64, 0]
+  }
+}

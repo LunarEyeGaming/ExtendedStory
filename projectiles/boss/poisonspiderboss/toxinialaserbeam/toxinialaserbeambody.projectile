@@ -1,0 +1,43 @@
+{
+  "projectileName" : "toxinialaserbeambody",
+  "image" : "toxinialaserbeambody.png",
+  "frameNumber" : 1,
+  "speed" : 100,
+  "animationLoops" : false,
+  "fullbright" : true,
+  "power" : 50,
+  "flippable" : true,
+  "piercing" : true,
+  "damageKind" : "default",
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "particle",
+		  "specification" : {
+		    "type" : "animated",
+            "animation" : "/animations/rainbowfire_es/rainbowfire_es4.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 6.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 1.2,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "middle",
+            "collidesForeground" : false,
+            "variance" : {
+              "position" : [1, 3],
+              "initialVelocity" : [2, 0]
+            }
+		  }
+		}
+	  ]
+	}
+  ]
+}

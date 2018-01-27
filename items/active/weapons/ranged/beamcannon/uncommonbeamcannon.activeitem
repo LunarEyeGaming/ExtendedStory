@@ -1,0 +1,442 @@
+{
+  "itemName" : "uncommonbeamcannon",
+  "price" : 990,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "description" : "A fully functional laser shooting cannon.",
+  "shortdescription" : "Uncommon Beam Cannon",
+  "tooltipKind" : "gun",
+  "category" : "Beam Cannon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 1,
+
+  "animation" : "/items/active/weapons/ranged/beamcannon/beamcannon.animation",
+  "animationParts" : {
+    "beamorigin" : "/items/active/weapons/ranged/beamcannon/<elementalType>beammuzzle.png"
+  },
+  "animationCustom" : { 
+    "sounds" : {
+      "beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ]
+  } },
+  "baseOffset" : [-3.0, 0.25],
+  "muzzleOffset" : [-0.6, 0.3],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  "animationScripts" : ["/items/active/effects/chain.lua"],
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
+    "class" : "BeamFire",
+
+    "fireTime" : 0.2,
+    "baseDps" : 10,
+    "energyUsage" : 20,
+
+    "damageConfig" : {
+      "statusEffects" : [ "bouncy" ],
+      "damageSourceKind" : "plasma",
+      "knockback" : 5
+    },
+
+    "beamLength" : 30,
+	
+	"beamTransitionTime" : 0.25,
+    "beamTransitionFrames" : 4,
+
+    "chain" : {
+      "startOffset" : [0, 0],
+      "startSegmentImage" : "/items/active/weapons/other/handheldioncannon/rainbowstart.png",
+      "segmentImage" : "/items/active/weapons/other/handheldioncannon/rainbow.png",
+      "endSegmentImage" : "/items/active/weapons/other/handheldioncannon/rainbowend.png",
+      "segmentSize" : 0.48,
+      "overdrawLength" : 0.2,
+      "taper" : 0,
+      "waveform" : {
+        "frequency" : 4.0,
+        "amplitude" : 0.2,
+        "movement" : 30.0
+      },
+      "fullbright" : true
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "animationStates" : {
+          "erchiuseye" : "squirm"
+        }
+      },
+      "fire" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "animationStates" : {
+          "erchiuseye" : "fire"
+        }
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "animationStates" : {
+          "erchiuseye" : "idle"
+        }
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildweapon.lua",
+  "builderConfig" : [{
+    "nameGenerator" : "beamcannonnames.config:nameGen",
+    "elementalType" : [
+      "fire",
+      "ice",
+      "electric",
+      "poison"
+    ],
+    "elementalConfig" : {
+      "fire" : {
+        "primaryAbility" : {
+		  "damageConfig" : {
+            "statusEffects" : [ "burning" ],
+            "damageSourceKind" : "fireplasma",
+            "knockback" : 5
+          },
+		  "chain" : {
+            "startSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamstart/beamstartfire.png:<beamFrame>",
+            "segmentImage" : "/items/active/weapons/ranged/beamcannon/beam/beamfire.png:<beamFrame>",
+            "endSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamend/beamendfire.png:<beamFrame>"
+	      }
+		},
+        "animationCustom" : { "sounds" : {
+          "fireStart" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
+          "fireLoop" : [ "/sfx/gun/erchiuseyebeam_loop.ogg" ],
+          "fireEnd" : [ "/sfx/gun/erchiuseyebeam_stop.ogg" ]
+        },
+        "particleEmitters" : {
+          "beamCollision" : {
+            "active" : false,
+            "transformationGroups" : ["muzzle", "beamEnd"],
+            "emissionRate" : 30,
+            "particles" : [
+              {
+                "particle" : {
+                  "type" : "ember",
+                  "color" : [255, 192, 41, 255],
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -4.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1.8,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              },
+              {
+                "particle" : {
+                  "type" : "animated",
+                  "animation" : "/animations/dust2/dust2.animation",
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -2.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              }
+            ]
+          }
+        } },
+		"animatedParts" : {
+		  "beamorigin" : "/items/active/weapons/ranged/beamcannon/firebeammuzzle.png"
+		}
+      },
+      "ice" : {
+        "primaryAbility" : {
+		  "damageConfig" : {
+            "statusEffects" : [ "frostslow" ],
+            "damageSourceKind" : "iceplasma",
+            "knockback" : 5
+          },
+		  "chain" : {
+            "startSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamstart/beamstartice.png:<beamFrame>",
+            "segmentImage" : "/items/active/weapons/ranged/beamcannon/beam/beamice.png:<beamFrame>",
+            "endSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamend/beamendice.png:<beamFrame>"
+	      }
+		},
+        "animationCustom" : { "sounds" : {
+          "fireStart" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
+          "fireLoop" : [ "/sfx/gun/erchiuseyebeam_loop.ogg" ],
+          "fireEnd" : [ "/sfx/gun/erchiuseyebeam_stop.ogg" ]
+        },
+        "particleEmitters" : {
+          "beamCollision" : {
+            "active" : false,
+            "transformationGroups" : ["muzzle", "beamEnd"],
+            "emissionRate" : 30,
+            "particles" : [
+              {
+                "particle" : {
+                  "type" : "ember",
+                  "color" : [119, 227, 231, 255],
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -4.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1.8,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              },
+              {
+                "particle" : {
+                  "type" : "animated",
+                  "animation" : "/animations/dust2/dust2.animation",
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -2.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              }
+            ]
+          }
+        } },
+		"animatedParts" : {
+		  "beamorigin" : "/items/active/weapons/ranged/beamcannon/icebeammuzzle.png"
+		}
+      },
+      "poison" : {
+        "primaryAbility" : {
+		  "damageConfig" : {
+            "statusEffects" : [ "weakpoison" ],
+            "damageSourceKind" : "poisonplasma",
+            "knockback" : 5
+          },
+		  "chain" : {
+            "startSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamstart/beamstartpoison.png:<beamFrame>",
+            "segmentImage" : "/items/active/weapons/ranged/beamcannon/beam/beampoison.png:<beamFrame>",
+            "endSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamend/beamendpoison.png:<beamFrame>"
+	      }
+		},
+        "animationCustom" : { "sounds" : {
+          "fireStart" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
+          "fireLoop" : [ "/sfx/gun/erchiuseyebeam_loop.ogg" ],
+          "fireEnd" : [ "/sfx/gun/erchiuseyebeam_stop.ogg" ]
+        },
+        "particleEmitters" : {
+          "beamCollision" : {
+            "active" : false,
+            "transformationGroups" : ["muzzle", "beamEnd"],
+            "emissionRate" : 30,
+            "particles" : [
+              {
+                "particle" : {
+                  "type" : "ember",
+                  "color" : [188, 215, 115, 255],
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -4.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1.8,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              },
+              {
+                "particle" : {
+                  "type" : "animated",
+                  "animation" : "/animations/dust2/dust2.animation",
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -2.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              }
+            ]
+          }
+        } },
+		"animatedParts" : {
+		  "beamorigin" : "/items/active/weapons/ranged/beamcannon/poisonbeammuzzle.png"
+		}
+      },
+      "electric" : {
+        "primaryAbility" : {
+		  "damageConfig" : {
+            "statusEffects" : [ "electrified" ],
+            "damageSourceKind" : "electricplasma",
+            "knockback" : 5
+          },
+		  "chain" : {
+            "startSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamstart/beamstartelectric.png:<beamFrame>",
+            "segmentImage" : "/items/active/weapons/ranged/beamcannon/beam/beamelectric.png:<beamFrame>",
+            "endSegmentImage" : "/items/active/weapons/ranged/beamcannon/beamend/beamendelectric.png:<beamFrame>"
+	      }
+		},
+        "animationCustom" : { "sounds" : {
+          "fireStart" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
+          "fireLoop" : [ "/sfx/gun/erchiuseyebeam_loop.ogg" ],
+          "fireEnd" : [ "/sfx/gun/erchiuseyebeam_stop.ogg" ]
+        },
+        "particleEmitters" : {
+          "beamCollision" : {
+            "active" : false,
+            "transformationGroups" : ["muzzle", "beamEnd"],
+            "emissionRate" : 30,
+            "particles" : [
+              {
+                "particle" : {
+                  "type" : "ember",
+                  "color" : [170, 140, 244, 255],
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -4.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1.8,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              },
+              {
+                "particle" : {
+                  "type" : "animated",
+                  "animation" : "/animations/dust2/dust2.animation",
+                  "position" : [0, 0],
+                  "initialVelocity" : [0, 2.0],
+                  "finalVelocity" : [0, -2.0],
+                  "approach" : [0, 10],
+                  "fade" : 0.3,
+                  "destructionAction" : "shrink",
+                  "destructionTime" : 0.3,
+                  "size" : 1,
+                  "timeToLive" : 0.5,
+                  "fullbright" : true,
+                  "layer" : "front",
+                  "collidesForeground" : false,
+                  "variance" : {
+                    "position" : [0.5, 0.5],
+                    "initialVelocity" : [2, 2]
+                  }
+                }
+              }
+            ]
+          }
+        } },
+		"animatedParts" : {
+		  "beamorigin" : "/items/active/weapons/ranged/beamcannon/electricbeammuzzle.png"
+		}
+      }
+    },
+    "animationParts" : {
+      "butt" : {
+        "path" : "/items/active/weapons/ranged/beamcannon/butt/<variant>.png",
+        "variants" : 10,
+        "paletteSwap" : true
+      },
+      "middle" : {
+        "path" : "/items/active/weapons/ranged/beamcannon/middle/<variant>.png",
+        "variants" : 10,
+        "paletteSwap" : true
+      },
+      "barrel" : {
+        "path" : "/items/active/weapons/ranged/beamcannon/barrel/<variant>.png",
+        "variants" : 10,
+        "paletteSwap" : true
+      },
+      "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+    },
+    "gunParts" : ["butt", "middle", "barrel"],
+    "altAbilities" : [
+      "lance",
+      "burstshot",
+      "grenadelauncher"
+    ],
+    "palette" : "/items/active/weapons/colors/ranged.weaponcolors",
+    "iconDrawables" : ["butt", "middle", "barrel"]
+  }]
+}

@@ -1,0 +1,24 @@
+{
+  "materialId" : 1991,
+  "materialName" : "halloweencobblestone",
+  "particleColor" : [173, 66, 0, 255],
+  "itemDrop" : "halloweencobblestone",
+  "shortdescription" : "Halloween Cobblestone",
+  "description" : "Hard and spooky cobblestone, smooth to the touch.",
+  "glitchDescription" : "Facinated. These cobblestones are naturally smooth and spooky.",
+  "floranDescription" : "Ssmooth and sspooky cobblessstone rockss.",
+  "novakidDescription" : "Cobble that is sorta uncommon to see.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 4,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "halloweencobblestone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 1640
+  }
+}

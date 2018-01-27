@@ -1,0 +1,678 @@
+{
+  "itemName" : "electricartifact",
+  "price" : 1440,
+  "maxStack" : 1,
+  "level" : 10,
+  "rarity" : "Legendary",
+  "description" : "A weapon created by the ancients for extreme situations.",
+  "shortdescription" : "^blue;Electric Artifact^reset;",
+  "tooltipKind" : "staff",
+  "category" : "Artifact",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","staff"],
+
+  "animation" : "/items/active/weapons/artifact/electricartifact/electricartifact.animation",
+  "animationParts" : {
+    "staff" : "electricartifact.png",
+    "stone" : "stone.png",
+    "chargeEffect" : "staffglow.png"
+  },
+  "animationCustom" : {
+    "lights" : {
+      "glow" : {
+        "color" : [196, 196, 245]
+      }
+    },
+    "particleEmitters" : {
+      "physicalcharge" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "emissionRate" : 10,
+        "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
+        "particles" : [
+          {"particle" : "kluexstaff"}
+        ]
+      }
+    },
+
+    "sounds" : {
+      "physicalactivate" : ["/sfx/melee/staff_aura_activate.ogg"]
+    }
+  },
+
+  "inventoryIcon" : "electricartifacticon.png",
+
+  "scripts" : ["/items/active/weapons/staff/staff.lua"],
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "weaponRotation" : 0,
+      "twoHanded" : false,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "duration" : 0.6,
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charged" : {
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "discharge" : {
+      "duration" : 0.5,
+      "armRotation" : -10,
+      "weaponRotation" : -50,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "cooldown" : {
+      "duration" : 0.5,
+      "armRotation" : -45,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    }
+  },
+
+  "elementalType" : "electric",
+
+  "primaryAbilityType" : "elementorb",
+  "primaryAbility" : {
+    "name" : "Electrocution", 
+	"projectileType" : "electricorb",
+	"projectileParameters" : {
+	  "periodicActions" : [
+	    {
+	      "time" : 2.0, 
+		  "repeat" : true, 
+		  "action" : "projectile", 
+		  "type" : "energyfist",
+          "angle" : 90,
+          "fuzzAngle" : 180,
+		  "config" : {
+		    "speed" : 80,
+			"timeToLive" : 0.25,
+			"piercing" : true,
+			"processing" : "?0",
+			"periodicActions" : [
+			  {
+			    "time" : 0.025,
+				"action" : "projectile",
+				"type" : "energyfist",
+				"config" : {
+				  "piercing" : true,
+				  "speed" : 0,
+				  "processing" : "?0",
+				  "timeToLive" : 1,
+				  "actionOnReap" : [
+				    {
+					  "action" : "projectile",
+					  "type" : "teslabolt",
+					  "config" : { "speed" : 0 }
+					}
+				  ]
+				}
+			  }
+			],
+			"actionOnReap" : [
+			  {
+			    "action" : "projectile",
+				"type" : "electricorb",
+				"direction" : [1.0, 0.0],
+				"config" : {
+				  "timeToLive" : 1,
+				  "periodicActions" : [
+				    {
+					  "time" : 0.25,
+					  "repeat" : false,
+					  "action" : "projectile",
+					  "type" : "energyfist",
+					  "angle" : 90,
+					  "fuzzAngle" : 180,
+					  "config" : {
+					    "speed" : 80,
+						"timeToLive" : 0.25,
+			            "piercing" : true,
+						"processing" : "?0",
+						"periodicActions" : [
+						  {
+						    "time" : 0.025,
+							"action" : "projectile",
+							"type" : "energyfist",
+							"config" : {
+							  "piercing" : true,
+							  "speed" : 0,
+							  "processing" : "?0",
+							  "timeToLive" : 1,
+							  "actionOnReap" : [
+							    {
+								  "action" : "projectile",
+								  "type" : "teslabolt",
+								  "config" : { "speed" : 0 }
+								}
+							  ]
+							}
+						  }
+						],
+						"actionOnReap" : [
+						  {
+						    "action" : "projectile",
+							"type" : "electricorb",
+							"direction" : [1.0, 0.0],
+							"config" : {
+							  "timeToLive" : 1,
+							  "periodicActions" : [
+							    {
+								  "time" : 0.25,
+								  "repeat" : false,
+								  "action" : "projectile",
+								  "type" : "energyfist",
+								  "angle" : 90,
+								  "fuzzAngle" : 180,
+								  "config" : {
+								    "speed" : 80,
+									"timeToLive" : 0.25,
+			                        "piercing" : true,
+									"processing" : "?0",
+									"periodicActions" : [
+									  {
+									    "time" : 0.025,
+										"action" : "projectile",
+										"type" : "energyfist",
+										"config" : {
+										  "piercing" : true,
+										  "speed" : 0,
+										  "processing" : "?0",
+										  "timeToLive" : 1,
+										  "actionOnReap" : [
+										    {
+											  "action" : "projectile",
+											  "type" : "teslabolt",
+											  "config" : { "speed" : 0 }
+											}
+										  ]
+										}
+									  }
+									],
+									"actionOnReap" : [
+									  {
+									    "action" : "projectile",
+										"type" : "electricorb",
+										"direction" : [1.0, 0.0],
+										"config" : {
+										  "timeToLive" : 1,
+										  "periodicActions" : [
+										    {
+											  "time" : 0.25,
+											  "repeat" : false,
+											  "action" : "projectile",
+											  "type" : "energyfist",
+											  "angle" : 90,
+											  "fuzzAngle" : 180,
+											  "config" : {
+											    "speed" : 80,
+												"timeToLive" : 0.25,
+												"piercing" : true,
+												"processing" : "?0",
+												"periodicActions" : [
+												  {
+												    "time" : 0.025,
+													"action" : "projectile",
+													"type" : "energyfist",
+													"config" : {
+													  "piercing" : true,
+													  "speed" : 0,
+													  "processing" : "?0",
+													  "timeToLive" : 1,
+													  "actionOnReap" : [
+													    {
+														  "action" : "projectile",
+														  "type" : "teslabolt",
+											              "config" : { "speed" : 0 }
+														}
+													  ]
+													}
+												  }
+												],
+												"actionOnReap" : [
+												  {
+												    "action" : "projectile",
+													"type" : "electricorb",
+													"direction" : [1.0, 0.0],
+													"config" : {
+													  "timeToLive" : 1,
+													  "periodicActions" : [
+													    {
+														  "time" : 0.25,
+														  "repeat" : false,
+														  "action" : "projectile",
+														  "type" : "energyfist",
+														  "angle" : 90,
+														  "fuzzAngle" : 180,
+														  "config" : {
+														    "speed" : 80,
+															"timeToLive" : 0.25,
+															"piercing" : true,
+															"processing" : "?0",
+															"periodicActions" : [
+															  {
+															    "time" : 0.025,
+																"action" : "projectile",
+																"type" : "energyfist",
+																"config" : {
+																  "piercing" : true,
+																  "speed" : 0,
+																  "processing" : "?0",
+																  "timeToLive" : 1,
+																  "actionOnReap" : [
+																    {
+																	  "action" : "projectile",
+																	  "type" : "teslabolt",
+														              "config" : { "speed" : 0 }
+																	}
+																  ]
+																}
+															  }
+															],
+															"actionOnReap" : [
+															  {
+															    "action" : "projectile",
+																"type" : "electricorb",
+																"direction" : [1.0, 0.0],
+																"config" : {
+																  "timeToLive" : 1,
+																  "actionOnReap" : [
+																    {
+																      "action" : "config",
+																	  "file" : "/projectiles/boss/ancientavatar/lightningboltexplosion/lightningboltexplosion.config"
+																	}
+																  ]
+																} 
+															  }
+															]
+														  }
+														}
+													  ]
+													}
+												  }
+												]
+											  }
+											}
+										  ]
+										}
+									  }
+									]
+								  }
+								}
+							  ]
+							}
+						  }
+						]
+					  }
+					}
+				  ]
+				}
+			  }
+			]
+		  }
+	    },
+		{
+		  "time" : 1.0,
+		  "repeat" : true,
+		  "action" : "projectile",
+		  "type" : "electricspinswoosh",
+		  "config" : { "speed" : 0, "timeToLive" : 6.0 }
+		},
+		{
+		  "time" : 1.567,
+		  "action" : "projectile",
+		  "type" : "electricbouncer",
+		  "angle" : 90,
+		  "fuzzAngle" : 180,
+		  "config" : { "speed" : 100 }
+		},
+		{
+		  "time" : 1.681,
+		  "action" : "projectile",
+		  "type" : "electricplasmarocket",
+		  "angle" : 90,
+		  "fuzzAngle" : 180
+		},
+		{
+		  "time" : 2.24,
+		  "action" : "projectile",
+		  "type" : "electricplasmagrenade",
+		  "angle" : 90,
+		  "fuzzAngle" : 180
+		},
+		{
+		  "time" : 2.764,
+		  "action" : "loop",
+		  "count" : 10,
+		  "body" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "lightningthrower",
+			  "angle" : 90,
+			  "fuzzAngle" : 180
+			}
+		  ]
+		}
+	  ],
+	  "controlMovement" : {"maxSpeed" : 20, "controlForce" : 200}
+    }
+  },
+
+  "altAbilityType" : "elementorb",
+  "altAbility" : {
+    "name" : "Thunder Beam", 
+	"projectileType" : "electricorb", 
+	"projectileParameters" : {
+	  "timeToLive" : 3.01,
+	  "power" : 0,
+	  "controlMovement" : {"maxSpeed" : 8, "controlForce" : 200},
+	  "periodicActions" : [
+	    {
+		  "time" : 0.1,
+		  "repeat" : true,
+		  "action" : "projectile",
+		  "type" : "preshortbeam",
+		  "direction" : [0.0, -1.0],
+		  "offset" : [0.0, -1.0],
+		  "config" : {
+		    "actionOnReap" : [{"action" : "projectile", "type" : "shortbeam", "config" : {"speed" : 100}}],
+			"speed" : 100
+		  }
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "sound",
+		  "options" : ["/sfx/npc/boss/tentacleboss_beam_charge.ogg"]
+		},
+		{
+		  "time" : 0.01,
+		  "action" : "projectile",
+		  "type" : "meleelash",
+		  "direction" : [1.0, 0.0],
+		  "offset" : [1.0, 0.0],
+		  "config" : {"fullbright" : true, "power" : 0}
+		},
+		{
+		  "time" : 0.01,
+		  "action" : "projectile",
+		  "type" : "meleelash",
+		  "direction" : [-1.0, 0.0],
+		  "offset" : [-1.0, 0.0],
+		  "config" : {"fullbright" : true, "power" : 0}
+		},
+		{
+		  "time" : 3.0,
+		  "action" : "projectile",
+		  "type" : "electricorb",
+		  "config" : {
+		    "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg",
+		    "periodicActions" : [
+			  {
+			    "time" : 0.0,
+				"repeat" : false,
+				"action" : "projectile",
+				"type" : "thunderbeam",
+				"direction" : [0.0, -1.0],
+				"config" : {
+				  "speed" : 100,
+				  "periodicActions" : [
+				    {
+					  "time" : 0.01,
+					  "action" : "projectile",
+					  "type" : "thunderbeam"
+					},
+					{
+					  "time" : 0.0,
+					  "repeat" : false,
+					  "action" : "sound",
+					  "options" : ["/sfx/npc/boss/tentacleboss_beam_blast.ogg"] 
+					}
+				  ],
+				  "actionOnReap" : [
+				    {
+					  "action" : "projectile",
+					  "type" : "invisibleprojectile",
+					  "config" : {
+					    "damageTeam" : {"type" : "friendly"},
+					    "periodicActions" : [
+						  {
+						    "time" : 0.01,
+							"action" : "particle",
+							"specification" : {
+							  "type" : "animated",
+                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
+                              "position" : [0, 0],
+                              "initialVelocity" : [0, 0.0],
+                              "finalVelocity" : [0, 0.0],
+                              "approach" : [0, 10],
+                              "fade" : 0.3,
+                              "destructionAction" : "shrink",
+                              "destructionTime" : 0.3,
+                              "size" : 1.0,
+                              "timeToLive" : 0.5,
+                              "fullbright" : true,
+                              "layer" : "front",
+                              "collidesForeground" : false,
+                              "variance" : {
+                                "position" : [0.0, 0.0],
+                                "initialVelocity" : [0, 0]
+							  }
+			   				}
+						  },
+						  {
+						    "time" : 0.1,
+							"action" : "projectile",
+							"type" : "lightning",
+							"angle" : 90,
+							"fuzzAngle" : 180,
+							"config" : {"timeToLive" : 1, "damageTeam" : {"type" : "friendly"}}
+						  }
+						],
+						"timeToLive" : 6,
+						"piercing" : true,
+						"bounces" : -1,
+						"persistentAudio" : "/sfx/objects/crystaltrap_loop.ogg",
+		                "actionOnReap" : [
+		                  {
+			                "action" : "sound",
+			                "options" : ["/sfx/objects/crystaltrap_off.ogg"]
+			              }
+		                ]
+					  }
+					},
+					{
+					  "action" : "projectile",
+					  "type" : "astraltear",
+					  "direction" : [1.0, 0.0],
+					  "config" : {
+					    "periodicActions" : [
+						  {
+						    "time" : 0.01,
+							"action" : "particle",
+							"specification" : {
+							  "type" : "animated",
+                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
+                              "position" : [0, 0],
+                              "initialVelocity" : [0, 0.0],
+                              "finalVelocity" : [0, 0.0],
+                              "approach" : [0, 10],
+                              "fade" : 0.3,
+                              "destructionAction" : "shrink",
+                              "destructionTime" : 0.3,
+                              "size" : 1.0,
+                              "timeToLive" : 0.5,
+                              "fullbright" : true,
+                              "layer" : "front",
+                              "collidesForeground" : false,
+                              "variance" : {
+                                "position" : [0.0, 0.0],
+                                "initialVelocity" : [0, 0]
+							  }
+			   				}
+						  }
+						],
+						"timeToLive" : 6,
+						"piercing" : true,
+						"persistentAudio" : "/sfx/melee/barrier_create_electric.ogg",
+						"speed" : 20,
+						"processing" : "?0",
+						"power" : 30,
+                        "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+						"knockback" : 50,
+						"actionOnReap" : [
+						  {
+							"action" : "particle",
+							"specification" : {
+							  "type" : "animated",
+                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
+                              "position" : [0, 0],
+                              "initialVelocity" : [0, 0.0],
+                              "finalVelocity" : [0, 0.0],
+                              "approach" : [0, 10],
+                              "fade" : 0.3,
+                              "destructionAction" : "shrink",
+                              "destructionTime" : 0.3,
+                              "size" : 2.0,
+                              "timeToLive" : 0.5,
+                              "fullbright" : true,
+                              "layer" : "front",
+                              "collidesForeground" : false,
+                              "variance" : {
+                                "position" : [0.0, 0.0],
+                                "initialVelocity" : [0, 0]
+							  }
+			   				}
+						  },
+						  {
+						    "action" : "sound",
+							"options" : ["/sfx/npc/boss/crystalboss_beamin.ogg"]
+						  }
+						]
+					  }
+					},
+					{
+					  "action" : "projectile",
+					  "type" : "astraltear",
+					  "direction" : [-1.0, 0.0],
+					  "config" : {
+					    "periodicActions" : [
+						  {
+						    "time" : 0.01,
+							"action" : "particle",
+							"specification" : {
+							  "type" : "animated",
+                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
+                              "position" : [0, 0],
+                              "initialVelocity" : [0, 0.0],
+                              "finalVelocity" : [0, 0.0],
+                              "approach" : [0, 10],
+                              "fade" : 0.3,
+                              "destructionAction" : "shrink",
+                              "destructionTime" : 0.3,
+                              "size" : 1.0,
+                              "timeToLive" : 0.5,
+                              "fullbright" : true,
+                              "layer" : "front",
+                              "collidesForeground" : false,
+                              "variance" : {
+                                "position" : [0.0, 0.0],
+                                "initialVelocity" : [0, 0]
+							  }
+			   				}
+						  }
+						],
+						"timeToLive" : 6,
+						"piercing" : true,
+						"persistentAudio" : "/sfx/melee/barrier_create_electric.ogg",
+						"speed" : 20,
+						"processing" : "?0",
+						"power" : 30,
+                        "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+						"knockback" : 50,
+						"actionOnReap" : [
+						  {
+							"action" : "particle",
+							"specification" : {
+							  "type" : "animated",
+                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
+                              "position" : [0, 0],
+                              "initialVelocity" : [0, 0.0],
+                              "finalVelocity" : [0, 0.0],
+                              "approach" : [0, 10],
+                              "fade" : 0.3,
+                              "destructionAction" : "shrink",
+                              "destructionTime" : 0.3,
+                              "size" : 2.0,
+                              "timeToLive" : 0.5,
+                              "fullbright" : true,
+                              "layer" : "front",
+                              "collidesForeground" : false,
+                              "variance" : {
+                                "position" : [0.0, 0.0],
+                                "initialVelocity" : [0, 0]
+							  }
+			   				}
+						  },
+						  {
+						    "action" : "sound",
+							"options" : ["/sfx/npc/boss/crystalboss_beamin.ogg"]
+						  }
+						]
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "time" : 0.01,
+				"action" : "projectile",
+				"type" : "meleelash",
+				"direction" : [1.0, 0.0],
+				"offset" : [1.0, 0.0],
+				"config" : {"fullbright" : true, "power" : 0}
+			  },
+			  {
+			    "time" : 0.01,
+				"action" : "projectile",
+				"type" : "meleelash",
+				"direction" : [-1.0, 0.0],
+				"offset" : [-1.0, 0.0],
+				"config" : {"fullbright" : true, "power" : 0}
+			  }
+			],
+		    "actionOnReap" : [
+		      {
+			    "action" : "sound",
+			    "options" : ["/sfx/npc/boss/crystalboss_beamout.ogg"]
+			  }
+		    ]
+		  }
+		}
+	  ]
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

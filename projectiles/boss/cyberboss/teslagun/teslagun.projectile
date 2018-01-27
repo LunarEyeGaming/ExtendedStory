@@ -1,0 +1,56 @@
+{
+  "projectileName" : "teslagun",
+  "image" : "teslagun.png",
+  "animationCycle" : 0.4,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 8,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+  "piercing" : true,
+  
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "repeat" : true,
+	  "action" : "projectile",
+	  "type" : "lightning",
+	  "config" : {
+	  "piercing" : true,
+	  "timeToLive" : 5
+	  }
+	},
+	{
+	  "time" : 0.1,
+	  "repeat" : true,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/guardian_stab.ogg" ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "sound",
+	  "options" : [ "/sfx/tech/mech_deactivate.ogg" ]
+	}
+  ],
+
+  "speed" : 0,
+  "timeToLive" : 4.0,
+  "scripts" : [ "teslagun.lua" ],
+  "scriptDelta" : 1,
+  "renderLayer" : "Monster+50",
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  }
+}

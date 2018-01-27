@@ -1,0 +1,25 @@
+{
+  "materialId" : 1995,
+  "materialName" : "radioactivewalls1",
+  "particleColor" : [23, 138, 0, 255],
+  "itemDrop" : "radioactivewalls1",
+  "description" : "Irradiated stone slabs. These could keep invaders away, or cause mutations.",
+  "shortdescription" : "Irradiated Stone Slab",
+  "glitchDescription" : "Imtimidated. These stone slabs have an eerie green glow.",
+  "floranDescription" : "Glowing ssstone ssslabs.",
+  "novakidDescription" : "Whoever touches these are gonna die.",
+  "footstepSound" : "/sfx/blocks/footstep_stone2.ogg",
+  "health" : 16,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "radioactivewalls1.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 3230,
+    "radiantLight" : [42, 122, 38]
+  }
+}

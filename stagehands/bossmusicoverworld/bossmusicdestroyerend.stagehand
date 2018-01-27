@@ -1,0 +1,18 @@
+{
+  // Configured so the stagehand doesn't stay on a particular planet forever
+  "type" : "bossmusicdestroyerend",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/bossmusicoverworld/bossmusicdestroyer.lua"],
+  "scriptDelta" : 10,
+
+  "broadcastArea" : [-50, -50, 50, 50],
+
+  "messageType" : "stopAltMusic", 
+  "messageArgs" : 2.0,
+
+  "startFadeOutTime" : 2.0,
+  "fadeInTime" : 2.0,
+  "endFadeOutTime" : 2.0,
+  "uniqueId" : "bossmusicdestroyer"
+}

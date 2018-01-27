@@ -1,0 +1,15 @@
+{
+  "projectileName" : "megalaser",
+  "image" : "megalaser.png",
+  "fullbright" : true,
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [150, 100, 100],
+  "power" : 10.0,
+  "speed" : 90,
+  "damagePoly" : [ [0, -32], [0, 32], [320, 32], [320, -32] ],
+  "damageKind" : "default",
+  "timeToLive" : 0.02
+}

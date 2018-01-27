@@ -1,0 +1,186 @@
+{
+  "name" : "destroyerMinionsAttack",
+  "label" : "REINFORCEMENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerMinionsAttack.lua" ],
+
+    "destroyerMinionsAttack" : {
+      "cooldownTime" : 10,
+
+      "spawnDistance" : 15,
+
+      "maxReinforcements" : 6,
+
+      // TODO: Make .projectile files for these
+      // Also make this make any sense
+      "projectiles" : {
+        "trooperspawn" : {
+          "type" : "ancientcharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+            "periodicActions" : [
+              {
+                "time" : 0.1,
+                "repeat" : false,
+                "action" : "sound",
+                "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+              }
+            ],
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "redplasmatorpedo",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "meleedestroyerminion",
+                      "level" : 3,
+                      "offset" : [0.0, 1.0],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/monsterrelease/monsterrelease.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    },
+                    {
+                      "action" : "sound",
+                      "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+
+        "rockettrooperspawn" : {
+          "type" : "ancientcharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+            "periodicActions" : [
+              {
+                "time" : 0.1,
+                "repeat" : false,
+                "action" : "sound",
+                "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+              }
+            ],
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "redplasmatorpedo",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "rangeddestroyerminion",
+                      "level" : 3,
+                      "offset" : [0.0, 1.6],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/monsterrelease/monsterrelease.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    },
+                    {
+                      "action" : "sound",
+                      "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+
+        "generalspawn" : {
+          "type" : "ancientcharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+			"periodicActions" : [
+              {
+                "time" : 0.1,
+                "repeat" : false,
+                "action" : "sound",
+                "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+              }
+            ],
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "redplasmatorpedo",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "explosivedestroyerminion",
+                      "level" : 3,
+                      "offset" : [0.0, 1.5],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/monsterrelease/monsterrelease.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    },
+                    {
+                      "action" : "sound",
+                      "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

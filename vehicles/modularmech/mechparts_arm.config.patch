@@ -1,0 +1,138 @@
+[
+  {
+    "op": "add",
+    "path": "/ancientmachinegun",
+    "value": {
+      "stats": {
+        "power": 6,
+        "energy": 6
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gatlingarm.lua",
+        "armClass": "GatlingArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          4.75,
+          -0.3
+        ],
+        "windupTime": 0.3,
+        "fireTime": 0.1,
+        "projectileType": "ancientlasershot",
+        "projectileParameters": {
+          "power": 30
+        },
+        "projectileCount": 2,
+        "projectileSpacing": [
+          0,
+          1
+        ],
+        "projectileInaccuracy": 0.03
+      },
+      "partImages": {
+        "<armName>": "arm/ancientmachinegun.png",
+        "<armName>Fullbright": "arm/ancientmachinegun_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+        "8b826f",
+        "625c4f",
+        "332f29",
+        "1f1c19"
+      ],
+      "defaultSecondaryColors": [
+        "616161",
+        "2e2e2e",
+        "1c1c1c",
+        "0d0d0d"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "stateTypes": {
+            "<armName>": {
+              "states": {
+                "windup": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_windup.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                },
+                "active": {
+                  "cycle": 0.1
+                },
+                "winddown": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_winddown.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/gun/pulsecannon1.ogg",
+            "/sfx/gun/pulsecannon2.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/ancientcannon",
+    "value": {
+      "stats" : {
+        "power" : 6,
+        "energy" : 6
+      },
+      "partParameters" : {
+        "script" : "/vehicles/modularmech/armscripts/missileburstarm.lua",
+        "armClass" : "MissileBurst",
+
+        "rotationLimits" : [-1.75, 1.75],
+        "fireOffset" : [3.5, -0.25],
+
+        "windupTime" : 0.5,
+        "fireTime" : 0.4,
+        "cooldownTime" : 4.0,
+
+        "projectileType" : "ancientcannonshot",
+        "projectileParameters" : {
+          "power" : 140
+        }
+      },
+      "partImages" : {
+        "<armName>" : "arm/ancientcannon.png",
+        "<armName>Fullbright" : "arm/ancientcannon_fullbright.png"
+      },
+      "defaultPrimaryColors" : [
+        "8b826f",
+        "625c4f",
+        "332f29",
+        "1f1c19"
+      ],
+      "defaultSecondaryColors": [
+        "616161",
+        "2e2e2e",
+        "1c1c1c",
+        "0d0d0d"
+      ],
+      "animationCustom" : {
+        "animatedParts" : { "stateTypes" : { "<armName>" : { "states" : {
+          "windup" : {
+            "mode" : "end"
+          }
+        }}}},
+        "sounds" : {
+          "<armName>Recover" : ["/sfx/gun/reload/rocket_reload_clip1.ogg"],
+          "<armName>Fire" : ["/sfx/gun/plasmacannon_fire.ogg"]
+        }
+      }
+    }
+  }
+]

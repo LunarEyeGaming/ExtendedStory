@@ -1,0 +1,26 @@
+{
+  "projectileName" : "toxinialaserbeam",
+  "image" : "toxinialaserbeam.png",
+  "frameNumber" : 1,
+  "timeToLive" : 3,
+  "speed" : 0,
+  "animationLoops" : false,
+  "fullbright" : true,
+  "flippable" : true,
+  "damageKind" : "default",
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "toxinialaserbeambody",
+	  "direction" : [ 0.0, -1.0 ],
+	  "offset" : [0.0, -2.0]
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/crystalboss_beamout.ogg" ]
+	}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "cobblestonematerial", "count" : 5 },
+	{ "item" : "radioactivematerial", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "radioactivewalls1",
+    "count" : 20
+  },
+  "duration" : 0.5,
+  "groups"  : [ "craftingfurniture2", "materials", "all" ]
+}

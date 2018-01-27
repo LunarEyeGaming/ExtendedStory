@@ -1,0 +1,32 @@
+{
+  "layers" : [
+    {
+      "kind" : "tile/abyssfog",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 0.9,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/abysscavefront",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/abysscave",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.5,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/abyssback",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.8,
+      "repeatY" : true
+    }
+  ]
+}

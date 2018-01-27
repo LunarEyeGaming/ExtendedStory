@@ -1,0 +1,16 @@
+{
+  "name" : "abysseffect",
+  "blockingStat" : "specialStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5.0,
+
+  "scripts" : [
+    "abysseffect.lua"
+  ],
+
+  "animationConfig" : "abysseffect.animation",
+
+  "label" : "Fading - You are fading from reality",
+  "icon" : "/interface/statuses/chaoticvoid.png"
+}

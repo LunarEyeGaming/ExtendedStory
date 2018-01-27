@@ -1,0 +1,55 @@
+{
+  "name" : "destroyerGiantLaserShotAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerGiantLaserShotAttack.lua" ],
+
+    "destroyerGiantLaserShotAttack" : {
+      "skillTime": 1,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 1.0,
+      "projectile" : {
+        "type" : "destroyershot",
+        "config" : {
+          "speed" : 20,
+          "power" : 10,
+          "movementSettings" : {
+            "collisionEnabled" : false
+          },
+		  "processing" : "?scalenearest;5;5",
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            },
+			{
+			  "time" : 0.01,
+			  "action" : "loop",
+			  "count" : 1,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "destroyershot",
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : { "power" : 10, "speed" : 30, "movementSettings" : { "collisionEnabled" : false } }
+				},
+				{
+				  "action" : "sound",
+				  "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+				}
+			  ]
+			}
+          ]
+        }
+      }
+    }
+  }
+}

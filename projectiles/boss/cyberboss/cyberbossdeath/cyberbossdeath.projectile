@@ -1,0 +1,36 @@
+{
+  "projectileName" : "cyberbossdeath",
+  "image" : "cyberbossdeath.png",
+  "bounces" : -1,
+  "timeToLive" : 6,
+  "animationCycle" : 5,
+  "frameNumber" : 10,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "speed" : 0,
+  "animationLoops" : false,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ]
+    },
+	{
+      "time" : 0,
+      "repeat" : false,
+      "action" : "item",
+      "name" : "money",
+	  "count" : 5000
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/cyberbossexplosion/cyberbossexplosion.config"
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

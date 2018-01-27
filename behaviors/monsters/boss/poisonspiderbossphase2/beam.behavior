@@ -1,0 +1,325 @@
+{
+  "name": "poisonspiderbossphase2-laser",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "acidSprayConfig": {"power": 1.5}
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "selector",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "reverseDirection",
+            "type": "action",
+            "name": "reverseDirection",
+            "parameters": {
+              "direction": {"key": "spitSide"}
+            },
+            "output": {
+              "direction": "spitSide"
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "setDirection",
+                "type": "action",
+                "name": "setDirection",
+                "parameters": {},
+                "output": {
+                  "direction": "spitSide"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"value": 20},
+          "number": {"key": "spitSide"}
+        },
+        "output": {
+          "result": "spitX"
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "x": {"key": "spitX"},
+          "y": {"value": 5}
+        },
+        "output": {
+          "position": "attack"
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": null,
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "to": {"key": "attack"}
+        },
+        "output": {
+          "vector": "toAttack"
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rotate"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "rotate",
+        "type": "action",
+        "name": "rotate",
+        "parameters": {
+          "rate": {"value": 3},
+          "vector": {"key": "toAttack"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "walk"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "attack"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rotate"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {}
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {},
+        "children": [
+          {
+            "title": "entityDirection",
+            "type": "action",
+            "name": "entityDirection",
+            "parameters": {
+              "target": {"key": "target"}
+            },
+            "output": {
+              "vector": "toTarget"
+            }
+          },
+          {
+            "title": "rotate",
+            "type": "action",
+            "name": "rotate",
+            "parameters": {
+              "rate": {"value": 3},
+              "vector": {"key": "toTarget"}
+            }
+          }
+        ]
+      },
+      {
+        "title": "setNumber",
+        "type": "action",
+        "name": "setNumber",
+        "parameters": {
+          "number": {"value": -0.25}
+        },
+        "output": {
+          "number": "fireAngle"
+        }
+      },
+      {
+        "title": "vecRotate",
+        "type": "action",
+        "name": "vecRotate",
+        "parameters": {
+          "angle": {"key": "fireAngle"},
+          "vector": {"key": "toTarget"}
+        },
+        "output": {
+          "vector": "fireVector"
+        }
+      },
+      {
+        "title": "vecRotate",
+        "type": "action",
+        "name": "vecRotate",
+        "parameters": {
+          "direction": {"key": "toTarget"},
+          "vector": {"value": [9, 0]}
+        },
+        "output": {
+          "vector": "fireOffset"
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "slam"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spiderslam"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "fire"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spit"}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 5}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"key": "fireVector"},
+                "offset": {"key": "fireOffset"},
+                "projectileConfig": {"value": "<acidSprayConfig>"},
+                "projectileType": {"value": "acidsweep_es"}
+              }
+            },
+            {
+              "title": "vecRotate",
+              "type": "action",
+              "name": "vecRotate",
+              "parameters": {
+                "angle": {"value": 0.1},
+                "vector": {"key": "fireVector"}
+              },
+              "output": {
+                "vector": "fireVector"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

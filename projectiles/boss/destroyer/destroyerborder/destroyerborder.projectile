@@ -1,0 +1,21 @@
+{
+  "projectileName" : "destroyerborder",
+  "image" : "destroyerborder.png",
+  "fullbright" : true,
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [150, 100, 100],
+  "power" : 1000.0,
+  "physics" : "illusion",
+  "piercing" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-32, -3200], [-32, 3200], [32, -3200], [32, 3200] ],
+  "damageKind" : "megadamage",
+  "damageType" : "IgnoresDef",
+  "timeToLive" : 1000,
+  "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg",
+  "scripts" : [ "destroyerborder.lua" ],
+  "scriptDelta" : 1
+}

@@ -1,0 +1,14 @@
+{
+  "modId" : 403,
+  "modName" : "halloweenundergrowth",
+  "description" : "Hardy and spooky grass growing from the ceiling.",
+  "health" : 0,
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "halloweenundergrowth.png",
+    "variants" : 5,
+    "multiColored" : false,
+    "zLevel" : 0
+  }
+}

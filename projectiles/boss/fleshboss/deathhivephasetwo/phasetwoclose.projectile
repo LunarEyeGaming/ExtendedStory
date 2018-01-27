@@ -1,0 +1,29 @@
+{
+  "projectileName" : "phasetwoclose",
+  "image" : "phasetwoclose.png",
+  "bounces" : -1,
+  "timeToLive" : 0.25,
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "speed" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_wakeup1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "phasetwoclosedidle",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

@@ -1,0 +1,577 @@
+{
+  "muteSfx" : true,
+  "muteMusic" : true,
+  "skippable" : false,
+  "letterbox" : false,
+  "backgroundColor" : [0, 0, 0, 155],
+  "backgroundFadeTime" : 0.5,
+
+  "panels" : [
+// ------------------ radio message popup background
+    {
+      "startTime" : 1.5,
+      "endTime" : 148.5,
+      "drawables" : [
+        {
+          "image" : "/cinematics/radiomessagebg.png:<frame>"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [480, 100],
+          "frame" : 0
+        },
+        {
+          "timecode" : 0.5,
+          "frame" : 6
+        },
+        {
+          "timecode" : 146.5,
+          "frame" : 6
+        },
+        {
+          "timecode" : 147,
+          "frame" : 12
+        }
+      ]
+    },
+
+
+
+// ----------------- first radio message
+    {
+      "startTime" : 2.0,
+      "endTime" : 10.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthertalk.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "H-hello, this is station B. We're being attacked by project ^orange;Bot of Terror^reset;.",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// -------------------- second radio message
+    {
+      "startTime" : 10.0,
+      "endTime" : 18.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthersad.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "I'm sorry. What?",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+//------------------------------- third radio message
+    {
+      "startTime" : 18.0,
+      "endTime" : 24.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthersad.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "We're being attacked by project Bot of Terror, a-and we've already initiated lockdown on the facility.",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- fourth radio message
+    {
+      "startTime" : 24.0,
+      "endTime" : 30.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthertalk.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "Oh no! Is everyone okay?",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- fifth radio message
+    {
+      "startTime" : 30.0,
+      "endTime" : 38.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthertalk.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "No! Already like half of the scientists are ^red;dead^reset;! The rest are trapped!",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- sixth radio message
+    {
+      "startTime" : 38.0,
+      "endTime" : 46.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/estherthoughtful.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "...Don't worry, we're sending a rescue ship to the planet in a few moments.",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+// --------------- eigth radio message
+    {
+      "startTime" : 46.0,
+      "endTime" : 50.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthertalk.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "Okay...AAAH!!! THE HALLWAY IS CAVING IN!!! AAAAAAAAAH!!!",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- ninth radio message
+    {
+      "startTime" : 50.0,
+      "endTime" : 58.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthertalk.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "Sir! Sir, are you alright?!",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- tenth radio message
+    {
+      "startTime" : 58.0,
+      "endTime" : 70.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/estherthoughtful.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "(from a distance) Okay, everyone! Out of the building! This darn place will fall apart in a few moments--*static*",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- eleventh radio message
+    {
+      "startTime" : 70.0,
+      "endTime" : 78.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthersad.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "Station B! Station B, do you read?!",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    },
+
+// --------------- twelth radio message
+    {
+      "startTime" : 78.0,
+      "endTime" : 86.0,
+      "drawables" : [
+        {
+          "image" : "/interface/chatbubbles/esthersad.png:<frame>"
+        }
+      ],
+      "animationFrames" : 2,
+      "text" : "(someone else) We've lost contact with station B!",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "frame" : 0,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "frame" : 12,
+          "textPercentage" : 1
+        }
+      ]
+    }
+  ],
+  "audio" : [
+    {
+      "timecode" : 2.25,
+      "endTimecode" : 4.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 10.25,
+      "endTimecode" : 12.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 18.25,
+      "endTimecode" : 20.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 24.25,
+      "endTimecode" : 26.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 30.25,
+      "endTimecode" : 32.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 38.25,
+      "endTimecode" : 40.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 46.25,
+      "endTimecode" : 48.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 50.25,
+      "endTimecode" : 56.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 62.25,
+      "endTimecode" : 64.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 70.25,
+      "endTimecode" : 72.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 78.25,
+      "endTimecode" : 80.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 86.25,
+      "endTimecode" : 88.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 94.25,
+      "endTimecode" : 96.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 102.25,
+      "endTimecode" : 104.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 110.25,
+      "endTimecode" : 112.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 118.25,
+      "endTimecode" : 120.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 126.25,
+      "endTimecode" : 128.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 134.25,
+      "endTimecode" : 136.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    {
+      "timecode" : 140.25,
+      "endTimecode" : 142.5,
+      "loops" : -1,
+      "resource" : "/sfx/interface/aichatter1_loop.ogg"
+    },
+    /*
+    {
+      "timecode" : 0,
+      "resource" : "/sfx/cinematics/esther_start.ogg"
+    },
+    */
+    {
+      "timecode" : 42,
+      "endTimeCode" : 156,
+      "resource" : "/sfx/cinematics/esther_story.ogg"
+    }
+  ]
+}

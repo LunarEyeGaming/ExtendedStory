@@ -1,0 +1,151 @@
+{
+  "name": "poisonspiderboss-laserbeam",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": {
+    "hatchNumber": 1
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": 1}
+    },
+    "children": [
+      {
+        "title": "animate",
+        "type": "action",
+        "name": "animate",
+        "parameters": {
+          "fallback": {"value": "off"},
+          "state": {"value": "hatch"},
+          "type": {"value": "sound"}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"key": "<hatchNumber>"},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "parallel",
+              "type": "composite",
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": -1}
+              },
+              "children": [
+                {
+                  "title": "setVelocity",
+                  "type": "action",
+                  "name": "setVelocity",
+                  "parameters": {
+                    "velocity": {"value": [0, 0]}
+                  }
+                },
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "hurt"},
+                        "type": {"value": "legs"}
+                      }
+                    },
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "charge"},
+                        "type": {"value": "body"}
+                      }
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+					    "time": {"value": 2}
+					  }
+                    },
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "laserfire"},
+                        "type": {"value": "body"}
+                      }
+                    },
+					{
+                      "title": "spawnProjectile",
+                      "type": "action",
+                      "name": "spawnProjectile",
+                      "parameters": {
+                        "aimVector": {"value": [1, 0]},
+                        "offset": {"value": [0, -12]},
+                        "projectileConfig": {"value": {}},
+                        "projectileType": {"value": "toxinialaserbeam"}
+                      }
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+					    "time": {"value": 3}
+					  }
+                    },
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "laserwinddown"},
+                        "type": {"value": "body"}
+                      }
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+					    "time": {"value": 2}
+					  }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

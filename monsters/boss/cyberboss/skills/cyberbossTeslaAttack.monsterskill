@@ -1,0 +1,42 @@
+{
+  "name" : "cyberbossTeslaAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossTeslaAttack.lua" ],
+
+    "cyberbossTeslaAttack" : {
+      "skillTime": 0.02,
+      "bobTime" : 0.001,
+      "bobHeight" : 0,
+
+      "projectileOffset" : [0, -5],
+      "fireInterval" : 0.01,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "timeToLive" : 0.3,
+		  "damageTeam" : { "type" : "enemy" },
+		  "piercing" : true,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/tech/mech_activate3.ogg" ]
+            }
+          ],
+		  "actionOnReap" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "teslagun"
+			}
+		  ]
+        }
+      }
+    }
+  }
+}

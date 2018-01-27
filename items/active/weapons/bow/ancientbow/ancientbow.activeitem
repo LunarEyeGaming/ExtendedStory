@@ -1,0 +1,61 @@
+{
+  "itemName" : "ancientbow",
+  "price" : 960,
+  "inventoryIcon" : "ancientbowicon.png",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "tooltipKind" : "bow",
+  "category" : "^orange;Aimbot Bow",
+  "description" : "Best bow of all time.\n^green;Shoots heat-seeking arrows.",
+  "shortdescription" : "^magenta;Ancient Bow^reset;",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "ranged", "bow"],
+
+  "radioMessagesOnPickup" : [ "pickupbow" ],
+
+  "level" : 10,
+
+  "animation" : "/items/active/weapons/bow/energybow.animation",
+  "animationParts" : {
+    "bow" : "ancientbow.png",
+    "bowFullbright" : "ancientbowfullbright.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0]
+      }},
+      "bowFullbright" : { "properties" : {
+        "offset" : [0, 0]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/melee/laser_weapon_swing2.ogg" ],
+      "perfectRelease" : [ "/sfx/melee/laser_weapon_swing1.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "bowshot",
+  "primaryAbility" : {
+    "drawSpeedMultiplier" : "constant",
+    "projectileType" : "ancientarrow",
+    "powerProjectileType" : "chargedancientarrow",
+    "projectileParameters" : {
+      "power" : 20.5
+    }
+  },
+
+  "altAbilityType" : "bowshot",
+  "altAbility" : {
+    "name" : "Chaos Arrow",
+    "energyPerShot" : 100,
+    "drawSpeedMultiplier" : "constant",
+    "projectileType" : "chaosancientarrow",
+    "powerProjectileType" : "explosiveancientarrow"
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

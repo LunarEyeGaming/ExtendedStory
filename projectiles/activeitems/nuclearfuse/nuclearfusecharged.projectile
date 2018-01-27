@@ -1,0 +1,67 @@
+{
+  "projectileName" : "nuclearfusecharged",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 4,
+  "image" : "nuclearfusecharged.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "nuclearfusechargednoshafts"
+    }
+  ],
+  "periodicActions" : [
+	{
+	  "time" : 0.25,
+	  "repeat" : true,
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/astraltear_stop2.ogg" ]
+	},
+	{
+	  "time" : 0.0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/kluexboss_vortex_windy.ogg" ]
+	},
+	{
+	  "time" : 0.1,
+	  "repeat" : true,
+	  "action" : "explosion",
+      "foregroundRadius" : 11,
+      "backgroundRadius" : 11,
+      "explosiveDamageAmount" : 400.0,
+      "delaySteps" : 2
+	},
+    {
+      "action" : "loop",
+      "count" : 1,
+	  "time" : 0.25,
+	  "repeat" : true,
+      "body" : [
+        {
+          "action" : "projectile",
+          "inheritDamageFactor" : 0 ,
+          "type" : "nuclearshaft",
+          "angle" : 90,
+          "fuzzAngle" : 180,
+          "config" : {
+            "speed" : 0,
+			"power" : 50,
+			"piercing" : true,
+			"timeToLive" : 2.0
+          }
+        }
+      ]
+    }
+  ],
+  "animationCycle" : 0.2,
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 2,
+  "power" : 50,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "fireplasma"
+}

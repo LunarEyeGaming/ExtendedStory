@@ -1,0 +1,176 @@
+{
+  "itemName" : "magnetargun",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A type of cannon that shoots extremely dense balls of light.",
+  "shortdescription" : "Magnetar Cannon",
+  "tooltipKind" : "base",
+  "category" : "Cannon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "magnetargun.png:empty",
+
+  "animation" : "magnetargun.animation",
+  "animationParts" : {
+    "gun" : "magnetargun.png",
+    "gunfullbright" : "magnetargununlit.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [2.5, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+	"stances" : {
+      "charged" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "discharge" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+  
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+	  "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+	    "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+	  "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      }
+	},
+
+  "primaryAbilityType" : "chargefire_es",
+  "primaryAbility" : {
+    "chargeLevels" : [
+	  {
+        "time" : 0,
+        "energyCost" : 40,
+        "cooldown" : 0.12,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 2,
+        "projectileParameters" : {
+		  "speed" : 100,
+		  "damageTeam" : { "type" : "friendly" },
+		  "timeToLive" : 0.0,
+		  "actionOnReap" : [
+            {
+              "action" : "option",
+              "options" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "yellowglobe",
+				  "inheritSpeedFactor" : 1
+				},
+				{
+				  "action" : "projectile",
+				  "type" : "orangeglobe",
+				  "inheritSpeedFactor" : 1
+				},
+				{
+				  "action" : "projectile",
+				  "type" : "orangeglobe",
+				  "inheritSpeedFactor" : 1
+				},
+				{
+				  "action" : "projectile",
+				  "type" : "whiteglobe",
+				  "inheritSpeedFactor" : 1,
+				  "config" : {
+				    "actionOnReap" : [
+					  {
+					    "action" : "config",
+						"file" : "/projectiles/explosions/whiteexplosion/whiteexplosion.config"
+					  }
+					]
+				  }
+				}
+			  ]
+            }
+          ]
+		},
+        "inaccuracy" : 0.1,
+        "baseDamage" : 8,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 60,
+        "cooldown" : 0.8,
+        "projectileType" : "magnetarorb",
+        "projectileParameters" : { },
+        "inaccuracy" : 0,
+        "baseDamage" : 4,
+        "fireSound" : "fire2"
+      }
+    ],
+	"stances" : {
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+	}
+  },
+
+  "altAbilityType" : "kluexshooter",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : {
+	    "projectileType" : "magnetarmine",
+		"projectileParameters" : { }
+	  }
+    },
+	"maxCastRange" : 90,
+
+    "energyPerShot" : 12,
+    "projectileSpawnInterval" : 0.33,
+
+    "projectileDelayEach" : 0.20
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

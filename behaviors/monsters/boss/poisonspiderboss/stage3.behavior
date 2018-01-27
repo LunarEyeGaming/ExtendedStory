@@ -1,0 +1,101 @@
+{
+  "name": "poisonspiderboss-stage3",
+  "description": "",
+  "scripts": [],
+  "parameters": {},
+  "root": {
+    "title": "repeater",
+    "type": "decorator",
+    "name": "repeater",
+    "parameters": {},
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "Return to spawn",
+          "type": "module",
+          "name": "poisonspiderboss-return",
+          "parameters": {}
+        },
+        {
+          "title": "Hatch",
+          "type": "module",
+          "name": "poisonspiderboss-hatch2",
+          "parameters": {
+            "hatchNumber": {"value": 10}
+          }
+        },
+        {
+          "title": "Acid Spray",
+          "type": "module",
+          "name": "poisonspiderboss-acidmines",
+          "parameters": {}
+        },
+        {
+          "title": "Slam",
+          "type": "module",
+          "name": "poisonspiderboss-slam",
+          "parameters": {}
+        },
+        {
+          "title": "Acid Spray",
+          "type": "module",
+          "name": "poisonspiderboss-acid",
+          "parameters": {}
+        },
+        {
+          "title": "Toxinia Sweep",
+          "type": "module",
+          "name": "poisonspiderboss-sweep",
+          "parameters": {}
+        },
+        {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "cooldown",
+            "type": "decorator",
+            "name": "cooldown",
+            "parameters": {
+              "cooldown": {"value": 25},
+              "onFail": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "Toxinia Return",
+                  "type": "module",
+                  "name": "poisonspiderboss-return",
+                  "parameters": {}
+                },
+                {
+                  "title": "Hatch",
+                  "type": "module",
+                  "name": "poisonspiderboss-laserbeam",
+                  "parameters": {
+                    "hatchNumber": {"value": 1}
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Acid Spray",
+          "type": "module",
+          "name": "poisonspiderboss-plasmaslash",
+          "parameters": {}
+        }
+      ]
+    }
+  }
+}

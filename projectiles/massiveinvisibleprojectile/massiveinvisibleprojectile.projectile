@@ -1,0 +1,10 @@
+{
+  "projectileName" : "massiveinvisibleprojectile",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "damagePoly" : [ [-360, 0], [-240, -240], [0, -360], [240, -240], [360, 0], [240, 240], [0, 360], [-240, 240] ], //10 times the size of original for massive AOE; mainly used for status effects and giant explosions
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}

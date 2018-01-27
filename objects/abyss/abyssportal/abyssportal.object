@@ -1,0 +1,56 @@
+{
+  "objectName" : "abyssportal",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A portal with mysterious properties.",
+  "shortdescription" : "Abyss Portal",
+  "race" : "generic",
+
+  "apexDescription" : "An abyss portal that leads to a random dimension",
+  "avianDescription" : "An unstable portal to another dimension",
+  "floranDescription" : "Ssstrange blue portal.",
+  "glitchDescription" : "Analysing. An abyss portal.",
+  "humanDescription" : "A portal that has unknown origins.",
+  "hylotlDescription" : "A portal that seems to be very ancient.",
+  "novakidDescription" : "Well this is somethin' mysterious.",
+
+  "lightColor" : [76, 60, 86],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "abyssportal.png:<color>.<frame>", "fullbright" : true }, { "image" : "abyssportallit.png:<color>.<frame>" } ],
+      "imagePosition" : [-16, 0],
+      "animationPosition" : [-16, 0],
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+
+      "lightPosition" : [0, 3],
+
+      "detectArea" : [ [-3, 0], [3, 5] ]
+    }
+  ],
+
+  "animation" : "/objects/abyss/abyssportal/abyssportal.animation",
+  "animationParts" : {
+    "bg" : "abyssportal.png",
+    "fg" : "abyssportallit.png"
+  },
+
+  "scripts" : [ "/objects/abyss/abyssportal/abyssportal.lua" ],
+  "scriptDelta" : 20,
+
+  "vanishTime" : 1500,
+
+  "messagePlayerInterval" : 0.5,
+  "messagePlayerRange" : 30,
+
+  "health" : 10,
+  "smashOnBreak" : true
+}

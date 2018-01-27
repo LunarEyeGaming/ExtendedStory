@@ -1,0 +1,17 @@
+{
+  "missionName" : "missionisolatedvault",
+  "icon" : "missionisolatedvaulticon.png",
+  "missionWorld" : "isolatedvault",
+
+  "speciesText" : {
+    "default" : {
+      "buttonText" : "Civilized Planet",
+      "repeatButtonText" : "Revisit the Civilized Planet",
+      "selectSpeech" : {
+        "animation" : "talk",
+        "text" : "This planet has existed long enough for the ancients to build an unknown structure; it is also barren from the heat.",
+        "speedModifier" : 1.0
+      }
+    }
+  }
+}

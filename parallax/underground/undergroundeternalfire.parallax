@@ -1,0 +1,52 @@
+{
+  "layers" : [
+    {
+      "kind" : "tile/eternalfirestalegtites",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/eternalfirecavernlightsfront",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.3499999,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/eternalfirecavernhollow",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.35,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/eternalfirecavernlights",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.9999999,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/eternalfirecavernunlit",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 2,
+      "noRandomOffset" : true,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/eternalfirecavern",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 2,
+      "repeatY" : true,
+      "noRandomOffset" : true,
+      "unlit" : false
+    }
+  ]
+}

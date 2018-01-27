@@ -1,0 +1,16 @@
+{
+  "name" : "gammarays",
+  "blockingStat" : "specialStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 30.0,
+
+  "scripts" : [
+    "gammarays.lua"
+  ],
+
+  "animationConfig" : "gammarays.animation",
+
+  "label" : "Gamma-Rays - Deadly radiation drains you",
+  "icon" : "/interface/statuses/gammafire.png"
+}

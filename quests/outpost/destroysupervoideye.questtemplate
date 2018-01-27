@@ -1,0 +1,39 @@
+{
+  "id" : "destroysupervoideye",
+  "mainQuest" : true,
+  "prerequisites" : [ "collectpoisonartifact" ],
+  "title" : "The ^magenta;Supervoid^black; Eye^white;",
+  "text" : "All of the artifacts have been collected. You must kill this beast as quickly as possible. I don't know what damage it could do to you. Just...please be careful. Those strange black areas should be your entry point.",
+  "completionText" : "The universe has been saved again. The biggest threat to the multiverse has been destroyed!",
+  "moneyRange" : [500, 500],
+  "rewards" : [
+    [ ["supervoidobliterator", 1] ]
+  ],
+  "canBeAbandoned" : false,
+  "questGiverIndicator" : "mainquestgiver",
+  "questReceiverIndicator" : "mainquestreceiver",
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/story/destroysupervoideye.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : "questGiver",
+      "questComplete" : "questReceiver"
+    },
+
+    "descriptions" : {
+      "destroyRuin" : "Go through a ^orange;Supervoid Node^reset; and ^green;destroy ^orange;the Supervoid Eye^reset;",
+      "turnIn" : "Find a way back to the ^orange;outpost^reset;"
+    },
+
+    "artifactCinematic" : "/cinematics/artifacts/humanartifact.cinematic",
+    "estherUid" : "vaultkeytrader",
+    "gateUid" : "supervoidteleporternode",
+
+    "bossUid" : "supervoidboss",
+
+    "brainMessageHeight" : 400,
+
+    "warpAction" : "InstanceWorld:outpost"
+  }
+}

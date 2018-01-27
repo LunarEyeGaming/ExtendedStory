@@ -1,0 +1,36 @@
+{
+  "id" : "collecticeartifact",
+  "mainQuest" : true,
+  "prerequisites" : [ "collectfireartifact" ],
+  "title" : "^#a6ceff;The Ice Artifact^reset;",
+  "text" : "Your next artifact is the ice artifact, found in the ^#a6ceff;permafrost^reset; biome. The object you are looking for is inside the caves of this biome and has the same look. They have blue lights.",
+  "completionText" : "Already three artifacts!",
+  "moneyRange" : [1000, 1000],
+  "ephemeral" : false,
+  "rewards" : [[["iceartifact", 1]]],
+
+  "updateDelta" : 20,
+  "script" : "/quests/scripts/artifact.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      }
+    },
+
+    "descriptions"  : {
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Completely Frozen Dimension^reset;",
+      "turnIn" : "Return to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
+    },
+
+    "artifactUid" : "iceartifactaltar",
+    "artifactMessage" : "iceArtifactTaken",
+
+    "estherUid" : "vaultkeytrader"
+  }
+}

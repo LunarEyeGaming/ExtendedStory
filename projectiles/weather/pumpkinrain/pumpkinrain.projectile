@@ -1,0 +1,12 @@
+{
+  "projectileName" : "pumpkinrain",
+  "physics" : "grenadezbomb",
+  "bounces" : 0,
+  "image" : "pumpkinrain.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ]
+}

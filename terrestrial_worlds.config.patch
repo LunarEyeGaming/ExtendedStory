@@ -1,0 +1,342 @@
+[
+  {
+    "op" : "add",
+    "path" : "/planetTypes/darkabyss",
+    "value" : {
+      "threatRange" : [6, 6],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "darkabyss" ],
+          "secondaryRegion" : [ "desert", "tundra", "snow", "barren", "midnight", "halloween", "eternalfrost" ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"], [1.0, "avianvillage"], [1.0, "aviannativevillage"],  [1.0, "avianairship"],
+            [1.0, "floranhuntinggrounds"], [1.0, "florancanyon"], [1.0, "floranvillagetower"], [1.0, "floranhutvillage"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"], [1.0, "glitchcastle"], [1.0, "glitchvillage"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"],
+            [1.0, "humanprison"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"], [1.0, "novakidvillage"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundabyss"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergrounddarkabyss"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergrounddarkabyss"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundabyssfog"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["coredarkabyss"],
+		  "secondaryRegion" : []
+		}
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/eternalfire",
+    "value" : {
+      "threatRange" : [7, 7],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "eternalfire" ],
+          "secondaryRegion" : [ "midnight", "desert", "scorchedcity", "forest", "volcanic" ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"], [1.0, "avianvillage"], [1.0, "aviannativevillage"],  [1.0, "avianairship"],
+            [1.0, "floranhuntinggrounds"], [1.0, "florancanyon"], [1.0, "floranvillagetower"], [1.0, "floranhutvillage"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"], [1.0, "glitchcastle"], [1.0, "glitchvillage"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"],
+            [1.0, "humanprison"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"], [1.0, "novakidvillage"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundeternalfire"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergroundeternalfire"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundeternalfire"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundeternalfire"],
+          "secondaryRegions" : []
+        }
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/eternalfrost",
+    "value" : {
+      "threatRange" : [6, 6],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "eternalfrost" ],
+          "secondaryRegion" : [ "midnight", "desert", "tundra", "forest", "darkabyss" ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"], [1.0, "avianvillage"], [1.0, "aviannativevillage"],  [1.0, "avianairship"],
+            [1.0, "floranhuntinggrounds"], [1.0, "florancanyon"], [1.0, "floranvillagetower"], [1.0, "floranhutvillage"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"], [1.0, "glitchcastle"], [1.0, "glitchvillage"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"],
+            [1.0, "humanprison"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"], [1.0, "novakidvillage"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundeternalfrost"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergroundeternalfrost"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundeternalfrost"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundeternalfrost"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["corepermafrost"],
+		  "secondaryRegion" : []
+		}
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/nuclearwasteland",
+    "value" : {
+      "threatRange" : [5, 5],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "nuclearwasteland" ],
+          "secondaryRegion" : [ "midnight", "alien", "jungle", "forest", "savannah" ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"], [1.0, "avianvillage"], [1.0, "aviannativevillage"],  [1.0, "avianairship"],
+            [1.0, "floranhuntinggrounds"], [1.0, "florancanyon"], [1.0, "floranvillagetower"], [1.0, "floranhutvillage"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"], [1.0, "glitchcastle"], [1.0, "glitchvillage"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"],
+            [1.0, "humanprison"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"], [1.0, "novakidvillage"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundnuclearwasteland"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "secondaryRegions" : []
+        }
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/halloween",
+    "value" : {
+      "threatRange" : [1, 6],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "halloween" ],
+          "secondaryRegion" : [ "midnight", "alien", "garden", "forest", "darkabyss" ],
+
+          "dungeons" : [ ]
+        }
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/darkabyss",
+    "value" : {
+      "caveLiquid" : [ "water" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "darkabyss" ]]
+      ],
+      "subRegion" : ["hive", "bioluminescence"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/eternalfire",
+    "value" : {
+      "caveLiquid" : [ "lava" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "eternalfire" ]]
+      ],
+      "subRegion" : ["geode", "rust", "bones"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/eternalfrost",
+    "value" : {
+      "caveLiquid" : [ "water" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "eternalfrost" ]]
+      ],
+      "subRegion" : ["prism", "ice", "alpine"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/halloween",
+    "value" : {
+      "caveLiquid" : [ "water" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "infectedgarden" ]]
+      ],
+      "subRegion" : ["mushroom", "hive", "bioluminescence", "giantflowers", "spring", "flesh", "bones"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/nuclearwasteland",
+    "value" : {
+      "caveLiquid" : [ "poison" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "nuclearwasteland" ]]
+      ],
+      "subRegion" : ["swamp", "flesh", "eyepatch", "bones", "tar"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundabyss",
+    "value" : {
+      "caveLiquid" : ["water"],
+      "biome": [
+        [1,["undergroundabyss"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundeternalfire",
+    "value" : {
+      "caveLiquid" : ["lava"],
+      "biome": [
+        [1,["undergroundeternalfire"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundeternalfrost",
+    "value" : {
+      "caveLiquid" : ["water"],
+      "biome": [
+        [1,["undergroundeternalfrost"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundnuclearwasteland",
+    "value" : {
+      "caveLiquid" : ["poison"],
+      "biome": [
+        [1,["undergroundnuclearwasteland"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergrounddarkabyss",
+    "value" : {
+      "caveLiquid" : ["abyss"],
+      "biome": [
+        [1,["undergrounddarkabyss"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundabyssfog",
+    "value" : {
+      "caveLiquid" : ["abyss"],
+      "biome": [
+        [1,["undergroundabyssfog"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/coredarkabyss",
+    "value" : {
+      "caveLiquid" : ["liquidfabric"],
+	  "oceanLiquid" : ["liquidfog"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["coredarkabyss"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/corepermafrost",
+    "value" : {
+      "caveLiquid" : ["liquidnitrogenexpansionmod"],
+	  "oceanLiquid" : ["liquidnitrogenexpansionmod"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["corepermafrost"]]
+      ]
+    }
+  }
+]

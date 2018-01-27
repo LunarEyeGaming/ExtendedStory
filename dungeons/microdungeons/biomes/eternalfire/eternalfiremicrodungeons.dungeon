@@ -1,0 +1,88 @@
+{
+  "metadata" : {
+    "name" : "eternalfiremicrodungeons",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "abandonedbuilding", "abandonedbuilding2", "abandonedbuilding3", "burningstonehill", "giantfire", "lavacrater", "lavapond", "meteor", "volcanowithburningstone", "supervoidnode" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "abandonedbuilding",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "abandonedbuilding.json" ]
+    },
+    {
+      "name" : "abandonedbuilding2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "abandonedbuilding2.json" ]
+    },
+    {
+      "name" : "abandonedbuilding3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "abandonedbuilding3.json" ]
+    },
+    {
+      "name" : "burningstonehill",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "burningstonehill.json" ]
+    },
+    {
+      "name" : "giantfire",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "giantfire.json" ]
+    },
+    {
+      "name" : "lavacrater",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "lavacrater.json" ]
+    },
+    {
+      "name" : "lavapond",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "lavapond.json" ]
+    },
+    {
+      "name" : "meteor",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "meteor.json" ]
+    },
+    {
+      "name" : "volcanowithburningstone",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "volcanowithburningstone.json" ]
+    },
+    {
+      "name" : "supervoidnode",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "supervoidnode.json" ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  // Configured so the stagehand doesn't stay on a particular planet forever
+  "type" : "bossmusicoverworld",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/bossmusicoverworld/bossmusicoverworld.lua"],
+  "scriptDelta" : 10,
+
+  "broadcastArea" : [-50, -50, 50, 50],
+
+  "music" : [],
+
+  "startFadeOutTime" : 2.0,
+  "fadeInTime" : 2.0,
+  "endFadeOutTime" : 2.0
+}

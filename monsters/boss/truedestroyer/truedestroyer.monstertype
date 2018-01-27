@@ -1,0 +1,219 @@
+{
+  "type" : "truedestroyer",
+  "shortdescription" : "Omega the Quantum Sentry",
+
+  "categories" : [ "truedestroyer" ],
+  "parts" : [ "ufo", "pilot", "ufolit" ],
+
+  "animation" : "truedestroyer.animation",
+  "reversed" : true,
+
+  "dropPools" : [ "truedestroyerTreasure" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/boss/bossMonster.lua",
+      "/monsters/simpleRangedAttack.lua",
+      "/scripts/stateMachine.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua",
+
+      "/monsters/boss/truedestroyer/idleState.lua",
+      "/monsters/boss/truedestroyer/dieState.lua"
+    ],
+
+    "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerScatterAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack", "quantumsentryDestructionAttack"],
+    "skillCount" : 7,
+
+    "phases" : [
+      {
+        "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMinionsAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.8,
+        "skills" : ["destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMinionsAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.6,
+        "skills" : ["destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMegaLaserAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.4,
+        "skills" : ["destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMegaLaserAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.2,
+        "skills" : ["destroyerScatterAttack", "destroyerSprayNPrayAttack", "destroyerScatterAttack", "destroyerLaserShotsAttack", "destroyerScatterAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerScatterAttack"]
+      },
+      {
+        "enterPhase" : "destroyerSwoopAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.1,
+        "skills" : ["destroyerSwoopAttack", "destroyerSwoopAttack", "destroyerScatterAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerSwoopAttack", "destroyerScatterAttack"]
+      }
+    ],
+
+    "queryTargetDistance" : 50.0,
+    "switchTargetDistance" : 10.0,
+    "keepTargetInSight" : false,
+
+    "cruiseDistance" : 25,
+
+    "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [-14.0, -14.0], [14.0, -14.0], [14.0, 14.0], [-14.0, 14.0] ],
+
+      "mass" : 4.0,
+      "flySpeed" : 20,
+      "airForce" : 200.0,
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "knockoutTime" : 0.1,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "touchDamage" : {
+      "poly" : [ [-14.0, -2.0], [0.0, -6.0], [14.0, -2.0], [14.0, 0.0], [0.0, 6.0], [-14.0, 0.0] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 1000
+        },
+        "protection" : {
+          "baseValue" : 50.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "beamSourceOffset" : [0, -5.5],
+    "targetYOffsetRange" : [18.0, 22.0],
+
+    "attackTime" : 5.0,
+    "fireInterval" : 0.6,
+    "cooldownTime" : 0.25,
+
+    "projectiles" : {
+      "deathexplosion" : {
+        "type" : "destroyerexplosion",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 2,
+
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+            }
+          ]
+        },
+
+        "fireTime" : 8.0,
+        "fireInterval" : 0.2,
+        "cooldown" : 0.1
+      },
+
+      "blockbreaker" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 0,
+
+          "actionOnReap" : [
+            {
+              "action" : "explosion",
+              "foregroundRadius" : 6,
+              "backgroundRadius" : 0,
+              "explosiveDamageAmount" : 100,
+              "delaySteps" : 1
+            }
+          ]
+        },
+
+        "fireTime" : 0.2,
+        "fireInterval" : 0.1,
+        "cooldown" : 0.1
+      }
+    }
+  }
+}

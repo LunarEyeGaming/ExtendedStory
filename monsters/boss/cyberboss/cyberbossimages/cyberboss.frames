@@ -1,0 +1,39 @@
+{
+  "frameGrid" : {
+    "size" : [127, 127],
+    "dimensions" : [12, 7],
+
+    "names" : [
+      [ "idle", "laserwindup.1", "laserwindup.2", "laserwindup.3", "laserwindup.4", "laser"],
+      [ null, "missilewindup.1", "missilewindup.2", "missilewindup.3", "missilewindup.4", "missilewindup.5"],
+      [ "missile.1", "missile.2", "missile.3", "missile.4", "missile.5", "missile.6", "missile.7", "missile.8", "missile.9", "missile.10", "missile.11", "missile.12"],
+      [ null, "minionwindup.1", "minionwindup.2", "minionwindup.3", "minionwindup.4", "minion"],
+      [ null, "richochetwindup.1", "richochetwindup.2", "richochetwindup.3", "richochetwindup.4", "richochetwindup.5"],
+      [ null, "richochet.1", "richochet.2", "richochet.3", "richochet.4"],
+      [ null, "teslawindup.1", "teslawindup.2", "teslawindup.3", "tesla"]
+    ]
+  },
+  "aliases" : {
+    "laserwinddown.1" : "laserwindup.4",
+	"laserwinddown.2" : "laserwindup.3",
+	"laserwinddown.3" : "laserwindup.2",
+	"laserwinddown.4" : "laserwindup.1",
+    "missilewinddown.1" : "missilewindup.5",
+	"missilewinddown.2" : "missilewindup.4",
+	"missilewinddown.3" : "missilewindup.3",
+	"missilewinddown.4" : "missilewindup.2",
+	"missilewinddown.5" : "missilewindup.1",
+    "minionwinddown.1" : "minionwindup.4",
+	"minionwinddown.2" : "minionwindup.3",
+	"minionwinddown.3" : "minionwindup.2",
+	"minionwinddown.4" : "minionwindup.1",
+    "richochetwinddown.1" : "richochetwindup.5",
+	"richochetwinddown.2" : "richochetwindup.4",
+	"richochetwinddown.3" : "richochetwindup.3",
+	"richochetwinddown.4" : "richochetwindup.2",
+	"richochetwinddown.5" : "richochetwindup.1",
+    "teslawinddown.1" : "teslawindup.3",
+	"teslawinddown.2" : "teslawindup.2",
+	"teslawinddown.3" : "teslawindup.1"
+  }
+}

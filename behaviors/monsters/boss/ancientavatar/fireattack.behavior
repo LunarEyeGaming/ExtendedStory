@@ -1,0 +1,518 @@
+{
+  "name": "ancientavatar-fireattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/boss/ancientavatar.lua",
+    "/scripts/behavior/bdata.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4,
+    "pillarCount": 5,
+    "fireStartHeight": 21,
+    "fireAttackHeight": 11
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "kluexboss-changecolor",
+        "type": "module",
+        "name": "kluexboss-changecolor",
+        "parameters": {
+          "color": {"value": "yellow"}
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "x": {"value": 0},
+          "y": {"key": "<fireStartHeight>"}
+        },
+        "output": {
+          "position": "fireStartPosition"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "fireStartPosition"},
+              "speed": {"value": 20},
+              "tolerance": {"value": 1}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "attack"},
+              "type": {"value": "body"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": "<windupTime>"}
+            }
+          },
+          {
+            "title": "spawnAncientPillars",
+            "type": "action",
+            "name": "spawnAncientPillars",
+            "parameters": {
+              "areaWidth": {"value": 56},
+              "center": {"key": "spawn"},
+              "pillarCount": {"key": "<pillarCount>"},
+              "pillarHeight": {"value": 8}
+            },
+            "output": {
+              "pillars": "pillars"
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": "<windupTime>"}
+            }
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.4}
+        }
+      },
+      {
+        "title": "listShuffle",
+        "type": "action",
+        "name": "listShuffle",
+        "parameters": {
+          "list": {"key": "pillars"}
+        },
+        "output": {
+          "list": "pillars"
+        }
+      },
+      {
+        "title": "sub",
+        "type": "action",
+        "name": "sub",
+        "parameters": {
+          "first": {"key": "<pillarCount>"},
+          "second": {"value": 1}
+        },
+        "output": {
+          "result": "attackCount"
+        }
+      },
+      {
+        "title": "succeeder",
+        "type": "decorator",
+        "name": "succeeder",
+        "parameters": {},
+        "child": {
+          "title": "repeater",
+          "type": "decorator",
+          "name": "repeater",
+          "parameters": {
+            "maxLoops": {"key": "attackCount"},
+            "untilSuccess": {"value": false}
+          },
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "listPop",
+                "type": "action",
+                "name": "listPop",
+                "parameters": {
+                  "list": {"key": "pillars"}
+                },
+                "output": {
+                  "list": "pillars",
+                  "entity": "attackPillar"
+                }
+              },
+              {
+                "title": "entityPosition",
+                "type": "action",
+                "name": "entityPosition",
+                "parameters": {
+                  "entity": {"key": "attackPillar"}
+                },
+                "output": {
+                  "position": "pillarPosition"
+                }
+              },
+              {
+                "title": "offsetPosition",
+                "type": "action",
+                "name": "offsetPosition",
+                "parameters": {
+                  "position": {"key": "pillarPosition"},
+                  "x": {"value": 0},
+                  "y": {"key": "<fireStartHeight>"}
+                },
+                "output": {
+                  "position": "startPosition"
+                }
+              },
+              {
+                "title": "offsetPosition",
+                "type": "action",
+                "name": "offsetPosition",
+                "parameters": {
+                  "position": {"key": "pillarPosition"},
+                  "x": {"value": 0},
+                  "y": {"key": "<fireAttackHeight>"}
+                },
+                "output": {
+                  "position": "attackPosition"
+                }
+              },
+              {
+                "title": "inverter",
+                "type": "decorator",
+                "name": "inverter",
+                "parameters": {},
+                "child": {
+                  "title": "parallel",
+                  "type": "composite",
+                  "name": "parallel",
+                  "parameters": {
+                    "fail": {"value": -1},
+                    "success": {"value": -1}
+                  },
+                  "children": [
+                    {
+                      "title": "cooldown",
+                      "type": "decorator",
+                      "name": "cooldown",
+                      "parameters": {
+                        "cooldown": {"value": 1.5},
+                        "onFail": {"value": false},
+                        "onSuccess": {"value": true}
+                      },
+                      "child": {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "startPosition"},
+                              "speed": {"value": 40},
+                              "tolerance": {"value": 1}
+                            }
+                          },
+                          {
+                            "title": "setVelocity",
+                            "type": "action",
+                            "name": "setVelocity",
+                            "parameters": {
+                              "velocity": {"value": [0, 0]}
+                            }
+                          },
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "attackPosition"},
+                              "speed": {"value": 12},
+                              "tolerance": {"value": 1}
+                            }
+                          },
+                          {
+                            "title": "setVelocity",
+                            "type": "action",
+                            "name": "setVelocity",
+                            "parameters": {
+                              "velocity": {"value": [0, 0]}
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "title": "failer",
+                      "type": "decorator",
+                      "name": "failer",
+                      "parameters": {},
+                      "child": {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.1}
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "windup"},
+                  "type": {"value": "lava"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "attack"},
+                  "type": {"value": "body"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.8}
+                }
+              },
+              {
+                "title": "succeeder",
+                "type": "decorator",
+                "name": "succeeder",
+                "parameters": {},
+                "child": {
+                  "title": "cooldown",
+                  "type": "decorator",
+                  "name": "cooldown",
+                  "parameters": {
+                    "cooldown": {"value": 30},
+                    "onFail": {"value": false},
+                    "onSuccess": {"value": true}
+                  },
+                  "child": {
+                    "title": "spawnFloorProjectiles",
+                    "type": "action",
+                    "name": "spawnFloorProjectiles",
+                    "parameters": {
+                      "areaWidth": {"value": 64},
+                      "center": {"key": "spawn"},
+                      "power": {"value": 10},
+                      "projectileCount": {"value": 8},
+					  "projectileConfig": {"value": {"periodicActions" : [{"time" : 0.25, "repeat" : true, "action" : "projectile", "type" : "lavaballoon", "angle" : 90, "fuzzAngle" : 180}]}},
+                      "projectileType": {"value": "floorlava"},
+                      "segmentWidth": {"value": 8},
+                      "spawnHeight": {"value": -1}
+                    },
+                    "output": {
+                      "projectiles": "lavaProjectiles"
+                    }
+                  }
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 1.6}
+                }
+              },
+              {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "entity": {"key": "attackPillar"},
+                  "message": {"value": "destroy"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "winddown"},
+                  "type": {"value": "lava"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 1.2}
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "title": "filter",
+        "type": "decorator",
+        "name": "filter",
+        "parameters": {
+          "list": {"key": "lavaProjectiles"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "filterItem"}
+              }
+            },
+            {
+              "title": "inverter",
+              "type": "decorator",
+              "name": "inverter",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "entity": {"key": "filterItem"},
+                  "message": {"value": "sink"}
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.2}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "listPop",
+        "type": "action",
+        "name": "listPop",
+        "parameters": {
+          "list": {"key": "pillars"}
+        },
+        "output": {
+          "list": "pillars",
+          "entity": "lastPillar"
+        }
+      },
+      {
+        "title": "sendEntityMessage",
+        "type": "action",
+        "name": "sendEntityMessage",
+        "parameters": {
+          "entity": {"key": "lastPillar"},
+          "message": {"value": "destroy"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.2}
+        }
+      }
+    ]
+  }
+}

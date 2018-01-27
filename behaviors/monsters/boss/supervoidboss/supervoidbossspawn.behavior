@@ -1,0 +1,147 @@
+{
+  "name": "supervoidboss-spawn",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/boss/eyeboss.lua"
+  ],
+  "parameters": {
+    "biomeStart": [-4.5625, 0],
+    "biomePan": [9, 0]
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": 1}
+    },
+    "children": [
+      {
+        "title": "failer",
+        "type": "decorator",
+        "name": "failer",
+        "parameters": {},
+        "child": {
+          "title": "timer",
+          "type": "action",
+          "name": "timer",
+          "parameters": {
+            "time": {"value": 3.7}
+          },
+          "output": {
+            "ratio": "biomePanRatio"
+          }
+        }
+      },
+      {
+        "title": "failer",
+        "type": "decorator",
+        "name": "failer",
+        "parameters": {},
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "resetTransformationGroup",
+              "type": "action",
+              "name": "resetTransformationGroup",
+              "parameters": {
+                "transformationGroup": {"value": "biome"}
+              }
+            },
+            {
+              "title": "vecMultiply",
+              "type": "action",
+              "name": "vecMultiply",
+              "parameters": {
+                "first": {"key": "<biomePan>"},
+                "second": {"value": ["biomePanRatio", 1]}
+              },
+              "output": {
+                "vector": "biomeOffset"
+              }
+            },
+            {
+              "title": "vecAdd",
+              "type": "action",
+              "name": "vecAdd",
+              "parameters": {
+                "first": {"key": "biomeOffset"},
+                "second": {"key": "<biomeStart>"}
+              },
+              "output": {
+                "vector": "biomeOffset"
+              }
+            },
+            {
+              "title": "translateTransformationGroup",
+              "type": "action",
+              "name": "translateTransformationGroup",
+              "parameters": {
+                "offset": {"key": "biomeOffset"},
+                "transformationGroup": {"value": "biome"}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "spawnwindup"},
+              "type": {"value": "eye"}
+            }
+          },
+          {
+            "title": "spawnMonsterGroup",
+            "type": "action",
+            "name": "spawnMonsterGroup",
+            "parameters": {
+              "windup": {"value": 1.5}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "spawnwinddown"},
+              "type": {"value": "eye"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.7}
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

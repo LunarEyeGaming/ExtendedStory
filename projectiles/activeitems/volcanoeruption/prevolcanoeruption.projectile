@@ -1,0 +1,17 @@
+{
+  "projectileName" : "prevolcanoeruption",
+  "timeToLive" : 0.01,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "invisibleprojectile",
+      "inheritDamageFactor" : 1,
+	  "direction" : [0.0, -1.0],
+	  "config" : {"speed" : 100, "actionOnReap" : [{"action" : "projectile", "type" : "volcanoeruption"}], "damageTeam" : {"type" : "friendly"}, "timeToLive" : 0.1}
+    }
+  ],
+  "damageKind" : "fire"
+}

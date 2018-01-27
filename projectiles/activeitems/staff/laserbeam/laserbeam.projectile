@@ -1,0 +1,31 @@
+{
+  "projectileName" : "laserbeam",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/staff/ancientbeam.ogg" ]
+    }
+  ],
+  "timeToLive" : 2.5,
+  "image" : "laserbeam.png",
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "speed" : 1,
+  "animationCycle" : 2.5,
+  "statusEffects" : [
+    "gammarays"
+  ],
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 25,
+  "power" : 50,
+  "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
+  "damageKind" : "electric",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  }
+}

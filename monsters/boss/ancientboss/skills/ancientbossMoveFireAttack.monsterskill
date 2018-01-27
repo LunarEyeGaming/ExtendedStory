@@ -1,0 +1,33 @@
+{
+  "name" : "ancientbossMoveFireAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossMoveFireAttack.lua" ],
+
+    "ancientbossMoveFireAttack" : {
+      "skillTime": 5,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.25,
+      "projectile" : {
+        "type" : "delayedplasmashot",
+        "config" : {
+          "speed" : 0,
+          "power" : 1,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/npc/boss/guardian_stab.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

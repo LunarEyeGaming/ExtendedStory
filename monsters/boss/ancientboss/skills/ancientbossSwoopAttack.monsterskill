@@ -1,0 +1,13 @@
+{
+  "name" : "ancientbossSwoopAttack",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossSwoopAttack.lua" ],
+
+    "ancientbossSwoopAttack" : {
+      "swoopTime" : 2
+    }
+  }
+}

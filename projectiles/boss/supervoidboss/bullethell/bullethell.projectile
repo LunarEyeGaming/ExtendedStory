@@ -1,0 +1,25 @@
+{
+  "projectileName" : "bullethell",
+  "timeToLive" : 4,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 0,
+  "speed" : 0,
+  "periodicActions" : [
+    {
+	  "time" : 0.5,
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+	      "action" : "projectile",
+		  "type" : "presupervoidbullet",
+		  "angle" : 90,
+		  "fuzzAngle" : 180
+		}
+	  ]
+	}
+  ],
+  "damageKind" : "fire"
+}

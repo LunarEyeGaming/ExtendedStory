@@ -1,0 +1,166 @@
+[
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/darkabyss",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/darkabyss_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/eternalfire",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/eternalfire_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+      "liquidTextures" : "/celestial/system/terrestrial/horizon/liquids/lava_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/eternalfrost",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/eternalfrost_<selector>.png",
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/halloween",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/halloween_<selector>.png",
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/nuclearwasteland",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/nuclearwasteland_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+      "liquidTextures" : "/celestial/system/terrestrial/horizon/liquids/poison_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/darkabyss",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/midnight/maskie<num>.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/eternalfire",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/eternalfire/maskie<num>.png",
+	  "liquidImages" : "/celestial/system/terrestrial/liquids/lava.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/eternalfrost",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/eternalfrost/maskie<num>.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/nuclearwasteland",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/nuclearwasteland/maskie<num>.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/halloween",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/halloween/maskie<num>.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/temperate/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier5/baseParameters/terrestrialType/-",
+    "value" : "darkabyss"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "eternalfire"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier5/baseParameters/terrestrialType/-",
+    "value" : "eternalfrost"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier4/baseParameters/terrestrialType/-",
+    "value" : "nuclearwasteland"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier5/baseParameters/terrestrialType/-",
+    "value" : "darkabyss"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "eternalfire"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier5/baseParameters/terrestrialType/-",
+    "value" : "eternalfrost"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier4/baseParameters/terrestrialType/-",
+    "value" : "nuclearwasteland"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier1/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier2/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier3/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier4/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier5/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "halloween"
+  }
+]

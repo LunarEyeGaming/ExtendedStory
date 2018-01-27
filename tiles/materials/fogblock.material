@@ -1,0 +1,24 @@
+{
+  "materialId" : 1999,
+  "materialName" : "fogblock",
+  "particleColor" : [92, 90, 87, 70],
+  "itemDrop" : "fogblock",
+  "description" : "Fog blocks. These blocks somehow just won't allow anyone to fall through.",
+  "shortdescription" : "Fog Block",
+  "glitchDescription" : "Confused. How can you walk on this stuff?",
+  "floranDescription" : "Ssssee through thingss that can be walked on.",
+  "novakidDescription" : "Nobody ain't fallin' through this stuff...I don't know how.",
+  "footstepSound" : "/sfx/blocks/footstep_ash.ogg",
+  "health" : 1,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "fogblock.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

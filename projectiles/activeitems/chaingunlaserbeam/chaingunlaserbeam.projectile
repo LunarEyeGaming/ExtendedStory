@@ -1,0 +1,14 @@
+{
+  "projectileName" : "chaingunlaserbeam",
+  "image" : "chaingunlaserbeam.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "fullbright" : true,
+  "damagePoly" : [ [0, -4], [0, 4], [360, 4], [360, -4] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "piercing" : true,
+  "damageKind" : "plasma",
+  "timeToLive" : 0.02,
+  "power" : 5
+}

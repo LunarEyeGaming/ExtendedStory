@@ -1,0 +1,74 @@
+{
+  "name" : "cyberbossMissileAttack",
+  "label" : "MISSILES OF PAIN",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossMissileAttack.lua" ],
+
+    "cyberbossMissileAttack" : {
+      "skillTime": 0.02,
+      "bobTime" : 0.001,
+      "bobHeight" : 0,
+
+      "projectileOffset" : [-5, -1],
+      "fireInterval" : 0.01,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "piercing" : true,
+		  "timeToLive" : 0.5,
+		  "damageTeam" : { "type" : "enemy" },
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/tech/mech_activate3.ogg" ]
+            }
+          ],
+		  "actionOnReap" : [
+		    {
+		    "action" : "projectile",
+			"type" : "invisibleprojectile",
+			"config" : {
+			  "speed" : 0,
+			  "power" : 0,
+			  "piercing" : true,
+			  "damageTeam" : { "type" : "enemy" },
+			  "timeToLive" : 3,
+			  "periodicActions" : [
+			      {
+				    "time" : 0.25,
+					"repeat" : true,
+					"action" : "projectile",
+					"type" : "cyberbossmissile",
+					"config" : {
+					"piercing" : true,
+					"speed" : 40,
+					"power" : 20
+					}
+				  },
+				  {
+				    "time" : 0.25,
+					"repeat" : true,
+					"action" : "sound",
+					"options" : [ "/sfx/gun/rocket2.ogg" ]
+				  }
+			    ],
+				"actionOnReap" : [
+				  {
+				    "action" : "sound",
+				    "options" : [ "/sfx/tech/mech_deactivate.ogg" ]
+				  }
+				]
+			  }
+		    }
+		  ]
+        }
+      }
+    }
+  }
+}

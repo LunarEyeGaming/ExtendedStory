@@ -1,0 +1,46 @@
+{
+  "projectileName" : "rainbowshot_es",
+  "physics" : "laser",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 1,
+  "timeToLive" : 0.0,
+  "frameNumber" : 1,
+  "power" : 0,
+  "bounces" : -1,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "damageKind" : "default",
+  "actionOnReap" : [
+    {
+	  "action" : "option",
+	  "options" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "rainbowshot1_es"
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "rainbowshot2_es"
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "rainbowshot3_es"
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "rainbowshot4_es"
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "rainbowshot5_es"
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "rainbowshot6_es"
+		}
+	  ]
+	}
+  ]
+}

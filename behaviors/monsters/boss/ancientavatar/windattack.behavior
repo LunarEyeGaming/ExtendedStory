@@ -1,0 +1,294 @@
+{
+  "name": "ancientavatar-windattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "kluexboss-changecolor",
+        "type": "module",
+        "name": "kluexboss-changecolor",
+        "parameters": {
+          "color": {"value": "red"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "groundPosition",
+        "type": "action",
+        "name": "groundPosition",
+        "parameters": {
+          "avoidLiquid": {"value": true},
+          "maxHeight": {"value": 0},
+          "minHeight": {"value": -30},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "groundPosition"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "groundPosition"},
+              "tolerance": {"value": 0.2}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "spinwinddown"},
+              "state": {"value": "spinwindup"},
+              "type": {"value": "body"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "prepareWind"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.8}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": 1}
+                },
+                "children": [
+                  {
+                    "title": "animate",
+                    "type": "action",
+                    "name": "animate",
+                    "parameters": {
+                      "fallback": {"value": "idle"},
+                      "state": {"value": "spin"},
+                      "type": {"value": "vortex"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "windleft"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "windright"}
+                    }
+                  },
+                  {
+                    "title": "failer",
+                    "type": "decorator",
+                    "name": "failer",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "setForceRegionActive",
+                          "type": "action",
+                          "name": "setForceRegionActive",
+                          "parameters": {
+                            "name": {"value": "left"}
+                          }
+                        },
+                        {
+                          "title": "setForceRegionActive",
+                          "type": "action",
+                          "name": "setForceRegionActive",
+                          "parameters": {
+                            "name": {"value": "right"}
+                          }
+                        },
+                        {
+                          "title": "setDamageSourceActive",
+                          "type": "action",
+                          "name": "setDamageSourceActive",
+                          "parameters": {
+                            "name": {"value": "windswept"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": 5},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 2}
+                              }
+                            },
+                            {
+                              "title": "spawnProjectile",
+                              "type": "action",
+                              "name": "spawnProjectile",
+                              "parameters": {
+                                "aimVector": {"value": [1, 0]},
+                                "offset": {"value": [0, -1.375]},
+                                "position": {"key": "self"},
+                                "projectileConfig": {"value": {"actionOnReap" : [{"action" : "projectile", "type" : "energywave", "direction" : [-1.0, 0.0],"config":{"timeToLive": 1.1, "power": 29}}]}},
+                                "projectileType": {"value": "energywave"},
+                                "scalePower": {"value": true},
+                                "sourceEntity": {"key": "self"},
+                                "trackSource": {"value": false}
+                              }
+                            },
+                            {
+                              "title": "spawnProjectile",
+                              "type": "action",
+                              "name": "spawnProjectile",
+                              "parameters": {
+                                "aimVector": {"value": [-1, 0]},
+                                "offset": {"value": [0, -1.375]},
+                                "position": {"key": "self"},
+                                "projectileConfig": {"value": {"actionOnReap" : [{"action" : "projectile", "type" : "energywave", "direction" : [1.0, 0.0],"config":{"timeToLive": 1.1, "power": 29}}]}},
+                                "projectileType": {"value": "energywave"},
+                                "scalePower": {"value": true},
+                                "sourceEntity": {"key": "self"},
+                                "trackSource": {"value": false}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "windFire"}
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 2}
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.4}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "projectileName" : "explosivelasershot",
+  "image" : "explosivelasershot.png",
+  "physics" : "bullet",
+  "lightColor" : [150, 100, 100],
+  "animationCycle" : 0.3,
+  "frameNumber" : 8,
+  "power" : 50,
+  "speed" : 10,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+    }
+  ]
+}

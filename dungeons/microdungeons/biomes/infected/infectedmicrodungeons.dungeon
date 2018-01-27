@@ -1,0 +1,81 @@
+{
+  "metadata" : {
+    "name" : "infectedmicrodungeons",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "decayingmass", "gianteye", "gianttentacle", "monstermouth", "monstermouthnopoison", "monstermouthnoteeth", "ruincaldera", "tentaclecluster", "tentaclehole" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "decayingmass",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "decayingmass.json" ]
+    },
+    {
+      "name" : "gianteye",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "gianteye.json" ]
+    },
+    {
+      "name" : "gianttentacle",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "gianttentacle.json" ]
+    },
+    {
+      "name" : "monstermouth",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "monstermouth.json" ]
+    },
+    {
+      "name" : "monstermouthnopoison",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "monstermouthnopoison.json" ]
+    },
+    {
+      "name" : "monstermouthnoteeth",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "monstermouthnoteeth.json" ]
+    },
+    {
+      "name" : "ruincaldera",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "ruincaldera.json" ]
+    },
+    {
+      "name" : "tentaclecluster",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "tentaclecluster.json" ]
+    },
+    {
+      "name" : "tentaclehole",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "tentaclehole.json" ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "projectileName" : "phasetwoclosedidle",
+  "image" : "phasetwoclosedidle.png",
+  "bounces" : -1,
+  "timeToLive" : 2.25,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "speed" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "phasetwoopen",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

@@ -1,0 +1,42 @@
+{
+  "projectileName" : "staticsingularity",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "image" : "staticsingularity.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "projectile",
+      "type" : "blackholegravity",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "animationCycle" : 0.375,
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 5,
+  "power" : 50,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
+  "damageKind" : "abyss",
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ngravityexplosion",
+	  "inheritDamageFactor" : 0,
+	  "inheritSpeedFactor" : 0,
+	  "config" : {
+	    "timeToLive" : 2.0
+	  }
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/astralexplosion/astralexplosion.config"
+	}
+  ]
+}

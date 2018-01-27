@@ -1,0 +1,25 @@
+{
+  "layers" : [
+    {
+      "kind" : "tile/radioactivecavefront",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/radioactivecave",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.5,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/radioactivecaveback",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.8,
+      "repeatY" : true
+    }
+  ]
+}

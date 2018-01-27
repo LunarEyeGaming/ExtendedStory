@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "durasteelbar", "count" : 20 },
+    { "item" : "liquidwater", "count" : 100 },
+    { "item" : "leather", "count" : 1 },
+	{ "item" : "solariumstar", "count" : 10 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "oceanguardianpants", "count" : 1 },
+  "groups" : [ "craftinganvil3", "armours", "all" ]
+}

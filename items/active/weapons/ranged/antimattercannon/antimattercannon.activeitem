@@ -1,0 +1,115 @@
+{
+  "itemName" : "antimattercannon",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "The cannon is made with extreme caution and designed for total destruction.",
+  "shortdescription" : "Antimatter Cannon Mk 1",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "antimattercannon.png:empty",
+
+  "animation" : "antimattercannon.animation",
+  "animationParts" : {
+    "gun" : "antimattercannon.png",
+    "gunfullbright" : "antimattercannonunlit.png",
+	"beammuzzle" : "antimattermuzzle.png"
+  },
+  "animationCustom" : {
+  },
+  "muzzleOffset" : [-0.2, 1.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "poison",
+
+  "primaryAbility" : {
+    "name" : "NAN",
+    "scripts" : ["/items/active/weapons/ranged/antimattercannon/antimattercannonfire.lua"],
+    "class" : "ChargeFire",
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.9,
+        "energyCost" : 100,
+        "cooldown" : 3,
+        "projectileType" : "antimatterbeam_es",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 20,
+        "fireSound" : "fire2"
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "beammuzzle" : "off"
+		}
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates" : {
+		  "beammuzzle" : "on"
+		}
+      }
+    }
+  },
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "poison" : { "name" : "Comp. Lightning Bolt", "projectileType" : "electricplasmarocket", "projectileCount" : 1, "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/lightningburst/lightningburst.config"}]}}
+    },
+    "energyUsage" : 20,
+	"baseDps" : 20
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

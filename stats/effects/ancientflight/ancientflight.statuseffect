@@ -1,0 +1,26 @@
+{
+  "name" : "ancientflight",
+
+  "effectConfig" : {
+    "flightMovement" : {
+	  "gravityEnabled" : false,
+      "frictionEnabled" : false,
+	  "airForce" : 50,
+	  "flySpeed" : 300,
+      "discontinuityThreshold" : 50,
+      "maxMovementPerStep" : 80,
+      "airBuoyancy" : 0.0,
+      "ignorePlatformCollision" : true
+	}
+  },
+  "defaultDuration" : 30,
+
+  "scripts" : [
+    "ancientflight.lua"
+  ],
+
+  "animationConfig" : "ancientflight.animation",
+
+  "label" : "Ancient Flight",
+  "icon" : "/interface/statuses/ice.png"
+}

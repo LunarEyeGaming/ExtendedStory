@@ -1,0 +1,145 @@
+{
+  "name" : "corepermafrost",
+  "friendlyName" : "corepermafrost",
+
+  "parallax" : "/parallax/underground/corepermafrost.parallax",
+
+  "mainBlock" : "ice",
+  "subBlocks" : [ "frozendirt" ],
+  "ores" : "core",
+
+  "ambientNoises" : {
+    "day" : {
+      "tracks" : [ "/sfx/environmental/magma_underground.ogg" ]
+    },
+    "night" : {
+      "tracks" : [ "/sfx/environmental/magma_underground.ogg" ]
+    }
+  },
+
+  "musicTrack" : {
+    "day" : {
+      "tracks" : [ "/music/arctic-exploration1.ogg", "/music/arctic-exploration2.ogg", "/music/drosera.ogg", "/music/crystal-exploration1.ogg", "/music/crystal-exploration2.ogg", "/music/error-0xbfaf000.ogg", "/music/horsehead-nebula.ogg", "/music/psyche.ogg", "/music/Nomads.ogg", "/music/M54.ogg" ]
+    },
+    "night" : {
+      "tracks" : [ "/music/arctic-exploration1.ogg", "/music/arctic-exploration2.ogg", "/music/drosera.ogg", "/music/crystal-exploration1.ogg", "/music/crystal-exploration2.ogg", "/music/error-0xbfaf000.ogg", "/music/horsehead-nebula.ogg", "/music/psyche.ogg", "/music/Nomads.ogg", "/music/M54.ogg" ]
+    }
+  },
+
+  "undergroundPlaceables" : {
+    "items" : [
+      {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundCapsules",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "capsulesmall" ], [0.35, "capsulemed" ], [0.35, "capsulebig" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:hazardUndergroundTop",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.20, "thorns1" ], [0.20, "thorns2" ], [0.20, "thorns3" ], [0.20, "thorns4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "desertgroundspike1" ], [0.20, "desertgroundspike2" ], [0.20, "desertgroundspike3" ], [0.20, "desertgroundspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "greengroundspike1" ], [0.20, "greengroundspike2" ], [0.20, "greengroundspike3" ], [0.20, "greengroundspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "savannahgroundspike1" ], [0.20, "savannahgroundspike2" ], [0.20, "savannahgroundspike3" ], [0.20, "savannahgroundspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "magmagroundspike1" ], [0.20, "magmagroundspike2" ], [0.20, "magmagroundspike3" ] ]
+          }
+        ]
+      },
+      {
+        "mode" : "ceiling",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:hazardUndergroundCeilingTop",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.20, "ceilingspike1" ], [0.20, "ceilingspike2" ], [0.20, "ceilingspike3" ], [0.20, "ceilingspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "desertceilingspike1" ], [0.20, "desertceilingspike2" ], [0.20, "desertceilingspike3" ], [0.20, "desertceilingspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "greenceilingspike1" ], [0.20, "greenceilingspike2" ], [0.20, "greenceilingspike3" ], [0.20, "greenceilingspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "savannahceilingspike1" ], [0.20, "savannahceilingspike2" ], [0.20, "savannahceilingspike3" ], [0.20, "savannahceilingspike4" ] ]
+          },
+          {
+            "pool" : [ [0.20, "magmaceilingspike1" ], [0.20, "magmaceilingspike2" ], [0.20, "magmaceilingspike3" ] ]
+          }
+        ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:layer2Chests",
+
+        "type" : "treasureBox",
+        "treasureBoxSets" : [ "basicChest" ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundChests",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "statuspod" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:backerStatues",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "benjaminstatue" ], [1, "cameronstatue" ], [1, "memorialstatue" ], [1, "oliverstatue" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundweaponChests",
+
+        "type" : "treasureBox",
+        "treasureBoxSets" : [ "weaponChest" ]
+      }
+    ]
+  },
+
+  "hueShiftOptions" : [0]
+}

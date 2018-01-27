@@ -1,0 +1,800 @@
+{
+  "name": "ancienttotem",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": true}
+        }
+      },
+      {
+        "title": "setNumber",
+        "type": "action",
+        "name": "setNumber",
+        "parameters": {
+          "number": {"value": 0}
+        },
+        "output": {
+          "number": "heading"
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": true}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 50},
+              "keepTargetInRange": {"value": 100},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 0}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "setAnimationState",
+                        "type": "action",
+                        "name": "setAnimationState",
+                        "parameters": {
+                          "state": {"value": "wake"},
+                          "type": {"value": "body"}
+                        }
+                      },
+                      {
+                        "title": "setLightActive",
+                        "type": "action",
+                        "name": "setLightActive",
+                        "parameters": {
+                          "active": {"value": true},
+                          "light": {"value": "glow"}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 6}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "setAnimationState",
+                                  "type": "action",
+                                  "name": "setAnimationState",
+                                  "parameters": {
+                                    "state": {"value": "fire"},
+                                    "type": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.2}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [0, 5]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.2}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [-3, 0]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [3, 0]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 4}
+                              }
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "setAnimationState",
+                                  "type": "action",
+                                  "name": "setAnimationState",
+                                  "parameters": {
+                                    "state": {"value": "fire"},
+                                    "type": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [0, 6]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [0, 9]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [0, 12]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [0, 15]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 6}
+                              }
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "setAnimationState",
+                                  "type": "action",
+                                  "name": "setAnimationState",
+                                  "parameters": {
+                                    "state": {"value": "fire"},
+                                    "type": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.5}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [3, 5]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [-3, 5]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.5}
+                              }
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "setAnimationState",
+                                  "type": "action",
+                                  "name": "setAnimationState",
+                                  "parameters": {
+                                    "state": {"value": "fire"},
+                                    "type": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.5}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [4.5, 7.5]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "offsetPosition",
+                                      "type": "action",
+                                      "name": "offsetPosition",
+                                      "parameters": {
+                                        "offset": {"value": [-4.5, 7.5]},
+                                        "position": {"key": "self"}
+                                      },
+                                      "output": {
+                                        "position": "projectile"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnTargetedProjectile",
+                                      "type": "action",
+                                      "name": "spawnTargetedProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [0, 0]},
+                                        "parameters": {"value": {}},
+                                        "position": {"key": "projectile"},
+                                        "projectileType": {"value": "delayedplasmashot"},
+                                        "target": {"key": "target"},
+                                        "trackSource": {"value": false}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 4}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "sleep"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.5}
+                    }
+                  },
+                  {
+                    "title": "setLightActive",
+                    "type": "action",
+                    "name": "setLightActive",
+                    "parameters": {
+                      "active": {"value": false},
+                      "light": {"value": "glow"}
+                    }
+                  },
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

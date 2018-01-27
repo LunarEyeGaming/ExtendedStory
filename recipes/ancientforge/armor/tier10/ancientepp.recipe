@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "heatprotectionback", "count" : 1 },
+    { "item" : "ancientblock", "count" : 50 },
+	{ "item" : "essence", "count" : 150 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "ancienteppback", "count" : 1 },
+  "groups" : [ "ancientforge", "armours", "all" ]
+}

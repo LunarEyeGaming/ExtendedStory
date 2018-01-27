@@ -1,0 +1,13 @@
+{
+  "projectileName" : "antimatterbeamimpact_es",
+  "timeToLive" : 0.1,
+  "image" : "antimatterbeamimpact_es.png",
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "bounces" : 0,
+  "power" : 20,
+  "lightColor" : [0, 160, 0],
+  "damagePoly" : [ [-40, 0], [-25, -25], [0, -40], [25, -25], [40, 0], [25, 25], [0, 40], [-25, 25] ],
+  "speed" : 0,
+  "damageKind" : "poisonplasma"
+}

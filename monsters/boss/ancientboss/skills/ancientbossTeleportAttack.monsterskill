@@ -1,0 +1,14 @@
+{
+  "name" : "ancientbossTeleportAttack",
+  "label" : "TELEPORT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossTeleportAttack.lua" ],
+
+    "ancientbossTeleportAttack" : {
+      "cooldownTime" : 10,
+      "skillTime" : 2
+    }
+  }
+}

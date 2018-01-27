@@ -1,0 +1,15 @@
+{
+  "projectileName" : "cyberbossexplosionnogibs",
+  "image" : "cyberbossexplosion.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 19,
+  "damagePoly" : [ [-220, 0], [-160, -160], [0, -220], [160, -160], [220, 0], [160, 160], [0, 220], [-160, 160] ],
+  "animationLoops" : false,
+  "fullbright" : true,
+  "flippable" : true,
+  "damageKind" : "plasma",
+  "piercing" : true,
+  "bounces" : -1,
+  "power" : 50,
+  "speed" : 0
+}

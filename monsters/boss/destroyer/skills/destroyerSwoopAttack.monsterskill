@@ -1,0 +1,13 @@
+{
+  "name" : "destroyerSwoopAttack",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerSwoopAttack.lua" ],
+
+    "destroyerSwoopAttack" : {
+      "swoopTime" : 2
+    }
+  }
+}

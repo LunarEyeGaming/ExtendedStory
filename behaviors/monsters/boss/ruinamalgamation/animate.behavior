@@ -1,0 +1,44 @@
+{
+  "name": "ruinamalgamation-animate",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ruinamalgamation.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "repeater",
+	"type": "decorator",
+	"name": "repeater",
+	"parameters": {
+	  "maxLoops": {"value": -1},
+	  "untilSuccess": {"value": false}
+	},
+	"child": {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+		{
+          "title": "raBlinkEs",
+          "type": "action",
+          "name": "raBlinkEs",
+          "parameters": {
+            "toState": {"value": "blink"},
+            "stateType": {"value": "eye"},
+		    "variantNumber": {"value": 4}
+          }
+		},
+		{
+          "title": "timer",
+          "type": "action",
+          "name": "timer",
+          "parameters": {}
+        }
+      ]
+    }
+  }
+}

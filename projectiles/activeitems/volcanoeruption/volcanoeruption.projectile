@@ -1,0 +1,255 @@
+{
+  "projectileName" : "volcanoeruption",
+  "timeToLive" : 30,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 0,
+  "speed" : 0,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "loop",
+	  "count" : 4,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "invisibleprojectile",
+		  "offsetRange" : [3, 0, -3, 0],
+		  "config" : {
+		    "timeToLive" : 0,
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+			  }
+			]
+		  }
+		}
+	  ]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : ["/sfx/npc/boss/guardian_death_explosion.ogg"]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "volcanofireball",
+		  "angle" : 90,
+		  "fuzzAngle" : 45
+		}
+	  ]
+	},
+	{
+	  "time" : 0.25,
+	  "repeat" : false,
+	  "action" : "loop",
+	  "count" : 4,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "invisibleprojectile",
+		  "offsetRange" : [3, 0, -3, 0],
+		  "config" : {
+		    "timeToLive" : 0,
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+			  }
+			]
+		  }
+		}
+	  ]
+	},
+	{
+	  "time" : 0.50,
+	  "repeat" : false,
+	  "action" : "loop",
+	  "count" : 4,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "invisibleprojectile",
+		  "offsetRange" : [3, 0, -3, 0],
+		  "config" : {
+		    "timeToLive" : 0,
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+			  }
+			]
+		  }
+		}
+	  ]
+	},
+	{
+	  "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "volcanofireball",
+	  "angle" : 90,
+	  "fuzzAngle" : 45
+	},
+	{
+	  "time" : 5,
+	  "action" : "projectile",
+	  "type" : "rockroll",
+	  "direction" : [1.0, 0.0],
+	  "config" : {
+	    "bounces" : -1,
+	    "periodicActions" : [
+		  {
+		    "time" : 0.1,
+			"action" : "projectile",
+			"type" : "smoglingas"
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 5,
+	  "action" : "projectile",
+	  "type" : "rockroll",
+	  "direction" : [-1.0, 0.0],
+	  "config" : {
+	    "bounces" : -1,
+	    "periodicActions" : [
+		  {
+		    "time" : 0.1,
+			"action" : "projectile",
+			"type" : "smoglingas"
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 0.25,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0.0, 1.0],
+	  "offsetRange" : [3, 0, -3, 0],
+	  "config" : {
+	    "speed" : 0,
+		"piercing" : true,
+		"power" : 0,
+		"periodicActions" : [
+		  {
+			"time" : 0,
+			"repeat" : false,
+			"action" : "particle",
+			"specification" : {
+			  "type" : "animated",
+              "animation" : "/animations/volcanicfire/volcanicfire.animation",
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0.0],
+              "finalVelocity" : [0, 5.0],
+              "approach" : [0, 10],
+              "fade" : 0.3,
+              "destructionAction" : "shrink",
+              "destructionTime" : 0.3,
+              "size" : 2.0,
+              "timeToLive" : 6,
+              "fullbright" : true,
+              "layer" : "front",
+              "collidesForeground" : false,
+              "variance" : {
+                "position" : [0.0, 0.0],
+                "initialVelocity" : [0, 0]
+			  }
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 0.25,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0.0, 1.0],
+	  "offsetRange" : [3, 0, -3, 0],
+	  "config" : {
+	    "speed" : 0,
+		"piercing" : true,
+		"power" : 0,
+		"periodicActions" : [
+		  {
+			"time" : 0,
+			"repeat" : false,
+			"action" : "particle",
+			"specification" : {
+			  "type" : "animated",
+              "animation" : "/animations/volcanicfire/volcanicfire.animation",
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0.0],
+              "finalVelocity" : [0, 5.0],
+              "approach" : [0, 10],
+              "fade" : 0.3,
+              "destructionAction" : "shrink",
+              "destructionTime" : 0.3,
+              "size" : 2.0,
+              "timeToLive" : 6,
+              "fullbright" : true,
+              "layer" : "front",
+              "collidesForeground" : false,
+              "variance" : {
+                "position" : [0.0, 0.0],
+                "initialVelocity" : [0, 0]
+			  }
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 0.25,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0.0, 1.0],
+	  "offsetRange" : [3, 0, -3, 0],
+	  "config" : {
+	    "speed" : 0,
+		"piercing" : true,
+		"power" : 0,
+		"periodicActions" : [
+		  {
+			"time" : 0,
+			"repeat" : false,
+			"action" : "particle",
+			"specification" : {
+			  "type" : "animated",
+              "animation" : "/animations/volcanicfire/volcanicfire.animation",
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0.0],
+              "finalVelocity" : [0, 5.0],
+              "approach" : [0, 10],
+              "fade" : 0.3,
+              "destructionAction" : "shrink",
+              "destructionTime" : 0.3,
+              "size" : 2.0,
+              "timeToLive" : 6,
+              "fullbright" : true,
+              "layer" : "front",
+              "collidesForeground" : false,
+              "variance" : {
+                "position" : [0.0, 0.0],
+                "initialVelocity" : [0, 0]
+			  }
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "fire",
+  "persistentAudio" : "/sfx/environmental/magma_day.ogg"
+}

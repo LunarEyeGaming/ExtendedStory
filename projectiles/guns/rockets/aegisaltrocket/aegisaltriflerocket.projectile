@@ -1,0 +1,19 @@
+{
+  "projectileName" : "aegisaltriflerocket",
+  "image" : "aegisaltriflerocket.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "lightColor" : [128, 0, 128],
+  "pointLight" : true,
+  "physics" : "rocket",
+  "speed" : 2,
+  "acceleration" : 160,
+  "power" : 10.0,
+  "damageKind" : "plasma",
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
+	}
+  ]
+}

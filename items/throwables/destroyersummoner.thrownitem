@@ -1,0 +1,305 @@
+{
+  "itemName" : "destroyersummoner",
+  "price" : 50,
+  "rarity" : "Legendary",
+  "category" : "Summoner",
+  "inventoryIcon" : "destroyersummoner.png",
+  "image" : "destroyersummoner.png",
+  "shortdescription" : "Destruction Orb",
+  "description" : "It appears to have the power to destroy anything. ^yellow;Summons the destroyer^reset;",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 0.4,
+
+  "projectileType" : "destroyersummoner",
+  "projectileConfig" : {
+    "speed" : 25,
+    "power" : 40,
+	"timeToLive" : 0,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      },
+	  {
+	    "time" : 0,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "invisibleprojectile",
+		"config" : {
+		  "statusEffects" : [ "predestroyereffect" ],
+          "movementSettings" : {
+            "collisionEnabled" : false
+          }
+		}
+	  },
+	  {
+	    "time" : 0,
+		"repeat" : false,
+		"action" : "projectile",
+		"type" : "destroyermusic"
+	  }
+    ],
+	"actionOnReap" : [
+	  {
+	    "action" : "projectile",
+		"type" : "destroyershot",
+		"angle" : 90,
+		"config" : {
+		  "piercing" : true,
+		  "power" : 0,
+		  "speed" : 10,
+          "movementSettings" : {
+            "collisionEnabled" : false
+          },
+		  "timeToLive" : 2,
+		  "actionOnReap" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "destroyershot",
+			  "config" : {
+			    "speed" : 0,
+				"timeToLive" : 1,
+        	    "movementSettings" : {
+        	      "collisionEnabled" : false
+        	    },
+				"actionOnReap" : [
+				  {
+				    "action" : "projectile",
+					"type" : "destroyershot",
+					"config" : {
+					  "speed" : 0,
+					  "timeToLive" : 3,
+        			  "movementSettings" : {
+        			    "collisionEnabled" : false
+        			  },
+					  "periodicActions" : [
+					    {
+						  "time" : 0.0,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "invisibleprojectile",
+						  "direction" : [1.0, 0.0],
+						  "config" : {
+						    "movementSettings" : {
+							  "collisionEnabled" : false
+							},
+							"speed" : 200,
+							"timeToLive" : 0.5,
+							"power" : 0,
+							"piercing" : true,
+							"damageTeam" : { "type" : "indiscriminate" },
+							"actionOnReap" : [
+							  {
+							    "action" : "projectile",
+								"type" : "destroyerlasersweep",
+								"config" : {
+								  "timeToLive" : 4.53,
+								  "speed" : 0,
+								  "actionOnReap" : [
+								    {
+									  "action" : "projectile",
+									  "type" : "destroyerborder",
+									  "config" : {
+									    "damageTeam" : { "type" : "indiscriminate" }
+									  }
+									}
+								  ]
+								}
+							  }
+							]
+						  }
+						},
+						{
+						  "time" : 0.0,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "invisibleprojectile",
+						  "direction" : [-1.0, 0.0],
+						  "config" : {
+						    "movementSettings" : {
+							  "collisionEnabled" : false
+							},
+							"speed" : 200,
+							"timeToLive" : 0.5,
+							"power" : 0,
+							"piercing" : true,
+							"damageTeam" : { "type" : "enemy" },
+							"actionOnReap" : [
+							  {
+							    "action" : "projectile",
+								"type" : "destroyerlasersweep",
+								"config" : {
+								  "timeToLive" : 4.53,
+								  "speed" : 0,
+								  "actionOnReap" : [
+								    {
+									  "action" : "projectile",
+									  "type" : "destroyerborder",
+									  "config" : {
+									    "damageTeam" : { "type" : "enemy" }
+									  }
+									}
+								  ]
+								}
+							  }
+							]
+						  }
+						},
+					    {
+						  "time" : 0.2,
+						  "action" : "projectile",
+						  "type" : "invisibleprojectile",
+						  "angle" : 90,
+						  "fuzzAngle" : 180,
+						  "config" : {
+						    "movementSettings" : {
+							  "collisionEnabled" : false
+							},
+							"speed" : 200,
+							"timeToLive" : 0.1,
+							"actionOnReap" : [
+							  {
+							    "action" : "projectile",
+								"type" : "destroyershot",
+								"config" : {
+								  "movementSettings" : {
+								    "collisionEnabled" : false
+								  },
+								  "speed" : -50,
+								  "timeToLive" : 0.4,
+								  "actionOnReap" : [
+								    {
+									  "action" : "config",
+									  "file" : "/projectiles/explosions/pulsecannonexplosion/redpulsecannonexplosion.config"
+									}
+								  ]
+								}
+							  }
+							]
+						  }
+						},
+						{
+						  "time" : 0.5,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=2",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0
+						  }
+						},
+						{
+						  "time" : 1.0,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=3",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0
+						  }
+						},
+						{
+						  "time" : 1.5,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=4",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0
+						  }
+						},
+						{
+						  "time" : 2.0,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=5",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0
+						  }
+						},
+						{
+						  "time" : 2.5,
+						  "repeat" : false,
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=5.5",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0
+						  }
+						}
+					  ],
+					  "actionOnReap" : [
+					    {
+						  "action" : "projectile",
+						  "type" : "destroyershot",
+						  "config" : {
+						    "processing" : "?scalenearest=6",
+        				    "movementSettings" : {
+        				      "collisionEnabled" : false
+        				    },
+							"speed" : 0,
+							"timeToLive" : 2,
+							"periodicActions" : [
+							  {
+							    "time" : 0.01,
+								"action" : "projectile",
+								"type" : "destroyerexplosion",
+								"offsetRange" : [ 20, 20, -20, -20 ],
+								"config" : {
+								  "periodicActions" : [
+								    {
+									  "time" : 0,
+									  "repeat" : false,
+									  "action" : "sound",
+									  "options" : [ "/sfx/npc/boss/destroyer_explosion.ogg" ]
+									}
+								  ]
+								}
+							  }
+							],
+							"actionOnReap" : [
+							  {
+							    "action" : "spawnmonster",
+								"type" : "destroyer",
+								"level" : 10,
+								"arguments" : {
+								  "musicStagehands" : [ "bossmusicdestroyer" ]
+								}
+							  }
+							]
+						  }
+						}
+					  ]
+					}
+				  }
+				]
+			  }
+			}
+		  ]
+		}
+	  }
+	]
+  }
+}

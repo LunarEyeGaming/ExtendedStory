@@ -1,0 +1,21 @@
+{
+  "name" : "chaoticvoid",
+  "blockingStat" : "chaoticvoidImmunity",
+  "effectConfig" : {
+    "starvationCompoundDamage" : 2,
+    "movementModifiers" : {
+      "speedModifier" : 0.5
+    },
+    "soundInterval" : 0.5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "chaoticvoid.lua"
+  ],
+
+  "animationConfig" : "chaoticvoid.animation",
+
+  "label" : "Chaotic Void - You are being consumed by darkness",
+  "icon" : "/interface/statuses/chaoticvoid.png"
+}

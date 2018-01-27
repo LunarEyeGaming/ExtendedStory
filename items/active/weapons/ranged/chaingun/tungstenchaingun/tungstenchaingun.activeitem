@@ -1,0 +1,110 @@
+{
+  "itemName" : "tungstenchaingun",
+  "price" : 480,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "description" : "A chain gun made out of tungsten.",
+  "shortdescription" : "Tungsten Chain Gun",
+  "tooltipKind" : "gun",
+  "category" : "Chain Gun",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 3,
+
+  "inventoryIcon" : "tungstenchaingun.png:idle",
+
+  "animation" : "/items/active/weapons/ranged/chaingun/tungstenchaingun/tungstenchaingun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "tungstenchaingun.png",
+	"middleFullbright" : "tungstenchaingununlit.png",
+    "barrel" : "",
+    "muzzleFlash" : "/projectiles/invisibleprojectile/invisibleprojectile.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/ar4.ogg", "/sfx/gun/ar5.ogg", "/sfx/gun/ar6.ogg"],
+	  "altFire" : ["/sfx/gun/grenade1.ogg"]
+    }
+  },
+
+  "baseOffset" : [0.6, -0.7],
+  "muzzleOffset" : [2.5, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.05,
+    "baseDps" : 12.0,
+    "energyUsage" : 10,
+    "inaccuracy" : 0.08,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "bullet-1",
+    "projectileParameters" : {
+      "knockback" : 2
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		"animationStates" : {
+		  "middle" : "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.01,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+	"fireTime" : 0.1,
+	"baseDps" : 20,
+	"cooldownTime" : 0.1,
+	"inaccuracy" : 0.01,
+	"energyUsage" : 20,
+	"projectileType" : "explosivebullet",
+	"projectileParameters" : {
+	  "periodicActions" : [], 
+	  "speed" : 50,
+	  "timeToLive" : 10.0,
+	  "knockback" : 70,
+	  "bounces" : 0,
+	  "actionOnReap" : [
+	    {
+		  "action" : "config",
+		  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+		}
+	  ]
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,75 @@
+{
+  "name" : "destroyerSkyMegaLaserAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerSkyMegaLaserAttack.lua" ],
+
+    "destroyerSkyMegaLaserAttack" : {
+      "skillTime": 0.9,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 1.0,
+      "projectile" : {
+        "type" : "energyfist",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "timeToLive" : 0.0,
+          "actionOnReap" : [
+            {
+              "action" : "option",
+              "options" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "energyfist",
+				  "direction" : [ 1.0, 0.0 ],
+				  "config" : {
+				    "speed" : 800,
+					"timeToLive" : 0.25,
+					"power" : 0,
+					"piercing" : true,
+					"periodicActions" : [],
+					"processing" : "?0",
+					"actionOnReap" : [
+					  {
+					    "action" : "projectile",
+						"type" : "destroyerlasersweep",
+						"direction" : [ -1.0, 0.0 ],
+						"config" : {"power" : 100, "piercing" : true}
+					  }
+					]
+				  }
+				},
+				{
+				  "action" : "projectile",
+				  "type" : "energyfist",
+				  "direction" : [ -1.0, 0.0 ],
+				  "config" : {
+				    "speed" : 800,
+					"timeToLive" : 0.25,
+					"power" : 0,
+					"piercing" : true,
+					"periodicActions" : [],
+					"processing" : "?0",
+					"actionOnReap" : [
+					  {
+					    "action" : "projectile",
+						"type" : "destroyerlasersweep",
+						"direction" : [ 1.0, 0.0 ],
+						"config" : {"power" : 100, "piercing" : true}
+					  }
+					]
+				  }
+				}
+			  ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

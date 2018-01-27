@@ -1,0 +1,89 @@
+{
+  "name" : "fireshower",
+
+  "particles" : [
+    {
+      "density" : 0.01,
+      "particle" : {
+        "type" : "animated",
+        "image" : "/animations/ember1/ember1.animation",
+        "velocity" : [0, -3],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false
+      }
+    },
+    {
+      "density" : 0.01,
+        "particle" : {
+        "type" : "animated",
+        "image" : "/animations/ember2/ember2.animation",
+        "velocity" : [0, -4],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false
+      }
+    },
+    {
+      "density" : 0.01,
+        "particle" : {
+        "type" : "animated",
+        "image" : "/animations/firetrail/expansionmodfiretrail.animation",
+        "velocity" : [0, -4],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false
+      }
+    },
+    {
+      "density" : 0.025,
+        "particle" : {
+        "type" : "animated",
+        "image" : "/animations/ember3/ember3.animation",
+        "velocity" : [0, -3],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false
+      }
+    },
+    {
+      "density" : 0.05,
+      "particle" : {
+        "type" : "textured",
+        "image" : "/particles/ember/1.png",
+        "velocity" : [0, -3],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false
+      }
+    }
+  ],
+
+  "projectiles" : [
+    {
+      "projectile" : "largefireball",
+      "parameters" : {
+        "power" : 1000
+      },
+      "velocity" : [30, -30],
+      "ratePerX" : 0.005,
+      "spawnAboveRegion" : 30,
+      "spawnHorizontalPad" : 30,
+      "windAffectAmount" : 0.0
+    }
+  ],
+
+  "duration" : [30, 60],
+  "maximumWind" : 15.0,
+  "weatherNoises" : [ "/sfx/environmental/magma_underground.ogg" ]
+}

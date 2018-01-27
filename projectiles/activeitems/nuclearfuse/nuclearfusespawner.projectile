@@ -1,0 +1,33 @@
+{
+  "projectileName" : "nuclearfusespawner",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 2,
+  "image" : "nuclearfusespawner.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "nuclearfuse",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "periodicActions" : [
+	{
+	  "time" : 0.0,
+	  "repeat" : false,
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+	}
+  ],
+  "animationCycle" : 0.375,
+  "lightColor" : [9, 18, 204],
+  "frameNumber" : 5,
+  "power" : 50,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "fireplasma"
+}

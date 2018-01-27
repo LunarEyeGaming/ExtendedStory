@@ -1,0 +1,45 @@
+{
+  "projectileName" : "fusionbubbleform",
+  "image" : "fusionbubbleform.png",
+  "animationCycle" : 0.375,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 6,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "plasma",
+  "speed" : 0,
+  "timeToLive" : 0.375,
+  "power" : 50,
+  "periodicActions" : [
+    {
+	"time" : 0,
+	"repeat" : false,
+	"action" : "sound",
+    "options" : [ "/sfx/melee/charge_up15.ogg" ]	
+	}
+  ],
+  "statusEffects" : [
+    "gammarays"
+  ],
+  "scripts" : [ "fusionbubbleform.lua" ],
+  "scriptDelta" : 1,
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  },
+
+  "controlRotation" : {
+    "maxSpeed" : 16,
+    "controlForce" : 70,
+    "friction" : 10
+  }
+}

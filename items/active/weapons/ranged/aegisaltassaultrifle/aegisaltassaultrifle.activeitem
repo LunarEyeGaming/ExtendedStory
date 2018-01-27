@@ -1,0 +1,128 @@
+{
+  "itemName" : "aegisaltassaultrifle",
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A rapid fire rifle that shoots lasers.",
+  "shortdescription" : "Aegisalt Machinegun",
+  "tooltipKind" : "gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 6,
+
+  "inventoryIcon" : [
+    { "image" : "aegisaltassaultrifle.png:idle.1" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/aegisaltassaultrifle/aegisaltassaultrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "aegisaltassaultrifle.png",
+    "middleFullbright" : "aegisaltassaultrifleunlit.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/pistol/ancientpistol/ancientmuzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasma_sniper1.ogg"],
+	  "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 150]
+      }
+    },
+	"particleEmitters" : {
+	  "altMuzzleFlash" : {
+        "active" : false,
+        "rotationGroup" : "weapon",
+        "emissionRate" : 8,
+        "offsetPart" : "muzzleFlash",
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : [
+          { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
+        ]
+      }
+	}
+  },
+
+  "baseOffset" : [0.8, 0.225],
+  "muzzleOffset" : [2.4, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.06,
+    "baseDps" : 20,
+    "energyUsage" : 60,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+    "fireType" : "auto",
+
+    "projectileType" : "ancientlasershot",
+    "projectileParameters" : {
+      "knockback" : 20,
+	  "actionOnReap" : [
+	    {
+		  "action" : "config",
+		  "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
+		}
+	  ]
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 6,
+        "weaponRotation" : 6,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.06,
+        "armRotation" : 6,
+        "weaponRotation" : 6,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "rocketburst",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "aegisaltriflerocket", "projectileParameters" : {
+	    "actionOnReap" : [
+          {
+	        "action" : "config",
+	        "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
+	      }
+        ]
+	  } }
+    },
+    "energyUsage" : 40,
+	"fireTime" : 0.2,
+	"inaccuracy" : 0.05,
+	"name" : "Aegisalt Rocket Burst"
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

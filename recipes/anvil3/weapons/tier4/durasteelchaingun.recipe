@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "durasteelbar", "count" : 5 },
+    { "item" : "copperbar", "count" : 7 },
+	{ "item" : "moltencore", "count" : 1 }
+  ],
+  "output" : { "item" : "durasteelchaingun", "count" : 1 },
+  "groups" : [ "craftinganvil3", "weapons", "all" ]
+}

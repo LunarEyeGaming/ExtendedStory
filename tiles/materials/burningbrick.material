@@ -1,0 +1,25 @@
+{
+  "materialId" : 1997,
+  "materialName" : "burningbrick",
+  "particleColor" : [255, 155, 105, 255],
+  "itemDrop" : "burningbrick",
+  "shortdescription" : "Eternally Burning Brick",
+  "description" : "Small bricks made from eternally burning stone.",
+  "glitchDescription" : "Observant. These bricks are made from extremely hot stone.",
+  "floranDescription" : "Ssmooth and glowing ssstone brickss.",
+  "novakidDescription" : "Bricks made outta really hot stone.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 16,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "burningbrick.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 2850,
+    "radiantLight" : [128, 64, 0]
+  }
+}

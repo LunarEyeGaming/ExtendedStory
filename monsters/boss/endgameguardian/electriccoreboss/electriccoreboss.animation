@@ -1,0 +1,229 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "core" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 5,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          }
+        }
+      },
+      "shell" : {
+        "priority" : 3,
+        "default" : "visible",
+        "states" : {
+          "invisible" : {
+            "frames" : 1
+          },
+          "visible" : {
+            "frames" : 1
+          },
+          "reappear" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "transition",
+			"transition" : "visible"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 12,
+            "cycle" : 1.2
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "core" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ],
+          "image" : "<partImage>"
+        },
+        "partStates" : {
+          "core" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:<colorState>.idle.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "shell" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ],
+          "image" : "<partImage>"
+        },
+        "partStates" : {
+          "shell" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>:visible"
+              }
+            },
+            "reappear" : {
+              "properties" : {
+                "image" : "<partImage>:reappear.<frame>"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "shellunlit" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "shell" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>:visible"
+              }
+            },
+            "reappear" : {
+              "properties" : {
+                "image" : "<partImage>:reappear.<frame>"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+    "windleft" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-32, -5, -32.0, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "windright" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [32.0, -5, 32, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [-64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [-3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : [
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "kluexstatueshard" },
+        { "particle" : "kluexcrystalshard" },
+        { "particle" : "kluexcrystal" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ "/sfx/npc/boss/kluexboss_death.ogg" ],
+    "preparePlasma" : [ "/sfx/melee/charge_up5.ogg" ],
+    "plasmaAttack" : [ "/sfx/melee/giantsword_charge_full.ogg" ],
+    "prepareFire" : [ ],
+    "spawnPlatforms" : [ ],
+    "prepareIce" : [ ],
+    "spawnIceEruptions" : [ "/sfx/melee/travelingslash_ice1.ogg" ],
+    "prepareWind" : [ "/sfx/melee/charge_up8.ogg" ],
+    "windFire" : [ "/sfx/gun/plasma_sniper4.ogg" ],
+    "lightningFire" : [ "/sfx/npc/boss/ancientavatar_lightningwindup.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

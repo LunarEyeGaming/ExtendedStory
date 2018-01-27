@@ -1,0 +1,138 @@
+[
+  {
+    "op" : "add",
+    "path" : "/isolatedvault",
+    "value" : {
+      "primaryDungeon" : "isolatedvault",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [300, 300, 300],
+      "musicTrack" : "/music/forsaken-grotto.ogg",
+      "biome": "scorchedcity",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/novakidoutpost",
+    "value" : {
+      "primaryDungeon" : "novakidoutpost",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [300, 300, 300],
+      "musicTrack" : "/music/on-the-beach-at-night.ogg",
+      "biome": "garden"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/cyberfacility",
+    "value" : {
+      "primaryDungeon" : "cyberfacility",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/error-0xbfaf000.ogg",
+      "biome": "darkabyss",
+      "environmentStatusEffects" : ["dontstarve", "biomefreezing"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/electricartifactdungeon",
+    "value" : {
+      "primaryDungeon" : "electricartifactdungeon",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/fireartifactdungeon",
+    "value" : {
+      "primaryDungeon" : "fireartifactdungeon",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/lava-exploration2.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/iceartifactdungeon",
+    "value" : {
+      "primaryDungeon" : "iceartifactdungeon",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/arctic-exploration2.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/poisonartifactdungeon",
+    "value" : {
+      "primaryDungeon" : "poisonartifactdungeon",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "dungeonSurfaceHeight" : 1400,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/ultramarine.ogg",
+      "biome": "nuclearwasteland",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/supervoidbossarena",
+    "value" : {
+      "primaryDungeon" : "supervoidbossarena",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/event-horizon-alxdmusic.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/supervoidbossworld",
+    "value" : {
+      "primaryDungeon" : "supervoidbossworld",
+    "threatLevel" : 8,
+    "gravity" : 80,
+    "worldSize" : [2000, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
+    "musicTrack" : "/music/inviolate-loop.ogg",
+    "environmentStatusEffects" : ["dontstarve", "chaoticvoid"]
+    }
+  }
+]

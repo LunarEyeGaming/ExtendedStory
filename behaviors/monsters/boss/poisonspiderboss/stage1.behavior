@@ -1,0 +1,69 @@
+{
+  "name": "poisonspiderboss-stage1",
+  "description": "",
+  "scripts": [],
+  "parameters": {},
+  "root": {
+    "title": "repeater",
+    "type": "decorator",
+    "name": "repeater",
+    "parameters": {},
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "Slam",
+          "type": "module",
+          "name": "poisonspiderboss-slam",
+          "parameters": {}
+        },
+        {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "cooldown",
+            "type": "decorator",
+            "name": "cooldown",
+            "parameters": {
+              "cooldown": {"value": 30},
+              "onFail": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "Toxinia Return",
+                  "type": "module",
+                  "name": "poisonspiderboss-return",
+                  "parameters": {}
+                },
+                {
+                  "title": "Hatch",
+                  "type": "module",
+                  "name": "poisonspiderboss-hatch2",
+                  "parameters": {
+                    "hatchNumber": {"value": 7}
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Acid Spray",
+          "type": "module",
+          "name": "poisonspiderboss-acid",
+          "parameters": {}
+        }
+      ]
+    }
+  }
+}

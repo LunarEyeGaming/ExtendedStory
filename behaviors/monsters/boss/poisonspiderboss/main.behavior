@@ -1,0 +1,1133 @@
+{
+  "name": "poisonspiderboss",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/notification.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/sensor.lua",
+    "/scripts/actions/query.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "deathMovementParameters": {"gravityEnabled": true},
+    "deathAcidSprayConfig": {"power": 0}
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": -1}
+    },
+    "children": [
+      {
+        "title": "Spiderboss",
+        "type": "composite",
+        "name": "dynamic",
+        "parameters": {},
+        "children": [
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1}
+                },
+                "children": [
+                  {
+                    "title": "",
+                    "type": "module",
+                    "name": "tracking",
+                    "parameters": {
+                      "queryRange": {"value": 50},
+                      "trackingRange": {"value": 100},
+                      "keepInSight": {"value": true}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "setDying",
+                            "type": "action",
+                            "name": "setDying",
+                            "parameters": {
+                              "shouldDie": {"value": false}
+                            }
+                          },
+                          {
+                            "title": "setAnimationState",
+                            "type": "action",
+                            "name": "setAnimationState",
+                            "parameters": {
+                              "state": {"value": "breakout"},
+                              "type": {"value": "body"}
+                            }
+                          },
+                          {
+                            "title": "setDamageBar",
+                            "type": "action",
+                            "name": "setDamageBar",
+                            "parameters": {
+                              "type": {"value": "Special"}
+                            }
+                          },
+                          {
+                            "title": "battleMusic",
+                            "type": "action",
+                            "name": "battleMusic",
+                            "parameters": {
+                              "enable": {"value": true}
+                            }
+                          },
+                          {
+                            "title": "sequence",
+                            "type": "composite",
+                            "name": "sequence",
+                            "parameters": {},
+                            "children": [
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "cocooncrack"}
+                                }
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.67}
+                                }
+                              },
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "cocooncrack"}
+                                }
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.67}
+                                }
+                              },
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "cocooncrack"}
+                                }
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.67}
+                                }
+                              },
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "cocoonburst"}
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "setDamageOnTouch",
+                            "type": "action",
+                            "name": "setDamageOnTouch",
+                            "parameters": {
+                              "touchDamage": {"value": true}
+                            }
+                          },
+                          {
+                            "title": "setAnimationState",
+                            "type": "action",
+                            "name": "setAnimationState",
+                            "parameters": {
+                              "state": {"value": "idle"},
+                              "type": {"value": "body"}
+                            }
+                          },
+                          {
+                            "title": "setAnimationState",
+                            "type": "action",
+                            "name": "setAnimationState",
+                            "parameters": {
+                              "state": {"value": "idle"},
+                              "type": {"value": "legs"}
+                            }
+                          },
+                          {
+                            "title": "burstParticleEmitter",
+                            "type": "action",
+                            "name": "burstParticleEmitter",
+                            "parameters": {
+                              "emitter": {"value": "cocoonburst"}
+                            }
+                          },
+                          {
+                            "title": "setAggressive",
+                            "type": "action",
+                            "name": "setAggressive",
+                            "parameters": {
+                              "aggressive": {"value": true}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "setAnimationState",
+                            "type": "action",
+                            "name": "setAnimationState",
+                            "parameters": {
+                              "state": {"value": "stage1"},
+                              "type": {"value": "shell"}
+                            }
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": -1},
+                              "success": {"value": 1}
+                            },
+                            "children": [
+							  {
+                                "title": "inverter",
+                                "type": "decorator",
+                                "name": "inverter",
+                                "parameters": {},
+                                "child": {
+                                  "title": "resourcePercentage",
+                                  "type": "action",
+                                  "name": "resourcePercentage",
+                                  "parameters": {
+                                    "percentage": {"value": 0.95},
+                                    "resource": {"value": "health"}
+                                  }
+                                }
+                              },
+                              {
+                                "title": "Ixodoom Stage 1",
+                                "type": "module",
+                                "name": "poisonspiderboss-stage1",
+                                "parameters": {}
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Hurt",
+                        "type": "module",
+                        "name": "spiderboss-hurt",
+                        "parameters": {
+                          "minHealth": {"value": 0.9},
+                          "maxHealth": {"value": 0.95}
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 2}
+                        },
+                        "children": [
+                          {
+                            "title": "inverter",
+                            "type": "decorator",
+                            "name": "inverter",
+                            "parameters": {},
+                            "child": {
+                              "title": "resourcePercentage",
+                              "type": "action",
+                              "name": "resourcePercentage",
+                              "parameters": {
+                                "percentage": {"value": 0.9},
+                                "resource": {"value": "health"}
+                              }
+                            }
+                          },
+                          {
+                            "title": "addEphemeralEffect",
+                            "type": "action",
+                            "name": "addEphemeralEffect",
+                            "parameters": {
+                              "duration": {"value": 0.1},
+                              "name": {"value": "vulnerability"}
+                            }
+                          },
+                          {
+                            "title": "Ixodoom Stage 1",
+                            "type": "module",
+                            "name": "poisonspiderboss-stage1",
+                            "parameters": {}
+                          }
+                        ]
+                      },
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "Set stage",
+                            "type": "module",
+                            "name": "poisonspiderboss-setstage",
+                            "parameters": {
+                              "shellState": {"value": "stage2"},
+                              "setHealth": {"value": 0.9}
+                            }
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": -1},
+                              "success": {"value": 1}
+                            },
+                            "children": [
+                              {
+                                "title": "inverter",
+                                "type": "decorator",
+                                "name": "inverter",
+                                "parameters": {},
+                                "child": {
+                                  "title": "resourcePercentage",
+                                  "type": "action",
+                                  "name": "resourcePercentage",
+                                  "parameters": {
+                                    "percentage": {"value": 0.63},
+                                    "resource": {"value": "health"}
+                                  }
+                                }
+                              },
+                              {
+                                "title": "Ixodoom Stage 2",
+                                "type": "module",
+                                "name": "poisonspiderboss-stage2",
+                                "parameters": {}
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Hurt",
+                        "type": "module",
+                        "name": "poisonspiderboss-hurt",
+                        "parameters": {
+                          "minHealth": {"value": 0.55},
+                          "maxHealth": {"value": 0.7}
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 2}
+                        },
+                        "children": [
+                          {
+                            "title": "inverter",
+                            "type": "decorator",
+                            "name": "inverter",
+                            "parameters": {},
+                            "child": {
+                              "title": "resourcePercentage",
+                              "type": "action",
+                              "name": "resourcePercentage",
+                              "parameters": {
+                                "percentage": {"value": 0.55},
+                                "resource": {"value": "health"}
+                              }
+                            }
+                          },
+                          {
+                            "title": "addEphemeralEffect",
+                            "type": "action",
+                            "name": "addEphemeralEffect",
+                            "parameters": {
+                              "duration": {"value": 0.1},
+                              "name": {"value": "vulnerability"}
+                            }
+                          },
+                          {
+                            "title": "Ixodoom Stage 2",
+                            "type": "module",
+                            "name": "poisonspiderboss-stage2",
+                            "parameters": {}
+                          }
+                        ]
+                      },
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "Set stage",
+                            "type": "module",
+                            "name": "poisonspiderboss-setstage",
+                            "parameters": {
+                              "shellState": {"value": "stage3"},
+                              "setHealth": {"value": 0.55}
+                            }
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": -1},
+                              "success": {"value": 1}
+                            },
+                            "children": [
+                              {
+                                "title": "inverter",
+                                "type": "decorator",
+                                "name": "inverter",
+                                "parameters": {},
+                                "child": {
+                                  "title": "resourcePercentage",
+                                  "type": "action",
+                                  "name": "resourcePercentage",
+                                  "parameters": {
+                                    "percentage": {"value": 0.1},
+                                    "resource": {"value": "health"}
+                                  }
+                                }
+                              },
+                              {
+                                "title": "Ixodoom Stage 3",
+                                "type": "module",
+                                "name": "poisonspiderboss-stage3",
+                                "parameters": {}
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Hurt",
+                        "type": "module",
+                        "name": "poisonspiderboss-hurt",
+                        "parameters": {
+                          "minHealth": {"value": 0},
+                          "maxHealth": {"value": 0.1}
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 2}
+                        },
+                        "children": [
+                          {
+                            "title": "inverter",
+                            "type": "decorator",
+                            "name": "inverter",
+                            "parameters": {},
+                            "child": {
+                              "title": "resourcePercentage",
+                              "type": "action",
+                              "name": "resourcePercentage",
+                              "parameters": {
+                                "percentage": {"value": 0},
+                                "resource": {"value": "health"}
+                              }
+                            }
+                          },
+                          {
+                            "title": "addEphemeralEffect",
+                            "type": "action",
+                            "name": "addEphemeralEffect",
+                            "parameters": {
+                              "duration": {"value": 0.1},
+                              "name": {"value": "vulnerability"}
+                            }
+                          },
+                          {
+                            "title": "Ixodoom Stage 3",
+                            "type": "module",
+                            "name": "poisonspiderboss-stage3",
+                            "parameters": {}
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+			  {
+                "title": "inverter",
+                "type": "decorator",
+                "name": "inverter",
+                "parameters": {},
+                "child": {
+                  "title": "resourcePercentage",
+                  "type": "action",
+                  "name": "resourcePercentage",
+                  "parameters": {
+                    "percentage": {"value": 0.0},
+                    "resource": {"value": "health"}
+                  }
+                }
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "hurt"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "Return to spawn",
+                    "type": "module",
+                    "name": "poisonspiderboss-return",
+                    "parameters": {}
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "hurt"},
+                      "type": {"value": "legs"}
+                    }
+                  },
+                  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
+                    "parameters": {
+                      "active": {"value": true},
+                      "emitter": {"value": "deathWindup"}
+                    }
+                  },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": 2}
+                    },
+                    "children": [
+                      {
+                        "title": "setVelocity",
+                        "type": "action",
+                        "name": "setVelocity",
+                        "parameters": {
+                          "velocity": {"value": [0, 0]}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 2}
+                        }
+                      },
+                      {
+                        "title": "failer",
+                        "type": "decorator",
+                        "name": "failer",
+                        "parameters": {},
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "deathWindup"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.1}
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "title": "failer",
+                        "type": "decorator",
+                        "name": "failer",
+                        "parameters": {},
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 1}
+                              }
+                            },
+                            {
+                              "title": "setParticleEmitterActive",
+                              "type": "action",
+                              "name": "setParticleEmitterActive",
+                              "parameters": {
+                                "active": {"value": true},
+                                "emitter": {"value": "deathWindupExplosions"}
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "title": "failer",
+                        "type": "decorator",
+                        "name": "failer",
+                        "parameters": {},
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.5}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "spiderslam"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 1}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "spit"}
+                              }
+                            },
+                            {
+                              "title": "vecRotate",
+                              "type": "action",
+                              "name": "vecRotate",
+                              "parameters": {
+                                "angle": {"value": -0.125},
+                                "vector": {"value": [0, -1]}
+                              },
+                              "output": {
+                                "vector": "fireVector"
+                              }
+                            },
+                            {
+                              "title": "repeater",
+                              "type": "decorator",
+                              "name": "repeater",
+                              "parameters": {
+                                "maxLoops": {"value": 5}
+                              },
+                              "child": {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "spawnProjectile",
+                                    "type": "action",
+                                    "name": "spawnProjectile",
+                                    "parameters": {
+                                      "aimVector": {"key": "fireVector"},
+                                      "offset": {"value": [0, 3]},
+                                      "projectileConfig": {"value": "<deathAcidSprayConfig>"},
+                                      "projectileType": {"value": "clustergoo"}
+                                    }
+                                  },
+                                  {
+                                    "title": "vecRotate",
+                                    "type": "action",
+                                    "name": "vecRotate",
+                                    "parameters": {
+                                      "angle": {"value": 0.05},
+                                      "vector": {"key": "fireVector"}
+                                    },
+                                    "output": {
+                                      "vector": "fireVector"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "dead"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "die"},
+                      "type": {"value": "legs"}
+                    }
+                  },
+                  {
+                    "title": "playSound",
+                    "type": "action",
+                    "name": "playSound",
+                    "parameters": {
+                      "sound": {"value": "death"}
+                    }
+                  },
+                  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
+                    "parameters": {
+                      "active": {"value": false},
+                      "emitter": {"value": "deathWindup"}
+                    }
+                  },
+                  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
+                    "parameters": {
+                      "active": {"value": false},
+                      "emitter": {"value": "deathWindupExplosions"}
+                    }
+                  },
+                  {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": -1}
+                    },
+                    "children": [
+                      {
+                        "title": "controlParameters",
+                        "type": "action",
+                        "name": "controlParameters",
+                        "parameters": {
+                          "parameters": {"key": "<deathMovementParameters>"}
+                        }
+                      },
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "dynamic",
+                            "type": "composite",
+                            "name": "dynamic",
+                            "parameters": {},
+                            "children": [
+                              {
+                                "title": "lineTileCollision",
+                                "type": "action",
+                                "name": "lineTileCollision",
+                                "parameters": {
+                                  "collisionType": {"value": ["Null", "Block", "Dynamic"]},
+                                  "offset": {"value": [0, -10]},
+                                  "position": {"key": "self"}
+                                }
+                              },
+                              {
+                                "title": "runner",
+                                "type": "action",
+                                "name": "runner",
+                                "parameters": {}
+                              }
+                            ]
+                          },
+                          {
+                            "title": "setDying",
+                            "type": "action",
+                            "name": "setDying",
+                            "parameters": {
+                              "shouldDie": {"value": true}
+                            }
+                          },
+                          {
+                            "title": "spawnProjectile",
+                            "type": "action",
+                            "name": "spawnProjectile",
+                            "parameters": {
+                              "aimVector": {"key": "fireVector"},
+                              "offset": {"value": [0, 0]},
+                              "projectileType": {"value": "toxiniadeathexplosion"}
+                            }
+                          },
+                          {
+                            "title": "repeater",
+                            "type": "decorator",
+                            "name": "repeater",
+                            "parameters": {
+                              "maxLoops": {"value": 20}
+                            },
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "random",
+                                  "type": "action",
+                                  "name": "random",
+                                  "parameters": {
+                                    "max": {"value": 6.28},
+                                    "min": {"value": 0}
+                                  },
+                                  "output": {
+                                    "number": "rotation"
+                                  }
+                                },
+                                {
+                                  "title": "vecRotate",
+                                  "type": "action",
+                                  "name": "vecRotate",
+                                  "parameters": {
+                                    "angle": {"key": "rotation"},
+                                    "vector": {"value": [0, 1]}
+                                  },
+                                  "output": {
+                                    "vector": "fireVector"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "limiter",
+                          "type": "decorator",
+                          "name": "limiter",
+                          "parameters": {
+                            "limit": {"value": 1}
+                          },
+                          "child": {
+                            "title": "rotate",
+                            "type": "action",
+                            "name": "rotate",
+                            "parameters": {
+                              "angle": {"value": 60},
+                              "rate": {"value": 1.5}
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "title": "limiter",
+                        "type": "decorator",
+                        "name": "limiter",
+                        "parameters": {
+                          "limit": {"value": 1}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "lineTileCollision",
+                              "type": "action",
+                              "name": "lineTileCollision",
+                              "parameters": {
+                                "collisionType": {"value": ["Dynamic"]},
+                                "offset": {"value": [0, -10]},
+                                "position": {"key": "self"}
+                              }
+                            },
+                            {
+                              "title": "findObject",
+                              "type": "action",
+                              "name": "findObject",
+                              "parameters": {
+                                "name": {"value": "dirttrapdoor"},
+                                "orderBy": {"value": "nearest"},
+                                "position": {"key": "self"},
+                                "range": {"value": 30}
+                              },
+                              "output": {
+                                "list": "trapdoors"
+                              }
+                            },
+                            {
+                              "title": "repeater",
+                              "type": "decorator",
+                              "name": "repeater",
+                              "parameters": {
+                                "maxLoops": {"value": -1},
+                                "untilSuccess": {"value": true}
+                              },
+                              "child": {
+                                "title": "inverter",
+                                "type": "decorator",
+                                "name": "inverter",
+                                "parameters": {},
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "listPop",
+                                      "type": "action",
+                                      "name": "listPop",
+                                      "parameters": {
+                                        "list": {"key": "trapdoors"}
+                                      },
+                                      "output": {
+                                        "list": "trapdoors",
+                                        "entity": "trapdoor"
+                                      }
+                                    },
+                                    {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "callScriptedEntity",
+                                        "type": "action",
+                                        "name": "callScriptedEntity",
+                                        "parameters": {
+                                          "entity": {"key": "trapdoor"},
+                                          "func": {"value": "openDoor"}
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Reset",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "battleMusic",
+                "type": "action",
+                "name": "battleMusic",
+                "parameters": {
+                  "enable": {"value": false}
+                }
+              },
+              {
+                "title": "setAggressive",
+                "type": "action",
+                "name": "setAggressive",
+                "parameters": {
+                  "aggressive": {"value": false}
+                }
+              },
+              {
+                "title": "Return to spawn",
+                "type": "module",
+                "name": "poisonspiderboss-return",
+                "parameters": {}
+              },
+              {
+                "title": "setDamageBar",
+                "type": "action",
+                "name": "setDamageBar",
+                "parameters": {
+                  "type": {"value": "None"}
+                }
+              },
+              {
+                "title": "setResourcePercentage",
+                "type": "action",
+                "name": "setResourcePercentage",
+                "parameters": {
+                  "percentage": {"value": 1},
+                  "resource": {"value": "health"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "cocoon"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "cocoon"},
+                  "type": {"value": "body"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "invisible"},
+                  "type": {"value": "shell"}
+                }
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      }
+    ]
+  }
+}

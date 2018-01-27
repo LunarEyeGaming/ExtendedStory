@@ -1,0 +1,19 @@
+{
+  "projectileName" : "acidsweepmineactive",
+  "image" : "acidsweepmineactive.png",
+  "animationCycle" : 0.5,
+  "bounces" : -1,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/megadamageexplosion/megadamagepoisonexplosionknockback.config"
+    }
+  ],
+  "power" : 100.0,
+  "damageKind" : "megadamageacid",
+  "timeToLive" : 50,
+  "speed" : 0
+}

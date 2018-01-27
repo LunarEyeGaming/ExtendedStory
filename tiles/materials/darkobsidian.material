@@ -1,0 +1,24 @@
+{
+  "materialId" : 2000,
+  "materialName" : "darkobsidian",
+  "particleColor" : [92, 90, 87, 255],
+  "itemDrop" : "darkobsidian",
+  "description" : "Dark obsidian. It only gets darker from here.",
+  "shortdescription" : "Dark Obsidian",
+  "glitchDescription" : "Surpised. This obsidian is unnaturally dark.",
+  "floranDescription" : "Dark obsssidian. Sstrong ssuper dark rockss.",
+  "novakidDescription" : "Some really dark obsidian rocks.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "darkobsidian.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1500
+  }
+}

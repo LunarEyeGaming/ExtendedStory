@@ -1,0 +1,205 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+		    "properties" : {
+              "lightsOff" : ["charging", "charged", "firing"],
+			  "lightsOn" : ["off"]
+            }
+		  },
+          "charge" : {
+            "frames" : 9,
+            "cycle" : 2.0,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/gun/antimattercannon_windup.ogg",
+              "persistentSoundStopTime" : 0.5,
+			  "lightsOff" : ["off", "charged", "firing"],
+			  "lightsOn" : ["charging"]
+            }
+          },
+          "fullcharge" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/gun/antimattercannon_charged.ogg",
+			  "lightsOff" : ["off", "charging", "firing"],
+			  "lightsOn" : ["charged"]
+            }
+          },
+          "fire" : {
+            "frames" : 1,
+            "cycle" : 3.0,
+            "mode" : "transition",
+            "transition" : "cooldown",
+			"properties" : {
+			  "lightsOff" : ["off", "charging", "charged"],
+			  "lightsOn" : ["firing"]
+			}
+          },
+		  "cooldown" : {
+		    "frames" : 5,
+			"cycle" : 0.4,
+			"mode" : "transition",
+			"transition" : "off",
+			"properties" : {
+			  "lightsOff" : ["off", "charging", "charged"],
+			  "lightsOn" : ["firing"]
+			}
+		  }
+        }
+      },
+	  "beammuzzle" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : {},
+		  "on" : {
+		    "frames" : 2,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
+		}
+	  }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.0, 0.7],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:cooldown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.0, 0.7],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:cooldown.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "beammuzzle" : {
+	    "properties" : {
+		  "centered" : true,
+		  "offset" : [ 3.0, 1.0 ],
+		  "transformationGroups" : ["weapon"],
+		  "fullbright" : true
+		},
+		
+		"partStates" : {
+		  "beammuzzle" : {
+		    "off" : {
+			  "properties" : {
+			    "image" : ""
+			  }
+			},
+			"on" : {
+			  "properties" : {
+			    "image" : "<partImage>:on.<frame>"
+			  }
+			}
+		  }
+		}
+	  }
+    }
+  },
+  
+  "lights" : {
+    "off" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 40, 0]
+    },
+	"charging" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 80, 0]
+    },
+	"charged" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [20, 100, 20]
+    },
+	"firing" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [100, 150, 100]
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "fire" : ["/music/silence.ogg"],
+	"fire2" : ["/sfx/gun/antimattercannon_fire.ogg"]
+  }
+}

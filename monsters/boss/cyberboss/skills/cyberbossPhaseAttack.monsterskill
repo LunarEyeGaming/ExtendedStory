@@ -1,0 +1,14 @@
+{
+  "name" : "cyberbossPhaseAttack",
+  "label" : "SHATTER",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossPhaseAttack.lua" ],
+    "cyberbossPhaseAttack" : {
+    	"skillTime" : 1,
+    	"rotateInterval" : 0.2,
+    	"rotateMaxAngle" : 0.05
+    }
+  }
+}

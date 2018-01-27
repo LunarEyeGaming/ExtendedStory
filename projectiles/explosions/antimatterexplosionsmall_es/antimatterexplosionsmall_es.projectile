@@ -1,0 +1,21 @@
+{
+  "projectileName" : "antimatterexplosionsmall_es",
+  "image" : "antimatterexplosionsmall_es.png",
+  "timeToLive" : 0.33,
+  "animationCycle" : 0.33,
+  "frameNumber" : 6,
+  "fullbright" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-40, 0], [-25, -25], [0, -40], [25, -25], [40, 0], [25, 25], [0, 40], [-25, 25] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "lightColor" : [40, 160, 40],
+  "statusEffects" : [
+    "ionized"
+  ],
+  "power" : 577.6,
+  "damageType" : "ignoresdef",
+  "damageKind" : "poisonplasma"
+}

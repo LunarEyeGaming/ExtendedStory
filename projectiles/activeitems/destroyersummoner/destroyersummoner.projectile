@@ -1,0 +1,18 @@
+{
+  "projectileName" : "destroyersummoner",
+  "image" : "destroyersummoner.png",
+  "fullbright" : true,
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "physics" : "grenade",
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "power" : 0.0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "speed" : 45,
+  "lightColor" : [139, 24, 185],
+  "damageType" : "ignoresdef",
+  "damageKind" : "plasma" // Most parameters are defined within the thrownitem file
+}

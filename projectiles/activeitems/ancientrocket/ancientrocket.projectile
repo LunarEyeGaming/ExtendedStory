@@ -1,0 +1,44 @@
+{
+  "projectileName" : "ancientrocket",
+  "image" : "ancientrocket.png",
+  "animationCycle" : 0.5,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "plasma",
+  "speed" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+	}
+  ],
+  "periodicActions" : [
+	{
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "ancientrocket",
+	  "config" : {
+	    "timeToLive" : 0.25,
+		"actionOnReap" : [],
+		"periodicActions" : [],
+		"speed" : 0,
+		"persistentAudio" : "/music/silence.ogg"
+	  }
+	}
+  ],
+  "timeToLive" : 5.0,
+  "power" : 50,
+  "statusEffects" : [
+    "gammarays"
+  ],
+  "scripts" : [ "ancientrocketsinewave.lua" ],
+  "scriptDelta" : 1,
+  "waveAmplitude" : 0.5,
+  "wavePeriod" : 0.5,
+  "persistentAudio" : "/sfx/projectiles/redgiant.ogg"
+}

@@ -1,0 +1,14 @@
+{
+  "name" : "destroyerScatterAttack",
+  "label" : "TELEPORT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerScatterAttack.lua" ],
+
+    "destroyerScatterAttack" : {
+      "cooldownTime" : 10,
+      "skillTime" : 2
+    }
+  }
+}

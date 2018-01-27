@@ -1,0 +1,64 @@
+{
+  "name": "poisonspiderboss-setstage",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/entity.lua"
+  ],
+  "parameters": {
+    "shellState": "stage2",
+    "setHealth": 0.65
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": false},
+          "emitter": {"value": "slide"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "<shellState>"},
+          "type": {"value": "shell"}
+        }
+      },
+      {
+        "title": "setResourcePercentage",
+        "type": "action",
+        "name": "setResourcePercentage",
+        "parameters": {
+          "percentage": {"key": "<setHealth>"},
+          "resource": {"value": "health"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "generateshell"}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": true}
+        }
+      }
+    ]
+  }
+}

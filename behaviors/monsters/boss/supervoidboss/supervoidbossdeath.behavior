@@ -1,0 +1,131 @@
+{
+  "name": "supervoidboss-death",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/world.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/math.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "playersInWorld",
+            "type": "action",
+            "name": "playersInWorld",
+            "parameters": {},
+            "output": {
+              "list": "players"
+            }
+          },
+          {
+            "title": "each",
+            "type": "decorator",
+            "name": "each",
+            "parameters": {
+              "list": {"key": "players"},
+              "type": {"value": "entity"}
+            },
+            "child": {
+              "title": "succeeder",
+              "type": "decorator",
+              "name": "succeeder",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "entity": {"key": "eachItem"},
+                  "message": {"value": "supervoidDestroyed"}
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 20}
+        }
+      },
+      {
+        "title": "spawnTargetedProjectile",
+        "type": "action",
+        "name": "spawnTargetedProjectile",
+        "parameters": {
+          "aimVector": {"key": "aimVector"},
+          "parameters": {"value": {"damageTeam" : {"type" : "enemy"}, "periodicActions" : [{"time" : 0, "repeat" : false, "action" : "config", "file" : "/projectiles/activeitems/supernova/supernova.config"}]}},
+          "position": {"key": "self"},
+          "projectileType": {"value": "invisibleprojectile"},
+          "target": {"key": "target"},
+          "trackSource": {"value": false}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2}
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "playersInWorld",
+            "type": "action",
+            "name": "playersInWorld",
+            "parameters": {},
+            "output": {
+              "list": "players"
+            }
+          },
+          {
+            "title": "each",
+            "type": "decorator",
+            "name": "each",
+            "parameters": {
+              "list": {"key": "players"},
+              "type": {"value": "entity"}
+            },
+            "child": {
+              "title": "succeeder",
+              "type": "decorator",
+              "name": "succeeder",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "arguments": {"value": ["InstanceWorld:outpost=arkteleporter"]},
+                  "entity": {"key": "eachItem"},
+                  "message": {"value": "warp"}
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

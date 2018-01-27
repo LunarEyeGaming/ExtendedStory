@@ -1,0 +1,33 @@
+{
+  "name" : "destroyerLaserShotsAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerLaserShotsAttack.lua" ],
+
+    "destroyerLaserShotsAttack" : {
+      "skillTime": 5,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.1,
+      "projectile" : {
+        "type" : "delayedlasershot",
+        "config" : {
+          "speed" : 0,
+          "power" : 10,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "supervoidbossarena",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "supervoidbossarena" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "supervoidbossarena",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "supervoidbossarena.json" ]
+    }
+  ]
+}

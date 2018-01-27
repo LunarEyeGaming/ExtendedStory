@@ -1,0 +1,16 @@
+{
+  "name" : "ionized",
+  "blockingStat" : "specialStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 15.0,
+
+  "scripts" : [
+    "ionized.lua"
+  ],
+
+  "animationConfig" : "ionized.animation",
+
+  "label" : "Ionized - Ionizing radiation sickness",
+  "icon" : "/interface/statuses/ionfire.png"
+}

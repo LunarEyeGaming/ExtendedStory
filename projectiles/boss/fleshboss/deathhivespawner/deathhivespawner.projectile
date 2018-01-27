@@ -1,0 +1,22 @@
+{
+  "projectileName" : "deathhivespawner",
+  "timeToLive" : 0.01,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "destroyedattachmentsstart",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    },
+	{
+      "action" : "projectile",
+      "type" : "phasetwoclose",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "damageKind" : "plasma"
+}

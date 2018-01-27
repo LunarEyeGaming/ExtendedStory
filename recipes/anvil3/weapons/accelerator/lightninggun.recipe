@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "refinedaegisalt", "count" : 20 },
+	{ "item" : "staticcell", "count" : 8 },
+	{ "item" : "solariumstar", "count" : 15 },
+	{ "item" : "ironbar", "count" : 20 }
+  ],
+  "output" : { "item" : "lightninggun", "count" : 1 },
+  "groups" : [ "craftingaccelerator", "weapons", "all" ]
+}

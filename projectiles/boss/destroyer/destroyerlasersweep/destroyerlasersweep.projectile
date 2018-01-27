@@ -1,0 +1,18 @@
+{
+  "projectileName" : "destroyerlasersweep",
+  "image" : "destroyerlasersweep.png",
+  "fullbright" : true,
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [150, 100, 100],
+  "power" : 100.0,
+  "physics" : "illusion",
+  "speed" : 50,
+  "damagePoly" : [ [-32, -3200], [-32, 3200], [32, -3200], [32, 3200] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+  "timeToLive" : 10.0,
+  "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg"
+}

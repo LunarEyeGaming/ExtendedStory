@@ -1,0 +1,21 @@
+{
+  "projectileName" : "whiteshrapnelglobe",
+  "physics" : "highgravgrenade",
+  "bounces" : 0,
+  "speed" : 15,
+  "timeToLive" : 5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [75, 75, 75],
+  "image" : "whiteshrapnelglobe.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 6,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/burstexplosion/electricburstexplosion.config"
+    }
+  ],
+  "damageKind" : "plasma"
+}

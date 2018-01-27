@@ -1,0 +1,15 @@
+{
+  "projectileName" : "supernovaexplosion",
+  "image" : "supernovaexplosion.png",
+  "animationCycle" : 3.0,
+  "frameNumber" : 19,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "plasma",
+
+  "piercing" : true,
+  "bounces" : -1,
+  "power" : 50,
+  "speed" : 0
+}

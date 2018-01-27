@@ -1,0 +1,103 @@
+{
+  "name": "supervoidboss-animate",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/status.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/eyeboss.lua"
+  ],
+  "parameters": {
+    "phase1": 0.875,
+    "phase2": 0.75
+  },
+  "root": {
+    "title": "dynamic",
+    "type": "composite",
+    "name": "dynamic",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase1>"},
+              "resource": {"value": "health"}
+            }
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase2>"},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "tentacleMovement",
+            "type": "action",
+            "name": "tentacleMovement",
+            "parameters": {
+              "speedRange": {"value": [1.5, 2.5]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"value": 0},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "tentacleMovement",
+            "type": "action",
+            "name": "tentacleMovement",
+            "parameters": {
+              "speedRange": {"value": [2, 3]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "runner",
+        "type": "action",
+        "name": "runner",
+        "parameters": {}
+      }
+    ]
+  }
+}

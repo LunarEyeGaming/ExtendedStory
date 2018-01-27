@@ -1,0 +1,41 @@
+{
+  "objectName" : "iceartifactaltar",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "It looks like it was made to hold something important.",
+  "shortdescription" : "Ice Artifact Altar",
+  "race" : "generic",
+
+  "category" : "artifact",
+
+  "inventoryIcon" : "iceartifactaltar.png",
+  "orientations" : [
+    {
+      "image" : "iceartifactaltar.png",
+      "imagePosition" : [-16, 0],
+
+      "spaces" : [
+                 [-1, 3], [0, 3],
+        [-2, 2], [-1, 2], [0, 2], [1, 2],
+        [-2, 1], [-1, 1], [0, 1], [1, 1],
+        [-2, 0], [-1, 0], [0, 0], [1, 0]
+      ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "questIndicatorPosition" : [0, -2.0],
+
+  "animation" : "iceartifactaltar.animation",
+  "animationPosition" : [0, 20],
+  "animationParts" : {
+    "altar" : "iceartifactaltar.png",
+    "artifact" : "artifactindicator.png"
+  },
+
+  "scripts" : [ "/objects/scripts/artifactaltarnospeech.lua" ],
+
+  "questMessage" : "iceArtifactTaken"
+}

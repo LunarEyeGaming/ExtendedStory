@@ -1,0 +1,21 @@
+{
+  "projectileName" : "toxolingspawn2",
+  "image" : "toxolingspawn2.png",
+  "animationCycle" : 2,
+  "animationLoops" : false,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [0, 150, 0],
+  "timeToLive" : 2,
+  "actionOnReap" : [
+    {
+	  "action" : "spawnmonster",
+	  "type" : "toxoling",
+	  "level" : 10
+	}
+  ],
+  "power" : 0,
+  "speed" : 0,
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

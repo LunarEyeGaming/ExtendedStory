@@ -1,0 +1,33 @@
+{
+  "name" : "ancientbossPulseCannonAttack",
+  "label" : "PULSE CANNON",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossPulseCannonAttack.lua" ],
+
+    "ancientbossPulseCannonAttack" : {
+      "cooldownTime" : 10,
+
+      "projectile" : {
+        "type" : "ancientcharge",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 25,
+          "actionOnReap" : [
+            {
+              "action" : "projectile",
+              "type" : "ancientpulse",
+              "inheritDamageFactor" : 1,
+              "direction" : [0.0, -1.0]
+            },
+            {
+              "action" : "sound",
+              "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

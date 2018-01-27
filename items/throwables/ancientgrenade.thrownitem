@@ -1,0 +1,30 @@
+{
+  "itemName" : "ancientgrenade",
+  "price" : 50,
+  "rarity" : "Legendary",
+  "category" : "throwableItem",
+  "inventoryIcon" : "ancientgrenade.png",
+  "image" : "ancientgrenade.png",
+  "shortdescription" : "Ancient Grenade",
+  "description" : "Handheld ancient grenades. Careful! They're very deadly.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 0.4,
+
+  "projectileType" : "ancientgrenadethrown",
+  "projectileConfig" : {
+    "speed" : 25,
+    "power" : 40,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

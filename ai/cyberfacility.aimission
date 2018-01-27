@@ -1,0 +1,17 @@
+{
+  "missionName" : "cyberfacility",
+  "icon" : "cyberfacilityicon.png",
+  "missionWorld" : "cyberfacility",
+
+  "speciesText" : {
+    "default" : {
+      "buttonText" : "The Novabot Facility",
+      "repeatButtonText" : "Revisit the Novabot Facility",
+      "selectSpeech" : {
+        "animation" : "talk",
+        "text" : "A facility where extremely advanced robots are built(not Novakid robots).",
+        "speedModifier" : 1.0
+      }
+    }
+  }
+}

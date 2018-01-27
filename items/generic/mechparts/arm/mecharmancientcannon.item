@@ -1,0 +1,15 @@
+{
+  "itemName" : "mecharmancientcannon",
+  "price" : 5600,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "mechPart",
+  "tooltipKind" : "mecharm",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "mecharmancientcannon.png",
+  "description" : "An ancient cannon that shoots explosive orbs.",
+  "shortdescription" : "Ancient Cannon Mech Arm",
+  "itemTags" : [ ],
+
+  "mechPart" : ["arm", "ancientcannon"]
+}

@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "fireartifactdungeon",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "fireartifactdungeon" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "fireartifactdungeon",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "firebossfight.json" ]
+    }
+  ]
+}

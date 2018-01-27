@@ -1,0 +1,18 @@
+{
+  "projectileName" : "supernova",
+  "image" : "supernova.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 19,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "animationLoops" : false,
+  "fullbright" : true,
+  "flippable" : true,
+  "damageKind" : "megadamage",
+  "statusEffects" : [
+    "gammarays"
+  ],
+  "piercing" : true,
+  "bounces" : -1,
+  "power" : 50,
+  "speed" : 0
+}

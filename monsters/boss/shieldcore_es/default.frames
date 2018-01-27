@@ -1,0 +1,17 @@
+{
+  "frameGrid" : {
+    "size" : [100, 100],
+    "dimensions" : [8, 1],
+    "names" : [
+      [ "idle.1", "idle.2", "hurt.1", "hurt.2", "hurt.3", "hurt.4", "hurt.5", "hurt.6" ]
+    ]
+  },
+  "aliases" : {
+    "reappear.1" : "hurt.6",
+	"reappear.2" : "hurt.5",
+	"reappear.3" : "hurt.4",
+	"reappear.4" : "hurt.3",
+	"reappear.5" : "hurt.2",
+	"reappear.6" : "hurt.1"
+  }
+}

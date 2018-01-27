@@ -1,0 +1,29 @@
+{
+  "projectileName" : "toxiniabubblestart",
+  "image" : "toxiniabubble.png:start",
+  "orientationLocked" : true,
+  "physics" : "gas",
+  "animationCycle" : 0.4,
+  "damageKindImage" : "icon.png",
+  "frameNumber" : 8,
+  "power" : 50,
+  "speed" : 1,
+  "timeToLive" : 0.4,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "bubble",
+  "actionOnTimeout" : [
+    {
+      "action" : "projectile",
+      "type" : "toxiniabubblefloat",
+      "inheritDamageFactor" : 2
+    }
+  ],
+  "actionOnHit" : [
+    {
+      "action" : "projectile",
+      "type" : "toxiniabubblepop",
+      "inheritDamageFactor" : 1
+    }
+  ]
+}

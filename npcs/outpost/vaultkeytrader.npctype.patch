@@ -1,0 +1,32 @@
+[
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "collectelectricartifact"
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/turnInQuests",
+    "value": [ "collectelectricartifact", "collectfireartifact", "collecticeartifact", "collectpoisonartifact", "destroysupervoideye" ]
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "collectfireartifact"
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "collecticeartifact"
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "collectpoisonartifact"
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "destroysupervoideye"
+  }
+]

@@ -1,0 +1,226 @@
+{
+  "name": "poisonspiderboss-hurt",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/notification.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/sensor.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": {
+    "minHealth": 0.65,
+    "maxHealth": 0.95
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": false}
+        }
+      },
+      {
+        "title": "inverter",
+        "type": "decorator",
+        "name": "inverter",
+        "parameters": {},
+        "child": {
+          "title": "resourcePercentage",
+          "type": "action",
+          "name": "resourcePercentage",
+          "parameters": {
+            "percentage": {"key": "<maxHealth>"},
+            "resource": {"value": "health"}
+          }
+        }
+      },
+      {
+        "title": "succeeder",
+        "type": "decorator",
+        "name": "succeeder",
+        "parameters": {},
+        "child": {
+          "title": "broadcastNotification",
+          "type": "action",
+          "name": "broadcastNotification",
+          "parameters": {
+            "entityTypes": {"value": ["monster", "npc"]},
+            "position": {"key": "self"},
+            "range": {"value": 80},
+            "type": {"value": "bossvulnerable"}
+          }
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "shellshards"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "hurt"}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "success": {"value": 2}
+        },
+        "children": [
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "hurt"},
+                  "type": {"value": "body"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "invisible"},
+                  "type": {"value": "shell"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "hurt"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "rotate",
+                "type": "action",
+                "name": "rotate",
+                "parameters": {
+                  "angle": {"value": 4.71},
+                  "rate": {"value": 3}
+                }
+              },
+              {
+                "title": "setParticleEmitterActive",
+                "type": "action",
+                "name": "setParticleEmitterActive",
+                "parameters": {
+                  "active": {"value": true},
+                  "emitter": {"value": "slide"}
+                }
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "lineTileCollision",
+                    "type": "action",
+                    "name": "lineTileCollision",
+                    "parameters": {
+                      "offset": {"value": [0, -17.5]}
+                    }
+                  },
+                  {
+                    "title": "controlFly",
+                    "type": "action",
+                    "name": "controlFly",
+                    "parameters": {
+                      "vector": {"value": [0, -1]}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "setParticleEmitterActive",
+                "type": "action",
+                "name": "setParticleEmitterActive",
+                "parameters": {
+                  "active": {"value": false},
+                  "emitter": {"value": "slide"}
+                }
+              },
+              {
+                "title": "controlFly",
+                "type": "action",
+                "name": "controlFly",
+                "parameters": {}
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 5}
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "inverter",
+            "type": "decorator",
+            "name": "inverter",
+            "parameters": {},
+            "child": {
+              "title": "resourcePercentage",
+              "type": "action",
+              "name": "resourcePercentage",
+              "parameters": {
+                "percentage": {"key": "<minHealth>"},
+                "resource": {"value": "health"}
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

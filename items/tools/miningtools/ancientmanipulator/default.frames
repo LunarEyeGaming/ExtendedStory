@@ -1,0 +1,17 @@
+{
+  "frameGrid" : {
+    "size" : [17, 17],
+    "dimensions" : [7, 1],
+    "names" : [
+      ["idle.1", "idle.2", "idle.3", "idle.4", "idle.5", null, null]
+    ]
+  },
+
+  "aliases" : {
+    "fire.1" : "idle.1",
+    "fire.2" : "idle.2",
+    "fire.3" : "idle.3",
+    "fire.4" : "idle.4",
+    "fire.5" : "idle.5"
+  }
+}

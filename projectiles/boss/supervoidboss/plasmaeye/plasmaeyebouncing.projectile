@@ -1,0 +1,29 @@
+{
+  "projectileName" : "plasmaeyebouncing",
+  "image" : "plasmaeye.png",
+  "animationCycle" : 1.0,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 9,
+  "bounces" : -1,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "hammer",
+  "piercing" : true,
+
+  "speed" : 50,
+  "timeToLive" : 10.0,
+  "renderLayer" : "Monster+50",
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  }
+}

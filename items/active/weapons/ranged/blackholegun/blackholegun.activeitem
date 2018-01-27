@@ -1,0 +1,100 @@
+{
+  "itemName" : "blackholegun",
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "This weapon can create infinitely dense black holes. Horrific!",
+  "shortdescription" : "^red;Black Hole Cannon^reset;",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 10,
+
+  "inventoryIcon" : [
+    { "image" : "blackholegunicon.png" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/blackholegun/blackholegun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "blackholegun.png",
+    "middlefullbright" : "blackholegunfullbright.png",
+    "barrel" : "",
+    "muzzleFlash" : "blackholemuzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasmacannon_fire.ogg"],
+	  "altFire" : ["/sfx/gun/plasmacannon_fire.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 0]
+      }
+    }
+  },
+
+  "baseOffset" : [0.125, 0.625],
+  "muzzleOffset" : [1.75, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "abyss",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/blackholegun/blackholegunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 4.5,
+    "baseDps" : 5,
+    "energyUsage" : 40,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0,
+    "fireType" : "auto",
+
+    "projectileType" : "chargedsingularity",
+    "projectileParameters" : {
+      "knockback" : 20
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "abyss" : { "projectileType" : "bouncingsingularity" }
+    },
+    "energyUsage" : 20, "name" : "Super Black Hole"
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

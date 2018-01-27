@@ -1,0 +1,30 @@
+{
+  "projectileName" : "plasmafloortele",
+  "image" : "plasmafloortele.png",
+  "animationCycle" : 1.2,
+  "timeToLive" : 2,
+  "animationLoops" : false,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "lightColor" : [196, 0, 185],
+  "power" : 0.0,
+  "speed" : 0,
+  "orientationLocked" : true,
+  "piercing" : true,
+  "flippable" : true,
+  "damagePoly" : [ [-32, 5], [32, 5], [32, -5], [-32, -5] ],
+  "damageKind" : "abyss",
+  "persistentAudio" : "/sfx/npc/boss/crystalboss_hum.ogg",
+
+  "onlyHitTerrain" : true,
+
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "plasmafloor",
+      "inheritDamageFactor" : 1.0,
+      "angleAdjust" : 0,
+      "offset" : [ 0, 3 ]
+    }
+  ]
+}

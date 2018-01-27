@@ -1,0 +1,9 @@
+{
+  "projectileName" : "ancientspherebash",
+  "timeToLive" : 0.001,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 5,
+  "damageKind" : "hammer",
+  "damagePoly" : [ [-8.5, -4.5], [-4.5, -8.5], [4.5, -8.5], [8.5, -4.5], [8.5, 4.5], [4.5, 8.5], [-4.5, 8.5], [-8.5, 4.5] ]
+}

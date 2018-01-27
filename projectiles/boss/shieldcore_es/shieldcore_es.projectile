@@ -1,0 +1,24 @@
+{
+  "projectileName" : "shieldcore_es",
+  "image" : "shieldcore_es.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "timeToLive" : 10,
+  "winddownFrames" : 5,
+  "damageKindImage" : "icon.png",
+  "flippable" : true,
+  "piercing" : true,
+  "statusEffects" : [ ],
+  "power" : 0.0,
+  "speed" : 0,
+  "knockback" : 0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "default",
+  "damageType" : "nodamage",
+  "actionOnReap" : [
+  ],
+  "periodicActions" : [
+  ]
+}

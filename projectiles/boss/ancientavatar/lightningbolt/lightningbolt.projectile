@@ -1,0 +1,53 @@
+{
+  "projectileName" : "lightningbolt",
+  "image" : "lightningbolt.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [0, 0, 73],
+  "power" : 10.0,
+  "piercing" : true,
+  "speed" : 0.0,
+  "timeToLive" : 0.5,
+  "damageKind" : "electric",
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.375,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0.0, -1.0],
+	  "config" : {
+	    "speed" : 200,
+	    "actionOnReap" : [
+		  {
+	        "action" : "projectile",
+            "type" : "lightningboltexplosion"
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "energywave",
+			"direction" : [1.0, 0.0],
+			"offsetRange" : [0, 1, 0, 1],
+			"config" : {"processing" : "?hueshift=253", "power" : 29}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "energywave",
+			"direction" : [-1.0, 0.0],
+			"offsetRange" : [0, 1, 0, 1],
+			"config" : {"processing" : "?hueshift=253", "power" : 29}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 0.375,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : ["/sfx/npc/boss/guardian_death_explosion.ogg"]
+	}
+  ]
+}

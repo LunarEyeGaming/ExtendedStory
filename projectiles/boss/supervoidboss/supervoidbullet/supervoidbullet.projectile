@@ -1,0 +1,23 @@
+{
+  "projectileName" : "supervoidbullet",
+  "physics" : "rocket",
+  "bounces" : -1,
+  "speed" : 1,
+  "acceleration" : 50,
+  "timeToLive" : 8,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 20,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    }
+  ],
+  "damageKind" : "plasma"
+}

@@ -1,0 +1,211 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "gun" : {
+        "default" : "idle",
+        "states" : {
+          "cooldown" : {
+            "frames" : 2,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "lightsOff" : ["red", "green", "blue"]
+            }
+          },
+          "idle" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {
+              "lightsOff" : ["red", "green", "blue"],
+			  "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg"
+            }
+          },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "lightsOn" : ["red", "green", "blue"]
+            }
+          }
+        }
+      },
+         
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [3.1, 0.5],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:cooldown.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+		  "fullbright" : true,
+          "offset" : [3.1, 0.5],
+          "zLevel" : 1,
+          
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:cooldown.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            }
+          }
+        }
+      },
+      "beamorigin" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [7.2, 0.5],
+          "fullbright" : true,
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {},
+            "cooldown" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "beamEnd" : {},
+    "muzzle" : {}
+  },
+
+  "lights" : {
+    "red" : {
+      "active" : false,
+      "color" : [0, 150, 255],
+      "position" : [0, 0],
+
+      "flickerPeriod" : 0.75,
+      "flickerPeriodVariance" : 0.0,
+      "flickerMinIntensity" : 0.1,
+      "flickerMaxIntensity" : 0.6,
+      "flickerIntensityVariance" : 0.0
+    },
+    "green" : {
+      "active" : false,
+      "color" : [0, 90, 220],
+      "position" : [0, 0],
+
+      "flickerPeriod" : 0.5,
+      "flickerPeriodVariance" : 0.0,
+      "flickerMinIntensity" : 0.1,
+      "flickerMaxIntensity" : 0.6,
+      "flickerIntensityVariance" : 0.0
+    },
+    "blue" : {
+      "active" : false,
+      "color" : [0, 66, 200],
+      "position" : [0, 0],
+
+      "flickerPeriod" : 0.75,
+      "flickerPeriodVariance" : 0.0,
+      "flickerMinIntensity" : 0.6,
+      "flickerMaxIntensity" : 0.1,
+      "flickerIntensityVariance" : 0.0
+    }
+  },
+
+  "particleEmitters" : {
+    "beamCollision" : {
+      "active" : false,
+      "transformationGroups" : ["muzzle", "beamEnd"],
+      "emissionRate" : 30,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/plasmapoof/plasmapoof.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 1.2,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "position" : [0.0, 0.0],
+              "initialVelocity" : [0, 0]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "fireStart" : [],
+    "fireLoop" : [],
+    "fireEnd" : [],
+    "beamImpact" : []
+  }
+}

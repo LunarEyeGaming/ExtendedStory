@@ -1,0 +1,115 @@
+{
+  "itemName" : "ultimatiumgun",
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A machine gun that shoots explosive bouncing flames",
+  "shortdescription" : "Rainbow Flame Cannon",
+  "tooltipKind" : "gun",
+  "category" : "assaultRifle",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "level" : 12,
+
+  "inventoryIcon" : [
+    { "image" : "ultimatiumgun.png:idle.1" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/ultimatiumgun/ultimatiumgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ultimatiumgun.png",
+    "middleFullbright" : "ultimatiumgununlit.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/ultimatiumgun/ultimatiummuzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/mech_heatrifle_fire1.ogg"],
+	  "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 150, 150]
+      }
+    },
+	"particleEmitters" : {
+	  "altMuzzleFlash" : {
+        "active" : false,
+        "rotationGroup" : "weapon",
+        "emissionRate" : 8,
+        "offsetPart" : "muzzleFlash",
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : [
+          { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
+        ]
+      }
+	}
+  },
+
+  "baseOffset" : [2.0, 0.225],
+  "muzzleOffset" : [2.8, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/ultimatiumgun/ultimatiumgunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.1,
+    "baseDps" : 20,
+    "energyUsage" : 40,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.1,
+    "fireType" : "auto",
+
+    "projectileType" : "rainbowshot_es",
+    "projectileParameters" : {
+      "knockback" : 20
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 6,
+        "weaponRotation" : 6,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.06,
+        "armRotation" : 6,
+        "weaponRotation" : 6,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "rainbowsupershot_es", "projectileParameters" : { } }
+    },
+    "energyUsage" : 40,
+	"fireTime" : 1.0,
+	"inaccuracy" : 0.0,
+	"name" : "Rainbow Blast"
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

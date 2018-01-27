@@ -1,0 +1,36 @@
+{
+  "name" : "destroyerMegaLaserAttack",
+  "label" : "PULSE CANNON",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerMegaLaserAttack.lua" ],
+
+    "destroyerMegaLaserAttack" : {
+      "cooldownTime" : 10,
+
+      "projectile" : {
+        "type" : "ancientcharge",
+        "config" : {
+          "speed" : 0.0,
+          "power" : 25,
+          "actionOnReap" : [
+            {
+              "action" : "projectile",
+              "type" : "megalaser",
+              "inheritDamageFactor" : 1,
+              "direction" : [0.0, -1.0],
+			  "config" : {
+			    "speed" : 0
+			  }
+            },
+            {
+              "action" : "sound",
+              "options" : [ "/sfx/gun/aegisaltpistol_start.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

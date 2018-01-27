@@ -1,0 +1,128 @@
+[
+  {
+    "op": "add",
+    "path": "/ion",
+    "value": {
+      "resistanceStat": "ionResistance",
+      "damageNumberParticles": {
+        "hit": "iondamagenumber",
+        "stronghit": "iondamagenumberstrong",
+        "weakhit": "iondamagenumberweak",
+        "shieldhit": "iondamagenumber",
+        "kill": "iondamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/abyss",
+    "value": {
+      "resistanceStat": "abyssResistance",
+      "damageNumberParticles": {
+        "hit": "abyssdamagenumber",
+        "stronghit": "abyssdamagenumberstrong",
+        "weakhit": "abyssdamagenumberweak",
+        "shieldhit": "abyssdamagenumber",
+        "kill": "abyssdamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamageabyss",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "abyssdamagenumber",
+        "stronghit": "abyssdamagenumberstrong",
+        "weakhit": "abyssdamagenumberweak",
+        "shieldhit": "abyssdamagenumber",
+        "kill": "abyssdamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamage",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamagefire",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "firedamagenumber",
+        "stronghit": "firedamagenumberstrong",
+        "weakhit": "firedamagenumberweak",
+        "shieldhit": "firedamagenumber",
+        "kill": "firedamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamageelectric",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "electricdamagenumber",
+        "stronghit": "electricdamagenumberstrong",
+        "weakhit": "electricdamagenumberweak",
+        "shieldhit": "electricdamagenumber",
+        "kill": "electricdamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamageice",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "icedamagenumber",
+        "stronghit": "icedamagenumberstrong",
+        "weakhit": "icedamagenumberweak",
+        "shieldhit": "icedamagenumber",
+        "kill": "icedamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamagepoison",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "poisondamagenumber",
+        "stronghit": "poisondamagenumberstrong",
+        "weakhit": "poisondamagenumberweak",
+        "shieldhit": "poisondamagenumber",
+        "kill": "poisondamagenumber"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/megadamageion",
+    "value": {
+      "resistanceStat": "megadamageResistance",
+      "damageNumberParticles": {
+        "hit": "iondamagenumber",
+        "stronghit": "iondamagenumberstrong",
+        "weakhit": "iondamagenumberweak",
+        "shieldhit": "iondamagenumber",
+        "kill": "iondamagenumber"
+      }
+    }
+  }
+]

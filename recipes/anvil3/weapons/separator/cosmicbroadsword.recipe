@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "fabricbar", "count" : 9 },
+	{ "item" : "refinedviolium", "count" : 10 },
+	{ "item" : "solariumstar", "count" : 5 },
+	{ "item" : "ironbar", "count" : 10 }
+  ],
+  "output" : { "item" : "cosmicbroadsword", "count" : 1 },
+  "groups" : [ "craftingseparator", "weapons", "all" ]
+}

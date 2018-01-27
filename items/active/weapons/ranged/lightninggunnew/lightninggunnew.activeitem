@@ -1,0 +1,130 @@
+{
+  "itemName" : "lightninggunnew",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A gun that shoots extremely high voltage electric bolts.",
+  "shortdescription" : "^blue;Cataclysmic Tesla Gun^reset;",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "lightninggunnew.png:empty",
+
+  "animation" : "lightninggunnew.animation",
+  "animationParts" : {
+    "gun" : "lightninggunnew.png",
+    "gunfullbright" : "lightninggunnewunlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+	  "altFire" : ["/sfx/gun/shockblast.ogg"]
+	}
+  },
+  "muzzleOffset" : [2.5, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "electric",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 10,
+        "cooldown" : 0.1,
+        "projectileType" : "railgunlightning",
+        "projectileCount" : 1,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 3,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 0.5,
+        "energyCost" : 20,
+        "cooldown" : 0.15,
+        "projectileType" : "lightningthrower",
+        "projectileCount" : 10,
+        "spreadAngle" : 4,
+        "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "electricplasmarocket", "fuzzAngle" : 50}]},
+        "inaccuracy" : 0,
+        "baseDamage" : 9,
+        "fireSound" : "fire2"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 30,
+        "cooldown" : 0.25,
+        "projectileType" : "electricorb",
+        "projectileCount" : 5,
+        "spreadAngle" : 5,
+        "projectileParameters" : {
+		  "speed" : 100,
+		  "bounces" : 1,
+		  "timeToLive" : 2,
+		  "actionOnReap" : [
+		    {
+			  "action" : "config",
+			  "file" : "/projectiles/boss/ancientavatar/lightningboltexplosion/lightningboltexplosion2.config"
+			}
+		  ]
+		},
+        "inaccuracy" : 0.1,
+        "baseDamage" : 27,
+        "fireSound" : "fire3"
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
+    },
+    "energyUsage" : 20,
+	"baseDps" : 50,
+	"fireTime" : 0.5
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

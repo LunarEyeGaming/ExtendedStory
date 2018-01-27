@@ -1,0 +1,66 @@
+{
+  "projectileName" : "abyssspit",
+  "image" : "abyssspit.png",
+  "physics" : "grenade",
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/acidspitexplosion/acidspitexplosion.config"
+    },
+	{
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "projectile",
+          "inheritDamageFactor" : 0 ,
+          "type" : "abyssfire",
+          "angle" : 90,
+          "fuzzAngle" : 180,
+          "config" : {
+            "speed" : 10,
+			"power" : 50,
+			"piercing" : true,
+			"timeToLive" : 2.0
+          }
+        }
+      ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "loop",
+      "count" : 5,
+	  "time" : 0.5,
+	  "repeat" : true,
+      "body" : [
+        {
+          "action" : "projectile",
+          "inheritDamageFactor" : 0 ,
+          "type" : "abyssfire",
+          "angle" : 90,
+          "fuzzAngle" : 180,
+          "config" : {
+            "speed" : 10,
+			"power" : 50,
+			"piercing" : true,
+			"timeToLive" : 2.0
+          }
+        }
+      ]
+    }
+  ],
+  "power" : 20.0,
+  "speed" : 50,
+  "damageKind" : "abyss",
+  "emitters" : [ "darkpurplephaseparticle" ],
+  "statusEffects" : [
+    "abysseffect"
+  ],
+
+  "renderLayer" : "Monster+50"
+}

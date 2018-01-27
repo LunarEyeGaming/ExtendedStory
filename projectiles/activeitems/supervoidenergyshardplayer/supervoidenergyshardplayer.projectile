@@ -1,0 +1,49 @@
+{
+  "projectileName" : "supervoidenergyshardplayer",
+  "image" : "supervoidenergyshardplayer.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 1,
+  "flippable" : false,
+  "power" : 20,
+  "bounces" : 10,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/bullet_ricochet1.ogg", "/sfx/projectiles/bullet_ricochet2.ogg", "/sfx/projectiles/bullet_ricochet3.ogg", "/sfx/projectiles/bullet_ricochet4.ogg", "/sfx/projectiles/bullet_ricochet5.ogg", "/sfx/projectiles/bullet_ricochet6.ogg", "/sfx/projectiles/bullet_ricochet7.ogg", "/sfx/projectiles/bullet_ricochet8.ogg", "/sfx/projectiles/bullet_ricochet9.ogg", "/sfx/projectiles/bullet_ricochet10.ogg", "/sfx/projectiles/bullet_ricochet11.ogg", "/sfx/projectiles/bullet_ricochet12.ogg", "/sfx/projectiles/bullet_ricochet13.ogg"]
+    }
+  ],
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidexplosion/supervoidexplosionplayer.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/zombienox/supervoidenergyshard/supervoidenergyshard.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
+  "damageKind" : "slash",
+
+  "speed" : 50,
+  "timeToLive" : 2.5
+}

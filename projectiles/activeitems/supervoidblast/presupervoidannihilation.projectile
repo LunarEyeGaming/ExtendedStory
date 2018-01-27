@@ -1,0 +1,156 @@
+{
+  "projectileName" : "presupervoidannihilation",
+  "image" : "presupervoidannihilation.png",
+  "animationCycle" : 0.5,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 4,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "sticky",
+  "animationLoops" : false,
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "config" : {
+	    "timeToLive" : 2,
+		"bounces" : -1,
+		"onlyHitTerrain" : true, 
+		"damageTeam" : { "type" : "friendly" },
+	    "periodicActions" : [
+		  {
+		    "time" : 0.5,
+			"repeat" : false,
+            "action" : "loop",
+            "count" : 10,
+	        "body" : [
+	          {
+		        "action" : "projectile",
+		        "type" : "invisibleprojectile",
+		        "offsetRange" : [20, 20, -20, -20],
+		        "config" : {
+		          "timeToLive" : 0,
+			      "power" : 50,
+			      "damageTeam" : { "type" : "friendly" },
+			      "actionOnReap" : [
+			        {
+			          "action" : "config",
+				      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			        }
+			      ]
+		        }
+		      }
+	        ]
+          },
+	      {
+	        "time" : 0.25,
+			"repeat" : false,
+            "action" : "loop",
+            "count" : 5,
+	        "body" : [
+	          {
+		        "action" : "projectile",
+		        "type" : "invisibleprojectile",
+		        "offsetRange" : [10, 10, -10, -10],
+		        "config" : {
+		          "timeToLive" : 0,
+			      "power" : 50,
+			      "damageTeam" : { "type" : "friendly" },
+			      "actionOnReap" : [
+			        {
+			          "action" : "config",
+				      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			        }
+			      ]
+		        }
+		      }
+	        ]
+          },
+	      {
+	        "time" : 0,
+			"repeat" : false,
+            "action" : "loop",
+            "count" : 5,
+	        "body" : [
+	          {
+		        "action" : "projectile",
+		        "type" : "invisibleprojectile",
+		        "offsetRange" : [5, 5, -5, -5],
+		        "config" : {
+		          "timeToLive" : 0,
+			      "power" : 50,
+			      "damageTeam" : { "type" : "friendly" },
+			      "actionOnReap" : [
+			        {
+			          "action" : "config",
+				      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			        }
+			      ]
+		        }
+		      }
+	        ]
+          },
+	      {
+		    "time" : 0,
+			"repeat" : false,
+	        "action" : "sound",
+	        "options" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ]
+	      },
+	      {
+	        "time" : 0,
+			"repeat" : false,
+            "action" : "loop",
+            "count" : 10,
+	        "body" : [
+	          {
+		        "action" : "projectile",
+		        "type" : "invisibleprojectile",
+				"angle" : 90,
+				"fuzzAngle" : 180,
+		        "config" : {
+				  "speed" : 50,
+		          "timeToLive" : 0.5,
+			      "power" : 50,
+		          "piercing" : true,
+			      "damageTeam" : { "type" : "friendly" },
+			      "periodicActions" : [
+			        {
+					  "time" : 0,
+					  "repeat" : false,
+			          "action" : "config",
+				      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			        },
+					{
+					  "time" : 0.25,
+			          "action" : "config",
+				      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			        }
+			      ]
+		        }
+		      }
+	        ]
+          }
+		]
+	  }
+	}
+  ],
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/supervoidblast_windup.ogg" ]
+	}
+  ],
+  "damagePoly" : [ [-10, 10], [-10, -10], [10, -10], [10, 10] ],
+  "damageKind" : "plasma",
+  "piercing" : true,
+
+  "speed" : 0,
+  "timeToLive" : 0.7,
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

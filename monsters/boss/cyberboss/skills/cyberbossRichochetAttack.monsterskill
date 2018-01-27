@@ -1,0 +1,73 @@
+{
+  "name" : "cyberbossRichochetAttack",
+  "label" : "BOUNCING PAIN",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossRichochetAttack.lua" ],
+
+    "cyberbossRichochetAttack" : {
+      "skillTime": 0.02,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [5, -1],
+      "fireInterval" : 0.01,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "timeToLive" : 0.5,
+		  "damageTeam" : { "type" : "enemy" },
+		  "piercing" : true,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/tech/mech_activate3.ogg" ]
+            }
+          ],
+		  "actionOnReap" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "invisibleprojectile",
+			  "config" : {
+			    "speed" : 0,
+				"power" : 0,
+				"timeToLive" : 0.4,
+				"piercing" : true,
+				"periodicActions" : [
+				  {
+				    "time" : 0.1,
+					"repeat" : false,
+					"action" : "projectile",
+					"type" : "richochetglobe",
+					"config" : {
+					  "piercing" : true,
+					  "speed" : 100,
+					  "power" : 20
+					}
+				  },
+				  {
+				    "time" : 0.1,
+					"repeat" : false,
+					"action" : "sound",
+					"options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+				  }
+				],
+				"actionOnReap" : [
+				  {
+				    "action" : "sound",
+					"options" : [ "/sfx/tech/mech_deactivate.ogg" ]
+				  }
+				]
+			  }
+			}
+		  ]
+        }
+      }
+    }
+  }
+}

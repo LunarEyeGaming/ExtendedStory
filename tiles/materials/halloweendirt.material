@@ -1,0 +1,26 @@
+{
+  "materialId" : 1992,
+  "materialName" : "halloweendirt",
+  "particleColor" : [157, 70, 17, 255],
+  "itemDrop" : "halloweendirt",
+  "description" : "Spoopy dirt.",
+  "shortdescription" : "Halloween Dirt",
+  "glitchDescription" : "Indifferent. This is basic and orange soil.",
+  "floranDescription" : "Filthy dirt!",
+  "novakidDescription" : "Dirty lookin' dirt.",
+  "footstepSound" : "/sfx/blocks/footstep_dirt.ogg",
+  "tillableMod" : 32,
+  "soil" : true,
+  "health" : 2,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "halloweendirt.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1920
+  }
+}

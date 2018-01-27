@@ -1,0 +1,503 @@
+{
+  "name": "poisonspiderboss-slam",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/sensor.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "slamMovementParameters": {"gravityEnabled": true, "airFriction": 0, "gravityMultiplier": 2}
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rotate"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "rotate",
+        "type": "action",
+        "name": "rotate",
+        "parameters": {
+          "angle": {"value": 4.71},
+          "rate": {"value": 3}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "walk"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "lineTileCollision",
+            "type": "action",
+            "name": "lineTileCollision",
+            "parameters": {
+              "offset": {"value": [0, -17.5]}
+            }
+          },
+          {
+            "title": "controlFly",
+            "type": "action",
+            "name": "controlFly",
+            "parameters": {
+              "vector": {"value": [0, -1]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "controlFly",
+        "type": "action",
+        "name": "controlFly",
+        "parameters": {
+          "x": {"value": 0},
+          "y": {"value": 0}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "walkback"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "dynamic",
+        "type": "composite",
+        "name": "dynamic",
+        "parameters": {},
+        "children": [
+          {
+            "title": "lineTileCollision",
+            "type": "action",
+            "name": "lineTileCollision",
+            "parameters": {
+              "offset": {"value": [0, 11]}
+            }
+          },
+          {
+            "title": "parallel",
+            "type": "composite",
+            "name": "parallel",
+            "parameters": {
+              "fail": {"value": -1},
+              "success": {"value": -1}
+            },
+            "children": [
+              {
+                "title": "controlFly",
+                "type": "action",
+                "name": "controlFly",
+                "parameters": {
+                  "vector": {"value": [0, 1]}
+                }
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "success": {"value": 3}
+        },
+        "children": [
+          {
+            "title": "entityDirection",
+            "type": "action",
+            "name": "entityDirection",
+            "parameters": {
+              "target": {"key": "target"}
+            },
+            "output": {
+              "direction": "targetX"
+            }
+          },
+          {
+            "title": "selector",
+            "type": "composite",
+            "name": "selector",
+            "parameters": {},
+            "children": [
+              {
+                "title": "entityInRange",
+                "type": "action",
+                "name": "entityInRange",
+                "parameters": {
+                  "entity": {"key": "target"},
+                  "xRange": {"value": 1}
+                }
+              },
+              {
+                "title": "lineTileCollision",
+                "type": "action",
+                "name": "lineTileCollision",
+                "parameters": {
+                  "offset": {"value": [7, 0]}
+                }
+              },
+              {
+                "title": "lineTileCollision",
+                "type": "action",
+                "name": "lineTileCollision",
+                "parameters": {
+                  "offset": {"value": [-7, 0]}
+                }
+              }
+            ]
+          },
+          {
+            "title": "selector",
+            "type": "composite",
+            "name": "selector",
+            "parameters": {},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "greaterThan",
+                    "type": "action",
+                    "name": "greaterThan",
+                    "parameters": {
+                      "first": {"key": "targetX"},
+                      "second": {"value": 0}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "straferight"},
+                      "type": {"value": "legs"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "strafeleft"},
+                  "type": {"value": "legs"}
+                }
+              }
+            ]
+          },
+          {
+            "title": "failer",
+            "type": "decorator",
+            "name": "failer",
+            "parameters": {},
+            "child": {
+              "title": "controlFly",
+              "type": "action",
+              "name": "controlFly",
+              "parameters": {
+                "vector": {"value": ["targetX", 0]}
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "controlFly",
+        "type": "action",
+        "name": "controlFly",
+        "parameters": {
+          "x": {"value": 0},
+          "y": {"value": 0}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "slam"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spiderslam"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spiderslam"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "controlParameters",
+            "type": "action",
+            "name": "controlParameters",
+            "parameters": {
+              "parameters": {"key": "<slamMovementParameters>"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "dynamic",
+                "type": "composite",
+                "name": "dynamic",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "lineTileCollision",
+                    "type": "action",
+                    "name": "lineTileCollision",
+                    "parameters": {
+                      "offset": {"value": [0, -20]}
+                    }
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              },
+              {
+                "title": "spawnProjectile",
+                "type": "action",
+                "name": "spawnProjectile",
+                "parameters": {
+                  "aimVector": {"value": [1, 0]},
+                  "offset": {"value": [0, -11]},
+                  "projectileType": {"value": "spiderslam"},
+                  "trackSource": {"value": true}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "spiderslam"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "slam"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.25}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "slam"}
+                }
+              },
+              {
+                "title": "burstParticleEmitter",
+                "type": "action",
+                "name": "burstParticleEmitter",
+                "parameters": {
+                  "emitter": {"value": "slam"}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {},
+        "children": [
+          {
+            "title": "inverter",
+            "type": "decorator",
+            "name": "inverter",
+            "parameters": {},
+            "child": {
+              "title": "lineTileCollision",
+              "type": "action",
+              "name": "lineTileCollision",
+              "parameters": {
+                "offset": {"value": [0, -17.5]}
+              }
+            }
+          },
+          {
+            "title": "controlFly",
+            "type": "action",
+            "name": "controlFly",
+            "parameters": {
+              "vector": {"value": [0, 1]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "controlFly",
+        "type": "action",
+        "name": "controlFly",
+        "parameters": {
+          "vector": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {}
+      }
+    ]
+  }
+}

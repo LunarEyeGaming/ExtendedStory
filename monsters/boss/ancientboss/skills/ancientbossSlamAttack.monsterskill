@@ -1,0 +1,19 @@
+{
+  "name" : "ancientbossSlamAttack",
+  "label" : "SLAM",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossSlamAttack.lua" ],
+
+    "ancientbossSlamAttack" : {
+      "skillTime" : 10,
+
+      "slamHeight" : 16,
+      "riseSpeed" : 20,
+      "slamSpeed" : 140,
+
+      "stunDuration" : 8
+    }
+  }
+}

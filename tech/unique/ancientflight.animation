@@ -1,0 +1,434 @@
+{
+  "globalTagDefaults" : {
+    "rotationFrame" : "0",
+    "ballDirectives" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "ballState" : {
+        "default" : "off",
+        "states" : {
+          "deactivate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "off"
+          },
+          "off" : { },
+          "activate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "on"
+          },
+          "on" : {
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+            }
+		  },
+		  "left" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "right" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "up" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "down" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "fire" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/mech_activate4.ogg",
+			  "persistentSound" : "/sfx/melee/charge_full_hold1.ogg"
+            }
+		  },
+		  "fire2" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
+			  "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg"
+            }
+		  },
+		  "upright" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "downright" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "downleft" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "upleft" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+			  "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+		  },
+		  "warning" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
+			  "persistentSound" : "/sfx/interface/ancientflight_warning.ogg"
+            }
+		  }
+        }
+      },
+	  "transform" : {
+        "default" : "off",
+        "states" : {
+          "deactivate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "off"
+          },
+          "off" : { },
+          "activate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "on"
+          },
+          "on" : { }
+		}
+      },
+	  "damage" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : { },
+		  "on" : {
+		    "frames" : 6,
+			"cycle" : 0.33,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+		}
+	  }
+    },
+
+    "parts" : {
+      "ballGlow" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "on" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:<rotationFrame><ballDirectives>"
+              }
+            },
+            "left" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:left.<frame><ballDirectives>"
+              }
+            },
+            "right" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:right.<frame><ballDirectives>"
+              }
+            },
+            "up" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:up.<frame><ballDirectives>"
+              }
+            },
+            "down" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:down.<frame><ballDirectives>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "upright" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upright.<frame><ballDirectives>"
+              }
+            },
+            "downright" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:downright.<frame><ballDirectives>"
+              }
+            },
+            "downleft" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:downleft.<frame><ballDirectives>"
+              }
+            },
+            "upleft" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upleft.<frame><ballDirectives>"
+              }
+            },
+            "warning" : {
+              "properties" : {
+			    "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upleft.1<ballDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "ball" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "deactivate" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "transform.png:deactivate.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "offset" : [0, 1.5],
+                "fullbright" : true,
+                "image" : "transform.png:activate.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<rotationFrame><ballDirectives>"
+              }
+            },
+            "left" : {
+              "properties" : {
+                "image" : "<partImage>:left.<frame><ballDirectives>"
+              }
+            },
+            "right" : {
+              "properties" : {
+                "image" : "<partImage>:right.<frame><ballDirectives>"
+              }
+            },
+            "up" : {
+              "properties" : {
+                "image" : "<partImage>:up.<frame><ballDirectives>"
+              }
+            },
+            "down" : {
+              "properties" : {
+                "image" : "<partImage>:down.<frame><ballDirectives>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "upright" : {
+              "properties" : {
+                "image" : "<partImage>:upright.<frame><ballDirectives>"
+              }
+            },
+            "downright" : {
+              "properties" : {
+                "image" : "<partImage>:downright.<frame><ballDirectives>"
+              }
+            },
+            "downleft" : {
+              "properties" : {
+                "image" : "<partImage>:downleft.<frame><ballDirectives>"
+              }
+            },
+            "upleft" : {
+              "properties" : {
+                "image" : "<partImage>:upleft.<frame><ballDirectives>"
+              }
+            },
+            "warning" : {
+              "properties" : {
+                "image" : "<partImage>:upleft.1<ballDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "transform" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "transform" : {
+            "deactivate" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "transform.png:deactivate.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "offset" : [0, 1.5],
+                "fullbright" : true,
+                "image" : "transform.png:activate.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+	  "damage" : {
+	    "properties" : {
+		  "transformationGroups" : [ "ball" ],
+          "centered" : true
+		},
+		"partStates" : {
+		  "damage" : {
+		    "on" : {
+		      "properties" : {
+			    "offset" : [0, 0],
+			    "fullbright" : true,
+			    "image" : "/projectiles/explosions/ancientexplosion/ancientexplosion.png:<frame>"
+			  }
+			},
+			"off" : {
+			  "properties" : {
+			    "image" : ""
+			  }
+			}
+		  }
+		}
+	  }
+    }
+  },
+
+  "transformationGroups" : {
+    "ball" : { "interpolated" : true }
+  },
+
+  "particleEmitters" : {
+    "activateParticles" : {
+      "particles" : [ ]
+    },
+    "deactivateParticles" : {
+      "particles" : [ ]
+    },
+    "ancientspherebash" : {
+      "active" : false,
+      "transformationGroups" : ["ball"],
+	  "offset" : [0, 1],
+      "emissionRate" : 40,
+      "particles" : [
+        { "particle" : "ancientspherebash"}
+      ]
+    },
+    "ancientsphererecharge" : {
+      "active" : false,
+      "transformationGroups" : ["ball"],
+      "offsetRegion" : [0.5, 0.5, -0.5, -0.5],
+      "emissionRate" : 40,
+      "particles" : [
+        { "particle" : "ancientenergy1"}
+      ]
+    }
+  },
+
+  "sounds" : {
+    "activate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "deactivate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "forceDeactivate" : [ "/sfx/tech/tech_sonicsphere_charge1.ogg" ],
+	"shutdown" : [ "/sfx/tech/mech_explosion_windup.ogg" ]
+  }
+}

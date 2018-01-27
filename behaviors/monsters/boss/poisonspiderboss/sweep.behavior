@@ -1,0 +1,360 @@
+{
+  "name": "poisonspiderboss-sweep",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/sensor.lua"
+  ],
+  "parameters": {
+    "acidSweepConfig": {"power": 100}
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "selector",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "reverseDirection",
+            "type": "action",
+            "name": "reverseDirection",
+            "parameters": {
+              "direction": {"key": "sweepSide"}
+            },
+            "output": {
+              "direction": "sweepSide"
+            }
+          },
+          {
+            "title": "setDirection",
+            "type": "action",
+            "name": "setDirection",
+            "parameters": {},
+            "output": {
+              "direction": "sweepSide"
+            }
+          }
+        ]
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"value": 20},
+          "number": {"key": "sweepSide"}
+        },
+        "output": {
+          "result": "sweepX"
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "x": {"key": "sweepX"},
+          "y": {"value": 0}
+        },
+        "output": {
+          "position": "attack"
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "walk"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "distance",
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "from": {"key": "self"},
+          "to": {"key": "attack"}
+        },
+        "output": {
+          "vector": "toAttack"
+        }
+      },
+      {
+        "title": "rotate",
+        "type": "action",
+        "name": "rotate",
+        "parameters": {
+          "rate": {"value": 3},
+          "vector": {"key": "toAttack"}
+        }
+      },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "attack"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rotate"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "rotate",
+        "type": "action",
+        "name": "rotate",
+        "parameters": {
+          "angle": {"value": 4.71},
+          "rate": {"value": 3}
+        }
+      },
+      {
+        "title": "reverseDirection",
+        "type": "action",
+        "name": "reverseDirection",
+        "parameters": {
+          "direction": {"key": "sweepSide"}
+        },
+        "output": {
+          "direction": "sweepMove"
+        }
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"value": 12},
+          "number": {"key": "sweepMove"}
+        },
+        "output": {
+          "result": "lineTest"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "off"},
+              "state": {"value": "sweep"},
+              "type": {"value": "sound"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": 1}
+                },
+                "children": [
+                  {
+                    "title": "selector",
+                    "type": "composite",
+                    "name": "selector",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "greaterThan",
+                            "type": "action",
+                            "name": "greaterThan",
+                            "parameters": {
+                              "first": {"key": "sweepMove"},
+                              "second": {"value": 0}
+                            }
+                          },
+                          {
+                            "title": "animate",
+                            "type": "action",
+                            "name": "animate",
+                            "parameters": {
+                              "fallback": {"value": "idle"},
+                              "state": {"value": "straferight"},
+                              "type": {"value": "legs"}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "animate",
+                        "type": "action",
+                        "name": "animate",
+                        "parameters": {
+                          "fallback": {"value": "idle"},
+                          "state": {"value": "strafeleft"},
+                          "type": {"value": "legs"}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "success": {"value": 2}
+                        },
+                        "children": [
+                          {
+                            "title": "repeater",
+                            "type": "decorator",
+                            "name": "repeater",
+                            "parameters": {},
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "sweep"}
+                                  }
+                                },
+                                {
+                                  "title": "spawnProjectile",
+                                  "type": "action",
+                                  "name": "spawnProjectile",
+                                  "parameters": {
+                                    "aimVector": {"value": [0, -1]},
+                                    "offset": {"value": [0, -9]},
+                                    "projectileConfig": {"value": "<acidSweepConfig>"},
+                                    "projectileType": {"value": "acidsweep_es"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": [0.125, 0.25]}
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "title": "lineTileCollision",
+                            "type": "action",
+                            "name": "lineTileCollision",
+                            "parameters": {
+                              "x": {"key": "lineTest"},
+                              "y": {"value": 0}
+                            }
+                          },
+                          {
+                            "title": "controlFly",
+                            "type": "action",
+                            "name": "controlFly",
+                            "parameters": {
+                              "x": {"key": "sweepMove"},
+                              "y": {"value": 0}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "controlFly",
+                        "type": "action",
+                        "name": "controlFly",
+                        "parameters": {
+                          "vector": {"value": [0, 0]}
+                        }
+                      },
+                      {
+                        "title": "setVelocity",
+                        "type": "action",
+                        "name": "setVelocity",
+                        "parameters": {
+                          "velocity": {"value": [0, 0]}
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.5}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

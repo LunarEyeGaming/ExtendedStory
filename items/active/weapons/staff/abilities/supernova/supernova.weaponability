@@ -1,0 +1,15 @@
+{
+  "ability" : {
+    "type" : "supernova",
+    "name" : "Supernova",
+    "scripts" : ["/items/active/weapons/staff/abilities/supernova/nova.lua"],
+    "class" : "Nova",
+
+    "energyCost" : 120,
+
+    "maxCastRange" : 25,
+
+    "projectileType" : "presupernovaspawner",
+    "projectileParameters" : {}
+  }
+}

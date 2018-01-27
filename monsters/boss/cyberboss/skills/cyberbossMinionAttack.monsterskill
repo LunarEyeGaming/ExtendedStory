@@ -1,0 +1,55 @@
+{
+  "name" : "cyberbossMinionAttack",
+  "label" : "MINI BOTS OF TERROR",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossMinionAttack.lua" ],
+
+    "cyberbossMinionAttack" : {
+      "skillTime": 0.02,
+      "bobTime" : 0.001,
+      "bobHeight" : 0,
+
+      "projectileOffset" : [0, 4],
+      "fireInterval" : 0.01,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "damageTeam" : { "type" : "enemy" },
+		  "piercing" : true,
+		  "timeToLive" : 3.5,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/tech/mech_activate3.ogg" ]
+            },
+			{
+              "time" : 0.5,
+              "repeat" : true,
+              "action" : "sound",
+              "options" : [ "/sfx/npc/boss/cultistboss_sphere_attack.ogg" ]
+            },
+			{
+              "time" : 0.5,
+              "repeat" : true,
+              "action" : "spawnmonster",
+              "type" : "cybermini",
+              "level" : 10
+            }
+          ],
+		  "actionOnReap" : [
+		    {
+			"action" : "sound",
+			"options" : [ "/sfx/tech/mech_deactivate.ogg" ]
+			}
+		  ]
+        }
+      }
+    }
+  }
+}

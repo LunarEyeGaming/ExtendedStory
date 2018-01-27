@@ -1,0 +1,21 @@
+{
+  "projectileName" : "iongrenade",
+  "image" : "iongrenade.png",
+  "fullbright" : true,
+  "animationCycle" : 1.00,
+  "frameNumber" : 8,
+  "physics" : "grenade",
+  "timeToLive" : 1,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion.config"
+    }
+  ],
+  "power" : 0.0,
+  "speed" : 45,
+  "lightColor" : [20, 150, 150],
+  "damageType" : "ignoresdef",
+  "damageKind" : "nodamage"
+}

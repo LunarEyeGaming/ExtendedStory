@@ -1,0 +1,25 @@
+{
+  "materialId" : 1998,
+  "materialName" : "radioactivematerial",
+  "particleColor" : [23, 138, 0, 255],
+  "itemDrop" : "radioactivematerial",
+  "description" : "Waste from nuclear factories.",
+  "shortdescription" : "Radioactive Waste",
+  "glitchDescription" : "Analysing. A pile of deadly waste.",
+  "floranDescription" : "Floran can't get near glowing green stuff.",
+  "novakidDescription" : "This deadly waste is somethin' that would kill ya.",
+  "footstepSound" : "/sfx/blocks/footstep_brains.ogg",
+  "health" : 1,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "radioactivematerial.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1800,
+    "radiantLight" : [42, 122, 38]
+  }
+}

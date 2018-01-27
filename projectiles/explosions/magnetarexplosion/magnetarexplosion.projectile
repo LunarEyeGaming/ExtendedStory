@@ -1,0 +1,16 @@
+{
+  "projectileName" : "magnetarexplosion",
+  "image" : "magnetarexplosion.png",
+  "animationCycle" : 0.3,
+  "lightColor" : [100, 125, 150],
+  "frameNumber" : 10,
+  "timeToLive" : 0.3,
+  "speed" : 0,
+  "damagePoly" : [ [-36, 18], [-18, 36], [18, 36], [36, 18], [36, -18], [18, -36], [-18, -36], [-36, -18] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "flippable" : true,
+  "power" : 20,
+  "damageKind" : "plasma",
+  "fullbright" : true
+}

@@ -1,0 +1,106 @@
+{
+  "ancientoneTreasure" : [
+    [0, {
+      "fill" : [ 
+        {"item" : "fusioncore"}
+      ],
+      "pool" : [
+        {"weight" : 0.950, "pool" : "essenceDrop"},
+        {"weight" : 0.025, "item" : "ancientoneaf"},
+		{"weight" : 0.025, "item" : "darkmattercore"}
+      ],
+      "poolRounds" : [
+        [0.80, 0],
+        [0.20, 1]
+      ]
+    }]
+  ],
+  "ancientFragments" : [
+    [0, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 15]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 30]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 50]}
+      ]
+    }],
+    [1.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 22]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 45]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 75]}
+      ]
+    }],
+    [2.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 30]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 60]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 100]}
+      ]
+    }],
+    [3.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 37]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 75]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 125]}
+      ]
+    }],
+    [4.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 45]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 90]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 150]}
+      ]
+    }],
+    [5.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 52]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 105]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 175]}
+      ]
+    }],
+    [6.9, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["ancientfragment", 60]},
+        {"weight" : 0.6, "item" : ["ancientfragment", 120]},
+        {"weight" : 0.2, "item" : ["ancientfragment", 200]}
+      ]
+    }]
+  ],
+  "truedestroyerTreasure" : [
+    [0, {
+      "fill" : [ 
+        {"item" : "nuclearrocketlauncher"},
+		{"item" : "cybercore"}
+      ],
+      "pool" : [
+        {"weight" : 0.450, "pool" : "essenceDrop"},
+		{"weight" : 0.550, "item" : "blackholegun"}
+      ],
+      "poolRounds" : [
+        [0.80, 0],
+        [0.20, 1]
+      ]
+    }]
+  ],
+  "ancientavatarTreasure" : [
+    [0, {
+      "fill" : [ 
+        {"item" : "ancienthammer"}
+      ],
+      "pool" : [
+        {"weight" : 1.0, "pool" : "essenceDrop"}
+      ],
+      "poolRounds" : [
+        [0.80, 0],
+        [0.20, 1]
+      ]
+    }]
+  ]
+}

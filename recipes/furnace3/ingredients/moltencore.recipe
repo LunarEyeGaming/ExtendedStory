@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "wire", "count" : 16 },
+    { "item" : "battery", "count" : 4 },
+    { "item" : "corefragmentore", "count" : 20 },
+    { "item" : "durasteelbar", "count" : 5 }
+  ],
+  "output" : { "item" : "moltencore", "count" : 1 },
+  "groups" : [ "craftingfurnace3", "ingredients", "all" ]
+}

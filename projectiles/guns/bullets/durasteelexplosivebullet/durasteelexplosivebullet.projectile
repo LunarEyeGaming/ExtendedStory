@@ -1,0 +1,29 @@
+{
+  "projectileName" : "durasteelexplosivebullet",
+  "image" : "durasteelexplosivebullet.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 2,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "goldslide",
+		  "angle" : 90,
+		  "fuzzAngle" : 180
+		}
+	  ]
+	}
+  ],
+  "power" : 10.0,
+  "speed" : 75,
+  "damageKind" : "default"
+}

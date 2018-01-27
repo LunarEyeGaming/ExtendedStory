@@ -1,0 +1,15 @@
+{
+  "raBlinkEs": {
+    "type": "action",
+    "name": "raBlinkEs",
+    "title": "raBlinkEs",
+    "properties": {
+      "variantNumber": {"type": "number", "value": 4},
+      "stateType": {"type": "string", "value": "eye"},
+      "toState": {"type": "string", "value": "blink"}
+    },
+    "category": "ruinamalgamation",
+    "script": "/scripts/actions/boss/ruinamalgamation.lua",
+    "output": {}
+  }
+}

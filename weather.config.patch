@@ -1,0 +1,82 @@
+[
+  {
+    "op": "add",
+    "path": "/darkabyss",
+    "value": [
+      [0.3, "clear"],
+      [0.3, "snow"],
+      [0.2, "snowstorm"],
+      [0.1, "glowingrain"],
+      [0.1, "duststorm"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/eternalfire",
+    "value": [
+      [0.73, "clear"],
+      [0.12, "ember"],
+      [0.03, "lightash"],
+      [0.12, "fireshower"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/eternalfireMeteor",
+    "value": [
+      [0.73, "clear"],
+      [0.12, "ember"],
+      [0.015, "meteorshower"],
+      [0.005, "largemeteor"],
+      [0.12, "fireshower"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/eternalfrost",
+    "value": [
+      [0.16, "clear"],
+      [0.12, "fog"],
+      [0.015, "groundmist"],
+      [0.005, "hailstones"],
+      [0.12, "snow"],
+      [0.32, "icestorm"],
+      [0.25, "snowstorm"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/eternalfrostNoFog",
+    "value": [
+      [0.285, "clear"],
+      [0.015, "hailstones"],
+      [0.12, "snow"],
+      [0.32, "icestorm"],
+      [0.25, "snowstorm"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/nuclearwasteland",
+    "value": [
+      [0.49, "clear"],
+      [0.12, "glowingrain"],
+      [0.12, "acidrain"],
+      [0.015, "meteorshower"],
+      [0.005, "largemeteor"],
+      [0.12, "spacedustshower"],
+      [0.12, "spacejunk"]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/halloween",
+    "value": [
+      [0.5, "clear"],
+      [0.125, "glowingrain"],
+      [0.125, "pumpkinrain"],
+      [0.125, "ghosthour"],
+      [0.125, "batongswarm"]
+    ]
+  }
+]

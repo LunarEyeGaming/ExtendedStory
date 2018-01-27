@@ -1,0 +1,65 @@
+{
+  "objectName" : "abyssdoor",
+  "colonyTags" : ["ancient","door"],
+  "printable" : false,
+  "rarity" : "Legendary",
+
+  "category" : "door",
+  "price" : 0,
+  "description" : "A door that appears to be completely unaffected by the test of time.",
+  "shortdescription" : "Abyss Door",
+  "race" : "generic",
+
+  "apexDescription" : "A door made of an abyss stone.",
+  "avianDescription" : "A sturdy door of ancient origin.",
+  "floranDescription" : "looksss like an abyss door",
+  "glitchDescription" : "Guarded. It would not be surprising if this abyss door failed to open.",
+  "humanDescription" : "I bet these runes say 'open' and 'close'.",
+  "hylotlDescription" : "This door is a relic of a time long past.",
+  "novakidDescription" : "This door is a relic.",
+
+  "inventoryIcon" : "abyssdooricon.png",
+  "orientations" : [
+    {
+      "image" : "abyssdoor.png:default",
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "abyssdoor.png:default",
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/airlock_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/airlock_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "abyssdoor.png"
+  },
+  "animationPosition" : [-20, 0],
+
+  "inputNodes" : [ [-1, 4] ],
+  "outputNodes" : [ [0, 0] ]
+}

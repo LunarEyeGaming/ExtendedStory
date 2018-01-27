@@ -1,0 +1,34 @@
+{
+  "projectileName" : "rainbowsupershot_es",
+  "physics" : "laser",
+  "image" : "rainbowsupershot_es.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 60,
+  "animationCycle" : 0.5,
+  "timeToLive" : 5.0,
+  "frameNumber" : 6,
+  "power" : 0,
+  "bounces" : 0,
+  "fullbright" : true,
+  "animationLoops" : true,
+  "damageKind" : "default",
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "supernova",
+	  "config" : {
+	    "processing" : "?scalenearest=0.5",
+		"periodicActions" : [
+		  {
+		    "time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/gun/shockblast.ogg" ]
+		  }
+		],
+		"animationCycle" : 0.5,
+		"timeToLive" : 0.5
+	  }
+	}
+  ]
+}

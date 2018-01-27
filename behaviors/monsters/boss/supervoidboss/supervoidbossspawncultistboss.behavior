@@ -1,0 +1,126 @@
+{
+  "name": "supervoidboss-spawncultistboss",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ancientavatar.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+		"title": "inverter",
+        "type": "decorator",
+        "name": "inverter",
+        "parameters": {},
+        "child": {
+          "title": "findMonster",
+          "type": "action",
+          "name": "findMonster",
+          "parameters": {
+            "orderBy": {"value": "nearest"},
+            "position": {"key": "self"},
+            "range": {"value": 100},
+            "type": {"value": "zombienox"}
+          }
+        }
+	  },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 1},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "setAnimationState",
+              "type": "action",
+              "name": "setAnimationState",
+              "parameters": {
+                "state": {"value": "attack"},
+                "type": {"value": "eye"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": "<windupTime>"}
+              }
+            },
+            {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "spawnIceEruptions"}
+              }
+            },
+            {
+              "title": "offsetPosition",
+              "type": "action",
+              "name": "offsetPosition",
+              "parameters": {
+                "offset": {"value": [-16, 0]},
+                "position": {"key": "spawn"}
+              },
+              "output": {
+                "position": "leftProjectile"
+              }
+            },
+            {
+              "title": "spawnFloorProjectiles",
+              "type": "action",
+              "name": "spawnFloorProjectiles",
+              "parameters": {
+                "areaWidth": {"value": 32},
+                "center": {"key": "leftProjectile"},
+                "power": {"value": 10},
+                "projectileCount": {"value": 1},
+                "projectileType": {"value": "spawncultistboss"},
+                "segmentWidth": {"value": 8},
+                "spawnHeight": {"value": 0.625}
+              },
+              "output": {
+                "projectiles": "lavaProjectiles"
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.4}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 2.4}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

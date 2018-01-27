@@ -1,0 +1,25 @@
+{
+  "materialId" : 1994,
+  "materialName" : "radioactivewalls2",
+  "particleColor" : [23, 138, 0, 255],
+  "itemDrop" : "radioactivewalls2",
+  "description" : "Small stone bricks that are severely irradiated.",
+  "shortdescription" : "Irradiated Stone Brick",
+  "glitchDescription" : "Surprised. These small stone bricks remain intact even if they are irradiated.",
+  "floranDescription" : "Glowing brickss are ssmall.",
+  "novakidDescription" : "These bricks are made outta some irradiated material.",
+  "footstepSound" : "/sfx/blocks/footstep_stone2.ogg",
+  "health" : 16,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "radioactivewalls2.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 3100,
+    "radiantLight" : [42, 122, 38]
+  }
+}

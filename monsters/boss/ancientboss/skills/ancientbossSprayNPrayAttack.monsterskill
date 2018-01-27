@@ -1,0 +1,33 @@
+{
+  "name" : "ancientbossSprayNPrayAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossSprayNPrayAttack.lua" ],
+
+    "ancientbossSprayNPrayAttack" : {
+      "skillTime": 10,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.1,
+      "projectile" : {
+        "type" : "plasmashot",
+        "config" : {
+          "speed" : 40,
+          "power" : 1,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

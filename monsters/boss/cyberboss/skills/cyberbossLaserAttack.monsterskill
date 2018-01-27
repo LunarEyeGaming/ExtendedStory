@@ -1,0 +1,15 @@
+{
+  "name" : "cyberbossLaserAttack",
+  "label" : "EYE LASER OF DEATH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/cyberboss/skills/cyberbossLaserAttack.lua" ],
+    "cyberbossLaserAttack" : {
+      "skillTime" : 23,
+      "rotateInterval" : 23,
+        
+      "damagePerSecond" : 1000
+    }
+  }
+}

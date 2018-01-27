@@ -1,0 +1,192 @@
+{
+  "id" : "ivguideweapons",
+  "title" : "Extended Story - Weapons",
+  "description" : "A book covering the weapons of the mod.",
+  "icon" : "ivguidecover_1.png",
+  "contentPages" : [
+    " 
+
+
+
+
+
+        You are currently looking at the        weapons section of the wiki.",
+    "     --(TABLE OF CONTENTS)--  ^yellow;NEW!^reset;
+^cyan;Handheld Ion Cannon^reset; - Page 2
+^magenta;Little Destroyer^reset; - Page 3
+^magenta;Big Destroyer^reset; - Page 4
+^#ffffdd;Ancient Grenade^reset; - Page 5
+^orange;The Gamma-Ray Burst^reset; - Page 6
+^#151325;The ^#2c1919;F^#361e1e;a^#402424;br^#361e1e;i^#2b1919;c ^#291f40;R^#3b2c5b;i^#50446e;pp^#3b2c5b;e^#291f40;r^reset; - Page 7
+^red;Black Hole Cannon^reset; - Page 8
+^green;Super Redeemer^reset; - Page 9
+^magenta;Ancient Bow^reset; - Page 10
+^blue;Super Tesla^reset; - Page 11
+^orange;Ancient Blaze^reset; - Page 12
+^magenta;Gatling Destroyer^reset; - Page 13
+^magenta;Ancient Railgun^reset; - Page 14
+^blue;Electric Artifact^reset; - Page 15",
+    "^orange;Fire Artifact^reset; - Page 16
+^cyan;Ice Artifact^reset; - Page 17",
+    "^blue;Changed!^reset; ^cyan;Handheld Ion Cannon^reset;(ID - handheldioncannon)
+Damage - 90
+Energy per Sec - 30
+Beam Range - 50
+Alt Ability - Ion Grenade
+At Accelerator; Recipe - 
+15 Refined Aegisalt
+4 Batteries
+15 Refined Ferozium
+5 Static Cells
+20 Solarium Stars
+The ^cyan;Handheld Ion Cannon^reset; is a beam gun that is tier 10(might be decreased later), and it has its own element, ion.",
+    "^blue;Changed!^reset; ^magenta;Little Destroyer^reset;(ID - ancientpistol)
+Damage - 6.6
+Energy per Sec - 20
+Fire Rate - 9
+At Ancient Forge; Recipe -
+25 Ancient Blocks
+50 Ancient Essence
+5 Solarium Stars
+The ^magenta;Little Destroyer^reset; is a laser pistol that rapidly shoots explosive laser projectiles and is tier 10.",
+    "^blue;Changed!^reset; ^magenta;Big Destroyer^reset;(ID - ancientrifle)
+Damage - 11
+Energy per Sec - 20
+Fire Rate - 10
+Alt Ability - Ancient Grenade
+At Ancient Forge; Recipe -
+40 Ancient Blocks
+80 Ancient Essence
+10 Solarium Stars
+1 Ancient Grenade
+The ^magenta;Big Destroyer^reset; is a laser assault rifle that rapidly shoots explosive laser projectiles and is tier 10. It can also launch ancient grenades.",
+    "^#ffffdd;Ancient Grenade^reset;(ID - ancientgrenade)
+Damage - 40
+^blue;Changed!^reset; At Ancient Forge; Recipe -
+1 Ancient Essence
+1 Ancient Fragment
+An Ancient Grenade is a kind of grenade that is tier 10 and can cause damage to terrain. ^magenta;Big Destroyer^reset;'s alt ability is submitted by ^green;terrathedragon^reset;.",
+    "^blue;Changed!^reset;^orange;The Gamma-Ray Burst^reset;(ID - ancientstaff)
+Damage per Laser - 50
+Energy per Sec - 62.5
+Primary Ability - Laser Beam Shooter
+Alt Ability - Supernova: Summons a projectile that explodes into a ton of lasers
+At Ancient Forge; Recipe -
+1 Ancient Core
+50 Ancient Blocks
+90 Ancient Essence
+20 Solarium Stars
+The ^orange;Gamma-Ray Burst^reset; is a staff that shoots laser beams and is tier 10.",
+    "^blue;Changed!^reset; ^#151325;The ^#2c1919;F^#361e1e;a^#402424;br^#361e1e;i^#2b1919;c ^#291f40;R^#3b2c5b;i^#50446e;pp^#3b2c5b;e^#291f40;r^reset;(ID - cosmicbroadsword)
+Damage - 68.8
+Swing Speed - 2
+Alt Ability - Unstable Rift: Summons a bunch of astral tears
+At Separator; Recipe -
+9 Fabric Bars
+10 Refined Violium
+5 Solarium Stars
+10 Iron Bars
+The ^#2c1919;F^#361e1e;a^#402424;br^#361e1e;i^#2b1919;c ^#291f40;R^#3b2c5b;i^#50446e;pp^#3b2c5b;e^#291f40;r^reset; is an astro-themed sword that creates an unstable rift and is tier 10.",
+    "^red;Black Hole Cannon^reset;(ID - blackholegun)
+Damage - 124
+Energy per Shot - 200
+Fire Rate - 0.2
+Alt Ability - Super Black Hole
+At Accelerator; Recipe -
+20 Refined Aegisalt
+1 Dark Matter Core
+15 Solarium Stars
+20 Iron Bars
+The ^red;Black Hole Cannon^reset; is a destructive black hole shooter that is tier 10. The alt ability shoots a bouncing black hole that eventually explodes.",
+    "^green;Super Redeemer^reset;(ID - nuclearrocketlauncher)
+Damage - 66
+Energy per Shot - 36
+Fire Rate - 0.7
+Alt Ability - Super Fusion Shot
+At Accelerator; Recipe -
+20 Refined Aegisalt
+1 Fusion Core
+20 Solarium Stars
+50 Iron Bars
+20 Volatile Powder
+The ^green;Super Redeemer^reset; is a rocket launcher that shoots fusion bubbles and is tier 10. Can create a mini-nuke.",
+    "^magenta;Ancient Bow^reset;(ID - ancientbow)
+Highest Base Damage - 140.9
+Energy per Shot - 30
+^blue;Changed!^reset; At Ancient Forge; Recipe -
+25 Ancient Blocks
+10 Solarium Stars
+1 Aegisalt Bow
+100 Ancient Essence
+The ^magenta;Ancient Bow^reset; is an aimbot bow that essentially shoots homing arrows. 'Cause what else would an aimbot bow do? Weapon is mostly submitted by ^green;hylotl chef^reset;.",
+    "^blue;Changed!^reset; ^blue;Super Tesla^reset;(ID - lightninggun)
+Damage - 30-270
+Energy per Shot - 10-30
+Alt Ability - Compressed Lightning Bolt: Shoots an electric rocket that explodes into a bunch of lightning
+Dropped by - Bot of Terror
+The ^blue;Super Tesla^reset; is a chargeable gun that shoots lightning.",
+    "^blue;Changed!^reset; ^orange;Ancient Blaze^reset;(ID - ancienthammer)
+Damage - 42.3
+Alt Ability - Wall of Fire: Upgrade to fire pillar
+Dropped by - Ancient Avatar
+The ^orange;Ancient Blaze^reset; is a hammer that is both electric and fire.",
+    "^yellow;NEW!^reset; ^magenta;Gatling Destroyer^reset;(ID - ancientchaingun)
+Damage - 0.7
+Energy per Shot - 0.5
+Fire Rate - 100
+Alt Ability - Ancient Beam
+At Ancient Forge; Recipe - 
+50 Ancient Blocks
+12 Solarium Stars
+100 Ancient Essence
+The ^magenta;Gatling Destroyer^reset; is a rapid firing chain gun that is tier 10. It also shoots a laser.",
+    "^yellow;NEW! ^reset;^magenta;Ancient Railgun^reset;(ID - ancientrailgun)
+Damage - 42
+Energy per Shot - 30
+Fire Rate - 0.7
+Alt Ability - Homing Shot
+At Ancient Forge; Recipe - 
+40 Ancient Blocks
+10 Solarium Stars
+100 Ancient Essence
+The ^magenta;Ancient Railgun^reset; is a sniper rifle that shoots lasers.",
+    "^yellow;NEW!^reset; ^blue;Electric Artifact^reset;(ID - electricartifact)
+Rewarded from Quest - ^#896bb3;The Electric Artifact^reset;
+Primary Ability - Electrocution: Summons an orb that rapidly shoots lightning bolts
+Alt Ability - Thunder Beam: Summons an orb that charges up a deadly laser beam
+The ^blue;Electric Artifact^reset; is a powerful staff that is based off of the electric element.",
+    "^yellow;NEW!^reset; ^orange;Fire Artifact^reset;(ID - fireartifact)
+Rewarded from Quest - ^orange;The Fire Artifact^reset;
+Combo - Up, Down, Down Shortsword, Orange Explosion, Ignite Ground
+Alt Ability - Volcanic Eruption
+The ^orange;Fire Artifact^reset; is a broadsword that can cause an area to essentially become a volcano.",
+    "^yellow;NEW!^reset; ^cyan;Ice Artifact^reset;(ID - iceartifact)
+Rewarded from Quest - ^#a6ceff;The Ice Artifact^reset;
+The ^cyan;Ice Artifact^reset; is a chargeable gun that shoots ice blocks.",
+    "^yellow;NEW!^reset; ^green;Poison Artifact^reset;(ID - poisonartifact)
+Rewarded from Quest - ^green;The Poison Artifact^reset;
+Combo - Down, Down Shortsword, Stab, Up, Down, Up, Up, Charge, Explosion
+Alt Ability - Poison Shower: Summons a poisonous thunder storm to mess up your foes.
+The ^green;Poison Artifact^reset; is a sword that is poison themed, and it is very powerful.",
+    "
+
+
+
+
+
+        ^red;WARNING: SPOILERS INBOUND BEYOND THIS POINT!!! BE SURE TO COMPLETE THIS MOD BEFORE VIEWING THIS!!!",
+	"^yellow;NEW!^reset; ^magenta;The Obliterator^reset;(ID - supervoidobliterator)
+Rewarded from Quest - The ^magenta;Supervoid ^#333333;Eye ^reset;
+Charge Times -
+Instant: Supervoid Shot
+0.33 Seconds: Supervoid Zot Orb
+0.66 Seconds: Supervoid Shot Orb
+1 Second: Supervoid Calamity Shot
+Alt Ability - Singularity Grenade
+The ^magenta;Obliterator^reset; is the most powerful weapon in this mod. If you ever wanted to call this thing the bane of the Supervoid Eye, you absolutely can!"
+  ],
+    "itemConfig" : {
+    "rarity" : "Common",
+    "price" : 0
+  }
+}

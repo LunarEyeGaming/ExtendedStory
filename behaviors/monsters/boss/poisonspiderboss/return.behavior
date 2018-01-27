@@ -1,0 +1,133 @@
+{
+  "name": "poisonspiderboss-return",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "distance",
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "to": {"key": "spawn"}
+        },
+        "output": {
+          "vector": "toSpawn"
+        }
+      },
+      {
+        "title": "selector",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "inRange",
+            "type": "action",
+            "name": "inRange",
+            "parameters": {
+              "range": {"value": 1},
+              "target": {"key": "spawn"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "rotate"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "rotate",
+                "type": "action",
+                "name": "rotate",
+                "parameters": {
+                  "rate": {"value": 3},
+                  "vector": {"key": "toSpawn"}
+                }
+              },
+              {
+                "title": "",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "walk"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "flyToPosition",
+                "type": "action",
+                "name": "flyToPosition",
+                "parameters": {
+                  "position": {"key": "spawn"}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rotate"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "rotate",
+        "type": "action",
+        "name": "rotate",
+        "parameters": {
+          "angle": {"value": 4.71},
+          "rate": {"value": 3}
+        }
+      },
+      {
+        "title": "",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "legs"}
+        }
+      }
+    ]
+  }
+}

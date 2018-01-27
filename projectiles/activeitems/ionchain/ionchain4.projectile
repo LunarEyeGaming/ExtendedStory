@@ -1,0 +1,25 @@
+{
+  "projectileName" : "ionchain4",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "ionchain.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 75,
+  "timeToLive" : 0.25,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "ionchain5",
+	  "fuzzAngle" : 15
+    },
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/globeexplosions/blueglobeexplosion/blueglobeexplosion.config"
+	}
+  ],
+  "lightColor" : [59, 217, 215],
+  "damageKind" : "plasmabullet"
+}

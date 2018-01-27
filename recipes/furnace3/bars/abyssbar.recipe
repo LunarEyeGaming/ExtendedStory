@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "abyssshard", "count" : 2 },
+	{ "item" : "liquidabyss", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "abyssbar",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "craftingfurnace3", "bars", "all" ]
+}

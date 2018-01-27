@@ -1,0 +1,145 @@
+[
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/darkabyss",
+    "value" : [
+    "This is the ^#666666;dark abyss^white;, a variation of midnight where the sun never rises. The term, day, is almost useless in this ^red;deathly cold^white; world.",
+    "This ^#666666;dark abyss^white; world reflects almost no light whatsoever. Be prepared for essentially boring and ^red;deathly cold^white; landscape.",
+    "Scans show that the surface of this ^#666666;dark abyss^white; is shrouded in near total darkness. I would advise you to navigate the ^red;deathly cold^white; surface carefully."
+	]
+  },
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/eternalfire",
+    "value" : [
+    "This ^#c96c28;burning^white; planet has ^red;burning air^white; and is essentially hell. Not a good place to spend your vacation time.",
+    "The surface of this planet is eternally ^#c96c28;burning^white;, and the ^red;air is also burning^white;. I would recommend some kind of protection against it.",
+    "This ^#c96c28;burning^white; planet makes home to many fire elementals, due to the ^red;burning air^white;. I would advise being very careful."
+	]
+  },
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/eternalfrost",
+    "value" : [
+    "This ^#a6ceff;permafrost^white; world consists of mainly frozen blocks. Its temperature is ^red;deathly cold^white;, meaning exploration is impossible without the ^magenta;ancient set^white;.",
+    "The surface of this planet is an ^#a6ceff;eternally frozen wasteland^white;, so you shouldn't go to this world without the ^magenta;ancient set^white; due to it being ^red;deathly cold^white;.",
+    "This ^#a6ceff;eternal frost^white; world has been frozen over, making it a ^red;deathly cold^white; place."
+	]
+  },
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/nuclearwasteland",
+    "value" : [
+    "This world is a ^#02da06;nuclear wasteland^white;, making it life as we know it impossible on this planet; it is obviously ^red;severely irradiated^white; due to nuclear pollution.",
+    "Radiation levels are ^red;severely high^white; on this ^#02da06;nuclear wasteland^white; planet, so you shouldn't explore it without proper protection.",
+    "Known to humanoids as ^#02da06;nuclear wastelands^white;, these worlds contain massive amounts of radioactive waste because of ^red;severe levels of radiation^white;."
+	]
+  },
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/halloween",
+    "value" : [
+    "The place is orange due to the spirit of ^orange;Halloween^white;.",
+    "This world has orange blocks, and contains many pumpkin monsters. Be prepared to face a ^orange;Halloween^white; planet.",
+    "A world filled with orange monsters and blocks, its name is a ^orange;Halloween^white; planet, long forgotten by humans."
+	]
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/darkabyss",
+    "value" : "Dark Abyss"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/eternalfire",
+    "value" : "Eternally Burning"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/eternalfrost",
+    "value" : "Permafrost"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/nuclearwasteland",
+    "value" : "Nuclear Wasteland"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/halloween",
+    "value" : "Halloween"
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/darkabyss",
+    "value" : [150, 150, 150]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/eternalfire",
+    "value" : [201, 108, 40]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/eternalfrost",
+    "value" : [166, 206, 255]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/nuclearwasteland",
+    "value" : [2, 218, 6]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/halloween",
+    "value" : [128, 64, 0]
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/darkmatterore",
+    "value" : {
+      "displayName" : "Dark Matter Ore",
+      "icon" : "/items/generic/crafting/darkmatterore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/abyssshard",
+    "value" : {
+      "displayName" : "Abyss Shard",
+      "icon" : "/items/generic/crafting/abyssshard.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/fireshower",
+    "value" : {
+      "displayName" : "Magma Meteors",
+      "icon" : "/interface/cockpit/weather/fireshower.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/pumpkinrain",
+    "value" : {
+      "displayName" : "Pumpkin Rain",
+      "icon" : "/interface/cockpit/weather/pumpkinrain.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/ghosthour",
+    "value" : {
+      "displayName" : "Ghost Hour",
+      "icon" : "/interface/cockpit/weather/ghosthour.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/batongswarm",
+    "value" : {
+      "displayName" : "Batong Swarm",
+      "icon" : "/interface/cockpit/weather/batongswarm.png"
+    }
+  }
+]

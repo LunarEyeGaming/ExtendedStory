@@ -1,0 +1,23 @@
+{
+  "projectileName" : "nuclearfusechargednoshafts",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 2,
+  "image" : "nuclearfusecharged.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/fusionnuke/fusionnuke.config"
+    }
+  ],
+  "animationCycle" : 0.2,
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 2,
+  "power" : 50,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "fireplasma"
+}

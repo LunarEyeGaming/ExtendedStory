@@ -1,0 +1,38 @@
+{
+  "name" : "quantumsentryDestructionAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/quantumsentryDestructionAttack.lua" ],
+
+    "quantumsentryDestructionAttack" : {
+      "skillTime": 5,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, 0],
+      "fireInterval" : 1.0,
+      "projectile" : {
+        "type" : "redplasmashot",
+        "config" : {
+          "speed" : 40,
+          "power" : 1,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/supremeioncannon_altfire.ogg" ]
+            },
+			{
+			  "time" : 0.05,
+			  "action" : "config",
+			  "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+			}
+          ]
+        }
+      }
+    }
+  }
+}

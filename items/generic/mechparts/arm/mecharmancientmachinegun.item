@@ -1,0 +1,15 @@
+{
+  "itemName" : "mecharmancientmachinegun",
+  "price" : 5600,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mecharm",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "mecharmancientmachinegun.png",
+  "description" : "An ancient rifle with two barrels.",
+  "shortdescription" : "Ancient Gun Mech Arm",
+  "itemTags" : [ ],
+
+  "mechPart" : ["arm", "ancientmachinegun"]
+}

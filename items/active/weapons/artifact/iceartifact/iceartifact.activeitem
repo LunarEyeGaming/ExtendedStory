@@ -1,0 +1,97 @@
+{
+  "itemName" : "iceartifact",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A weapon created by the ancients for extreme situations.",
+  "shortdescription" : "^cyan;Ice Artifact^reset;",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "iceartifacticon.png",
+
+  "animation" : "iceartifact.animation",
+  "animationParts" : {
+    "gun" : "iceartifact.png",
+    "gunfullbright" : "iceartifactfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [2.5, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 5,
+        "cooldown" : 0.1,
+        "projectileType" : "iceshot",
+        "projectileParameters" : {
+		  "speed" : 80,
+		  "actionOnReap" : [
+		    {
+			  "action" : "config",
+			  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+			}
+		  ]
+		},
+        "inaccuracy" : 0,
+        "baseDamage" : 5,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 40,
+        "cooldown" : 0.5,
+        "projectileType" : "icestorm",
+        "projectileParameters" : {
+		  "power" : 20,
+		  "actionOnReap" : [
+		    {
+			  "action" : "config",
+			  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+			},
+			{
+			  "action" : "loop",
+			  "count" : 5,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "iceshotgrenade",
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : {
+				    "physics" : "grenade",
+					"power" : 20,
+					"piercing" : true,
+				    "actionOnReap" : [
+					  {
+					    "action" : "projectile",
+						"type" : "iceeruption",
+						"direction" : [1.0, 0.0],
+						"offset" : [0.0, 3.0],
+						"config" : {"timeToLive" : 3, "bounces" : -1, "power" : 20}
+					  }
+					]
+				  }
+				}
+			  ]
+			}
+		  ]
+		},
+        "inaccuracy" : 0,
+        "baseDamage" : 20,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

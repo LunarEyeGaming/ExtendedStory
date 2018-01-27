@@ -1,0 +1,44 @@
+{
+  "objectName" : "supervoidteleporter",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "null",
+  "shortdescription" : "Supervoid Teleporter",
+  "race" : "generic",
+
+  "apexDescription" : "^gray;???",
+  "avianDescription" : "^red;???",
+  "floranDescription" : "^green;???",
+  "glitchDescription" : "^#666666;???",
+  "humanDescription" : "^#ffc181???",
+  "hylotlDescription" : "^blue;???",
+  "novakidDescription" : "^orange;???",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/teleporttoboss.config",
+
+  "inventoryIcon" : "supervoidteleportericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "supervoidteleporter.png:<color>", "fullbright" : true }, { "image" : "supervoidteleporterlit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

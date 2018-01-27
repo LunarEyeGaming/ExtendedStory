@@ -1,0 +1,32 @@
+{
+  "projectileName" : "em_lightninggunshot3",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 75,
+  "timeToLive" : 0.25,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "teslabolt",
+	  "fuzzAngle" : 10,
+	  "config" : {
+	    "speed" : 0
+	  }
+	}
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "projectile",
+	  "type" : "em_lightninggunshot4",
+	  "fuzzAngle" : 60
+	}
+  ],
+  "lightColor" : [59, 217, 215],
+  "damageKind" : "plasmabullet"
+}

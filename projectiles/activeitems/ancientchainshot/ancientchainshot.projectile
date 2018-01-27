@@ -1,0 +1,37 @@
+{
+  "projectileName" : "ancientchainshot2",
+  "physics" : "illusion",
+  "damageKindImage" : "icon.png",
+  "image" : "ancientchainshot.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "fullbright" : true,
+  "speed" : 100,
+  "supportsProcessing" : true,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "laserburst",
+	  "config" : {
+		"processing" : "?scalenearest=0.5",
+		"periodicActions" : [
+		  {
+			"time" : 0,
+			"repeat" : false,
+			"action" : "sound",
+			"options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
+		  }
+		]
+	  }
+	}
+  ],
+  "lightColor" : [67, 110, 32],
+  "damageKind" : "plasma",
+  "piercing" : true,
+
+  "scripts" : [ "/scripts/projectiles/chainbullet.lua" ]
+}

@@ -1,0 +1,31 @@
+{
+  "projectileName" : "itemmagnetradius",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.7,
+  "animationLoops" : false,
+  "physics" : "illusion",
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "speed" : 0,
+  "power" : 0.0,
+
+  "bounces" : -1,
+
+  "timeToLive" : 0.1,
+
+  "orientationLocked" : true,
+
+  "boundBox" : [-20, -20, 20, 20],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["itemdrop"]
+    }
+  },
+
+  "clientEntityMode" : "ClientSlaveOnly"
+}

@@ -1,0 +1,53 @@
+{
+  "projectileName" : "rainbowshot2_es",
+  "physics" : "grenade",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 40,
+  "animationCycle" : 1,
+  "timeToLive" : 5.0,
+  "frameNumber" : 1,
+  "bounces" : 10,
+  "power" : 20,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "damageKind" : "default",
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+        "animation" : "/animations/rainbowfire_es/rainbowfire_es2.animation",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0.0],
+        "finalVelocity" : [0, 2.0],
+        "approach" : [0, 10],
+        "fade" : 0.3,
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.3,
+        "size" : 1.2,
+        "timeToLive" : 0.5,
+        "fullbright" : true,
+        "layer" : "middle",
+        "collidesForeground" : false,
+        "variance" : {
+          "position" : [0.2, 0.2],
+          "initialVelocity" : [2, 0]
+        }
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rainbowexplosion_es/rainbowexplosion_es2.config"
+	}
+  ],
+  "actionOnCollide" : [
+    {
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/plasmabullet_ricochet1.ogg", "/sfx/projectiles/plasmabullet_ricochet2.ogg", "/sfx/projectiles/plasmabullet_ricochet3.ogg" ]
+	}
+  ]
+}

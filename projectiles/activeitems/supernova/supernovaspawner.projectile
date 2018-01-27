@@ -1,0 +1,33 @@
+{
+  "projectileName" : "supernovaspawner",
+  "image" : "supernovaspawner.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 8,
+  "animationLoops" : true,
+  "fullbright" : true,
+  "flippable" : true,
+  "damageKind" : "plasma",
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/activeitems/supernova/supernova.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
+    }
+  ],
+  "timeToLive" : 3.0,
+
+  "lightColor" : [225, 225, 225],
+  "pointLight" : true,
+
+  "piercing" : true,
+  "bounces" : -1,
+  "power" : 50,
+  "speed" : 0
+}

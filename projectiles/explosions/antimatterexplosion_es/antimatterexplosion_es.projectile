@@ -1,0 +1,18 @@
+{
+  "projectileName" : "antimatterexplosion_es",
+  "image" : "antimatterexplosion_es.png",
+  "physics" : "laser",
+  "animationCycle" : 0.5,
+  "frameNumber" : 6,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 0.5,
+  "pointLight" : true,
+  "bounces" : 1,
+  "damagePoly" : [ [-180, 0], [-120, -120], [0, -180], [120, -120], [180, 0], [120, 120], [0, 180], [-120, 120] ],
+  "piercing" : true,
+  "damageKind" : "default",
+  "damageKindImage" : "/interface/statuses/glow.png",
+
+  "lightColor" : [100, 255, 100]
+}

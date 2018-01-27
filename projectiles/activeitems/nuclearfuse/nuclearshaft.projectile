@@ -1,0 +1,17 @@
+{
+  "projectileName" : "nuclearshaft",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 2,
+  "image" : "nuclearshaft.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "animationCycle" : 0.3,
+  "lightColor" : [9, 18, 204],
+  "frameNumber" : 3,
+  "power" : 50,
+  "damagePoly" : [ [0, 0], [-64, -560], [64, -560] ],
+  "damageKind" : "fireplasma"
+}

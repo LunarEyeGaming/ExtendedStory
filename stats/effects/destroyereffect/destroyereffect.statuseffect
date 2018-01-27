@@ -1,0 +1,25 @@
+{
+  "name" : "destroyereffect",
+  "blockingStat" : "destroyereffectImmunity",
+
+  "effectConfig" : {
+    "directives" : "fade=FFAAAA=0.3",
+    "movementModifiers" : {
+      "speedModifier" : 1.0,
+      "airJumpModifier" : 1.0
+    },
+    "tickRate" : 20,
+    "energyCost" : 2.5,
+    "healthDamage" : 5
+  },
+  "defaultDuration" : 600,
+
+  "scripts" : [
+    "destroyereffect.lua"
+  ],
+
+  "animationConfig" : "destroyereffect.animation",
+
+  "label" : "Armageddon - You will meet your end once the timer runs out",
+  "icon" : "/interface/statuses/doomed.png"
+}

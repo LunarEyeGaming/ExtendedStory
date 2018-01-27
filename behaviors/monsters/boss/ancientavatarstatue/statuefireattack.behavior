@@ -1,0 +1,228 @@
+{
+  "name": "ancientavatarstatue-fireattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ancientavatar.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4,
+    "pillarCount": 2
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "prepareFire"}
+        }
+      },
+      {
+        "title": "kluexboss-changecolor",
+        "type": "module",
+        "name": "kluexboss-changecolor",
+        "parameters": {
+          "color": {"value": "yellow"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spawnPlatforms"}
+        }
+      },
+      {
+        "title": "spawnAncientPillars",
+        "type": "action",
+        "name": "spawnAncientPillars",
+        "parameters": {
+          "areaWidth": {"value": 64},
+          "center": {"key": "spawn"},
+          "pillarCount": {"key": "<pillarCount>"},
+          "pillarHeight": {"value": 8}
+        },
+        "output": {
+          "pillars": "pillars"
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "spawnFloorProjectiles",
+        "type": "action",
+        "name": "spawnFloorProjectiles",
+        "parameters": {
+          "areaWidth": {"value": 64},
+          "center": {"key": "spawn"},
+          "power": {"value": 10},
+          "projectileCount": {"value": 8},
+          "projectileType": {"value": "floorlava"},
+          "segmentWidth": {"value": 8},
+          "spawnHeight": {"value": -1}
+        },
+        "output": {
+          "projectiles": "lavaProjectiles"
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 5}
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "lavaProjectiles"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "eachItem"}
+              }
+            },
+            {
+              "title": "sendEntityMessage",
+              "type": "action",
+              "name": "sendEntityMessage",
+              "parameters": {
+                "entity": {"key": "eachItem"},
+                "message": {"value": "sink"}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.2}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "pillars"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "eachItem"}
+              }
+            },
+            {
+              "title": "sendEntityMessage",
+              "type": "action",
+              "name": "sendEntityMessage",
+              "parameters": {
+                "entity": {"key": "eachItem"},
+                "message": {"value": "destroy"}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      }
+    ]
+  }
+}

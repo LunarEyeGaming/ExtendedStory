@@ -1,0 +1,51 @@
+{
+  "projectileName" : "em_lightninggunshot1",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 75,
+  "timeToLive" : 5,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+	    "type" : "animated",
+        "animation" : "/animations/electroshock/electroshock.animation",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0.0],
+        "finalVelocity" : [0, 0.0],
+        "approach" : [0, 10],
+        "fade" : 0.3,
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.01,
+        "size" : 1.0,
+        "timeToLive" : 0.2,
+        "fullbright" : true,
+        "layer" : "middle",
+        "collidesForeground" : false,
+        "variance" : {
+          "position" : [0.0, 0.0],
+          "initialVelocity" : [0, 0]
+	    }
+	  }
+	}
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+	}
+  ],
+  "lightColor" : [59, 217, 215],
+  "damageKind" : "plasmabullet",
+  "zigZagTime" : 0.1,
+  "zigZagAngle" : 20,
+  "scripts" : [ "zigzagprojectile.lua" ],
+  "scriptDelta" : 1
+}

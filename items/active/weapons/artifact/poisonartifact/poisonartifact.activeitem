@@ -1,0 +1,258 @@
+{
+  "itemName" : "poisonartifact",
+  "price" : 960,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A weapon created by the ancients for extreme situations.",
+  "shortdescription" : "^green;Poison Artifact^reset;",
+  "tooltipKind" : "sword",
+  "category" : "Artifact",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "broadsword"],
+
+  "inventoryIcon" : "poisonartifacticon.png",
+
+  "animation" : "/items/active/weapons/artifact/poisonartifact/poisonartifact.animation",
+  "animationParts" : {
+    "blade" : "blade.png",
+    "handle" : "handle.png",
+    "handleFullbright" : "handlefullbright.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire7" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire8" : [ "/sfx/melee/charge_up15.ogg" ],
+      "fire9" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
+	  "altFire" : [ "/sfx/npc/boss/crystalboss_death.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 3.0,
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "damageConfig" : {"damageSourceKind" : "poisonbroadsword","statusEffects" : [ "weakpoison" ],"knockbackMode" : "facing","timeout" : 0.5},
+    "fireTime" : 0.5,
+	"baseDps" : 60,
+	"comboSteps" : 9,
+	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[-0.75, 0.0, -4.25, -5.0],[0, 0, 0, 0],[0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.5,"knockback" : 30},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 2.0,"knockback" : 30},{"baseDamageFactor" : 4.0,"knockback" : 90}],
+
+    "stances" : {
+      "idle" : {"armRotation" : 0, "weaponRotation" : 45, "allowRotate" : false, "allowFlip" : true},
+	  "windup1" : {"duration" : 0.1, "armRotation" : 90, "weaponRotation" : -10, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "preslash1" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "fire1" : {"duration" : 0.15,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait1" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup2" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "fire2" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "wait2" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup3" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire3" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait3" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup4" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire4" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup5" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup6" : {"duration" : 0.15,"armRotation" : 305,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire6" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait6" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup7" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire7" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait7" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup8" : {"duration" : 0.001,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire8" : {"duration" : 0.399,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait8" : {"duration" : 0.3,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup9" : {"duration" : 0.001,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire9" : {"duration" : 0.299,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}
+    }
+  },
+
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "elementalConfig" : {
+	  "physical" : {
+	    "name":"^green;Poison Shower"
+	  }
+	}, 
+	"stances" : {
+	  "fire" : {
+	    "duration" : 0.25,
+		"armRotation" : 90, 
+		"weaponRotation" : -90, 
+		"twoHanded" : true, 
+		"weaponOffset" : [0, 1], 
+		"allowRotate":false, 
+		"allowFlip":false
+	  }, 
+	  "cooldown" : {
+	    "duration" : 0.15, 
+		"armRotation" : 90, 
+		"weaponRotation" : -90, 
+		"twoHanded" : true, 
+		"weaponOffset" : [0, 0.5], 
+		"allowRotate" : false, 
+		"allowFlip" : false
+	  }
+	}, 
+	"baseDps" : 2, 
+	"energyUsage" : 100, 
+	"fireTime" : 10, 
+	"inaccuracy" : 0, 
+	"baseDamageMultiplier" : 1, 
+	"projectileCount" : 1, 
+	"baseDamage" : 1,
+	"fireType" : "auto", 
+	"hidePrimaryMuzzleFlash" : true, 
+	"firePositionPart" : "handle",
+	"projectileType" : "whiteglobe",
+	"projectileParameters" : {
+	  "speed" : 0,
+	  "timeToLive" : 0,
+	  "actionOnReap" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "greenglobe",
+		  "direction" : [0.0, 1.0],
+		  "config" : {
+		    "speed":100, 
+			"timeToLive" : 0.5,
+			"actionOnReap" : [
+			  {
+                "action" : "projectile",
+				"type" : "greenglobe",
+				"direction" : [0.0,-1.0],
+				"config" : {
+				  "speed" : 25,
+				  "timeToLive" : 1,
+				  "actionOnReap" : [
+				  {
+				    "action" : "projectile",
+				    "type" : "whiteglobe",
+				    "inheritSpeedFactor" : 0,
+				    "config" : {
+				      "timeToLive" : 1,
+				      "processing" : "?0", 
+				  	  "periodicActions" : [ 
+					    { 
+					      "time" : 0.1, 
+					  	  "repeat" : false, 
+						  "action" : "projectile", 
+						  "type" : "poisonelementcloud", 
+						  "direction" : [1.0, 0.0], 
+						  "config" : {"speed" : 0.01} 
+					    }, 
+					    { 
+					      "time" : 0.2, 
+						  "repeat" : false, 
+						  "action" : "projectile", 
+						  "type" : "poisonelementcloud", 
+						  "direction" : [1.0, 0.0], 
+						  "offset" : [5.0, 0.0], 
+						  "config" : {"speed" : 0.01, "timeToLive" : 5.8} 
+					    }, 
+					    {
+					      "time" : 0.2, 
+						  "repeat" : false, 
+						  "action" : "projectile", 
+						  "type" : "poisonelementcloud", 
+						  "direction" : [1.0, 0.0], 
+						  "offset" : [-5.0, 0.0], 
+						  "config" : {"speed" : 0.01, "timeToLive" : 5.8} 
+					    }, 
+					    { 
+					      "time" : 0.3, 
+						  "repeat" : false, 
+						  "action" : "projectile", 
+						  "type" : "poisonelementcloud", 
+						  "direction" : [1.0, 0.0], 
+						  "offset" : [10.0, 0.0], 
+						  "config" : {"speed" : 0.01, "timeToLive" : 5.6} 
+					    }, 
+					    { 
+					      "time" : 0.3, 
+						  "repeat" : false, 
+						  "action" : "projectile", 
+						  "type" : "poisonelementcloud", 
+						  "direction" : [1.0, 0.0], 
+						  "offset" : [-10.0, 0.0], 
+						  "config" : {"speed":0.01, "timeToLive" : 5.6} 
+					    }
+				      ], 
+					  "actionOnReap" : [ 
+				        {
+					      "action" : "projectile", 
+					      "type" : "whiteglobe", 
+						  "config" : {
+						    "speed" : 0, 
+						    "processing" : "?0", 
+						    "timeToLive" : 5, 
+						    "periodicActions" : [ 
+						      { 
+						        "time" : 1.0, 
+							    "repeat" : true, 
+							    "action" : "projectile", 
+							    "type" : "invisibleprojectile", 
+							    "direction" : [0.0, -1.0], 
+							    "offsetRange" : [9.5, 0, -9.5, 0], 
+							    "config" : {
+							      "damageTeam" : {"type" : "friendly"},
+							      "speed" : 150, 
+							      "periodicActions" : [
+							        { 
+								      "time" : 0.01, 
+								      "repeat" : true, 
+								      "action" : "projectile", 
+								      "type" : "lightning", 
+								      "config" : {"power" : 90, "timeToLive" : 0.5, "speed" : 0} 
+								    } 
+							      ], 
+							      "actionOnReap" : [
+							        { 
+								      "action" : "projectile", 
+								      "type" : "doomgrenadeexplosion", 
+								      "config" : {"lightColor" : [155, 212, 255], "power" : 20, "statusEffects" : [], "processing" : "?hueshift=180"} 
+								    }, 
+								    { 
+								      "action" : "sound", 
+								      "options" : ["/sfx/gun/shockblast.ogg"]
+								    }, 
+								    { 
+								      "action" : "sound", 
+								      "options" : ["/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg"] 
+								    }
+							      ] 
+							    } 
+					          } 
+						    ], 
+						    "actionOnReap" : [ ] 
+						    } 
+				   	      } 
+					    ] 
+				      } 
+				    } 
+			      ] 
+			    } 
+		      } 
+		    ] 
+          } 
+	    } 
+      ] 
+    }   
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

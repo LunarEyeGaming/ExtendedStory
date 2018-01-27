@@ -1,0 +1,21 @@
+{
+  "projectileName" : "ancientgrenadethrown",
+  "image" : "ancientgrenade.png",
+  "fullbright" : true,
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "physics" : "grenade",
+  "timeToLive" : 5,
+  "bounces" : -1,
+  "actionOnReap" : [
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+    }
+  ],
+  "power" : 20.0,
+  "speed" : 45,
+  "lightColor" : [139, 24, 185],
+  "damageType" : "ignoresdef",
+  "damageKind" : "plasma"
+}

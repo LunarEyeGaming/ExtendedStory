@@ -1,0 +1,14 @@
+{
+  "projectileName" : "toxiniaplasmaswoosh",
+  "image" : "toxiniaplasmaswoosh.png",
+  "frameNumber" : 5,
+  "timeToLive" : 0.3,
+  "animationCycle" : 0.3,
+  "damagePoly" : [ [-90, 0], [-60, -60], [0, -90], [60, -60], [90, 0], [60, 60], [0, 90], [-60, 60] ],
+  "speed" : 0,
+  "piercing" : true,
+  "power" : 100,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "megadamagepoisonplasma"
+}

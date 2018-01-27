@@ -1,0 +1,68 @@
+{
+  "itemName" : "darkmatterpickaxe",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "tool",
+  "description" : "A mining tool that is very strong and effective.\n^green;Consumes energy instead of durability",
+  "shortdescription" : "^red;Dark Matter Pickaxe^reset;",
+  "tooltipKind" : "base",
+  "twoHanded" : true,
+  "itemTags" : ["miningtool", "pickaxe"],
+
+  "inventoryIcon" : "darkmatterpickaxeicon.png",
+
+  "animation" : "/items/tools/miningtools/darkmatterpickaxe.animation",
+  "animationParts" : {
+    "handle" : "darkmatterpickaxehandle.png",
+    "blade" : "darkmatterpickaxehead.png"
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "pickslash",
+  "primaryAbility" : {
+    "layer" : "foreground",
+
+    "activatingFireMode" : "primary",
+    "energyUsage" : 5,
+    "toolRange" : 55,
+	"blockRadius" : 5,
+	"tileDamage" : 8.8,
+
+    "requisiteAnimationStates" : {
+      "blade" : "active"
+    },
+    "windupAnimationStates" : {
+      "blade" : "activating"
+    },
+    "onLeaveAnimationStates" : {
+      "blade" : "deactivating"
+    }
+  },
+
+  "altAbilityType" : "pickslash",
+  "altAbility" : {
+    "layer" : "background",
+
+    "activatingFireMode" : "alt",
+    "energyUsage" : 5,
+    "toolRange" : 55,
+	"blockRadius" : 5,
+	"tileDamage" : 8.8,
+
+    "requisiteAnimationStates" : {
+      "blade" : "active"
+    },
+    "windupAnimationStates" : {
+      "blade" : "activating"
+    },
+    "onLeaveAnimationStates" : {
+      "blade" : "deactivating"
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

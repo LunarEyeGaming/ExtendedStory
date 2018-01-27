@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "ancientblock", "count" : 25 },
+    { "item" : "leather", "count" : 1 },
+	{ "item" : "solariumstar", "count" : 10 },
+	{ "item" : "essence", "count" : 100 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "ancientpants", "count" : 1 },
+  "groups" : [ "ancientforge", "armours", "all" ]
+}

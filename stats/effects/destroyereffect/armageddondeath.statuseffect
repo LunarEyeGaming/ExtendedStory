@@ -1,0 +1,19 @@
+{
+  "name" : "armageddondeath",
+  "blockingStat" : "destroyereffectImmunity",
+
+  "effectConfig" : {
+    "tickRate" : 0.25,
+    "tickDamage" : 25
+  },
+  "defaultDuration" : 1000,
+
+  "scripts" : [
+    "armageddondeath.lua"
+  ],
+
+  "animationConfig" : "armageddondeath.animation",
+
+  "label" : "You have met your end",
+  "icon" : "/interface/statuses/doomed.png"
+}

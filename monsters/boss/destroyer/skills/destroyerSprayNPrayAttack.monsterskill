@@ -1,0 +1,33 @@
+{
+  "name" : "destroyerSprayNPrayAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerSprayNPrayAttack.lua" ],
+
+    "destroyerSprayNPrayAttack" : {
+      "skillTime": 10,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.1,
+      "projectile" : {
+        "type" : "redplasmashot",
+        "config" : {
+          "speed" : 40,
+          "power" : 10,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

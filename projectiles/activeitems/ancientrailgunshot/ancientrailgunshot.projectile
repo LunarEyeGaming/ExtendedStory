@@ -1,0 +1,15 @@
+{
+  "projectileName" : "ancientrailgunshot",
+  "physics" : "laser",
+  "image" : "ancientrailgunshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.25,
+  "timeToLive" : 0.25,
+  "frameNumber" : 4,
+  "power" : 50,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet"
+}

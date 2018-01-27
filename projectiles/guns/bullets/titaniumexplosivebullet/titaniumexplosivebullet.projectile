@@ -1,0 +1,17 @@
+{
+  "projectileName" : "titaniumexplosivebullet",
+  "image" : "titaniumexplosivebullet.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
+    }
+  ],
+  "power" : 10.0,
+  "speed" : 75,
+  "damageKind" : "default"
+}

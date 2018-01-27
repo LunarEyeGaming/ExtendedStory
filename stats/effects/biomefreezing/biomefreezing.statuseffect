@@ -1,0 +1,25 @@
+{
+  "name" : "biomefreezing",
+  "blockingStat" : "biomefreezingImmunity",
+
+  "effectConfig" : {
+    "directives" : "fade=AAAAFF=0.3",
+    "movementModifiers" : {
+      "speedModifier" : 0.6,
+      "airJumpModifier" : 0.6
+    },
+    "tickRate" : 20,
+    "energyCost" : 10,
+    "healthDamage" : 20
+  },
+  "defaultDuration" : 3,
+
+  "scripts" : [
+    "biomefreezing.lua"
+  ],
+
+  "animationConfig" : "biomefreezing.animation",
+
+  "label" : "Extreme Cold",
+  "icon" : "/interface/statuses/biomefreezing.png"
+}

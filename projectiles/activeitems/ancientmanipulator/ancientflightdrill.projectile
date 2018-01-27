@@ -1,0 +1,20 @@
+{
+  "projectileName" : "ancientflightdrill",
+  "timeToLive" : 0.01,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 0,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+      "action" : "explosion",
+	  "foregroundRadius" : 5,
+	  "backgroundRadius" : 2,
+	  "explosiveDamageAmount" : 1,
+	  "harvestLevel" : 99
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "NoDamage"
+}

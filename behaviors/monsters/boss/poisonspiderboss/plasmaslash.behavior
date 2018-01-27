@@ -1,0 +1,148 @@
+{
+  "name": "poisonspiderboss-plasmaslash",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": {
+    "hatchNumber": 1
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": 1}
+    },
+    "children": [
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"key": "<hatchNumber>"},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "parallel",
+              "type": "composite",
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": -1}
+              },
+              "children": [
+                {
+                  "title": "setVelocity",
+                  "type": "action",
+                  "name": "setVelocity",
+                  "parameters": {
+                    "velocity": {"value": [0, 0]}
+                  }
+                },
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "hurt"},
+                        "type": {"value": "legs"}
+                      }
+                    },
+                    {
+                      "title": "playSound",
+                      "type": "action",
+                      "name": "playSound",
+                      "parameters": {
+                        "sound": {"value": "spiderslam"}
+                      }
+                    },
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "plasmaslashwindup"},
+                        "type": {"value": "legs"}
+                      }
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+					    "time": {"value": 1}
+					  }
+                    },
+                    {
+                      "title": "playSound",
+                      "type": "action",
+                      "name": "playSound",
+                      "parameters": {
+                        "sound": {"value": "spiderslam"}
+                      }
+                    },
+                    {
+                      "title": "playSound",
+                      "type": "action",
+                      "name": "playSound",
+                      "parameters": {
+                        "sound": {"value": "plasmaslash"}
+                      }
+                    },
+                    {
+                      "title": "setAnimationState",
+                      "type": "action",
+                      "name": "setAnimationState",
+                      "parameters": {
+                        "state": {"value": "plasmaslashwinddown"},
+                        "type": {"value": "legs"}
+                      }
+                    },
+					{
+                      "title": "spawnProjectile",
+                      "type": "action",
+                      "name": "spawnProjectile",
+                      "parameters": {
+                        "aimVector": {"value": [1, 0]},
+                        "offset": {"value": [0, -25]},
+                        "projectileConfig": {"value": {}},
+                        "projectileType": {"value": "toxiniaplasmaswoosh"}
+                      }
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+					    "time": {"value": 2}
+					  }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

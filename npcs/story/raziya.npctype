@@ -1,0 +1,215 @@
+{
+  "type" : "raziya",
+  "baseType" : "base",
+
+  "keepAlive" : true,
+
+  "npcname" : "Raziya",
+  "identity" : {
+    "imagePath" : "raziya",
+    "gender" : "male",
+    "hairGroup" : "hair",
+    "hairType" : "1"
+  },
+  "humanoidConfig" : "/npcs/story/raziyahumanoid.config",
+  
+  "damageTeamType" : "assistant",
+  "damageTeam" : 1,
+
+  "persistent" : true,
+
+  "dropPools" : [],
+
+  "scriptConfig" : {
+    "behavior" : "nuruboss",
+
+    "chatPortrait" : "/interface/chatbubbles/nuru.png:<frame>",
+
+    "chatSounds" : {
+      "avian" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "apex" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "floran" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "glitch" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "human" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "hylotl" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      },
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/floran_chatter_female4.ogg"
+        ]
+      }
+    },
+
+    "dialog" : {
+      "converse" : {
+        "default" : {
+          "default" : [
+            "I currently have no assigned thing to say right now..."
+          ]
+        }
+      },
+      "ancientruinsworldstart" : {
+        "introduction" : {
+          "default" : {
+            "default" : [
+              "I'm...alive! I'M ALIVE! Whoever you are, thanks for stopping me from being digested by that mother igneotop.",
+              "Now, you may be wondering about what my name is. Well, I'm ^orange;Raziya^white; - a scientist from the ^yellow;Novabot Facility^white;.",
+              "I've told you my name, so you should, in return, introduce yourself as well.",
+              "So your name is ^orange;<entityname>^white;. No comment about your name what-so-ever.", // I feel that comments regarding player names in video games is a little overused.
+              "I think it's time that we find out about this building. I've heard that there is some valuable loot in here.",
+			  "I'll surely aid you in your mission, as I fortunately have a firearm that has only been slightly scratched by the igneotop."
+            ]
+          }
+        },
+        "end" : {
+          "default" : {
+            "default" : [
+              "Let's go."
+            ]
+          }
+        }
+      },
+      "ancientruinsworldobserve" : {
+        "commanded" : {
+          "default" : {
+            "default" : [
+              "I've...got some unfortunate news. My crew is repeatedly insisting that I observe the next battle rather than personally engage in battle.",
+			  "Go on and fight whatever is inside. I'll meet you at the exit once the battle is over."
+            ]
+          }
+        },
+        "leave" : {
+          "default" : {
+            "default" : [
+              "You did an amazing job there, <entityname>. I'm not quite going to hire you for anything, but there is still something I would like you to do.",
+			  "I'll tell you when you arrive at the facility. Your SAIL should have the coordinates to it. Later!"
+            ]
+          }
+        }
+      },
+      "novabotfacility" : {
+        "base" : {
+          "default" : {
+            "default" : [
+              "This is our current settlement. We had to settle here due to what happened in the other place.",
+			  "In my spare time, I often do research regarding the ancients.",
+			  "During one session, however, I made a terrifying discovery. General peace in the universe has not started yet.",
+			  "A destructive beast by the name of the Supervoid Eye is starting to attack our universe.",
+			  "It is best that you destroy this creature immediately, but it's best that you prepare for this battle.",
+			  "Located"
+            ]
+          }
+        },
+        "fleshy" : {
+          "default" : {
+            "default" : [
+              "Hit it! Hit it while it's fleshy!"
+            ]
+          }
+        },
+        "finish" : {
+          "default" : {
+            "default" : [
+              "We've nearly defeated it. Finish it off!"
+            ]
+          }
+        }
+      },
+      "endscene" : {
+        "follow" : {
+          "default" : {
+            "default" : [
+              "Now that was ssatisfying! Come on."
+            ]
+          }
+        },
+        "smalltalk" : {
+          "default" : {
+            "default" : [
+              "You know, that really was pretty impresssive."
+            ]
+          }
+        },
+        "end" : {
+          "default" : {
+            "default" : [
+              "That was the most fun I've had in ages. It felt good to have ssomeone around who can hold their own.",
+              "In fact... Congratulations! I've just decided your trophy comess with one free Nuru!"
+            ]
+          }
+        }
+      },
+      "startboss" : {
+        "intro" : {
+          "default" : {
+            "default" : [
+              "This iss much bigger than last year's prey. Finally! A proper challenge!"
+            ]
+          }
+        },
+        "start" : {
+          "default" : {
+            "default" : [
+              "This is going to be fun."
+            ]
+          }
+        }
+      }
+    }
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "protection" : {
+        "baseValue" : 100.0
+      }
+    },
+    "statusProperties" : {
+      "effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=8af062FF?replace=31a6ffFF=40bf21FF"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name" : "destroyerBulletCirclesAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerBulletCirclesAttack.lua" ],
+
+    "destroyerBulletCirclesAttack" : {
+      "skillTime": 5,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.33,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "damageTeam" : { "type" : "enemy" },
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+            },
+			{
+			  "time" : 0,
+			  "repeat" : false,
+			  "action" : "loop",
+			  "count" : 20,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "destroyershot",
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : {"power" : 10, "speed" : 50, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ ] }
+				}
+			  ]
+			}
+          ]
+        }
+      }
+    }
+  }
+}

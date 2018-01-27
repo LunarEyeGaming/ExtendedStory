@@ -1,0 +1,84 @@
+{
+  "projectileName" : "ancientgrenade",
+  "image" : "ancientgrenade.png",
+  "fullbright" : true,
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "physics" : "grenade",
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "destroyershot",
+      "direction" : [0.0, 1.0],
+	  "config" : {
+	    "speed" : 5,
+		"power" : 50,
+		"piercing" : true,
+		"timeToLive" : 1.0,
+		"processing" : "?hueshift=290",
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "destroyershot",
+			"config" : {
+			  "speed" : 0,
+			  "power" : 50,
+			  "piercing" : true,
+			  "processing" : "?hueshift=290",
+			  "periodicActions" : [
+			    {
+				  "time" : 0.1,
+				  "repeat" : true,
+                  "action" : "loop",
+                  "count" : 1,
+                  "body" : [
+                    {
+                      "action" : "projectile",
+                      "inheritDamageFactor" : 1,
+                      "type" : "ancientlasershot",
+                      "angle" : 90,
+                      "fuzzAngle" : 180,
+                      "config" : {
+                        "speed" : 50,
+                       	"power" : 10
+                      }
+                    }
+                  ]
+                },
+				{
+				  "time" : 0.01,
+				  "repeat" : true,
+				  "action" : "explosion",
+				  "foregroundRadius" : 2,
+				  "backgroundRadius" : 0,
+				  "explosiveDamageAmount" : 400.0
+				},
+	            {
+                 "time" : 0.1,
+				 "repeat" : true,
+				 "action" : "sound",
+                  "options" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_pistol2.ogg", "/sfx/gun/plasma_pistol3.ogg"]
+                }
+			  ]
+			}
+		  }
+		]
+	  }
+    },
+	{
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "type" : "ancientexplosion"
+    }
+  ],
+  "power" : 0.0,
+  "speed" : 45,
+  "lightColor" : [139, 24, 185],
+  "damageType" : "ignoresdef",
+  "damageKind" : "plasma"
+}

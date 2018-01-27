@@ -1,0 +1,19 @@
+{
+  "spawnAncientPillars": {
+    "type": "action",
+    "name": "spawnAncientPillars",
+    "title": "spawnAncientPillars",
+    "properties": {
+      "areaWidth": {"type": "number", "value": 20},
+      "center": {"type": "position", "key": "self"},
+      "pillarCount": {"type": "number", "value": 3},
+      "pillarHeight": {"type": "number", "value": 4},
+      "projectileType": {"type": "string", "value": "ancientpillar"}
+    },
+    "category": "ancientavatar",
+    "script": "/scripts/actions/boss/ancientavatar.lua",
+    "output": {
+      "pillars": {"type": "list", "key": null}
+    }
+  }
+}

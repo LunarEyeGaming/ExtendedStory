@@ -1,0 +1,15 @@
+{
+  "name" : "ancientbossLaserAttack",
+  "label" : "BEAMS OF PERIL",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossLaserAttack.lua" ],
+    "ancientbossLaserAttack" : {
+      "skillTime" : 21,
+      "rotateInterval" : 21,
+        
+      "damagePerSecond" : 1000
+    }
+  }
+}

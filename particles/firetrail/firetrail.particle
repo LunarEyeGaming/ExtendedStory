@@ -1,0 +1,16 @@
+{
+  "kind" : "expansionmodfiretrail",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/firetrail/expansionmodfiretrail.animation",
+    "size" : 1,
+    "light" : [253, 143, 77],
+    "position" : [0, 0],
+    "destructionAction" : "shrink",
+    "destructionTime" : 0.25,
+    "fade" : 1,
+    "layer" : "middle",
+    "fullbright" : true,
+    "timeToLive" : 0.25
+  }
+}

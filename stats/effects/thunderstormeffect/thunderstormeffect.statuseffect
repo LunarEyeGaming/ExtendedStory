@@ -1,0 +1,21 @@
+{
+  "name" : "thunderstormeffect",
+
+  "effectConfig" : {
+    "directives" : "fade=000000=0.3",
+    "movementModifiers" : {
+      "speedModifier" : 1.0,
+      "airJumpModifier" : 1.0
+    },
+    "tickRate" : 20,
+    "energyCost" : 2.5,
+    "healthDamage" : 5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "thunderstormeffect.lua"
+  ],
+
+  "animationConfig" : "thunderstormeffect.animation"
+}

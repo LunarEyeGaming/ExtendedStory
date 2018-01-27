@@ -1,0 +1,21 @@
+[
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "supervoidnode",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "supervoidnode.json"
+      ]
+    }
+  }
+]

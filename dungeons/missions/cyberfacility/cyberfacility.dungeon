@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "cyberfacility",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "cyberfacility" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "cyberfacility",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cyberfacility.json" ]
+    }
+  ]
+}

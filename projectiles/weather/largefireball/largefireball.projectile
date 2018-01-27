@@ -1,0 +1,143 @@
+{
+  "projectileName" : "largefireball",
+  "physics" : "grenadezbomb",
+  "bounces" : 0,
+  "image" : "largefireball.png",
+  "animationCycle" : 1,
+  "fullbright" : true,
+  "lightColor" : [253, 160, 57],
+  "frameNumber" : 1,
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/weather/largefireball/largefireball.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bombblockexplosion/bombblockexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -35
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -18
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 18
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 55
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -55
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -1
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -65
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 65
+    },
+	{
+      "action" : "projectile",
+      "type" : "lavaballoon",
+      "angleAdjust" : -50,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "lavaballoon",
+      "angleAdjust" : -25,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "lavaballoon",
+      "angleAdjust" : 0,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "lavaballoon",
+      "angleAdjust" : 25,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "lavaballoon",
+      "angleAdjust" : 50,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1
+    }
+  ],
+  "power" : 60,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ]
+}

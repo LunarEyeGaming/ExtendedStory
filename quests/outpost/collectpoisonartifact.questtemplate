@@ -1,0 +1,36 @@
+{
+  "id" : "collectpoisonartifact",
+  "mainQuest" : true,
+  "prerequisites" : [ "collecticeartifact" ],
+  "title" : "^green;The Poison Artifact^reset;",
+  "text" : "Your final artifact is the poison artifact, found in the ^#02da06;nuclear wasteland^reset; biome.",
+  "completionText" : "All artifacts have been collected.",
+  "moneyRange" : [1000, 1000],
+  "ephemeral" : false,
+  "rewards" : [[["poisonartifact", 1]]],
+
+  "updateDelta" : 20,
+  "script" : "/quests/scripts/artifact.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      }
+    },
+
+    "descriptions"  : {
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Irradiated Dimension^reset;",
+      "turnIn" : "Return to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
+    },
+
+    "artifactUid" : "poisonartifactaltar",
+    "artifactMessage" : "poisonArtifactTaken",
+
+    "estherUid" : "vaultkeytrader"
+  }
+}

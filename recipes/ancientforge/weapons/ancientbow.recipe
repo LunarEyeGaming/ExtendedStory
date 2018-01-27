@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "ancientblock", "count" : 25 },
+	{ "item" : "solariumstar", "count" : 10 },
+	{ "item" : "aegisaltbow", "count" : 1 },
+	{ "item" : "essence", "count" : 100 }
+  ],
+  "output" : { "item" : "ancientbow", "count" : 1 },
+  "groups" : [ "ancientforge", "weapons", "all" ]
+}

@@ -1,0 +1,24 @@
+{
+  "materialId" : 1990,
+  "materialName" : "fogblockpacked",
+  "particleColor" : [92, 90, 87, 255],
+  "itemDrop" : "fogblockpacked",
+  "description" : "Packed fog blocks. These blocks are very dense.",
+  "shortdescription" : "Packed Fog Block",
+  "glitchDescription" : "Analysing. This block is very dense.",
+  "floranDescription" : "Floran likess ssstrange block.",
+  "novakidDescription" : "Nobody ain't fallin' through this stuff...Don't know how.",
+  "footstepSound" : "/sfx/blocks/footstep_ash.ogg",
+  "health" : 1,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "fogblockpacked.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "projectileName" : "volcanofireball",
+  "physics" : "grenade",
+  "bounces" : 0,
+  "timeToLive" : 3,
+  "image" : "volcanofireball.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 0.5,
+  "lightColor" : [84, 47, 26],
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "firefloorhazard",
+	  "offset" : [0.0, -1.0],
+	  "config" : {"timeToLive" : 3}
+	}
+  ],
+  "power" : 50,
+  "emitters" : [ "fireplasma", "smoke", "flames", "fireplasma", "smoke", "flames" ],
+  "damageType" : "NoDamage",
+  "damageKind" : "slash"
+}

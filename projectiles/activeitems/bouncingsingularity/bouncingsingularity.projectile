@@ -1,0 +1,40 @@
+{
+  "projectileName" : "bouncingsingularity",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "image" : "bouncingsingularity.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 30,
+  "fullbright" : true,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "projectile",
+      "type" : "blackholegravity",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+      "type" : "explosivesingularity"
+	}
+  ],
+  "animationCycle" : 2.0,
+  "lightColor" : [93, 10, 47],
+  "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
+  "frameNumber" : 18,
+  "power" : 50,
+  "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
+  "damageKind" : "abyss",
+  "actionOnCollide" : [
+    {
+	  "action" : "config",
+      "file" : "/projectiles/explosions/globeexplosions/magentaglobeexplosion/magentaglobeexplosion.config"
+	}
+  ]
+}

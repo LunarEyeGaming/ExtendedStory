@@ -1,0 +1,19 @@
+{
+  "name" : "biomeblaze",
+  "blockingStat" : "biomeblazeImmunity",
+
+  "effectConfig" : {
+    "tickRate" : 0.5,
+    "tickDamage" : 10
+  },
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "biomeblaze.lua"
+  ],
+
+  "animationConfig" : "biomeblaze.animation",
+
+  "label" : "Burning Air",
+  "icon" : "/interface/statuses/biomeblaze.png"
+}

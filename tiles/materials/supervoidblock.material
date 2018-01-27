@@ -1,0 +1,24 @@
+{
+  "materialId" : 1993,
+  "materialName" : "supervoidblock",
+  "particleColor" : [227, 174, 47, 255],
+  "itemDrop" : "supervoidblock",
+  "description" : "...",
+  "shortdescription" : "...",
+  "glitchDescription" : "...",
+  "floranDescription" : "...",
+  "footstepSound" : "/sfx/blocks/footstep_stone.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "supervoidblock.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : false,
+    "zLevel" : -1,
+    "radiantLight" : [128, 0, 128]
+  }
+}

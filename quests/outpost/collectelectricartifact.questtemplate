@@ -1,0 +1,36 @@
+{
+  "id" : "collectelectricartifact",
+  "mainQuest" : true,
+  "prerequisites" : [ "kill_cyberboss" ],
+  "title" : "^#896bb3;The Electric Artifact^reset;",
+  "text" : "Young one, you've defeated more bosses, but there is something I have to tell you - peace has ended once again, due to a giant beast known as the ^magenta;Supervoid ^black;Eye^reset;. It will destroy any universe in its wake, and millions were destroyed. Don't let this universe suffer the same fate. Your first artifact is found in the ^#666666;dark abyss^reset;. You should be able to see some purple lights.",
+  "completionText" : "You've collected your first artifact. Hopefully it will help you during the fight.",
+  "moneyRange" : [1000, 1000],
+  "ephemeral" : false,
+  "rewards" : [[["electricartifact", 1]]],
+
+  "updateDelta" : 20,
+  "script" : "/quests/scripts/artifact.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      }
+    },
+
+    "descriptions"  : {
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Abyss Dimension^reset;",
+      "turnIn" : "Go to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
+    },
+
+    "artifactUid" : "electricartifactaltar",
+    "artifactMessage" : "electricArtifactTaken",
+
+    "estherUid" : "vaultkeytrader"
+  }
+}

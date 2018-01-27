@@ -1,0 +1,42 @@
+{
+  "projectileName" : "spawncultistboss",
+  "timeToLive" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 0,
+  "speed" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile", 
+	  "type" : "invisibleprojectile", 
+	  "direction" : [-1.0, 0.0],
+	  "piercing" : true,
+	  "config" : {
+	    "timeToLive" : 1,
+		"speed" : 255,
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "invisibleprojectile",
+			"direction" : [1.0, 0.0],
+			"config" : {
+			  "timeToLive" : 0.1,
+			  "speed" : 225,
+			  "actionOnReap" : [
+			    {
+	              "action" : "spawnmonster", 
+	              "type" : "zombienox", 
+	              "level" : 10,
+	              "offset" : [0.0, 4.0], 
+	              "arguments" : {"musicStagehands" : ["bossmusic"]}
+	            }    
+			  ]
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "fire"
+}
