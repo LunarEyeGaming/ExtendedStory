@@ -32,7 +32,7 @@
             "position": {"key": "self"}
           },
           "output": {
-            "position": {"key": "preslam"}
+            "position": "preslam"
           }
         },
         {
@@ -77,36 +77,36 @@
               "name": "runner",
               "parameters": {}
             },
-                            {
-                              "title": "spawnProjectile",
-                              "type": "action",
-                              "name": "spawnProjectile",
-                              "parameters": {
-                                "aimVector": {"value": [1, 0]},
-                                "offset": {"value": [0, -1.375]},
-                                "position": {"key": "self"},
-                                "projectileConfig": {"value": {}},
-                                "projectileType": {"value": "energywave"},
-                                "scalePower": {"value": true},
-                                "sourceEntity": {"key": "self"},
-                                "trackSource": {"value": false}
-                              }
-                            },
-                            {
-                              "title": "spawnProjectile",
-                              "type": "action",
-                              "name": "spawnProjectile",
-                              "parameters": {
-                                "aimVector": {"value": [-1, 0]},
-                                "offset": {"value": [0, -1.375]},
-                                "position": {"key": "self"},
-                                "projectileConfig": {"value": {}},
-                                "projectileType": {"value": "energywave"},
-                                "scalePower": {"value": true},
-                                "sourceEntity": {"key": "self"},
-                                "trackSource": {"value": false}
-                              }
-                            }
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [1, 0]},
+                "offset": {"value": [0, -1.375]},
+                "position": {"key": "self"},
+                "projectileConfig": {"value": {}},
+                "projectileType": {"value": "energywave"},
+                "scalePower": {"value": true},
+                "sourceEntity": {"key": "self"},
+                "trackSource": {"value": false}
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [-1, 0]},
+                "offset": {"value": [0, -1.375]},
+                "position": {"key": "self"},
+                "projectileConfig": {"value": {}},
+                "projectileType": {"value": "energywave"},
+                "scalePower": {"value": true},
+                "sourceEntity": {"key": "self"},
+                "trackSource": {"value": false}
+              }
+            }
           ]
         }
       ]
