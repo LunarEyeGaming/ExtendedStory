@@ -1,5 +1,5 @@
 {
-  "name": "ruinamalgamation-laser",
+  "name": "ruinamalgamation-bullethell",
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
@@ -40,12 +40,20 @@
 		}
       },
 	  {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+		  "direction": {"value": 1}
+		}
+      },
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "windup"},
-          "type": {"value": "eye1"}
+          "type": {"value": "eye3"}
         }
       },
 	  {
@@ -53,16 +61,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 3}
-		}
-      },
-	  {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "beam"}
+		  "time": {"value": 1.5}
 		}
       },
 	  {
@@ -70,7 +69,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 300},
+		  "maxLoops": {"value": 40},
 		  "untilSuccess": {"value": false}
 		},
         "child": {
@@ -80,41 +79,64 @@
           "parameters": {},
           "children": [
             {
-              "title": "rotateTransformationGroup",
+              "title": "spawnProjectile",
               "type": "action",
-              "name": "rotateTransformationGroup",
+              "name": "spawnProjectile",
               "parameters": {
-			    "angle": {"value": 0.01},
-		        "rotationCenter": {"value": [-1.3, 3.5]},
-				"transformationGroup": {"value": "beam"}
-			  }
+                "aimVector": {"value": [1, 0]},
+                "offset": {"value": [-4, -2]},
+                "position": {"key": "self"},
+                "projectileConfig": {"value": {
+				  "timeToLive": 0,
+				  "damageType": "NoDamage",
+				  "periodicActions": [
+				    {
+					  "time": 0,
+					  "repeat": false,
+					  "action": "loop",
+					  "count": 10,
+					  "body": [
+					    {
+						  "action": "projectile",
+						  "type": "pulse",
+						  "fuzzAngle": 180,
+						  "config": {
+						    "damageTeam": {"type": "enemy"}
+						  }
+						}
+					  ]
+					},
+					{
+					  "time": 0,
+					  "repeat": false,
+					  "action": "sound",
+					  "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
+					}
+				  ]
+				}},
+                "projectileType": {"value": "invisibleprojectile"},
+                "scalePower": {"value": true},
+                "sourceEntity": {"key": "self"},
+                "trackSource": {"value": false}
+              }
             },
-			{
+	        {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-			    "time": {"value": 0.01}
-			  }
+		        "time": {"value": 0.25}
+		      }
             }
           ]
         }
       },
 	  {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "winddown"},
-          "type": {"value": "beam"}
-		}
-      },
-	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.25}
+		  "time": {"value": 0.5}
 		}
       },
 	  {
@@ -123,23 +145,7 @@
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
-          "type": {"value": "eye1"}
-		}
-      },
-	  {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-		  "transformationGroup": {"value": "beam"}
-		}
-      },
-	  {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-		  "time": {"value": 1.5}
+          "type": {"value": "eye3"}
 		}
       }
     ]

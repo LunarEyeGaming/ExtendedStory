@@ -7,16 +7,16 @@ function raBlinkEs(args, board)
   local variants = math.random(0, 4)
   
   if not variants == 0 then
-    if not (variants == 1 and animator.animationState("eye1") == "charged") then
+    if variants == 1 and not animator.animationState("eye1") == "charged" then
 	  animator.setAnimationState("eye1", "blink")
 	end
-	if not (variants == 2 and animator.animationState("eye2") == "portalcharged") then
+	if variants == 2 and not animator.animationState("eye2") == "portalcharged" then
 	  animator.setAnimationState("eye2", "blink")
 	end
-	if not (variants == 3 and animator.animationState("eye3") == "charged") then
+	if variants == 3 and not animator.animationState("eye3") == "charged" then
 	  animator.setAnimationState("eye3", "blink")
 	end
-	if not (variants == 4 and animator.animationState("eye4") == "charged") then
+	if variants == 4 and not animator.animationState("eye4") == "charged" then
 	  animator.setAnimationState("eye4", "blink")
 	end
   end

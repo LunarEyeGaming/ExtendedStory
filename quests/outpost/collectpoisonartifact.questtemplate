@@ -8,6 +8,8 @@
   "moneyRange" : [1000, 1000],
   "ephemeral" : false,
   "rewards" : [[["poisonartifact", 1]]],
+  "questGiverIndicator" : "mainquestgiver",
+  "questReceiverIndicator" : "mainquestreceiver",
 
   "updateDelta" : 20,
   "script" : "/quests/scripts/artifact.lua",

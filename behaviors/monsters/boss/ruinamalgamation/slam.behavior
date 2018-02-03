@@ -23,13 +23,32 @@
       "name": "sequence",
       "parameters": {},
       "children": [
+	    {
+          "title": "controlParameters",
+          "type": "action",
+          "name": "controlParameters",
+          "parameters": {
+            "parameters": {"value": {"gravityEnabled": false}}
+          }
+        },
+	    {
+          "title": "entityPosition",
+          "type": "action",
+          "name": "entityPosition",
+          "parameters": {
+		    "entity": {"key": "target"}
+		  },
+		  "output": {
+		    "position": "targetPos"
+		  }
+        },
         {
           "title": "offsetPosition",
           "type": "action",
           "name": "offsetPosition",
           "parameters": {
-            "offset": {"value": [0, 10]},
-            "position": {"key": "self"}
+            "offset": {"value": [0, 20]},
+            "position": {"key": "targetPos"}
           },
           "output": {
             "position": "preslam"
@@ -40,7 +59,17 @@
           "type": "action",
           "name": "flyToPosition",
           "parameters": {
-            "position": {"value": "preslam"}
+            "position": {"key": "preslam"},
+			"speed": {"value": 20},
+            "tolerance": {"value": 1}
+          }
+        },
+        {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, 0]}
           }
         },
 	    {
@@ -48,34 +77,53 @@
           "type": "action",
           "name": "timer",
           "parameters": {
-            "time": {"value": 1.0}
-          }
-        },
-	    {
-          "title": "controlParameters",
-          "type": "action",
-          "name": "controlParameters",
-          "parameters": {
-            "parameters": {"value": {"gravityEnabled": true}}
+            "time": {"value": 0.25}
           }
         },
         {
-          "title": "dynamic",
+          "title": "setDamageOnTouch",
+          "type": "action",
+          "name": "setDamageOnTouch",
+          "parameters": {
+            "touchDamage": {"value": true}
+          }
+        },
+		{
+          "title": "parallel",
           "type": "composite",
-          "name": "dynamic",
-          "parameters": {},
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": -1}
+          },
           "children": [
-            {
-              "title": "onGround",
+		    {
+              "title": "controlParameters",
               "type": "action",
-              "name": "onGround",
-              "parameters": {}
+              "name": "controlParameters",
+              "parameters": {
+                "parameters": {"value": {"gravityEnabled": true}}
+              }
             },
             {
-              "title": "runner",
-              "type": "action",
-              "name": "runner",
-              "parameters": {}
+              "title": "dynamic",
+              "type": "composite",
+              "name": "dynamic",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "onGround",
+                  "type": "action",
+                  "name": "onGround",
+                  "parameters": {}
+                },
+                {
+                  "title": "runner",
+                  "type": "action",
+                  "name": "runner",
+                  "parameters": {}
+                }
+              ]
             },
             {
               "title": "spawnProjectile",
@@ -83,10 +131,10 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [1, 0]},
-                "offset": {"value": [0, -1.375]},
+                "offset": {"value": [6, -1.375]},
                 "position": {"key": "self"},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "energywave"},
+                "projectileConfig": {"value": {"power": 20}},
+                "projectileType": {"value": "energyflame"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
@@ -98,16 +146,40 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [-1, 0]},
-                "offset": {"value": [0, -1.375]},
+                "offset": {"value": [-6, -1.375]},
                 "position": {"key": "self"},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "energywave"},
+                "projectileConfig": {"value": {"power": 20}},
+                "projectileType": {"value": "energyflame"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
             }
-          ]
+		  ]
+		},
+		{
+          "title": "playSound",
+          "type": "action",
+          "name": "playSound",
+          "parameters": {
+		    "sound": {"value": "slam"}
+		  }
+        },
+		{
+		  "title": "burstParticleEmitter",
+		  "type": "action",
+		  "name": "burstParticleEmitter",
+		  "parameters": {
+		    "emitter": {"value": "slam"}
+		  }
+		},
+        {
+          "title": "setDamageOnTouch",
+          "type": "action",
+          "name": "setDamageOnTouch",
+          "parameters": {
+            "touchDamage": {"value": false}
+          }
         }
       ]
 	}

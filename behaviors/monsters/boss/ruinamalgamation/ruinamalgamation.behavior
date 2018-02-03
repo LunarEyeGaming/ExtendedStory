@@ -96,6 +96,18 @@
                           "time": {"value": 2.0}
                         }
                       },
+                      {
+                        "title": "offsetPosition",
+                        "type": "action",
+                        "name": "offsetPosition",
+                        "parameters": {
+                          "offset": {"value": [0, 10]},
+                          "position": {"key": "spawn"}
+                        },
+                        "output": {
+                          "position": "hover"
+                        }
+                      },
 					  {
                         "title": "setAnimationState",
                         "type": "action",
@@ -133,6 +145,14 @@
 		                }
                       },
                       {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.8}
+                        }
+                      },
+                      {
                         "title": "setDamageBar",
                         "type": "action",
                         "name": "setDamageBar",
@@ -149,14 +169,6 @@
                         }
                       },
                       {
-                        "title": "timer",
-                        "type": "action",
-                        "name": "timer",
-                        "parameters": {
-                          "time": {"value": 0.8}
-                        }
-                      },
-                      {
                         "title": "setAggressive",
                         "type": "action",
                         "name": "setAggressive",
@@ -164,12 +176,29 @@
                           "aggressive": {"value": true}
                         }
                       },
+					  {
+      				    "title": "flyToPosition",
+      				    "type": "action",
+      				    "name": "flyToPosition",
+      				    "parameters": {
+      				      "position": {"key": "hover"},
+      				      "tolerance": {"value": 1}
+      				    }
+      				  },
+      				  {
+      				    "title": "setVelocity",
+      				    "type": "action",
+      				    "name": "setVelocity",
+      				    "parameters": {
+      				      "velocity": {"value": [0, 0]}
+      				    }
+      				  },
                       {
                         "title": "timer",
                         "type": "action",
                         "name": "timer",
                         "parameters": {
-                          "time": {"value": 0.2}
+                          "time": {"value": 1.0}
                         }
                       },
                       {
@@ -187,10 +216,12 @@
                           "parameters": {},
                           "children": [
                             {
-                              "title": "dynamic",
+                              "title": "parallel",
                               "type": "composite",
-                              "name": "dynamic",
+                              "name": "parallel",
                               "parameters": {
+							    "fail": {"value": 1},
+                                "success": {"value": -1}
 							  },
 							  "children": [
 							    {
@@ -208,9 +239,216 @@
 									"parameters": {},
 									"children": [
 									  {
+									    "title": "ruinamalgamation-slam",
+										"type": "module",
+										"name": "ruinamalgamation-slam",
+										"parameters": {}
+									  },
+									  {
 									    "title": "ruinamalgamation-laser",
 										"type": "module",
 										"name": "ruinamalgamation-laser",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-spawn",
+										"type": "module",
+										"name": "ruinamalgamation-spawn",
+										"parameters": {}
+									  },
+									  {
+                                        "title": "inverter",
+                                        "type": "decorator",
+                                        "name": "inverter",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "resourcePercentage",
+                                          "type": "action",
+                                          "name": "resourcePercentage",
+                                          "parameters": {
+                                            "percentage": {"value": 0.8},
+                                            "resource": {"value": "health"}
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "succeeder",
+                                        "type": "decorator",
+                                        "name": "succeeder",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "resourcePercentage",
+                                              "type": "action",
+                                              "name": "resourcePercentage",
+                                              "parameters": {
+                                                "percentage": {"value": 0.61},
+                                                "resource": {"value": "health"}
+                                              }
+                                            },
+					                        {
+                                              "title": "setAnimationState",
+                                              "type": "action",
+                                              "name": "setAnimationState",
+                                              "parameters": {
+                                                "state": {"value": "stage2"},
+                                                "type": {"value": "body"}
+		                                      }
+                                            }
+                                          ]
+                                        }
+                                      },
+									  {
+									    "title": "ruinamalgamation-slam",
+										"type": "module",
+										"name": "ruinamalgamation-slam",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-portal",
+										"type": "module",
+										"name": "ruinamalgamation-portal",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-spawn",
+										"type": "module",
+										"name": "ruinamalgamation-spawn",
+										"parameters": {}
+									  },
+									  {
+                                        "title": "inverter",
+                                        "type": "decorator",
+                                        "name": "inverter",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "resourcePercentage",
+                                          "type": "action",
+                                          "name": "resourcePercentage",
+                                          "parameters": {
+                                            "percentage": {"value": 0.6},
+                                            "resource": {"value": "health"}
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "succeeder",
+                                        "type": "decorator",
+                                        "name": "succeeder",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "resourcePercentage",
+                                              "type": "action",
+                                              "name": "resourcePercentage",
+                                              "parameters": {
+                                                "percentage": {"value": 0.41},
+                                                "resource": {"value": "health"}
+                                              }
+                                            },
+					                        {
+                                              "title": "setAnimationState",
+                                              "type": "action",
+                                              "name": "setAnimationState",
+                                              "parameters": {
+                                                "state": {"value": "stage3"},
+                                                "type": {"value": "body"}
+		                                      }
+                                            }
+                                          ]
+                                        }
+                                      },
+									  {
+									    "title": "ruinamalgamation-slam",
+										"type": "module",
+										"name": "ruinamalgamation-slam",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-bullethell",
+										"type": "module",
+										"name": "ruinamalgamation-bullethell",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-spawn",
+										"type": "module",
+										"name": "ruinamalgamation-spawn",
+										"parameters": {}
+									  },
+									  {
+                                        "title": "inverter",
+                                        "type": "decorator",
+                                        "name": "inverter",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "resourcePercentage",
+                                          "type": "action",
+                                          "name": "resourcePercentage",
+                                          "parameters": {
+                                            "percentage": {"value": 0.4},
+                                            "resource": {"value": "health"}
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "succeeder",
+                                        "type": "decorator",
+                                        "name": "succeeder",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "resourcePercentage",
+                                              "type": "action",
+                                              "name": "resourcePercentage",
+                                              "parameters": {
+                                                "percentage": {"value": 0.0},
+                                                "resource": {"value": "health"}
+                                              }
+                                            },
+					                        {
+                                              "title": "setAnimationState",
+                                              "type": "action",
+                                              "name": "setAnimationState",
+                                              "parameters": {
+                                                "state": {"value": "stage4"},
+                                                "type": {"value": "body"}
+		                                      }
+                                            }
+                                          ]
+                                        }
+                                      },
+									  {
+									    "title": "ruinamalgamation-slam",
+										"type": "module",
+										"name": "ruinamalgamation-slam",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-voidshot",
+										"type": "module",
+										"name": "ruinamalgamation-voidshot",
+										"parameters": {}
+									  },
+									  {
+									    "title": "ruinamalgamation-spawn",
+										"type": "module",
+										"name": "ruinamalgamation-spawn",
 										"parameters": {}
 									  }
 									]
@@ -232,7 +470,7 @@
                 ]
               },
               {
-                "title": "Reset",
+                "title": "Death",
                 "type": "composite",
                 "name": "sequence",
                 "parameters": {},
@@ -252,44 +490,84 @@
                       }
                     }
                   },
-                  {
-                    "title": "parallel",
-                    "type": "composite",
-                    "name": "parallel",
+      			  {
+      			    "title": "setVelocity",
+      			    "type": "action",
+      			    "name": "setVelocity",
+      			    "parameters": {
+      			      "velocity": {"value": [0, 0]}
+      			    }
+      			  },
+				  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
                     "parameters": {
-                      "fail": {"value": -1},
-                      "success": {"value": -1}
-                    },
-                    "children": [
-                      {
-                        "title": "controlParameters",
-                        "type": "action",
-                        "name": "controlParameters",
-                        "parameters": {
-                          "parameters": {"value": {"gravityEnabled": true}}
-                        }
-                      },
-                      {
-                        "title": "dynamic",
-                        "type": "composite",
-                        "name": "dynamic",
-                        "parameters": {},
-                        "children": [
-                          {
-                            "title": "onGround",
-                            "type": "action",
-                            "name": "onGround",
-                            "parameters": {}
-                          },
-                          {
-                            "title": "runner",
-                            "type": "action",
-                            "name": "runner",
-                            "parameters": {}
-                          }
-                        ]
-                      }
-                    ]
+                      "active": {"value": true},
+                      "emitter": {"value": "dying"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "dying"},
+                      "type": {"value": "body"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "beam"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "eye1"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "eye2"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "eye3"}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "eye4"}
+                    }
+                  },
+		          {
+                    "title": "playSound",
+                    "type": "action",
+                    "name": "playSound",
+                    "parameters": {
+		              "sound": {"value": "dying"}
+		            }
                   },
                   {
                     "title": "battleMusic",
@@ -299,6 +577,240 @@
                       "enable": {"value": false}
                     }
                   },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 6.0}
+                    }
+                  },
+	              {
+                    "title": "repeater",
+                    "type": "decorator",
+                    "name": "repeater",
+                    "parameters": {
+		              "maxLoops": {"value": 10},
+		              "untilSuccess": {"value": false}
+		            },
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "spawnProjectile",
+                          "type": "action",
+                          "name": "spawnProjectile",
+                          "parameters": {
+                            "aimVector": {"value": [1, 0]},
+                            "offset": {"value": [0, 0]},
+                            "position": {"key": "self"},
+                            "projectileConfig": {"value": {
+							  "damageType": "NoDamage",
+							  "timeToLive": 0,
+							  "actionOnReap": [
+							    {
+								  "action": "projectile",
+								  "type": "invisibleprojectile",
+								  "offsetRange": [5, 5, -5, -5],
+								  "config": {
+								    "timeToLive": 0,
+									"damageType": "NoDamage",
+									"actionOnReap": [
+									  {
+									    "action": "config",
+										"file": "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+									  }
+									]
+								  }
+								}
+							  ]
+							}},
+                            "projectileType": {"value": "invisibleprojectile"},
+                            "scalePower": {"value": true},
+                            "sourceEntity": {"key": "self"},
+                            "trackSource": {"value": false}
+                          }
+                        },
+	                    {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+		                    "time": {"value": 0.2}
+		                  }
+                        }
+                      ]
+                    }
+                  },
+	              {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+		              "time": {"value": 0.25}
+		            }
+                  },
+                  {
+                    "title": "spawnProjectile",
+                    "type": "action",
+                    "name": "spawnProjectile",
+                    "parameters": {
+                      "aimVector": {"value": [1, 0]},
+                      "offset": {"value": [0, 0]},
+                      "position": {"key": "self"},
+                      "projectileConfig": {"value": {
+				        "damageType": "NoDamage",
+				        "timeToLive": 0,
+				        "actionOnReap": [
+				          {
+					        "action": "projectile",
+					        "type": "fireexplosionknockback",
+					        "config": {
+					          "processing": "?scalenearest=5"
+					        }
+					      }
+				        ]
+				      }},
+                      "projectileType": {"value": "invisibleprojectile"},
+                      "scalePower": {"value": true},
+                      "sourceEntity": {"key": "self"},
+                      "trackSource": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "spawnProjectile",
+                    "type": "action",
+                    "name": "spawnProjectile",
+                    "parameters": {
+                      "aimVector": {"value": [1, 0]},
+                      "offset": {"value": [0, 0]},
+                      "position": {"key": "self"},
+                      "projectileConfig": {"value": {
+				        "damageType": "NoDamage",
+				        "timeToLive": 0,
+				        "actionOnReap": [
+				          {
+					        "action": "projectile",
+					        "type": "ruinseedgib1",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib2",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib3",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib4",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib5",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib6",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "ruinseedgib7",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      },
+						  {
+					        "action": "projectile",
+					        "type": "rainbowshot1_es",
+							"fuzzAngle": 180
+					      }
+				        ]
+				      }},
+                      "projectileType": {"value": "invisibleprojectile"},
+                      "scalePower": {"value": true},
+                      "sourceEntity": {"key": "self"},
+                      "trackSource": {"value": false}
+                    }
+                  },
+				  {
+			        "title": "sequence",
+			        "type": "composite",
+			        "name": "sequence",
+			        "parameters": {},
+			        "children": [
+			          {
+			            "title": "playersInWorld",
+			            "type": "action",
+			            "name": "playersInWorld",
+			            "parameters": {},
+			            "output": {
+			              "list": "players"
+			            }
+			          },
+			          {
+			            "title": "each",
+			            "type": "decorator",
+			            "name": "each",
+			            "parameters": {
+			              "list": {"key": "players"},
+			              "type": {"value": "entity"}
+			            },
+			            "child": {
+			              "title": "succeeder",
+			              "type": "decorator",
+			              "name": "succeeder",
+			              "parameters": {},
+			              "child": {
+			                "title": "sendEntityMessage",
+			                "type": "action",
+			                "name": "sendEntityMessage",
+			                "parameters": {
+			                  "entity": {"key": "eachItem"},
+			                  "message": {"value": "ruinseedDestroyed"}
+			                }
+			              }
+			            }
+			          }
+			        ]
+			      },
                   {
                     "title": "setDying",
                     "type": "action",
@@ -323,12 +835,57 @@
                       "aggressive": {"value": false}
                     }
                   },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "closed"},
+                      "type": {"value": "eye1"}
+		            }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "closed"},
+                      "type": {"value": "eye2"}
+		            }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "closed"},
+                      "type": {"value": "eye3"}
+		            }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "closed"},
+                      "type": {"value": "eye4"}
+		            }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "beam"}
+		            }
+                  },
                   {
                     "title": "setDamageBar",
                     "type": "action",
                     "name": "setDamageBar",
                     "parameters": {
-                      "type": {"value": "Special"}
+                      "type": {"value": "None"}
                     }
                   },
                   {

@@ -1,0 +1,17 @@
+{
+  "missionName" : "ruinseedmission",
+  "icon" : "ruinseedmissionicon.png",
+  "missionWorld" : "ruinseedmission",
+
+  "speciesText" : {
+    "default" : {
+      "buttonText" : "Infected World",
+      "repeatButtonText" : "Infected World - Revisit",
+      "selectSpeech" : {
+        "animation" : "talk",
+        "text" : "A world in the process of being infected by the ruin. The source must be destroyed.",
+        "speedModifier" : 1.0
+      }
+    }
+  }
+}

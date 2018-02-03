@@ -1,5 +1,5 @@
 {
-  "name": "ruinamalgamation-laser",
+  "name": "ruinamalgamation-portal",
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
@@ -32,6 +32,14 @@
         }
       },
 	  {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+		  "direction": {"value": 1}
+		}
+      },
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
@@ -44,8 +52,8 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "eye1"}
+          "state": {"value": "portalwindup"},
+          "type": {"value": "eye2"}
         }
       },
 	  {
@@ -53,16 +61,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 3}
-		}
-      },
-	  {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "beam"}
+		  "time": {"value": 0.6}
 		}
       },
 	  {
@@ -70,7 +69,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 300},
+		  "maxLoops": {"value": 3},
 		  "untilSuccess": {"value": false}
 		},
         "child": {
@@ -80,41 +79,29 @@
           "parameters": {},
           "children": [
             {
-              "title": "rotateTransformationGroup",
+              "title": "spawnProjectile",
               "type": "action",
-              "name": "rotateTransformationGroup",
+              "name": "spawnProjectile",
               "parameters": {
-			    "angle": {"value": 0.01},
-		        "rotationCenter": {"value": [-1.3, 3.5]},
-				"transformationGroup": {"value": "beam"}
-			  }
-            },
-			{
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-			    "time": {"value": 0.01}
-			  }
+                "aimVector": {"value": [1, 0]},
+                "offset": {"value": [5, 3.5]},
+                "position": {"key": "self"},
+                "projectileConfig": {"value": {}},
+                "projectileType": {"value": "portalspawner_es"},
+                "scalePower": {"value": true},
+                "sourceEntity": {"key": "self"},
+                "trackSource": {"value": false}
+              }
             }
           ]
         }
       },
 	  {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "winddown"},
-          "type": {"value": "beam"}
-		}
-      },
-	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.25}
+		  "time": {"value": 3.0}
 		}
       },
 	  {
@@ -122,24 +109,8 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "winddown"},
-          "type": {"value": "eye1"}
-		}
-      },
-	  {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-		  "transformationGroup": {"value": "beam"}
-		}
-      },
-	  {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-		  "time": {"value": 1.5}
+          "state": {"value": "portalwinddown"},
+          "type": {"value": "eye2"}
 		}
       }
     ]

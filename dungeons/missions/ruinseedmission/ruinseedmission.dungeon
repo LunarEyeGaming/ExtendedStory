@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "ruinseedmission",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "ruinseedmission" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "ruinseedmission",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "ruinseedmission.json" ]
+    }
+  ]
+}

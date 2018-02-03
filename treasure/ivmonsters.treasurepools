@@ -102,5 +102,45 @@
         [0.20, 1]
       ]
     }]
+  ],
+  "ruinseedTreasure" : [
+    [1, {
+      "fill" : [
+        {"item" : "money", "count" : 1000}
+	  ],
+      "pool" : [
+        {"weight" : 0.04, "item" : "astrosabredeluxe"},
+        {"weight" : 0.04, "item" : "tentaclegun"},
+        {"weight" : 0.04, "item" : "wormgun"},
+        {"weight" : 0.04, "item" : "boomerang"},
+        {"weight" : 0.04, "item" : "gristlegun"},
+        {"weight" : 0.04, "item" : "chakram"},
+        {"weight" : 0.04, "item" : "doomcannon"},
+        {"weight" : 0.04, "item" : "evileye"},
+        {"weight" : 0.04, "item" : "exmachina"},
+        {"weight" : 0.04, "item" : "flamethrower"},
+        {"weight" : 0.04, "item" : "gauntlet"},
+        {"weight" : 0.04, "item" : "wormerang"},
+        {"weight" : 0.04, "item" : "gnomegun"},
+        {"weight" : 0.04, "item" : "intestinewhip"},
+        {"weight" : 0.04, "item" : "lightbow"},
+        {"weight" : 0.04, "item" : "energywhip"},
+        {"weight" : 0.04, "item" : "magnorbs"},
+        {"weight" : 0.04, "item" : "eyesword"},
+        {"weight" : 0.04, "item" : "poisonbow"},
+        {"weight" : 0.04, "item" : "pollenpump"},
+        {"weight" : 0.04, "item" : "remotegrenadelauncher"},
+        {"weight" : 0.04, "item" : "ropewhip"},
+        {"weight" : 0.02, "item" : "soulseeker"},
+        {"weight" : 0.02, "item" : "supernovaglove"},
+        {"weight" : 0.02, "item" : "teslastaff"},
+        {"weight" : 0.02, "item" : "electricrailgun"},
+        {"weight" : 0.02, "item" : "timepierce"},
+        {"weight" : 0.02, "item" : "vinewhip"}
+      ],
+      "poolRounds" : [
+        [1, 1]
+      ]
+    }]
   ]
 }

@@ -1,13 +1,13 @@
 {
   "type" : "ruinamalgamation",
-  "shortdescription" : "Desolation",
+  "shortdescription" : "Seed of Ruin",
   "categories" : [ "ruinamalgamation" ],
   "parts" : [ "mainbody", "eye1", "eye2", "eye3", "eye4", "smalleyes", "beam" ],
 
   "animation" : "ruinamalgamation.animation",
   "dropPools" : [
     {
-      "default" : "ancientavatarTreasure"
+      "default" : "ruinseedTreasure"
     }
   ],
 
@@ -19,6 +19,7 @@
     "behaviorUpdateDelta" : 1,
 
     "behavior" : "ruinamalgamation",
+    "lockFacingDirection" : true,
 
     "behaviorConfig" : {
       "colorChangeWindup" : 0.4,
@@ -53,11 +54,14 @@
     "damageParts" : {
       "beam" : {
         "damage" : 25,
+		"damageTeam" : 0,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma"
       }
     },
+
+    "renderLayer" : "Projectile-20",
 
     "damageSources" : {
       "windswept" : {
@@ -83,7 +87,7 @@
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [ 1.25, -2.75], [2.75, -1.25], [3.5, 4.0], [3.0, 5.0], [-3.0, 5.0], [-3.5, 4.0], [-2.75, -1.25], [-1.25, -2.75] ],
+      "collisionPoly" : [ [6, 3], [6, -3], [3, -6], [-3, -6], [-6, -3], [-6, 3], [-3, 6], [3, 6] ],
 
       "mass" : 4.0,
       "walkSpeed" : 5,
@@ -99,16 +103,17 @@
     },
 
     "touchDamage" : {
-      "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
+      "poly" : [ [6, 3], [6, -3], [3, -6], [-3, -6], [-6, -3], [-6, 3], [-3, 6], [3, 6] ],
       "damage" : 20,
 
       "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
       "statusEffects" : [ ]
     },
 
     "statusSettings" : {
       "statusProperties" : {
-        "targetMaterialKind" : "stone"
+        "targetMaterialKind" : "organic"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -128,7 +133,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2000
+          "baseValue" : 3000
         },
         "protection" : {
           "baseValue" : 0
