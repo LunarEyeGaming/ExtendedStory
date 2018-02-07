@@ -50,7 +50,7 @@ function update(args)
 	altFireLast = args.moves["altFire"]
 	--Cardinal Directions
 	if args.moves["right"] then
-	  mcontroller.controlApproachXVelocity(50.0, 60.0)
+	  mcontroller.controlApproachXVelocity(50.0, 100.0)
 	  if sphereEnergy >= 2500 then
 	    animator.setAnimationState("ballState", "right")
       else
@@ -58,7 +58,7 @@ function update(args)
 	  end
 	  
 	elseif args.moves["left"] then
-	  mcontroller.controlApproachXVelocity(-50.0, 60.0)
+	  mcontroller.controlApproachXVelocity(-50.0, 100.0)
 	  if sphereEnergy >= 2500 then
 	    animator.setAnimationState("ballState", "left")
       else
@@ -66,7 +66,7 @@ function update(args)
 	  end
 	  
 	elseif args.moves["up"] then
-	  mcontroller.controlApproachYVelocity(50.0, 60.0)
+	  mcontroller.controlApproachYVelocity(50.0, 100.0)
 	  if sphereEnergy >= 2500 then
 	    animator.setAnimationState("ballState", "up")
       else
@@ -74,7 +74,7 @@ function update(args)
 	  end
 	  
 	elseif args.moves["down"] then
-	  mcontroller.controlApproachYVelocity(-50.0, 60.0)
+	  mcontroller.controlApproachYVelocity(-50.0, 100.0)
 	  if sphereEnergy >= 2500 then
 	    animator.setAnimationState("ballState", "down")
       else
@@ -143,13 +143,8 @@ function update(args)
 	elseif args.moves["left" and "right"] then
 	  mcontroller.controlApproachVelocity({0, 0}, 20.0)
 	  
-	--Brakes
-	  
-	elseif args.moves["jump"] then
-	  mcontroller.controlApproachVelocity({0.0, 0.0}, 100.0)
-	  
 	else
-      mcontroller.controlApproachVelocity({0, 0}, 20)
+      mcontroller.controlApproachVelocity({0, 0}, 100)
 	  if not args.moves["altFire"] and not args.moves["primaryFire"] then
 	    if sphereEnergy >= 2500 then
 	      animator.setAnimationState("ballState", "on")
@@ -159,6 +154,8 @@ function update(args)
 	  end
 	end
 	
+	--Primary Ability
+	
 	if args.moves["primaryFire"] then
 	  world.spawnProjectile("ancientexplosion", mcontroller.position(), entity.id(), {0, 0}, true, {power = 3, knockback = 30})
 	  world.spawnProjectile("ancientflightdrill", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 0})
@@ -166,14 +163,29 @@ function update(args)
 	  animator.setAnimationState("ballState", "fire")
 	end
 	
+	--Alt Ability
+	
 	if args.moves["altFire"] and altFireCooldownTimer == 0 and not args.moves["primaryFire"] then
-	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {math.cos(rotation), -math.sin(rotation)}, true, {power = 50, knockback = 30, timeToLive = 0.001})
-	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {-math.cos(rotation), math.sin(rotation)}, true, {power = 50, knockback = 30, timeToLive = 0.001})
-	  mcontroller.controlRotation(0.3)
+	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {math.cos(rotation), -math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
+	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {-math.cos(rotation), math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
+	  --mcontroller.controlRotation(0.3)
+	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 20, knockback = 30, timeToLive = 0.001})
 	  altFireCooldownTimer = 100
 	  cooldownTimer()
 	  animator.setAnimationState("ballState", "fire2")
 	end
+	
+	--Bash Ability
+	
+	if mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30 then
+	  world.spawnProjectile("ancientspherebash", mcontroller.position(), entity.id(), {0, 0}, true, {power = 50})
+	  animator.setParticleEmitterActive("ancientspherebash", true)
+	else
+	  animator.setParticleEmitterActive("ancientspherebash", false)
+	end
+	aimVectorAlt = world.distance(aimPosition, mcontroller.position())
+	
+	--No recharge ability is necessary
 	
 	rotation = mcontroller.rotation()
 

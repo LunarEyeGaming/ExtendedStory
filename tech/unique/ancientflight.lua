@@ -183,7 +183,7 @@ function update(args)
 	  animator.setAnimationState("ballState", "fire2")
 	end
 	
-	--Bash ability
+	--Bash Ability
 	
 	if mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30 then
 	  world.spawnProjectile("ancientspherebash", mcontroller.position(), entity.id(), {0, 0}, true)

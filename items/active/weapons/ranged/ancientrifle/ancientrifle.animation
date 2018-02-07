@@ -41,7 +41,7 @@
           "centered" : true,
 		  "zLevel" : 1,
           "image" : "<partImage><paletteSwaps>",
-          "offset" : [0.125, 0.625], // x offset is set dynamically
+          "offset" : [1.0, 0.0], // x offset is set dynamically
           "transformationGroups" : ["weapon"],
 		  "fullbright" : true
         }

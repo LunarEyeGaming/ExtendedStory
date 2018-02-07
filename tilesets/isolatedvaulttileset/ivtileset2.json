@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":18,
+ "tilecount":25,
  "tileheight":82,
  "tileproperties":
     {
@@ -89,6 +89,20 @@
          "object":"supervoidteleporternode",
          "tilesetDirection":"right"
         },
+     "18":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
      "2":
         {
          "\/\/description":"A portal with mysterious properties.",
@@ -98,6 +112,40 @@
          "imagePositionY":"0",
          "object":"abyssreturnportal",
          "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"poisoncrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"irradiatedwallswitch"
         },
      "3":
         {
@@ -243,6 +291,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "19":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "\/\/description":"string",
@@ -252,6 +314,40 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
         },
      "3":
         {
@@ -380,11 +476,53 @@
          "imageheight":82,
          "imagewidth":40
         },
+     "18":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_down1.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_down2.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
      "2":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
          "imageheight":33,
          "imagewidth":32
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_left.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_right.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_up1.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "23":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisoncrystaltrap_up2.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedwallswitch.png",
+         "imageheight":16,
+         "imagewidth":16
         },
      "3":
         {

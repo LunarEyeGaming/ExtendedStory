@@ -109,7 +109,7 @@
       },
 
       "appliesEnvironmentStatusEffects" : false,
-      "appliesWeatherStatusEffects" : true,
+      "appliesWeatherStatusEffects" : false,
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
@@ -119,7 +119,7 @@
 
       "stats" : {
         "grit" : {
-          "baseValue" : 0.25
+          "baseValue" : 1.0
         },
         "knockbackStunTime" : {
           "baseValue" : 0.3

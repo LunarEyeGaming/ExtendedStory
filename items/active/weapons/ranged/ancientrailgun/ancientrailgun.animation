@@ -21,12 +21,12 @@
 	    "default" : "idle",
 		"states" : {
 		  "idle" : {
-		    "frames" : 8,
-			"cycle" : 1.0,
+		    "frames" : 5,
+			"cycle" : 0.75,
 			"mode" : "loop"
 		  },
 		  "fire" : {
-		    "frames" : 2,
+		    "frames" : 3,
 			"cycle" : 0.25,
 			"mode" : "transition",
 			"transition" : "idle"
@@ -69,7 +69,7 @@
         "properties" : {
           "centered" : true,
 		  "zLevel" : 1,
-          "offset" : [0.125, 0.625], // x offset is set dynamically
+          "offset" : [2.0, 0.0], // x offset is set dynamically
           "transformationGroups" : ["weapon"],
 		  "fullbright" : true
         },

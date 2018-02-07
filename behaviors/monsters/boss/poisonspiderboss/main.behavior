@@ -868,16 +868,6 @@
                             }
                           },
                           {
-                            "title": "spawnProjectile",
-                            "type": "action",
-                            "name": "spawnProjectile",
-                            "parameters": {
-                              "aimVector": {"key": "fireVector"},
-                              "offset": {"value": [0, 0]},
-                              "projectileType": {"value": "toxiniadeathexplosion"}
-                            }
-                          },
-                          {
                             "title": "repeater",
                             "type": "decorator",
                             "name": "repeater",

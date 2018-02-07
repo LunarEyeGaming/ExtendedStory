@@ -1,0 +1,67 @@
+{
+  "objectName" : "irradiatedwallswitch",
+  "colonyTags" : ["wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "It's just a simple button, though irradiated. Toggleable.",
+  "shortdescription" : "Irradiated Wall Button",
+  "race" : "generic",
+
+  "apexDescription" : "A switch. It activates something.",
+  "avianDescription" : "This switch must activate something.",
+  "floranDescription" : "Ssswitch!",
+  "glitchDescription" : "Surprised. This small switch doesn't look that powerful.",
+  "humanDescription" : "How many times can I flip this switch on and off I wonder.",
+  "hylotlDescription" : "A basic switch. It can be used to activate something.",
+  "novakidDescription" : "I can flip this here switch!",
+
+  "category" : "wire",
+  "price" : 20,
+
+  "inventoryIcon" : "irradiatedwallswitchicon.png",
+  "orientations" : [
+    {
+      "image" : "irradiatedwallswitch.png:<color>.off",
+      "imagePosition" : [-8, -8],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "scripts" : [
+    "/objects/wired/switch/switchwithinput.lua",
+    "/scripts/npcToyObject.lua"
+  ],
+  "scriptDelta" : 5,
+
+  "alwaysLit" : true,
+
+  "animation" : "/objects/wired/switch/switchtoggle2lit.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/interface/sniper_mark_pitch8.ogg" ],
+      "off" : [ "/sfx/interface/sniper_mark_pitch4.ogg" ]
+    }
+  },
+
+  "animationParts" : {
+    "bg" : "irradiatedwallswitch.png",
+	"fg" : "irradiatedwallswitchlit.png"
+  },
+  "animationPosition" : [-8, -8],
+
+  "inputNodes" : [ [-1, 0] ],
+  "outputNodes" : [ [0, -1] ],
+
+  "npcToy": {
+    "ownerOnly" : true,
+    "influence" : [
+      "wallswitch"
+    ],
+    "defaultReactions" : {},
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "maxNpcs" : 1
+  }
+}

@@ -68,13 +68,9 @@ function destroyRuin()
     coroutine.yield()
   end
 
-  player.radioMessage("tentaclemission-arrived")
-
   while entity.position()[2] > config.getParameter("brainMessageHeight") do
     coroutine.yield()
   end
-
-  player.radioMessage("tentaclemission-bottom")
 
   local foundCheckpoint = false
   local queryCheckpoints = util.interval(0.5, function()
@@ -87,8 +83,6 @@ function destroyRuin()
     queryCheckpoints(script.updateDt())
     coroutine.yield()
   end
-  
-  player.radioMessage("tentaclemission-bossroom")
 
   while storage.stage == 1 do
     coroutine.yield()
