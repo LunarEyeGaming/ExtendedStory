@@ -1,0 +1,22 @@
+{
+  "frameGrid" : {
+    "size" : [16, 16],
+    "dimensions" : [4, 10],
+    "names" : [
+      ["0"],
+	  ["left.1", "left.2", "left.3", "left.4"],
+	  ["right.1", "right.2", "right.3", "right.4"],
+	  ["up.1", "up.2", "up.3", "up.4"],
+	  ["down.1", "down.2", "down.3", "down.4"],
+	  ["fire.1", "fire.2", "fire.3", "fire.4"],
+	  ["upright.1", "upright.2", "upright.3", "upright.4"],
+	  ["downright.1", "downright.2", "downright.3", "downright.4"],
+	  ["downleft.1", "downleft.2", "downleft.3", "downleft.4"],
+	  ["upleft.1", "upleft.2", "upleft.3", "upleft.4"]
+    ]
+  },
+
+  "aliases" : {
+    "default" : "0"
+  }
+}

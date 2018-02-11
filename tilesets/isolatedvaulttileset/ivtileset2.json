@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":25,
+ "tilecount":26,
  "tileheight":82,
  "tileproperties":
     {
@@ -146,6 +146,12 @@
          "imagePositionX":"-8",
          "imagePositionY":"-8",
          "object":"irradiatedwallswitch"
+        },
+     "25":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"teslaspikeelectricdungeon"
         },
      "3":
         {
@@ -349,6 +355,12 @@
          "imagePositionY":"string",
          "object":"string"
         },
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -523,6 +535,12 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedwallswitch.png",
          "imageheight":16,
          "imagewidth":16
+        },
+     "25":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/teslaspikedungeon.png",
+         "imageheight":8,
+         "imagewidth":8
         },
      "3":
         {

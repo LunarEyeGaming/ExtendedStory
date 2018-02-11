@@ -1,7 +1,7 @@
 {
   "id" : "collecticeartifact",
   "mainQuest" : true,
-  "prerequisites" : [ "collectfireartifact" ],
+  "prerequisites" : [ "kill_cyberboss" ],
   "title" : "^#a6ceff;The Ice Artifact^reset;",
   "text" : "Your next artifact is the ice artifact, found in the ^#a6ceff;permafrost^reset; biome. The object you are looking for is inside the caves of this biome and has the same look. They have blue lights.",
   "completionText" : "Already three artifacts!",

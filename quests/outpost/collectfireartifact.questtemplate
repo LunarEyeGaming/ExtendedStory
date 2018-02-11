@@ -1,7 +1,7 @@
 {
   "id" : "collectfireartifact",
   "mainQuest" : true,
-  "prerequisites" : [ "collectelectricartifact" ],
+  "prerequisites" : [ "kill_cyberboss" ],
   "title" : "^orange;The Fire Artifact^reset;",
   "text" : "Your next artifact is the fire artifact, found in the ^#c96c28;burning^reset; biome. The same gray objects that you came across in the ^#666666;dark abyss^reset; are found underground. They have orange lights that should be easy to spot.",
   "completionText" : "Two out of four artifacts.",

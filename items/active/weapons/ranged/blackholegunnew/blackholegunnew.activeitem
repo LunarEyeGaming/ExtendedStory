@@ -42,7 +42,8 @@
         "projectileParameters" : {"timeToLive" : 0, "damageType" : "nodamage"},
         "inaccuracy" : 0,
         "baseDamage" : 3,
-        "fireSound" : "fire"
+        "fireSound" : "fire",
+        "fireAnimationState" : "off"
       },
       {
         "time" : 2.5,

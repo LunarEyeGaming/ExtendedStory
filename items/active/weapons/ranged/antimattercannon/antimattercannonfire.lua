@@ -28,6 +28,10 @@ function ChargeFire:update(dt, fireMode, shiftHeld)
 
     self:setState(self.charge)
   end
+  local chargeTime = self.chargeTimer
+  if chargeTime == 2.0 then
+    self:setState(self.fire)
+  end
 end
 
 function ChargeFire:charge()
@@ -47,10 +51,6 @@ function ChargeFire:charge()
   local energyCost = (self.chargeLevel and self.chargeLevel.energyCost) or 0
   if self.chargeLevel and (energyCost == 0 or status.overConsumeResource("energy", energyCost)) then
     self:setState(self.fire)
-  end
-  local chargeTimer = self.chargeTimer
-  if chargeTimer == 2.0 then
-    ChargeFire:fire()
   end
 end
 

@@ -10,6 +10,7 @@ function initCommonParameters()
   self.transformFadeTimer = 0
   altFireCooldownTimer = 0
   sphereEnergy = 10000
+  sphereEnergyRatio = 1.0
 
   self.energyCost = config.getParameter("energyCost")
   self.ballRadius = config.getParameter("ballRadius")
@@ -24,6 +25,9 @@ function initCommonParameters()
 
   self.forceDeactivateTime = config.getParameter("forceDeactivateTime", 3.0)
   self.forceShakeMagnitude = config.getParameter("forceShakeMagnitude", 0.125)
+  moving = false
+  timeMovement = 0.01
+  self.lowEnergyTimer = 0
 end
 
 function uninit()
@@ -33,6 +37,8 @@ end
 
 function update(args)
   restoreStoredPosition()
+	
+  dt = args.dt
 
   if not self.specialLast and args.moves["special1"] then
     attemptActivation()
@@ -52,38 +58,74 @@ function update(args)
 	if args.moves["right"] then
 	  mcontroller.controlApproachXVelocity(50.0, 100.0)
 	  if sphereEnergy >= 2500 then
-	    animator.setAnimationState("ballState", "right")
+	    animator.setAnimationState("right", "active")
       else
-	    animator.setAnimationState("ballState", "downright")
+	    animator.setAnimationState("right", "activeWarning")
 	  end
 	  sphereEnergy = sphereEnergy - 1
+	  timeMovement = 0.01
+	end
 	  
-	elseif args.moves["left"] then
+	if args.moves["left"] then
 	  mcontroller.controlApproachXVelocity(-50.0, 100.0)
 	  if sphereEnergy >= 2500 then
-	    animator.setAnimationState("ballState", "left")
+	    animator.setAnimationState("left", "active")
       else
-	    animator.setAnimationState("ballState", "upright")
+	    animator.setAnimationState("left", "activeWarning")
 	  end
 	  sphereEnergy = sphereEnergy - 1
+	  timeMovement = 0.01
+	end
 	  
-	elseif args.moves["up"] then
+	if args.moves["up"] then
 	  mcontroller.controlApproachYVelocity(50.0, 100.0)
 	  if sphereEnergy >= 2500 then
-	    animator.setAnimationState("ballState", "up")
+	    animator.setAnimationState("up", "active")
       else
-	    animator.setAnimationState("ballState", "downleft")
+	    animator.setAnimationState("up", "activeWarning")
 	  end
 	  sphereEnergy = sphereEnergy - 1
+	  timeMovement = 0.01
+	end
 	  
-	elseif args.moves["down"] then
+	if args.moves["down"] then
 	  mcontroller.controlApproachYVelocity(-50.0, 100.0)
 	  if sphereEnergy >= 2500 then
-	    animator.setAnimationState("ballState", "down")
+	    animator.setAnimationState("down", "active")
       else
-	    animator.setAnimationState("ballState", "upleft")
+	    animator.setAnimationState("down", "activeWarning")
 	  end
 	  sphereEnergy = sphereEnergy - 1
+	end
+	local direction = {0, 0}
+    if args.moves["right"] then direction[1] = direction[1] + 1 end
+    if args.moves["left"] then direction[1] = direction[1] - 1 end
+    if args.moves["up"] then direction[2] = direction[2] + 1 end
+    if args.moves["down"] then direction[2] = direction[2] - 1 end
+	
+	directions = {
+	  "down",
+	  "up",
+	  "right",
+	  "left"
+	}
+	
+	for _, v in pairs(directions) do
+	  if args.moves[v] then
+	    if sphereEnergy >= 2500 then
+		  animator.setAnimationState(v, "active")
+		else
+		  animator.setAnimationState(v, "activeWarning")
+		end
+	  else
+	    animator.setAnimationState(v, "inactive")
+	  end
+	end
+	
+	velocity = vec2.mul(vec2.norm(direction), 50)
+	
+	mcontroller.controlApproachVelocity(velocity, 100.0)
+	local direction = {0, 0}
 	
 	--Boosts
 	--[[  
@@ -138,24 +180,16 @@ function update(args)
 	elseif args.moves["left" and "up" and "jump"] then
 	  mcontroller.controlApproachVelocity({-80.0, 80.0}, 60.0)
 	  animator.setAnimationState("ballState", "upleft")
-	]]  
-	--These cancel each other out
-	  
-	elseif args.moves["down" and "up"] then
-	  mcontroller.controlApproachVelocity({0, 0}, 20.0)
-	  sphereEnergy = sphereEnergy - 1
-	  
-	elseif args.moves["left" and "right"] then
-	  mcontroller.controlApproachVelocity({0, 0}, 20.0)
-	  sphereEnergy = sphereEnergy - 1
-	  
-	else
+	]]
+	local velocity = mcontroller.velocity()
+	
+	if velocity ~= 0 and not (args.moves["up"] or args.moves["down"] or args.moves["left"] or args.moves["right"]) then
       mcontroller.controlApproachVelocity({0, 0}, 100)
 	  if not args.moves["altFire"] and not args.moves["primaryFire"] then
-	    if sphereEnergy >= 2500 then
-	      animator.setAnimationState("ballState", "on")
+	    if sphereEnergy <= 2500 then
+	      animator.setAnimationState("ballState", "warning")
 		else
-		  animator.setAnimationState("ballState", "warning")
+		  animator.setAnimationState("ballState", "on")
 		end
 	  end
 	end
@@ -207,6 +241,12 @@ function update(args)
     updateRotationFrame(args.dt)
 
     checkForceDeactivate(args.dt)
+	
+	--Energy Bar
+	sphereEnergyRatio = sphereEnergy / 10000
+	animator.setAnimationState("energybar", "on")
+
+  animator.setGlobalTag("barDirectives", "scalenearest;"..sphereEnergyRatio..";1")
   end
 
   updateTransformFade(args.dt)
@@ -393,8 +433,13 @@ function deactivate()
     animator.playSound("shutdown")
 	sphereEnergy = 10000
   end
+  animator.setAnimationState("up", "inactive")
+  animator.setAnimationState("right", "inactive")
+  animator.setAnimationState("down", "inactive")
+  animator.setAnimationState("left", "inactive")
   animator.setParticleEmitterActive("ancientspherebash", false)
   animator.setParticleEmitterActive("ancientsphererecharge", false)
+  animator.setAnimationState("energybar", "off")
 end
 
 function minY(poly)

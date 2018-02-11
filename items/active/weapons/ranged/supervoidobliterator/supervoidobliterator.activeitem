@@ -30,7 +30,7 @@
     "chargeLevels" : [
 	  {
         "time" : 0,
-        "energyCost" : 40,
+        "energyCost" : 15,
         "cooldown" : 0.1,
         "projectileType" : "supervoidenergyshardplayer",
         "projectileCount" : 1,
@@ -48,7 +48,7 @@
       },
       {
         "time" : 0.375,
-        "energyCost" : 45,
+        "energyCost" : 30,
         "cooldown" : 0.2,
         "projectileType" : "presupervoidbullet",
         "projectileParameters" : {
@@ -142,7 +142,7 @@
       },
       {
         "time" : 1.125,
-        "energyCost" : 60,
+        "energyCost" : 75,
         "cooldown" : 0.4,
         "projectileType" : "supervoidenergyshardplayer",
         "projectileParameters" : {

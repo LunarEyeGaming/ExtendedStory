@@ -252,7 +252,7 @@
 									    "type": "action",
 									    "name": "timer",
 									    "parameters": {
-									      "time": {"value": 0.5}
+									      "time": {"value": 0.25}
 									    }
 									  },
 									  {
@@ -275,18 +275,22 @@
 											    {
 											      "action": "projectile",
 												  "type": "railgunlightning",
-												  "offsetRange": [20, 35, -20, 35],
+												  "offsetRange": [40, 35, -40, 35],
 												  "direction" : [0, -1],
 												  "config": {
 												    "speed": 100,
 												    "damageKind": "megadamageelectric",
-												    "power": 100
+												    "power": 100,
+													"periodicActions": [
+													  {
+													    "time": 0,
+														"repeat": false,
+													    "action": "sound",
+													    "options": ["/sfx/gun/elemental_lance.ogg"]
+													  }
+													]
 												  }
-											    },
-												{
-												  "action": "sound",
-												  "options": ["/sfx/gun/elemental_lance.ogg"]
-												}
+											    }
 											  ]
 										    }
 										  }
@@ -517,7 +521,7 @@
 											        "speed": 40,
 											        "damageKind": "megadamageelectric",
 											        "power": 100,
-													"timeToLive": 1.0
+													"timeToLive": 2.0
 											      }
 										        }
 											  ]
@@ -730,45 +734,6 @@
                         "resource": {"value": "health"}
                       }
                     }
-                  },
-                  {
-                    "title": "parallel",
-                    "type": "composite",
-                    "name": "parallel",
-                    "parameters": {
-                      "fail": {"value": -1},
-                      "success": {"value": -1}
-                    },
-                    "children": [
-                      {
-                        "title": "controlParameters",
-                        "type": "action",
-                        "name": "controlParameters",
-                        "parameters": {
-                          "parameters": {"value": {"gravityEnabled": true}}
-                        }
-                      },
-                      {
-                        "title": "dynamic",
-                        "type": "composite",
-                        "name": "dynamic",
-                        "parameters": {},
-                        "children": [
-                          {
-                            "title": "onGround",
-                            "type": "action",
-                            "name": "onGround",
-                            "parameters": {}
-                          },
-                          {
-                            "title": "runner",
-                            "type": "action",
-                            "name": "runner",
-                            "parameters": {}
-                          }
-                        ]
-                      }
-                    ]
                   },
                   {
                     "title": "battleMusic",

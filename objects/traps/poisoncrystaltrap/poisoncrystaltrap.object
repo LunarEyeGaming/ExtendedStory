@@ -247,8 +247,8 @@
     "damage" : 40,
 
     "teamType" : "enemy",
-    "damageSourceKind" : "poisonplasma",
-    "damageType" : "IgnoresDef",
+    "damageSourceKind" : "megadamagepoisonplasma",
+    "damageType" : "Environment",
     "knockback" : 0,
     "damageRepeatTimeout" : 0.5
   }

@@ -14,7 +14,13 @@
 
   "animationParts" : {
     "ballGlow" : "ancientflightglow.png",
-    "ball" : "ancientflight.png"
+    "ball" : "ancientflight.png",
+	"up" : "up.png",
+	"right" : "right.png",
+	"down" : "down.png",
+	"left" : "left.png",
+	"energybar" : "energybar.png",
+	"energybarframe" : "energybarframe.png"
   },
 
   "transformedMovementParameters" : {
@@ -27,6 +33,7 @@
 	"gravityEnabled" : false,
 	"liquidImpedance" : 0.0,
 	"liquidFriction" : 0.0,
+	"airFriction" : 0.5,
 
     "airJumpProfile" : {
       "jumpSpeed" : 16,

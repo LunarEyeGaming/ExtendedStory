@@ -196,18 +196,29 @@
       "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
       "burstCount" : 15,
       "particles" : [
-        { "particle" : "dust2" },
-        { "particle" : "dust2" },
-        { "particle" : "kluexstatueshard" },
-        { "particle" : "kluexcrystalshard" },
-        { "particle" : "kluexcrystal" }
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/plasmapoof/plasmapoof.animation",
+            "size" : 4,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        }
       ]
     }
   },
 
   "sounds" : {
     "turnHostile" : [  ],
-    "deathPuff" : [ "/sfx/npc/boss/kluexboss_death.ogg" ],
+    "deathPuff" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
     "preparePlasma" : [ "/sfx/melee/charge_up5.ogg" ],
     "plasmaAttack" : [ "/sfx/melee/giantsword_charge_full.ogg" ],
     "prepareFire" : [ ],
