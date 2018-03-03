@@ -1,0 +1,242 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+		  "windup" : {
+            "frames" : 5,
+			"cycle" : 1.0,
+			"properties" : {
+              "immediateSound" : "/sfx/gun/wormgun_burst.ogg"
+            }
+          },
+		  "windup2" : {
+            "frames" : 11,
+			"cycle" : 1.5,
+			"properties" : {
+              "immediateSound" : "/sfx/gun/wormgun_burst.ogg"
+            }
+          },
+		  "laser" : {
+		    "frames" : 1
+		  },
+		  "winddown" : {
+            "frames" : 5,
+			"cycle" : 1.0,
+			"mode" : "transition",
+			"transition" : "idle",
+			"properties" : {
+              "immediateSound" : "/sfx/gun/wormgun_burst.ogg"
+            }
+          },
+		  "winddown2" : {
+            "frames" : 1,
+			"cycle" : 1.0,
+			"mode" : "transition",
+			"transition" : "idle",
+			"properties" : {
+              "immediateSound" : "/sfx/gun/wormgun_burst.ogg"
+            }
+          },
+		  "delaywinddown" : {
+            "frames" : 1,
+			"cycle" : 5.0,
+			"mode" : "transition",
+			"transition" : "winddown"
+          },
+		  "delaywinddown2" : {
+            "frames" : 1,
+			"cycle" : 5.0,
+			"mode" : "transition",
+			"transition" : "winddown"
+          },
+		  "fire" : {
+            "frames" : 1
+          },
+		  "fire2" : {
+            "frames" : 1
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "releaseParticles" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : [ "releaseParticles" ]
+            }
+          },
+          "on" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "particleEmittersOn" : [ "releaseParticles" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+			"windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+			"windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup2.<frame>"
+              }
+            },
+			"winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            },
+			"winddown2" : {
+              "properties" : {
+                "image" : "<partImage>:winddown2.<frame>"
+              }
+            },
+			"laser" : {
+              "properties" : {
+                "image" : "<partImage>:laser"
+              }
+            },
+			"fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+			"fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2"
+              }
+            },
+			"delaywinddown" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+			"delaywinddown2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2"
+              }
+            }
+          }
+        }
+      },
+	  "ceiling" : {
+	    "properties" : {
+		  "centered" : true,
+		  "transformationGroups" : ["body"],
+		  "offset" : [0, 21],
+		  "image" : "<partImage>"
+		}
+	  }
+    }
+  },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "particles" : [
+        { "particle" : "monstersplosion" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathfizz1left" },
+        { "particle" : "deathfizz1right" },
+        { "particle" : "deathfizz2left" },
+        { "particle" : "deathfizz2right" },
+        { "particle" : "deathfizz3left" },
+        { "particle" : "deathfizz3right" },
+        { "particle" : "deathfizz4left" },
+        { "particle" : "deathfizz4right" }
+      ]
+    },
+    "captureParticles" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "releaseParticles" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "teleportOut" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "teleportIn" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "levelUp" : {
+      "particles" : [
+        { "particle" : "monsterlevelup" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire" : [ "/sfx/projectiles/bloodvomit1.ogg", "/sfx/projectiles/bloodvomit2.ogg", "/sfx/projectiles/bloodvomit3.ogg", "/sfx/projectiles/bloodvomit4.ogg", "/sfx/projectiles/bloodvomit5.ogg", "/sfx/projectiles/bloodvomit6.ogg", "/sfx/projectiles/bloodvomit7.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

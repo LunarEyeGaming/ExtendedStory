@@ -1,0 +1,20 @@
+{
+  "name" : "ultimatiumshield",
+  "effectConfig" : {
+    "starvationCompoundDamage" : 2,
+    "movementModifiers" : {
+      "speedModifier" : 0.5
+    },
+    "soundInterval" : 0.5
+  },
+  "defaultDuration" : 0.1,
+
+  "scripts" : [
+    "ultimatiumshield.lua"
+  ],
+
+  "animationConfig" : "ultimatiumshield.animation",
+
+  "label" : "Chaotic Void - You are being consumed by darkness",
+  "icon" : "/interface/statuses/chaoticvoid.png"
+}

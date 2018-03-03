@@ -125,7 +125,13 @@
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
-        }
+        },
+		"poisonResistance" : {
+		  "baseValue" : 1.0
+		},
+		"electricResistance" : {
+		  "baseValue" : -0.5
+		}
       },
 
       "resources" : {

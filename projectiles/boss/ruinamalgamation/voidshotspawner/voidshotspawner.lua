@@ -6,6 +6,7 @@ function init()
       return not world.lineTileCollision(entity.position(), world.entityPosition(entityId))
     end)
   self.target = players[1]
+  fireProjectile = config.getParameter("fireProjectile") or true
 end
 
 function update()
@@ -26,7 +27,9 @@ end
 function destroy()
   if self.target and projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("supervoidblast", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 50, power = projectile.getParameter("power")})
-    projectile.processAction(projectile.getParameter("explosionAction"))
+	if not fireProjectile == false then
+      world.spawnProjectile("supervoidblast", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 50, power = projectile.getParameter("power")})
+      projectile.processAction(projectile.getParameter("explosionAction"))
+	end
   end
 end

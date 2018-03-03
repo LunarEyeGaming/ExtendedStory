@@ -1,0 +1,20 @@
+{
+  "projectileName" : "mazeminiboss2shot",
+  "image" : "mazeminiboss2shot.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 4,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "bounces" : 2,
+  "power" : 20,
+  "emitters" : [ ],
+  "periodicActions" : [
+  ],
+  "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
+  "damageKind" : "megadamagepoisonplasma",
+
+  "speed" : 75
+}

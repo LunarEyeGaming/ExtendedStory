@@ -1,0 +1,16 @@
+{
+  "frameGrid" : {
+    "size" : [37, 37],
+    "dimensions" : [4, 1],
+    "names" : [
+      [ "idle", "firewindup.1", "firewindup.2", "fire" ]
+    ]
+  },
+  "aliases" : { 
+    "laser" : "fire",
+	"firewinddown.1" : "fire",
+	"firewinddown.2" : "firewindup.2",
+	"firewindup.3" : "fire",
+	"firewinddown.3" : "firewindup.1"
+  }
+}

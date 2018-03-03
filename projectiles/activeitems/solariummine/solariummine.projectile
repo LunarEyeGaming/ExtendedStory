@@ -1,0 +1,45 @@
+{
+  "projectileName" : "solariummine",
+  "physics" : "disc",
+  "bounces" : -1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [150, 130, 100],
+  "image" : "solariummine.png",
+  "animationCycle" : 0.5,
+  "orientationLocked" : true,
+  "timeToLive" : 100,
+  "frameNumber" : 6,
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+	  "count" : 5,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "inheritDamageFactor" : 1,
+		  "type" : "invisibleprojectile",
+		  "offsetRange" : [5, 5, -5, -5],
+		  "config" : {
+		    "periodicActions" : [
+			  {
+			    "time" : 0,
+				"repeat" : false,
+				"action" : "config",
+				"file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+			  }
+			],
+			"timeToLive" : 0,
+			"onlyHitTerrain" : true
+		  }
+		}
+	  ]
+    }
+  ],
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "onlyHitTerrain" : true,
+
+  "scripts" : [ "proximitymine.lua" ]
+}

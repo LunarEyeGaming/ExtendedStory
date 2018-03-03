@@ -86,49 +86,11 @@
         "time" : 0,
         "energyCost" : 10,
         "cooldown" : 0.12,
-        "projectileType" : "invisibleprojectile",
+        "projectileType" : "magnetarorbsmall",
         "projectileCount" : 2,
-        "projectileParameters" : {
-		  "speed" : 100,
-		  "damageTeam" : { "type" : "friendly" },
-		  "timeToLive" : 0.0,
-		  "actionOnReap" : [
-            {
-              "action" : "option",
-              "options" : [
-			    {
-				  "action" : "projectile",
-				  "type" : "yellowglobe",
-				  "inheritSpeedFactor" : 1
-				},
-				{
-				  "action" : "projectile",
-				  "type" : "orangeglobe",
-				  "inheritSpeedFactor" : 1
-				},
-				{
-				  "action" : "projectile",
-				  "type" : "orangeglobe",
-				  "inheritSpeedFactor" : 1
-				},
-				{
-				  "action" : "projectile",
-				  "type" : "whiteglobe",
-				  "inheritSpeedFactor" : 1,
-				  "config" : {
-				    "actionOnReap" : [
-					  {
-					    "action" : "config",
-						"file" : "/projectiles/explosions/whiteexplosion/whiteexplosion.config"
-					  }
-					]
-				  }
-				}
-			  ]
-            }
-          ]
-		},
+        "projectileParameters" : {},
         "inaccuracy" : 0.1,
+		"spreadAngle" : 4,
         "baseDamage" : 8,
         "fireSound" : "fire"
       },

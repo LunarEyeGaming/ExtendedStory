@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":26,
+ "tilecount":27,
  "tileheight":82,
  "tileproperties":
     {
@@ -152,6 +152,10 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"teslaspikeelectricdungeon"
+        },
+     "26":
+        {
+         "material":"radioactivematerial"
         },
      "3":
         {
@@ -361,6 +365,10 @@
          "imagePositionY":"string",
          "object":"string"
         },
+     "26":
+        {
+         "material":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -539,6 +547,12 @@
      "25":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/teslaspikedungeon.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "26":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/radioactivematerial.png",
          "imageheight":8,
          "imagewidth":8
         },

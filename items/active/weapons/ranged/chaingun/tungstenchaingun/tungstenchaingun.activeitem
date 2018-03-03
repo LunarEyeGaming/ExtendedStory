@@ -40,8 +40,8 @@
     "class" : "GunFire",
 
     "fireTime" : 0.05,
-    "baseDps" : 12.0,
-    "energyUsage" : 10,
+    "baseDps" : 22.0,
+    "energyUsage" : 30,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -89,7 +89,7 @@
 	"baseDps" : 20,
 	"cooldownTime" : 0.1,
 	"inaccuracy" : 0.01,
-	"energyUsage" : 20,
+	"energyUsage" : 40,
 	"projectileType" : "explosivebullet",
 	"projectileParameters" : {
 	  "periodicActions" : [], 
@@ -97,6 +97,7 @@
 	  "timeToLive" : 10.0,
 	  "knockback" : 70,
 	  "bounces" : 0,
+	  "power" : 10,
 	  "actionOnReap" : [
 	    {
 		  "action" : "config",

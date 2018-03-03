@@ -1,0 +1,18 @@
+{
+  "projectileName" : "mazeminiboss3slimefalling",
+  "image" : "mazeminiboss3slimefalling.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "physics" : "grenade",
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/acidspitexplosion/acidspitexplosion.config"
+    }
+  ],
+  "power" : 20.0,
+  "speed" : 5,
+  "damageKind" : "megadamageacid"
+}

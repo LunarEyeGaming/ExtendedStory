@@ -1,0 +1,35 @@
+{
+  "frameGrid" : {
+    "size" : [84, 48],
+    "dimensions" : [6, 2],
+    "names" : [
+      [ "idle", "windup.1", "windup.2", "windup.3", "windup.4", "windup.5" ],
+	  [ "windup2.6", "windup2.7", "windup2.8", "windup2.9", "windup2.10", "windup2.11" ]
+    ]
+  },
+  "aliases" : { 
+    "windup2.1" : "windup.1",
+	"windup2.2" : "windup.2",
+	"windup2.3" : "windup.3",
+	"windup2.4" : "windup.4",
+	"windup2.5" : "windup.5",
+	"fire" : "windup.5",
+	"fire2" : "windup2.11",
+	"winddown.1" : "windup.5",
+	"winddown.2" : "windup.4",
+	"winddown.3" : "windup.3",
+	"winddown.4" : "windup.2",
+	"winddown.5" : "windup.1",
+	"winddown2.1" : "windup2.11",
+	"winddown2.2" : "windup2.10",
+	"winddown2.3" : "windup2.9",
+	"winddown2.4" : "windup2.8",
+	"winddown2.5" : "windup2.7",
+	"winddown2.6" : "windup2.6",
+	"winddown2.7" : "windup2.5",
+	"winddown2.8" : "windup2.4",
+	"winddown2.9" : "windup2.3",
+	"winddown2.10" : "windup2.2",
+	"winddown2.11" : "windup2.1"
+  }
+}

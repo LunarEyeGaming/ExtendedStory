@@ -1,0 +1,35 @@
+{
+  "projectileName" : "targetingprojectile",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.4,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+  "piercing" : true,
+  
+  "periodicActions" : [
+  ],
+  "actionOnReap" : [ ],
+
+  "speed" : 0,
+  "timeToLive" : 0.0,
+  "scripts" : [ "targetingprojectile.lua" ],
+  "scriptDelta" : 1,
+  "renderLayer" : "Monster+50",
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  }
+}

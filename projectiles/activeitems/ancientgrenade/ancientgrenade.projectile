@@ -14,7 +14,7 @@
       "direction" : [0.0, 1.0],
 	  "config" : {
 	    "speed" : 5,
-		"power" : 50,
+		"power" : 10,
 		"piercing" : true,
 		"timeToLive" : 1.0,
 		"processing" : "?hueshift=290",
@@ -24,7 +24,7 @@
 			"type" : "destroyershot",
 			"config" : {
 			  "speed" : 0,
-			  "power" : 50,
+			  "power" : 10,
 			  "piercing" : true,
 			  "processing" : "?hueshift=290",
 			  "periodicActions" : [
@@ -42,7 +42,7 @@
                       "fuzzAngle" : 180,
                       "config" : {
                         "speed" : 50,
-                       	"power" : 10
+                       	"power" : 2
                       }
                     }
                   ]

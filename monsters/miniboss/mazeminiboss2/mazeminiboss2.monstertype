@@ -1,0 +1,227 @@
+{
+  "type" : "mazeminiboss2",
+  "shortdescription" : "Gazing Horror",
+  "description" : "A powerful mutant capable of shooting lasers wherever it gazes.",
+
+  "categories" : [ "mazeminiboss2" ],
+  "parts" : [ "body" ],
+
+  "animation" : "mazeminiboss2.animation",
+
+  "dropPools" : [ ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+    "deathBehavior" : "monster-death",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 20,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
+		{
+          "name" : "action-fire",
+          "cooldown" : 2,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 25,
+            "minimumRange" : 10,
+            "windupStopForce" : 0,
+            "faceTarget" : false,
+            "rotateToTarget" : false,
+            "windupState" : "firewindup",
+            "windupTime" : 1.0,
+
+            "projectileType" : "invisibleprojectile",
+            "projectileParameters" : {
+			  "damageType" : "NoDamage",
+			  "timeToLive" : 5,
+			  "piercing" : true,
+			  "power" : 0,
+			  "damageTeam" : {"type" : "enemy"},
+              "periodicActions" : [
+			    {
+				  "time" : 0.01,
+				  "action" : "projectile",
+				  "type" : "mazeminiboss2laser"
+				}
+			  ]
+            },
+            "fireOffset" : [0, 0],
+            "onGround" : false,
+            "fireState" : "laser",
+            "fireSound" : "",
+            "projectileCount" : 1,
+            "projectileInterval" : 5,
+
+            "winddownStopForce" : 0,
+            "winddownState" : "delayfirewinddown",
+            "winddownTime" : 7.0
+          }
+        },
+		{
+          "name" : "action-fire",
+          "cooldown" : 2,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 25,
+            "minimumRange" : 10,
+            "windupStopForce" : 0,
+            "faceTarget" : false,
+            "rotateToTarget" : false,
+            "windupState" : "firewindup",
+            "windupTime" : 1.0,
+
+            "projectileType" : "mazeminiboss2shot",
+            "projectileParameters" : {
+              "speed" : 100,
+              "power" : 25
+            },
+            "fireOffset" : [0, 0],
+            "onGround" : false,
+            "fireState" : "fire",
+            "fireSound" : "fire",
+            "projectileCount" : 20,
+            "projectileInterval" : 0.25,
+
+            "winddownStopForce" : 0,
+            "winddownState" : "firewinddown",
+            "winddownTime" : 0.2
+          }
+        }
+	  ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [ ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly"
+        }
+      ],
+
+      "wanderActions" : [ ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ],
+	  "deathActions" : [ ]
+    },
+
+    "damageBar" : "Special",
+
+    "touchDamage" : {
+      "poly" : [ [1.3, 3.125],  [3.125, 1.3], [3.125, -1.3], [1.3, -3.125], [-1.3, -3.125], [-3.125, -1.3], [-3.125, 1.3], [-1.3, 3.125] ],
+      "damage" : 3,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "renderLayer" : "Projectile-20",
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [1.3, 3.125],  [3.125, 1.3], [3.125, -1.3], [1.3, -3.125], [-1.3, -3.125], [-3.125, -1.3], [-3.125, 1.3], [-1.3, 3.125] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 1,
+      "runSpeed" : 2,
+      "gravityEnabled" : false,
+
+      "airFriction" : 4,
+      "airForce" : 40,
+      "flySpeed" : 3
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 1000
+        },
+        "maxHealth" : {
+          "baseValue" : 200
+        },
+        "protection" : {
+          "baseValue" : 0.5
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

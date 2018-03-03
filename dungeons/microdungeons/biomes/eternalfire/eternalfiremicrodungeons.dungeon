@@ -5,7 +5,7 @@
     "rules" : [
     ],
 
-    "anchor" : [ "abandonedbuilding", "abandonedbuilding2", "abandonedbuilding3", "burningstonehill", "giantfire", "lavacrater", "lavapond", "meteor", "volcanowithburningstone", "supervoidnode" ],
+    "anchor" : [ "abandonedbuilding", "abandonedbuilding2", "abandonedbuilding3", "burningstonehill", "giantfire", "lavacrater", "lavapond", "meteor", "volcanowithburningstone" ],
 
     "gravity" : 80,
     "maxRadius" : 1000000,
@@ -76,13 +76,6 @@
         [ "maxSpawnCount", [1] ]
       ],
       "def" : [ "tmx", "volcanowithburningstone.json" ]
-    },
-    {
-      "name" : "supervoidnode",
-      "rules" : [
-        [ "maxSpawnCount", [1] ]
-      ],
-      "def" : [ "tmx", "supervoidnode.json" ]
     }
   ]
 }

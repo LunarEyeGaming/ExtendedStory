@@ -1,0 +1,35 @@
+{
+  "projectileName" : "solariumfusioncannonshot",
+  "physics" : "laser",
+  "image" : "solariumfusioncannonshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "lightColor" : [150, 130, 100],
+  "animationCycle" : 0.5,
+  "timeToLive" : 5.0,
+  "frameNumber" : 1,
+  "power" : 0,
+  "bounces" : 0,
+  "fullbright" : true,
+  "animationLoops" : true,
+  "damageKind" : "default",
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "angle" : 0,
+	  "offset" : [ 0.0, 1.0 ],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"timeToLive" : 0,
+		"speed" : 90,
+		"actionOnReap" : [
+		  {
+		    "action" : "config",
+		    "file" : "/projectiles/explosions/solariumexplosion/solariumexplosion.config"
+		  }
+		]
+	  }
+	}
+  ]
+}

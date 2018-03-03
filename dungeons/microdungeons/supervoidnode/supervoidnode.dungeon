@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "name" : "supervoidnode",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "supervoidnode" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "supervoidnode",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "supervoidnode.json" ]
+    }
+  ]
+}

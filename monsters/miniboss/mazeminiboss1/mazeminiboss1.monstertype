@@ -1,0 +1,222 @@
+{
+  "type" : "mazeminiboss1",
+  "shortdescription" : "Terrorizer",
+  "description" : "A mutated monster that feeds on large animals.",
+
+  "categories" : [ "mazeminiboss1" ],
+  "parts" : [ "body" ],
+
+  "animation" : "mazeminiboss1.animation",
+
+  "dropPools" : [ ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+    "deathBehavior" : "monster-death",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 20,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ 
+	    {
+          "name" : "action-charge",
+          "cooldown" : 0.4,
+          "parameters" : {
+            "maximumRange" : 50,
+            "windupStopForce" : 50,
+            "windupState" : "",
+            "windupTime" : 0.0,
+
+            "onGround" : false,
+            "wallCollide" : true,
+            "aimAtTarget" : true,
+			"rotateToTarget" : true,
+            "inaccuracy" : 0.0,
+            "airDirection" : [1, 0],
+            "chargeState" : "",
+            "chargeTime" : 0.75,
+            "chargeSpeed" : 30,
+            "chargeControlForce" : 250,
+            "wallCrashSound" : "",
+
+            "winddownTime" : 0.0,
+            "winddownStopForce" : 0,
+            "winddownState" : ""
+          }
+        },
+		{
+          "name" : "action-fire",
+          "cooldown" : 2,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 50,
+            "minimumRange" : 10,
+            "windupStopForce" : 0,
+            "faceTarget" : false,
+            "rotateToTarget" : true,
+            "windupState" : "",
+            "windupTime" : 0.4,
+
+            "projectileType" : "poisonplasmarocket",
+            "projectileParameters" : {
+              "speed" : 50,
+              "power" : 25,
+			  "damageKind" : "megadamagepoisonplasma",
+			  "actionOnReap" : [
+			    {
+				  "action" : "config",
+				  "file" : "/projectiles/explosions/megadamageexplosion/megadamagepoisonexplosionknockback.config"
+				}
+			  ]
+            },
+            "fireOffset" : [0, 0],
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire",
+            "projectileCount" : 5,
+            "projectileInterval" : 1.0,
+
+            "winddownStopForce" : 0,
+            "winddownState" : "",
+            "winddownTime" : 0.2
+          }
+        }
+	  ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly"
+        }
+	  ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly"
+        }
+      ],
+
+      "wanderActions" : [ ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ],
+	  "deathActions" : [ ]
+    },
+
+    "damageBar" : "Special",
+
+    "touchDamage" : {
+      "poly" : [ [1.3, 3.125],  [3.125, 1.3], [3.125, -1.3], [1.3, -3.125], [-1.3, -3.125], [-3.125, -1.3], [-3.125, 1.3], [-1.3, 3.125] ],
+      "damage" : 3,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [1.3, 3.125],  [3.125, 1.3], [3.125, -1.3], [1.3, -3.125], [-1.3, -3.125], [-3.125, -1.3], [-3.125, 1.3], [-1.3, 3.125] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 1,
+      "runSpeed" : 2,
+      "gravityEnabled" : false,
+
+      "airFriction" : 4,
+      "airForce" : 40,
+      "flySpeed" : 3
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 1000
+        },
+        "maxHealth" : {
+          "baseValue" : 200
+        },
+        "protection" : {
+          "baseValue" : 0.5
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}
