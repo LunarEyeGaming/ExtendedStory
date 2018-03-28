@@ -1,0 +1,41 @@
+{
+  "projectileName" : "ancientvortexprepare",
+  "physics" : "laser",
+  "image" : "ancientvortexprepare.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "animationCycle" : 0.5,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "frameNumber" : 2,
+  "power" : 50,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.8,
+		"variance" : {
+          "initialVelocity" : [12.0, 12.0],
+          "finalVelocity" : [6.0, 6.0]
+        }
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ancientvortex/ancientvortex.config"
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet"
+}

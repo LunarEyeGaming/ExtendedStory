@@ -1,0 +1,436 @@
+{
+  "name": "frostguardianboss-transition2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "acidSprayConfig": {"power": 100}
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "hurt"},
+          "type": {"value": "body"}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "off"},
+          "type": {"value": "beam1"}
+		}
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "off"},
+          "type": {"value": "beam2"}
+		}
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [0, 0]},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "fg_shellshatter"}
+        }
+      },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "stage3"},
+          "type": {"value": "stage"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "shelldamaged"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "pain"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "fade"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "frostblockwindup"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [15, 0]},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "frostblockshooting_windup"}
+        }
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [-15, 0]},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "frostblockshooting_windup2"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.4}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 4},
+		  "untilSuccess": {"value": false}
+        },
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+			  "title": "repeater",
+			  "type": "decorator",
+			  "name": "repeater",
+			  "parameters": {
+			    "maxLoops": {"value": 2},
+				"untilSuccess": {"value": false}
+			  },
+			  "child": {
+			    "title": "sequence",
+				"type": "composite",
+				"name": "sequence",
+				"parameters": {},
+				"children": [
+			      {
+    		        "title": "addEphemeralEffect",
+    		        "type": "action",
+    		        "name": "addEphemeralEffect",
+    		        "parameters": {
+    		          "name": {"value": "invulnerable"},
+			  	      "duration": {"value": 5.0}
+    		        }
+    		      },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [-1, 0]},
+    	    	      "offset": {"value": [15, 8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 1.5
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [1, 0]},
+    	    	      "offset": {"value": [-15, -8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 1.5
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 1.5}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [0, -1]},
+    	    	      "offset": {"value": [-15, 8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 0.8
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [0, 1]},
+    	    	      "offset": {"value": [15, -8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 0.8
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 0.8}
+    	    	    }
+    	    	  }
+				]
+			  }
+			},
+			{
+			  "title": "repeater",
+			  "type": "decorator",
+			  "name": "repeater",
+			  "parameters": {
+			    "maxLoops": {"value": 2},
+				"untilSuccess": {"value": false}
+			  },
+			  "child": {
+			    "title": "sequence",
+				"type": "composite",
+				"name": "sequence",
+				"parameters": {},
+				"children": [
+				  {
+    		        "title": "addEphemeralEffect",
+    		        "type": "action",
+    		        "name": "addEphemeralEffect",
+    		        "parameters": {
+    		          "name": {"value": "invulnerable"},
+			  	      "duration": {"value": 5.0}
+    		        }
+    		      },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [0, -1]},
+    	    	      "offset": {"value": [15, 8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 0.8
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [0, 1]},
+    	    	      "offset": {"value": [-15, -8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 0.8
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 0.8}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [-1, 0]},
+    	    	      "offset": {"value": [15, -8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 1.5
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [1, 0]},
+    	    	      "offset": {"value": [-15, 8]},
+    	    	      "projectileConfig": {
+				  	  "value": {
+				  	    "timeToLive": 1.5
+				  	  }
+				  	},
+    	    	      "projectileType": {"value": "frostblockshooting_es"}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 1.5}
+    	    	    }
+    	    	  }
+				]
+			  }
+			}
+		  ]
+		}
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [15, 8]},
+          "projectileConfig": {"value": {"timeToLive": 0}},
+          "projectileType": {"value": "frostblockidle_es"}
+        }
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [-15, -8]},
+          "projectileConfig": {"value": {"timeToLive": 0}},
+          "projectileType": {"value": "frostblockidle_es"}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "reappear"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "frostblockwinddown"}
+        }
+      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 2.0}
+		}
+	  }
+    ]
+  }
+}

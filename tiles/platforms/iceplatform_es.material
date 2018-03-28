@@ -1,0 +1,23 @@
+{
+  "materialId" : 2002,
+  "materialName" : "iceplatform_es",
+  "collisionKind" : "platform",
+  "itemDrop" : "iceplatform_es",
+  "shortdescription" : "Ice Platform",
+  "description" : "Platforms that are made entirely of ice. It's unknown how these are sturdy or never melt.",
+  "glitchDescription" : "Satisfied. This smooth ice platform is attractive and sturdy.",
+  "floranDescription" : "Ssmooth ice platformsss.",
+  "novakidDescription" : "Some fancy lookin' ice platforms.",
+  "footstepSound" : "/sfx/blocks/footstep_ice.ogg",
+  "category" : "Supports",
+
+  "renderTemplate" : "/tiles/platformtemplate.config",
+  "renderParameters" : {
+    "texture" : "iceplatform_es.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

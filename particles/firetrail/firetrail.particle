@@ -6,6 +6,8 @@
     "size" : 1,
     "light" : [253, 143, 77],
     "position" : [0, 0],
+	"initialVelocity" : [0, -5],
+	"finalVelocity" : [0, 0],
     "destructionAction" : "shrink",
     "destructionTime" : 0.25,
     "fade" : 1,

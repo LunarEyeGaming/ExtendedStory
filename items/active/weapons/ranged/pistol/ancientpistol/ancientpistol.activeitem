@@ -4,14 +4,14 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "Explosive lasers like never before.",
-  "shortdescription" : "^magenta;Little Destroyer^reset;",
+  "shortdescription" : "^magenta; ^reset;",
   "tooltipKind" : "gun",
-  "category" : "machinePistol",
+  "category" : "Ancient Pistol",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged","machinepistol"],
   "level" : 10,
 
-  "inventoryIcon" : "ancientpistol.png",
+  "inventoryIcon" : "ancientpistol.png:idle.1",
 
   "animation" : "/items/active/weapons/ranged/pistol/ancientpistol/ancientpistol.animation",
   "animationParts" : {
@@ -23,14 +23,16 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_pistol2.ogg", "/sfx/gun/plasma_pistol3.ogg"]
+      "fire" : ["/sfx/gun/plasma_mp2.ogg"]
     }
   },
 
-  "baseOffset" : [0.5, 0.125],
-  "muzzleOffset" : [1.5, 0.25],
+  "baseOffset" : [0.5, 0.0],
+  "muzzleOffset" : [1.25, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
 
   "elementalType" : "physical",
 
@@ -38,7 +40,7 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.10,
+    "fireTime" : 0.11,
     "baseDps" : 12.0,
     "energyUsage" : 10,
     "inaccuracy" : 0.0,
@@ -66,7 +68,7 @@
         "twoHanded" : false,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : true
       },
       "cooldown" : {
         "duration" : 0.11,
@@ -75,7 +77,7 @@
         "twoHanded" : false,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : true
       }
     }
   },

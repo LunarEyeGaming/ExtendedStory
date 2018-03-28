@@ -1,0 +1,76 @@
+{
+  "objectName" : "ancientfurnace",
+  "colonyTags" : ["crafting"],
+  "category" : "crafting",
+  "rarity" : "Essential",
+  "description" : "An ancient furnace, used for smelting various materials.",
+  "shortdescription" : "^orange;Ancient Furnace^reset;",
+  "race" : "ancient",
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/ancientfurnace.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : " Ancient Furnace",
+        "subtitle" : " ^#b9b5b2;More things to smelt",
+        "icon" : {
+          "file" : "/interface/crafting/ancientforge.png"
+        }
+      }
+    },
+    "filter" : [ "ancientfurnace" ]
+  },
+  "price" : 70,
+
+  "apexDescription" : "An amazingly old yet functional furnace.",
+  "avianDescription" : "A furnace crafted out of ancient materials. Useful for smelting.",
+  "floranDescription" : "Glowing object iss ancient.",
+  "glitchDescription" : "Analysing. An ancient furnace used for smelting key components.",
+  "humanDescription" : "An ancient furnace. The material used to make this is very ancient.",
+  "hylotlDescription" : "A very ancient furnace.",
+  "novakidDescription" : "Can't really find somethin' like this anywhere.",
+
+  "inventoryIcon" : "icon_es.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "ancientfurnace.png:<frame>", "fullbright" : true }, { "image" : "ancientfurnacelit.png:<frame>" } ],
+      "flipImages" : true,
+      "direction" : "left",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 40,
+      "animationCycle" : 4.0,
+	  "spaces" : [
+		[-2, 3], [-1, 3], [0, 3], [1, 3],
+		[-2, 2], [-1, 2], [0, 2], [1, 2],
+		[-2, 1], [-1, 1], [0, 1], [1, 1],
+		[-2, 0], [-1, 0], [0, 0], [1, 0]
+	  ],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "ancientfurnace.png:<frame>", "fullbright" : true }, { "image" : "ancientfurnacelit.png:<frame>" } ],
+      "direction" : "right",
+      "lightPosition" : [0, 1],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 40,
+      "animationCycle" : 4.0,
+	  "spaces" : [
+	    [-1, 3], [0, 3], [1, 3], [2, 3],
+		[-1, 2], [0, 2], [1, 2], [2, 2],
+		[-1, 1], [0, 1], [1, 1], [2, 1],
+		[-1, 0], [0, 0], [1, 0], [2, 0]
+	  ],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "soundEffect" : "/sfx/objects/scififurnace.ogg",
+  "soundEffectRangeMultiplier" : 1.0
+}

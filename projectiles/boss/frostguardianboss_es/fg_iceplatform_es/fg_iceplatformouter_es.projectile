@@ -1,0 +1,25 @@
+{
+  "projectileName" : "fg_iceplatformouter_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [ ],
+  "physicsCollisions" : {
+    "iceplatform" : {
+      "collision" : [ [18, 0.5], [18, -0.5], [-18, -0.5], [-18, 0.5] ],
+      "collisionKind" : "platform",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "actionOnReap" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 0,
+  "timeToLive" : 1.5
+}

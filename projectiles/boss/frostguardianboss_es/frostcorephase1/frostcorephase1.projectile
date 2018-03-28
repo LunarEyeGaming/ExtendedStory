@@ -1,0 +1,27 @@
+{
+  "projectileName" : "frostcorephase1",
+  "image" : "frostcorephase1.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 9,
+  "bounces" : 0,
+  "fullbright" : true,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ ],
+  "damageKind" : "plasma",
+  "renderLayer" : "Monster+50",
+  "periodicActions" : [
+    {
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_iciclelargetargeting",
+	  "direction" : [0, -1],
+	  "config" : {
+	    "processing" : "?scalenearest=5"
+	  }
+    }
+  ]
+}

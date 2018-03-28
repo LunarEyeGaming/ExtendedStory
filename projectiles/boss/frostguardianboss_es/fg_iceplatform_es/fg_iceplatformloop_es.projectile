@@ -1,0 +1,48 @@
+{
+  "projectileName" : "fg_iceplatformloop_es",
+  "image" : "fg_iceplatform_es.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "fg_iceplatformouter_es",
+	  "offset" : [9, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"timeToLive" : 2.5
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "fg_iceplatformouter_es",
+	  "offset" : [-9, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"timeToLive" : 2.5
+	  }
+	}
+  ],
+  "physicsCollisions" : {
+    "iceplatform" : {
+      "collision" : [ [18, 0.5], [18, -0.5], [-18, -0.5], [-18, 0.5] ],
+      "collisionKind" : "platform",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "actionOnReap" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 0,
+  "timeToLive" : 2.5
+}

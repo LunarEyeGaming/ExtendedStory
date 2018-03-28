@@ -129,7 +129,7 @@
 							"timeToLive" : 0.5,
 							"power" : 0,
 							"piercing" : true,
-							"damageTeam" : { "type" : "enemy" },
+							"damageTeam" : { "type" : "indiscriminate" },
 							"actionOnReap" : [
 							  {
 							    "action" : "projectile",
@@ -142,7 +142,7 @@
 									  "action" : "projectile",
 									  "type" : "destroyerborder",
 									  "config" : {
-									    "damageTeam" : { "type" : "enemy" }
+									    "damageTeam" : { "type" : "indiscriminate" }
 									  }
 									}
 								  ]

@@ -1,0 +1,490 @@
+{
+  "name": "frostguardianboss",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 80},
+              "keepTargetInRange": {"value": 100},
+              "targetEntityTypes": {"value": ["player"]},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 1}
+            }
+          },
+          {
+            "title": "Spiderboss",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "Reset",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setDamageBar",
+                        "type": "action",
+                        "name": "setDamageBar",
+                        "parameters": {
+                          "type": {"value": "Special"}
+                        }
+                      },
+					  {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.8}
+                        }
+                      },
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.66},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+        							  "title": "frostguardianboss-iciclephase1",
+        							  "type": "module",
+        							  "name": "frostguardianboss-iciclephase1",
+        							  "parameters": { }
+        							},
+									{
+        							  "title": "frostguardianboss-frostblockphase1",
+        							  "type": "module",
+        							  "name": "frostguardianboss-frostblockphase1",
+        							  "parameters": { }
+        							},
+									{
+        							  "title": "frostguardianboss-iciclefloorwave",
+        							  "type": "module",
+        							  "name": "frostguardianboss-iciclefloorwave",
+        							  "parameters": { }
+        							},
+									{
+        							  "title": "frostguardianboss-bullethellphase1",
+        							  "type": "module",
+        							  "name": "frostguardianboss-bullethellphase1",
+        							  "parameters": { }
+        							}
+								  ]
+								}
+						      }
+							]
+                          },
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.33},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+							    "title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+        							"title": "frostguardianboss-transition1",
+        							"type": "module",
+        							"name": "frostguardianboss-transition1",
+        						    "parameters": { }
+        						  },
+								  {
+									"title": "repeater",
+									"type": "decorator",
+									"name": "repeater",
+									"parameters": {
+									  "maxLoops": {"value": -1},
+								      "untilSuccess": {"value": false}
+									},
+									"child": {
+									  "title": "sequence",
+									  "type": "composite",
+									  "name": "sequence",
+									  "parameters": {},
+									  "children": [
+										{
+        								  "title": "frostguardianboss-iciclephase2",
+        								  "type": "module",
+        								  "name": "frostguardianboss-iciclephase2",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-frostblockphase2",
+        								  "type": "module",
+        								  "name": "frostguardianboss-frostblockphase2",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-icicleceilingbomb",
+        								  "type": "module",
+        								  "name": "frostguardianboss-icicleceilingbomb",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-bullethellphase2",
+        								  "type": "module",
+        								  "name": "frostguardianboss-bullethellphase2",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-laser",
+        								  "type": "module",
+        								  "name": "frostguardianboss-laser",
+        								  "parameters": { }
+        								}
+									  ]
+									}
+						    	  }
+								]
+							  }
+							]
+                          },
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+							    "title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+        							"title": "frostguardianboss-transition2",
+        							"type": "module",
+        							"name": "frostguardianboss-transition2",
+        						    "parameters": { }
+        						  },
+								  {
+									"title": "repeater",
+									"type": "decorator",
+									"name": "repeater",
+									"parameters": {
+									  "maxLoops": {"value": -1},
+								      "untilSuccess": {"value": false}
+									},
+									"child": {
+									  "title": "sequence",
+									  "type": "composite",
+									  "name": "sequence",
+									  "parameters": {},
+									  "children": [
+										{
+        								  "title": "frostguardianboss-iciclephase3",
+        								  "type": "module",
+        								  "name": "frostguardianboss-iciclephase3",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-frostblockphase3",
+        								  "type": "module",
+        								  "name": "frostguardianboss-frostblockphase3",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-bullethellphase3",
+        								  "type": "module",
+        								  "name": "frostguardianboss-bullethellphase3",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-laser2",
+        								  "type": "module",
+        								  "name": "frostguardianboss-laser2",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-cardinalicicles",
+        								  "type": "module",
+        								  "name": "frostguardianboss-cardinalicicles",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "frostguardianboss-wallicicles",
+        								  "type": "module",
+        								  "name": "frostguardianboss-wallicicles",
+        								  "parameters": { }
+        								}
+									  ]
+									}
+						    	  }
+								]
+							  }
+							]
+                          }
+						]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+				  {
+        		    "title": "frostguardianboss-dying",
+        		    "type": "module",
+        		    "name": "frostguardianboss-dying",
+        		    "parameters": { }
+        		  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAggressive",
+                    "type": "action",
+                    "name": "setAggressive",
+                    "parameters": {
+                      "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setDamageBar",
+                    "type": "action",
+                    "name": "setDamageBar",
+                    "parameters": {
+                      "type": {"value": "None"}
+                    }
+                  },
+	              {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "beam1"}
+		            }
+                  },
+	              {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "beam2"}
+	                }
+                  },
+	              {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "body"}
+		            }
+                  },
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "setGlobalTag",
+                    "type": "action",
+                    "name": "setGlobalTag",
+                    "parameters": {
+                      "tag": {"value": "stage1"},
+                      "type": {"value": "stage"}
+                    }
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

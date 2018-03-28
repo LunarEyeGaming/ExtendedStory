@@ -1,0 +1,64 @@
+{
+  "projectileName" : "frostcorephase2",
+  "image" : "frostcorephase2.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 13.5,
+  "bounces" : 0,
+  "fullbright" : true,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ ],
+  "damageKind" : "plasma",
+  "renderLayer" : "Monster+50",
+  "periodicActions" : [
+    {
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_icicletargeting",
+	  "direction" : [0, -1]
+    },
+	{
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_icicletargeting",
+	  "offset" : [2, 0],
+	  "direction" : [0, -1],
+	  "config" : {
+	    "timeToLive" : 1.25
+	  }
+    },
+	{
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_icicletargeting",
+	  "offset" : [-2, 0],
+	  "direction" : [0, -1],
+	  "config" : {
+	    "timeToLive" : 1.25
+	  }
+    },
+	{
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_icicletargeting",
+	  "offset" : [4, 0],
+	  "direction" : [0, -1],
+	  "config" : {
+	    "timeToLive" : 1.5
+	  }
+    },
+	{
+      "time" : 1.5,
+      "action" : "projectile",
+      "type" : "fg_icicletargeting",
+	  "offset" : [-4, 0],
+	  "direction" : [0, -1],
+	  "config" : {
+	    "timeToLive" : 1.5
+	  }
+    }
+  ]
+}

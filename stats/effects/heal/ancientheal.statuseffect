@@ -1,0 +1,17 @@
+{
+  "name" : "ancientheal",
+  "effectConfig" : {
+    "healAmount" : 150,
+    "emissionRate" : 15
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "heal.lua"
+  ],
+
+  "animationConfig" : "heal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}

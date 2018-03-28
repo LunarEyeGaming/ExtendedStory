@@ -3,16 +3,16 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A rapid fire rifle that shoots lasers.",
-  "shortdescription" : "^magenta;Big Destroyer^reset;",
+  "description" : "A standard-issue rifle commonly used by ancient soldiers.",
+  "shortdescription" : "^magenta; ^reset;",
   "tooltipKind" : "gun",
-  "category" : "assaultRifle",
+  "category" : "Ancient Rifle",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 10,
 
   "inventoryIcon" : [
-    { "image" : "ancientrifle.png" }
+    { "image" : "ancientrifle.png:auto.1" }
   ],
 
   "animation" : "/items/active/weapons/ranged/ancientrifle/ancientrifle.animation",
@@ -25,7 +25,7 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_ar1.ogg", "/sfx/gun/plasma_ar2.ogg", "/sfx/gun/plasma_pistol3.ogg"]
+      "fire" : ["/sfx/gun/plasma_shotgun4.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
@@ -87,15 +87,7 @@
     }
   },
 
-  "altAbilityType" : "grenadelauncher",
-  "altAbility" : {
-    "elementalConfig" : {
-      "physical" : { "projectileType" : "ancientgrenade" }
-    },
-    "energyUsage" : 20,
-	"name" : "Ancient Grenade",
-	"baseDamage" : 1
-  },
+  "altAbilityType" : "ancientriflemodes",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

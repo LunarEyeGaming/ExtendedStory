@@ -1,0 +1,71 @@
+{
+  "projectileName" : "frostblockwarning_es", // Supposed to prevent cheap deaths
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
+    },
+	{
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/frostblock/frostblock_6x8.png?setcolor=ff7777",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	},
+	{
+      "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/frostblock/frostblock_6x8.png",
+		"position" : [0, 0],
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0.02,
+		"destructionTime" : 0
+	  }
+	}
+  ],
+  "actionOnReap" : [ 
+    {
+	  "action" : "projectile",
+	  "type" : "frostblockidle_es",
+	  "config" : {
+	    "timeToLive" : 12.5
+	  }
+	}
+  ],
+  "physicsCollisions" : {
+    "frostblock" : {
+      "collision" : [ [3, 4], [3, -4], [-3, -4], [-3, 4] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 4,
+  "timeToLive" : 1.0
+}

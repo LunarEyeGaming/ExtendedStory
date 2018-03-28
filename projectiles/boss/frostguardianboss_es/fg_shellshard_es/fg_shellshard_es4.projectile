@@ -1,0 +1,14 @@
+{
+  "projectileName" : "fg_shellshard_es4",
+  "image" : "fg_shellshard_es4.png",
+  "physics" : "grenadelowbounce",
+  "bounces" : -1,
+  "timeToLive" : 5,
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "speed" : 50,
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

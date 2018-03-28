@@ -1,4 +1,71 @@
 {
+  "globalTagDefaults" : {
+	"barDirectives" : ""
+  },
+  "animatedParts" : {
+    "stateTypes" : {
+      "energybar" : {
+        "priority" : 0,
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "on" : {}
+        }
+      }
+    },
+
+    "parts" : {
+	  "energybar" : {
+	    "properties" : {
+		  "transformationGroups" : [ "energybar" ],
+		  "centered" : true,
+		  "zLevel" : 2,
+		  "fullbright" : true,
+		  "offset" : [0, 3.0]
+		},
+        "partStates" : {
+          "energybar" : {
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "ultimatiumshieldbar.png<barDirectives>"
+              }
+            }
+          }
+        }
+	  },
+	  "energybarframe" : {
+	    "properties" : {
+		  "transformationGroups" : [ "energybar" ],
+		  "centered" : true,
+		  "fullbright" : true,
+		  "offset" : [0, 3.0]
+		},
+        "partStates" : {
+          "energybar" : {
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "ultimatiumshieldbarframe.png"
+              }
+            }
+          }
+        }
+	  }
+    }
+  },
+
+  "transformationGroups" : {
+    "energybar" : { "interpolated" : true }
+  },
   "sounds" : {
     "hit" : ["/sfx/gun/omnicannon_shot2.ogg"],
 	"break" : ["/sfx/npc/boss/apeboss_death.ogg"],

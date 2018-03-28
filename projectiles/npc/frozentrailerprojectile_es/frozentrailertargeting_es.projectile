@@ -1,0 +1,35 @@
+{
+  "projectileName" : "frozentrailertargeting_es",
+  "image" : "frozentrailer.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "piercing" : true,
+  
+  "periodicActions" : [ ],
+  "actionOnReap" : [ 
+    {
+	  "action" : "projectile",
+	  "type" : "frozentrailer_es",
+	  "config" : {
+	    "power" : 25
+	  }
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+	}
+  ],
+
+  "speed" : 0,
+  "timeToLive" : 1.0,
+  "scripts" : [ "/projectiles/targetingprojectile/targetingprojectile.lua" ],
+  "scriptDelta" : 1,
+
+  "explosionAction" : { }
+}

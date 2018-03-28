@@ -1,0 +1,30 @@
+{
+  "projectileName" : "frozentrailer_es",
+  "image" : "frozentrailer.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "megadamageiceplasma",
+  "piercing" : true,
+  
+  "periodicActions" : [ ],
+  "actionOnReap" : [ 
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/elementimpact/iceimpact.config"
+    }
+  ],
+
+  "speed" : 1,
+  "acceleration" : 50,
+  "timeToLive" : 5.0,
+  "scripts" : [ "/projectiles/targetingprojectile/targetingprojectile.lua" ],
+  "scriptDelta" : 1,
+
+  "explosionAction" : { }
+}

@@ -3,22 +3,22 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Explosive ancient lasers, Spray 'n Pray Edition!",
-  "shortdescription" : "^magenta;Gatling Destroyer^reset;",
+  "description" : "A heavy-duty weapon used for stronger enemies that a standard-issue ancient rifle cannot take out.",
+  "shortdescription" : "^magenta;  ^reset;", 
   "tooltipKind" : "gun",
-  "category" : "Chain Gun",
+  "category" : "Ancient Chaos Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 10,
 
-  "inventoryIcon" : "ancientchaingun.png:idle.1",
+  "inventoryIcon" : "ancientchaingunnew.png:idle",
 
   "animation" : "/items/active/weapons/ranged/chaingun/ancientchaingun/ancientchaingun.animation",
   "animationParts" : {
     "butt" : "",
 	"beamorigin" : "rainbowmuzzle.png",
-    "middle" : "ancientchaingun.png",
-	"middleFullbright" : "ancientchaingunfullbright.png",
+    "middle" : "ancientchaingunnew.png",
+	"middleFullbright" : "ancientchaingunnewfullbright.png",
     "barrel" : "",
     "muzzleFlash" : "/items/active/weapons/ranged/chaingun/ancientchaingun/ancientmuzzleflash.png"
   },
@@ -46,8 +46,8 @@
   },
   "animationScripts" : ["/items/active/effects/chain.lua"],
 
-  "baseOffset" : [0.0, -1.0],
-  "muzzleOffset" : [2.5, 0.25],
+  "baseOffset" : [2, 0.0],
+  "muzzleOffset" : [2.3, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -59,7 +59,7 @@
 
     "fireTime" : 0.01,
     "baseDps" : 42.0,
-    "energyUsage" : 50,
+    "energyUsage" : 100,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -80,17 +80,21 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 3,
-        "weaponRotation" : 3,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.01,
-        "armRotation" : 3,
-        "weaponRotation" : 3,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -141,11 +145,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-
-        "animationStates" : {
-          "middle" : "idle"
-        }
+        "allowFlip" : true
       },
       "fire" : {
         "armRotation" : 0,
@@ -156,7 +156,8 @@
         "allowFlip" : true,
 
         "animationStates" : {
-          "middle" : "fire"
+          "middle" : "windup",
+		  "beamorigin" : "fire"
         }
       },
       "cooldown" : {
@@ -169,7 +170,8 @@
         "allowFlip" : true,
 
         "animationStates" : {
-          "middle" : "cooldown"
+          "middle" : "winddown",
+		  "beamorigin" : "idle"
         }
       }
     }

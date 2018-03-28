@@ -21,21 +21,40 @@
 	    "default" : "idle",
 		"states" : {
 		  "idle" : {
-		    "frames" : 8,
-			"cycle" : 1.0,
-			"mode" : "loop"
+		    "frames" : 1
 		  },
 		  "fire" : {
-		    "frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "loop"
+		    "frames" : 3,
+			"cycle" : 0.05,
+			"mode" : "transition",
+			"transition" : "idle"
 		  },
-		  "cooldown" : {
-            "frames" : 1,
+		  "windup" : {
+            "frames" : 6,
+			"cycle" : 0.25,
+			"mode" : "transition",
+			"transition" : "laserfire"
+          },
+		  "laserfire" : {
+		    "frames" : 1
+		  },
+		  "winddown" : {
+            "frames" : 6,
 			"cycle" : 0.5,
 			"mode" : "transition",
 			"transition" : "idle"
           }
+		}
+	  },
+	  "beamorigin" : {
+	    "default" : "idle",
+		"states" : {
+		  "idle" : {},
+		  "fire" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
 		}
 	  }
     },
@@ -59,7 +78,7 @@
 		  "middle" : {
 		    "idle" : {
 			  "properties" : {
-			    "image" : "<partImage>:idle.<frame>"
+			    "image" : "<partImage>:idle"
 			  }
 			},
 			"fire" : {
@@ -67,9 +86,19 @@
 			    "image" : "<partImage>:fire.<frame>"
 			  }
 			},
-			"cooldown" : {
+			"windup" : {
 			  "properties" : {
-			    "image" : "<partImage>:cooldown.<frame>"
+			    "image" : "<partImage>:windup.<frame>"
+			  }
+			},
+			"laserfire" : {
+			  "properties" : {
+			    "image" : "<partImage>:laserfire"
+			  }
+			},
+			"winddown" : {
+			  "properties" : {
+			    "image" : "<partImage>:winddown.<frame>"
 			  }
 			}
 		  }
@@ -80,14 +109,14 @@
           "centered" : true,
 		  "fullbright" : true,
 		  "zLevel" : 3,
-          "offset" : [0, -1.0], // x offset is set dynamically
+          "offset" : [2, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         },
 		"partStates" : {
 		  "middle" : {
 		    "idle" : {
 			  "properties" : {
-			    "image" : "<partImage>:idle.<frame>"
+			    "image" : "<partImage>:idle"
 			  }
 			},
 			"fire" : {
@@ -95,9 +124,19 @@
 			    "image" : "<partImage>:fire.<frame>"
 			  }
 			},
-			"cooldown" : {
+			"windup" : {
 			  "properties" : {
-			    "image" : "<partImage>:cooldown.<frame>"
+			    "image" : "<partImage>:windup.<frame>"
+			  }
+			},
+			"laserfire" : {
+			  "properties" : {
+			    "image" : "<partImage>:laserfire"
+			  }
+			},
+			"winddown" : {
+			  "properties" : {
+			    "image" : "<partImage>:winddown.<frame>"
 			  }
 			}
 		  }
@@ -132,15 +171,15 @@
       },
       "beamorigin" : {
         "properties" : {
-          "zLevel" : 2,
+          "zLevel" : 4,
           "centered" : true,
-          "offset" : [2.75, -0.90],
+          "offset" : [4.375, 0],
           "fullbright" : true,
           "transformationGroups" : ["weapon"]
         },
 
         "partStates" : {
-          "middle" : {
+          "beamorigin" : {
             "idle" : {},
             "fire" : {
               "properties" : {

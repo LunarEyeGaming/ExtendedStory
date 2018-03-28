@@ -1,0 +1,80 @@
+{
+  "projectileName" : "frostblockshooting_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [
+	{
+      "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/frostblock/frostblockshooting_es/frostblockshooting_es.png",
+		"position" : [0, 0],
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0.02,
+		"destructionTime" : 0
+	  }
+	},
+	{
+      "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "direction" : [0, 1],
+	  "config" : {
+	    "power" : 500
+	  }
+	},
+	{
+      "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "direction" : [0, -1],
+	  "config" : {
+	    "power" : 500
+	  }
+	},
+	{
+      "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "direction" : [1, 0],
+	  "config" : {
+	    "power" : 500
+	  }
+	},
+	{
+      "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "direction" : [-1, 0],
+	  "config" : {
+	    "power" : 500
+	  }
+	},
+	{
+      "time" : 0.2,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+	}
+  ],
+  "physicsCollisions" : {
+    "frostblock" : {
+      "collision" : [ [3, 4], [3, -4], [-3, -4], [-3, 4] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "actionOnReap" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 20,
+  "timeToLive" : 0.4
+}

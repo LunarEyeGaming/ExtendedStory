@@ -22,7 +22,7 @@
       "/monsters/boss/destroyer/dieState.lua"
     ],
 
-    "skills" : ["destroyerBulletCirclesAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"],
+    "skills" : ["destroyerBulletCirclesAttack", "destroyerSwoopAttack", "destroyerSkyGapAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"],
     "skillCount" : 6,
 
     "phases" : [
@@ -30,28 +30,28 @@
         "skills" : ["destroyerBulletCirclesAttack", "destroyerSwoopAttack"]
       },
       {
-        "enterPhase" : "destroyerMinionsAttack",
+        "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerMinionsAttack", "destroyerBulletCirclesAttack", "destroyerMinionsAttack", "destroyerSkyMegaLaserAttack", "destroyerMinionsAttack", "destroyerBulletCirclesAttack", "destroyerMinionsAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyGapAttack", "destroyerBulletCirclesAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerBulletCirclesAttack", "destroyerSkyGapAttack"]
       },
       {
-        "enterPhase" : "destroyerMinionsAttack",
+        "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.6,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"]
       },
       {
         "enterPhase" : "destroyerSkyMegaLaserAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.4,
-        "skills" : ["destroyerGiantLaserShotAttack", "destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerMinionsAttack", "destroyerGiantLaserShotAttack", "destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerGiantLaserShotAttack", "destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerGiantLaserShotAttack", "destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack"]
       },
       {
         "enterPhase" : "destroyerSkyMegaLaserAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.2,
-        "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerScatterAttack"]
       }
     ],
 

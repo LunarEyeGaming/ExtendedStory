@@ -5,9 +5,9 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "Not your typical rocket launcher.",
-  "shortdescription" : "^magenta;Ancient Rocket Launcher^reset;",
+  "shortdescription" : "^magenta; ^reset;",
   "tooltipKind" : "gun",
-  "category" : "rocketLauncher",
+  "category" : "Ancient Cannon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
 
@@ -96,7 +96,7 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "Orbital Painter", "projectileType" : "orbitallaunch", "projectileParameters" : {"speed" : 200, "actionOnReap" : [{"action" : "projectile", "type" : "targetexplosion", "angle" : 0, "config" : {"bounces" : -1, "timeToLive" : 2.5, "periodicActions" : [{"time" : 0.5, "action" : "sound", "options" : ["/sfx/interface/rocket_lockon.ogg"]}, {"time" : 0, "repeat" : false, "action" : "sound", "options" : ["/sfx/interface/rocket_lockon.ogg"]}, {"time" : 0, "repeat" : false, "action" : "sound", "options" : ["/sfx/projectiles/redgiant.ogg"]}]}}, {"action" : "projectile", "type" : "energyfist", "direction" : [0.0, 1.0], "config" : {"speed" : 50, "piercing" : true, "timeToLive" : 2, "power" : 0, "processing" : "?0", "periodicActions" : [], "actionOnReap" : [{"action" : "projectile", "type" : "invisibleprojectile", "direction" : [0.0, -1.0], "config" : {"damageTeam" : {"type" : "friendly"}, "power" : 0, "piercing" : true, "speed" : 200, "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg", "timeToLive" : 5, "periodicActions" : [{"time" : 0.01, "action" : "particle", "rotate" : true, "specification" : {"type" : "textured", "image" : "/projectiles/activeitems/staff/thunderbeam/thunderbeam.png:0?replace;8383df=a451c4;c4c4f5=d29ce7?scalenearest;2;1", "timeToLive" : 3, "initialVelocity" : [0, 0], "fullbright" : true, "finalVelocity" : [0, 0], "fade" : 1.0, "destructionAction" : "shrink", "destructionTime" : 0.01, "variance" : {}}}], "actionOnReap" : [{"action" : "projectile", "type" : "invisibleprojectile", "config" : {"damageTeam" : {"type" : "friendly"}, "power" : 0, "piercing" : true, "bounces" : -1, "timeToLive" : 3, "actionOnReap" : [{"action" : "projectile", "type" : "vaporizerexplosionexpansionmod", "config" : {"processing" : "?hueshift=90?scalenearest;10;10"}}, {"action" : "sound", "options" : ["/sfx/npc/boss/guardian_death_explosion.ogg"]}], "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg"}}, {"action" : "sound", "options" : ["/sfx/npc/boss/tentacleboss_beam_blast.ogg"]}, {"action" : "projectile", "type" : "lightballout", "config" : {"processing" : "?hueshift=230?scalenearest;3;3", "timeToLive" : 3, "animationCycle" : 0.4}}]}}]}}]}}
+      "physical" : { "name" : "Ancient Vortex", "projectileType" : "ancientvortexprepare", "projectileParameters" : {"speed" : 80}}
 	  },
 
     "stances" : {

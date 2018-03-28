@@ -1,0 +1,605 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+		  },
+          "blink" : {
+            "frames" : 3,
+            "cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "idle"
+          },
+          "fade" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "transition",
+			"transition" : "transparent"
+          },
+          "transparent" : {
+            "frames" : 1
+          },
+          "reappear" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "transition",
+			"transition" : "idle"
+          },
+          "windup" : {
+            "frames" : 3,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "fire"
+          },
+          "fire" : {
+            "frames" : 1
+          },
+          "winddown" : {
+            "frames" : 3,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "winduplaser" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "charged"
+          },
+          "charged" : {
+            "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+          },
+		  "winddownlaser" : {
+		    "frames" : 5,
+			"cycle" : 0.5,
+			"mode" : "transition",
+            "transition" : "idle"
+		  },
+		  "hurt" : {
+		    "frames" : 4,
+			"cycle" : 0.3,
+			"mode" : "loop"
+		  },
+		  "dying" : {
+		    "frames" : 3,
+			"cycle" : 3.0,
+			"mode" : "transition",
+			"transition" : "dying2"
+		  },
+		  "dying2" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "dying3"
+		  },
+		  "dying3" : {
+		    "frames" : 3,
+			"cycle" : 6.0
+		  }
+        }
+      },
+	  "beam1" : {
+		"priority" : 0,
+		"default" : "off",
+		"states" : {
+		  "off" : {},
+	      "windup" : {
+			"frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "fire",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
+              "immediateSoundRangeMultiplier" : 2.0
+            }
+		  },
+		  "fire" : {
+			"frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
+              "persistentSoundRangeMultiplier" : 2.0
+            }
+		  },
+		  "winddown" : {
+			"frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "off",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
+              "immediateSoundRangeMultiplier" : 2.0
+            }
+		  }
+		}
+	  },
+	  "beam2" : {
+		"priority" : 0,
+		"default" : "off",
+		"states" : {
+		  "off" : {},
+		  "windup" : {
+			"frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "fire"
+		  },
+		  "fire" : {
+			"frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  },
+		  "winddown" : {
+			"frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+		}
+	  },
+
+      "sound" : {
+        "priority" : 0,
+        "default" : "off",
+        "states" : {
+          "off" : {
+          },
+          "sweep" : {
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/spiderboss_idle1.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
+          },
+          "hatch" : {
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/spiderboss_idle2.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "transformationGroups" : [ "body" ]
+        },
+
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle"
+              }
+            },
+            "blink" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.blink.<frame>"
+              }
+            },
+            "fade" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.fade.<frame>"
+              }
+            },
+            "transparent" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.transparent"
+              }
+            },
+            "reappear" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.reappear.<frame>"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.windup.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.fire"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddown.<frame>"
+              }
+            },
+            "winduplaser" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winduplaser.<frame>"
+              }
+            },
+            "charged" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.charged.<frame>"
+              }
+            },
+            "winddownlaser" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddownlaser.<frame>"
+              }
+            },
+            "hurt" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.hurt.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:dying.<frame>"
+              }
+            },
+            "dying2" : {
+              "properties" : {
+                "image" : "<partImage>:dying2.<frame>"
+              }
+            },
+            "dying3" : {
+              "properties" : {
+                "image" : "<partImage>:dying3.<frame>"
+              }
+            }
+          },
+
+          "sound" : {}
+        }
+	  },
+      "beam1" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+		  "fullbright" : true,
+		  "offset" : [0, -31.25],
+          "transformationGroups" : [ "beam1" ]
+        },
+
+        "partStates" : {
+          "beam1" : {
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>",
+                "damageArea" : [ [-1, 32], [1, 32], [1, -31.25], [-1, -31.25] ]
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown"
+              }
+            }
+		  }
+        }
+      },
+      "beam2" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+		  "fullbright" : true,
+		  "offset" : [0, -31.25],
+          "transformationGroups" : [ "beam2" ]
+        },
+
+        "partStates" : {
+          "beam2" : {
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>",
+                "damageArea" : [ [-1, 32], [1, 32], [1, -31.25], [-1, -31.25] ]
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown"
+              }
+            }
+		  }
+        }
+      }
+    }
+  },
+
+  "globalTagDefaults" : {
+    "stage" : "stage1"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"beam1" : {"interpolated" : true},
+	"beam2" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+
+    "deathWindup" : {
+      "emissionRate" : 5,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" }
+      ]
+    },
+    "deathWindupExplosions" : {
+      "emissionRate" : 5,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" },
+        { "particle" : "monstersplosion" }
+      ]
+    },
+    "deathPoof" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-6, -7, 6, 0],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/puff2c/puff2c.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" }
+      ]
+    },
+    "slam" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-8, -10, 8, -8],
+      "particles" : [
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" }
+      ]
+    },
+    "shellshards" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-6, -7, 6, 0],
+      "particles" : [
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard2" },
+        { "particle" : "shellshard3" },
+        { "particle" : "shellshard4" },
+        { "particle" : "shellshard5" },
+        { "particle" : "shellshard6" }
+      ]
+    },
+    "slide" : {
+      "emissionRate" : 5,
+      "offsetRegion" : [-6, -6, 6, 6],
+      "particles" : [
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" },
+        { "particle" : "dust2" }
+      ]
+    },
+    "cocoonburst" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-6, -8, 6, 8],
+      "particles" : [
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" },
+        { "particle" : "shellshard1" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "iciclewindup" : {
+      "pool" : [ "/sfx/melee/charge_combo7.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "iciclewinddown" : {
+      "pool" : [ "/sfx/npc/boss/frostguardianboss_frostblockwinddown.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "frostblockwindup" : {
+      "pool" : [ "/sfx/melee/charge_up10.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "frostblockwinddown" : {
+      "pool" : [ "/sfx/npc/boss/kluexboss_phase1.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "shelldamaged" : {
+      "pool" : [ "/sfx/objects/prism_break_large1.ogg", "/sfx/objects/prism_break_large2.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "pain" : {
+      "pool" : [ "/sfx/npc/boss/robotboss_pain1.ogg", "/sfx/npc/boss/robotboss_pain2.ogg", "/sfx/npc/boss/robotboss_pain3.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+	"laserwindup" : {
+	  "pool" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ],
+	  "rangeMultiplier" : 1.5
+	},
+    "dyingpart2" : {
+      "pool" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+	"corecrack" : {
+	  "pool" : [ "/sfx/npc/boss/fg_coreray.ogg" ],
+	  "rangeMultiplier" : 1.5
+	},
+    "explode" : {
+      "pool" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "hurt" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_shellbreak1.ogg", "/sfx/npc/boss/spiderboss_shellbreak2.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "generateshell" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_shellrestore.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "cocooncrack" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_cocooncrack.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "cocoonburst" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_cocoonburst.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "death" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

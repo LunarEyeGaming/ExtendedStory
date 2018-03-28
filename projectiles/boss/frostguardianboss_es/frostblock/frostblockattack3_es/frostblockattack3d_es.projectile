@@ -1,0 +1,24 @@
+{
+  "projectileName" : "frostblockattack3d_es",
+  "image" : "frostblock_6x8.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "piercing" : true,
+  "emitters" : [ ],
+  "periodicActions" : [
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "frostblockattack3_es"
+    }
+  ],
+
+  "onlyHitTerrain" : true,
+  "damageKind" : "hammer",
+
+  "speed" : 60,
+  "timeToLive" : 0.5
+}

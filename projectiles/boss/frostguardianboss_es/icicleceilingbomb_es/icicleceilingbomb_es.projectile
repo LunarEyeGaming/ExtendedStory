@@ -1,0 +1,33 @@
+{
+  "projectileName" : "icicleceilingbomb_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 40,
+  "timeToLive" : 0.7,
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "direction" : [0, -1],
+	  "config" : {
+	    "speed" : 30,
+		"power" : 500,
+		"processing" : "?scalenearest=2",
+		"actionOnReap" : [
+		  {
+		    "action" : "config",
+			"file" : "/projectiles/explosions/megadamageexplosion/megadamageiceexplosionknockback.config"
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

@@ -1,0 +1,24 @@
+{
+  "itemName" : "ancienthealing",
+  "rarity" : "Legendary",
+  "price" : 150,
+  "category" : "Ancient Healer",
+  "inventoryIcon" : "ancienthealing.png",
+  "description" : "Converts ancient energy into repair material. Restores 150 health over 1 second.",
+  "shortdescription" : "^magenta; ^reset;",
+  "effects" : [ [
+      {
+        "effect" : "ancientheal"
+      }
+    ] ],
+  "emote" : "",
+  "emitters" : [ "bandageuse" ],
+  "blockingEffects" : [
+    "salveheal",
+    "bandageheal",
+    "medkitheal",
+    "nanowrapheal",
+	"ancientheal",
+	"ancientheal2"
+  ]
+}

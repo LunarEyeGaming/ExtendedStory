@@ -1,0 +1,54 @@
+{
+  "projectileName" : "fg_icicletargeting",
+  "image" : "fg_icicle.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+  "piercing" : true,
+  
+  "periodicActions" : [
+    {
+	  "time" : 0.05,
+	  "repeat" : false,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+	    "type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/fg_icicle/fg_icicle.png?setcolor=ffffff",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "actionOnReap" : [ 
+    {
+	  "action" : "projectile",
+	  "type" : "fg_icicle",
+	  "config" : {
+	    "power" : 400
+	  }
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+	}
+  ],
+
+  "speed" : 0,
+  "timeToLive" : 1.0,
+  "scripts" : [ "/projectiles/targetingprojectile/targetingprojectile.lua" ],
+  "scriptDelta" : 1,
+  "renderLayer" : "Monster+50",
+
+  "explosionAction" : { }
+}

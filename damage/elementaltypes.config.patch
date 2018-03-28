@@ -124,5 +124,19 @@
         "kill": "iondamagenumber"
       }
     }
+  },
+  {
+    "op": "add",
+    "path": "/gatespawner",
+    "value": {
+      "resistanceStat": "gatespawnerResistance",
+      "damageNumberParticles": {
+        "hit": "damagenumber",
+        "stronghit": "damagenumberstrong",
+        "weakhit": "damagenumberweak",
+        "shieldhit": "damagenumber",
+        "kill": "damagenumber"
+      }
+    }
   }
 ]

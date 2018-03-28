@@ -1,0 +1,69 @@
+{
+  "projectileName" : "fg_iceplatform_es",
+  "image" : "fg_iceplatform_es.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
+    },
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "fg_iceplatformouter_es",
+	  "offset" : [9, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"timeToLive" : 1.5
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "fg_iceplatformouter_es",
+	  "offset" : [-9, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"timeToLive" : 1.5
+	  }
+	},
+	{
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/fg_iceplatform_es/fg_iceplatform_es.png?setcolor=ffffff",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "physicsCollisions" : {
+    "iceplatform" : {
+      "collision" : [ [18, 0.5], [18, -0.5], [-18, -0.5], [-18, 0.5] ],
+      "collisionKind" : "platform",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "actionOnReap" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 0,
+  "timeToLive" : 1.5
+}

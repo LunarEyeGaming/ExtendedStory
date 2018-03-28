@@ -1,0 +1,19 @@
+{
+  "spawnFrostBlocks": {
+    "type": "action",
+    "name": "spawnFrostBlocks",
+    "title": "spawnFrostBlocks",
+    "properties": {
+      "areaHeight": {"type": "number", "value": 36},
+      "center": {"type": "position", "key": "self"},
+      "blockCount": {"type": "number", "value": 3},
+      "blockWidth": {"type": "number", "value": 6},
+      "projectileType": {"type": "string", "value": "frostblockattack1_es"}
+    },
+    "category": "frostguardianboss",
+    "script": "/scripts/actions/boss/frostguardianboss.lua",
+    "output": {
+      "frostBlocks": {"type": "list", "key": null}
+    }
+  }
+}

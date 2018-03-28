@@ -1,0 +1,49 @@
+{
+  "name" : "destroyerSkyGapAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerSkyGapAttack.lua" ],
+
+    "destroyerSkyGapAttack" : {
+      "skillTime": 12,
+      "bobTime" : 2,
+      "bobHeight" : 3,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 1.5,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+          "power" : 0,
+		  "damageTeam" : { "type" : "enemy" },
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/projectiles/astraltear_stop2.ogg" ]
+            },
+			{
+			  "time" : 0,
+			  "repeat" : false,
+			  "action" : "loop",
+			  "count" : 20,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "redplasmatorpedo",
+				  "angle" : -90,
+				  "offsetRange" : [50, 50, -50, 50],
+				  "config" : {"power" : 10, "speed" : 20, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ { "time" : 0, "repeat" : false, "action" : "projectile", "type" : "redpulsecannonexplosion"} ] }
+				}
+			  ]
+			}
+          ]
+        }
+      }
+    }
+  }
+}

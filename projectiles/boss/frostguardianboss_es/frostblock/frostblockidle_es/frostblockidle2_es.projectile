@@ -1,0 +1,25 @@
+{
+  "projectileName" : "frostblockidle2_es",
+  "image" : "frostblock_6x8.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [ ],
+  "actionOnReap" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+  "physicsCollisions" : {
+    "frostblock" : {
+      "collision" : [ [3, 4], [3, -4], [-3, -4], [-3, 4] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  },
+
+  "speed" : 0,
+  "timeToLive" : 2.5
+}

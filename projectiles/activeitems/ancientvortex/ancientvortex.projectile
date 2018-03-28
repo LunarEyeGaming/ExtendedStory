@@ -1,0 +1,157 @@
+{
+  "projectileName" : "ancientvortex",
+  "physics" : "laser",
+  "image" : "ancientflare.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.5,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "frameNumber" : 1,
+  "timeToLive" : 5,
+  "piercing" : true,
+  "power" : 50,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+    	"initialVelocity" : [0, 0],
+    	"finalVelocity" : [0, 0],
+    	"approach" : [12, 12],
+		"destructionAction" : "fade",
+		"timeToLive" : 2,
+		"destructionTime" : 0.8,
+		"variance" : {
+          "initialVelocity" : [24.0, 24.0],
+          "finalVelocity" : [12.0, 12.0]
+        }
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/flares/ancientflare.png?scalenearest=2",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.2
+	  }
+	},
+	{
+	  "time" : 0.2,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/flares/ancientflare.png",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.2
+	  }
+	},
+	{
+	  "time" : 0.1,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/flares/ancientflare.png?scalenearest=0.5",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.2,
+		"variance" : {
+		  "position" : [4, 4]
+		}
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "invisibleprojectile",
+		  "fuzzAngle" : 180,
+		  "config" : {
+		    "speed" : 50,
+		    "power" : 10,
+		    "piercing" : true,
+		    "timeToLive" : 5,
+			"damageTeam" : {"type" : "friendly"},
+		    "periodicActions" : [
+		      {
+		        "time" : 0.08,
+		  	    "action" : "particle",
+		  	    "rotate" : true,
+			    "specification" : {
+			      "type" : "textured",
+			      "image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+			      "position" : [0, 0],
+			      "fullbright" : true,
+			      "layer" : "middle",
+			      "destructionAction" : "fade",
+			      "timeToLive" : 0,
+			      "destructionTime" : 0.8
+			    }
+		      }
+		    ],
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+			  }
+			]
+		  }
+		}
+	  ]
+	},
+	{
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/flares/ancientflare.png?scalenearest=5",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "front",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 1.0
+	  }
+	}
+  ],
+  "boundBox" : [-40, -40, 40, 40],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 80,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "emitters" : [ ],
+  "persistentAudio" : "/sfx/projectiles/ancientvortex_loop.ogg",
+  "damageKind" : "plasmabullet"
+}

@@ -1,0 +1,37 @@
+{
+  "projectileName" : "supervoidgrenade",
+  "image" : "supervoidgrenade.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "physics" : "grenade",
+  "timeToLive" : 0.5,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "option",
+      "options" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "tentaclespawnervoid_windup_es",
+		  "direction" : [1, 0],
+		  "config" : {
+		    "speed" : 0
+		  }
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "destroyervoid_windup_es",
+		  "direction" : [1, 0],
+		  "config" : {
+		    "speed" : 0
+		  }
+		}
+	  ]
+    }
+  ],
+  "power" : 0.0,
+  "speed" : 45,
+  "lightColor" : [128, 0, 128],
+  "damageType" : "ignoresdef",
+  "damageKind" : "nodamage"
+}

@@ -1,0 +1,38 @@
+{
+  "projectileName" : "destroyervoid_windup_es",
+  "image" : "destroyervoid_windup_es.png",
+  "animationCycle" : 1,
+  "frameNumber" : 10,
+  "physics" : "illusion",
+  "timeToLive" : 1.0,
+  "bounces" : 0,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/gravitymine_detonate.ogg" ]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/monsters/monster_grow.ogg" ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "explosivedestroyerminion2",
+	  "level" : 10,
+	  "arguments" : {
+	    "damageTeamType" : "friendly"
+	  }
+    }
+  ],
+  "power" : 0.0,
+  "speed" : 45,
+  "lightColor" : [128, 0, 128],
+  "damageType" : "ignoresdef",
+  "damageKind" : "nodamage"
+}

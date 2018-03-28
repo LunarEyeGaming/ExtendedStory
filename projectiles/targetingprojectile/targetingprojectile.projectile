@@ -23,13 +23,5 @@
   "scriptDelta" : 1,
   "renderLayer" : "Monster+50",
 
-  "explosionAction" : {
-    "action" : "actions",
-    "list" : [
-      {
-        "action" : "light",
-        "color" : "red"
-      }
-    ]
-  }
+  "explosionAction" : { }
 }

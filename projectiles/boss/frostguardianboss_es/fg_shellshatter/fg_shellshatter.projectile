@@ -1,0 +1,57 @@
+{
+  "projectileName" : "fg_shellshatter",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "option",
+		  "options" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es1",
+			  "fuzzAngle" : 180
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es2",
+			  "fuzzAngle" : 180
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es3",
+			  "fuzzAngle" : 180
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es4",
+			  "fuzzAngle" : 180
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es5",
+			  "fuzzAngle" : 180
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "fg_shellshard_es6",
+			  "fuzzAngle" : 180
+			}
+		  ]
+		}
+	  ]
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

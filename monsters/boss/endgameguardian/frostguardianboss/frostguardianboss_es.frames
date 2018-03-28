@@ -1,0 +1,78 @@
+{
+  "frameGrid" : {
+    "size" : [199, 206],
+    "dimensions" : [15, 6],
+	// "dimensions" : [15, 7],
+
+    "names" : [
+      [ "stage1.idle", "stage1.blink.1", "stage1.blink.2", null, null, "stage2.idle", "stage2.blink.1", "stage2.blink.2", null, null, "stage3.idle", "stage3.blink.1", "stage3.blink.2"],
+      [ "stage1.fade.1", "stage1.fade.2", "stage1.fade.3", "stage1.fade.4", "stage1.transparent", "stage2.fade.1", "stage2.fade.2", "stage2.fade.3", "stage2.fade.4", "stage2.transparent", "stage3.fade.1", "stage3.fade.2", "stage3.fade.3", "stage3.fade.4", "stage3.transparent" ],
+      [ "stage1.windup.1", "stage1.windup.2", "stage1.windup.3", "stage1.fire", null, "stage2.windup.1", "stage2.windup.2", "stage2.windup.3", "stage2.fire", null, "stage3.windup.1", "stage3.windup.2", "stage3.windup.3", "stage3.fire"],
+      [ "stage1.winduplaser.5", "stage1.charged.1", "stage1.charged.2", "stage1.charged.3", "stage1.charged.4", "stage2.winduplaser.5", "stage2.charged.1", "stage2.charged.2", "stage2.charged.3", "stage2.charged.4", "stage3.winduplaser.5", "stage3.charged.1", "stage3.charged.2", "stage3.charged.3", "stage3.charged.4"],
+      [ "stage2.hurt.1", "stage2.hurt.2", "stage2.hurt.3", "stage2.hurt.4", null, "stage3.hurt.1", "stage3.hurt.2", "stage3.hurt.3", "stage3.hurt.4" ],
+	  [ "dying.1", "dying.2", "dying.3", "dying2.1", "dying2.2", "dying2.3", "dying3.1", "dying3.2", "dying3.3" ] // ,
+	  // [ "dying2.1", "dying2.2", "dying2.3", "dying2.4", "dying2.5" ]
+    ]
+  },
+  
+  "aliases" : {
+    "stage1.blink.3" : "stage1.blink.1",
+	"stage1.winduplaser.1" : "stage1.windup.1",
+	"stage1.winduplaser.2" : "stage1.windup.2",
+	"stage1.winduplaser.3" : "stage1.windup.3",
+	"stage1.winduplaser.4" : "stage1.fire",
+	
+	"stage1.reappear.1" : "stage1.fade.4",
+	"stage1.reappear.2" : "stage1.fade.3",
+	"stage1.reappear.3" : "stage1.fade.2",
+	"stage1.reappear.4" : "stage1.fade.1",
+	"stage1.winddown.1" : "stage1.windup.3",
+	"stage1.winddown.2" : "stage1.windup.2",
+	"stage1.winddown.3" : "stage1.windup.1",
+	"stage1.winddownlaser.1" : "stage1.winduplaser.5",
+	"stage1.winddownlaser.2" : "stage1.winduplaser.4",
+	"stage1.winddownlaser.3" : "stage1.winduplaser.3",
+	"stage1.winddownlaser.4" : "stage1.winduplaser.2",
+	"stage1.winddownlaser.5" : "stage1.winduplaser.1",
+	
+	
+	"stage2.blink.3" : "stage2.blink.1",
+	"stage2.winduplaser.1" : "stage2.windup.1",
+	"stage2.winduplaser.2" : "stage2.windup.2",
+	"stage2.winduplaser.3" : "stage2.windup.3",
+	"stage2.winduplaser.4" : "stage2.fire",
+	
+	"stage2.reappear.1" : "stage2.fade.4",
+	"stage2.reappear.2" : "stage2.fade.3",
+	"stage2.reappear.3" : "stage2.fade.2",
+	"stage2.reappear.4" : "stage2.fade.1",
+	"stage2.winddown.1" : "stage2.windup.3",
+	"stage2.winddown.2" : "stage2.windup.2",
+	"stage2.winddown.3" : "stage2.windup.1",
+	"stage2.winddownlaser.1" : "stage2.winduplaser.5",
+	"stage2.winddownlaser.2" : "stage2.winduplaser.4",
+	"stage2.winddownlaser.3" : "stage2.winduplaser.3",
+	"stage2.winddownlaser.4" : "stage2.winduplaser.2",
+	"stage2.winddownlaser.5" : "stage2.winduplaser.1",
+	
+	
+	"stage3.blink.3" : "stage3.blink.1",
+	"stage3.winduplaser.1" : "stage3.windup.1",
+	"stage3.winduplaser.2" : "stage3.windup.2",
+	"stage3.winduplaser.3" : "stage3.windup.3",
+	"stage3.winduplaser.4" : "stage3.fire",
+	
+	"stage3.reappear.1" : "stage3.fade.4",
+	"stage3.reappear.2" : "stage3.fade.3",
+	"stage3.reappear.3" : "stage3.fade.2",
+	"stage3.reappear.4" : "stage3.fade.1",
+	"stage3.winddown.1" : "stage3.windup.3",
+	"stage3.winddown.2" : "stage3.windup.2",
+	"stage3.winddown.3" : "stage3.windup.1",
+	"stage3.winddownlaser.1" : "stage3.winduplaser.5",
+	"stage3.winddownlaser.2" : "stage3.winduplaser.4",
+	"stage3.winddownlaser.3" : "stage3.winduplaser.3",
+	"stage3.winddownlaser.4" : "stage3.winduplaser.2",
+	"stage3.winddownlaser.5" : "stage3.winduplaser.1"
+  }
+}

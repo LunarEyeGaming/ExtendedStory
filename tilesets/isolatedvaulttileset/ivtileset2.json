@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":27,
+ "tilecount":29,
  "tileheight":82,
  "tileproperties":
     {
@@ -156,6 +156,14 @@
      "26":
         {
          "material":"radioactivematerial"
+        },
+     "27":
+        {
+         "material":"iceblock2_es"
+        },
+     "28":
+        {
+         "material":"iceplatform_es"
         },
      "3":
         {
@@ -369,6 +377,14 @@
         {
          "material":"string"
         },
+     "27":
+        {
+         "material":"string"
+        },
+     "28":
+        {
+         "material":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -553,6 +569,18 @@
      "26":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/radioactivematerial.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "27":
+        {
+         "image":"..\/..\/..\/..\/tiled\/packed\/materials\/iceblock.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/iceplatform_es.png",
          "imageheight":8,
          "imagewidth":8
         },

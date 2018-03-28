@@ -3,10 +3,10 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "The ultimate handheld cannon designed for total annihilation.",
-  "shortdescription" : "^magenta;The Obliterator^reset;",
+  "description" : "A remnant of the supervoid eye's power. It can still destroy everything.",
+  "shortdescription" : "^#a8009e;The Obliterator^reset;",
   "tooltipKind" : "base",
-  "category" : "^red;Mega Weapon",
+  "category" : "^black;???",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
@@ -16,7 +16,7 @@
   "animation" : "supervoidobliterator.animation",
   "animationParts" : {
     "gun" : "supervoidobliterator.png",
-    "gunfullbright" : "supervoidobliteratorfullbright.png"
+    "gunfullbright" : "supervoidobliteratorunlit.png"
   },
   "animationCustom" : {},
   "muzzleOffset" : [2.5, 0.5],
@@ -239,198 +239,12 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {
-	    "projectileType" : "gravitymine",
-		"projectileParameters" : {
-		  "speed" : 50,
-		  "timeToLive" : 5,
-		  "piercing" : false,
-		  "onlyHitTerrain" : false,
-          "actionOnReap" : [
-            {
-              "action" : "projectile",
-              "inheritDamageFactor" : 1,
-              "inheritSpeedFactor" : 0,
-              "type" : "gravitysphere",
-			  "config" : {
-			    "timeToLive" : 11,
-				"processing" : "?brightness=-90?border=3;FF00FF;40004066",
-				"fullbright" : true,
-			    "periodicActions" : [
-				  {
-				    "time" : 0.5,
-					"action" : "projectile",
-					"type" : "blackholegravity"
-				  },
-				  {
-				    "time" : 1,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 1,
-					"backgroundRadius" : 1,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 1,
-					"action" : "sound",
-					"options" : [ "/sfx/projectiles/blackhole_destroy.ogg" ]
-				  },
-				  {
-				    "time" : 2,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 4,
-					"backgroundRadius" : 4,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 3,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 6,
-					"backgroundRadius" : 6,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 4,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 8,
-					"backgroundRadius" : 8,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 5,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 10,
-					"backgroundRadius" : 10,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 5,
-					"repeat" : false,
-					"action" : "projectile",
-					"type" : "blackholegravity"
-				  },
-				  {
-				    "time" : 6,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 11,
-					"backgroundRadius" : 11,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 6,
-					"repeat" : false,
-					"action" : "projectile",
-					"type" : "blackholegravity"
-				  },
-				  {
-				    "time" : 7,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 12,
-					"backgroundRadius" : 12,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 7,
-					"repeat" : false,
-					"action" : "projectile",
-					"type" : "blackholegravity"
-				  },
-				  {
-				    "time" : 8,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 13,
-					"backgroundRadius" : 13,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 8,
-					"repeat" : false,
-					"action" : "projectile",
-					"type" : "blackholegravity",
-					"offsetRange" : [1, 1, -1, -1]
-				  },
-				  {
-				    "time" : 9,
-					"repeat" : false,
-					"action" : "explosion",
-					"foregroundRadius" : 14,
-					"backgroundRadius" : 14,
-					"explosiveDamageAmount" : 400,
-					"delaySteps" : 2,
-					"harvestLevel" : 90
-				  },
-				  {
-				    "time" : 9,
-					"repeat" : false,
-					"action" : "projectile",
-					"type" : "blackholegravity",
-					"offsetRange" : [1, 1, -1, -1]
-				  },
-				  {
-	 			    "time" : 0.5,
-	  		        "action" : "loop",
-	                "count" : 10,
-	                "body" : [
-	                  {
-	                    "action" : "projectile",
-		                "type" : "presupervoidbullet",
-		                "angle" : 90,
-		                "fuzzAngle" : 180,
-						"config" : {
-						  "actionOnReap" : [
-						    {
-							  "action" : "projectile",
-							  "type" : "supervoidbullet",
-							  "config" : {
-							    "timeToLive" : 2,
-								"actionOnReap" : [
-								  {
-								    "action" : "projectile",
-									"type" : "supervoidbulletexplosion"
-								  }
-								]
-							  }
-							}
-						  ]
-						}
-		              }
-	                ]
-	              }
-				]
-			  }
-            },
-            {
-              "action" : "sound",
-              "options" : [ "/sfx/projectiles/gravitymine_detonate.ogg" ]
-            }
-          ]
-		}
+	    "projectileType" : "supervoidgrenade",
+		"projectileParameters" : {}
 	  }
     },
-	"fireTime" : 10.0,
-	"energyUsage" : 30,
+	"fireTime" : 2.0,
+	"energyUsage" : 20,
 	"baseDps" : 50
   },
   "learnBlueprintsOnPickup" : [ "supervoidobliterator" ],
