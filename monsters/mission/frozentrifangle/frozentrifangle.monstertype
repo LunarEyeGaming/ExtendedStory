@@ -54,11 +54,12 @@
 		    "rotateToTarget" : true, 
 		    "windupState" : "firewindup", 
 		    "windupTime" : 1.0, 
-		    "projectileType" : "invisibleprojectile",
+		    "projectileType" : "fireplasma",
 		    "projectileParameters" : { 
 		      "speed" : 0, 
-		 	  "power" : 0, 
-			  "damageTeam" : { "type" : "enemy" }, 
+		 	  "power" : 0,
+			  "onlyHitTerrain" : true,
+			  "processing" : "?scalenearest=0", 
 			  "piercing" : true, 
 			  "timeToLive" : 0.2,
 			  "periodicActions" : [

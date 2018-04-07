@@ -1,0 +1,181 @@
+{
+  "itemName" : "prismaticcataclysm",
+  "level" : 6,
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An amazingly powerful gun fueled by prisilite stars.",
+  "shortdescription" : "^cyan;Prism^pink;atic ^green;Catac^magenta;lysm^reset;",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+
+  "inventoryIcon" : [
+    { "image" : "prismaticcataclysm.png:idle.1" }
+  ],
+
+  "animation" : "prismaticcataclysm.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "prismaticcataclysm.png",
+    "middleFullbright" : "prismaticcataclysmunlit.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "lights" : { "glow" : {
+      "active" : true,
+      "position" : [0.75, 0.5],
+      "color" : [101, 52, 120]
+    }},
+    "sounds" : {
+      "fire" : [ "/sfx/gun/mech_energyrifle_fire1.ogg" ],
+	  "altFire" : [ "/sfx/gun/mech_heatrifle_fire1.ogg" ]
+    }
+  },
+  "baseOffset" : [0.5, 0.375],
+  "muzzleOffset" : [1.5, 0.375],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 1.3,
+    "baseDps" : 10.0,
+    "energyUsage" : 24,
+    "inaccuracy" : 0.008,
+    "fireType" : "auto",
+
+    "projectileType" : "prismbeam",
+    "projectileParameters" : {
+      "knockback" : 40,
+      "speed" : 75
+    },
+    "projectileCount" : 1,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0, 
+		"armRotation" : 12,
+		"weaponRotation" : 0,
+		"weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2, 
+		"armRotation" : 12,
+		"weaponRotation" : 0,
+		"weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { 
+	    "name" : "Crystal Spread",
+		"projectileType" : "plasma3",
+		"projectileParameters" : {
+	      "speed" : 75,
+		  "processing":"?hueshift=-30",
+		  "periodicActions" : [
+		    { 
+			  "time" : 0.01,
+			  "action" : "particle",
+			  "rotate" : true,
+			  "specification" : {
+			    "type" : "textured",
+				"image" : "/projectiles/guns/plasmabullets/plasma4pink/plasma4pink.png",
+				"position" : [-2.0, 0],
+				"layer" : "back",
+				"timeToLive" : 0.0,
+				"destructionTime" : 0.2,
+				"destructionAction" : "fade",
+				"fullbright" : true
+			  }
+			}
+		  ], 
+		  "actionOnReap" : [
+		    { 
+			  "action" : "loop",
+			  "count" : 5,
+			  "body" : [
+			    { 
+				  "action" : "projectile",
+				  "type" : "crystalslide",
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : {
+				    "bounces" : -1,
+				    "speed" : 50
+				  }
+		        }
+			  ] 
+		    },
+		    {
+		      "action" : "config",
+			  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
+		    }
+		  ]
+		}
+	  }
+	},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0, 
+		"armRotation" : 12,
+		"weaponRotation" : 0,
+		"weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2, 
+		"armRotation" : 12,
+		"weaponRotation" : 0,
+		"weaponOffset" : [-0.4, 0],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+	"fireTime" : 1.0,
+	"projectileCount" : 8,
+	"inaccuracy" : 0.07
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

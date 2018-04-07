@@ -1,0 +1,44 @@
+{
+  "projectileName" : "antimovementzonewindup",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 1.0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 1,
+  "lightColor" : [10, 10, 10],
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 0,
+  "damageKind" : "nodamage",
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/npc/antimovementzone/antimovementzonewindup.png",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.3,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    },
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/darkabyss/antimovementzone_windup.ogg" ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "antimovementzone"
+	}
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "metadata" : {
+    "name" : "nuclearwastelandmicrodungeons",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "portaldungeon1", "portaldungeon2", "portaldungeon3", "freeportal", "chestmicrodungeon1", "chestmicrodungeon2", "chestmicrodungeon3", "chestmicrodungeon4", "cosmetic1", "cosmetic2", "cosmetic3" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "portaldungeon1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "portaldungeon1.json" ]
+    },
+    {
+      "name" : "portaldungeon2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "portaldungeon2.json" ]
+    },
+    {
+      "name" : "portaldungeon3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "portaldungeon3.json" ]
+    },
+    {
+      "name" : "freeportal",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "freeportal.json" ]
+    },
+    {
+      "name" : "chestmicrodungeon1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "chestmicrodungeon1.json" ]
+    },
+    {
+      "name" : "chestmicrodungeon2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "chestmicrodungeon2.json" ]
+    },
+    {
+      "name" : "chestmicrodungeon3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "chestmicrodungeon3.json" ]
+    },
+    {
+      "name" : "chestmicrodungeon4",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "chestmicrodungeon4.json" ]
+    },
+    {
+      "name" : "cosmetic1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cosmetic1.json" ]
+    },
+    {
+      "name" : "cosmetic2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cosmetic2.json" ]
+    },
+    {
+      "name" : "cosmetic3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cosmetic3.json" ]
+    }
+  ]
+}

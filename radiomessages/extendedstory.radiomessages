@@ -1,0 +1,101 @@
+{
+  // ------- LIMBO DIMENSION MESSAGES -------
+  "isolatedvault01" : {
+    "type" : "mission",
+    "text" : "Scans show that life on this planet thrived. For unknown reasons, this planet is now a barren, scorched wasteland."
+  },
+  "isolatedvault02" : {
+    "type" : "mission",
+    "text" : "Readings show an anomaly in the underground; I would advise you explore the area with caution."
+  },
+  "isolatedvault03" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
+    "text" : "^green;Rogue phase complete."
+  },
+  "isolatedvault04" : {
+    "type" : "mission",
+    "text" : "Wait! I'm picking up a transmission from near the core."
+  },
+  "isolatedvault05" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
+    "text" : "^red;Warning: Temperatures are unsustainable. \nBeginning rogue phase.\n^orange;01001100 01101111 01100001 01100100 01101001 01101110 01100111 00101110 00101110 00101110"
+  },
+  "isolatedvault06" : {
+    "type" : "mission",
+    "text" : "It is best that you dig to this area and do what Raziya wanted."
+  },
+  "isolatedvault07" : {
+    "type" : "mission",
+	"senderName" : "Unknown",
+	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
+    "text" : "^red;WARNING: INTRUDER DETECTED! EXTERMINATE INTRUDER IMMEDIATELY!"
+  },
+  // ------- ROBOT FACILITY MESSAGES -------
+  "robotfacility01" : {
+    "type" : "mission",
+	"text" : "This planet is a rare form of the midnight planet, known as the ^#666666;dark abyss^reset;."
+  },
+  "robotfacility02" : {
+    "type" : "mission",
+	"text" : "There are almost no life readings, as it seems that everyone escaped after lockdown, or probably died."
+  },
+  "robotfacility03" : {
+    "type" : "mission",
+	"text" : "Some kind of strange, metallic substance is blocking your way. It is best that you break through using any tool."
+  },
+  "robotfacility04" : {
+    "type" : "mission",
+	"text" : "These rooms are quite dangerous and are riddled with traps. If you don't feel confident trying any of these, feel free to leave and return once you feel confident."
+  },
+  "robotfacility05" : {
+    "type" : "mission",
+	"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you, supposedly being the Bot of Terror Raziya constantly mentions. The chamber contains massive concentrations of the substance."
+  },
+  "robotfacility06" : {
+    "type" : "mission",
+	"text" : "You have found an area that can only be accessed by a cheater. Well done!"
+  },
+  // ------- OTHER MESSAGES -------
+  "limbodoor" : {
+    "type" : "mission",
+    "text" : "This door will take you to a dimension that is abnormally dangerous. I would recommend not exploring the dimension without proper gear."
+  },
+  "biomefreezing" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "WARNING! TEMPERATURES ON THIS PLANET ARE NEAR ABSOLUTE ZERO!\nFurther exploration without the Ancient set will result in a quick death!",
+	"textSpeed" : 70
+  },
+  "biomeblaze" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "WARNING! THE AIR ON THIS PLANET IS BURNING!\nFurther exploration without an Ancient EPP will result in a quick death!",
+	"textSpeed" : 70
+  },
+  "biomeplutonium" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "WARNING! RADIATION LEVELS ON THIS PLANET ARE EXTREMELY LETHAL!\nFurther exploration without an Ancient EPP will result in a quick death!",
+	"textSpeed" : 70
+  },
+  "biomeelectric" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "WARNING! THE AIR ON THIS PLANET HAS EXTREMELY HIGH ELECTRICAL CURRENT!\nFurther exploration without an Ancient EPP will result in a quick death!",
+	"textSpeed" : 70
+  },
+  "chaoticvoid" : {
+    "unique" : false,
+    "text" : "It's worth noting that this world is very chaotic and you are quickly becoming part of this chaotic void. Do not attempt further exploration without the ^red;dark matter EPP^reset;.",
+	"textSpeed" : 70
+  },
+  "spheredeactivater" : {
+    "unique" : false,
+    "text" : "It should be noted that you just entered an area where your ancient sphere has completely stopped working. Do not attempt to use the ancient sphere at this moment.",
+	"textSpeed" : 70
+  }
+}

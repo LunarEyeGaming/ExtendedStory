@@ -464,6 +464,14 @@
                       "resource": {"value": "health"}
                     }
                   },
+				  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
                   {
                     "title": "setGlobalTag",
                     "type": "action",

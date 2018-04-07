@@ -24,10 +24,7 @@
           },
           "fire" : {
             "frames" : 3,
-            "cycle" : 0.3,
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/wisper_fire.ogg"
-            }
+            "cycle" : 0.3
           }
         }
       },
@@ -187,6 +184,7 @@
 
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
-    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire" : [ "/sfx/npc/monsters/wisper_fire.ogg" ]
   }
 }

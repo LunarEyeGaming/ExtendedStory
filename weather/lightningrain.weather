@@ -1,0 +1,52 @@
+{
+  "name" : "lightningrain_es",
+
+  "particles" : [
+    {
+      "density" : 0.1,
+      "particle" : {
+        "type" : "animated",
+        "image" : "/animations/statuseffects/electricalburn/electricalburn.animation",
+        "velocity" : [0, -10],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false,
+		"fullbright" : true
+      }
+    },
+    {
+      "density" : 0.01,
+        "particle" : {
+        "type" : "animated",
+        "image" : "/animations/electriccloudpuff/electriccloudpuff.animation",
+        "velocity" : [0, -10],
+        "angularVelocity" : 180,
+        "timeToLive" : 5,
+        "collidesForeground" : true,
+        "collidesLiquid" : true,
+        "ignoreWind" : false,
+		"fullbright" : true
+      }
+    }
+  ],
+
+  "projectiles" : [
+    {
+      "projectile" : "lightningrain_es",
+      "parameters" : {
+        "power" : 1000
+      },
+      "velocity" : [30, -30],
+      "ratePerX" : 0.005,
+      "spawnAboveRegion" : 30,
+      "spawnHorizontalPad" : 30,
+      "windAffectAmount" : 0.0
+    }
+  ],
+
+  "duration" : [30, 60],
+  "maximumWind" : 15.0,
+  "weatherNoises" : [ "/sfx/gun/antimattercannon_charged.ogg" ]
+}

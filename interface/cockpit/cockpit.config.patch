@@ -46,6 +46,15 @@
   },
   {
     "op" : "add",
+	"path" : "/visitableTypeDescription/voltage",
+    "value" : [
+    "Scans show a surface filled with electrified stone and sand-like material. This world is a ^#a083df;voltage^reset;; its air is ^red;electrically charged^reset;.",
+    "The surface of this ^#a083df;voltage^reset; world consists of electrified material and sand-like material. The air in its atmosphere is ^red;electrically charged^reset;.",
+    "The electrical current inside of this ^#a083df;voltage^reset; world is very high. Its surface has electrified material and ^red;electrically charged^reset; air."
+	]
+  },
+  {
+    "op" : "add",
     "path" : "/planetTypeNames/darkabyss",
     "value" : "Dark Abyss"
   },
@@ -68,6 +77,11 @@
     "op" : "add",
     "path" : "/planetTypeNames/halloween",
     "value" : "Halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/voltage",
+    "value" : "Voltage"
   },
   {
     "op": "add",
@@ -93,6 +107,11 @@
     "op": "add",
     "path": "/planetTypeColors/halloween",
     "value" : [128, 64, 0]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/voltage",
+    "value" : [160, 131, 223]
   },
   {
     "op" : "add",
@@ -140,6 +159,30 @@
     "value" : {
       "displayName" : "Batong Swarm",
       "icon" : "/interface/cockpit/weather/batongswarm.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/lightningrain_es",
+    "value" : {
+      "displayName" : "Lightning Rain",
+      "icon" : "/interface/cockpit/weather/lightningrain_es.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/chargedground",
+    "value" : {
+      "displayName" : "Electric Ground",
+      "icon" : "/interface/cockpit/weather/chargedground.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/thunderstorm",
+    "value" : {
+      "displayName" : "Lightning Storm",
+      "icon" : "/interface/cockpit/weather/thunderstorm_es.png"
     }
   }
 ]

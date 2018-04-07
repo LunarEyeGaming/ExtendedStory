@@ -71,10 +71,10 @@
       "windAffectAmount" : 1
     },
 	{
-      "projectile" : "invisibleprojectile",
+      "projectile" : "chargedground",
       "parameters" : {
         "power" : 0,
-		"speed" : 100,
+		"speed" : 50,
 		"damageType" : "NoDamage",
 		"onlyHitTerrain" : true,
 		"actionOnReap" : [
@@ -93,6 +93,15 @@
 		  {
 			"action" : "sound",
 			"options" : [ "/sfx/weather/lightning_strike.ogg" ]
+		  },
+		  {
+		    "action" : "projectile",
+		    "type" : "massiveinvisibleprojectile",
+			"config" : {
+			  "piercing" : true,
+			  "power" : 200,
+			  "damageKind" : "megadamageelectric"
+			}
 		  }
 		]
       },

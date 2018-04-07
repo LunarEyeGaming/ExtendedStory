@@ -1,0 +1,49 @@
+{
+  "objectName" : "spheredeactivater",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Common",
+  "description" : "A piece of technology that deactivates all nearby ancient spheres.",
+  "shortdescription" : "Sphere Deactivater",
+  "race" : "ancient",
+
+  "apexDescription" : "This will deactivate my ancient sphere.",
+  "avianDescription" : "An ancient sphere will not work when near this technology.",
+  "floranDescription" : "Sphere thing sstops working when near weird thing.",
+  "glitchDescription" : "Confused. My ancient sphere stops working when I'm near this thing.",
+  "humanDescription" : "This must be why my ancient sphere suddenly stopped working.",
+  "hylotlDescription" : "This technology turns off my ancient sphere.",
+  "novakidDescription" : "Some technology that looks like my ancient sphere.",
+
+  "category" : "Trap",
+  "price" : 0,
+  "printable" : false,
+  "lightColor" : [204, 184, 143],
+  "broadcastArea" : [18, 20, -18, -20],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "spheredeactivater.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "animationPosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationParts" : {
+    "bg" : "spheredeactivater.png",
+    "fg" : "spheredeactivaterlit.png"
+  },
+
+  "scripts" : [ "/objects/ancient/spheredeactivater/spheredeactivater.lua" ],
+  "scriptDelta" : 60,
+
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+}

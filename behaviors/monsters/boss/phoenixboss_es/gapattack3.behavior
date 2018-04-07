@@ -1,0 +1,246 @@
+{
+  "name": "phoenixboss_es-gapattack3",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ancientavatar.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [0, 32]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "firePosition"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "firePosition"},
+              "tolerance": {"value": 1}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "fireball"}
+        }
+      },
+	  {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [1, 0]},
+          "offset": {"value": [0, 0]},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "phoenixreplicatingfireball1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [0, 16]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "attackPosition"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "attackPosition"},
+              "tolerance": {"value": 1}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 6},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": "<windupTime>"}
+              }
+            },
+            {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "spawnFlameGap"}
+              }
+            },
+            {
+              "title": "offsetPosition",
+              "type": "action",
+              "name": "offsetPosition",
+              "parameters": {
+                "offset": {"value": [-16, 0]},
+                "position": {"key": "spawn"}
+              },
+              "output": {
+                "position": "leftProjectile"
+              }
+            },
+            {
+              "title": "spawnFloorProjectiles",
+              "type": "action",
+              "name": "spawnFloorProjectiles",
+              "parameters": {
+                "areaWidth": {"value": 32},
+                "center": {"key": "leftProjectile"},
+                "power": {"value": 10},
+                "projectileCount": {"value": 4},
+				"projectileConfig": {"value": {}},
+                "projectileType": {"value": "flamecolumntele"},
+                "segmentWidth": {"value": 8},
+                "spawnHeight": {"value": 0.625}
+              },
+              "output": {
+                "projectiles": "lavaProjectiles"
+              }
+            },
+            {
+              "title": "offsetPosition",
+              "type": "action",
+              "name": "offsetPosition",
+              "parameters": {
+                "offset": {"value": [16, 0]},
+                "position": {"key": "spawn"}
+              },
+              "output": {
+                "position": "rightProjectile"
+              }
+            },
+            {
+              "title": "spawnFloorProjectiles",
+              "type": "action",
+              "name": "spawnFloorProjectiles",
+              "parameters": {
+                "areaWidth": {"value": 32},
+                "center": {"key": "rightProjectile"},
+                "power": {"value": 10},
+                "projectileCount": {"value": 3},
+                "projectileType": {"value": "flamecolumntele"},
+				"projectileConfig": {"value": {}},
+                "segmentWidth": {"value": 8},
+                "spawnHeight": {"value": 0.625}
+              },
+              "output": {
+                "projectiles": "lavaProjectiles"
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 1.2}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 2.4}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

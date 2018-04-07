@@ -1,0 +1,36 @@
+{
+  "layers" : [
+    {
+      "kind" : "tile/voltagecavefront",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/voltagecave",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.35,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/voltagebackunlit",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 2,
+      "noRandomOffset" : true,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/voltageback",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 2,
+      "repeatY" : true,
+      "noRandomOffset" : true,
+      "unlit" : false
+    }
+  ]
+}

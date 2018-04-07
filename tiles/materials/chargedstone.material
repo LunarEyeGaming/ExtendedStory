@@ -1,0 +1,25 @@
+{
+  "materialId" : 2003,
+  "materialName" : "chargedstone",
+  "particleColor" : [108, 74, 181, 255],
+  "itemDrop" : "chargedstone",
+  "description" : "An electrically charged cobblestone block.",
+  "shortdescription" : "Electrically Charged Stone",
+  "glitchDescription" : "Surprised. This cobble block is electrically charged.",
+  "floranDescription" : "Glowing ssstone.",
+  "novakidDescription" : "A glowin' electric rock.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "chargedstone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 20,
+    "radiantLight" : [108, 74, 181]
+  }
+}

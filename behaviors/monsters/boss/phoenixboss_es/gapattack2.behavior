@@ -1,0 +1,134 @@
+{
+  "name": "phoenixboss_es-gapattack2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ancientavatar.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [0, 16]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "attackPosition"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "attackPosition"},
+              "tolerance": {"value": 1}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 10}
+        },
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+			{
+			  "title": "repeater",
+			  "type": "decorator",
+			  "name": "repeater",
+			  "parameters": {
+			    "maxLoops": {"value": 20}
+			  },
+			  "child": {
+			    "title": "sequence",
+				"type": "composite",
+				"name": "sequence",
+				"parameters": {},
+				"children": [
+				  {
+            	    "title": "random",
+            	    "type": "action",
+            	    "name": "random",
+            	    "parameters": {
+            	      "max": {"value": 32},
+            	      "min": {"value": -32}
+            	    },
+            	    "output": {
+            	      "number": "fireballX"
+            	    }
+            	  },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"value": [0, -1]},
+    	    	      "offset": {"value": ["fireballX", 34]},
+    	    	      "projectileConfig": {"value": {"speed": 20}},
+    	    	      "projectileType": {"value": "phoenixfireball"}
+    	    	    }
+    	    	  }
+				]
+			  }
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 1.5}
+    	      }
+    	    }
+		  ]
+		}
+      }
+    ]
+  }
+}

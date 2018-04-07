@@ -49,6 +49,17 @@
   },
   {
     "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/voltage",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/voltage_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+      "liquidTextures" : "/celestial/system/terrestrial/horizon/liquids/electric_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/terrestrialGraphics/darkabyss",
     "value" : {
       "baseImages" : "/celestial/system/terrestrial/biomes/midnight/maskie<num>.png",
@@ -95,6 +106,16 @@
   },
   {
     "op" : "add",
+    "path" : "/terrestrialGraphics/voltage",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/voltage/maskie<num>.png",
+	  "liquidImages" : "/celestial/system/terrestrial/liquids/electric.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/planetaryTypes/Tier5/baseParameters/terrestrialType/-",
     "value" : "darkabyss"
   },
@@ -115,6 +136,11 @@
   },
   {
     "op" : "add",
+    "path" : "/planetaryTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "voltage"
+  },
+  {
+    "op" : "add",
     "path" : "/satelliteTypes/Tier5/baseParameters/terrestrialType/-",
     "value" : "darkabyss"
   },
@@ -125,6 +151,11 @@
   },
   {
     "op" : "add",
+    "path" : "/satelliteTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "voltage"
+  },
+  {
+    "op" : "add",
     "path" : "/satelliteTypes/Tier5/baseParameters/terrestrialType/-",
     "value" : "eternalfrost"
   },
@@ -132,26 +163,6 @@
     "op" : "add",
     "path" : "/satelliteTypes/Tier4/baseParameters/terrestrialType/-",
     "value" : "nuclearwasteland"
-  },
-  {
-    "op" : "add",
-    "path" : "/satelliteTypes/Tier1/baseParameters/terrestrialType/-",
-    "value" : "halloween"
-  },
-  {
-    "op" : "add",
-    "path" : "/satelliteTypes/Tier2/baseParameters/terrestrialType/-",
-    "value" : "halloween"
-  },
-  {
-    "op" : "add",
-    "path" : "/satelliteTypes/Tier3/baseParameters/terrestrialType/-",
-    "value" : "halloween"
-  },
-  {
-    "op" : "add",
-    "path" : "/satelliteTypes/Tier4/baseParameters/terrestrialType/-",
-    "value" : "halloween"
   },
   {
     "op" : "add",

@@ -1,0 +1,47 @@
+{
+  "projectileName" : "phoenixhomingfireball",
+  "physics" : "laser",
+  "timeToLive" : 20,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "lightColor" : [253, 160, 57],
+  "frameNumber" : 1,
+  "periodicActions" : [
+    {
+	  "time" : 0.05,
+	  "action" : "particle",
+	  "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/weather/largefireball/largefireball.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.5,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/megadamageexplosion/megadamagefireexplosionknockback.config"
+	}
+  ],
+  "speed" : 0,
+  "power" : 50,
+  "damageKind" : "electric",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : false,
+  "fullbright" : true,
+
+  "piercing" : false,
+  "bounces" : -1,
+
+  "scripts" : [ "homingfireball.lua" ],
+  "controlForce" : 90,
+  "maxSpeed" : 20,
+  "persistentAudio" : "/sfx/objects/torch.ogg"
+}

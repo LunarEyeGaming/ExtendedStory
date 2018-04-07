@@ -1,0 +1,15 @@
+{
+  "name" : "melting2_es",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "melting2_es.lua"
+  ],
+
+  "animationConfig" : "melting2_es.animation",
+
+  "label" : "Vaporizing - You are vaporizing from the heat of the super-heated lava",
+  "icon" : "/interface/statuses/fire.png"
+}

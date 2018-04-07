@@ -1,0 +1,256 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "invisible",
+        "states" : {
+		  "invisible" : {},
+          "idle" : {
+            "properties" : {
+			  "particleEmittersOff" : [ "windup", "windup2", "windup3" ]
+			}
+		  },
+          "open" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+			"transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_portal_open.ogg",
+			  "particleEmittersOn" : [ "flames" ]
+            }
+          },
+          "close" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "properties" : {
+              "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg",
+			  "particleEmittersOff" : [ "flames" ]
+            }
+          },
+		  "windup" : {
+		    "properties" : {
+              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup.ogg",
+			  "particleEmittersOn" : [ "windup" ]
+			}
+		  },
+		  "windup2" : {
+		    "properties" : {
+              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup2.ogg",
+			  "particleEmittersOn" : [ "windup2" ]
+			}
+		  },
+		  "windup3" : {
+		    "properties" : {
+              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup3.ogg",
+			  "particleEmittersOn" : [ "windup3" ]
+			}
+		  },
+		  "windup4" : {
+		    "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_delayedshot_charge1.ogg"
+			}
+		  }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 10,
+          "transformationGroups" : [ "body" ],
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
+            },
+			"windup" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+			"windup2" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+			"windup3" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+			"windup4" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true },
+    "facing" : { "interpolated" : false },
+    "orbiter1" : { "interpolated" : true },
+    "orbiter2" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "particles" : [
+        { "particle" : "electricswoosh1" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh1" },
+        { "particle" : "electricswoosh2" },
+
+        { "particle" : "deathfizz1left" },
+        { "particle" : "deathfizz1right" },
+        { "particle" : "deathfizz2left" },
+        { "particle" : "deathfizz2right" },
+        { "particle" : "deathfizz3left" },
+        { "particle" : "deathfizz3right" },
+        { "particle" : "deathfizz4left" },
+        { "particle" : "deathfizz4right" }
+      ]
+    },
+	"flames" : {
+      "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-5, -2, 5, 2],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+    },
+	"windup" : {
+      "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-3, -3, 3, 3],
+      "particles" : [
+		{
+          "particle" : {
+            "type" : "textured",
+            "image" : "/celestial/stars/backgrounds/star11px.png",
+            "position" : [0, 0],
+			"initialVelocity" : [0, 0],
+			"finalVelocity" : [0, 0],
+            "layer" : "front",
+            "timeToLive" : 1.0,
+            "destructionTime" : 0.5,
+            "destructionAction" : "shrink",
+            "fullbright" : true,
+		    "variance" : {
+			  "initialVelocity" : [-2, -2]
+		    }
+          }
+        }
+      ]
+    },
+	"windup2" : {
+      "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-3, -3, 3, 3],
+      "particles" : [
+		{
+          "particle" : {
+            "type" : "textured",
+            "image" : "/projectiles/activeitems/astraltear/astraltearstart.png:0",
+            "position" : [0, 0],
+			"initialVelocity" : [0, 0],
+			"finalVelocity" : [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.1,
+            "destructionTime" : 0.2,
+            "destructionAction" : "fade",
+            "fullbright" : true,
+			"rotation" : 0,
+		    "variance" : {
+			  "rotation" : 180
+		    }
+          }
+        }
+      ]
+    },
+	"windup3" : {
+      "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-5, -5, 5, 5],
+      "particles" : [
+		{
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+            "position" : [0, 0],
+			"initialVelocity" : [0, 0],
+			"finalVelocity" : [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.1,
+            "destructionTime" : 0.2,
+            "destructionAction" : "fade",
+            "fullbright" : true,
+		    "variance" : {
+			  "initialVelocity" : [10, 10]
+		    }
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire" : [ "/sfx/npc/darkabyss/abysseye_fire.ogg" ],
+	"fire2" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ],
+	"fire3" : [ "/sfx/npc/boss/tentacleboss_portal_open.ogg" ]
+  }
+}

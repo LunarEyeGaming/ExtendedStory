@@ -1,0 +1,16 @@
+{
+  "projectileName" : "spheredeactivater",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "damagePoly" : [ [144, 160], [-144, 160], [-144, -160], [144, -160] ], 
+  "animationLoops" : false,
+  "flippable" : true,
+  "piercing" : true,
+  "damageRepeatTimeout" : 0.1,
+  "damageKind" : "spheredeactivater",
+  "statusEffects" : [
+    "spheredeactivater"
+  ]
+}

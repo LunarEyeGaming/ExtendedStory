@@ -1,0 +1,31 @@
+{
+  "name" : "chargedground",
+
+  "particles" : [ ],
+
+  "projectiles" : [
+    {
+      "projectile" : "invisibleprojectile",
+      "parameters" : {
+        "power" : 0,
+		"speed" : 200,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+			"action" : "projectile",
+			"type" : "chargedground"
+		  }
+		]
+      },
+      "velocity" : [0, -200],
+      "ratePerX" : 0.005,
+      "spawnAboveRegion" : 30,
+      "spawnHorizontalPad" : 30,
+      "windAffectAmount" : 0.0
+    }
+  ],
+
+  "duration" : [60, 120],
+  "maximumWind" : 15.0,
+  "weatherNoises" : [ "/sfx/melee/barrier_create_electric.ogg" ]
+}

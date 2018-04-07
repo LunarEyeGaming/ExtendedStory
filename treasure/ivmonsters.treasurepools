@@ -142,5 +142,132 @@
         [1, 1]
       ]
     }]
+  ],
+
+  "chargedwisperTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.800, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "phasematter"},
+        {"weight" : 0.100, "item" : "staticcell"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "chargedwisperHunting" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.500, "item" : "staticcell"},
+        {"weight" : 0.500, "item" : "phasematter"}
+      ],
+      "poolRounds" : [
+        [0.6, 0],
+        [0.4, 1]
+      ],
+      "allowDuplication" : false
+    } ]
+  ],
+
+  "electricpodTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.800, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "staticcell"},
+		{"weight" : 0.100, "item" : "hardenedcarapace"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "electricpodHunting" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.500, "item" : "staticcell"},
+		{"weight" : 0.500, "item" : "hardenedcarapace"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "livingboltTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "staticcell"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "livingboltHunting" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1.000, "item" : "staticcell"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "darkabysselementalTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "staticcell"} // Will be replaced
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "fireelementalTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "scorchedcore"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "electricelementalTreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "staticcell"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
   ]
 }

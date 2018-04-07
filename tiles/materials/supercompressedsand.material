@@ -1,0 +1,24 @@
+{
+  "materialId" : 2005,
+  "materialName" : "supercompressedsand",
+  "particleColor" : [138, 119, 79, 255],
+  "itemDrop" : "supercompressedsand",
+  "description" : "A large amount of sand that has been super-compressed into a tile-sized space. This also occurs naturally...",
+  "shortdescription" : "Super-Compressed Sand",
+  "glitchDescription" : "Surpised. This sand is extremely compressed.",
+  "floranDescription" : "Sssuper sstrong sssand!",
+  "novakidDescription" : "Surprisingly hard sand.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "supercompressedsand.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1500
+  }
+}

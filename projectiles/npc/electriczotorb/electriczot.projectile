@@ -1,0 +1,13 @@
+{
+  "projectileName" : "electriczot",
+  "image" : "electriczot.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "power" : 50,
+  "speed" : 100,
+  "physics" : "laser",
+
+  "lightColor" : [74, 74, 181],
+  "emitters" : [ "electricplasma" ],
+  "damageKind" : "electric"
+}

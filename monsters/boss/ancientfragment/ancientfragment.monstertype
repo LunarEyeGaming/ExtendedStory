@@ -102,10 +102,10 @@
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
 
-    "projectileType" : "cellblast",
+    "projectileType" : "ancientlasershot",
     "projectileConfig" : {
       "speed" : 35,
-      "power" : 5,
+      "power" : 20,
       "periodicActions" : [
         {
           "time" : 0,

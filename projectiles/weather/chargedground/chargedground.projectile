@@ -1,0 +1,51 @@
+{
+  "projectileName" : "chargedground",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 100,
+  "speed" : 0,
+  "onlyHitTerrain" : true,
+  "timeToLive" : 5,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+	    "type" : "animated",
+        "animation" : "/animations/electroshock/electroshock.animation",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0.0],
+        "finalVelocity" : [0, 0.0],
+        "approach" : [0, 10],
+        "fade" : 0.3,
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.2,
+        "size" : 1.0,
+		"angle" : 0,
+        "timeToLive" : 0.2,
+        "fullbright" : true,
+        "layer" : "middle",
+        "collidesForeground" : false,
+        "variance" : {
+          "position" : [2, 2],
+          "initialVelocity" : [0, 0],
+		  "rotation" : 180
+	    }
+	  }
+	}
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+	}
+  ],
+  "lightColor" : [59, 217, 215],
+  "persistentAudio" : "/sfx/npc/boss/ufo_stunned.ogg",
+  "damageKind" : "plasmabullet"
+}

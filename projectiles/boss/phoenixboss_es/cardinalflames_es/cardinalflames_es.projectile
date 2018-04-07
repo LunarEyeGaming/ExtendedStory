@@ -1,0 +1,96 @@
+{
+  "projectileName" : "cardinalflames_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [1, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"damageTeam" : {"type" : "enemy"},
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "phoenixfireball",
+			"angleAdjust" : 180,
+			"config" : {
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [-1, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"damageTeam" : {"type" : "enemy"},
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "phoenixfireball",
+			"angleAdjust" : 180,
+			"config" : {
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0, 1],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"damageTeam" : {"type" : "enemy"},
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "phoenixfireball",
+			"angleAdjust" : 180,
+			"config" : {
+			  "power" : 400
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0, -1],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"damageTeam" : {"type" : "enemy"},
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "phoenixfireball",
+			"angleAdjust" : 180,
+			"config" : {
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

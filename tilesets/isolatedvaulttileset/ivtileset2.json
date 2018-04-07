@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":29,
+ "tilecount":49,
  "tileheight":82,
  "tileproperties":
     {
@@ -165,6 +165,13 @@
         {
          "material":"iceplatform_es"
         },
+     "29":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abyssportal",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "\/\/description":"It looks like it was made to hold something important.",
@@ -175,12 +182,113 @@
          "object":"electricartifactaltar",
          "tilesetDirection":"right"
         },
+     "30":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"fireyportal",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"frozenportal",
+         "tilesetDirection":"right"
+        },
+     "32":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"irradiatedportal",
+         "tilesetDirection":"right"
+        },
+     "33":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"irradiatedchest",
+         "tilesetDirection":"right"
+        },
+     "34":
+        {
+         "material":"chargedbrick"
+        },
+     "35":
+        {
+         "material":"chargedsand"
+        },
+     "36":
+        {
+         "material":"chargedstone"
+        },
+     "37":
+        {
+         "material":"supercompressedsand"
+        },
+     "38":
+        {
+         "material":"sandstonebrick_es"
+        },
+     "39":
+        {
+         "material":"sandbricklightning"
+        },
      "4":
         {
          "\/\/description":"A cobble block that is on fire!",
          "\/\/name":"burningblock",
          "\/\/shortdescription":"Eternally Burning Stone Block",
          "material":"burningblock"
+        },
+     "40":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"electricportal",
+         "tilesetDirection":"right"
+        },
+     "41":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"electricreturnportal",
+         "tilesetDirection":"right"
+        },
+     "42":
+        {
+         "material":"burningbrick2"
+        },
+     "43":
+        {
+         "material":"burningplatform_es"
+        },
+     "44":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-8",
+         "object":"burningpressureplatform",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "liquid":"superheatedlava",
+         "source":"true"
+        },
+     "46":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"spheredeactivater",
+         "tilesetDirection":"right"
+        },
+     "47":
+        {
+         "material":"darkobsidianbrick"
+        },
+     "48":
+        {
+         "material":"darkobsidianbrick2"
         },
      "5":
         {
@@ -385,6 +493,13 @@
         {
          "material":"string"
         },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -395,11 +510,112 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "30":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "31":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "32":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "33":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "34":
+        {
+         "material":"string"
+        },
+     "35":
+        {
+         "material":"string"
+        },
+     "36":
+        {
+         "material":"string"
+        },
+     "37":
+        {
+         "material":"string"
+        },
+     "38":
+        {
+         "material":"string"
+        },
+     "39":
+        {
+         "material":"string"
+        },
      "4":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "40":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "41":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "42":
+        {
+         "material":"string"
+        },
+     "43":
+        {
+         "material":"string"
+        },
+     "44":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "45":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "46":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "47":
+        {
+         "material":"string"
+        },
+     "48":
+        {
          "material":"string"
         },
      "5":
@@ -584,15 +800,135 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "29":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
      "3":
         {
          "image":"..\/..\/objects\/mission\/electricartifactdungeon\/electricartifactaltar\/electricartifactaltar.png",
          "imageheight":40,
          "imagewidth":32
         },
+     "30":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
+     "33":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedchest.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "34":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/chargedbrick.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "35":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/chargedsand.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "36":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/chargedstone.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "37":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/supercompressedsand.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "38":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/sandstonebrick_es.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "39":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/sandbricklightning.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
      "4":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/burningblock.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "40":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
+     "41":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
+         "imageheight":33,
+         "imagewidth":32
+        },
+     "42":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/burningbrick2.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "43":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/burningplatform.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "44":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/burningpressureplatform.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "45":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/superheatedlava.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "46":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/spheredeactivater.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "47":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/darkobsidianbrick.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "48":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/darkobsidianbrick2.png",
          "imageheight":8,
          "imagewidth":8
         },

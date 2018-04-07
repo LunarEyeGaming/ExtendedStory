@@ -1,0 +1,24 @@
+{
+  "materialId" : 2008,
+  "materialName" : "sandstonebrick_es",
+  "particleColor" : [138, 119, 79, 255],
+  "itemDrop" : "sandstonebrick_es",
+  "description" : "A brick of sandstone.",
+  "shortdescription" : "Sandstone Brick",
+  "glitchDescription" : "Analysing. A compressed brick of sandstone.",
+  "floranDescription" : "Sssandstone brickss.",
+  "novakidDescription" : "Really hard bricks of sandstone.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 10,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "sandstonebrick_es.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : false,
+    "zLevel" : 1500
+  }
+}

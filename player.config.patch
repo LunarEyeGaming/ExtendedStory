@@ -34,7 +34,7 @@
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientrailgun"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancienteppback"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "darkmattereppback"} },
-  {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/burningblockdetection.lua"},
+  {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/tilestatusdetection_es.lua"},
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "lightninggun"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "tungstenchaingun"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "titaniumchaingun"} },

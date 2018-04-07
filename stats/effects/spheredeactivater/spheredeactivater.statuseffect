@@ -1,0 +1,20 @@
+{
+  "name" : "spheredeactivater",
+  "effectConfig" : {
+    "starvationCompoundDamage" : 2,
+    "movementModifiers" : {
+      "speedModifier" : 1
+    },
+    "soundInterval" : 0.5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "spheredeactivater.lua"
+  ],
+
+  "animationConfig" : "spheredeactivater.animation",
+
+  "label" : "Broken Ancient Sphere - Your ancient sphere is not functioning properly",
+  "icon" : "/interface/statuses/spheredeactivater.png"
+}

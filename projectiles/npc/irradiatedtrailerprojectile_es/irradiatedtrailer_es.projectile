@@ -1,0 +1,35 @@
+{
+  "projectileName" : "irradiatedtrailer_es",
+  "image" : "irradiatedtrailer.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "power" : 0,
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "megadamagepoisonplasma",
+  "piercing" : true,
+  
+  "periodicActions" : [
+    {
+	  "time" : 3.0,
+	  "action" : "projectile",
+	  "type" : "gas",
+	  "config" : {"speed" : 20},
+	  "fuzzAngle" : 180
+	}
+  ],
+  "actionOnReap" : [ 
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/elementimpact/poisonimpact.config"
+    }
+  ],
+
+  "speed" : 0,
+  "timeToLive" : 5.0,
+
+  "explosionAction" : { }
+}

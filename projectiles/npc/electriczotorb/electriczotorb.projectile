@@ -1,0 +1,22 @@
+{
+  "projectileName" : "electriczotorb",
+  "image" : "electriczotorb.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "power" : 50,
+  "speed" : 10,
+  "physics" : "gas",
+  "piercing" : true,
+  "emitters" : [ "electricplasma" ],
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "electriczot",
+	  "fuzzAngle" : 15
+	}
+  ],
+
+  "lightColor" : [74, 74, 181],
+  "damageKind" : "electric"
+}

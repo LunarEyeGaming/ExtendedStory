@@ -4,6 +4,9 @@
   "image" : "ancientrailgunshot.png",
   "damageKindImage" : "icon.png",
   "speed" : 0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
   "animationCycle" : 0.25,
   "timeToLive" : 0.25,
   "frameNumber" : 4,

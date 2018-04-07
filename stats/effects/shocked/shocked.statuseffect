@@ -1,0 +1,15 @@
+{
+  "name" : "shocked_es",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "shocked.lua"
+  ],
+
+  "animationConfig" : "shocked.animation",
+
+  "label" : "Shocked - You are being attacked by living lightning",
+  "icon" : "/interface/statuses/electric.png"
+}

@@ -1,4 +1,5 @@
 require "/scripts/vec2.lua"
+require "/scripts/extendedstorymisc.lua"
 
 function init()
   initCommonParameters()
@@ -30,6 +31,22 @@ function initCommonParameters()
   self.lowEnergyTimer = 0
 end
 
+function translateBroadcastArea()
+  local broadcastArea = config.getParameter("broadcastArea", {-8, -8, 8, 8})
+  local pos = entity.position()
+  return {
+      broadcastArea[1] + pos[1],
+      broadcastArea[2] + pos[2],
+      broadcastArea[3] + pos[1],
+      broadcastArea[4] + pos[2]
+    }
+end
+
+function broadcastAreaQuery(options)
+  local area = translateBroadcastArea()
+  return world.objectQuery({area[1], area[2]}, {area[3], area[4]}, options)
+end
+
 function uninit()
   storePosition()
   deactivate()
@@ -37,7 +54,8 @@ end
 
 function update(args)
   restoreStoredPosition()
-	
+  deactivaterCheck = detectStatusEffect("spheredeactivater")
+  
   dt = args.dt
 
   if not self.specialLast and args.moves["special1"] then
@@ -215,6 +233,17 @@ function update(args)
 	  mcontroller.controlApproachVelocity({-80.0, 80.0}, 60.0)
 	  animator.setAnimationState("ballState", "upleft")
 	]]
+  if deactivaterCheck == true then
+	  attemptActivation()
+	  animator.setAnimationState("ballState", "deactivate")
+	  animator.setAnimationState("up", "inactive")
+	  animator.setAnimationState("right", "inactive")
+	  animator.setAnimationState("down", "inactive")
+	  animator.setAnimationState("left", "inactive")
+	  animator.setParticleEmitterActive("ancientspherebash", false)
+	  animator.setParticleEmitterActive("ancientsphererecharge", false)
+	  animator.setAnimationState("energybar", "off")
+	end
   end
 
   updateTransformFade(args.dt)
@@ -223,6 +252,7 @@ function update(args)
   if sphereEnergy <= 0 then
     deactivate()
   end
+  
 end
 
 function cooldownTimer()
@@ -235,6 +265,7 @@ function attemptActivation()
   if not self.active
       and not tech.parentLounging()
       and not status.statPositive("activeMovementAbilities")
+	  and not deactivaterCheck == true
       and status.overConsumeResource("energy", status.resourceMax("energy")) then
 
     local pos = transformPosition()

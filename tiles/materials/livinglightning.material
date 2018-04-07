@@ -1,0 +1,25 @@
+{
+  "materialId" : 2007,
+  "materialName" : "livinglightning",
+  "particleColor" : [108, 74, 181, 255],
+  "itemDrop" : "livinglightning",
+  "description" : "A living lightning bolt!",
+  "shortdescription" : "Living Lightning",
+  "glitchDescription" : "Surprised. This block is alive.",
+  "floranDescription" : "Living lightning bolt!",
+  "novakidDescription" : "A lightnin' bolt-shaped block.",
+  "footstepSound" : "/sfx/blocks/footstep_crystal.ogg",
+  "health" : 10,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "livinglightning.png",
+    "variants" : 4,
+    "lightTransparent" : true,
+    "occludesBelow" : true,
+    "multiColored" : false,
+    "zLevel" : 1830,
+    "radiantLight" : [108, 74, 181]
+  }
+}

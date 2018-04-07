@@ -1,0 +1,24 @@
+{
+  "materialId" : 2013,
+  "materialName" : "darkobsidianbrick2",
+  "particleColor" : [92, 90, 87, 255],
+  "itemDrop" : "darkobsidianbrick2",
+  "description" : "A brick made of dark obsidian.",
+  "shortdescription" : "Dark Obsidian Brick",
+  "glitchDescription" : "Bored. A simple-shaped brick of dark obsidian.",
+  "floranDescription" : "Dark brickss.",
+  "novakidDescription" : "An ordinary brick, though made of dark obsidian.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "darkobsidianbrick2.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1400
+  }
+}

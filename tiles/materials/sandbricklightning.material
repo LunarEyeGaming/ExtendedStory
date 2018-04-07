@@ -1,0 +1,25 @@
+{
+  "materialId" : 2009,
+  "materialName" : "sandbricklightning",
+  "particleColor" : [138, 119, 79, 255],
+  "itemDrop" : "sandbricklightning",
+  "description" : "A sandstone brick with lightning inside of it.",
+  "shortdescription" : "Sandstone Brick with Lightning",
+  "glitchDescription" : "Surpised. This sand is extremely compressed.",
+  "floranDescription" : "Sssuper sstrong sssand!",
+  "novakidDescription" : "Surprisingly hard sand.",
+  "footstepSound" : "/sfx/blocks/footstep_stone2.ogg",
+  "health" : 10,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "sandbricklightning.png",
+    "variants" : 20,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : false,
+    "zLevel" : 1500,
+    "radiantLight" : [108, 74, 181]
+  }
+}

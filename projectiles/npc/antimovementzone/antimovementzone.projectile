@@ -1,0 +1,104 @@
+{
+  "projectileName" : "antimovementzone",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 6.0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 1,
+  "lightColor" : [10, 10, 10],
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 0,
+  "damageKind" : "nodamage",
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 1.0,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "position" : [10, 10]
+		}
+      }
+    },
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 1.0,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "position" : [20, 20]
+		}
+      }
+    },
+	{
+      "time" : 0.3,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/techglow/techglow.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.3,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0,
+      "repeat" : false,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/techglow/techglow.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 0.3,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  "actionOnReap" : [ ],
+
+  "boundBox" : [-20, -20, 20, 20],
+  "physicsForces" : {
+    "antimovement" : {
+	  "type" : "DirectionalForceRegion",
+      "rectRegion" : [-20, -20, 20, 20],
+      "yTargetVelocity" : 0,
+	  "xTargetVelocity" : 0,
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["player"]
+    },
+	"vacuum" : {
+	  "type" : "RadialForceRegion",
+      "outerRadius" : 20,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -5,
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["player"]
+	}
+  }
+}

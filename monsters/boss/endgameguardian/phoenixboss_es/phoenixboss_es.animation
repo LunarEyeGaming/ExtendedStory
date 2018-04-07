@@ -1,0 +1,196 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 4,
+            "cycle" : 0.4
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+    "windleft" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-32, -5, -32.0, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "windright" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [32.0, -5, 32, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [-64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [-3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 1,
+      "particles" : [ ]
+    },
+    "slam" : {
+      "burstCount" : 20,
+      "offsetRegion" : [-8, -6, 8, -4],
+      "particles" : [
+        { "particle" : "dust4" }
+      ]
+    },
+    "dying" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "emissionRate" : 100,
+      "particles" : [
+		{
+		  "particle" : {
+		    "type" : "animated",
+		    "animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+		    "fullbright" : true,
+		    "light" : [218, 83, 2],
+		    "initialVelocity" : [0, 0],
+		    "finalVelocity" : [0, 1],
+		    "position" : [0, 0],
+		    "timeToLive" : 1
+		  }
+		}
+	  ]
+    },
+	"flash" : {
+	  "emissionRate" : 300,
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.8,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		}
+	  ]
+	}
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ "/sfx/projectiles/fireball_spit.ogg" ],
+    "preparePlasma" : [ "/sfx/melee/charge_up5.ogg" ],
+    "plasmaAttack" : [ "/sfx/melee/giantsword_charge_full.ogg" ],
+    "prepareFire" : [ ],
+    "spawnPlatforms" : [ ],
+    "prepareIce" : [ ],
+    "spawnFlameGap" : [ "/sfx/gun/fireblast.ogg" ],
+    "fireball" : [ "/sfx/projectiles/fireball_spit.ogg" ],
+    "windFire" : [ "/sfx/gun/plasma_sniper4.ogg" ],
+    "lightningFire" : [ "/sfx/npc/boss/ancientavatar_lightningwindup.ogg" ],
+	"bullethellfire" : [ "/sfx/gun/flamethrower_stop.ogg" ],
+	"slam" : [ "/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg" ],
+	"dying" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ],
+	"dyingexplosions" : [ "/sfx/projectiles/blast_small_fire1.ogg" ],
+	"flash" : [ "/sfx/npc/boss/phoenixboss_flash.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

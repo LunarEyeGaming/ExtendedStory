@@ -9,6 +9,7 @@
       "parameters" : {
         "power" : 0,
 		"speed" : 200,
+		"onlyHitTerrain" : true,
 		"actionOnReap" : [
 		  {
 		    "action" : "option",

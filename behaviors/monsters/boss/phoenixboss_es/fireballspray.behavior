@@ -1,0 +1,114 @@
+{
+  "name": "phoenixboss_es-fireballspray",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ancientavatar.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [0, 10]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "attackPosition2"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "attackPosition2"},
+              "tolerance": {"value": 1}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.2}
+            }
+          }
+        ]
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 150},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "fireball"}
+              }
+            },
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [1, 0]},
+    	        "offset": {"value": [0, 0]},
+    	        "projectileConfig": {"value": {"actionOnReap": [{"action": "option", "options": [{"action": "projectile", "type": "phoenixfiregrenade", "fuzzAngle": 25, "config": {"speed": 25}}, {"action": "projectile", "type": "phoenixfiregrenade", "fuzzAngle": 25, "config": {"speed": 5}}, {"action": "projectile", "type": "phoenixfiregrenade", "fuzzAngle": 25, "config": {"speed": 15}}]}]}},
+    	        "projectileType": {"value": "targetingprojectile"}
+    	      }
+    	    },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.1}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

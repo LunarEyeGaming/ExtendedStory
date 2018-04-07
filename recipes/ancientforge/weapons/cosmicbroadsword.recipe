@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "fabricbar", "count" : 9 },
+	{ "item" : "solariumstar", "count" : 10 },
+	{ "item" : "ironbar", "count" : 10 }
+  ],
+  "output" : { "item" : "cosmicbroadsword", "count" : 1 },
+  "groups" : [ "ancientforge", "weapons", "all" ]
+}

@@ -79,7 +79,6 @@
 						  "action" : "projectile",
 						  "type" : "frozentwigun",
 						  "offset" : [3, 0],
-						  "direction" : [1, 0],
 						  "fuzzAngle" : 20,
 						  "config" : {
 						    "damageTeam" : {"type" : "enemy"}
@@ -89,7 +88,7 @@
 						  "action" : "projectile",
 						  "type" : "frozentwigun",
 						  "offset" : [-3, 0],
-						  "direction" : [-1, 0],
+						  "angle" : 180,
 						  "fuzzAngle" : 20,
 						  "config" : {
 						    "damageTeam" : {"type" : "enemy"}

@@ -1,0 +1,25 @@
+{
+  "materialId" : 2004,
+  "materialName" : "chargedbrick",
+  "particleColor" : [108, 74, 181, 255],
+  "itemDrop" : "chargedbrick",
+  "shortdescription" : "Electrically Charged Brick",
+  "description" : "Small bricks made from electrically charged stone.",
+  "glitchDescription" : "Observant. These bricks are made from electrically charged stone.",
+  "floranDescription" : "Ssmooth and glowing ssstone brickss.",
+  "novakidDescription" : "Bricks made outta electric stone.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 16,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "chargedbrick.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 2850,
+    "radiantLight" : [108, 74, 181]
+  }
+}

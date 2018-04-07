@@ -41,14 +41,14 @@
       "hostileActions" : [
         {
           "name" : "action-fire",
-          "cooldown" : 5.0,
+          "cooldown" : 3.0,
           "parameters" : {
             "requireLineOfSight" : true,
             "maximumRange" : 20,
             "minimumRange" : 4,
             "onGround" : false,
             "windupStopForce" : 50,
-            "windupTime" : 0.8,
+            "windupTime" : 0.6,
 
             "projectileType" : "abyssshot",
             "projectileParameters" : {
@@ -59,7 +59,9 @@
             "inaccuracy" : 0.0,
             "fireState" : "fire",
             "fireDelay" : 0.1,
-            "fireSound" : "",
+            "projectileCount" : 3,
+            "projectileInterval" : 0.1,
+            "fireSound" : "fire",
 
             "winddownState" : "",
             "winddownTime" : 0.5

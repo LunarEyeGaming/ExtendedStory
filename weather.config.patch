@@ -78,5 +78,15 @@
       [0.125, "ghosthour"],
       [0.125, "batongswarm"]
     ]
+  },
+  {
+    "op": "add",
+    "path": "/voltage",
+    "value": [
+      [0.7, "clear"],
+      [0.1, "thunderstorm"],
+      [0.1, "lightningrain_es"],
+      [0.1, "chargedground"]
+    ]
   }
 ]

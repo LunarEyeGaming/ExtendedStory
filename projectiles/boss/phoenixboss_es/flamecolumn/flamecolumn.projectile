@@ -1,0 +1,70 @@
+{
+  "projectileName" : "flamecolumn",
+  "image" : "flamecolumn.png",
+  "animationCycle" : 2.0,
+  "timeToLive" : 2.0,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "frameNumber" : 60,
+  "power" : 50,
+  "speed" : 0,
+  "orientationLocked" : true,
+  "piercing" : true,
+  "flippable" : true,
+  "damagePoly" : [ [32, 0], [32, 512], [-32, 512], [-32, 0] ],
+  "damageKind" : "megadamagefire",
+  "persistentAudio" : "/sfx/objects/flametrap_loop.ogg",
+  "periodicActions" : [
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/objects/flametrap_on.ogg" ]
+    },
+	{
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+		"fullbright" : true,
+		"light" : [218, 83, 2],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 1],
+		"position" : [0, 16],
+		"timeToLive" : 1,
+		"variance" : {
+		  "position" : [3, 16],
+		  "initialVelocity" : [2, 0]
+		}
+	  }
+	},
+	{
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/statuseffects/burning/burning.animation",
+		"fullbright" : true,
+		"light" : [148, 55, 0],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 1],
+		"position" : [0, 0],
+		"timeToLive" : 1,
+		"variance" : {
+		  "position" : [3, 0],
+		  "initialVelocity" : [2, 0]
+		}
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/objects/flametrap_off.ogg" ]
+    }
+  ],
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

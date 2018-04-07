@@ -1,0 +1,25 @@
+{
+  "materialId" : 2006,
+  "materialName" : "chargedsand",
+  "particleColor" : [108, 74, 181, 255],
+  "itemDrop" : "chargedsand",
+  "description" : "An electrically charged pile of sand.",
+  "shortdescription" : "Electrified Sand",
+  "glitchDescription" : "Confused. This sand is electrified, yet it is not conductive.",
+  "floranDescription" : "Dussty and glowing ssand.",
+  "novakidDescription" : "A pile of glowin' sand.",
+  "footstepSound" : "/sfx/blocks/footstep_sand2.ogg",
+  "health" : 5,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "chargedsand.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : false,
+    "zLevel" : 1830,
+    "radiantLight" : [108, 74, 181]
+  }
+}

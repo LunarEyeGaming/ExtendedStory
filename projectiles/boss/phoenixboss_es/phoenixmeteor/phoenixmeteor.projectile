@@ -1,0 +1,22 @@
+{
+  "projectileName" : "phoenixmeteor",
+  "physics" : "grenadezbomb",
+  "bounces" : 0,
+  "image" : "phoenixmeteor.png",
+  "animationCycle" : 0.3,
+  "fullbright" : true,
+  "lightColor" : [253, 160, 57],
+  "frameNumber" : 3,
+  "periodicActions" : [
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/megadamageexplosion/megadamagefireexplosionknockback.config"
+    }
+  ],
+  "power" : 60,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ]
+}

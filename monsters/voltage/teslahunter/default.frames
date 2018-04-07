@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [48, 48],
+    "dimensions" : [10, 2],
+    "names" : [
+      [ null ],
+	  [ "inactive", "aggro.1", "aggro.2", "aggro.3", "idle", "windup.1", "windup.2", "windup.3", "windup.4", "fire" ]
+    ]
+  },
+  "aliases" : {
+    "deaggro.1" : "aggro.3",
+	"deaggro.2" : "aggro.2",
+	"deaggro.3" : "aggro.1"
+  }
+}

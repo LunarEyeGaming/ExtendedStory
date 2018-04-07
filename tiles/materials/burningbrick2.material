@@ -1,0 +1,25 @@
+{
+  "materialId" : 2010,
+  "materialName" : "burningbrick2",
+  "particleColor" : [255, 155, 105, 255],
+  "itemDrop" : "burningbrick",
+  "shortdescription" : "Eternally Burning Slab",
+  "description" : "Slabs made from eternally burning stone.",
+  "glitchDescription" : "Observant. These slabs are made from extremely hot stone.",
+  "floranDescription" : "Ssmooth and glowing ssstone slabsss.",
+  "novakidDescription" : "Slabs made outta really hot stone.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 16,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "burningbrick2.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : false,
+    "occludesBelow" : true,
+    "zLevel" : 2850,
+    "radiantLight" : [128, 64, 0]
+  }
+}

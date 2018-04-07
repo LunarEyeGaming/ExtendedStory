@@ -1,0 +1,40 @@
+{
+  "objectName" : "irradiatedchest",
+  "colonyTags" : ["jungle","storage","nature"],
+  "rarity" : "Common",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+
+  "category" : "storage",
+  "price" : 70,
+  "printable" : false,
+  "description" : "A chest made of compressed radioactive waste. Gross...",
+  "shortdescription" : "Irradiated Chest",
+  "race" : "generic",
+  "health" : 5,
+
+  "apexDescription" : "A chest made of radioactive waste.",
+  "avianDescription" : "Compressed toxic waste carved into a chest.",
+  "floranDescription" : "Toxic chesst.",
+  "glitchDescription" : "Disgusted. This chest is made of compressed toxic waste.",
+  "humanDescription" : "This chest has a built-in ability to deter invaders...probably.",
+  "hylotlDescription" : "It appears the Floran have learned to harness nature to grow the things they require.",
+  "novakidDescription" : "Seems kinda pointless to make a chest outta waste.",
+
+  "orientations" : [
+    {
+      "dualImage" : "irradiatedchest.png:<color>.<key>",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "inventoryIcon" : "icon.png",
+  "openSounds" : [ "/sfx/objects/chest_small_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/chest_small_close.ogg" ],
+  "slotCount" : 16,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

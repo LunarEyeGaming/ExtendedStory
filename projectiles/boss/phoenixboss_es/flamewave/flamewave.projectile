@@ -1,0 +1,52 @@
+{
+  "projectileName" : "flamewave",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 2.0,
+  "timeToLive" : 2.0,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "frameNumber" : 60,
+  "power" : 50,
+  "speed" : 30,
+  "orientationLocked" : true,
+  "piercing" : true,
+  "flippable" : true,
+  "damagePoly" : [ [8, -256], [8, 256], [-8, 256], [-8, -256] ],
+  "damageKind" : "megadamagefire",
+  "persistentAudio" : "/sfx/objects/flametrap_loop.ogg",
+  "periodicActions" : [
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/objects/flametrap_on.ogg" ]
+    },
+	{
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+		"fullbright" : true,
+		"light" : [218, 83, 2],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 1],
+		"position" : [0, 0],
+		"timeToLive" : 1,
+		"variance" : {
+		  "position" : [0, 32],
+		  "initialVelocity" : [2, 0]
+		}
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/objects/flametrap_off.ogg" ]
+    }
+  ],
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

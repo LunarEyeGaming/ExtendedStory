@@ -1,0 +1,22 @@
+{
+  "projectileName" : "electricfire",
+  "image" : "mediumflameelectric.png",
+  "physics" : "flame",
+  "animationCycle" : 1.05,
+  "animationLoops" : false,
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "frameNumber" : 12,
+  "power" : 50,
+  "speed" : 25,
+  "timeToLive" : 1,
+  "bounces" : 4,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "lightColor" : [74, 74, 181],
+  "damageKind" : "fire",
+  "statusEffects" : [
+    "burning",
+	"electrified"
+  ],
+  "hydrophobic" : true
+}

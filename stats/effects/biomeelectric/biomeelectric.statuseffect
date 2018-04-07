@@ -1,0 +1,19 @@
+{
+  "name" : "biomeelectric",
+  "blockingStat" : "biomeelectricImmunity",
+
+  "effectConfig" : {
+    "tickRate" : 0.25,
+    "tickDamage" : 5
+  },
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "biomeelectric.lua"
+  ],
+
+  "animationConfig" : "biomeelectric.animation",
+
+  "label" : "Charged Air - The air is filled with conductive gasses that cause high electrical current",
+  "icon" : "/interface/statuses/biomeelectric.png"
+}

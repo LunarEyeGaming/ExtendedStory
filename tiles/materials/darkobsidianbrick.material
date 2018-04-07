@@ -1,0 +1,24 @@
+{
+  "materialId" : 2012,
+  "materialName" : "darkobsidianbrick",
+  "particleColor" : [92, 90, 87, 255],
+  "itemDrop" : "darkobsidianbrick",
+  "description" : "A block of dark obsidian carved into a strange-looking brick.",
+  "shortdescription" : "Strange Brick",
+  "glitchDescription" : "Intrigued. This brick has a very strange shape.",
+  "floranDescription" : "Ssstrange bricksss.",
+  "novakidDescription" : "A strange-lookin' brick.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "darkobsidianbrick.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1500
+  }
+}
