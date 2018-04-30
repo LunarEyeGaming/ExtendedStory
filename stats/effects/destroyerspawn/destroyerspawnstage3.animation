@@ -1,0 +1,19 @@
+{
+  "particleEmitters" : {
+    "sparks" : {
+      "enabled" : true,
+      "emissionRate" : 24.0,
+	  "transformationGroups" : ["destroyereffect"],
+      "particles" : [
+        {
+          "particle" : "destroyereffect"
+        }
+      ]
+    }
+  },
+
+  "transformationGroups" : {
+    "destroyereffect" : { "interpolated" : true }
+  }
+}
+

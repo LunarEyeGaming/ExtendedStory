@@ -25,28 +25,28 @@
 	  "type" : "energytravelingswoosh",
 	  "angle" : 90,
 	  "fuzzAngle" : 180,
-	  "config" : { "power" : 80, "periodicActions" : [ { "time" : 0.1, "action" : "projectile", "type" : "plasmatorpedo", "angle" : 90, "fuzzAngle" : 180 } ] }
+	  "config" : { "power" : 20, "periodicActions" : [ { "time" : 0.1, "action" : "projectile", "type" : "plasmatorpedo", "angle" : 90, "fuzzAngle" : 180 } ] }
 	},
 	{
 	  "time" : 1.0,
 	  "action" : "projectile",
 	  "type" : "energytravelingswoosh",
 	  "angleAdjust" : 15,
-	  "config" : { "power" : 80 }
+	  "config" : { "power" : 20 }
 	},
 	{
 	  "time" : 1.0,
 	  "action" : "projectile",
 	  "type" : "energytravelingswoosh",
 	  "angleAdjust" : 0,
-	  "config" : { "power" : 80 }
+	  "config" : { "power" : 20 }
 	},
 	{
 	  "time" : 1.0,
 	  "action" : "projectile",
 	  "type" : "energytravelingswoosh",
 	  "angleAdjust" : -15,
-	  "config" : { "power" : 80 }
+	  "config" : { "power" : 20 }
 	}
   ],
   "actionOnReap" : [
@@ -245,5 +245,5 @@
 	}
   ],
   "timeToLive" : 5.0,
-  "power" : 50
+  "power" : 1
 }

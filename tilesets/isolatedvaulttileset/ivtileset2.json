@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":49,
+ "tilecount":52,
  "tileheight":82,
  "tileproperties":
     {
@@ -290,12 +290,30 @@
         {
          "material":"darkobsidianbrick2"
         },
+     "49":
+        {
+         "imagePositionX":"-12",
+         "imagePositionY":"-12",
+         "object":"abyssvortex",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "\/\/description":"Small bricks made from eternally burning stone.",
          "\/\/name":"burningbrick",
          "\/\/shortdescription":"Eternally Burning Brick",
          "material":"burningbrick"
+        },
+     "50":
+        {
+         "material":"darkobsidianrail"
+        },
+     "51":
+        {
+         "imagePositionX":"-20",
+         "imagePositionY":"0",
+         "object":"abyssartifactaltar",
+         "tilesetDirection":"right"
         },
      "6":
         {
@@ -618,12 +636,30 @@
         {
          "material":"string"
         },
+     "49":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
          "material":"string"
+        },
+     "50":
+        {
+         "material":"string"
+        },
+     "51":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
      "6":
         {
@@ -932,11 +968,29 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "49":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssvortex.png",
+         "imageheight":24,
+         "imagewidth":24
+        },
      "5":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/burningbrick.png",
          "imageheight":8,
          "imagewidth":8
+        },
+     "50":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/darkobsidianrail.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "51":
+        {
+         "image":"..\/..\/objects\/mission\/abyssartifactdungeon\/abyssartifactaltar\/abyssartifactaltar.png",
+         "imageheight":40,
+         "imagewidth":32
         },
      "6":
         {

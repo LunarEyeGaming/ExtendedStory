@@ -1,0 +1,18 @@
+{
+  "kind" : "blinded_es",
+  "definition" : {
+    "type" : "textured",
+    "image" : "/particles/blinded_es/blinded_es.png",
+    "position" : [0, 0],
+        "velocity" : [0, 0],
+        "approach" : [0, 0],
+        "destructionAction" : "fade",
+        "destructionTime" : 0.2,
+    "size" : 1,
+    "layer" : "front",
+    "timeToLive" : 1.5,
+    "variance" : {
+      "initialVelocity" : [0, 0]
+    }
+  }
+}

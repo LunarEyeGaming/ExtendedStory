@@ -177,7 +177,7 @@ function update(args)
 	sphereEnergyRatio = sphereEnergy / 10000
 	animator.setAnimationState("energybar", "on")
 
-  animator.setGlobalTag("barDirectives", "scalenearest;"..sphereEnergyRatio..";1")
+    animator.setGlobalTag("barDirectives", "scalenearest;"..sphereEnergyRatio..";1")
 	
 	--Boosts
 	--[[  

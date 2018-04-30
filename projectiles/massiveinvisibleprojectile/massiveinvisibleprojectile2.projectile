@@ -1,0 +1,10 @@
+{
+  "projectileName" : "massiveinvisibleprojectile2",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "damagePoly" : [ [-600, 0], [0, -600], [600, 0], [0, 600] ], //It's huge
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}

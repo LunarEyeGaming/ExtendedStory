@@ -11,15 +11,6 @@ function init()
   storage.uuid = storage.uuid or sb.makeUuid()
   object.setInteractive(true)
 
-  message.setHandler("onTeleport", function(message, isLocal, data)
-      if not config.getParameter("returnDoor") and not storage.vanishTime then
-        storage.vanishTime = world.time() + config.getParameter("vanishTime")
-        if not (animator.animationState("portal") == "open" or animator.animationState("portal") == "on") then
-          animator.setAnimationState("portal", "open")
-        end
-      end
-    end)
-
   if config.getParameter("messagePlayerInterval") then
     self.radioMessage = util.interval(config.getParameter("messagePlayerInterval"), function()
       local nearPlayers = world.entityQuery(object.position(), config.getParameter("messagePlayerRange"), {includedTypes = {"player"}})

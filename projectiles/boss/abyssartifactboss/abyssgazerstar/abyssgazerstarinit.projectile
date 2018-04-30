@@ -1,0 +1,20 @@
+{
+  "projectileName" : "abyssgazerstarinit",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "abyssgazerstarinit.png",
+  "fullbright" : true,
+  "animationCycle" : 2,
+  "frameNumber" : 10,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 2.0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abyssgazerstar"
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

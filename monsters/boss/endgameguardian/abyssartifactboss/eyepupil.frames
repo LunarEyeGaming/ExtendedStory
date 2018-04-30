@@ -1,0 +1,28 @@
+{
+  "frameGrid" : {
+    "size" : [51, 51],
+    "dimensions" : [16, 7],
+
+    "names" : [
+      [ "eye1" ],
+	  [ "transition1", "eye2" ],
+	  [ "transition2.1", "transition2.2", "transition2.3", "eye3", null, "transition2d.1", "transition2d.2", "transition2d.3", "transition2d.4", "transition2d.5", "transition2d.6", "transition2d.7" ],
+	  [ "transition3.1", "transition3.2", "transition3.3", "transition3.4", "transition3.5", "eye4", null, "transition3d.1", "transition3d.2", "transition3d.3", "transition3d.4", "transition3d.5", "transition3d.6" ],
+	  [ "transition4.1", "transition4.2", "transition4.3", "transition4.4", "transition4.5", "eye5" ],
+	  [ "transition5.1", "transition5.2", "transition5.3", "transition5.4", "transition5.5", "transition5.6", "transition5.7", "transition5.8", "transition5.9", "transition5.10", "transition5.11", "transition5.12", "transition5.13", "transition5.14", "eye6.1", "eye6.2" ],
+	  [ "transition6.1", "transition6.2", "transition6.3", "eye7", "transition7" ]
+    ]
+  },
+  
+  "aliases" : {
+    "transition4d.1" : "transition5.1",
+	"transition4d.2" : "transition5.2",
+	"transition4d.3" : "transition5.3",
+	"transition4d.4" : "transition5.4",
+	"transition4d.5" : "transition5.5",
+	"transition4d.6" : "transition5.6",
+	"transition4d.7" : "transition5.7",
+	"transition4d.8" : "transition5.8",
+	"transition4d.9" : "transition5.9"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "projectileName" : "abysscolumnwindup",
+  "image" : "abysscolumnwindup.png",
+  "animationCycle" : 0.9,
+  "frameNumber" : 9,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "power" : 0,
+  "piercing" : true,
+  "animationLoops" : false,
+  "speed" : 0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "bounces" : -1,
+  "timeToLive" : 2.0,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abysscolumn"
+	}
+  ]
+}

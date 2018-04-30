@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "inferniumore", "count" : 2 }
+  ],
+  "output" : {
+    "item" : "burningbar",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "ancientfurnace", "bars", "all" ]
+}

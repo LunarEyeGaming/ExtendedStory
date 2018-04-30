@@ -1,0 +1,22 @@
+{
+  "name" : "abysslevitate",
+  "effectConfig" : {
+    "maxHoverHeight" : 10,
+    "hoverSpeedMultiplier" : 10,
+    "hoverAcceleration" : 10,
+    "bobInterval" : 2,
+    "bobAmount" : 0.3,
+    "fallSpeedLimit" : -10,
+    "protectionBonus" : 5
+  },
+  "defaultDuration" : 7,
+
+  "scripts" : [
+    "abysslevitate.lua"
+  ],
+
+  "animationConfig" : "abysslevitate.animation",
+
+  "label" : "Levitated - Levitated by the Abyssal Gazer",
+  "icon" : "/interface/statuses/abysslevitate.png"
+}

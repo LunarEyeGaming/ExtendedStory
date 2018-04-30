@@ -1,0 +1,66 @@
+{
+  "itemName" : "ionflamethrower",
+  "level" : 6,
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "What's better than a regular flamethrower? An ionizing flamethrower!",
+  "shortdescription" : "^cyan;Ion Flamethrower^reset;",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+
+  "inventoryIcon" : "ionflamethrower.png:idle",
+
+  "animation" : "ionflamethrower.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ionflamethrower.png",
+	"middleFullbright" : "ionflamethrowerunlit.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fireStart" : [ "/sfx/gun/flamethrower_start.ogg" ],
+      "fireLoop" : [ "/sfx/gun/flamethrower_loop.ogg" ],
+      "fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ]
+    }
+  },
+  "baseOffset" : [2.25, 0],
+  "muzzleOffset" : [3.5, 0.4],
+
+  "scripts" : ["/items/active/weapons/ranged/flamethrower_es.lua"],
+
+  "elementalType" : "ion",
+
+  "primaryAbilityType" : "flamethrower",
+  "primaryAbility" : {
+    "baseDps" : 10,
+    "energyUsage" : 30,
+	"projectileType" : "ionflamethrower",
+	"stances" : {
+	  "idle" : {
+	    "animationStates" : {
+		  "firing" : "idle"
+		}
+	  },
+	  "fire" : {
+	    "animationStates" : {
+		  "firing" : "fire"
+		}
+	  }
+	}
+  },
+
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+	  "ion" : {"projectileType" : "ionflamegrenade", "name" : "Ion Pellet"}
+	},
+	"energyUsage" : 30
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

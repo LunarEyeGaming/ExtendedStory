@@ -1,0 +1,121 @@
+{
+  "name": "abyssartifactboss-abysscolumns",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+	    "title": "setAnimationState",
+		"type": "action",
+		"name": "setAnimationState",
+		"parameters": {
+		  "state": {"value": "transition2"},
+		  "type": {"value": "eyepupil"}
+		}
+	  },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "3"},
+          "type": {"value": "eyeState"}
+        }
+      },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "abysseyeswindup"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+	  {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 12}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+              "title": "random",
+              "type": "action",
+              "name": "random",
+              "parameters": {
+                "max": {"value": 50},
+                "min": {"value": -50}
+              },
+              "output": {
+                "number": "tearX"
+              }
+            },
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, -1]},
+    	        "offset": {"value": ["tearX", 0]},
+    	        "projectileConfig": {"value": {"onlyHitTerrain": true, "actionOnReap": [{"action": "projectile", "type": "abysscolumnwindup", "direction": [1, 0]}], "timeToLive": 5, "speed": 800, "damageTeam": {"type": "enemy"}}},
+    	        "projectileType": {"value": "invisibleprojectile"}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.3}
+    	      }
+    	    }
+		  ]
+		}
+	  },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 3}
+        }
+      }
+    ]
+  }
+}

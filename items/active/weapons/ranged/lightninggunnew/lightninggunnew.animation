@@ -27,7 +27,18 @@
             "transition" : "off"
           }
         }
-      }
+      },
+	  "beamorigin" : {
+	    "default" : "idle",
+		"states" : {
+		  "idle" : {},
+		  "fire" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
+		}
+	  }
     },
 
     "parts" : {
@@ -96,13 +107,62 @@
             }
           }
         }
+      },
+      "beamorigin" : {
+        "properties" : {
+          "zLevel" : 4,
+          "centered" : true,
+          "offset" : [4.375, 0],
+          "fullbright" : true,
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "beamorigin" : {
+            "idle" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:<frame>"
+              }
+            }
+          }
+        }
       }
+    }
+  },
+  
+  "particleEmitters" : {
+	"beamCollision" : {
+      "active" : false,
+      "transformationGroups" : ["muzzle", "beamEnd"],
+      "emissionRate" : 50,
+      "particles" : [
+        {
+          "particle" : "electricswoosh1"
+        },
+		{
+          "particle" : "electricswoosh2"
+        },
+		{
+          "particle" : "electricenergy"
+        },
+		{
+          "particle" : "smallelectriccloud1"
+        },
+		{
+          "particle" : "smallelectriccloud2"
+        },
+		{
+          "particle" : "electricalburn"
+        }
+      ]
     }
   },
 
   "transformationGroups" : {
     "weapon" : {},
-    "muzzle" : {}
+    "muzzle" : {},
+    "beamEnd" : {}
   },
 
   "sounds" : {

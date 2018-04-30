@@ -630,6 +630,14 @@
                  "height":30,
                  "id":1381,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"uniqueId\" : \"fireartifactaltar\" }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2016,7 +2024,7 @@
                  "y":1336
                 }, 
                 {
-                 "gid":8696,
+                 "gid":8701,
                  "height":24,
                  "id":1611,
                  "name":"",
@@ -2028,7 +2036,7 @@
                  "y":824
                 }, 
                 {
-                 "gid":2147492344,
+                 "gid":2147492349,
                  "height":24,
                  "id":1612,
                  "name":"",
@@ -2040,7 +2048,7 @@
                  "y":1488
                 }, 
                 {
-                 "gid":2147492344,
+                 "gid":2147492349,
                  "height":24,
                  "id":1613,
                  "name":"",
@@ -2052,7 +2060,7 @@
                  "y":1208
                 }, 
                 {
-                 "gid":8696,
+                 "gid":8701,
                  "height":24,
                  "id":1614,
                  "name":"",
@@ -2062,6 +2070,27 @@
                  "width":24,
                  "x":2360,
                  "y":1776
+                }, 
+                {
+                 "height":64,
+                 "id":1615,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":144,
+                 "x":2328,
+                 "y":1712
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3764,7 +3793,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1615,
+ "nextobjectid":1616,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.4",
@@ -3911,7 +3940,7 @@
          "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }, 
         {
-         "firstgid":8696,
+         "firstgid":8701,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/techmanagement.json"
         }],
  "tilewidth":8,

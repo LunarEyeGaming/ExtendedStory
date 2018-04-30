@@ -1,0 +1,38 @@
+{
+  "id" : "collectabyssartifact",
+  "mainQuest" : true,
+  "prerequisites" : [ "kill_cyberboss" ],
+  "title" : "^#666666;The Abyss Artifact^reset;",
+  "text" : "The ^orange;abyss artifact^reset; is found in the ^green;Dark Abyss Dimension^reset;, which is known for being extremely unsettling. Portals to this dimension are located in ^#666666;dark abyss^reset; worlds.",
+  "completionText" : "...",
+  "moneyRange" : [1000, 1000],
+  "ephemeral" : false,
+  "rewards" : [[["abyssartifact", 1]]],
+  "questGiverIndicator" : "mainquestgiver",
+  "questReceiverIndicator" : "mainquestreceiver",
+
+  "updateDelta" : 20,
+  "script" : "/quests/scripts/artifact.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      }
+    },
+
+    "descriptions"  : {
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Dark Abyss Dimension^reset;",
+      "turnIn" : "Return to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
+    },
+
+    "artifactUid" : "abyssartifactaltar",
+    "artifactMessage" : "abyssArtifactTaken",
+
+    "estherUid" : "vaultkeytrader"
+  }
+}

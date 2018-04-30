@@ -1,0 +1,56 @@
+{
+  "projectileName" : "healthdrainabyss",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 5,
+  "speed" : 100,
+  "damageType" : "IgnoresDef",
+  "timeToLive" : 20,
+  "damagePoly" : [ [8, 8], [-8, 8], [-8, -8], [8, -8] ],
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : ["/sfx/projectiles/astraltear_stop2.ogg"]
+	},
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+          "type" : "ember",
+          "size" : 2,
+          "color" : [11, 11, 11],
+          "position" : [0, 0],
+          "destructionAction" : "fade",
+          "destructionTime" : 0.2,
+          "fade" : 1,
+          "layer" : "middle",
+          "timeToLive" : 0.2,
+          "variance" : {
+            "initialVelocity" : [2.0, 2.0],
+            "position" : [1, 1]
+          }
+      }
+    }
+  ],
+  "actionOnHit" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abyssgazerheal"
+	}
+  ],
+  "damageKind" : "nodamage",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

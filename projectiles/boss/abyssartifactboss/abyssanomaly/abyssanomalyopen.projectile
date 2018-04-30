@@ -1,0 +1,28 @@
+{
+  "projectileName" : "abyssanomalyopen",
+  "image" : "abyssanomalyopen.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "power" : 0.0,
+  "piercing" : true,
+  "speed" : 0.0,
+  "timeToLive" : 0.25,
+  "damageKind" : "nodamage",
+  "damageType" : "nodamage",
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/tentacleboss_portal_open.ogg" ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abyssanomaly"
+	}
+  ]
+}

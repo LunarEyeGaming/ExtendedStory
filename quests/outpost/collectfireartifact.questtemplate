@@ -3,8 +3,8 @@
   "mainQuest" : true,
   "prerequisites" : [ "kill_cyberboss" ],
   "title" : "^orange;The Fire Artifact^reset;",
-  "text" : "Your next artifact is the fire artifact, found in the ^#c96c28;burning^reset; biome. The same gray objects that you came across in the ^#666666;dark abyss^reset; are found underground. They have orange lights that should be easy to spot.",
-  "completionText" : "Two out of four artifacts.",
+  "text" : "The ^orange;fire artifact^reset; is found in the ^green;Burning Dimension^reset;. I advise that you get any kind of distortion sphere for this one. Portals for this dimension are located in ^#c96c28;burning^reset; worlds.",
+  "completionText" : "...",
   "moneyRange" : [1000, 1000],
   "ephemeral" : false,
   "rewards" : [[["fireartifact", 1]]],
@@ -26,7 +26,7 @@
     },
 
     "descriptions"  : {
-      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Eternally Burning Dimension^reset;",
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Burning Dimension^reset;",
       "turnIn" : "Return to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
     },
 

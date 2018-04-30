@@ -1,0 +1,128 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "disappear" : {
+            "frames" : 4,
+            "cycle" : 0.4
+          },
+		  "invisible" : {}
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+	  "eyes" : {
+	    "priority" : 0,
+		"default" : "opened",
+		"states" : {
+		  "opened" : {
+		    "frames" : 1
+		  },
+		  "closed" : {
+		    "frames" : 1
+		  }
+		}
+	  }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : [ "body" ],
+          "offset" : [0.0, 0.0],
+          "zLevel" : 1
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.aggro"
+              }
+            }
+          }
+        }
+      },
+      "eyes" : {
+        "properties" : {
+          "transformationGroups" : [ "body" ],
+          "offset" : [0, 0],
+          "zLevel" : 3,
+		  "fullbright" : true
+        },
+        "partStates" : {
+          "eyes" : {
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.aggro"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "aggro" : ""
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true },
+    "facing" : { "interpolated" : false },
+    "aim" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "particles" : [ ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+    "fire" : [ "/sfx/gun/twigun_shot1.ogg", "/sfx/gun/twigun_shot2.ogg", "/sfx/gun/twigun_shot3.ogg" ]
+  }
+}

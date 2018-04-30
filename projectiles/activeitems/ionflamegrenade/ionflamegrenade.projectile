@@ -1,0 +1,91 @@
+{
+  "projectileName" : "ionflamegrenade",
+  "physics" : "grenade",
+  "bounces" : -1,
+  "timeToLive" : 3,
+  "damageKindImage" : "fireicon.png",
+  "pointLight" : true,
+  "lightColor" : [20, 150, 150],
+  "image" : "ionflamegrenade.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/molotovexplosion/molotovexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -35
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -18
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 18
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 55
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -55
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -1
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -65
+    },
+    {
+      "action" : "projectile",
+      "type" : "ionflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 65
+    }
+  ],
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "ionplasma"
+}

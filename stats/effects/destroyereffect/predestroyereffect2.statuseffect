@@ -1,0 +1,21 @@
+{
+  "name" : "predestroyereffect2",
+
+  "effectConfig" : {
+    "directives" : "fade=FFAAAA=0.3",
+    "movementModifiers" : {
+      "speedModifier" : 1.0,
+      "airJumpModifier" : 1.0
+    },
+    "tickRate" : 20,
+    "energyCost" : 2.5,
+    "healthDamage" : 5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "predestroyereffect2.lua"
+  ],
+
+  "animationConfig" : "predestroyereffect2.animation"
+}

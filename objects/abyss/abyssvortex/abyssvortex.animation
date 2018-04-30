@@ -2,13 +2,34 @@
   "animatedParts" : {
     "stateTypes" : {
       "padState" : {
-        "default" : "off",
+        "default" : "closed",
         "states" : {
-          "off" : {
-            "frames" : 1
+		  "closed" : {},
+          "open" : {
+            "frames" : 9,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "openloop",
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg"
+			}
           },
-          "on" : {
-            "frames" : 1
+          "openloop" : {
+            "frames" : 2,
+            "cycle" : 0.1,
+            "mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
+			}
+          },
+          "close" : {
+            "frames" : 9,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "closed",
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+			}
           }
         }
       }
@@ -17,25 +38,46 @@
     "parts" : {
       "forcepad" : {
         "properties" : {
-          "centered" : false
+		  "centered" : false,
+		  "zLevel" : 2,
+		  "fullbright" : true,
+		  "offset" : [-6.625, -6.625]
         },
 
         "partStates" : {
           "padState" : {
-            "off" : {
+            "open" : {
               "properties" : {
-                "image" : "<partImage>:<color>.off"
+                "image" : "<partImage>:open.<frame>"
               }
             },
-
-            "on" : {
+            "openloop" : {
               "properties" : {
-                "image" : "<partImage>:<color>.on"
+                "image" : "<partImage>:openloop.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
               }
             }
           }
         }
-      }
+      },
+	  "fg" : {
+	    "properties" : {
+		  "centered" : false,
+		  "zLevel" : 1,
+		  "image" : "<partImage>"
+		}
+	  },
+	  "bg" : {
+	    "properties" : {
+		  "centered" : false,
+		  "image" : "<partImage>",
+		  "fullbright" : true
+		}
+	  }
     }
   }
 }

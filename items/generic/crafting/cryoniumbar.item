@@ -1,10 +1,11 @@
 {
   "itemName" : "cryoniumbar",
-  "price" : 20,
+  "price" : 300,
   "rarity" : "Legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "cryoniumbar.png",
   "description" : "This piece of metal manages to remain at temperatures near absolute zero.^green; Used for crafting permafrost weapons^reset;.",
   "shortdescription" : "Cryonium Bar",
-  "itemTags" : [ "reagent" ]
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : ["elementite"]
 }

@@ -1,0 +1,24 @@
+{
+  "name" : "destroyerspawnstage3",
+
+  "effectConfig" : {
+    "directives" : "fade=FFAAAA=0.2",
+    "movementModifiers" : {
+      "speedModifier" : 1.0,
+      "airJumpModifier" : 1.0
+    },
+    "tickRate" : 20,
+    "energyCost" : 2.5,
+    "healthDamage" : 5
+  },
+  "defaultDuration" : 150,
+
+  "scripts" : [
+    "destroyerspawnstage3.lua"
+  ],
+
+  "animationConfig" : "destroyerspawnstage3.animation",
+
+  "label" : "Your doom is approaching...",
+  "icon" : "/interface/statuses/doomed.png"
+}

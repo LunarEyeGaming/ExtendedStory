@@ -1,0 +1,25 @@
+{
+  "projectileName" : "abyssbeam",
+  "image" : "abyssbeam.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 8,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "power" : 400,
+  "piercing" : true,
+  "speed" : 0,
+  "damagePoly" : [ [-512, 8], [-512, -8], [512, -8], [512, 8] ],
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "bounces" : -1,
+  "timeToLive" : 0.2,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abyssbeamwinddown"
+	}
+  ]
+}

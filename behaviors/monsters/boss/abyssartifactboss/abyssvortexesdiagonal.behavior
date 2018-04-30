@@ -1,0 +1,101 @@
+{
+  "name": "abyssartifactboss-abyssvortexesdiagonal",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "anomalywindup"}
+        }
+      },
+	  {
+	    "title": "setAnimationState",
+		"type": "action",
+		"name": "setAnimationState",
+		"parameters": {
+		  "state": {"value": "transition3"},
+		  "type": {"value": "eyepupil"}
+		}
+	  },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "4"},
+          "type": {"value": "eyeState"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+	  {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 15}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [1, 0]},
+    	        "offset": {"value": [0, 0]},
+    	        "projectileConfig": {"value": {}},
+    	        "projectileType": {"value": "abyssvortexbullethell"}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 1.0}
+    	      }
+    	    }
+		  ]
+		}
+	  },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      }
+    ]
+  }
+}

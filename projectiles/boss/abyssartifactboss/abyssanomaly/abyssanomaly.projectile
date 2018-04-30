@@ -1,0 +1,30 @@
+{
+  "projectileName" : "abyssanomaly",
+  "image" : "abyssanomaly.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 5,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "power" : 200,
+  "piercing" : true,
+  "speed" : 50,
+  "bounces" : -1,
+  "timeToLive" : 5,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "actionOnReap" : [
+    {
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/abyssanomalydisappear/abyssanomalydisappear.animation",
+		"position" : [0, 0],
+		"timeToLive" : 0,
+		"destructionAction" : "fade",
+		"fade" : 1,
+		"destructionTime" : 1.0
+	  }
+	}
+  ]
+}

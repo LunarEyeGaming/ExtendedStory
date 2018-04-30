@@ -1,0 +1,119 @@
+{
+  "itemName" : "ionrailgun_es",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A gun that shoots super high velocity beams.",
+  "shortdescription" : "^cyan;Ion Railgun^reset;",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "ionrailgun_es.png:idle.1",
+
+  "animation" : "ionrailgun_es.animation",
+  "animationParts" : {
+    "gun" : "ionrailgun_es.png",
+    "gunfullbright" : "ionrailgununlit_es.png",
+	"laserbeam" : "ionbeam.png",
+	"ionorb" : "ionorb.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+	  "altFire" : ["/sfx/gun/plasma_shotgun2.ogg"]
+	}
+  },
+  "muzzleOffset" : [3, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ion",
+
+  "primaryAbility" : {
+    "name" : "NAN",
+    "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
+    "class" : "ChargeFire",
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {"damageType" : "nodamage"},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire",
+        "fireAnimationState" : "idle"
+      },
+      {
+        "time" : 1.5,
+        "energyCost" : 100,
+        "cooldown" : 0.25,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {"power" : 50, "piercing" : true, "damageKind" : "ionplasma", "speed" : 800, "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}], "damageTeam" : {"type" : "friendly"}},
+        "inaccuracy" : 0,
+        "baseDamage" : 20,
+        "fireSound" : "fire2"
+      }
+    ],
+    "beamLength" : 100,
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"animationStates" : {
+		  "ionorb" : "off"
+		}
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"animationStates" : {
+		  "ionorb" : "small"
+		}
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {"ion" : {"projectileType" : "ionchain1", "projectileParameters" : {"speed" : 40}}},
+    "energyUsage" : 20,
+	"baseDps" : 5,
+	"fireTime" : 0.75,
+	"projectileCount" : 5,
+	"inaccuracy" : 0.07
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

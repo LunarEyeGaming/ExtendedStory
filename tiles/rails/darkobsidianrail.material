@@ -1,0 +1,25 @@
+{
+  "materialId" : 2016,
+  "materialName" : "darkobsidianrail",
+  "collisionKind" : "none",
+  "foregroundOnly" : true,
+  "itemDrop" : "darkobsidianrail",
+  "shortdescription" : "Dark Obsidian Rail",
+  "description" : "A dark obsidian rail.",
+  "footstepSound" : "/sfx/blocks/footstep_girder.ogg",
+  "category": "supports",
+  "health" : 4,
+  "glitchDescription" : "Surprised. These rails are almost pitch black.",
+  "floranDescription" : "Dark railss.",
+  "novakidDescription" : "Some real sturdy and dark rails.",
+
+  "renderTemplate" : "/tiles/railtemplate.config",
+  "renderParameters" : {
+    "texture" : "darkobsidianrail.png",
+    "variants" : 1,
+    "multiColored" : true,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "zLevel" : 0
+  }
+}

@@ -3,8 +3,8 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A type of chargeable gun that shoots lightning.",
-  "shortdescription" : "^blue;Super Tesla^reset;",
+  "description" : "A gun that shoots extremely high voltage electric bolts.",
+  "shortdescription" : "^blue;Lightning Gun^reset;",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
@@ -19,6 +19,9 @@
     "gunfullbright" : "lightninggunfullbright.png"
   },
   "animationCustom" : {
+    "sounds" : {
+	  "altFire" : ["/sfx/gun/shockblast.ogg"]
+	}
   },
   "muzzleOffset" : [2.5, 0.5],
 
@@ -106,10 +109,11 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Comp. Lightning Bolt", "projectileType" : "electricplasmarocket", "projectileCount" : 1, "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/lightningburst/lightningburst.config"}]}}
+      "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
     },
     "energyUsage" : 20,
-	"baseDps" : 20
+	"baseDps" : 20,
+	"fireTime" : 0.5
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

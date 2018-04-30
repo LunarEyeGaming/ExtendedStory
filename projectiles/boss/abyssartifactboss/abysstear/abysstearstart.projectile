@@ -1,0 +1,95 @@
+{
+  "projectileName" : "abysstearstart",
+  "image" : "abysstearstart.png",
+  "animationCycle" : 1.0,
+  "animationLoops" : false,
+  "frameNumber" : 5,
+  "timeToLive" : 1.0,
+  "lightColor" : [50, 50, 50],
+  "pointLight" : true,
+  "flippable" : true,
+  "piercing" : true,
+  "statusEffects" : [ ],
+  "power" : 0,
+  "speed" : 0,
+  "knockback" : 30,
+  "knockbackDirectional" : true,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "broadsword",
+  "damageType" : "NoDamage",
+  "fullbright" : true,
+  "damagePoly" : [[-12, 20], [0, 20], [16, -20], [4, -20]],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "abysstear",
+      "inheritSpeedFactor" : 1
+    }
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    },
+	{
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.0,
+      "repeat" : false
+    }
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/astraltear_start.ogg"
+}

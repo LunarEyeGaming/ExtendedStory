@@ -131,6 +131,46 @@
   },
   {
     "op" : "add",
+    "path" : "/displayOres/lunariteore",
+    "value" : {
+      "displayName" : "Lunarite Ore",
+      "icon" : "/items/generic/crafting/lunariteore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/inferniumore",
+    "value" : {
+      "displayName" : "Infernium Ore",
+      "icon" : "/items/generic/crafting/inferniumore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/cryoniumore",
+    "value" : {
+      "displayName" : "Cryonium Ore",
+      "icon" : "/items/generic/crafting/cryoniumore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/radyiteore",
+    "value" : {
+      "displayName" : "Radyite Ore",
+      "icon" : "/items/generic/crafting/radyiteore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/voltagenore",
+    "value" : {
+      "displayName" : "Voltagen Ore",
+      "icon" : "/items/generic/crafting/voltagenore.png"
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/displayWeathers/fireshower",
     "value" : {
       "displayName" : "Magma Meteors",

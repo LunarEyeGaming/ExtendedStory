@@ -28,7 +28,7 @@
 
   "mainBlock" : "supercompressedsand",
   "subBlocks" : [ "chargedstone" ],
-  "ores" : "depth2",
+  "ores" : "voltagen2",
 
   "ambientNoises" : {
     "day" : {
@@ -180,7 +180,7 @@
         "type" : "object",
         "objectSets" : [
           {
-            "pool" : [ [1, "abyssportal" ] ],
+            "pool" : [ [1, "electricportal" ] ],
             "parameters" : { }
           }
         ]

@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "durasteelbar", "count" : 20 },
+	{ "item" : "battery", "count" : 2 },
+	{ "item" : "siliconboard", "count" : 10 }
+  ],
+  "output" : { "item" : "upgradestation", "count" : 1 },
+  "groups" : [ "inventorstable3", "craftingstations", "all" ]
+}

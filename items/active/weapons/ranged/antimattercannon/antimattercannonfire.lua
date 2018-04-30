@@ -29,9 +29,6 @@ function ChargeFire:update(dt, fireMode, shiftHeld)
     self:setState(self.charge)
   end
   local chargeTime = self.chargeTimer
-  if chargeTime == 2.0 then
-    self:setState(self.fire)
-  end
 end
 
 function ChargeFire:charge()
@@ -43,6 +40,10 @@ function ChargeFire:charge()
 
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = self.chargeTimer + self.dt
+    if animator.animationState("firing") == "fullcharge" then
+	  self.chargeLevel = self:currentChargeLevel()
+      self:setState(self.fire)
+    end
 
     coroutine.yield()
   end

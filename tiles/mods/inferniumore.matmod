@@ -1,0 +1,21 @@
+{
+  "modId" : 405,
+  "modName" : "inferniumore",
+  "itemDrop" : "inferniumore",
+  "description" : "Infernium Ore.",
+  "health" : 25,
+  "harvestLevel" : 6,
+  "breaksWithTile" : true,
+
+  "miningSounds" : [ "/sfx/tools/pickaxe_ore.ogg", "/sfx/tools/pickaxe_ore2.ogg" ],
+  "miningParticle" : "orespark",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "inferniumore.png",
+    "variants" : 8,
+    "multiColored" : false,
+    "zLevel" : 0,
+    "radiantLight" : [125, 47, 0]
+  }
+}

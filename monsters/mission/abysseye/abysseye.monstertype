@@ -76,7 +76,7 @@
 		  "cooldown" : 3,
 		  "parameters" : {
 		    "requireLineOfSight" : true,
-			"maximumRange" : 40,
+			"maximumRange" : 60,
 			"minimumRange" : 20,
 			"windupStopForce" : 20,
 			"windupState" : "windup",
@@ -120,7 +120,7 @@
 		  "parameters" : {
 		    "requireLineOfSight" : true,
 			"maximumRange" : 100,
-			"minimumRange" : 30,
+			"minimumRange" : 60,
 			"windupStopForce" : 20,
 			"windupState" : "windup3",
 			"windupTime" : 3.0,
@@ -214,7 +214,7 @@
       },
 
       "appliesEnvironmentStatusEffects" : false,
-      "appliesWeatherStatusEffects" : true,
+      "appliesWeatherStatusEffects" : false,
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
@@ -242,6 +242,9 @@
           "baseValue" : 0.0
         },
         "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
           "baseValue" : 1.0
         }
       },

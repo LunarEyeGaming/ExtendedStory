@@ -1,9 +1,9 @@
 {
   "id" : "destroysupervoideye",
   "mainQuest" : true,
-  "prerequisites" : [ "collectpoisonartifact", "collectfireartifact", "collecticeartifact", "collectelectricartifact" ],
+  "prerequisites" : [ "collectpoisonartifact", "collectfireartifact", "collecticeartifact", "collectelectricartifact", "collectabyssartifact" ],
   "title" : "The ^magenta;Supervoid^black; Eye^white;",
-  "text" : "All of the artifacts have been collected. You must kill this beast as quickly as possible. I don't know what damage it could do to you. Just...please be careful. Those strange black areas should be your entry point.",
+  "text" : "All of the artifacts have been collected. The ^green;Supervoid Eye^reset; is a terrorizer of all universes, as it will absorb the energy of any universe in its wake. It is best that you proceed with caution and kill it on sight. This will be a really ^red;boring^reset; task, but you need to look through a lot of planets to find a ^orange;Supervoid Node^reset;.",
   "completionText" : "The universe has been saved again. The biggest threat to the multiverse has been destroyed!",
   "moneyRange" : [500, 500],
   "rewards" : [

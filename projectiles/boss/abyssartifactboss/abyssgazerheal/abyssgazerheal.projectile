@@ -1,0 +1,20 @@
+{
+  "projectileName" : "abyssgazerheal",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "statusEffects" : [ "regeneration4" ],
+  "flippable" : true,
+  "power" : 0.0,
+  "speed" : 30.0,
+  "timeToLive" : 10,
+  "physics" : "illusion",
+  "damageKind" : "nodamage",
+  "damageTeam" : {"type" : "indiscriminate"},
+
+  "scripts" : [ "abyssgazerheal.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

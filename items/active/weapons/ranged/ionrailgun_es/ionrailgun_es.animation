@@ -1,0 +1,273 @@
+{
+  "globalTagDefaults" : {
+	"beamDirectives" : ""
+  },
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+		    "frames" : 7,
+			"cycle" : 1.0,
+			"mode" : "loop"
+		  },
+          "charge" : {
+            "frames" : 3,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/charge_combo2.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          },
+          "fullcharge" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "loop"
+          },
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+	  "beamfire" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : {},
+		  "fire" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+		}
+	  },
+	  "ionorb" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : {
+		    "properties" : {
+			  "particleEmittersOff" : ["sparklarge", "sparksmall"]
+			}
+		  },
+		  "small" : {
+		    "frames" : 1,
+			"cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "large",
+			"properties" : {
+			  "particleEmittersOn" : ["sparksmall"]
+			}
+		  },
+		  "large" : {
+		    "frames" : 1,
+			"cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "active",
+			"properties" : {
+			  "particleEmittersOn" : ["sparklarge"]
+			}
+		  },
+		  "active" : {
+		    "frames" : 4,
+			"cycle" : 0.4,
+			"mode" : "transition",
+			"transition" : "charged",
+			"properties" : {
+			  "particleEmittersOn" : ["sparklarge"]
+			}
+		  },
+		  "charged" : {
+		    "frames" : 4,
+			"cycle" : 0.4,
+			"mode" : "transition",
+			"transition" : "off",
+			"properties" : {
+			  "particleEmittersOff" : ["sparklarge", "sparksmall"]
+			}
+		  }
+		}
+	  }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.5, 0.25],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.5, 0.25],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "laserbeam" : {
+	    "properties" : {
+		  "centered" : true,
+		  "offset" : [3, 0.5],
+		  "transformationGroups" : ["laserbeam"],
+		  "fullbright" : true
+		},
+		"partStates" : {
+		  "beamfire" : {
+		    "fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire.<frame>?<beamDirectives>"
+			  }
+			}
+		  }
+		}
+	  },
+	  "ionorb" : {
+	    "properties" : {
+	      "centered" : true,
+		  "offset" : [3, 0.5],
+		  "transformationGroups" : ["weapon"],
+		  "fullbright" : true,
+		  "zLevel" : 2
+		},
+		"partStates" : {
+		  "ionorb" : {
+		    "small" : {},
+			"large" : {},
+			"active" : {
+			  "properties" : {
+			    "image" : "<partImage>:on.<frame>"
+			  }
+			},
+			"charged" : {
+			  "properties" : {
+			    "image" : "<partImage>:on.<frame>"
+			  }
+			}
+		  }
+		}
+	  }
+    }
+  },
+  
+  "particleEmitters" : {
+    "sparksmall" : {
+      "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [2.5, 0, 3.5, 1],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [144, 233, 244, 230],
+            "fade" : 0.9,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.8,
+            "position" : [0.0, 0.0],
+            "offsetRegion" : [0, 0, 0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [0, 0],
+            "timeToLive" : 0.6,
+			"fullbright" : true,
+            "variance" : {
+              "initialVelocity" : [2, 2],
+              "size" : 0.5
+            }
+          }
+        }
+      ]
+    },
+	"sparklarge" : {
+	  "active" : false,
+	  "emissionRate" : 100,
+	  "offsetRegion" : [2.5, 0, 3.5, 1],
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "animated",
+			"animation" : "/animations/ionfire_es/ionfire_es.animation",
+			"position" : [0, 0],
+			"initialVelocity" : [0, 0],
+			"finalVelocity" : [0, 5],
+			"timeToLive" : 1,
+			"fullbright" : true,
+			"size" : 0.6,
+			"variance" : {
+			  "initialVelocity" : [2, 2]
+			}
+		  }
+		}
+	  ]
+	}
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {},
+	"laserbeam" : {}
+  },
+
+  "sounds" : {
+    "fire" : ["/music/silence.ogg"],
+	"fire2" : ["/sfx/gun/plasmacannon_fire.ogg"]
+  }
+}

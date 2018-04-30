@@ -38,7 +38,7 @@
         "cooldown" : 0.0,
         "projectileType" : "invisibleprojectile",
         "projectileCount" : 1,
-        "projectileParameters" : {},
+        "projectileParameters" : {"onlyHitTerrain" : true},
         "inaccuracy" : 0,
         "baseDamage" : 0,
         "fireSound" : "fire",

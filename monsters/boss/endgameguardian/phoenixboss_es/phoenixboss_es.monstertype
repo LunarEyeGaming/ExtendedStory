@@ -135,12 +135,18 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
-		"electricResistance" : {
+		"fireResistance" : {
 		  "baseValue" : 1.0
 		},
-		"poisonResistance" : {
+		"iceResistance" : {
 		  "baseValue" : -0.5
-		}
+		},
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        }
       },
 
       "resources" : {

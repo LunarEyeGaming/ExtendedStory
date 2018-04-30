@@ -1,0 +1,15 @@
+{
+  "input" : [
+    { "item" : "abyssbar", "count" : 1 },
+	{ "item" : "burningbar", "count" : 1 },
+	{ "item" : "cryoniumbar", "count" : 1 },
+	{ "item" : "radyitebar", "count" : 1 },
+	{ "item" : "voltagenbolt", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "elementite",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "ancientfurnace", "bars", "all" ]
+}

@@ -1,0 +1,467 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "portal" : {
+        "priority" : 1,
+        "default" : "off",
+        "states" : {
+          "off" : {},
+		  "activate" : {
+		    "frames" : 7,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+		  },
+		  "idle" : {
+		    "frames" : 2,
+            "cycle" : 0.1,
+            "mode" : "loop"
+		  },
+		  "deactivate" : {
+		   "frames" : 7,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "off"
+		  }
+        }
+      },
+      "shell" : {
+        "priority" : 3,
+        "default" : "normal",
+        "states" : {
+          "invisible" : {
+            "frames" : 1,
+			"properties" : {
+			  "immediateSound" : "/sfx/npc/boss/abyssartifactboss_shellbreak.ogg"
+			}
+          },
+          "normal" : {
+            "frames" : 1
+          },
+          "opening" : {
+            "frames" : 5,
+            "cycle" : 2.0,
+            "mode" : "transition",
+			"transition" : "damaged",
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/melee/blunt_hit_stone1.ogg", "/sfx/melee/blunt_hit_stone3.ogg", "/sfx/melee/blunt_hit_stone2.ogg", "/sfx/melee/blunt_hit_stone1.ogg", "/sfx/melee/blunt_hit_stone4.ogg" ]
+            }
+          },
+          "damaged" : {
+            "frames" : 1,
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/throwingboulder_impact1.ogg"
+			}
+          }
+        }
+      },
+      "eye" : {
+        "priority" : 3,
+        "default" : "invisible",
+        "states" : {
+          "invisible" : {
+            "frames" : 1
+          },
+          "visible" : {
+            "frames" : 1
+          }
+        }
+      },
+      "eyepupil" : {
+        "priority" : 3,
+        "default" : "invisible",
+        "states" : {
+          "invisible" : {
+            "frames" : 1
+          },
+          "idle" : {
+            "frames" : 1
+          },
+		  "idle2" : {
+		    "frames" : 2,
+			"cycle" : 0.2,
+			"mode" : "loop"
+		  },
+		  "transition1" : {
+		    "frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition2" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition3" : {
+		    "frames" : 5,
+			"cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition4" : {
+		    "frames" : 5,
+			"cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition5" : {
+		    "frames" : 14,
+			"cycle" : 1.4,
+			"mode" : "transition",
+			"transition" : "idle2"
+		  },
+		  "transition6" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition7" : {
+		    "frames" : 1,
+			"cycle" : 0.1,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition2d" : {
+		    "frames" : 7,
+			"cycle" : 0.7,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition3d" : {
+		    "frames" : 6,
+			"cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "idle"
+		  },
+		  "transition4d" : {
+		    "frames" : 9,
+			"cycle" : 0.9,
+			"mode" : "transition",
+			"transition" : "idle"
+		  }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 12,
+            "cycle" : 1.2
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "portal" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "portal" : {
+		    "activate" : {
+			  "properties" : {
+			    "image" : "<partImage>:activate.<frame>"
+			  }
+			},
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:deactivate.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "shell" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "shell" : {
+            "normal" : {
+              "properties" : {
+                "image" : "<partImage>:normal"
+              }
+            },
+            "opening" : {
+              "properties" : {
+                "image" : "<partImage>:opening.<frame>"
+              }
+            },
+            "damaged" : {
+              "properties" : {
+                "image" : "<partImage>:damaged"
+              }
+            }
+          }
+        }
+      },
+      "eyepupil" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "fullbright" : true,
+          "transformationGroups" : [ "eyepupil" ]
+        },
+        "partStates" : {
+          "eyepupil" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:eye<eyeState>"
+              }
+            },
+			"idle2" : {
+              "properties" : {
+                "image" : "<partImage>:eye<eyeState>.<frame>"
+              }
+            },
+            "transition1" : {
+              "properties" : {
+                "image" : "<partImage>:transition1"
+              }
+            },
+            "transition2" : {
+              "properties" : {
+                "image" : "<partImage>:transition2.<frame>"
+              }
+            },
+            "transition3" : {
+              "properties" : {
+                "image" : "<partImage>:transition3.<frame>"
+              }
+            },
+            "transition4" : {
+              "properties" : {
+                "image" : "<partImage>:transition4.<frame>"
+              }
+            },
+            "transition5" : {
+              "properties" : {
+                "image" : "<partImage>:transition5.<frame>"
+              }
+            },
+            "transition6" : {
+              "properties" : {
+                "image" : "<partImage>:transition6.<frame>"
+              }
+            },
+            "transition7" : {
+              "properties" : {
+                "image" : "<partImage>:transition7"
+              }
+            },
+            "transition2d" : {
+              "properties" : {
+                "image" : "<partImage>:transition2d.<frame>"
+              }
+            },
+            "transition3d" : {
+              "properties" : {
+                "image" : "<partImage>:transition3d.<frame>"
+              }
+            },
+            "transition4d" : {
+              "properties" : {
+                "image" : "<partImage>:transition4d.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "eye" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ],
+          "image" : "<partImage>"
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "eyeState" : "1"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"eyepupil" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+    "shellcrack" : {
+      "emissionRate" : 2.5,
+      "offsetRegion" : [-15, -15, 15, 15],
+      "particles" : [
+        {
+          "particle" : "shadowrockshard"
+        },
+		{
+          "particle" : "shadowrockshard"
+        },
+		{
+          "particle" : "shadowrockshard"
+        },
+		{
+          "particle" : "shadowrockshard"
+        },
+		{
+          "particle" : "shadowrockshard"
+        },
+		{
+          "particle" : "shadowrockshard"
+        }
+      ]
+    },
+    "shellopen" : {
+      "burstCount" : 5,
+      "offsetRegion" : [-3, -3, 3, 3],
+      "particles" : [
+        {"particle" : "abyssgazershellshard1"},
+		{"particle" : "abyssgazershellshard2"},
+		{"particle" : "abyssgazershellshard3"},
+		{"particle" : "abyssgazershellshard4"},
+		{"particle" : "abyssgazershellshard5"},
+		{"particle" : "abyssgazershellshard6"}
+      ]
+    },
+    "shellbreak" : {
+      "burstCount" : 20,
+      "offsetRegion" : [-10, -10, 10, 10],
+      "particles" : [
+        {"particle" : "abyssgazershellshard1"},
+		{"particle" : "abyssgazershellshard2"},
+		{"particle" : "abyssgazershellshard3"},
+		{"particle" : "abyssgazershellshard4"},
+		{"particle" : "abyssgazershellshard5"},
+		{"particle" : "abyssgazershellshard6"}
+      ]
+    },
+	"idle" : {
+	  "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	},
+	"dying" : {
+	  "active" : false,
+      "emissionRate" : 50.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	},
+	"dying2" : {
+	  "active" : false,
+      "emissionRate" : 50.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "smoke"
+		},
+		{
+		  "particle" : "smoke"
+		},
+		{
+		  "particle" : "smoke"
+		},
+		{
+		  "particle" : "smoke"
+		},
+		{
+		  "particle" : "smoke"
+		}
+      ]
+	},
+	"starattack" : {
+	  "emissionRate" : 300,
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/dark.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.8,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 5000,
+			"layer" : "back"
+		  }
+		}
+	  ]
+	},
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ ],
+    "anomalywindup" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
+	"beamwindup" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup.ogg"],
+	"beamfire" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam2.ogg"],
+	"beamwindup2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup2.ogg"],
+	"beamfire2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg"],
+	"abysstearswindup" : ["/sfx/npc/boss/abyssartifactboss_abysstearswindup.ogg"],
+	"pain" : ["/sfx/npc/boss/crystalboss_pain1.ogg", "/sfx/npc/boss/crystalboss_pain2.ogg"],
+	"roar" : ["/sfx/npc/boss/tentacleboss_roar.ogg"],
+	"abysseyeswindup" : ["/sfx/npc/darkabyss/abysseye_windup2.ogg"],
+	"dying" : [ "/sfx/npc/boss/tentacleboss_death.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

@@ -3,7 +3,7 @@
   "shortdescription" : "The Destroyer of Worlds",
 
   "categories" : [ "destroyer" ],
-  "parts" : [ "ufo", "pilot" ],
+  "parts" : [ "ufo", "background" ],
 
   "animation" : "destroyer.animation",
   "reversed" : true,
@@ -27,7 +27,7 @@
 
     "phases" : [
       {
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSwoopAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerScatterAttack"]
       },
       {
         "enterPhase" : "destroyerSkyGapAttack",
@@ -54,6 +54,7 @@
         "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerScatterAttack"]
       }
     ],
+	"renderLayer" : "BackgroundTile-10",
 
     "queryTargetDistance" : 50.0,
     "switchTargetDistance" : 10.0,
@@ -144,7 +145,13 @@
         },
 		"megadamageResistance" : {
 		  "baseValue" : 1.0
-		}
+		},
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        }
       },
 
       "resources" : {

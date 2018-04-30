@@ -1,0 +1,97 @@
+{
+  "particleEmitters" : {
+    "sparks" : {
+      "enabled" : true,
+      "emissionRate" : 40.0,
+	  "transformationGroups" : ["destroyereffect"],
+      "particles" : [
+        {
+          "particle" : "destroyereffect"
+        },
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.0,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		},
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.0,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		},
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.0,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		},
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.0,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		},
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.0,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		},
+		{
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/phoenixflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 1.8,
+		    "fade" : 1,
+		    "destructionTime" : 0.5,
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		}
+	  ]
+    }
+  },
+
+  "transformationGroups" : {
+    "destroyereffect" : { "interpolated" : true }
+  }
+}
+

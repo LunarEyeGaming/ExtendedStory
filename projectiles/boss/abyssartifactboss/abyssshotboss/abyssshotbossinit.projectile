@@ -1,0 +1,58 @@
+{
+  "projectileName" : "abyssshotbossinit",
+  "image" : "abyssshotboss.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [11, 11, 11],
+  "frameNumber" : 4,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "boomerang",
+  "emitters" : [ ],
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    },
+    {
+      "time" : 0.02,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+          "type" : "ember",
+          "size" : 2,
+          "color" : [11, 11, 11],
+          "position" : [0, 0],
+          "destructionAction" : "fade",
+          "destructionTime" : 0.2,
+          "fade" : 1,
+          "layer" : "middle",
+          "timeToLive" : 0.2,
+          "variance" : {
+            "initialVelocity" : [2.0, 2.0],
+            "position" : [1, 1]
+          }
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "abyssshotboss"
+	}
+  ],
+  "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
+  "damageKind" : "gatespawner",
+  "damageType" : "IgnoresDef",
+  "piercing" : true,
+  "power" : 40,
+  "timeToLive" : 0.5,
+
+  "speed" : 75,
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

@@ -55,6 +55,29 @@
           }
         }
       },
+	  
+	  "background" : {
+        "properties" : {
+          "rotationGroup" : "all",
+          "zLevel" : -1,
+		  "fullbright" : true
+        },
+
+        "partStates" : {
+          "movement" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
 
       "pilot" : {
         "properties" : {

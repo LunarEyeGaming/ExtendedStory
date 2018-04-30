@@ -1,0 +1,21 @@
+{
+  "modId" : 406,
+  "modName" : "radyiteore",
+  "itemDrop" : "radyiteore",
+  "description" : "Radyite Ore.",
+  "health" : 25,
+  "harvestLevel" : 6,
+  "breaksWithTile" : true,
+
+  "miningSounds" : [ "/sfx/tools/pickaxe_ore.ogg", "/sfx/tools/pickaxe_ore2.ogg" ],
+  "miningParticle" : "orespark",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "radyiteore.png",
+    "variants" : 8,
+    "multiColored" : false,
+    "zLevel" : 0,
+    "radiantLight" : [47, 125, 0]
+  }
+}

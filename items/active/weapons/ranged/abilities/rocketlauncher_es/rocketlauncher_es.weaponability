@@ -1,0 +1,79 @@
+{
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "grenadelauncher" : {
+        "properties" : {
+          "zLevel" : -1,
+          "centered" : true,
+          "offset" : [-0.75, 0],
+          "transformationGroups" : ["muzzle"],
+          "firePosition" : [0.75, -0.125],
+          "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png"
+        }
+      }
+    }},
+    "sounds" : {
+      "altFire" : [ "/sfx/gun/plasma_sniper4.ogg" ]
+    },
+    "particleEmitters" : {
+      "altMuzzleFlash" : {
+        "active" : false,
+        "emissionRate" : 8,
+        "transformationGroups" : ["muzzle"],
+        "offsetRegion" : [-0.25, -0.5, -0.25, -0.5],
+        "particles" : [
+          { "particle" : "rocketbarrelpuff", "offset" : [0.0, 0.0] },
+          { "particle" : "rocketbarrelpuff", "offset" : [0.0, 0.0] },
+          { "particle" : "rocketbarrelpuff", "offset" : [0.0, 0.0] }
+        ]
+      }
+    }
+  },
+
+  "ability" : {
+    "name" : "Rocket Launcher",
+    "type" : "rocketlauncher_es",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "rocket" },
+      "fire" : { "projectileType" : "fireplasmarocket" },
+      "electric" : { "projectileType" : "electricplasmarocket" },
+      "ice" : { "projectileType" : "iceplasmarocket" },
+      "poison" : { "projectileType" : "poisonplasmarocket" }
+    },
+    "projectileParameters" : {},
+    "projectileCount" : 1,
+    "inaccuracy" : 0.01,
+    "baseDamage" : 9,
+	"baseDps" : 1,
+    "energyUsage" : 25,
+    "fireTime" : 1,
+    "fireType" : "auto",
+
+    "firePositionPart" : "grenadelauncher",
+    "hidePrimaryMuzzleFlash" : true,
+
+    "stances" : {
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.11,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

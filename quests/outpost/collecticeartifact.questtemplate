@@ -3,8 +3,8 @@
   "mainQuest" : true,
   "prerequisites" : [ "kill_cyberboss" ],
   "title" : "^#a6ceff;The Ice Artifact^reset;",
-  "text" : "Your next artifact is the ice artifact, found in the ^#a6ceff;permafrost^reset; biome. The object you are looking for is inside the caves of this biome and has the same look. They have blue lights.",
-  "completionText" : "Already three artifacts!",
+  "text" : "The ^orange;ice artifact^reset; is found in the ^green;Frozen Dimension^reset;. Its only defenses are monsters. Portals for this dimension are located in ^#a6ceff;permafrost^reset; worlds.",
+  "completionText" : "...",
   "moneyRange" : [1000, 1000],
   "ephemeral" : false,
   "rewards" : [[["iceartifact", 1]]],
@@ -26,7 +26,7 @@
     },
 
     "descriptions"  : {
-      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Completely Frozen Dimension^reset;",
+      "artifact" : "Find the ^orange;artifact^reset; in ^green;the Frozen Dimension^reset;",
       "turnIn" : "Return to ^orange;the Trader^reset; at ^green;the Outpost^reset;"
     },
 

@@ -7,42 +7,50 @@
   "description" : "Creates a vortex that sucks in anything nearby.",
   "shortdescription" : "Abyss Vortex",
   "race" : "generic",
+  "health" : 50,
 
   "category" : "wire",
   "price" : 100,
 
-  "floranDescription" : "Createss a vortex that sucks in anything nearby.",
-  "glitchDescription" : "Impressed. Creates a vortex that sucks in anything nearby.",
+  "floranDescription" : "Createss a vortex that suckss in anything nearby.",
+  "glitchDescription" : "Intimidated. Creates a vortex that sucks in anything nearby.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "image" : "abyssvortex.png:<color>.off",
-      "imagePosition" : [-8, 0],
+      "image" : "vortexactivater.png",
+      "imagePosition" : [-8, -8],
 
       "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "anchors" : [ "background" ],
+
+      "metaBoundBox" : [-10, -10, 10, 10]
     }
   ],
 
-  "scripts" : [ "/objects/wired/forcepad/forcepad.lua" ],
-  "scriptDelta" : 0,
+  "scripts" : [ "/objects/abyss/abyssvortex/forcepad.lua" ],
+  "scriptDelta" : 1,
 
   "animation" : "/objects/abyss/abyssvortex/abyssvortex.animation",
 
   "animationParts" : {
-    "forcepad" : "abyssvortex.png"
+    "forcepad" : "vortex.png",
+	"fg" : "vortexactivaterlit.png",
+	"bg" : "vortexactivater.png"
   },
-  "animationPosition" : [-8, 0],
+  "animationPosition" : [-8, -8],
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 10, "particle" : "potshard" } ],
 
-  "inputNodes" : [ [-1, 0] ],
+  "inputNodes" : [ [0, 0] ],
   "physicsForces" : {
     "jumpForce" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 40,
-      "innerRadius" : 4,
+      "outerRadius" : 16,
+      "innerRadius" : 0,
       "targetRadialVelocity" : -70,
-      "controlForce" : 250
+      "controlForce" : 1000
     }
   }
 }

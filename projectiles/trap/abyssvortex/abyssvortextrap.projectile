@@ -1,0 +1,30 @@
+{
+  "projectileName" : "abyssvortextrap",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 100,
+  "piercing" : true,
+  "damageRepeatTimeout" : 0.1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [ ],
+  "actionOnReap" : [ ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "abyss",
+
+  "speed" : 0,
+  "timeToLive" : 1.5,
+  "scripts" : [ "abyssvortextrap.lua" ],
+  "scriptDelta" : 1,
+
+  "explosionAction" : { },
+
+  "controlRotation" : {
+    "maxSpeed" : 32,
+    "controlForce" : 70,
+    "friction" : 10
+  }
+}

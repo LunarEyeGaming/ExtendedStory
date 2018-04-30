@@ -1,0 +1,35 @@
+{
+  "projectileName" : "abysstearstop_activeitem",
+  "image" : "abysstearstop_activeitem.png",
+  "animationCycle" : 0.2,
+  "animationLoops" : false,
+  "frameNumber" : 5,
+  "timeToLive" : 0.2,
+  "lightColor" : [50, 50, 50],
+  "pointLight" : true,
+  "flippable" : true,
+  "piercing" : true,
+  "statusEffects" : [ ],
+  "power" : 5.0,
+  "speed" : 0,
+  "knockback" : 20,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "onlyHitTerrain" : true,
+  "damageKind" : "plasma",
+  "fullbright" : true,
+  "damagePoly" : [[-16, 24], [8, 16], [16, -24], [-8, -16]],
+
+  "boundBox" : [-20, -20, 20, 20],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : 40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["itemdrop", "monster", "npc", "vehicle"]
+    }
+  }
+}

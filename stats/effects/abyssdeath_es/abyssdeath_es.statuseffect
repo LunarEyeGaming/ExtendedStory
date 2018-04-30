@@ -1,0 +1,16 @@
+{
+  "name" : "abyssdeath_es",
+  "blockingStat" : "abyssstarattackImmunity",
+
+  "effectConfig" : {
+    "tickRate" : 1,
+    "tickDamage" : 1000
+  },
+  "defaultDuration" : 1000,
+
+  "scripts" : [
+    "abyssdeath_es.lua"
+  ],
+
+  "animationConfig" : "abyssdeath_es.animation"
+}

@@ -25,7 +25,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/rocket2.ogg" ],
-	  "altFire" : [ "/sfx/gun/rocket3.ogg" ]
+	  "altFire" : [ "/sfx/gun/rocket2.ogg" ]
     }
   },
   "baseOffset" : [0.3, 0.4],
@@ -85,12 +85,13 @@
     }
   },
 
-  "altAbilityType" : "rocketburst",
+  "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "H. Rocket Burst", "projectileType" : "homingrocket_es", "inaccuracy" : 0.5}
+      "physical" : { "name" : "H. Rockets", "projectileType" : "homingrocket_es", "inaccuracy" : 0.03, "fireTime" : 0.25}
 	  }
   },
+  "learnBlueprintsOnPickup" : [ "rapidrl2_es" ],
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

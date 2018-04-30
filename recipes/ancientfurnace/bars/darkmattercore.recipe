@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "darkmatterbar", "count" : 20 },
+	{ "item" : "fusioncore", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "darkmattercore",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "ancientfurnace", "bars", "all" ]
+}

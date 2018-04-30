@@ -1,0 +1,230 @@
+{
+  "type" : "abyssgazer",
+  "shortdescription" : "Abyss Gazer",
+  "description" : "A mysterious anomaly that stares at anything that moves.",
+
+  "categories" : [ "abyssgazer" ],
+  "parts" : [ "body" ],
+
+  "animation" : "abyssgazer.animation",
+
+  "dropPools" : ["empty"],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+    "deathBehavior" : "monster-death",
+
+    "facingMode" : "transformation",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "hurtWaitForGround" : false,
+
+      "targetQueryRange" : 50,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 200,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [
+        {
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "wake",
+            "animationTime" : 1.5
+          }
+        }
+      ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 80,
+            "minimumRange" : 2,
+            "windupTime" : 3.5,
+            "windupState" : "",
+
+            "projectileCount" : 1,
+            "projectileType" : "invisibleprojectile",
+            "projectileParameters" : {"onlyHitTerrain" : true},
+            "rotationCenter" : [0.0, 0.0],
+            "fireSound" : "",
+            "fireStateType" : "",
+            "fireState" : "",
+            "fireDelay" : 0.0,
+            "faceTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : false,
+            "damageRepeatGroup" : "",
+
+            "winddownState" : "",
+            "winddownTime" : 0.0
+          }
+        }
+      ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport"
+        }
+      ],
+
+      "wanderActions" : [
+      ],
+
+      "concurrentActions" : [
+        {
+          "name" : "idle-crawl",
+          "parameters" : {
+            "stopForce" : 500
+          }
+        },
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : ""
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [
+        {
+          "name" : "idle-crawl",
+          "parameters" : {
+            "stopForce" : 500
+          }
+        },
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : ".aggro"
+          }
+        }
+      ],
+
+      "deathActions" : []
+    },
+
+    "damageBar" : "None",
+
+    "touchDamage" : {
+      "poly" : [ [0.41, 1.0],  [1.0, 0.41],  [1.0, -0.41],  [0.41, -1.0],  [-0.41, -1.0],  [-1.0, -0.41],  [-1.0, 0.41],  [-0.41, 1.0] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "selfDamagePoly" : [ [1.0, 1.5],  [1.5, 1.0],  [1.5, -1.0],  [1.0, -1.5],  [-1.0, -1.5],  [-1.5, -1.0],  [-1.5, 1.0],  [-1.0, 1.5] ],
+
+    "movementSettings" : {
+      "collisionPoly" : [ [0.41, 1.0],  [1.0, 0.41],  [1.0, -0.41],  [0.41, -1.0],  [-0.41, -1.0],  [-1.0, -0.41],  [-1.0, 0.41],  [-0.41, 1.0] ],
+
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "flySpeed" : 11,
+      "airFriction" : 0.5,
+      "airForce" : 800.0,
+
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"],
+	  "gravityEnabled" : false
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/spacemonster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 1000
+        },
+        "protection" : {
+          "baseValue" : 99
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+		"invulnerable" : {
+		  "baseValue" : 1.0
+		}
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false
+  }
+}

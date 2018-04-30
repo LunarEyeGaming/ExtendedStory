@@ -1,0 +1,17 @@
+{
+  "projectileName" : "abyssgazerstar",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "abyssgazerstar.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "piercing" : true,
+  "speed" : 0,
+  "timeToLive" : 3.0,
+  "damagePoly" : [ [33.5, 0], [0, 33.5], [-33.5, 0], [0, -33.5] ],
+  "damageRepeatTimeout" : 0.1,
+  "statusEffects" : ["abyssstarattackimmunity"],
+  "damageKind" : "nodamage"
+}

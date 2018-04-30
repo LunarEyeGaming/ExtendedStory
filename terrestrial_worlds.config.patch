@@ -423,5 +423,74 @@
         [1,["corepermafrost"]]
       ]
     }
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/garden/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/forest/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/desert/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/savannah/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/snow/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/jungle/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/alien/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/tundra/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/midnight/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/volcanic/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/scorchedcity/subRegion/-",
+    "value": "supervoid"
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/moon/subRegion",
+    "value": [
+      "supervoid"
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/regionTypes/barren/subRegion",
+    "value": [
+      "supervoid"
+    ]
   }
 ]

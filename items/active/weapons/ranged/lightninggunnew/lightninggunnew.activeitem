@@ -3,8 +3,8 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A gun that shoots extremely high voltage electric bolts.",
-  "shortdescription" : "^blue;Cataclysmic Tesla Gun^reset;",
+  "description" : "A gun that shoots extremely high voltage electric bolts. ^cyan;Upgraded^reset;",
+  "shortdescription" : "^blue;Lightning Gun^reset; ^cyan;^reset;",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
@@ -16,14 +16,20 @@
   "animation" : "lightninggunnew.animation",
   "animationParts" : {
     "gun" : "lightninggunnew.png",
-    "gunfullbright" : "lightninggunnewunlit.png"
+    "gunfullbright" : "lightninggunnewunlit.png",
+	"beamorigin" : ""
   },
   "animationCustom" : {
     "sounds" : {
-	  "altFire" : ["/sfx/gun/shockblast.ogg"]
+	  "altFire" : ["/sfx/gun/shockblast.ogg"],
+	  "fireStart" : [ "/sfx/objects/crystaltrap_on2.ogg" ],
+      "fireLoop" : [ "/sfx/gun/lightninggunnew_beamfire.ogg" ],
+      "fireEnd" : [ "/sfx/objects/crystaltrap_off.ogg" ],
+      "beamImpact" : [ "/sfx/gun/lightningcoil1.ogg", "/sfx/gun/lightningcoil2.ogg", "/sfx/gun/lightningcoil3.ogg" ]
 	}
   },
-  "muzzleOffset" : [2.5, 0.5],
+  "muzzleOffset" : [2, 1.0],
+  "animationScripts" : ["/items/active/effects/chain.lua"],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -118,12 +124,78 @@
   },
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
-    "elementalConfig" : {
-      "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
+    "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
+    "class" : "BeamFire",
+	"name" : "Lightning Beam",
+
+    "fireTime" : 0.1,
+    "baseDps" : 15,
+    "energyUsage" : 30,
+
+    "damageConfig" : {
+      "statusEffects" : [ "electrified" ],
+      "damageSourceKind" : "electric",
+      "knockback" : 5
     },
-    "energyUsage" : 20,
-	"baseDps" : 50,
-	"fireTime" : 0.5
+
+    "beamLength" : 50,
+
+    "beamTransitionTime" : 0.25,
+    "beamTransitionFrames" : 4,
+
+    "chain" : {
+      "startOffset" : [0, 0],
+      "startSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
+      "segmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
+      "endSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>?fade=0.5",
+      "segmentSize" : 0.12,
+      "overdrawLength" : 0.2,
+      "taper" : 0,
+      "waveform" : {
+        "frequency" : 0.5,
+        "amplitude" : 0.4,
+        "movement" : 10.0
+      },
+      "fullbright" : true
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "animationStates" : {
+		  "beamorigin" : "fire",
+		  "firing" : "fullcharge"
+        }
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "animationStates" : {
+		  "beamorigin" : "idle",
+		  "firing" : "off"
+        }
+      }
+    }
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

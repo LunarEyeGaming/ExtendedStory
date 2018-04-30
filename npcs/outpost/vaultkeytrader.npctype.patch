@@ -7,7 +7,7 @@
   {
     "op": "add",
     "path": "/scriptConfig/turnInQuests",
-    "value": [ "collectelectricartifact", "collectfireartifact", "collecticeartifact", "collectpoisonartifact", "destroysupervoideye" ]
+    "value": [ "collectelectricartifact", "collectfireartifact", "collecticeartifact", "collectpoisonartifact", "collectabyssartifact", "destroysupervoideye" ]
   },
   {
     "op": "add",
@@ -23,6 +23,11 @@
     "op": "add",
     "path": "/scriptConfig/offeredQuests/-",
     "value": "collectpoisonartifact"
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/offeredQuests/-",
+    "value": "collectabyssartifact"
   },
   {
     "op": "add",

@@ -1,0 +1,28 @@
+{
+  "projectileName" : "ionflame",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "speed" : 15,
+  "image" : "ionflame.png",
+  "animationCycle" : 0.8,
+  "lightColor" : [20, 150, 150],
+  "frameNumber" : 8,
+  "emitters" : [ "electricswoosh" ],
+  "piercing" : true,
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    }
+  ],
+  "damageKind" : "ionplasma",
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "statusEffects" : [
+    "ionized"
+  ],
+  "hydrophobic" : true,
+
+  "persistentAudio" : "/sfx/objects/torch.ogg"
+}

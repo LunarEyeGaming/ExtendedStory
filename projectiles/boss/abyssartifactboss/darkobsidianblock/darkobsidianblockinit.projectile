@@ -1,0 +1,48 @@
+{
+  "projectileName" : "darkobsidianblockinit",
+  "image" : "frostblock_6x8.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
+    },
+	{
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/abyssartifactboss/darkobsidianblock/frostblock_6x8.png?setcolor=000000",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "darkobsidianblock"
+	}
+  ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 0,
+  "timeToLive" : 1.0
+}

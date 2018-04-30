@@ -22,7 +22,7 @@
   "baseOffset" : [-3.0, 0.25],
   "muzzleOffset" : [-0.6, 0.3],
 
-  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  "scripts" : ["/items/active/weapons/ranged/beamcannon_es.lua"],
   "animationScripts" : ["/items/active/effects/chain.lua"],
 
   "primaryAbility" : {
@@ -432,8 +432,8 @@
     },
     "gunParts" : ["butt", "middle", "barrel"],
     "altAbilities" : [
-      "lance",
-      "burstshot",
+      "rocketlauncher_es",
+      "rapidshotgun_es",
       "grenadelauncher"
     ],
     "palette" : "/items/active/weapons/colors/ranged.weaponcolors",

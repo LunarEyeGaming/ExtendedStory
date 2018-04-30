@@ -333,6 +333,27 @@
                  "width":32,
                  "x":2136,
                  "y":192
+                }, 
+                {
+                 "height":64,
+                 "id":1323,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":144,
+                 "x":2000,
+                 "y":696
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -455,7 +476,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1323,
+ "nextobjectid":1324,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.4",

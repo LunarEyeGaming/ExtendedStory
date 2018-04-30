@@ -17,12 +17,12 @@
           "file" : "/interface/crafting/ancientforge.png"
         }
       },
-    "lblConsumeTab" : {
-      "type" : "image",
-      "file" : "/interface/crafting/tabicon_ancientmaterials.png",
-      "position" : [80, 223],
-      "zlevel" : 3
-    }
+      "lblConsumeTab" : {
+        "type" : "image",
+        "file" : "/interface/crafting/tabicon_ancientmaterials.png",
+        "position" : [80, 223],
+        "zlevel" : 3
+      }
     },
     "filter" : [ "ancientforge" ]
   },

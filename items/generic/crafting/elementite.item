@@ -1,10 +1,11 @@
 {
   "itemName" : "elementite",
-  "price" : 20,
+  "price" : 350,
   "rarity" : "Legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "elementite.png",
-  "description" : "An alloy made of abyss, infernium, cryonium, and radyite.",
+  "description" : "An alloy made of the five elemental ores. Can be used for crafting.",
   "shortdescription" : "Elementite",
-  "itemTags" : [ "reagent" ]
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : ["ultimatium"]
 }

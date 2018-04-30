@@ -1,0 +1,65 @@
+{
+  "projectileName" : "abyssdmgopportunity",
+  "image" : "abyssdmgopportunity.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "timeToLive" : 5,
+  "lightColor" : [100, 100, 100],
+  "animationLoops" : false,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "speed" : 0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "default",
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop2.ogg" ]
+    },
+	{
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/abyssanomalydisappear/abyssanomalydisappear.animation",
+		"position" : [0, 0],
+		"timeToLive" : 0,
+		"destructionAction" : "fade",
+		"fade" : 1,
+		"destructionTime" : 1.0,
+		"size" : 3
+	  }
+	}
+  ],
+  "periodicActions" : [
+    {
+      "action" : "particle",
+      "specification" : "shadowsmoke",
+      "time" : 0.1,
+      "repeat" : true
+    },
+    {
+	  "time" : 0,
+	  "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear1.ogg" ]
+    },
+	{
+	  "time" : 1.0,
+	  "action" : "projectile",
+	  "type" : "targetingprojectile",
+	  "config" : {
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "abyssshotboss"
+		  }
+		]
+	  }
+	}
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/astraltear_loop.ogg"
+}
