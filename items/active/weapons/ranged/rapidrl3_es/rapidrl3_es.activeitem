@@ -10,6 +10,9 @@
   "category" : "rocketLauncher",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 8,
+  "critBonus" : 8,
 
   "inventoryIcon" : [
     { "image" : "rapidrl3_es.png:idle" }

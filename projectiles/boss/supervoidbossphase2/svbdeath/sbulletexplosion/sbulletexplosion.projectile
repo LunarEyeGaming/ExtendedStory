@@ -1,0 +1,43 @@
+{
+  "projectileName" : "sbulletexplosion_es",
+  "physics" : "default",
+  "bounces" : -1,
+  "speed" : 0,
+  "acceleration" : 0,
+  "timeToLive" : 4.5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 0,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "supervoidbullet_EH",
+		  "fuzzAngle" : 180,
+		  "config" : {
+		    "damageType" : "nodamage",
+			"speed" : 50,
+			"actionOnReap" : []
+		  }
+		}
+	  ]
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "sbulletexplosion_es"
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/abyssartifact_explosion.ogg" ]
+	}
+  ],
+  "damageType" : "NoDamage"
+}

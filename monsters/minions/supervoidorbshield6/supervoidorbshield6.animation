@@ -1,0 +1,168 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "default" : "fly",
+        "states" : {
+          "fly" : {
+            "frames" : 1,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "releaseParticles" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : [ "releaseParticles" ]
+            }
+          },
+          "on" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "particleEmittersOn" : [ "releaseParticles" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ],
+		  "image" : "<partImage>",
+		  "fullbright" : true
+        }
+      },
+	  "odd" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "odd" ],
+		  "image" : "<partImage>",
+		  "fullbright" : true
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"odd" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "particles" : [
+        { "particle" : "monstersplosion" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathfizz1left" },
+        { "particle" : "deathfizz1right" },
+        { "particle" : "deathfizz2left" },
+        { "particle" : "deathfizz2right" },
+        { "particle" : "deathfizz3left" },
+        { "particle" : "deathfizz3right" },
+        { "particle" : "deathfizz4left" },
+        { "particle" : "deathfizz4right" }
+      ]
+    },
+    "captureParticles" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "releaseParticles" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "teleportOut" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "teleportIn" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "levelUp" : {
+      "particles" : [
+        { "particle" : "monsterlevelup" }
+      ]
+    },
+	"idle" : {
+	  "active" : true,
+	  "offsetRegion" : [4, 4, -4, -4],
+	  "emissionRate" : 100,
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "textured",
+            "image" : "/projectiles/activeitems/supervoidblast/supervoidblast.png",
+            "position" : [0, 0],
+			"initialVelocity" : [0, 5],
+			"finalVelocity" : [0, 5],
+			"approach" : [0, 50],
+            "layer" : "back",
+            "timeToLive" : 0.5,
+            "destructionTime" : 0.5,
+            "destructionAction" : "fade",
+            "fullbright" : true,
+		    "variance" : {
+			  "initialVelocity" : [0, 5],
+			  "finalVelocity" : [0, 5]
+		    }
+		  }
+		}
+	  ]
+	}
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire" : [ "/sfx/projectiles/ancientvortex_loop.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

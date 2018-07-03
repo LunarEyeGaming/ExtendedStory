@@ -9,7 +9,8 @@
   "image" : "richochetglobe.png",
   "animationCycle" : 1.0,
   "frameNumber" : 1,
-  "power" : 50,
+  "power" : 30,
+  "damageType" : "ignoresdef",
   "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
   "supportsProcessing" : true,
   "actionOnReap" : [

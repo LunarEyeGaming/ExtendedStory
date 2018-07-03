@@ -64,22 +64,7 @@ function destroyerMinionsAttack.update(dt, stateData)
   local targetDistance = world.magnitude(targetPosition, mcontroller.position())
   local toTarget = world.distance(targetPosition, mcontroller.position())
   if targetDistance < 3 or checkWalls(util.toDirection(toTarget[1])) then
-    if currentPhase() < 4 then
-      --Spawn ground reinforcements
-      destroyerMinionsAttack.spawnRandomGroundPenguin()
-    else
-      --In phase 4 spawn mini UFOs
-      for i,minionId in ipairs(self.minionState.slots) do
-        if minionId == 0 then
-          self.minionState.slots[i] = world.spawnMonster("orbitaldestroyerminion", mcontroller.position(), {
-            level = monster.level(),
-            masterId = entity.id(),
-            minionIndex = i
-          })
-          break
-        end
-      end
-    end
+    destroyerMinionsAttack.spawnRandomGroundPenguin()
     stateData.spawns = stateData.spawns + 1
     mcontroller.controlFly({ 0, 0 })
   else

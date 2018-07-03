@@ -580,7 +580,7 @@
 									  		    "timeToLive": 10,
 									  		    "periodicActions": [
 									  		      {
-									  			    "time": 1.0,
+									  			    "time": 0.25,
 									  			    "action": "projectile",
 									  			    "type": "homingelectricball",
 													"config": {
@@ -588,7 +588,7 @@
 													}
 									  			  },
 									  			  {
-									  			    "time": 1.0,
+									  			    "time": 0.25,
 									  			    "action": "sound",
 									  			    "options": ["/sfx/npc/boss/ancient_explosion.ogg"]
 									  			  }

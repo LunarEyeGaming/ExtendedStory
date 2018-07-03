@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 6,
+  
+  "critChance" : 25,
+  "critBonus" : 35,
 
   "inventoryIcon" : [
     { "image" : "aegisaltsniperrifle.png:idle" }

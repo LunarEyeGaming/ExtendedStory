@@ -20,17 +20,8 @@
       "options" : [ "/sfx/projectiles/astraltear_stop2.ogg" ]
     },
 	{
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/abyssanomalydisappear/abyssanomalydisappear.animation",
-		"position" : [0, 0],
-		"timeToLive" : 0,
-		"destructionAction" : "fade",
-		"fade" : 1,
-		"destructionTime" : 1.0,
-		"size" : 3
-	  }
+	  "action" : "projectile",
+	  "type" : "abyssdmgopportunitywinddown"
 	}
   ],
   "periodicActions" : [

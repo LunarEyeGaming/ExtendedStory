@@ -7,10 +7,13 @@
   "tooltipKind" : "bow",
   "category" : "Ancient Bow",
   "description" : "Best bow of all time.\n^green;Shoots heat-seeking arrows.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "ranged", "bow"],
-
+  
+  "critChance" : 10,
+  "critBonus" : 10,
+  
   "radioMessagesOnPickup" : [ "pickupbow" ],
 
   "level" : 10,
@@ -30,9 +33,9 @@
       }}
     }},
     "sounds" : {
-      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
-      "release" : [ "/sfx/melee/laser_weapon_swing2.ogg" ],
-      "perfectRelease" : [ "/sfx/melee/laser_weapon_swing1.ogg" ]
+      "draw" : [ "/sfx/melee/charge_up7.ogg" ],
+      "release" : [ "/sfx/gun/plasma_sniper1.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ]
     }
   },
 

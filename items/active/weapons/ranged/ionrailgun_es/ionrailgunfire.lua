@@ -138,18 +138,21 @@ function ChargeFire:fireProjectile()
         params
       )
 	if animator.animationState("firing") == "fire" then
+	  beamDamageM = (self.beamDamage * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1)))
 	  world.spawnProjectile(
-        "invisibleprojectile",
+        "orbitalup",
         self:firePosition(),
         activeItem.ownerEntityId(),
         self:aimVector(currentAngle, self.chargeLevel.inaccuracy or 0),
         false,
         {
-		  power = 50,
+		  timeToLive = 5,
+		  power = beamDamageM,
 		  piercing = true,
+		  damageType = "damage",
 		  damageKind = "ionplasma",
 		  speed = 800,
-		  damageTeam = {type = "friendly"}
+		  actionOnReap = {{action = "projectile", type = "invisibleprojectile", config = {onlyHitTerrain = true}}}
 		}
       )
 	end

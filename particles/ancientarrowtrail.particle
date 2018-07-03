@@ -1,0 +1,13 @@
+{
+  "kind" : "ancientarrowtrail",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/energyarrowtrail/energyarrowtrail.animation",
+    "position" : [0, 0],
+    "initialVelocity" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "size" : 1,
+    "layer" : "back",
+    "timeToLive" : 0.3
+  }
+}

@@ -17,7 +17,6 @@ end
 
 function isn_getGelStatus(geltype)
     if geltype == "burningblock" then return "burning"
-    elseif geltype == "burningbrick" then return "burning"
 	elseif geltype == "chargedstone" then return "electrified"
 	elseif geltype == "chargedbrick" then return "electrified"
 	elseif geltype == "chargedsand" then return "electrified"

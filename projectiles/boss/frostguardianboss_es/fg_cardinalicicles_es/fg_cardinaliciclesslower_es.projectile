@@ -1,0 +1,96 @@
+{
+  "projectileName" : "fg_cardinaliciclesslower_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [1, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_icicle",
+			"angleAdjust" : 180,
+			"config" : {
+			  "speed" : 15,
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [-1, 0],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_icicle",
+			"angleAdjust" : 180,
+			"config" : {
+			  "speed" : 15,
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0, 1],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_icicle",
+			"angleAdjust" : 180,
+			"config" : {
+			  "speed" : 15,
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [0, -1],
+	  "config" : {
+	    "onlyHitTerrain" : true,
+		"speed" : 800,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_icicle",
+			"angleAdjust" : 180,
+			"config" : {
+			  "speed" : 15,
+			  "power" : 500
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

@@ -8,6 +8,7 @@
   "bounces" : 0,
   "power" : 20,
   "speed" : 0,
+  "damagePoly" : [ [28, 3.5], [28, -3.5], [-28, -3.5], [-28, 3.5] ],
   "damageKind" : "poisonplasma",
   "lightColor" : [0, 80, 0]
 }

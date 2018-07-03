@@ -1,0 +1,45 @@
+{
+  "objectName" : "supervoidteleporter2",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "Go to the second phase!",
+  "shortdescription" : "Supervoid Checkpoint",
+  "race" : "generic",
+
+  "apexDescription" : "A supervoid node!",
+  "avianDescription" : "An unknown blank space.",
+  "floranDescription" : "Sstrange glowing thing...",
+  "glitchDescription" : "Spooked. An empty void",
+  "humanDescription" : "What's this creation?",
+  "hylotlDescription" : "An unstable portal to a void of death and chaos.",
+  "novakidDescription" : "Looks t'me like a purple glowin' thing.",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/teleporttobossworld2.config",
+
+  "inventoryIcon" : "supervoidteleportericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "supervoidteleporter.png:<color>", "fullbright" : true }, { "image" : "supervoidteleporterlit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  "health" : 10, 
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

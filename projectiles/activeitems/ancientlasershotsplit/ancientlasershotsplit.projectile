@@ -1,0 +1,33 @@
+{
+  "projectileName" : "ancientlasershotsplit",
+  "physics" : "laser",
+  "image" : "ancientlasershotsplit.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 25,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "timeToLive" : 1,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ancientlasershot",
+	  "angleAdjust" : 20,
+	  "config" : {
+	    "speed" : 40
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ancientlasershot",
+	  "angleAdjust" : -20,
+	  "config" : {
+	    "speed" : 40
+	  }
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet",
+  "lightColor" : [83, 28, 97]
+}

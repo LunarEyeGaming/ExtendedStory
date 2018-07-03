@@ -173,22 +173,22 @@
           "baseValue" : 0.0
         },
         "iceResistance" : {
-          "baseValue" : -0.5
+          "baseValue" : 0.0
         },
         "iceStatusImmunity" : {
           "baseValue" : 0.0
         },
         "electricResistance" : {
-          "baseValue" : 0.0
-        },
-        "electricStatusImmunity" : {
-          "baseValue" : 0.0
-        },
-        "poisonResistance" : {
           "baseValue" : 0.5
         },
-        "poisonStatusImmunity" : {
+        "electricStatusImmunity" : {
           "baseValue" : 1.0
+        },
+        "poisonResistance" : {
+          "baseValue" : -0.5
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 0.0
         }
       },
 

@@ -36,7 +36,9 @@
           "title": "timer",
           "type": "action",
           "name": "timer",
-          "parameters": {}
+          "parameters": {
+		    "time": {"value": 1}
+		  }
         }
       ]
     }

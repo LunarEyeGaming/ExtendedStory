@@ -1,0 +1,17 @@
+{
+  "projectileName" : "t4slingshot",
+  "physics" : "grenade",
+  "image" : "t4slingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 20,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+	}
+  ],
+  "damageKind" : "default"
+}

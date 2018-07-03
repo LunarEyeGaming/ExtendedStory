@@ -1,0 +1,23 @@
+{
+  "projectileName" : "supervoidbullet2",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 8,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet2.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 9,
+  "power" : 60,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

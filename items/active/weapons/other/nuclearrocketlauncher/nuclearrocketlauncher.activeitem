@@ -10,6 +10,9 @@
   "category" : "^cyan;Super Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 15,
+  "critBonus" : 25,
 
   "inventoryIcon" : [
     { "image" : "nuclearrocketlaunchericon.png" }

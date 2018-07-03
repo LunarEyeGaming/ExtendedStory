@@ -1,0 +1,30 @@
+{
+  "projectileName" : "supervoidcellzap4",
+  "physics" : "hover",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 0.25,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidcellzap.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 9,
+  "animationLoops" : false,
+  "power" : 110,
+  "damagePoly" : [ [-3, 3], [-3, -3], [3, -3], [3, 3] ],
+  "piercing" : true,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "supervoidcellzap5",
+      "fuzzAngle" : 10
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "ignoresdef"
+}

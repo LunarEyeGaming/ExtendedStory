@@ -4,12 +4,15 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A heavy-duty weapon used for stronger enemies that a standard-issue ancient rifle cannot take out.",
-  "shortdescription" : "^magenta;  ^reset;", 
+  "shortdescription" : "^magenta; ^reset;", 
   "tooltipKind" : "gun",
   "category" : "Ancient Chaos Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 10,
+  
+  "critChance" : 4,
+  "critBonus" : 10,
 
   "inventoryIcon" : "ancientchaingunnew.png:idle",
 

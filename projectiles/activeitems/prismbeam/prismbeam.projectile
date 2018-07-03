@@ -46,7 +46,7 @@
 		  "type" : "cellzap1",
 		  "angle" : 90,
 		  "fuzzAngle" : 180,
-		  "config" : {"power" : 70 }
+		  "config" : {"power" : 30 }
 		}
 	  ]
 	},
@@ -54,7 +54,11 @@
 	  "action" : "projectile",
 	  "type" : "lightballout",
 	  "config" : { "processing" : "?scalenearest;2;2" }
-	} 
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ]
+	}
   ],
   "lightColor" : [235, 161, 253],
   "damageKind" : "plasmabullet"

@@ -1,0 +1,15 @@
+{
+  "name" : "ancientbossDoubleBeamAttack",
+  "label" : "BEAMS OF HURT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossDoubleBeamAttack.lua" ],
+    "ancientbossDoubleBeamAttack" : {
+      "skillTime" : 15,
+      "rotateInterval" : 15,
+        
+      "damagePerSecond" : 1000
+    }
+  }
+}

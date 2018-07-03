@@ -15,6 +15,17 @@ end
 function dieState.enteringState(stateData)
   animator.setAnimationState("movesound", "off")
   animator.setAnimationState("movement", "visible")
+  animator.setParticleEmitterActive("idle", false)
+  animator.setLightActive("glow", false)
+  if animator.animationState("firstBeams") == "active" then
+    animator.setAnimationState("firstBeams", "winddown")
+  end
+  if animator.animationState("secondBeams") == "active" then
+    animator.setAnimationState("secondBeams", "winddown")
+  end
+  if animator.animationState("beamglow") == "on" then
+    animator.setAnimationState("beamglow", "off")
+  end
 end
 
 function dieState.update(dt, stateData)

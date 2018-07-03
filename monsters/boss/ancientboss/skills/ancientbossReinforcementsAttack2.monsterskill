@@ -1,0 +1,52 @@
+{
+  "name" : "ancientbossReinforcementsAttack2",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossReinforcementsAttack2.lua" ],
+
+    "ancientbossReinforcementsAttack2" : {
+      "skillTime": 5,
+      "bobTime" : 0.5,
+      "bobHeight" : 0,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 1,
+      "projectile" : {
+        "type" : "ancientorb_boss",
+        "config" : {
+		  "periodicActions" : [
+		    {
+			  "time" : 0,
+			  "repeat" : false,
+			  "action" : "sound",
+			  "options" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ]
+			}
+		  ],
+          "speed" : 0,
+          "onlyhitTerrain" : true,
+		  "timeToLive" : 2,
+          "actionOnReap" : [
+            {
+              "action" : "sound",
+              "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            },
+			{
+			  "action" : "projectile",
+			  "type" : "laserburst",
+			  "config" : {
+			    "onlyhitTerrain" : true
+			  }
+			},
+			{
+			  "action" : "spawnmonster",
+			  "type" : "ancienttrifangle_es",
+			  "level" : 5
+			}
+          ]
+        }
+      }
+    }
+  }
+}

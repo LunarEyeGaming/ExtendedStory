@@ -1,0 +1,36 @@
+{
+  "projectileName" : "ancientturretspawn2_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.99,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientturretspawn2_es.png",
+  "animationCycle" : 1,
+  "frameNumber" : 20,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/monsters/monster_grow.ogg" ]
+	}
+  ],
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "spawnmonster",
+	  "type" : "ancientturretfriendly_es",
+	  "level" : 10,
+	  "arguments" : {
+	    "damageTeamType" : "friendly"
+	  }
+	}
+  ],
+  "damageKind" : "plasma"
+}

@@ -10,23 +10,22 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "destroyershot",
+      "type" : "ancientorb_boss",
       "direction" : [0.0, 1.0],
 	  "config" : {
 	    "speed" : 5,
 		"power" : 10,
 		"piercing" : true,
 		"timeToLive" : 1.0,
-		"processing" : "?hueshift=290",
 		"actionOnReap" : [
 		  {
 		    "action" : "projectile",
-			"type" : "destroyershot",
+			"type" : "ancientorb_boss",
 			"config" : {
 			  "speed" : 0,
 			  "power" : 10,
 			  "piercing" : true,
-			  "processing" : "?hueshift=290",
+			  "timeToLive" : 3,
 			  "periodicActions" : [
 			    {
 				  "time" : 0.1,

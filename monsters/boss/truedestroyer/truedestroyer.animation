@@ -118,9 +118,10 @@
         {
           "particle" : {
             "type" : "animated",
-            "animation" : "/animations/destroyerteleport/destroyerteleport.animation",
+            "animation" : "/animations/quantumsentryteleport/quantumsentryteleport.animation",
             "timeToLive" : 1.0,
-            "layer" : "front"
+            "layer" : "front",
+			"fullbright" : true
           }
         }
       ]
@@ -373,11 +374,11 @@
     "landing" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
     "stunned" : [ "/sfx/npc/boss/guardian_floorhazard_electric_loop.ogg" ],
     "teleportIn" : {
-      "pool" : [ "/sfx/npc/boss/destroyerscatter_out.ogg" ],
+      "pool" : [ "/sfx/npc/boss/ancientboss_appear.ogg" ],
       "rangeMultiplier" : 1.5
     },
     "teleportOut" : {
-      "pool" : [ "/sfx/npc/boss/destroyerscatter_in.ogg" ],
+      "pool" : [ "/sfx/npc/boss/ancientboss_disappear.ogg" ],
       "rangeMultiplier" : 1.5
     }
   }

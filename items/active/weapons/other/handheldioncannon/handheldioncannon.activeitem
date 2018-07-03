@@ -11,6 +11,9 @@
   "category" : "^cyan;Super Weapon",
   "itemTags" : ["weapon","ranged"],
   "twoHanded" : true,
+  
+  "critChance" : 10,
+  "critBonus" : 15,
 
   "animation" : "handheldioncannon.animation",
   "animationParts" : {
@@ -111,7 +114,7 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "ion" : { "name" : "Ion Grenade", "projectileType" : "iongrenade", "baseDamage" : 2 }
+      "ion" : { "name" : "Ion Grenade", "projectileType" : "iongrenade", "baseDps" : 10 }
     },
     "energyUsage" : 20
   },

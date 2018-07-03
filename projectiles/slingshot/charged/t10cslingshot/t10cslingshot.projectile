@@ -1,0 +1,22 @@
+{
+  "projectileName" : "t10cslingshot",
+  "physics" : "laser",
+  "image" : "t10cslingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 20,
+  "lightColor" : [83, 28, 97],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion2.config"
+	}
+  ],
+  "scripts" : ["/scripts/projectiles/homingprojectile.lua"],
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0,
+  "damageKind" : "plasma"
+}

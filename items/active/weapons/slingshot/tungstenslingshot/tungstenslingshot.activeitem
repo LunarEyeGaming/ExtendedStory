@@ -1,0 +1,54 @@
+{
+  "itemName" : "tungstenslingshot",
+  "price" : 10,
+  "inventoryIcon" : "tungstenslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "tooltipKind" : "bow",
+  "category" : "Slingshot",
+  "description" : "A slingshot forged with tungsten and copper.",
+  "shortdescription" : "Tungsten Slingshot",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+  
+  "critChance" : 2,
+  "critBonus" : 5,
+
+  "level" : 2,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "tungstenslingshot.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/gun/bow_loose.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/bow_loose_perfect.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    //"drawSpeedMultiplier" : "constant",
+    "projectileType" : "t3slingshot",
+    "powerProjectileType" : "t3cslingshot",
+	"stances" : {
+      "draw" : {
+		"backArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+		"backArmFrame" : "swimIdle.2"
+      }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

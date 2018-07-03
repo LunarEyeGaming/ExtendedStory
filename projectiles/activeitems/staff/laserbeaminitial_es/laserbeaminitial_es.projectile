@@ -1,0 +1,19 @@
+{
+  "projectileName" : "laserbeaminitial_es",
+  "timeToLive" : 0.1,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 5,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "laserbeamwindup_es",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
+  ],
+  "damageKind" : "plasma",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  }
+}

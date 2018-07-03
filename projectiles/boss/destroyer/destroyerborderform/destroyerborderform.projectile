@@ -1,0 +1,74 @@
+{
+  "projectileName" : "destroyerborderform",
+  "physics" : "default",
+  "bounces" : -1,
+  "speed" : 1,
+  "acceleration" : 0,
+  "timeToLive" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 0,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [1.0, 0.0],
+	  "config" : {
+	    "movementSettings" : {
+		  "collisionEnabled" : false
+	    },
+		"speed" : 200,
+		"timeToLive" : 0.5,
+		"power" : 0,
+		"piercing" : true,
+		"damageTeam" : { "type" : "indiscriminate" },
+		"actionOnReap" : [
+	      {
+		    "action" : "projectile",
+			"type" : "destroyerlasersweep",
+			"config" : {
+			  "power" : 1000,
+			  "timeToLive" : 1000,
+			  "speed" : 0,
+			  "damageKind" : "megadamage",
+			  "piercing" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [-1.0, 0.0],
+	  "config" : {
+	    "movementSettings" : {
+		  "collisionEnabled" : false
+	    },
+		"speed" : 200,
+		"timeToLive" : 0.5,
+		"power" : 0,
+		"piercing" : true,
+		"damageTeam" : { "type" : "indiscriminate" },
+		"actionOnReap" : [
+	      {
+		    "action" : "projectile",
+			"type" : "destroyerlasersweep",
+			"config" : {
+			  "power" : 1000,
+			  "timeToLive" : 1000,
+			  "speed" : 0,
+			  "damageKind" : "megadamage",
+			  "piercing" : true
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageType" : "NoDamage"
+}

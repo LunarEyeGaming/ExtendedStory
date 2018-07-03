@@ -1,0 +1,149 @@
+{
+  "name": "ancientboss2-orbattack4",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "acidSprayConfig": {"power": 100}
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "windup4"},
+          "type": {"value": "body"}
+        }
+      },
+	  {
+    	"title": "setNumber",
+    	"type": "action",
+    	"name": "setNumber",
+    	"parameters": {
+    	  "number": {"value": 0}
+    	},
+    	"output": {
+    	  "number": "fireAngle"
+    	}
+      },
+	  {
+    	"title": "vecRotate",
+    	"type": "action",
+    	"name": "vecRotate",
+    	"parameters": {
+    	  "angle": {"value": 0.04},
+    	  "vector": {"value": [1, 0]}
+    	},
+    	"output": {
+    	  "vector": "aimVector"
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.8}
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 500}
+        },
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "add",
+    		  "type": "action",
+    		  "name": "add",
+    		  "parameters": {
+    		    "addend": {"key": "fireAngle"},
+				"number": {"value": 0.1}
+    		  },
+    		  "output": {
+    		    "number": "fireAngle"
+    		  }
+    		},
+    		{
+    		  "title": "vecRotate",
+    		  "type": "action",
+    		  "name": "vecRotate",
+    		  "parameters": {
+    		    "angle": {"value": 0.04},
+    		    "vector": {"key": "aimVector"}
+    		  },
+    		  "output": {
+    		    "vector": "aimVector"
+    		  }
+    		},
+            {
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"key": "aimVector"},
+    	        "offset": {"value": [0, 5]},
+    	        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "projectile", "type": "ancientorb_boss"}, {"action": "sound", "options": ["/sfx/gun/erchiuseyebeam_start.ogg"]}, {"action": "projectile", "type": "ancientorb_boss", "angleAdjust": 120}, {"action": "projectile", "type": "ancientorb_boss", "angleAdjust": 240}]}},
+    	        "projectileType": {"value": "ancientorb_boss"}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.05}
+    	      }
+    	    }
+		  ]
+		}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "winddown4"},
+          "type": {"value": "body"}
+        }
+      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 2.0}
+		}
+	  }
+    ]
+  }
+}

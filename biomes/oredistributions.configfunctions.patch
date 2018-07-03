@@ -492,6 +492,14 @@
   },
   {
     "op": "add",
+    "path": "/surface/2/1/-",
+    "value": [
+      "uranium",
+      0.2
+    ]
+  },
+  {
+    "op": "add",
     "path": "/surface/4/1/2",
     "value": [
       "darkmatterore",
@@ -568,6 +576,14 @@
     "value": [
       "abyssore",
       0
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/depth1/2/1/-",
+    "value": [
+      "uranium",
+      0.5
     ]
   },
   {
@@ -662,6 +678,14 @@
     "op": "add",
     "path": "/depth2/2/1/-",
     "value": [
+      "uranium",
+      0.7
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/depth2/2/1/-",
+    "value": [
       "abyssore",
       0
     ]
@@ -736,6 +760,14 @@
     "value": [
       "darkmatterore",
       0.6
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/depth3/2/1/-",
+    "value": [
+      "uranium",
+      0.7
     ]
   },
   {
@@ -860,6 +892,14 @@
   },
   {
     "op": "add",
+    "path": "/core/2/1/-",
+    "value": [
+      "uranium",
+      0.9
+    ]
+  },
+  {
+    "op": "add",
     "path": "/core/3/1/2",
     "value": [
       "darkmatterore",
@@ -946,14 +986,14 @@
     "op": "add",
     "path": "/radyite",
     "value": [
-      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.8 ] ] ]
+      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "uranium", 0.25 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.8 ] ] ]
     ]
   },
   {
     "op": "add",
     "path": "/radyite2",
     "value": [
-      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.8 ] ] ]
+      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "uranium", 0.75 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.8 ] ] ]
     ]
   },
   {

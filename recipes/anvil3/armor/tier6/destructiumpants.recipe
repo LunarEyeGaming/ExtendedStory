@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "destroyerbar", "count" : 20 },
+    { "item" : "cobblestonematerial", "count" : 150 },
+	{ "item" : "solariumstar", "count" : 10 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "destructiumpants", "count" : 1 },
+  "groups" : [ "craftinganvil3", "armours", "all" ]
+}

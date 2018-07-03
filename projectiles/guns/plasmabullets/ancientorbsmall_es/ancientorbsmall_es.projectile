@@ -1,0 +1,20 @@
+{
+  "projectileName" : "ancientorbsmall_es",
+  "image" : "ancientorbsmall_es.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 10,
+  "physics" : "laser",
+  "damageKind" : "plasma",
+  "lightColor" : [39, 13, 46],
+  "actionOnReap" : [ 
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/laserburst/laserburst.config"
+    }
+  ],
+
+  "speed" : 40,
+  "timeToLive" : 5.0
+}

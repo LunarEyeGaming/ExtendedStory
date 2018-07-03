@@ -5,6 +5,8 @@ function ancientbossTeleportAttack.enter()
 
   ancientbossTeleportAttack.reappeared = false
   animator.burstParticleEmitter("teleport")
+  animator.setParticleEmitterActive("idle", false)
+  animator.setLightActive("glow", false)
   animator.playSound("teleportOut")
   return { 
     timer = config.getParameter("ancientbossTeleportAttack.skillTime")
@@ -39,6 +41,8 @@ function ancientbossTeleportAttack.update(dt, stateData)
       ancientbossTeleportAttack.reappeared = true
       animator.burstParticleEmitter("teleport")
       animator.playSound("teleportIn")
+	  animator.setParticleEmitterActive("idle", true)
+	  animator.setLightActive("glow", true)
     end
   else
     return true

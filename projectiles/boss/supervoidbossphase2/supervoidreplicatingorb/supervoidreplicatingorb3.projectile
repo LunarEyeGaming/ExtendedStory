@@ -1,0 +1,22 @@
+{
+  "projectileName" : "supervoidreplicatingorb3",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 60,
+  "timeToLive" : 0.25,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [75, 0, 75],
+  "image" : "supervoidreplicatingorb3.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 100,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

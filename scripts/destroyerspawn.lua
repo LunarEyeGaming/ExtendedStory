@@ -14,7 +14,7 @@ function update(dt)
 	  attemptSpawnRan = false
 	end
 	if worldTimeRange == true and attemptSpawnRan == false then
-	  destroyerAttemptSpawn(1000)
+	  destroyerAttemptSpawn(50)
 	  attemptSpawnRan = true
 	end
   end
@@ -22,7 +22,7 @@ end
 
 function destroyerAttemptSpawn(spawnChance)
   spawnSuccessChance = math.random(1, spawnChance)
-  if spawnSuccessChance == spawnChance then
+  if spawnSuccessChance == spawnChance and not world.type() == "unknown" then
     status.addEphemeralEffect("destroyerspawnstage1")
   end
 end

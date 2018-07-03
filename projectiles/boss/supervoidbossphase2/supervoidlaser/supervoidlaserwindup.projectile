@@ -1,0 +1,34 @@
+{
+  "projectileName" : "supervoidlaserwindup",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 2,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidlaserwindup.png",
+  "animationCycle" : 0.375,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "power" : 0,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "supervoidlaser"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+		{
+		  "action" : "sound",
+		  "options" : [ "/sfx/npc/boss/supervoidboss_beam_blast.ogg" ]
+		}
+	  ]
+	}
+  ],
+  "damageKind" : "plasma",
+  "persistentAudio" : "/sfx/npc/boss/crystalboss_hum.ogg"
+}

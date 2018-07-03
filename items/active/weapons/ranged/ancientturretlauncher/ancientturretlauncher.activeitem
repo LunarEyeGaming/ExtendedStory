@@ -1,0 +1,123 @@
+{
+  "itemName" : "ancientturretlauncher",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A weapon that launches ancient automations to fight for you.",
+  "shortdescription" : "^magenta; ^reset;",
+  "tooltipKind" : "base",
+  "category" : "Ancient Turrets",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "ancientturretlauncher.png:empty",
+
+  "animation" : "ancientturretlauncher.animation",
+  "animationParts" : {
+    "gun" : "ancientturretlauncher.png",
+    "gunfullbright" : "ancientturretlauncherunlit.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [2.5, 0.0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+  "stances" : {
+    "idle" : {
+      "armRotation" : 0,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "armRotation" : 0,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "fire" : {
+      "duration" : 0,
+      "armRotation" : 5,
+      "weaponRotation" : 5,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : false
+    },
+    "cooldown" : {
+      "duration" : 0.25,
+      "armRotation" : 5,
+      "weaponRotation" : 5,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : false
+    }
+  },
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+	  {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {"onlyHitTerrain" : true},
+        "inaccuracy" : 0,
+		"spreadAngle" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 60,
+        "cooldown" : 3,
+        "projectileType" : "ancientturretlauncherproj",
+        "projectileParameters" : { },
+        "inaccuracy" : 0,
+        "baseDamage" : 1,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "altAbilityType" : "chargefire",
+  "altAbility" : {
+    "chargeLevels" : [
+	  {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {"onlyHitTerrain" : true},
+        "inaccuracy" : 0,
+		"spreadAngle" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 60,
+        "cooldown" : 0.8,
+        "projectileType" : "ancientturretlauncherproj2",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 1,
+        "fireSound" : "fire2"
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

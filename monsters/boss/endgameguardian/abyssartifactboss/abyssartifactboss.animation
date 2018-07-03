@@ -110,7 +110,10 @@
 		    "frames" : 14,
 			"cycle" : 1.4,
 			"mode" : "transition",
-			"transition" : "idle2"
+			"transition" : "idle2",
+			"frameProperties" : {
+			  "immediateSound" : [ "", "", "", "", "", "", "", "", "", "", "", "/sfx/npc/boss/tentacleboss_portal_open.ogg" ]
+			}
 		  },
 		  "transition6" : {
 		    "frames" : 3,
@@ -451,6 +454,7 @@
 	"beamwindup2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup2.ogg"],
 	"beamfire2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg"],
 	"abysstearswindup" : ["/sfx/npc/boss/abyssartifactboss_abysstearswindup.ogg"],
+	"starattack" : ["/sfx/npc/boss/abyssartifactboss_starattack.ogg"],
 	"pain" : ["/sfx/npc/boss/crystalboss_pain1.ogg", "/sfx/npc/boss/crystalboss_pain2.ogg"],
 	"roar" : ["/sfx/npc/boss/tentacleboss_roar.ogg"],
 	"abysseyeswindup" : ["/sfx/npc/darkabyss/abysseye_windup2.ogg"],

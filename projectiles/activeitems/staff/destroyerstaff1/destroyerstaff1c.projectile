@@ -1,0 +1,45 @@
+{
+  "projectileName" : "destroyerstaff1c",
+  "timeToLive" : 3,
+  "image" : "destroyerstaff1.png",
+  "animationCycle" : 0.3,
+  "lightColor" : [150, 75, 75],
+  "frameNumber" : 4,
+  "periodicActions" : [
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "explosivelasershot",
+		  "fuzzAngle" : 180,
+		  "config" : {
+		    "piercing" : true,
+			"periodicActions" : [],
+			"timeToLive" : 10
+		  }
+		}
+	  ]
+	}
+  ],
+  "speed" : 50,
+  "power" : 10,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

@@ -35,6 +35,7 @@
     "name" : "NAN",
     "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
     "class" : "ChargeFire",
+	"beamDamage" : 150,
     "chargeLevels" : [
       {
         "time" : 0,
@@ -52,10 +53,10 @@
         "time" : 1.5,
         "energyCost" : 100,
         "cooldown" : 0.25,
-        "projectileType" : "invisibleprojectile",
+        "projectileType" : "orbitalup",
         "projectileCount" : 1,
         "spreadAngle" : 0,
-        "projectileParameters" : {"power" : 50, "piercing" : true, "damageKind" : "ionplasma", "speed" : 800, "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}], "damageTeam" : {"type" : "friendly"}},
+        "projectileParameters" : {"power" : 50, "piercing" : true, "damageKind" : "ionplasma", "damageType" : "damage", "speed" : 800, "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}], "damageTeam" : {"type" : "friendly"}},
         "inaccuracy" : 0,
         "baseDamage" : 20,
         "fireSound" : "fire2"

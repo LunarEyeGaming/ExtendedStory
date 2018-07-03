@@ -1,0 +1,97 @@
+{
+  "projectileName" : "destroyerstaff2",
+  "physics" : "laser",
+  "timeToLive" : 20,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.3,
+  "lightColor" : [150, 75, 75],
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "explosivelasershot",
+		  "fuzzAngle" : 180,
+		  "config" : {
+		    "piercing" : true,
+			"periodicActions" : []
+		  }
+		}
+	  ]
+	}
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png:1",
+        "position" : [0, 0],
+        "layer" : "middle",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.5,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/staff/destroyerstaff2/destroyerstaff2head.png",
+        "position" : [0, 0],
+        "layer" : "middle",
+        "timeToLive" : 0.02,
+        "destructionTime" : 0.23,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/staff/destroyerstaff2/destroyerstaff2head2.png",
+        "position" : [0, 0],
+        "layer" : "middle",
+        "timeToLive" : 0.02,
+        "destructionTime" : 0,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    },
+	{
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "explosivelasershot",
+	  "config" : {"speed" : 60}
+	}
+  ],
+  "speed" : 0,
+  "power" : 30,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : false,
+  "fullbright" : true,
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+
+  "controlMovement" : {
+    "maxSpeed" : 50,
+    "controlForce" : 80
+  }
+}

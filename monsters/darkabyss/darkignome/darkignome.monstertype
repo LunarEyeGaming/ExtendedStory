@@ -43,7 +43,47 @@
             "maximumRange" : 50,
             "maxYRange" : 1,
             "windupStopForce" : 50,
-            "windupTime" : 0.5,
+            "windupTime" : 0.3,
+
+            "onGround" : false,
+            "wallCollide" : false,
+            "aimAtTarget" : false,
+            "airDirection" : [1, 0],
+            "chargeTime" : 0.35,
+            "chargeSpeed" : 35,
+            "chargeControlForce" : 250,
+
+            "winddownState" : ""
+          }
+        },
+		{
+          "name" : "action-charge",
+          "cooldown" : 2.5,
+          "parameters" : {
+            "maximumRange" : 50,
+            "maxYRange" : 1,
+            "windupStopForce" : 50,
+            "windupTime" : 0.3,
+
+            "onGround" : false,
+            "wallCollide" : false,
+            "aimAtTarget" : false,
+            "airDirection" : [1, 0],
+            "chargeTime" : 0.35,
+            "chargeSpeed" : 35,
+            "chargeControlForce" : 250,
+
+            "winddownState" : ""
+          }
+        },
+		{
+          "name" : "action-charge",
+          "cooldown" : 2.5,
+          "parameters" : {
+            "maximumRange" : 50,
+            "maxYRange" : 1,
+            "windupStopForce" : 50,
+            "windupTime" : 0.3,
 
             "onGround" : false,
             "wallCollide" : false,

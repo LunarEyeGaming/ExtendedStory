@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 12,
+  
+  "critChance" : 20,
+  "critBonus" : 10,
 
   "inventoryIcon" : [
     { "image" : "ultimatiumgun.png:idle.1" }

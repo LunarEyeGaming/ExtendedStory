@@ -1,0 +1,443 @@
+{
+  "name": "ancientboss2fist",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/notification.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": -1}
+    },
+    "children": [
+      {
+        "title": "dynamic",
+        "type": "composite",
+        "name": "dynamic",
+        "parameters": {},
+        "children": [
+          {
+            "title": null,
+            "type": "composite",
+            "name": "parallel",
+            "parameters": {
+			  "fail": {"value": -1},
+              "success": {"value": -1}
+			},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "receivedNotification",
+                    "type": "action",
+                    "name": "receivedNotification",
+                    "parameters": {
+                      "type": {"value": "attack"}
+                    },
+                    "output": {
+                      "target": "intendedTarget",
+					  "source": "sourceId"
+                    }
+                  },
+				  {
+                    "title": "controlParameters",
+                    "type": "action",
+                    "name": "controlParameters",
+                    "parameters": {
+                      "parameters": {"value": {"collisionEnabled": false}}
+                    }
+                  },
+                  {
+                    "title": "entityPosition",
+                    "type": "action",
+                    "name": "entityPosition",
+                    "parameters": {
+                      "entity": {"key": "intendedTarget"}
+                    },
+					"output": {
+					  "position": "targetPos"
+					}
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "targetPos"},
+					  "offset": {"value": [0, 7]}
+                    },
+                    "output": {
+                      "position": "preslamPos"
+                    }
+                  },
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "preslamPos"},
+                      "speed": {"value": 50}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.15}
+                    }
+                  },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": true}
+                    }
+                  },
+		          {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": -1}
+                    },
+                    "children": [
+		              {
+                        "title": "controlParameters",
+                        "type": "action",
+                        "name": "controlParameters",
+                        "parameters": {
+                          "parameters": {"value": {"gravityEnabled": true, "collisionEnabled": true}}
+                        }
+                      },
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "onGround",
+                            "type": "action",
+                            "name": "onGround",
+                            "parameters": {}
+                          },
+                          {
+                            "title": "runner",
+                            "type": "action",
+                            "name": "runner",
+                            "parameters": {}
+                          }
+                        ]
+                      }
+		            ]
+		          },
+		          {
+                    "title": "playSound",
+                    "type": "action",
+                    "name": "playSound",
+                    "parameters": {
+		              "sound": {"value": "slam"}
+		            }
+                  },
+		          {
+		            "title": "burstParticleEmitter",
+		            "type": "action",
+		            "name": "burstParticleEmitter",
+		            "parameters": {
+		              "emitter": {"value": "slam"}
+		            }
+		          },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": false}
+                    }
+                  },
+				  {
+                    "title": "controlParameters",
+                    "type": "action",
+                    "name": "controlParameters",
+                    "parameters": {
+                      "parameters": {"value": {"gravityEnabled": false, "collisionEnabled": false}}
+                    }
+                  },
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "speed": {"value": 15}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+				  {
+                    "title": "sendNotification",
+                    "type": "action",
+                    "name": "sendNotification",
+                    "parameters": {
+			          "entity": {"key": "sourceId"},
+                      "type": {"value": "continue"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "receivedNotification",
+                    "type": "action",
+                    "name": "receivedNotification",
+                    "parameters": {
+                      "type": {"value": "spawn"}
+                    },
+                    "output": {
+                      "source": "sourceId"
+                    }
+                  },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "receivedNotification",
+                    "type": "action",
+                    "name": "receivedNotification",
+                    "parameters": {
+                      "type": {"value": "sweep"}
+                    },
+                    "output": {
+                      "source": "sourceId"
+                    }
+                  },
+                  {
+                    "title": "entityPosition",
+                    "type": "action",
+                    "name": "entityPosition",
+                    "parameters": {
+                      "entity": {"key": "sourceId"}
+                    },
+					"output": {
+					  "position": "sourcePosition"
+					}
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "sourcePosition"},
+					  "offset": {"value": [28, 0]}
+                    },
+                    "output": {
+                      "position": "sweepPos1"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "sourcePosition"},
+					  "offset": {"value": [-28, 0]}
+                    },
+                    "output": {
+                      "position": "sweepPos2"
+                    }
+                  },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": true}
+                    }
+                  },
+				  {
+				    "title": "parallel",
+					"type": "composite",
+					"name": "parallel",
+					"parameters": {
+					  "fail": {"value": -1},
+					  "success": {"value": 1}
+					},
+					"children": [
+					  {
+					    "title": "repeater",
+						"type": "decorator",
+						"name": "repeater",
+						"parameters": {
+						  "maxLoops": {"value": -1}
+						},
+						"child": {
+					      "title": "sequence",
+						  "type": "composite",
+						  "name": "sequence",
+						  "parameters": {},
+						  "children": [
+						    {
+							  "title": "timer",
+							  "type": "action",
+							  "name": "timer",
+							  "parameters": {
+							    "time": {"value": 0.01}
+							  }
+							},
+						    {
+                		      "title": "receivedNotification",
+                		      "type": "action",
+                		      "name": "receivedNotification",
+                		      "parameters": {
+                		        "type": {"value": "spawn"}
+                		      },
+                		      "output": {
+                		        "source": "sourceId"
+                		      }
+                		    },
+                		    {
+                		      "title": "flyToPosition",
+                		      "type": "action",
+                		      "name": "flyToPosition",
+                		      "parameters": {
+                		        "position": {"key": "spawn"}
+                		      }
+                		    },
+				            {
+						      "title": "runner",
+							  "type": "action",
+							  "name": "runner",
+							  "parameters": {}
+						    }
+						  ]
+					    }
+					  },
+					  {
+					    "title": "repeater",
+						"type": "decorator",
+						"name": "repeater",
+						"parameters": {
+						  "maxLoops": {"value": -1}
+						},
+						"child": {
+						  "title": "sequence",
+						  "type": "composite",
+						  "name": "sequence",
+						  "parameters": {},
+						  "children": [
+                	        {
+                	          "title": "flyToPosition",
+                	          "type": "action",
+                	          "name": "flyToPosition",
+                	          "parameters": {
+                	            "position": {"key": "sweepPos1"},
+								"speed": {"value": 50}
+                	          }
+                	        },
+							{
+							  "title": "timer",
+							  "type": "action",
+							  "name": "timer",
+							  "parameters": {
+							    "time": {"value": 0.01}
+							  }
+							},
+							{
+                	          "title": "flyToPosition",
+                	          "type": "action",
+                	          "name": "flyToPosition",
+                	          "parameters": {
+                	            "position": {"key": "sweepPos2"},
+								"speed": {"value": 50}
+                	          }
+                	        },
+							{
+							  "title": "timer",
+							  "type": "action",
+							  "name": "timer",
+							  "parameters": {
+							    "time": {"value": 0.01}
+							  }
+							}
+						  ]
+						}
+					  }
+					]
+				  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

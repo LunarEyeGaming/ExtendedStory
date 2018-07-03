@@ -1,0 +1,17 @@
+{
+  "projectileName" : "t5slingshot",
+  "physics" : "grenade",
+  "image" : "t5slingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 20,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
+	}
+  ],
+  "damageKind" : "default"
+}

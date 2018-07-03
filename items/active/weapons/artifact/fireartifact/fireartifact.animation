@@ -31,13 +31,19 @@
 		    "frames" : 6,
 			"cycle" : 0.33,
 			"mode" : "transition",
-			"transition" : "idle", "frameProperties" : {"immediateSound" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_shotgun1.ogg"]}
+			"transition" : "idle", 
+			"frameProperties" : {
+			  "immediateSound" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_shotgun1.ogg"]
+			}
 		  },
 		  "fire5" : {
 		    "frames" : 5,
 			"cycle" : 0.25,
 			"mode" : "transition",
-			"transition" : "idle", "frameProperties" : {"immediateSound" : ["/sfx/npc/boss/dragonboss_fireball1.ogg"]}
+			"transition" : "idle", 
+			"frameProperties" : {
+			  "immediateSound" : ["/sfx/npc/boss/dragonboss_fireball1.ogg"]
+			}
 		  }
         }
       },

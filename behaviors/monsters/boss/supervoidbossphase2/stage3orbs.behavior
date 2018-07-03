@@ -1,0 +1,34 @@
+{
+  "name": "supervoidbossphase2-stage3orbs",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "rotateTransformationGroup",
+        "type": "action",
+        "name": "rotateTransformationGroup",
+        "parameters": {
+		  "angle": {"value": 0.02},
+		  "rotationCenter": {"value": [0, 0]},
+		  "transformationGroup": {"value": "stage3orbs"}
+		}
+      }
+    ]
+  }
+}

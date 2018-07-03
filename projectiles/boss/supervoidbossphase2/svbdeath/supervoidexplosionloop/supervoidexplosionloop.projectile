@@ -1,0 +1,46 @@
+{
+  "projectileName" : "supervoidexplosionloop",
+  "physics" : "default",
+  "bounces" : -1,
+  "speed" : 0,
+  "acceleration" : 0,
+  "timeToLive" : 4.5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 0,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "orbitalup",
+		  "fuzzAngle" : 180,
+		  "offsetRange" : [20, 20, -20, -20],
+		  "config" : {
+		    "damageType" : "nodamage",
+			"speed" : 0,
+			"timeToLive" : 0,
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/supervoidexplosion2/supervoidexplosion2.config"
+			  }
+			]
+		  }
+		}
+	  ]
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "supervoidexplosionloop"
+	}
+  ],
+  "damageType" : "NoDamage"
+}

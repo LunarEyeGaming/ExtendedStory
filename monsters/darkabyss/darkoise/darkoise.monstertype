@@ -46,11 +46,11 @@
           "name" : "action-charge",
           "parameters" : {
             "minimumRange" : 2,
-            "maximumRange" : 10,
-            "windupTime" : 0.5,
+            "maximumRange" : 20,
+            "windupTime" : 0.3,
 
             "chargeTime" : [0.75, 1.25],
-            "chargeSpeed" : 15,
+            "chargeSpeed" : 30,
             "chargeControlForce" : 200,
             "wallKnockback" : true,
             "wallCrashSound" : "wallCrash",

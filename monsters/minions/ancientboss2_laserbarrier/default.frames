@@ -1,0 +1,26 @@
+{
+  "frameGrid" : {
+    "size" : [55, 43],
+    "dimensions" : [16, 1],
+    "names" : [
+      [ "appear.1", "appear.2", "appear.3", "appear.4", "appear.5", "appear.6", "appear.7", "appear.8", "appear.9", "appear.10", "appear.11", "appear.12", "appear.13", "appear.14", "appear.15", "idle" ]
+    ]
+  },
+  "aliases" : {
+    "disappear.1" : "appear.15",
+	"disappear.2" : "appear.14",
+	"disappear.3" : "appear.13",
+	"disappear.4" : "appear.12",
+	"disappear.5" : "appear.11",
+	"disappear.6" : "appear.10",
+	"disappear.7" : "appear.9",
+	"disappear.8" : "appear.8",
+	"disappear.9" : "appear.7",
+	"disappear.10" : "appear.6",
+	"disappear.11" : "appear.5",
+	"disappear.12" : "appear.4",
+	"disappear.13" : "appear.3",
+	"disappear.14" : "appear.2",
+	"disappear.15" : "appear.1"
+  }
+}

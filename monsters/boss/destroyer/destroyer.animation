@@ -121,7 +121,8 @@
             "type" : "animated",
             "animation" : "/animations/destroyerteleport/destroyerteleport.animation",
             "timeToLive" : 1.0,
-            "layer" : "front"
+            "layer" : "front",
+			"fullbright" : true
           }
         }
       ]

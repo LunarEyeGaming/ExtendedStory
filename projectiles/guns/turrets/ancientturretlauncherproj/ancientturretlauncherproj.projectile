@@ -1,0 +1,50 @@
+{
+  "projectileName" : "ancientturretlauncherproj",
+  "physics" : "hover",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientturretlauncherproj.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 5,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "oblivionfireball",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "timeToLive" : 0.1,
+		"processing" : "?scalenearest=0",
+		"speed" : 0.01,
+		"rotationRate" : 200,
+		"homingDistance" : 50,
+        "trackingLimit" : 50.0,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "ancientlasershot",
+	        "inheritDamageFactor" : 1,
+			"config" : {
+			  "speed" : 75
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
+  ],
+  "damageKind" : "plasma"
+}

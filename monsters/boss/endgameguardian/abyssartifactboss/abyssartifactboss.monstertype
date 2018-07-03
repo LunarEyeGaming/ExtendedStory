@@ -7,7 +7,7 @@
   "animation" : "abyssartifactboss.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -138,10 +138,10 @@
           "baseValue" : 1.0
         },
 		"electricResistance" : {
-		  "baseValue" : 1.0
+		  "baseValue" : 0
 		},
 		"poisonResistance" : {
-		  "baseValue" : -0.5
+		  "baseValue" : 0
 		},
         "abysseffectImmunity" : {
           "baseValue" : 1.0

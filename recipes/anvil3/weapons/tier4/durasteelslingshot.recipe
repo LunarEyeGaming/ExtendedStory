@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "canvas", "count" : 1 },
+	{ "item" : "copperbar", "count" : 2 },
+	{ "item" : "durasteelbar", "count" : 10 }
+  ],
+  "output" : {
+    "item" : "durasteelslingshot",
+    "count" : 1
+  },
+  "groups" : [ "craftinganvil3", "weapons", "all" ]
+}

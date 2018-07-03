@@ -1,0 +1,16 @@
+{
+  "projectileName" : "laserburstsmall",
+  "image" : "laserburstsmall.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 6,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "plasma",
+
+  "piercing" : true,
+  "fullbright" : true,
+  "bounces" : -1,
+  "power" : 20,
+  "speed" : 0
+}

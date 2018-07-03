@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "ioncell", "count" : 10 },
+	{ "item" : "arkite", "count" : 20 },
+	{ "item" : "handheldioncannon", "count" : 1 },
+	{ "item" : "weaponamplifier", "count" : 1 },
+	{ "item" : "upgrademodule_es", "count" : 10 }
+  ],
+  "output" : { "item" : "ioncannonsupreme", "count" : 1 },
+  "groups" : [ "upgradestation", "upgrades", "all" ]
+}

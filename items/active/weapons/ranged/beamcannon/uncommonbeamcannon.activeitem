@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 1,
+  
+  "critChance" : 4,
+  "critBonus" : 10,
 
   "animation" : "/items/active/weapons/ranged/beamcannon/beamcannon.animation",
   "animationParts" : {

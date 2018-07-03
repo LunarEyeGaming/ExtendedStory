@@ -16,6 +16,21 @@
   },
   {
     "op" : "add",
+    "path" : "/isolatedvault2",
+    "value" : {
+      "primaryDungeon" : "isolatedvault2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [300, 300, 300],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "scorchedcity",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/novakidoutpost",
     "value" : {
       "primaryDungeon" : "novakidoutpost",
@@ -132,6 +147,21 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/event-horizon-alxdmusic.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/supervoidbossarena2",
+    "value" : {
+      "primaryDungeon" : "supervoidbossarena2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/killers-by-kevinmacleod.ogg",
       "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }

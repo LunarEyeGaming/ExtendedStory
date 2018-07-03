@@ -10,6 +10,9 @@
   "category" : "Artifact",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
+  
+  "critChance" : 10,
+  "critBonus" : 25,
 
   "inventoryIcon" : "fireartifacticon.png",
 
@@ -49,7 +52,7 @@
 	  "windup1" : {"duration" : 0.1, "armRotation" : 305, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
       "preslash1" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},	  
 	  "fire1" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-	  "wait1" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "wait1" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
 	  "windup2" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
 	  "fire2" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
 	  "wait2" : {"duration" : 0.23,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
@@ -65,12 +68,41 @@
     }
   },
 
-  "altAbilityType" : "astraltear",
+  "altAbilityType" : "kunaiblast",
   "altAbility" : {
-    "name" : "^orange;Volcanic Eruption",
-	"projectileType" : "prevolcanoeruption",
-	"cooldownTime" : 10,
-    "energyUsage" : 2000
+    "name" : "^orange;Fireball Spread",
+	"projectileType" : "phoenixfireball2",
+	"cooldownTime" : 1,
+    "projectileOffset" : [1.75, 0],
+	"projectileTimesAndAngles": [
+      [0.02, 35],
+      [0.04, 30],
+      [0.07, 25],
+      [0.10, 20],
+      [0.13, 15],
+      [0.16, 10],
+      [0.19, 5],
+      [0.22, 0],
+      [0.19, -5],
+      [0.16, -10],
+      [0.13, -15],
+      [0.10, -20],
+      [0.07, -25],
+      [0.04, -30],
+      [0.02, -35]
+    ],
+	"stances" : {
+      "fire" : {
+        "duration" : 0.23,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+    "energyUsage" : 100
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -646,18 +646,6 @@
                  "y":2168
                 }, 
                 {
-                 "gid":7683,
-                 "height":16,
-                 "id":1382,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2344,
-                 "y":1216
-                }, 
-                {
                  "gid":5644,
                  "height":40,
                  "id":1383,
@@ -2024,7 +2012,7 @@
                  "y":1336
                 }, 
                 {
-                 "gid":8701,
+                 "gid":8702,
                  "height":24,
                  "id":1611,
                  "name":"",
@@ -2036,7 +2024,7 @@
                  "y":824
                 }, 
                 {
-                 "gid":2147492349,
+                 "gid":2147492350,
                  "height":24,
                  "id":1612,
                  "name":"",
@@ -2048,7 +2036,7 @@
                  "y":1488
                 }, 
                 {
-                 "gid":2147492349,
+                 "gid":2147492350,
                  "height":24,
                  "id":1613,
                  "name":"",
@@ -2060,7 +2048,7 @@
                  "y":1208
                 }, 
                 {
-                 "gid":8701,
+                 "gid":8702,
                  "height":24,
                  "id":1614,
                  "name":"",
@@ -2091,6 +2079,39 @@
                  "width":144,
                  "x":2328,
                  "y":1712
+                }, 
+                {
+                 "height":80,
+                 "id":1616,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/Nomads.ogg\"], 2.0] }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":200,
+                 "x":1160,
+                 "y":2088
+                }, 
+                {
+                 "gid":7631,
+                 "height":16,
+                 "id":1617,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2344,
+                 "y":1216
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3702,26 +3723,6 @@
                  "width":0,
                  "x":2392,
                  "y":1376
-                }, 
-                {
-                 "height":0,
-                 "id":1608,
-                 "name":"",
-                 "polyline":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":296,
-                         "y":-128
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":2048,
-                 "y":1328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3793,10 +3794,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1616,
+ "nextobjectid":1619,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.4",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {
@@ -3940,7 +3941,7 @@
          "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }, 
         {
-         "firstgid":8701,
+         "firstgid":8702,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/techmanagement.json"
         }],
  "tilewidth":8,

@@ -1,0 +1,43 @@
+{
+  "projectileName" : "supervoidreplicatingorb2",
+  "physics" : "laser",
+  "bounces" : -1,
+  "speed" : 60,
+  "timeToLive" : 0.25,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidreplicatingorb2.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb3",
+	  "direction" : [1, 1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb3",
+	  "direction" : [1, -1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb3",
+	  "direction" : [-1, -1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb3",
+	  "direction" : [-1, 1]
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

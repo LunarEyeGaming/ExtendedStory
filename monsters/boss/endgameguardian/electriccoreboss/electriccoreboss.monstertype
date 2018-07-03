@@ -7,7 +7,7 @@
   "animation" : "electriccoreboss.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -103,7 +103,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1000
+          "baseValue" : 2500
         },
         "protection" : {
           "baseValue" : 0

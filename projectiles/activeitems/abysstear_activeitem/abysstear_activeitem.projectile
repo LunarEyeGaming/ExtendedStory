@@ -154,6 +154,9 @@
 	    "timeToLive" : 0.1,
 		"processing" : "?scalenearest=0",
 		"piercing" : false,
+		"movementSettings" : {
+		  "collisionEnabled" : false
+		},
 	    "actionOnHit" : [
 		  {
 		    "action" : "projectile",

@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "climbingrope", "count" : 1 },
+	{ "item" : "copperbar", "count" : 2 },
+	{ "item" : "tungstenbar", "count" : 10 }
+  ],
+  "output" : {
+    "item" : "tungstenslingshot",
+    "count" : 1
+  },
+  "groups" : [ "craftinganvil", "weapons", "all" ]
+}

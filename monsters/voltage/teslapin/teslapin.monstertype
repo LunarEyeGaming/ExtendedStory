@@ -210,10 +210,10 @@
           "baseValue" : 0.0
         },
         "fireResistance" : {
-          "baseValue" : 0.5
+          "baseValue" : 0.0
         },
         "fireStatusImmunity" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.0
         },
         "iceResistance" : {
           "baseValue" : 0.0
@@ -222,22 +222,16 @@
           "baseValue" : 0.0
         },
         "electricResistance" : {
-          "baseValue" : -0.5
+          "baseValue" : 0.5
         },
         "electricStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 1.0
         },
         "poisonResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : -0.5
         },
         "poisonStatusImmunity" : {
           "baseValue" : 0.0
-        },
-        "abyssResistance" : {
-          "baseValue" : 0.5
-        },
-        "ionResistance" : {
-          "baseValue" : -0.5
         }
       },
 

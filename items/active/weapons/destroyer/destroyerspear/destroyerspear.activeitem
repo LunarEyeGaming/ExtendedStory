@@ -1,0 +1,78 @@
+{
+  "itemName" : "destroyerspear",
+  "price" : 960,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A spear designed for destruction and annihilation of a target.",
+  "shortdescription" : "^#cc0000;Destruction Spear^reset;",
+  "tooltipKind" : "sword",
+  "category" : "^#660000;Destroyer Weapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","spear"],
+
+  "inventoryIcon" : "destroyerspear.png:idle.1",
+
+  "animation" : "destroyerspear.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "destroyerspear.png",
+	"bladeFullbright" : "destroyerspearunlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/destroyerspear_fire.ogg" ],
+	  "physicalStart" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
+      "physicalBlast" : [ "/sfx/melee/rocketspear_loop_fire.ogg" ],
+      "physicalEnd" : [ "/sfx/melee/rocketspear_stop_fire.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "aimOffset" : -1.0,
+
+  "primaryAbilityType" : "animatedspearstab",
+  "primaryAbility" : {
+    "fireTime" : 0.5,
+    "baseDps" : 20,
+	"windupAnimationState" : "windup",
+	"fireAnimationState" : "fire",
+	"cooldownAnimationState" : "cooldown",
+	"altCooldownAnimationState" : "cooldown2",
+    "holdDamageMultiplier" : 0.3,
+    "holdDamageConfig" : {
+      "timeoutGroup" : "hold",
+      "timeout" : 0.2
+    },
+    "stances" : {
+      "windup" : {
+        "duration" : 0.3,
+        "armRotation" : -110,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "rocketspear",
+  "altAbility" : {
+    "elementalConfig" : {
+	  "physical" : {
+	    "projectileType" : "destroyershot"
+	  }
+	},
+	"projectileParameters" : {
+	  "speed" : 35,
+	  "power" : 20
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

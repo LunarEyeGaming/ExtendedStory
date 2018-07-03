@@ -19,6 +19,7 @@ function onExpire()
   position = mcontroller.position()
   spawnPosition = {position[1], position[2] + 20}
   status.addEphemeralEffect("destroyereffect")
+  world.spawnProjectile("destroyerborderform", mcontroller.position())
   world.spawnMonster("destroyer", spawnPosition, {musicStagehands = {"bossmusicdestroyer"}, level = 10})
   world.spawnStagehand(
       mcontroller.position(),

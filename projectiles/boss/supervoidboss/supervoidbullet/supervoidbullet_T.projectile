@@ -1,0 +1,29 @@
+{
+  "projectileName" : "supervoidbullet_T",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 2,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet2.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 8,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidbulletexplosion/supervoidbulletexplosion.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "supervoidbullet_EH"
+	}
+  ],
+
+  "scripts" : [ "/projectiles/targetingprojectile/targetingprojectile.lua" ],
+  "scriptDelta" : 3,
+  "damageKind" : "plasma"
+}

@@ -48,8 +48,8 @@
                   "actionOnReap" : [
                     {
                       "action" : "spawnmonster",
-                      "type" : "ancientdrone",
-                      "level" : 3,
+                      "type" : "ancienttwigun",
+                      "level" : 5,
                       "offset" : [0.0, 1.0],
                       "particle" : {
                         "type" : "animated",
@@ -103,8 +103,8 @@
                   "actionOnReap" : [
                     {
                       "action" : "spawnmonster",
-                      "type" : "ancientsentry",
-                      "level" : 3,
+                      "type" : "ancienttwigun",
+                      "level" : 5,
                       "offset" : [0.0, 1.6],
                       "particle" : {
                         "type" : "animated",
@@ -158,8 +158,8 @@
                   "actionOnReap" : [
                     {
                       "action" : "spawnmonster",
-                      "type" : "ancienttotem",
-                      "level" : 3,
+                      "type" : "ancienttwigun",
+                      "level" : 5,
                       "offset" : [0.0, 1.5],
                       "particle" : {
                         "type" : "animated",

@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "ancientblock", "count" : 50 },
+	{ "item" : "solariumstar", "count" : 20 },
+	{ "item" : "essence", "count" : 250 }
+  ],
+  "output" : { "item" : "ancientturretlauncher", "count" : 1 },
+  "groups" : [ "ancientforge", "weapons", "all" ]
+}

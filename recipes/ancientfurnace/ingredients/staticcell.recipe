@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "voltagenbolt", "count" : 10 },
+    { "item" : "emptycell", "count" : 1 }
+  ],
+  "output" : { "item" : "staticcell", "count" : 1 },
+  "groups" : [ "ancientfurnace", "ingredients", "all" ]
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "ultimatiumore", "count" : 10 }
+  ],
+  "output" : {
+    "item" : "ultimatium",
+    "count" : 5
+  },
+  "duration" : 0.15,
+  "groups" : [ "ancientfurnace", "bars", "all" ]
+}

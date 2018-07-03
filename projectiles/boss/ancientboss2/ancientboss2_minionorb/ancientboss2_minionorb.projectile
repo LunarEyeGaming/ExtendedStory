@@ -1,0 +1,349 @@
+{
+  "projectileName" : "ancientboss2_minionorb",
+  "physics" : "hover",
+  "bounces" : 1,
+  "speed" : 25,
+  "timeToLive" : 5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientboss2_minionorb.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 20,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 1,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "config" : {
+	    "speed" : 0,
+		"onlyHitTerrain" : true,
+		"timeToLive" : 2,
+		"periodicActions" : [
+		  {
+		    "time" : 0.3,
+			"action" : "option",
+			"options" : [
+			  {
+			    "action" : "projectile",
+				"type" : "ancientorb_boss",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 0.3,
+				  "onlyHitTerrain" : true,
+				  "actionOnReap" : [
+				    {
+					  "action" : "spawnmonster",
+					  "type" : "ancienttrifangle_es",
+					  "level" : 3
+					},
+					{
+            		  "action" : "sound",
+            		  "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            		},
+					{
+					  "action" : "projectile",
+					  "type" : "laserburst",
+					  "config" : {
+					    "onlyhitTerrain" : true
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "action" : "projectile",
+				"type" : "ancientorb_boss",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 0.35,
+				  "onlyHitTerrain" : true,
+				  "actionOnReap" : [
+				    {
+					  "action" : "spawnmonster",
+					  "type" : "ancienttrifangle_es",
+					  "level" : 3
+					},
+					{
+            		  "action" : "sound",
+            		  "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            		},
+					{
+					  "action" : "projectile",
+					  "type" : "laserburst",
+					  "config" : {
+					    "onlyhitTerrain" : true
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "action" : "projectile",
+				"type" : "ancientorb_boss",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 0.4,
+				  "onlyHitTerrain" : true,
+				  "actionOnReap" : [
+				    {
+					  "action" : "spawnmonster",
+					  "type" : "ancienttrifangle_es",
+					  "level" : 3
+					},
+					{
+            		  "action" : "sound",
+            		  "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            		},
+					{
+					  "action" : "projectile",
+					  "type" : "laserburst",
+					  "config" : {
+					    "onlyhitTerrain" : true
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "action" : "projectile",
+				"type" : "ancientorb_boss",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 0.45,
+				  "onlyHitTerrain" : true,
+				  "actionOnReap" : [
+				    {
+					  "action" : "spawnmonster",
+					  "type" : "ancienttrifangle_es",
+					  "level" : 3
+					},
+					{
+            		  "action" : "sound",
+            		  "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            		},
+					{
+					  "action" : "projectile",
+					  "type" : "laserburst",
+					  "config" : {
+					    "onlyhitTerrain" : true
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "action" : "projectile",
+				"type" : "ancientorb_boss",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 0.5,
+				  "onlyHitTerrain" : true,
+				  "actionOnReap" : [
+				    {
+					  "action" : "spawnmonster",
+					  "type" : "ancienttrifangle_es",
+					  "level" : 3
+					},
+					{
+            		  "action" : "sound",
+            		  "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+            		},
+					{
+					  "action" : "projectile",
+					  "type" : "laserburst",
+					  "config" : {
+					    "onlyhitTerrain" : true
+					  }
+					}
+				  ]
+				}
+			  }
+			]
+		  }
+		],
+		"actionOnReap" : []
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -135,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -45,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -135,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -45,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -135,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "time" : 2.5,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "angle" : -45,
+	  "fuzzAngle" : 20,
+	  "config" : {
+	    "bounces" : 0,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "spawnmonster",
+			"type" : "ancienttwigun"
+		  },
+		  {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+	      {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasma"
+}

@@ -7,7 +7,7 @@
   "animation" : "phoenixboss_es.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -106,7 +106,7 @@
           "baseValue" : 3000
         },
         "protection" : {
-          "baseValue" : 25
+          "baseValue" : 60
         },
         "healthRegen" : {
           "baseValue" : 0.0

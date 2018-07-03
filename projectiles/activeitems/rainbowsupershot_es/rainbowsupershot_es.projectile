@@ -9,26 +9,14 @@
   "frameNumber" : 6,
   "power" : 0,
   "bounces" : 0,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "fullbright" : true,
   "animationLoops" : true,
   "damageKind" : "default",
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "supernova",
-	  "config" : {
-	    "processing" : "?scalenearest=0.5",
-		"periodicActions" : [
-		  {
-		    "time" : 0,
-			"repeat" : false,
-			"action" : "sound",
-			"options" : [ "/sfx/gun/shockblast.ogg" ]
-		  }
-		],
-		"animationCycle" : 0.5,
-		"timeToLive" : 0.5
-	  }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rainbowsuperexplosion_es/rainbowsuperexplosion_es.config"
 	}
   ]
 }

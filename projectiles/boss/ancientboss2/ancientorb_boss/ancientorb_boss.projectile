@@ -1,0 +1,23 @@
+{
+  "projectileName" : "ancientorb_boss",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 25,
+  "timeToLive" : 8,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientorb_boss.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 20,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
+  ],
+  "damageKind" : "plasma"
+}

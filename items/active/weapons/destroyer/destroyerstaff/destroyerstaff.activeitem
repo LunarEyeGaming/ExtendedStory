@@ -1,0 +1,110 @@
+{
+  "itemName" : "destroyerstaff",
+  "price" : 1440,
+  "maxStack" : 1,
+  "level" : 6,
+  "rarity" : "Legendary",
+  "description" : "An extremely destructive staff. ^red;WARNING! DO NOT SPAM!^reset;",
+  "shortdescription" : "^#cc0000;Destructive Trident^reset;",
+  "tooltipKind" : "staff",
+  "category" : "^#660000;Destroyer Weapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","staff"],
+
+  "animation" : "destroyerstaff.animation",
+  "animationParts" : {
+    "staff" : "destroyerstaff.png",
+    "stone" : "stone.png",
+    "chargeEffect" : "staffglow.png"
+  },
+  "animationCustom" : {
+    "lights" : {
+      "glow" : {
+        "color" : [180, 0, 0]
+      }
+    },
+    "particleEmitters" : {
+      "physicalcharge" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "emissionRate" : 10,
+        "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
+        "particles" : [
+          {"particle" : "kluexstaff"}
+        ]
+      }
+    },
+
+    "sounds" : {
+      "physicalactivate" : ["/sfx/npc/boss/tentacleboss_beam_blast.ogg"]
+    }
+  },
+
+  "inventoryIcon" : "destroyerstaff.png",
+
+  "scripts" : ["/items/active/weapons/staff/staff.lua"],
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "weaponRotation" : 0,
+      "twoHanded" : false,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "duration" : 0.6,
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charged" : {
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "discharge" : {
+      "duration" : 0.5,
+      "armRotation" : -10,
+      "weaponRotation" : -50,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "cooldown" : {
+      "duration" : 0.5,
+      "armRotation" : -45,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    }
+  },
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "elementorb",
+  "primaryAbility" : {
+    "name" : "^red;Terrain Breaker", 
+	"projectileType" : "destroyerstaff1",
+	"projectileParameters" : {}
+  },
+
+  "altAbilityType" : "elementorb",
+  "altAbility" : {
+    "name" : "^red;Destroyer Wyrm", 
+	"projectileType" : "destroyerstaff2", 
+	"projectileParameters" : {}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

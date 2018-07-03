@@ -1,0 +1,145 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "charge" : {
+            "frames" : 8,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/charge_combo4.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          },
+          "fullcharge" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "transition",
+			"transition" : "cooldown"
+          },
+          "fire" : {
+            "frames" : 1,
+            "cycle" : 0.05,
+            "mode" : "transition",
+            "transition" : "fullcharge"
+          },
+		  "cooldown" : {
+		    "frames" : 2,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1, 0.2],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1, 0.2],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [90, 0, 0]
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "fire" : ["/music/silence.ogg"],
+	"fire2" : ["/sfx/gun/erchiuseyebeam_start.ogg"]
+  }
+}

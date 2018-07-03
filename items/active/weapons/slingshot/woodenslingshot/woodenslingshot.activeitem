@@ -1,0 +1,46 @@
+{
+  "itemName" : "woodenslingshot",
+  "price" : 10,
+  "inventoryIcon" : "woodenslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "tooltipKind" : "bow",
+  "category" : "Slingshot",
+  "description" : "A crude slingshot made of sticks and rope.",
+  "shortdescription" : "Wooden Slingshot",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+  
+  "critChance" : 1,
+  "critBonus" : 1,
+
+  "level" : 1,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "woodenslingshot.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/gun/bow_loose.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/bow_loose_perfect.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    //"drawSpeedMultiplier" : "constant",
+    //"projectileType" : "ancientarrow",
+    //"powerProjectileType" : "chargedancientarrow"
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

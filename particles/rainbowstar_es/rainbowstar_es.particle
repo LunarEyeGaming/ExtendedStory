@@ -1,0 +1,17 @@
+{
+  "kind" : "rainbowstar_es",
+  "definition" : {
+    "type" : "animated",
+    "looping" : true,
+    "animation" : "/animations/rainbowstar_es/rainbowstar_es.animation",
+    "size" : 1.0,
+    "color" : [255, 255, 255, 255],
+    "fade" : 0.9,
+    "fullbright" : true,
+    "timeToLive" : 1.0,
+    "position" : [0, 0],
+    "destructionAction" : "fade",
+    "destructionTime" : 3.0,
+    "layer" : "front"
+  }
+}

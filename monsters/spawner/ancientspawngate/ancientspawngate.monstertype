@@ -60,15 +60,15 @@
 					  "list" : [
 					    {
 						  "action" : "spawnmonster",
-						  "type" : "frozentrailer",
+						  "type" : "ancienttrailer",
 						  "offset" : [3, 0],
-						  "level" : 5
+						  "level" : 3
 						},
 						{
 						  "action" : "spawnmonster",
-						  "type" : "frozentrailer",
+						  "type" : "ancienttrailer",
 						  "offset" : [-3, 0],
-						  "level" : 5
+						  "level" : 3
 						}
 					  ]
 					},
@@ -77,8 +77,9 @@
 					  "list" : [
 					    {
 						  "action" : "projectile",
-						  "type" : "frozentwigun",
+						  "type" : "ancienttwigun",
 						  "offset" : [3, 0],
+						  "angle" : 0,
 						  "fuzzAngle" : 20,
 						  "config" : {
 						    "damageTeam" : {"type" : "enemy"}
@@ -86,7 +87,7 @@
 						},
 						{
 						  "action" : "projectile",
-						  "type" : "frozentwigun",
+						  "type" : "ancienttwigun",
 						  "offset" : [-3, 0],
 						  "angle" : 180,
 						  "fuzzAngle" : 20,
@@ -101,15 +102,15 @@
 					  "list" : [
 					    {
 						  "action" : "spawnmonster",
-						  "type" : "frozentrifangle",
+						  "type" : "ancienttrifangle_es",
 						  "offset" : [3, 0],
-						  "level" : 5
+						  "level" : 3
 						},
 						{
 						  "action" : "spawnmonster",
-						  "type" : "frozentrifangle",
+						  "type" : "ancienttrifangle_es",
 						  "offset" : [-3, 0],
-						  "level" : 5
+						  "level" : 3
 						}
 					  ]
 					}
@@ -228,7 +229,25 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
         "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
           "baseValue" : 1.0
         },
 		"poisonResistance" : {

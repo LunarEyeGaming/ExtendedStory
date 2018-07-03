@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 3,
+  
+  "critChance" : 4,
+  "critBonus" : 7,
 
   "inventoryIcon" : "tungstenchaingun.png:idle",
 
@@ -62,8 +65,8 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,8 +77,8 @@
       },
       "cooldown" : {
         "duration" : 0.01,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,

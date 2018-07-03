@@ -1,0 +1,150 @@
+{
+  "type" : "ancientboss2",
+  "shortdescription" : "Galactic Golem",
+  "categories" : [ "ancientboss2" ],
+  "parts" : [ "body" ],
+
+  "animation" : "ancientboss2.animation",
+  "dropPools" : [
+    {
+      "default" : "ancientavatarTreasure"
+    }
+  ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
+
+    "behavior" : "ancientboss2",
+
+    "behaviorConfig" : {
+      "colorChangeWindup" : 0.4,
+      "colorChangeWinddown" : 0.4,
+
+      "windupTime" : 0.4,
+      "fastWindupTime" : 0.15,
+
+      "plasmaAttackFlySpeed" : 50,
+      "plasmaAttackX" : 20,
+      "plasmaAttackY" : 15,
+      "plasmaMinY" : 0
+    },
+	"renderLayer" : "Projectile-20",
+
+    "knockoutTime" : 0,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "destroy",
+
+    "portraitIcon" : "/monsters/boss/ancientavatar/ancientavatar.png:red.idle.1",
+
+    "metaBoundBox" : [-50, -50, 50, 50],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [1.25, 6.875], [2.875, 5.25], [2.875, 2.75], [1.25, 1.125], [-1.25, 1.125], [-2.875, 2.75], [-2.875, 5.25], [-1.25, 6.875] ],
+
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "flySpeed" : 11,
+      "airFriction" : 0.5,
+      "airForce" : 800.0,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 2000
+        },
+        "protection" : {
+          "baseValue" : 0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 1.0
+        }
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

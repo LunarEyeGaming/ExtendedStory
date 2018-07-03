@@ -1,0 +1,26 @@
+{
+  "projectileName" : "ancientturretlauncherproj2",
+  "physics" : "grenade",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 8,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientturretlauncherproj.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 20,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ancientturretspawn_es",
+	  "direction" : [0, 1]
+	}
+  ],
+  "damageKind" : "plasma"
+}

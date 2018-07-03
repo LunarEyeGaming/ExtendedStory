@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "ultimatium", "count" : 20 },
+    { "item" : "refinedlunarite", "count" : 30 },
+	{ "item" : "solariumstar", "count" : 15 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "ultimatiumhead", "count" : 1 },
+  "groups" : [ "ancientforge", "armours", "all" ]
+}

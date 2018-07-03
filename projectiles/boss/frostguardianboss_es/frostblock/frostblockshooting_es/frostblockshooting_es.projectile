@@ -21,7 +21,7 @@
 	  }
 	},
 	{
-      "time" : 0.2,
+      "time" : 0.35,
 	  "action" : "projectile",
 	  "type" : "fg_icicle",
 	  "direction" : [0, 1],
@@ -30,7 +30,7 @@
 	  }
 	},
 	{
-      "time" : 0.2,
+      "time" : 0.35,
 	  "action" : "projectile",
 	  "type" : "fg_icicle",
 	  "direction" : [0, -1],
@@ -39,7 +39,7 @@
 	  }
 	},
 	{
-      "time" : 0.2,
+      "time" : 0.35,
 	  "action" : "projectile",
 	  "type" : "fg_icicle",
 	  "direction" : [1, 0],
@@ -48,7 +48,7 @@
 	  }
 	},
 	{
-      "time" : 0.2,
+      "time" : 0.35,
 	  "action" : "projectile",
 	  "type" : "fg_icicle",
 	  "direction" : [-1, 0],
@@ -57,7 +57,7 @@
 	  }
 	},
 	{
-      "time" : 0.2,
+      "time" : 0.35,
 	  "action" : "sound",
 	  "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
 	}

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":52,
+ "tilecount":53,
  "tileheight":82,
  "tileproperties":
     {
@@ -313,6 +313,13 @@
          "imagePositionX":"-20",
          "imagePositionY":"0",
          "object":"abyssartifactaltar",
+         "tilesetDirection":"right"
+        },
+     "52":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"supervoidbackground",
          "tilesetDirection":"right"
         },
      "6":
@@ -661,6 +668,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "52":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -991,6 +1005,10 @@
          "image":"..\/..\/objects\/mission\/abyssartifactdungeon\/abyssartifactaltar\/abyssartifactaltar.png",
          "imageheight":40,
          "imagewidth":32
+        },
+     "52":
+        {
+         "image":"c:\/Program Files (x86)\/Steam\/steamapps\/common\/Starbound\/tiled\/isolatedvault\/objects\/supervoidbackground.png"
         },
      "6":
         {

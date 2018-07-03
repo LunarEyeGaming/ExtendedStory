@@ -4,12 +4,15 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A type of gun that can shoot high-velocity explosive lasers.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "gun",
   "category" : "Ancient Railgun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 10,
+  
+  "critChance" : 40,
+  "critBonus" : 40,
 
   "inventoryIcon" : [
     { "image" : "ancientrailgun.png:idle.1" }

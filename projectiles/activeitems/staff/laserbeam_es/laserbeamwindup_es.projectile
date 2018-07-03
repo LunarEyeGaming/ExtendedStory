@@ -1,0 +1,38 @@
+{
+  "projectileName" : "laserbeamwindup_es",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/crystalboss_beamin.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "laserbeam_es"
+	}
+  ],
+  "timeToLive" : 0.49,
+  "image" : "laserbeamwindup_es.png",
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.5,
+  "statusEffects" : [
+    "gammarays"
+  ],
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 4,
+  "power" : 50,
+  "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
+  "damageKind" : "plasma",
+  "damageType" : "nodamage",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  }
+}

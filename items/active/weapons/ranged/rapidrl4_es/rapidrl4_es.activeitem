@@ -10,6 +10,9 @@
   "category" : "rocketLauncher",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 16,
+  "critBonus" : 16,
 
   "inventoryIcon" : [
     { "image" : "rapidrl4_es.png:idle" }
@@ -26,7 +29,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/rocket_fire1.ogg" ],
-	  "altFire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
+	  "fireGuided" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
     }
   },
   "baseOffset" : [0.3, 0.4],

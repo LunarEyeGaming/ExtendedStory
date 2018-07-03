@@ -1,5 +1,5 @@
 {
-  // ------- LIMBO DIMENSION MESSAGES -------
+  // ------- BOSSVAULT MESSAGES -------
   "isolatedvault01" : {
     "type" : "mission",
     "text" : "Scans show that life on this planet thrived. For unknown reasons, this planet is now a barren, scorched wasteland."
@@ -11,8 +11,8 @@
   "isolatedvault03" : {
     "type" : "mission",
 	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
-    "text" : "^green;Rogue phase complete."
+	"portraitImage" : "/interface/chatbubbles/quantumsentrystatic2.png:<frame>",
+    "text" : "^green;SOS signal received.\n\n^red;ERROR: TARGET BLACKLIST UNREADABLE! Using default target blacklist."
   },
   "isolatedvault04" : {
     "type" : "mission",
@@ -21,17 +21,21 @@
   "isolatedvault05" : {
     "type" : "mission",
 	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
-    "text" : "^red;Warning: Temperatures are unsustainable. \nBeginning rogue phase.\n^orange;01001100 01101111 01100001 01100100 01101001 01101110 01100111 00101110 00101110 00101110"
+	"portraitImage" : "/interface/chatbubbles/quantumsentrystatic.png:<frame>",
+    "text" : "^red;Warning: Temperatures are unsustainable. \nSending SOS signal.\n^orange;01001100 01101111 01100001 01100100 01101001 01101110 01100111 00101110 00101110 00101110"
   },
+  //"isolatedvault06" : {
+    //"type" : "mission",
+    //"text" : "It is best that you dig to this area and do what Raziya wanted.\n^red;Proceed with caution, as there is an extremely deep chasm below you."
+  //},
   "isolatedvault06" : {
     "type" : "mission",
-    "text" : "It is best that you dig to this area and do what Raziya wanted."
+    "text" : "If you're going to dig to this area, I advise that you proceed to do so with caution.\n^red;Please note that there is an extremely deep chasm below you."
   },
   "isolatedvault07" : {
     "type" : "mission",
-	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
+	"senderName" : "Omega the Quantum Sentry",
+	"portraitImage" : "/interface/chatbubbles/quantumsentry.png",
     "text" : "^red;WARNING: INTRUDER DETECTED! EXTERMINATE INTRUDER IMMEDIATELY!"
   },
   // ------- ROBOT FACILITY MESSAGES -------
@@ -51,9 +55,13 @@
     "type" : "mission",
 	"text" : "These rooms are quite dangerous and are riddled with traps. If you don't feel confident trying any of these, feel free to leave and return once you feel confident."
   },
+  //"robotfacility05" : {
+    //"type" : "mission",
+	//"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you, supposedly being the Bot of Terror Raziya constantly mentions. The chamber contains massive concentrations of the substance."
+  //},
   "robotfacility05" : {
     "type" : "mission",
-	"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you, supposedly being the Bot of Terror Raziya constantly mentions. The chamber contains massive concentrations of the substance."
+	"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you. It is best that you prepare yourself to fight it with your strongest weapons."
   },
   "robotfacility06" : {
     "type" : "mission",

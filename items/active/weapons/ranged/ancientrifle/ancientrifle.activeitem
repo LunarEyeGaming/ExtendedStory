@@ -4,12 +4,15 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A standard-issue rifle commonly used by ancient soldiers.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "gun",
   "category" : "Ancient Rifle",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 10,
+  
+  "critChance" : 1,
+  "critBonus" : 5,
 
   "inventoryIcon" : [
     { "image" : "ancientrifle.png:auto.1" }

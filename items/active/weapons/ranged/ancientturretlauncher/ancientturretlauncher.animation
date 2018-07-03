@@ -1,0 +1,208 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "charge" : {
+            "frames" : 10,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/charge_up2.ogg",
+              "persistentSoundStopTime" : 1.0
+            }
+          },
+          "fullcharge" : {
+            "frames" : 3,
+            "cycle" : 0.2,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      },
+	  "charge" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "charge" : {
+            "frames" : 1,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "spark"
+          },
+          "spark" : {
+            "frames" : 1,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "charged"
+          },
+          "charged" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          },
+          "discharge" : {
+            "frames" : 1,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1.5, 0.0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1.5, 0.0],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "chargeEffect" : {
+        "properties" : {
+          "zLevel" : 2,
+          "fullbright" : true,
+          "centered" : true,
+          "offset" : [0.06, 1.875],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "charge" : {
+            "charge" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "spark" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "charged" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "discharge" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+	  "staff" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "",
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : ["weapon"]
+        }
+      },
+      "stone" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "fullbright" : true,
+          "image" : "",
+          "offset" : [0.0, 0.0],
+          "focalPoint" : [-0.3, 0.6],
+          "transformationGroups" : ["weapon"]
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+  
+  "particleEmitters" : {
+    "physicalcharge" : {
+      "active" : false,
+      "transformationGroups" : ["weapon"],
+      "emissionRate" : 10,
+      "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
+      "particles" : [ ]
+    }
+  },
+
+  "sounds" : {
+    "fire" : [ "/sfx/gun/aegisaltpistol_stop.ogg" ],
+	"fire2" : [ "/sfx/npc/boss/crystalboss_spawnmonster.ogg" ]
+  }
+}

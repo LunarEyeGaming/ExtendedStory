@@ -3,13 +3,16 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Uncommon",
-  "description" : "Even bigger. Shoots bullets that explode into shards.",
+  "description" : "Double the size, double the damage!",
   "shortdescription" : "Durasteel Chain Gun",
   "tooltipKind" : "gun",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 5,
+  
+  "critChance" : 5,
+  "critBonus" : 20,
 
   "inventoryIcon" : "durasteelchaingun.png:idle",
 
@@ -62,8 +65,8 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,8 +77,8 @@
       },
       "cooldown" : {
         "duration" : 0.01,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -85,6 +88,7 @@
   },
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
+    "name" : "Grav Bombs",
 	"fireTime" : 0.1,
 	"baseDps" : 20,
 	"cooldownTime" : 0.0,

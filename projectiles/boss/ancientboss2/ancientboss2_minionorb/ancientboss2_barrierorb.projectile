@@ -1,0 +1,34 @@
+{
+  "projectileName" : "ancientboss2_barrierorb",
+  "physics" : "hover",
+  "bounces" : 1,
+  "speed" : 25,
+  "timeToLive" : 5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientboss2_minionorb.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 20,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 1,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientboss2_barrierorb2",
+	  "direction" : [1, 0]
+	},
+	{
+	  "time" : 1,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ancientboss2_barrierorb2",
+	  "direction" : [-1, 0]
+	}
+  ],
+  "damageKind" : "plasma"
+}

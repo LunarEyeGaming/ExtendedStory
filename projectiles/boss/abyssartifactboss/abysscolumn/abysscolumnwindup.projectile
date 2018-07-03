@@ -13,9 +13,16 @@
     "collisionEnabled" : false
   },
   "bounces" : -1,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/astraltear2.ogg" ]
+	}
+  ],
   "timeToLive" : 2.0,
   "fullbright" : true,
-  "periodicActions" : [],
   "actionOnReap" : [
     {
 	  "action" : "projectile",

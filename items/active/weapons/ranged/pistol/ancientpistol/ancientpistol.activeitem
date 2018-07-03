@@ -4,12 +4,15 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "Explosive lasers like never before.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "gun",
   "category" : "Ancient Pistol",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged","machinepistol"],
   "level" : 10,
+  
+  "critChance" : 2,
+  "critBonus" : 5,
 
   "inventoryIcon" : "ancientpistol.png:idle.1",
 

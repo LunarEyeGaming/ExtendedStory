@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "level" : 10,
   "itemTags" : ["weapon","melee","hammer"],
+  
+  "critChance" : 25,
+  "critBonus" : 55,
 
   "inventoryIcon" : "ancienthammer_es.png",
 
@@ -38,7 +41,7 @@
     "baseDps" : 11,
     "damageConfig" : {
       "damageSourceKind" : "firehammer",
-	  "statusEffects" : [ "electrified", "burning" ]
+	  "statusEffects" : [ "burning" ]
     },
     "stances" : {
       "idle" : {

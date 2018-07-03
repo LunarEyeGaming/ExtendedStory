@@ -1,0 +1,30 @@
+{
+  "projectileName" : "ancientboss2_ceilingcollision",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "periodicActions" : [],
+  "physicsCollisions" : {
+    "frostblock" : {
+      "collision" : [ [50, 0.5], [50, -0.5], [-50, -0.5], [-50, 0.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["player"]
+    }
+  },
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ancientboss2_ceilingcollision"
+	}
+  ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "hammer",
+
+  "speed" : 0,
+  "timeToLive" : 1.5
+}

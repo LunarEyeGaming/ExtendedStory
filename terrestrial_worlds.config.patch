@@ -165,7 +165,7 @@
       "layers" : {
         "surface" : {
           "primaryRegion" : [ "voltage" ],
-          "secondaryRegion" : [ "midnight", "darkabyss" ],
+          "secondaryRegion" : [ "midnight", "darkabyss", "volcanic", "eternalfire" ],
 
           "dungeons" : [
             [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
@@ -297,7 +297,7 @@
       "biome" : [
         [0, [ "voltage" ]]
       ],
-      "subRegion" : ["bones", "electricdesert", "tar", "supervoid"]
+      "subRegion" : ["bones", "electricdesert", "tar", "supervoid", "livinglightning"]
     }
   },
   {
@@ -321,6 +321,18 @@
       "bgCaveSelector" : [ "empty" ],
       "biome" : [
         [0, [ "supervoid" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/livinglightning",
+    "value" : {
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "livinglightning" ]]
       ]
     }
   },

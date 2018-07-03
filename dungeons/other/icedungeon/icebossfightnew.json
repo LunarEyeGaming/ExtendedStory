@@ -354,6 +354,27 @@
                  "width":144,
                  "x":2000,
                  "y":696
+                }, 
+                {
+                 "height":104,
+                 "id":1324,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/arctic-exploration2.ogg\"], 2.0] }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":304,
+                 "x":2456,
+                 "y":504
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -476,10 +497,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1324,
+ "nextobjectid":1325,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.4",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {

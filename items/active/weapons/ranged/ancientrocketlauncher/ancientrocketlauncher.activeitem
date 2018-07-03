@@ -5,10 +5,14 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "Not your typical rocket launcher.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "gun",
   "category" : "Ancient Cannon",
   "twoHanded" : true,
+  
+  "critChance" : 15,
+  "critBonus" : 15,
+  
   "itemTags" : ["weapon","ranged","rocketlauncher"],
 
   "inventoryIcon" : [
@@ -46,7 +50,7 @@
     "class" : "GunFire",
 
     "fireTime" : 1.5,
-    "baseDps" : 24.0,
+    "baseDps" : 5.0,
     "energyUsage" : 24,
     "inaccuracy" : 0.008,
     "fireType" : "auto",

@@ -229,6 +229,15 @@
 									}
         						  },
 								  {
+								    "title": "setResourcePercentage",
+									"type": "action",
+									"name": "setResourcePercentage",
+									"parameters": {
+									  "percentage": {"value": 0.5},
+                                      "resource": {"value": "health"}
+									}
+								  },
+								  {
 								    "title": "abyssartifactboss-transition",
 									"type": "module",
 									"name": "abyssartifactboss-transition",

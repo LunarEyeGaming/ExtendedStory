@@ -1,0 +1,305 @@
+{
+  "name": "supervoidbossphase2-dyingnew",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "playersInWorld",
+            "type": "action",
+            "name": "playersInWorld",
+            "parameters": {},
+            "output": {
+              "list": "players"
+            }
+          },
+          {
+            "title": "each",
+            "type": "decorator",
+            "name": "each",
+            "parameters": {
+              "list": {"key": "players"},
+              "type": {"value": "entity"}
+            },
+            "child": {
+              "title": "succeeder",
+              "type": "decorator",
+              "name": "succeeder",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "entity": {"key": "eachItem"},
+                  "message": {"value": "supervoidDestroyed"}
+                }
+              }
+            }
+          }
+        ]
+      },
+	  {
+	    "title": "playSound",
+		"type": "action",
+		"name": "playSound",
+		"parameters": {
+		  "sound": {"value": "death"}
+		}
+	  },
+	  {
+	    "title": "playSound",
+		"type": "action",
+		"name": "playSound",
+		"parameters": {
+		  "sound": {"value": "selfdestruct"}
+		}
+	  },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "sbulletexplosion_es"}
+    	}
+      },
+      {
+		"title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "active": {"value": true},
+		  "emitter": {"value": "dying"}
+		}
+	  },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 5.0}
+        }
+      },
+      {
+		"title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "active": {"value": true},
+		  "emitter": {"value": "dying2"}
+		}
+	  },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "svbdying2"}
+    	}
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+		  "state": {"value": "off"},
+		  "type": {"value": "stage3orbs"}
+		}
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 5.0}
+        }
+      },
+      {
+		"title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "active": {"value": true},
+		  "emitter": {"value": "dying3"}
+		}
+	  },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "supervoidexplosionloop"}
+    	}
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 12.0}
+        }
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "supervoidexplosionloop"}
+    	}
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 12.0}
+        }
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "particle", "specification": {"type" : "textured", "image" : "/monsters/boss/supervoidbossphase2/chargeup.png", "position" : [0, 0], "initialVelocity" : [0, 0], "finalVelocity" : [0, 0], "layer" : "back", "size": 3, "timeToLive" : 0, "destructionTime" : 2, "destructionAction" : "shrink", "fullbright" : true, "variance" : { "initialVelocity" : [0, 0], "finalVelocity" : [0, 0]}}}]}},
+    	  "projectileType": {"value": "orbitalup"}
+    	}
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      },
+	  {
+	    "title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "active": {"value": true},
+		  "emitter": {"value": "flash"}
+		}
+	  },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+	  {
+        "title": "playersInWorld",
+        "type": "action",
+        "name": "playersInWorld",
+        "parameters": {},
+        "output": {
+          "list": "players"
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "players"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sendEntityMessage",
+            "type": "action",
+            "name": "sendEntityMessage",
+            "parameters": {
+              "arguments": {"value": ["/cinematics/finale2.cinematic"]},
+              "entity": {"key": "eachItem"},
+              "message": {"value": "playCinematic"}
+            }
+          }
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "playersInWorld",
+            "type": "action",
+            "name": "playersInWorld",
+            "parameters": {},
+            "output": {
+              "list": "players"
+            }
+          },
+          {
+            "title": "each",
+            "type": "decorator",
+            "name": "each",
+            "parameters": {
+              "list": {"key": "players"},
+              "type": {"value": "entity"}
+            },
+            "child": {
+              "title": "succeeder",
+              "type": "decorator",
+              "name": "succeeder",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "arguments": {"value": ["InstanceWorld:outpost=arkteleporter"]},
+                  "entity": {"key": "eachItem"},
+                  "message": {"value": "warp"}
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

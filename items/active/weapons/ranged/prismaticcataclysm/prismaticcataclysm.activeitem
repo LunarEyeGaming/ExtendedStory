@@ -10,6 +10,9 @@
   "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 25,
+  "critBonus" : 10,
 
   "inventoryIcon" : [
     { "image" : "prismaticcataclysm.png:idle.1" }
