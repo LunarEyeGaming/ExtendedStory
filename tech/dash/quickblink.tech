@@ -1,0 +1,21 @@
+{
+  "name" : "quickblink",
+  "type" : "body",
+
+  "scripts" : ["quickblink.lua"],
+  "animator" : "blinkdash.animation",
+
+  "description" : "Quickly blink across different areas! Energy Cost: 50. Cooldown: 0.8s",
+  "shortDescription" : "Quick Blink",
+  "rarity" : "Legendary",
+  "icon" : "/tech/quickblink.png",
+
+  "chipCost" : 16,
+
+  "maximumDoubleTapTime" : 0.25,
+  "dashDistance" : 20,
+  "blinkOutTime" : 0.15,
+  "blinkInTime" : 0.15,
+  "dashCooldown" : 0.3,
+  "groundOnly" : false
+}

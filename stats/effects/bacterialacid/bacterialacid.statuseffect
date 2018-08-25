@@ -1,0 +1,16 @@
+{
+  "name" : "bacterialacid",
+  "blockingStat" : "acidicbacteriaImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5.0,
+
+  "scripts" : [
+    "bacterialacid.lua"
+  ],
+
+  "animationConfig" : "bacterialacid.animation",
+
+  "label" : "Acidic Bacteria - The bacteria is digesting you alive!",
+  "icon" : "/interface/statuses/bacterialacid.png"
+}

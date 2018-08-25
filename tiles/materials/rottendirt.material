@@ -1,0 +1,25 @@
+{
+  "materialId" : 2018,
+  "materialName" : "rottendirt",
+  "particleColor" : [145, 119, 58, 255],
+  "itemDrop" : "rottendirt",
+  "description" : "Rotting dirt. It smells awful.",
+  "shortdescription" : "Rotting Dirt",
+  "glitchDescription" : "Surprised. This dirt is rotting away!",
+  "floranDescription" : "Sssmells nassty.",
+  "novakidDescription" : "Some nasty smellin' dirt.",
+  "footstepSound" : "/sfx/blocks/footstep_brains.ogg",
+  "health" : 3,
+  "soil" : true,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "rottendirt.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1920
+  }
+}

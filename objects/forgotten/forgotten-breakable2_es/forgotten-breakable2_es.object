@@ -1,0 +1,40 @@
+{
+  "objectName" : "forgotten-breakable2_es",
+  "colonyTags" : ["dark"],
+  "rarity" : "Common",
+
+  "category" : "breakable",
+  "printable" : false,
+  "description" : "A rotting substance that has rock-like properties.",
+  "shortdescription" : "Rotting Substance",
+  "race" : "generic",
+
+  "apexDescription" : "This rock is rotting away!",
+  "avianDescription" : "Better watch my step with these rocks around!",
+  "floranDescription" : "Ssmelly rock.",
+  "glitchDescription" : "Disgusted. A rotting substance.",
+  "humanDescription" : "That's a tripping hazard right there.",
+  "hylotlDescription" : "A rock with a potent odor.",
+  "novakidDescription" : "Sediment rock.",
+
+  "inventoryIcon" : "forgotten-breakable2_es.png",
+  "orientations" : [
+    {
+      "dualImage" : "forgotten-breakable2_es.png:<color>",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "smashable" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg" ],
+  "smashParticles" : [ { "count" : 5, "particle" : "sandstoneshard" } ],
+
+  "biomePlaced" : true
+}

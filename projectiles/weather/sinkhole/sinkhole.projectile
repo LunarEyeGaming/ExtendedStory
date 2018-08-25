@@ -1,0 +1,91 @@
+{
+  "projectileName" : "sinkhole",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 100,
+  "speed" : 1,
+  "onlyHitTerrain" : true,
+  "timeToLive" : 20,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "config" : {
+	    "timeToLive" : 0,
+		"speed" : 0,
+		"actionOnReap" : [
+		  {
+		    "action" : "explosion",
+			"foregroundRadius" : 10,
+			"backgroundRadius" : 0,
+			"explosiveDamageAmount" : 400,
+			"delaySteps" : 2
+		  }
+		]
+	  }
+	},
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "offsetRange" : [10, 10, -10, -10],
+	  "config" : {
+	    "timeToLive" : 0,
+		"speed" : 0,
+		"actionOnReap" : [
+		  {
+		    "action" : "explosion",
+			"foregroundRadius" : 5,
+			"backgroundRadius" : 0,
+			"explosiveDamageAmount" : 400,
+			"delaySteps" : 2
+		  }
+		]
+	  }
+	},
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "offsetRange" : [16, 16, -16, -16],
+	  "config" : {
+	    "timeToLive" : 0,
+		"speed" : 0,
+		"actionOnReap" : [
+		  {
+		    "action" : "explosion",
+			"foregroundRadius" : 3,
+			"backgroundRadius" : 0,
+			"explosiveDamageAmount" : 400,
+			"delaySteps" : 2
+		  }
+		]
+	  }
+	},
+    {
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "offsetRange" : [20, 20, -20, -20],
+	  "config" : {
+	    "timeToLive" : 0,
+		"speed" : 0,
+		"actionOnReap" : [
+		  {
+		    "action" : "explosion",
+			"foregroundRadius" : 2,
+			"backgroundRadius" : 0,
+			"explosiveDamageAmount" : 400,
+			"delaySteps" : 2
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasmabullet"
+}

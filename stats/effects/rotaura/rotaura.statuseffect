@@ -1,0 +1,13 @@
+{
+  "name" : "rotaura",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "rotaura.lua"
+  ],
+
+  "label" : "Aura of Decay - Nearby monsters will rot.",
+  "icon" : "/interface/statuses/rotaura.png"
+}

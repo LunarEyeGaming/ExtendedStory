@@ -192,7 +192,7 @@
 								  "timeToLive" : 0,
 								  "power" : 0,
 								  "damageKind" : "nodamage",
-								  "actionOnReap" : [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "presupervoidbullet", "fuzzAngle": 180}]}]
+								  "actionOnReap" : [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "supervoidbulletbuffed", "fuzzAngle": 180}]}]
 								}},
                                 "projectileType": {"value": "orbitalup"},
                                 "scalePower": {"value": true},

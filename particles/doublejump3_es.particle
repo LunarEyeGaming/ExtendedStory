@@ -1,0 +1,18 @@
+{
+  "kind" : "doublejump3_es",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/doublejump3_es/doublejump3_es.animation",
+    "position" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "approach" : [0, 50],
+    "size" : 1.0,
+    "timeToLive" : 0.85,
+    "layer" : "back",
+    "light" : [100, 60, 140],
+    "fade" : 0.5,
+    "variance" : {
+      "initialVelocity" : [0.0, 0.0]
+    }
+  }
+}

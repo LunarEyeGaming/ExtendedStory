@@ -465,18 +465,6 @@
                  "y":2312
                 }, 
                 {
-                 "gid":7407,
-                 "height":40,
-                 "id":820,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":2312,
-                 "y":2320
-                }, 
-                {
                  "gid":5621,
                  "height":40,
                  "id":830,
@@ -3298,7 +3286,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"bossIds\" : [ \"ancientmicrogate\" ], \"open\" : true }",
+                     "parameters":"{ \"bossIds\" : [ \"ancientspawngate\" ], \"open\" : true }",
                      "stagehand":"bossdooropener"
                     },
                  "propertytypes":

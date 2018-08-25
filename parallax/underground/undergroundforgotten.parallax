@@ -1,0 +1,26 @@
+{
+  "layers" : [
+    {
+        "kind" : "tile/undergroundforgottenfront",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true,
+      "unlit" : false
+    },
+    {
+      "kind" : "tile/undergroundforgotten",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.4,
+      "repeatY" : true
+    },
+    {
+      "kind" : "tile/undergroundforgottenback",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.7,
+      "repeatY" : true
+    }
+  ]
+}

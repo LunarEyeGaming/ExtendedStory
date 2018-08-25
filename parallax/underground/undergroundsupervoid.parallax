@@ -1,0 +1,29 @@
+{
+  "layers" : [
+    {
+      "kind" : "tile/supervoidcave1",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.2,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/supervoidcave2",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 1.35,
+      "repeatY" : true,
+      "unlit" : true
+    },
+    {
+      "kind" : "tile/supervoidcave3",
+      "nohueshift" : false,
+      "lightMapped" : true,
+      "parallax" : 2,
+      "noRandomOffset" : true,
+      "repeatY" : true,
+      "unlit" : true
+    }
+  ]
+}

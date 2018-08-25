@@ -38,7 +38,6 @@ function detectionLimit(entities)
 	  validEntities = validEntities + 1
 	end
   end
-  sb.logInfo("[Extended Story Debug] %s", validEntities)
   if validEntities >= self.entityLimit then
     return true
   else

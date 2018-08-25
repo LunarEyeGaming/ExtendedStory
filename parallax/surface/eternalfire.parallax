@@ -3,14 +3,14 @@
 
   "layers" : [
     {
-      "kind" : "divider/dirt",
+      "kind" : "divider/rock",
       "offset" : [0, 475],
       "nohueshift" : true,
       "lightMapped" : true,
       "parallax" : 1.07
     },
     {
-      "kind" : "tile/desert",
+      "kind" : "tile/magmarock",
       "nohueshift" : true,
       "lightMapped" : true,
       "repeatY" : true,

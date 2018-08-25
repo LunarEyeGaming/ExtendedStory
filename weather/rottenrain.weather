@@ -1,0 +1,40 @@
+{
+  "name" : "rottenrain",
+
+  "particles" : [
+    {
+      "density" : 0.07,
+      "autoRotate" : true,
+      "particle" : {
+        "type" : "animated",
+        "image" : "/animations/decayingair/decayingair.animation",
+        "velocity" : [10, -10.0],
+        "approach" : [15, 15],
+        "angularVelocity" : 0,
+        "timeToLive" : 20,
+        "destructionAction" : "fade",
+        "destructionTime" : 0.4,
+        "collidesForeground" : true,
+        "collidesLiquid" : true
+      }
+    }
+  ],
+
+  "projectiles" : [
+    {
+      "projectile" : "rottenblob",
+      "parameters" : {
+        "power" : 0
+      },
+      "velocity" : [30, -30],
+      "ratePerX" : 0.005,
+      "spawnAboveRegion" : 30,
+      "spawnHorizontalPad" : 30,
+      "windAffectAmount" : 0.0
+    }
+  ],
+
+  "duration" : [50, 160],
+  "maximumWind" : 15.0,
+  "weatherNoises" : [ "/sfx/weather/rottenrain_loop.ogg" ]
+}

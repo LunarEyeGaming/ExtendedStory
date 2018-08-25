@@ -104,7 +104,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2500
+          "baseValue" : 3000
         },
         "protection" : {
           "baseValue" : 70
@@ -141,6 +141,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

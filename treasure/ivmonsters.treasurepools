@@ -113,6 +113,21 @@
       ]
     }]
   ],
+  "irradiateddragonTreasure" : [
+    [0, {
+      "fill" : [ 
+		{"item" : ["ultimatiumore", 10]},
+		{"item" : ["radyiteore", 50]}
+      ],
+      "pool" : [
+        {"weight" : 1.0, "pool" : "empty"}
+      ],
+      "poolRounds" : [
+        [0.80, 0],
+        [0.20, 1]
+      ]
+    }]
+  ],
   "ruinseedTreasure" : [
     [1, {
       "fill" : [
@@ -238,8 +253,8 @@
   "darkabysselementalTreasure" : [
     [1, {
       "pool" : [
-        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.100, "item" : "umbralmatter"}
+        {"weight" : 0.550, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.450, "item" : "umbralmatter"}
       ],
       "poolRounds" : [
         [0.20, 0],
@@ -252,8 +267,8 @@
   "fireelementalTreasure" : [
     [1, {
       "pool" : [
-        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.100, "item" : "scorchedcore"}
+        {"weight" : 0.750, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.250, "item" : "scorchedcore"}
       ],
       "poolRounds" : [
         [0.20, 0],
@@ -266,8 +281,8 @@
   "electricelementalTreasure" : [
     [1, {
       "pool" : [
-        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.100, "item" : "staticcell"}
+        {"weight" : 0.750, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.250, "item" : "staticcell"}
       ],
       "poolRounds" : [
         [0.20, 0],
@@ -319,6 +334,57 @@
     [1, {
       "pool" : [
         {"weight" : 1.000, "item" : "umbralmatter"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+  "forgottenTreasureM" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "basicMonsterTreasure"},
+        {"weight" : 0.100, "item" : "rottengoop_es"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+  "forgottenTreasureM2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.900, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : "rottengoop_es"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+  "forgottenTreasureMH" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.500, "pool" : "alienmeat"},
+        {"weight" : 0.500, "item" : "rottengoop_es"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+  "forgottenTreasureMH2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1.000, "item" : "rottengoop_es"}
       ],
       "poolRounds" : [
         [0.20, 0],

@@ -1,0 +1,21 @@
+{
+  "name" : "sprint2_es",
+  "type" : "body",
+
+  "scripts" : ["sprint.lua"],
+  "animator" : "sprint2_es.animation",
+
+  "description" : "Sprinting at a much faster rate at the cost of more energy.",
+  "shortDescription" : "Overdrive Sprint",
+  "rarity" : "Legendary",
+  "icon" : "/tech/sprint2_es.png",
+
+  "chipCost" : 8,
+
+  "energyCostPerSecond" : 70,
+  "maximumDoubleTapTime" : 0.25,
+  "dashControlForce" : 1000,
+  "dashSpeedModifier" : 2.3,
+  "stopAfterDash" : true,
+  "groundOnly" : false
+}

@@ -16,5 +16,51 @@
       "poolRounds" : 1,
       "allowDuplication" : false
     }]
+  ],
+
+  "forgottentreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.5, "pool" : "basicTreasure"},
+        {"weight" : 0.15, "pool" : "healingItem"},
+        {"weight" : 0.05, "pool" : "weapon"},
+		{"weight" : 0.3, "pool" : "rottengoopMaterials"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
+  ],
+
+  "forgottentreasure2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.6, "pool" : "basicTreasure"},
+		{"weight" : 0.4, "pool" : "rottengoopMaterials"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
+  ],
+
+  "rottengoopMaterials" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.5, "item" : ["bacteriaore_es", 5]},
+        {"weight" : 0.25, "item" : ["holestone", 50]},
+        {"weight" : 0.20, "item" : ["rottenjelly", 25]},
+        {"weight" : 0.05, "item" : ["rottengoop_es", 7]}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
   ]
 }

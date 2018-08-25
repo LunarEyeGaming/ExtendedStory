@@ -98,8 +98,19 @@
   "primaryAbilityType" : "kluexshooter",
   "primaryAbility" : {"name" : "Laser Beam Shooter", "projectileType" : "delayedlaserbeam"},
 
-  "altAbilityType" : "kluexzone",
-  "altAbility" : {"name" : "Supernova", "projectileType" : "presupernovaspawner"},
+  "altAbilityType" : "kluexshooter",
+  "altAbility" : {
+    "name" : "Laser Portal",
+	"projectileType" : "ancientstaffportal",
+	"energyPerShot" : 100,
+	"projectileSpawnInterval" : 1000,
+
+    "maxCastRange" : 25,
+	"baseDamageFactor" : 1,
+    "projectileParameters" : {
+      "baseDamage" : 6
+    }
+  },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

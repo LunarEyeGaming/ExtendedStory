@@ -1,0 +1,16 @@
+{
+  "name" : "decayingair",
+  "blockingStat" : "decayingairImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "decayingair.lua"
+  ],
+
+  "animationConfig" : "decayingair.animation",
+
+  "label" : "Decaying Air - The foul air is extremely strong",
+  "icon" : "/interface/statuses/decayingair.png"
+}

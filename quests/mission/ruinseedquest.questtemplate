@@ -29,6 +29,11 @@
     "bossUid" : "ruinamalgamation",
 
     "brainMessageHeight" : 400,
+	"showTech" : [
+	  "quickblink",
+	  "jumpsphere",
+	  "multijump4_es"
+	],
 
     "warpAction" : "InstanceWorld:outpost",
 	"associatedMission" : "ruinseedmission"

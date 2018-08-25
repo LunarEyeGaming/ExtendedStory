@@ -1,5 +1,6 @@
 { "backgroundcolor":"#000000",
  "height":44,
+ "infinite":false,
  "layers":[
         {
          "compression":"zlib",
@@ -71,13 +72,11 @@
                  "name":"",
                  "properties":
                     {
-                     "monster":"ignome",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"ignomeVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
@@ -92,13 +91,11 @@
                  "name":"",
                  "properties":
                     {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
@@ -169,7 +166,7 @@
  "nextobjectid":904,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.0.3",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {

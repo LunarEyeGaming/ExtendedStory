@@ -2,7 +2,7 @@
   // ------- BOSSVAULT MESSAGES -------
   "isolatedvault01" : {
     "type" : "mission",
-    "text" : "Scans show that life on this planet thrived. For unknown reasons, this planet is now a barren, scorched wasteland."
+    "text" : "Scans show that life on this planet thrived. For unknown reasons, it is now a barren, scorched wasteland."
   },
   "isolatedvault02" : {
     "type" : "mission",
@@ -12,7 +12,7 @@
     "type" : "mission",
 	"senderName" : "Unknown",
 	"portraitImage" : "/interface/chatbubbles/quantumsentrystatic2.png:<frame>",
-    "text" : "^green;SOS signal received.\n\n^red;ERROR: TARGET BLACKLIST UNREADABLE! Using default target blacklist."
+    "text" : "^green;Signal receiver detected.\n\n^red;ERROR: TARGET BLACKLIST UNREADABLE! Using default target blacklist."
   },
   "isolatedvault04" : {
     "type" : "mission",
@@ -75,7 +75,7 @@
   "biomefreezing" : {
     "unique" : false,
 	"portraitImage" : "yell.<frame>",
-    "text" : "WARNING! TEMPERATURES ON THIS PLANET ARE NEAR ABSOLUTE ZERO!\nFurther exploration without the Ancient set will result in a quick death!",
+    "text" : "WARNING! TEMPERATURES ON THIS PLANET ARE NEAR ABSOLUTE ZERO!\nFurther exploration without an Ancient EPP will result in a quick death!",
 	"textSpeed" : 70
   },
   "biomeblaze" : {
@@ -96,6 +96,11 @@
     "text" : "WARNING! THE AIR ON THIS PLANET HAS EXTREMELY HIGH ELECTRICAL CURRENT!\nFurther exploration without an Ancient EPP will result in a quick death!",
 	"textSpeed" : 70
   },
+  "putridair" : {
+    "unique" : false,
+    "text" : "Please note that the air on this particular planet is causing you to rot. I recommend that you explore this planet with protection against this effect.",
+	"textSpeed" : 70
+  },
   "chaoticvoid" : {
     "unique" : false,
     "text" : "It's worth noting that this world is very chaotic and you are quickly becoming part of this chaotic void. Do not attempt further exploration without the ^red;dark matter EPP^reset;.",
@@ -104,6 +109,12 @@
   "spheredeactivater" : {
     "unique" : false,
     "text" : "It should be noted that you just entered an area where your ancient sphere has completely stopped working. Do not attempt to use the ancient sphere at this moment.",
+	"textSpeed" : 70
+  },
+  "destroyerspawn" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "^red;!WARNING!\nThere is an unknown and extremely destructive presence nearby. \nBe prepared for a hard fight.",
 	"textSpeed" : 70
   }
 }

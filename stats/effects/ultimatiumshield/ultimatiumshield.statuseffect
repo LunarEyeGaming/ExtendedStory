@@ -1,9 +1,9 @@
 {
   "name" : "ultimatiumshield",
   "effectConfig" : {
-    "shieldHealthMultiplier" : 0.5,
+    "shieldHealthMultiplier" : 0.8,
     "initialPercentage" : 1,
-    "expirationTime" : 3.0
+    "rechargeDelay" : 3.0
   },
   "defaultDuration" : 0.01,
 

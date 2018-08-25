@@ -197,6 +197,80 @@
   },
   {
     "op" : "add",
+    "path" : "/planetTypes/forgotten",
+    "value" : {
+      "threatRange" : [3, 3],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "forgotten" ],
+          "secondaryRegion" : [ ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundforgottenceiling"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["forgottenrough"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundforgotten"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundforgotten"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["coreforgotten"],
+		  "secondaryRegion" : []
+		}
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/supervoid",
+    "value" : {
+      "threatRange" : [10, 10],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "supervoidsurface" ],
+          "secondaryRegion" : [ ],
+
+          "dungeons" : [ ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundsupervoid"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["supervoidcore"],
+		  "secondaryRegion" : []
+		}
+      }
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/planetTypes/halloween",
     "value" : {
       "threatRange" : [1, 6],
@@ -298,6 +372,86 @@
         [0, [ "voltage" ]]
       ],
       "subRegion" : ["bones", "electricdesert", "tar", "supervoid", "livinglightning"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/supervoidsurface",
+    "value" : {
+      "caveLiquid" : [ "supervoid" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "supervoidsurface" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/forgotten",
+    "value" : {
+      "caveLiquid" : [ "rottenwater" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "forgotten" ]]
+      ],
+      "subRegion" : ["bones", "flesh"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundforgottenceiling",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/forgottenrough",
+    "value" : {
+      "caveLiquid" : [ "rottenwater" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "ledgesSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "forgottenrough" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundforgotten",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/coreforgotten",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+	  "oceanLiquid" : ["rottenwater"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
     }
   },
   {
@@ -408,6 +562,16 @@
   },
   {
     "op" : "add",
+    "path" : "/regionTypes/undergroundsupervoid",
+    "value" : {
+      "caveLiquid" : ["supervoid"],
+      "biome": [
+        [1,["undergroundsupervoid"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/regionTypes/coredarkabyss",
     "value" : {
       "caveLiquid" : ["liquidfabric"],
@@ -437,19 +601,19 @@
     }
   },
   {
-    "op": "add",
-    "path": "/regionTypes/garden/subRegion/-",
-    "value": "supervoid"
-  },
-  {
-    "op": "add",
-    "path": "/regionTypes/forest/subRegion/-",
-    "value": "supervoid"
-  },
-  {
-    "op": "add",
-    "path": "/regionTypes/desert/subRegion/-",
-    "value": "supervoid"
+    "op" : "add",
+    "path" : "/regionTypes/supervoidcore",
+    "value" : {
+      "caveLiquid" : ["supervoid"],
+	  "oceanLiquid" : ["supervoid"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["supervoidcore"]]
+      ]
+    }
   },
   {
     "op": "add",
@@ -494,13 +658,6 @@
   {
     "op": "add",
     "path": "/regionTypes/moon/subRegion",
-    "value": [
-      "supervoid"
-    ]
-  },
-  {
-    "op": "add",
-    "path": "/regionTypes/barren/subRegion",
     "value": [
       "supervoid"
     ]

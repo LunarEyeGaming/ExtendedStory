@@ -1,0 +1,60 @@
+{
+  "metadata" : {
+    "name" : "forgottenmicrodungeons",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "forgotten1", "forgotten2", "forgotten3", "forgotten4", "forgotten5", "forgotten6" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "forgotten1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten1.json" ]
+    },
+    {
+      "name" : "forgotten2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten2.json" ]
+    },
+    {
+      "name" : "forgotten3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten3.json" ]
+    },
+    {
+      "name" : "forgotten4",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten4.json" ]
+    },
+    {
+      "name" : "forgotten5",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten5.json" ]
+    },
+    {
+      "name" : "forgotten6",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "forgotten6.json" ]
+    }
+  ]
+}

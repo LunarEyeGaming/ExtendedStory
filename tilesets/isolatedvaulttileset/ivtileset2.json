@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":53,
+ "tilecount":58,
  "tileheight":82,
  "tileproperties":
     {
@@ -320,6 +320,30 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"supervoidbackground",
+         "tilesetDirection":"right"
+        },
+     "53":
+        {
+         "liquid":"supervoid",
+         "source":"true"
+        },
+     "54":
+        {
+         "material":"holestone"
+        },
+     "55":
+        {
+         "material":"rottendirt"
+        },
+     "56":
+        {
+         "material":"rottenjelly"
+        },
+     "57":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"forgottenchest",
          "tilesetDirection":"right"
         },
      "6":
@@ -675,6 +699,30 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "53":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "54":
+        {
+         "material":"string"
+        },
+     "55":
+        {
+         "material":"string"
+        },
+     "56":
+        {
+         "material":"string"
+        },
+     "57":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1008,7 +1056,39 @@
         },
      "52":
         {
-         "image":"c:\/Program Files (x86)\/Steam\/steamapps\/common\/Starbound\/tiled\/isolatedvault\/objects\/supervoidbackground.png"
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/supervoidbackground.png",
+         "imageheight":1,
+         "imagewidth":1
+        },
+     "53":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/supervoidliquid.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "54":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/holestone.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "55":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/rottendirt.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "56":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/rottenjelly.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "57":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/forgottenchest.png",
+         "imageheight":16,
+         "imagewidth":16
         },
      "6":
         {

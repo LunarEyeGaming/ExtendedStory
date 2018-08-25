@@ -14,15 +14,18 @@ function update(dt)
 	  attemptSpawnRan = false
 	end
 	if worldTimeRange == true and attemptSpawnRan == false then
-	  destroyerAttemptSpawn(50)
+	  if previousNumber == nil then
+	    previousNumber = 0
+	  end
+	  destroyerAttemptSpawn(20, previousNumber)
 	  attemptSpawnRan = true
 	end
   end
 end
 
-function destroyerAttemptSpawn(spawnChance)
+function destroyerAttemptSpawn(spawnChance, previousNumber)
   spawnSuccessChance = math.random(1, spawnChance)
-  if spawnSuccessChance == spawnChance and not world.type() == "unknown" then
+  if spawnSuccessChance == spawnChance and not (world.type() == "unknown" or world.isTileProtected(mcontroller.position())) then
     status.addEphemeralEffect("destroyerspawnstage1")
   end
 end

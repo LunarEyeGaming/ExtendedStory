@@ -115,7 +115,7 @@
       "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
     },
     "energyUsage" : 20,
-	"baseDps" : 20,
+	"baseDps" : 5,
 	"fireTime" : 0.5
   },
 

@@ -50,35 +50,19 @@
 	  "time" : 5.0,
 	  "repeat" : false,
 	  "action" : "projectile",
-	  "type" : "laserbeaminitial",
+	  "type" : "laserbeaminitial_es",
       "direction" : [0.0, 1.0],
       "inheritDamageFactor" : 1,
-      "inheritSpeedFactor" : 0,
-      "actionOnReap" : [
-        {
-          "action" : "projectile",
-          "type" : "laserbeam",
-          "inheritDamageFactor" : 1,
-          "inheritSpeedFactor" : 0
-        }
-      ]
+      "inheritSpeedFactor" : 0
 	},
 	{
 	  "time" : 5.0,
 	  "repeat" : false,
 	  "action" : "projectile",
-	  "type" : "laserbeaminitial",
+	  "type" : "laserbeaminitial_es",
       "direction" : [0.0, -1.0],
       "inheritDamageFactor" : 1,
-      "inheritSpeedFactor" : 0,
-      "actionOnReap" : [
-        {
-          "action" : "projectile",
-          "type" : "laserbeam",
-          "inheritDamageFactor" : 1,
-          "inheritSpeedFactor" : 0
-        }
-      ]
+      "inheritSpeedFactor" : 0
 	},
 	{
 	  "time" : 5.0,

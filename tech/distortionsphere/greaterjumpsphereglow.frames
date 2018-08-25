@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [19, 19],
+    "dimensions" : [8, 3],
+	"names" : [
+	  ["normal.0", "normal.1", "normal.2", "normal.3"],
+	  ["spike.0", "spike.1", "spike.2", "spike.3"],
+	  ["blink.1", "blink.2", "blink.3", "blink.4", "blink.5", "blink.6", "blink.7", "blink.8"]
+	]
+  },
+
+  "aliases" : {
+    "default" : "normal.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "liquidhealing", "count" : 25 },
+    { "item" : "syringe", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "antirotstim",
+    "count" : 1
+  },
+  "groups" : [ "craftingmedical", "buffs" ]
+}

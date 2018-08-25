@@ -1,0 +1,19 @@
+{
+  "itemName" : "antirotstim",
+  "rarity" : "Uncommon",
+  "price" : 100,
+  "category" : "medicine",
+  "inventoryIcon" : "antirotstim.png",
+  "description" : "A stimpack full of healing water, prevents the player from rotting.",
+  "shortdescription" : "Anti-Rot Stim Pack",
+  "effects" : [ [
+      {
+        "effect" : "antirotstim"
+      }
+    ] ],
+  "emote" : "",
+  "emitters" : [ "stimuse" ],
+  "blockingEffects" : [
+    "antirotstim"
+  ]
+}

@@ -11,7 +11,11 @@
       "type" : "acidsweepmineactive",
 	  "angle" : 0,
 	  "offsetRange" : [ 1, 0.1, -1, 0.1 ]
-    }
+    },
+	{
+	  "action": "sound",
+	  "options": ["/sfx/projectiles/acid_hit.ogg"]
+	}
   ],
   "power" : 20.0,
   "damageKind" : "megadamageacid",

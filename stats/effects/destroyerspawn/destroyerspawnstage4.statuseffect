@@ -11,7 +11,7 @@
     "energyCost" : 2.5,
     "healthDamage" : 5
   },
-  "defaultDuration" : 150,
+  "defaultDuration" : 30,
 
   "scripts" : [
     "destroyerspawnstage4.lua"
@@ -19,6 +19,6 @@
 
   "animationConfig" : "destroyerspawnstage4.animation",
 
-  "label" : "Your doom is approaching...",
+  "label" : "Your doom is approaching....",
   "icon" : "/interface/statuses/doomed.png"
 }

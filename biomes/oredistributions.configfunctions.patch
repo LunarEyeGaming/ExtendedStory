@@ -986,7 +986,7 @@
     "op": "add",
     "path": "/radyite",
     "value": [
-      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "uranium", 0.25 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.8 ] ] ]
+      [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "uranium", 0.25 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "radyiteore", 0.5 ] ] ]
     ]
   },
   {
@@ -1008,6 +1008,27 @@
     "path": "/voltagen2",
     "value": [
       [4.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "voltagenore", 0.8 ] ] ]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/supervoid",
+    "value": [
+      [4.5, [ [ "coal", 0 ], [ "copper", 0 ], [ "darkmatterore", 1.5 ], [ "silver", 0 ], [ "gold", 0 ], [ "diamond", 0 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0 ], [ "ferozium", 0 ], [ "violium", 0 ], [ "solarium", 0 ] ] ]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/forgotten",
+    "value": [
+      [2.5, [ [ "coal", 0.8 ], [ "copper", 0.5 ], [ "darkmatterore", 0.3 ], [ "silver", 0.5 ], [ "gold", 0.5 ], [ "diamond", 0 ], [ "corefragment", 0 ], [ "iron", 0.5 ], [ "tungsten", 0 ], [ "titanium", 0.5 ], [ "durasteel", 0 ], [ "aegisalt", 0 ], [ "ferozium", 0 ], [ "violium", 0 ], [ "solarium", 0 ], [ "bacteriaore", 0.5 ] ] ]
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/forgotten2",
+    "value": [
+      [2.5, [ [ "coal", 1 ], [ "copper", 0.8 ], [ "darkmatterore", 0.5 ], [ "silver", 0.8 ], [ "gold", 0.8 ], [ "diamond", 0.1 ], [ "corefragment", 0 ], [ "iron", 0.5 ], [ "tungsten", 0 ], [ "titanium", 0.5 ], [ "durasteel", 0 ], [ "aegisalt", 0 ], [ "ferozium", 0 ], [ "violium", 0 ], [ "solarium", 0 ], [ "bacteriaore", 0.8 ] ] ]
     ]
   }
 ]

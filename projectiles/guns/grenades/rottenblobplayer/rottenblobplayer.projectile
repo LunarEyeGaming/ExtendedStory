@@ -1,0 +1,24 @@
+{
+  "projectileName" : "rottenblobplayer",
+  "image" : "rottenblobplayer.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "physics" : "arrow",
+  "timeToLive" : 10,
+  "bounces" : -1,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    }
+  ],
+  "actionOnCollide" : [
+    {
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/tar_hit_organic1.ogg", "/sfx/projectiles/tar_hit_organic2.ogg", "/sfx/projectiles/tar_hit_organic3.ogg", "/sfx/projectiles/tar_hit_organic4.ogg", "/sfx/projectiles/tar_hit_organic5.ogg" ]
+	}
+  ],
+  "power" : 12,
+  "speed" : 45,
+  "damageType" : "nodamage"
+}

@@ -55,7 +55,7 @@
     "queryTargetDistance" : 50.0,
     "switchTargetDistance" : 10.0,
     "keepTargetInSight" : true,
-    "keepTargetInRange" : 100,
+    "keepTargetInRange" : 70,
     "targetOutOfSightTime" : 0.1,
 
     "cruiseDistance" : 25,
@@ -148,6 +148,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

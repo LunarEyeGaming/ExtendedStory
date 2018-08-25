@@ -87,15 +87,35 @@
                       "position": "preslamPos"
                     }
                   },
-                  {
-                    "title": "flyToPosition",
-                    "type": "action",
-                    "name": "flyToPosition",
-                    "parameters": {
-                      "position": {"key": "preslamPos"},
-                      "speed": {"value": 50}
-                    }
-                  },
+		          {
+		            "title": "parallel",
+		            "type": "composite",
+		            "name": "parallel",
+		            "parameters": {
+		              "fail": {"value": -1},
+		          	"success": {"value": 1}
+		            },
+		            "children": [
+		              {
+		          	    "title": "timer",
+		          	    "type": "action",
+		          	    "name": "timer",
+		          	    "parameters": {
+		          	      "time": {"value": 2}
+		          	    }
+		          	  },
+		          	  {
+                  	    "title": "flyToPosition",
+                  	    "type": "action",
+                  	    "name": "flyToPosition",
+                  	    "parameters": {
+                  	      "position": {"key": "preslamPos"},
+		          		  "speed": {"value": 20},
+                  	      "tolerance": {"value": 1}
+                  	    }
+                  	  }
+		            ]
+		          },
                   {
                     "title": "setVelocity",
                     "type": "action",

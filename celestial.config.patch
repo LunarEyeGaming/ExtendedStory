@@ -60,6 +60,27 @@
   },
   {
     "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/forgotten",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/forgotten_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialHorizonGraphics/supervoid",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/horizon/textures/supervoid_<selector>.png",
+	  "liquidImages" : "/celestial/system/terrestrial/horizon/liquids/supervoid_<selector>.png",
+	  "maskTextures" : "/celestial/system/terrestrial/horizon/masks/temperate/<mask>_<selector>.png",
+	  "maskRange" : [1, 25],
+      "maskPerPlanetRange" : [3, 3]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/terrestrialGraphics/darkabyss",
     "value" : {
       "baseImages" : "/celestial/system/terrestrial/biomes/midnight/maskie<num>.png",
@@ -97,6 +118,16 @@
   },
   {
     "op" : "add",
+    "path" : "/terrestrialGraphics/supervoid",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/supervoid/maskie<num>.png",
+	  "liquidImages" : "/celestial/system/terrestrial/liquids/supervoid.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/terrestrialGraphics/halloween",
     "value" : {
       "baseImages" : "/celestial/system/terrestrial/biomes/halloween/maskie<num>.png",
@@ -110,6 +141,15 @@
     "value" : {
       "baseImages" : "/celestial/system/terrestrial/biomes/voltage/maskie<num>.png",
 	  "liquidImages" : "/celestial/system/terrestrial/liquids/electric.png",
+      "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
+      "dynamicsRange" : [1, 50]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/terrestrialGraphics/forgotten",
+    "value" : {
+      "baseImages" : "/celestial/system/terrestrial/biomes/forgotten/maskie<num>.png",
       "dynamicsImages" : "/celestial/system/terrestrial/dynamics/arid/<num>.png",
       "dynamicsRange" : [1, 50]
     }
@@ -138,6 +178,16 @@
     "op" : "add",
     "path" : "/planetaryTypes/Tier6/baseParameters/terrestrialType/-",
     "value" : "voltage"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "supervoid"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetaryTypes/Tier3/baseParameters/terrestrialType/-",
+    "value" : "forgotten"
   },
   {
     "op" : "add",
@@ -173,5 +223,15 @@
     "op" : "add",
     "path" : "/satelliteTypes/Tier6/baseParameters/terrestrialType/-",
     "value" : "halloween"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier6/baseParameters/terrestrialType/-",
+    "value" : "supervoid"
+  },
+  {
+    "op" : "add",
+    "path" : "/satelliteTypes/Tier3/baseParameters/terrestrialType/-",
+    "value" : "forgotten"
   }
 ]

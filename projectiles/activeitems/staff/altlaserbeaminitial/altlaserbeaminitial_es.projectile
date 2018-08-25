@@ -4,6 +4,7 @@
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
   "frameNumber" : 1,
   "power" : 5,
+  "piercing" : true,
   "actionOnReap" : [
     {
       "action" : "projectile",

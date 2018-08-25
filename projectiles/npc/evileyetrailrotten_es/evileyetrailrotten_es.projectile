@@ -1,0 +1,20 @@
+{
+  "projectileName" : "evileyetrailrotten_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 1.5,
+  "image" : "evileyetrailrotten_es.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "evileyetrailrottenwindup_es"
+	}
+  ],
+  "power" : 20,
+  "damageKind" : "poison"
+}

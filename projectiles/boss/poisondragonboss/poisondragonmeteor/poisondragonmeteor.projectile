@@ -1,0 +1,54 @@
+{
+  "projectileName" : "poisondragonmeteor",
+  "image" : "poisondragonmeteor.png",
+  "animationCycle" : 1,
+  "physics" : "grenadezbomb",
+  "movementSettings" : {
+    "collisionPoly" : [ [-1.5, 0], [-1, -1], [0, -1.5], [1, -1], [1.5, 0], [1, 1], [0, 1.5], [-1, 1] ]
+  },
+  "damagePoly" : [ [-27, 0], [-18, -18], [0, -27], [18, -18], [27, 0], [18, 18], [0, 27], [-18, 18] ],
+  "frameNumber" : 1,
+  "renderLayer" : "Monster+10",
+  "speed" : 50,
+  "timeToLive" : 5,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/mediumflamepoison/mediumflamepoison.animation",
+		"size" : 2,
+		"position" : [0, 0],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 0],
+		"light" : [99, 127, 99],
+		"timeToLive" : 1,
+		"fullbright" : true,
+		"layer" : "back",
+		"variance" : {
+		  "initialVelocity" : [10, 10]
+		}
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/poisonexplosionlarge/poisonexplosionlarge.config"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 8,
+      "backgroundRadius" : 0,
+      "explosiveDamageAmount" : 100,
+      "delaySteps" : 2
+    }
+  ],
+  "power" : 10.0,
+  "damageKind" : "default",
+
+  "persistentAudio" : "/sfx/projectiles/dragonprojectile_loop.ogg"
+}
+
+

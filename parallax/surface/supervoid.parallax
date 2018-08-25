@@ -1,0 +1,168 @@
+{
+  "verticalOrigin" : -15,
+
+  "layers" : [
+    {
+      "kind" : "divider/supervoid",
+      "offset" : [0, 475],
+      "nohueshift" : true,
+      "parallax" : 1.07,
+	  "unlit" : true
+    },
+    {
+      "kind" : "tile/supervoid",
+      "nohueshift" : true,
+      "repeatY" : true,
+      "tileLimitTop" : 375,
+      "parallax" : 1.075,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground",
+      "offset" : [0, 380],
+      "parallax" : 1.08,
+      "nohueshift" : true,
+      "noRandomOffset" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground",
+      "offset" : [0, 280],
+      "parallax" : 1.09,
+      "nohueshift" : true,
+      "noRandomOffset" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground2",
+      "offset" : [0, 275],
+      "parallax" : 1.2,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoid",
+      "offset" : [0, 115],
+      "parallax" : 1.3,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground3",
+      "offset" : [0, 280],
+      "parallax" : 1.4,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground",
+      "offset" : [0, 285],
+      "parallax" : 1.9,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground",
+      "offset" : [0, 290],
+      "parallax" : 2.5,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoid2",
+      "offset" : [0, 295],
+      "parallax" : 3,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidforeground",
+      "offset" : [0, 300],
+      "parallax" : 3.5,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidhills",
+      "offset" : [0, 265],
+      "parallax" : 5,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidhills",
+      "offset" : [0, 265],
+      "parallax" : 7,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoidhills",
+      "offset" : [0, 250],
+      "parallax" : 3,
+      "noRandomOffset" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyes",
+      "offset" : [0, 250],
+      "parallax" : 1.1,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyes",
+      "offset" : [0, 250],
+      "parallax" : 2.7,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyes",
+      "offset" : [0, 250],
+      "parallax" : 6.7,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyes",
+      "offset" : [0, 250],
+      "parallax" : 8.6,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyes",
+      "offset" : [0, 250],
+      "parallax" : 11,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "supervoideyelarge",
+      "parallax" : 9998,
+	  "offset" : [512, 256],
+      "noRandomOffset" : true,
+      "repeatY" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "hellodarknessmyoldfriend",
+      "parallax" : 9999,
+      "repeatY" : true,
+      "noRandomOffset" : true,
+      "nohueshift" : true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "chargedstone", "count" : 5 }
+  ],
+  "output" : {
+    "item" : "chargedbrick",
+    "count" : 20
+  },
+  "duration" : 0.5,
+  "groups"  : [ "craftingfurniture2", "materials", "all" ]
+}

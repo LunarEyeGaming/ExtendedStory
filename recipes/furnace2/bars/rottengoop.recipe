@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "bacteriaore_es", "count" : 2 },
+	{ "item" : "rottenjelly", "count" : 15 },
+	{ "item" : "holestone", "count" : 25 },
+	{ "item" : "rottenwater", "count" : 25 }
+  ],
+  "duration" : 0.15,
+  "output" : { "item" : "rottengoop_es", "count" : 1 },
+  "groups" : [ "craftingfurnace2", "bars", "all" ]
+}

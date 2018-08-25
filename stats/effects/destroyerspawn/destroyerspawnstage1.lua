@@ -1,4 +1,5 @@
 function init()
+  world.sendEntityMessage(entity.id(), "queueRadioMessage", "destroyerspawn")
   animator.setParticleEmitterActive("sparks", true)
 
   effect.setParentDirectives(config.getParameter("directives", ""))

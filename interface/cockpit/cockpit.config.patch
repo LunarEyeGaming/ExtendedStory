@@ -12,9 +12,9 @@
     "op" : "add",
 	"path" : "/visitableTypeDescription/eternalfire",
     "value" : [
-    "This ^#c96c28;burning^white; planet has ^red;burning air^white; and is essentially hell. Not a good place to spend your vacation time.",
-    "The surface of this planet is eternally ^#c96c28;burning^white;, and the ^red;air is also burning^white;. I would recommend some kind of protection against it.",
-    "This ^#c96c28;burning^white; planet makes home to many fire elementals, due to the ^red;burning air^white;. I would advise being very careful."
+    "This ^#c96c28;infernal^white; world has ^red;burning air^white; and is essentially hell. Not a good place to spend your vacation time.",
+    "The surface of this planet is a ^#c96c28;raging inferno^white;, and the ^red;air is also burning^white;. I would recommend some kind of protection against it.",
+    "This ^#c96c28;burning^white; planet makes home to rare magma monsters, due to the ^red;burning air^white;. I would advise being very careful."
 	]
   },
   {
@@ -55,13 +55,31 @@
   },
   {
     "op" : "add",
+	"path" : "/visitableTypeDescription/supervoid",
+    "value" : [
+    "Scans of the surface have failed. This is known as a ^#a8009e;Supervoid^reset; world, as shown by its purple and black surface. It is ^red;extremely dangerous^reset;.",
+    "An ^red;extremely dangerous^reset; ^#a8009e;Supervoid^reset; world. Explore the surface with caution.",
+    "Something is blocking our scanners. However, it is clear by its purple and black surface that this is a ^#a8009e;Supervoid^reset; world. It is ^red;extremely dangerous^reset;."
+	]
+  },
+  {
+    "op" : "add",
+	"path" : "/visitableTypeDescription/forgotten",
+    "value" : [
+    "Known as a ^#665429;forgotten^reset; world, this planet is rotting away due to an alien bacteria. ^red;Putrid air^reset; fills the atmosphere.",
+    "Scans show massive holes and rotten substances. This is a ^#665429;forgotten^reset; planet. Its ^red;putrid air^reset; and horrific lifeforms deter explorers.",
+    "Judging by the visibly large holes on the planet, this world has been ^#665429;forgotten^reset;. An alien bacteria makes the air ^red;putrid^reset; and the world uninhabitable."
+	]
+  },
+  {
+    "op" : "add",
     "path" : "/planetTypeNames/darkabyss",
     "value" : "Dark Abyss"
   },
   {
     "op" : "add",
     "path" : "/planetTypeNames/eternalfire",
-    "value" : "Eternally Burning"
+    "value" : "Raging Inferno"
   },
   {
     "op" : "add",
@@ -82,6 +100,16 @@
     "op" : "add",
     "path" : "/planetTypeNames/voltage",
     "value" : "Voltage"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/supervoid",
+    "value" : "Supervoid"
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypeNames/forgotten",
+    "value" : "Forgotten"
   },
   {
     "op": "add",
@@ -112,6 +140,16 @@
     "op": "add",
     "path": "/planetTypeColors/voltage",
     "value" : [160, 131, 223]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/supervoid",
+    "value" : [168, 0, 158]
+  },
+  {
+    "op": "add",
+    "path": "/planetTypeColors/forgotten",
+    "value" : [102, 84, 41]
   },
   {
     "op" : "add",
@@ -171,6 +209,14 @@
   },
   {
     "op" : "add",
+    "path" : "/displayOres/bacteriaore",
+    "value" : {
+      "displayName" : "Bacteria Ore",
+      "icon" : "/items/generic/crafting/bacteriaore.png"
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/displayWeathers/fireshower",
     "value" : {
       "displayName" : "Magma Meteors",
@@ -223,6 +269,46 @@
     "value" : {
       "displayName" : "Lightning Storm",
       "icon" : "/interface/cockpit/weather/thunderstorm_es.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/worldrot",
+    "value" : {
+      "displayName" : "World Rot",
+      "icon" : "/interface/cockpit/weather/worldrot.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/rottenrain",
+    "value" : {
+      "displayName" : "Rotten Rain",
+      "icon" : "/interface/cockpit/weather/rottenrain.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/sinkhole",
+    "value" : {
+      "displayName" : "Sinkholes",
+      "icon" : "/interface/cockpit/weather/sinkhole.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/rottenrainlight",
+    "value" : {
+      "displayName" : "Mild Rotten Rain",
+      "icon" : "/interface/cockpit/weather/rottenrainlight.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayWeathers/decayingair",
+    "value" : {
+      "displayName" : "Decaying Air",
+      "icon" : "/interface/cockpit/weather/decayingair.png"
     }
   }
 ]

@@ -15,10 +15,22 @@
   "renderLayer" : "Monster+50",
   "periodicActions" : [
     {
-      "time" : 0.3,
+      "time" : 2,
       "action" : "projectile",
-      "type" : "fg_icicletargeting",
-	  "direction" : [0, -1]
+      "type" : "orbitalup",
+	  "config" : {
+	    "timeToLive" : 1,
+		"speed" : 0,
+		"periodicActions" : [
+		  {
+		    "time" : 0.1,
+			"action" : "projectile",
+			"type" : "fg_icicletargeting",
+			"direction" : [0, -1]
+		  }
+		],
+		"actionOnReap" : []
+	  }
     }
   ]
 }
