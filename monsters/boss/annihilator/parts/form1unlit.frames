@@ -1,0 +1,27 @@
+{
+  "frameGrid" : {
+    "size" : [105, 105],
+    "dimensions" : [10, 10],
+    "names" : [
+	  [ "uninit", "init.1", "init.2", "init.3", "init.4", "init.5", "init.6", "init.7", "init.8", "init.9" ],
+	  [ "init.10", "init.11", "init.12", "init.13", "init.14", "init.15", "init.16", "init.17", "init.18" ],
+	  [ "wu.1", "wu.2", "wu.3", "wu.4", "wu.5", "wu.6", "wu.7" ],
+	  [ "sl" ],
+	  [ "ca" ],
+	  [ "sbl" ],
+	  [ "las" ],
+	  [ "drns", "drns.f.1", "drns.f.2", "drns.f.3", "drns.f.4" ],
+	  [ "rckts", "rckts.f.1", "rckts.f.2", "rckts.f.3", "rckts.f.4", "rckts.f.5", "rckts.f.6", "rckts.f.7", "rckts.f.8", "rckts.f.9" ],
+	  [ "rckts.f.10", "rckts.f.11", "rckts.f.12", "rckts.f.13", "rckts.f.14", "rckts.f.15", "rckts.f.16", "rckts.f.17", "rckts.f.18" ]
+    ]
+  },
+  "aliases" : {
+    "drns.wd.1" : "drns.f.4",
+    "drns.wd.2" : "drns.f.3",
+    "drns.wd.3" : "drns.f.2",
+    "drns.wd.4" : "drns.f.1",
+	
+	"static.1" : "wu.6",
+	"static.2" : "wu.7"
+  }
+}

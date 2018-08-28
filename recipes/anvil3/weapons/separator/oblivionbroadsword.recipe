@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "obliviumskull", "count" : 10 },
+	{ "item" : "refinedviolium", "count" : 20 },
+	{ "item" : "solariumstar", "count" : 15 }
+  ],
+  "output" : { "item" : "oblivionbroadsword", "count" : 1 },
+  "groups" : [ "craftingseparator", "weapons", "all" ]
+}

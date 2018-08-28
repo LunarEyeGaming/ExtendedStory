@@ -1,0 +1,16 @@
+{
+  "name" : "oblivioneffect_es",
+  "blockingStat" : "abysseffectImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5.0,
+
+  "scripts" : [
+    "oblivioneffect_es.lua"
+  ],
+
+  "animationConfig" : "oblivioneffect_es.animation",
+
+  "label" : "Annihilated - You're going to die.",
+  "icon" : "/interface/statuses/chaoticvoid.png"
+}
