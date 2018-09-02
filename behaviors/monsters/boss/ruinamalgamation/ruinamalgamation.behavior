@@ -42,7 +42,7 @@
             "name": "monster-targeting",
             "parameters": {
               "targetQueryRange": {"value": 80},
-              "keepTargetInRange": {"value": 100},
+              "keepTargetInRange": {"value": 200},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},

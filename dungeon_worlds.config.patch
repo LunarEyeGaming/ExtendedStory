@@ -161,7 +161,7 @@
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
-      "musicTrack" : "/music/killers-by-kevinmacleod.ogg",
+      "musicTrack" : "/music/silence.ogg",
       "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
@@ -195,6 +195,21 @@
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/drosera.ogg",
       "biome": "garden",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/annihilatormission",
+    "value" : {
+      "primaryDungeon" : "annihilatormission",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/silence.ogg",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   }

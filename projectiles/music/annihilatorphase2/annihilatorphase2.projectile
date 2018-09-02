@@ -1,0 +1,35 @@
+{
+  "projectileName" : "annihilatorphase2",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+
+  "onlyHitTerrain" : true,
+  "damagePoly" : [],
+  "damageKind" : "plasma",
+
+  "speed" : 0,
+  "timeToLive" : 1.5,
+  "scripts" : [ "annihilatorphase2.lua" ],
+  "scriptDelta" : 1,
+  "musicType" : "bossmusicdestroyer",
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  },
+
+  "controlRotation" : {
+    "maxSpeed" : 32,
+    "controlForce" : 70,
+    "friction" : 10
+  }
+}

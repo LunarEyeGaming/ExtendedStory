@@ -1,0 +1,379 @@
+{
+  "name": "annihilator-cannonattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "projOffset": [6, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "static"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "obliteratorcannon"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.6}
+        }
+      },
+	  {
+	    "title": "randomize",
+		"type": "composite",
+		"name": "randomize",
+		"parameters": {},
+		"children": [
+		  {
+		    "title": "loadUniqueEntity",
+			"type": "action",
+			"name": "loadUniqueEntity",
+			"parameters": {
+			  "uniqueId": {"value": "cannonpos1"}
+			},
+			"output": {
+			  "entity": "chosenPos"
+			}
+		  },
+		  {
+		    "title": "loadUniqueEntity",
+			"type": "action",
+			"name": "loadUniqueEntity",
+			"parameters": {
+			  "uniqueId": {"value": "cannonpos2"}
+			},
+			"output": {
+			  "entity": "chosenPos"
+			}
+		  },
+		  {
+		    "title": "loadUniqueEntity",
+			"type": "action",
+			"name": "loadUniqueEntity",
+			"parameters": {
+			  "uniqueId": {"value": "cannonpos3"}
+			},
+			"output": {
+			  "entity": "chosenPos"
+			}
+		  },
+		  {
+		    "title": "loadUniqueEntity",
+			"type": "action",
+			"name": "loadUniqueEntity",
+			"parameters": {
+			  "uniqueId": {"value": "cannonpos4"}
+			},
+			"output": {
+			  "entity": "chosenPos"
+			}
+		  }
+		]
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "chosenPos"}
+		},
+		"output": {
+		  "position": "flyAway"
+		}
+	  },
+	  {
+	    "title": "distance",
+		"type": "action",
+		"name": "distance",
+		"parameters": {
+		  "from": {"key": "self"},
+		  "to": {"key": "flyAway"}
+		},
+		"output": {
+		  "vector": "flightSpeed"
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+	      "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+		    "type": "decorator",
+		    "name": "repeater",
+		    "parameters": {
+		      "maxLoops": {"value": -1}
+		    },
+		    "child": {
+		      "title": "sequence",
+		      "type": "composite",
+		      "name": "sequence",
+		      "parameters": {},
+		      "children": [
+		        {
+		          "title": "setVelocity",
+		          "type": "action",
+		          "name": "setVelocity",
+		          "parameters": {
+		            "velocity": {"key": "flightSpeed"}
+		          }
+		        },
+		        {
+		          "title": "timer",
+		          "type": "action",
+		          "name": "timer",
+		          "parameters": {
+		            "time": {"value": 0.01}
+		          }
+		        }
+		      ]
+		    }
+		  },
+		  {
+		    "title": "timer",
+		    "type": "action",
+		    "name": "timer",
+		    "parameters": {
+		      "time": {"value": 1.0}
+		    }
+		  }
+		]
+	  },
+	  {
+		"title": "setVelocity",
+		"type": "action",
+		"name": "setVelocity",
+	    "parameters": {
+		  "velocity": {"value": [0, 0]}
+	    }
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "windup"},
+          "type": {"value": "cannon"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+    	            "entity": {"key": "self"},
+    	            "offset": {"value": [0, 0]},
+			        "target": {"key": "target"}
+			      },
+			      "output": {
+			        "vector": "aimVector"
+			      }
+        	    },
+                {
+                  "title": "vecAngle",
+                  "type": "action",
+                  "name": "vecAngle",
+                  "parameters": {
+                    "vector": {"key": "aimVector"}
+                  },
+                  "output": {
+                    "angle": "targetAngleBase"
+                  }
+                },
+				{
+    	          "title": "rotateTransformationGroup",
+    	          "type": "action",
+    	          "name": "rotateTransformationGroup",
+    	          "parameters": {
+				    "angle": {"key": "targetAngleBase"},
+					"transformationGroup": {"value": "gun"}
+				  }
+    	        },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				},
+				{
+				  "title": "resetTransformationGroup",
+				  "type": "action",
+				  "name": "resetTransformationGroup",
+				  "parameters": {
+				    "transformationGroup": {"value": "gun"}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 2}
+            }
+          }
+		]
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+	  {
+        "title": "vecRotate",
+        "type": "action",
+        "name": "vecRotate",
+        "parameters": {
+          "angle": {"key": "targetAngleBase"},
+          "vector": {"key": "<projOffset>"}
+        },
+        "output": {
+          "vector": "fireOffset"
+        }
+      },
+      {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"key": "aimVector"},
+          "offset": {"key": "fireOffset"},
+          "position": {"key": "self"},
+          "projectileConfig": {"value": {"processing": "?scale=2"}},
+          "projectileType": {"value": "cannonshot_annihilator"},
+          "scalePower": {"value": true},
+          "sourceEntity": {"key": "self"},
+          "trackSource": {"value": false}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "fire"},
+          "type": {"value": "cannon"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.6}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "winddown"},
+          "type": {"value": "cannon"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.6}
+        }
+      },
+	  {
+    	"title": "resetTransformationGroup",
+    	"type": "action",
+    	"name": "resetTransformationGroup",
+    	"parameters": {
+		  "transformationGroup": {"value": "gun"}
+		}
+      }
+    ]
+  }
+}

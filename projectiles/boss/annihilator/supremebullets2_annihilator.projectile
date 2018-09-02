@@ -1,0 +1,66 @@
+{
+  "projectileName" : "supremebullets2_annihilator",
+  "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png",
+  "physics" : "hover",
+  "lightColor" : [150, 100, 100],
+  "animationCycle" : 0.3,
+  "frameNumber" : 8,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "supremebullets3_annihilator",
+	  "angleAdjust" : 135,
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 50,
+		"processing" : "?scale=2"
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "supremebullets3_annihilator",
+	  "angleAdjust" : 225,
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 50,
+		"processing" : "?scale=2"
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "supremebullets3_annihilator",
+	  "angleAdjust" : 315,
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 50,
+		"processing" : "?scale=2"
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "supremebullets3_annihilator",
+	  "angleAdjust" : 45,
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 50,
+		"processing" : "?scale=2"
+	  }
+	}
+  ]
+}

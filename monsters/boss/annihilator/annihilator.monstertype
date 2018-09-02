@@ -2,7 +2,7 @@
   "type" : "annihilator",
   "shortdescription" : "The Annihilator",
   "categories" : [ "annihilator" ],
-  "parts" : [ "body" ],
+  "parts" : [ "body", "cannon", "laserbeam", "slicer" ],
 
   "animation" : "annihilator.animation",
   "dropPools" : [
@@ -42,6 +42,48 @@
 
     "metaBoundBox" : [-50, -50, 50, 50],
     "scale" : 1.0,
+	"damageParts" : {
+	  "beam1" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam2" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam3" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam4" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      }
+	},
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -70,7 +112,8 @@
 
     "statusSettings" : {
       "statusProperties" : {
-        "targetMaterialKind" : "stone"
+        "targetMaterialKind" : "robotic",
+        "damageFlashColor" : "ff0000=0"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -93,7 +136,7 @@
           "baseValue" : 2000
         },
         "protection" : {
-          "baseValue" : 0
+          "baseValue" : 60
         },
         "healthRegen" : {
           "baseValue" : 0.0

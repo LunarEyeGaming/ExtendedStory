@@ -1,0 +1,138 @@
+{
+  "name": "annihilator-dronesattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "projOffset": [6, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "static"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "drones"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "dronesfire"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 6}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [0, 0]},
+    		    "offset": {"value": [0, 3]},
+    		    "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "spawnmonster", "type": "annihilatordroneminion", "level": 10}]}},
+    		    "projectileType": {"value": "orbitalup"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.25}
+      		  }
+      		},
+			{
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [0, 0]},
+    		    "offset": {"value": [0, -3]},
+    		    "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "spawnmonster", "type": "annihilatordroneminion", "level": 10}, {"action": "sound", "options": ["/sfx/npc/boss/cultistboss_sphere_transform.ogg"]}]}},
+    		    "projectileType": {"value": "orbitalup"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.25}
+      		  }
+      		}
+		  ]
+		}
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "projectileName" : "regionalsingularitywindup_annihilator",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 80,
+  "speed" : 0,
+  "timeToLive" : 0.01,
+  "bounces" : 0,
+  "fullbright" : true,
+  "onlyHitTerrain" : true,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/annihilator/phase2/regionalsingularity_annihilator/regionalsingularity_annihilator.png?setcolor=ff0000",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "regionalsingularity_annihilator",
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "sound",
+	  "options" : ["/sfx/melee/astraltear1.ogg"]
+	}
+  ]
+}

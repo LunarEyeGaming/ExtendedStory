@@ -5,7 +5,7 @@
     "names" : [
 	  [ "uninit", "init.1", "init.2", "init.3", "init.4", "init.5", "init.6", "init.7", "init.8", "init.9" ],
 	  [ "init.10", "init.11", "init.12", "init.13", "init.14", "init.15", "init.16", "init.17", "init.18" ],
-	  [ "wu.1", "wu.2", "wu.3", "wu.4", "wu.5", "wu.6", "wu.7" ],
+	  [ "idle", "wu.1", "wu.2", "wu.3", "wu.4", "wu.5", "wu.6" ],
 	  [ "sl" ],
 	  [ "ca" ],
 	  [ "sbl" ],
@@ -16,12 +16,11 @@
     ]
   },
   "aliases" : {
-    "drns.wd.1" : "drns.f.4",
-    "drns.wd.2" : "drns.f.3",
-    "drns.wd.3" : "drns.f.2",
-    "drns.wd.4" : "drns.f.1",
+    "drns.wd.1" : "drns.f.3",
+    "drns.wd.2" : "drns.f.2",
+    "drns.wd.3" : "drns.f.1",
 	
-	"static.1" : "wu.6",
-	"static.2" : "wu.7"
+	"static.1" : "wu.5",
+	"static.2" : "wu.6"
   }
 }

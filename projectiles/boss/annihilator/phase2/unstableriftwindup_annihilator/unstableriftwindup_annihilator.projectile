@@ -1,0 +1,19 @@
+{
+  "projectileName" : "unstableriftwindup_annihilator",
+  "image" : "unstableriftwindup.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.01,
+  "bounces" : 0,
+  "fullbright" : true,
+  "onlyHitTerrain" : true,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [],
+  "actionOnReap" : [
+  ]
+}

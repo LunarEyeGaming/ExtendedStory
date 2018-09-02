@@ -1,0 +1,31 @@
+{
+  "name": "annihilator-anomalousgapsrepeater",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "chargeVelocity": [50, 0]
+  },
+  "root": {
+    "title": "repeater",
+    "type": "decorator",
+    "name": "repeater",
+    "parameters": {
+	  "maxLoops": {"value": 10}
+	},
+    "child": {
+	  "title": "annihilator-anomalousgaps",
+	  "type": "module",
+	  "name": "annihilator-anomalousgaps",
+	  "parameters": { }
+	}
+  }
+}

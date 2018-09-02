@@ -20,7 +20,7 @@ function update(dt)
 		bonusStatsAdded = true
       end
     end
-  else
+  elseif setBonusStats then
     bonusStatsAdded = false
   end
   
