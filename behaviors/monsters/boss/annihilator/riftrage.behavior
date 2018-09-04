@@ -21,6 +21,24 @@
     "parameters": {},
     "children": [
 	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "disappear"},
+          "type": {"value": "form2"}
+        }
+      },
+	  {
+		"title": "addEphemeralEffect",
+		"type": "action",
+		"name": "addEphemeralEffect",
+		"parameters": {
+		  "name": {"value": "invulnerable"},
+		  "duration": {"value": 5000}
+		}
+	  },
+	  {
 	    "title": "repeater",
 		"type": "decorator",
 		"name": "repeater",
@@ -80,6 +98,23 @@
 		  ]
 		}
 	  },
+	  {
+		"title": "removeEphemeralEffect",
+		"type": "action",
+		"name": "removeEphemeralEffect",
+		"parameters": {
+		  "name": {"value": "invulnerable"}
+		}
+	  },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "reappear"},
+          "type": {"value": "form2"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",

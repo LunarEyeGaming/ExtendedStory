@@ -106,6 +106,12 @@
 		    "frames" : 2,
 			"cycle" : 0.3,
 			"mode" : "loop"
+		  },
+		  "fire" : {
+		    "frames" : 1,
+			"cycle" : 0.2,
+			"mode" : "transition",
+			"transition" : "idle"
 		  }
         }
 	  },
@@ -487,7 +493,12 @@
               "properties" : {
                 "image" : "<partImage>:left.<frame>"
               }
-            }
+            },
+			"fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire"
+			  }
+			}
           },
           "damage" : {
             "stunned" : {
@@ -936,15 +947,42 @@
       ]
     },
     "destroy" : {
-      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
-      "burstCount" : 15,
-      "particles" : [ ]
-    }
+      "offsetRegion" : [-4, -6, 4, 6],
+      "burstCount" : 50,
+      "particles" : [
+        {
+		  "particle" : "shadowsmoke"
+		}
+	  ]
+    },
+	"dying" : {
+	  "active" : false,
+      "emissionRate" : 50.0,
+      "offsetRegion" : [-4, -6, 4, 6],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		},
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	}
   },
 
   "sounds" : {
     "turnHostile" : [  ],
-    "deathPuff" : [  ]
+    "deathPuff" : [ "/sfx/npc/boss/fg_coreray.ogg" ],
+	"dying" : [ "/sfx/npc/boss/annihilator_death.ogg" ]
   },
 
   "effects" : {

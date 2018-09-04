@@ -7,7 +7,7 @@
   "animation" : "annihilator.animation",
   "dropPools" : [
     {
-      "default" : "ancientavatarTreasure"
+      "default" : "annihilatorTreasure"
     }
   ],
 
@@ -42,6 +42,37 @@
 
     "metaBoundBox" : [-50, -50, 50, 50],
     "scale" : 1.0,
+
+    "forceRegions" : {
+      "right" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "xTargetVelocity" : 100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+      "left" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "xTargetVelocity" : -100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+	  "up" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "yTargetVelocity" : 100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+      "down" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "yTargetVelocity" : -100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      }
+    },
 	"damageParts" : {
 	  "beam1" : {
         "damage" : 40,

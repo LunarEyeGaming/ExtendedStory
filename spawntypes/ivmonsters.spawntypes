@@ -480,6 +480,21 @@
     }
   },
   {
+    "name" : "annihilatordrone",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.0005,
+    "monsterType" : "annihilatordrone",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
     "name" : "supervoidpoptop",
 
     "spawnParameters" : {

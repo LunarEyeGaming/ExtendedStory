@@ -130,6 +130,23 @@
         "type": "action",
         "name": "timer",
         "parameters": {
+          "time": {"value": 1}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "droneswinddown"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
           "time": {"value": 1.5}
         }
       }

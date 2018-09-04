@@ -1,0 +1,142 @@
+{
+  "name": "annihilator-enraged",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "chargeVelocity": [50, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+    	"title": "setAnimationState",
+    	"type": "action",
+    	"name": "setAnimationState",
+    	"parameters": {
+    	  "state": {"value": "disappear"},
+    	  "type": {"value": "form2"}
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "target"}
+		},
+		"output": {
+		  "position": "teleportPosition"
+		}
+	  },
+	  {
+	    "title": "setPosition",
+		"type": "action",
+		"name": "setPosition",
+		"parameters": {
+		  "position": {"key": "teleportPosition"}
+		}
+	  },
+	  {
+    	"title": "setAnimationState",
+    	"type": "action",
+    	"name": "setAnimationState",
+    	"parameters": {
+    	  "state": {"value": "reappear"},
+    	  "type": {"value": "form2"}
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+      {
+        "title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "position": {"key": "self"},
+    	  "projectileConfig": {"value": {"timeToLive": 0.5, "speed": 60, "periodicActions": [{"time": 0, "repeat": false, "action": "sound", "options": ["/sfx/melee/astraltear1.ogg"]}]}},
+    	  "projectileType": {"value": "astraltear"},
+    	  "scalePower": {"value": true},
+    	  "sourceEntity": {"key": "self"},
+    	  "trackSource": {"value": false}
+    	}
+      },
+      {
+        "title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 1]},
+    	  "position": {"key": "self"},
+    	  "projectileConfig": {"value": {"timeToLive": 0.5, "speed": 60, "periodicActions": [{"time": 0, "repeat": false, "action": "sound", "options": ["/sfx/melee/astraltear1.ogg"]}]}},
+    	  "projectileType": {"value": "astraltear"},
+    	  "scalePower": {"value": true},
+    	  "sourceEntity": {"key": "self"},
+    	  "trackSource": {"value": false}
+    	}
+      },
+      {
+        "title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [-1, 0]},
+    	  "position": {"key": "self"},
+    	  "projectileConfig": {"value": {"timeToLive": 0.5, "speed": 60, "periodicActions": [{"time": 0, "repeat": false, "action": "sound", "options": ["/sfx/melee/astraltear1.ogg"]}]}},
+    	  "projectileType": {"value": "astraltear"},
+    	  "scalePower": {"value": true},
+    	  "sourceEntity": {"key": "self"},
+    	  "trackSource": {"value": false}
+    	}
+      },
+      {
+        "title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, -1]},
+    	  "position": {"key": "self"},
+    	  "projectileConfig": {"value": {"timeToLive": 0.5, "speed": 60, "periodicActions": [{"time": 0, "repeat": false, "action": "sound", "options": ["/sfx/melee/astraltear1.ogg"]}]}},
+    	  "projectileType": {"value": "astraltear"},
+    	  "scalePower": {"value": true},
+    	  "sourceEntity": {"key": "self"},
+    	  "trackSource": {"value": false}
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      }
+    ]
+  }
+}

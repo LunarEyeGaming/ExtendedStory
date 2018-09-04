@@ -6,7 +6,7 @@
         "states" : {
           "off" : {},
           "charge" : {
-            "frames" : 8,
+            "frames" : 9,
             "cycle" : 2.5,
             "mode" : "transition",
             "transition" : "fullcharge",
@@ -16,16 +16,16 @@
             }
           },
           "fullcharge" : {
-            "frames" : 8,
-            "cycle" : 0.25,
+            "frames" : 3,
+            "cycle" : 0.9,
             "mode" : "loop",
             "properties" : {
               "persistentSound" : "/sfx/gun/blackholegun_charged.ogg"
             }
           },
           "fire" : {
-            "frames" : 2,
-            "cycle" : 0.1,
+            "frames" : 3,
+            "cycle" : 0.2,
             "mode" : "transition",
             "transition" : "off"
           }
@@ -60,7 +60,7 @@
       "gun" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.6, 0.5],
+          "offset" : [0.1, 0.75],
           "transformationGroups" : ["weapon"]
         },
 
@@ -92,7 +92,7 @@
       "gunfullbright" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.6, 0.5],
+          "offset" : [0.1, 0.75],
           "transformationGroups" : ["weapon"],
           "zLevel" : 1,
           "fullbright" : true
@@ -126,7 +126,7 @@
       "blackhole" : {
         "properties" : {
           "centered" : true,
-          "offset" : [3.2, 0.7],
+          "offset" : [3.2, 0.5],
           "transformationGroups" : ["weapon"],
           "zLevel" : 1,
           "fullbright" : true

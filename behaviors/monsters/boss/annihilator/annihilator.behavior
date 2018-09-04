@@ -242,7 +242,7 @@
                                 "type": "action",
                                 "name": "resourcePercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.0},
+                                  "percentage": {"value": 0.05},
                                   "resource": {"value": "health"}
                                 }
                               },
@@ -349,6 +349,48 @@
         								  "type": "module",
         								  "name": "annihilator-riftrage",
         								  "parameters": { }
+        								},
+										{
+                                		  "title": "inverter",
+                                		  "type": "decorator",
+                                		  "name": "inverter",
+                                		  "parameters": {},
+                                		  "child": {
+                                		    "title": "resourcePercentage",
+                                		    "type": "action",
+                                		    "name": "resourcePercentage",
+                                		    "parameters": {
+                                		      "percentage": {"value": 0.25},
+                                		      "resource": {"value": "health"}
+                                		    }
+                                		  }
+                                		},
+										{
+        								  "title": "annihilator-singularity",
+        								  "type": "module",
+        								  "name": "annihilator-singularity",
+        								  "parameters": { }
+        								},
+										{
+                                		  "title": "inverter",
+                                		  "type": "decorator",
+                                		  "name": "inverter",
+                                		  "parameters": {},
+                                		  "child": {
+                                		    "title": "resourcePercentage",
+                                		    "type": "action",
+                                		    "name": "resourcePercentage",
+                                		    "parameters": {
+                                		      "percentage": {"value": 0.2},
+                                		      "resource": {"value": "health"}
+                                		    }
+                                		  }
+                                		},
+										{
+        								  "title": "annihilator-lingeringrift",
+        								  "type": "module",
+        								  "name": "annihilator-lingeringrift",
+        								  "parameters": { }
         								}
 									  ]
 									}
@@ -384,6 +426,57 @@
 										    "time": {"value": 0.01}
 										  }
 										}
+									  ]
+									}
+						    	  }
+								]
+							  }
+							]
+                          },
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+							    "title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+									"title": "repeater",
+									"type": "decorator",
+									"name": "repeater",
+									"parameters": {
+									  "maxLoops": {"value": -1},
+								      "untilSuccess": {"value": false}
+									},
+									"child": {
+									  "title": "sequence",
+									  "type": "composite",
+									  "name": "sequence",
+									  "parameters": {},
+									  "children": [
+										{
+        								  "title": "annihilator-enraged",
+        								  "type": "module",
+        								  "name": "annihilator-enraged",
+        								  "parameters": { }
+        								}
 									  ]
 									}
 						    	  }
@@ -427,9 +520,9 @@
                     }
                   },
 				  {
-        		    "title": "abyssartifactboss-dying",
+        		    "title": "annihilator-dying",
         		    "type": "module",
-        		    "name": "abyssartifactboss-dying",
+        		    "name": "annihilator-dying",
         		    "parameters": { }
         		  },
                   {

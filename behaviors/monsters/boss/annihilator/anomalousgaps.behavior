@@ -64,7 +64,7 @@
     	      "parameters": {
     	        "aimVector": {"value": [0, 0]},
     	        "position": {"key": "gap"},
-    	        "projectileConfig": {"value": {"power": 80, "processing": "?scale=2"}},
+    	        "projectileConfig": {"value": {"power": 20, "processing": "?scale=2"}},
     	        "projectileType": {"value": "anomalousgapstart"},
 				"scalePower": {"value": true}
     	      }
@@ -116,7 +116,7 @@
     	      "parameters": {
     	        "aimVector": {"value": [-1, 0]},
     	        "position": {"key": "gap"},
-    	        "projectileConfig": {"value": {"power": 80, "processing": "?scale=2"}},
+    	        "projectileConfig": {"value": {"power": 20, "processing": "?scale=2"}},
     	        "projectileType": {"value": "anomalousgapstart"},
 				"scalePower": {"value": true}
     	      }

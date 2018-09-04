@@ -24,7 +24,7 @@
     {
       "action" : "projectile",
       "type" : "anomalousgap",
-      "inheritDamageFactor" : 0.25,
+      "inheritDamageFactor" : 1,
 	  "config" : {
 	    "speed" : 20,
 		"processing": "?scale=2"

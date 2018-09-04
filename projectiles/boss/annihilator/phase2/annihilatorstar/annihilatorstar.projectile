@@ -1,0 +1,25 @@
+{
+  "projectileName" : "annihilatorstar",
+  "image" : "annihilatorstar.png",
+  "physics" : "bullet",
+  "lightColor" : [150, 100, 100],
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "speed" : 50,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : false,
+  "damagePoly" : [ [23.6, 0], [0, 23.6], [-23.6, 0], [0, -23.6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    }
+  ],
+  "actionOnReap" : []
+}

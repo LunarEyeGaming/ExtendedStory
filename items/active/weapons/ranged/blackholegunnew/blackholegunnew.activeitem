@@ -61,7 +61,6 @@
         "fireSound" : "fire2"
       }
     ],
-
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -105,14 +104,76 @@
       }
     }
   },
-  "altAbilityType" : "grenadelauncher",
+  "altAbilityType" : "chargefire",
   "altAbility" : {
-    "elementalConfig" : {
-      "abyss" : { "name" : "Bouncing Black Hole", "projectileType" : "bouncingsingularity", "projectileCount" : 1, "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/astralexplosion/astralexplosion.config"}]}}
-    },
-    "energyUsage" : 20,
-	"baseDps" : 2,
-	"fireTime" : 5
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.0,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {"timeToLive" : 0, "damageType" : "nodamage"},
+        "inaccuracy" : 0,
+        "baseDamage" : 3,
+        "fireSound" : "fire",
+        "fireAnimationState" : "off"
+      },
+      {
+        "time" : 2.5,
+        "energyCost" : 70,
+        "cooldown" : 0.25,
+        "projectileType" : "bouncingsingularity",
+        "projectileCount" : 1,
+        "spreadAngle" : 1,
+        "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/astralexplosion/astralexplosion.config"}]},
+        "inaccuracy" : 0.0,
+        "baseDamage" : 27,
+        "fireSound" : "fire2"
+      }
+    ],
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"animationStates" : {
+		  "blackhole" : "delaycharge"
+		}
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		"animationStates" : {
+		  "blackhole" : "off"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
