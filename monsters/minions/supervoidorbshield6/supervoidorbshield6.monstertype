@@ -61,7 +61,7 @@
 				      "fuzzAngle" : 180,
 					  "config" : {
 					    "speed" : 500,
-						"timeToLive" : 0.1,
+						"timeToLive" : 0.2,
 						"movementSettings" : {
 						  "collisionEnabled" : false
 						},
@@ -71,7 +71,10 @@
 							"type" : "supervoidbulletbuffed",
 							"angleAdjust" : 180,
 							"config" : {
-							  "speed" : 50,
+							  "speed" : 100,
+							  "movementSettings" : {
+							    "collisionEnabled" : false
+							  },
 							  "timeToLive" : 1,
 							  "acceleration" : 0
 							}

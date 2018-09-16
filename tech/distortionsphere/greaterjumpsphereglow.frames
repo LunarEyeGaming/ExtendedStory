@@ -5,11 +5,19 @@
 	"names" : [
 	  ["normal.0", "normal.1", "normal.2", "normal.3"],
 	  ["spike.0", "spike.1", "spike.2", "spike.3"],
-	  ["blink.1", "blink.2", "blink.3", "blink.4", "blink.5", "blink.6", "blink.7", "blink.8"]
+	  ["blinkout.1", "blinkout.2", "blinkout.3", "blinkout.4", "blinkout.5", "blinkout.6", "blinkout.7", "blinkout.8"]
 	]
   },
 
   "aliases" : {
-    "default" : "normal.0"
+    "default" : "normal.0",
+	"blinkin.1" : "blinkout.8",
+	"blinkin.2" : "blinkout.7",
+	"blinkin.3" : "blinkout.6",
+	"blinkin.4" : "blinkout.5",
+	"blinkin.5" : "blinkout.4",
+	"blinkin.6" : "blinkout.3",
+	"blinkin.7" : "blinkout.2",
+	"blinkin.8" : "blinkout.1"
   }
 }

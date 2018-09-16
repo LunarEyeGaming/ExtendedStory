@@ -26,7 +26,7 @@
         "name": "offsetPosition",
         "parameters": {
           "position": {"key": "self"},
-          "offset": {"value": [-40, 55]}
+          "offset": {"value": [-50, 55]}
         },
         "output": {
           "position": "gap"
@@ -78,7 +78,7 @@
         "name": "offsetPosition",
         "parameters": {
           "position": {"key": "self"},
-          "offset": {"value": [40, 45]}
+          "offset": {"value": [50, 45]}
         },
         "output": {
           "position": "gap"

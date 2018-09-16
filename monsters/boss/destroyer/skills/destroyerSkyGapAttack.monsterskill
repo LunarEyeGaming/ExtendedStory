@@ -37,7 +37,7 @@
 				  "type" : "redplasmatorpedo",
 				  "angle" : -90,
 				  "offsetRange" : [50, 50, -50, 50],
-				  "config" : {"power" : 75, "speed" : 20, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ { "time" : 0, "repeat" : false, "action" : "projectile", "type" : "redpulsecannonexplosion"} ] }
+				  "config" : {"power" : 225, "speed" : 20, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ { "time" : 0, "repeat" : false, "action" : "projectile", "type" : "redpulsecannonexplosion"} ] }
 				}
 			  ]
 			}

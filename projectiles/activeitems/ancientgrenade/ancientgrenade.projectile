@@ -72,7 +72,10 @@
     },
 	{
       "action" : "projectile",
-      "type" : "ancientexplosion"
+      "type" : "ancientexplosion",
+	  "config" : {
+	    "damageKind" : "megadamageplasma"
+	  }
     }
   ],
   "power" : 0.0,

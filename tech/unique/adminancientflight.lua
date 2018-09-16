@@ -113,7 +113,7 @@ function update(args)
 	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {math.cos(rotation), -math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
 	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {-math.cos(rotation), math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
 	  --mcontroller.controlRotation(0.3)
-	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 50, knockback = 30, timeToLive = 0.001})
+	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 50, knockback = 0, timeToLive = 0.001})
 	  altFireCooldownTimer = 100
 	  cooldownTimer()
 	  animator.setAnimationState("ballState", "fire2")

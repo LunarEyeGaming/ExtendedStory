@@ -1,0 +1,79 @@
+{
+  "itemName" : "annihilator-plasmicslicer",
+  "price" : 1000,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A hilt with an extremely powerful blade.",
+  "shortdescription" : "^#ea6a56;Destructive Slicer^reset;",
+  "tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "broadsword"],
+  
+  "critChance" : 5,
+  "critBonus" : 2,
+
+  "inventoryIcon" : "icon.png",
+
+  "animation" : "plasmicslicer.animation",
+  "animationParts" : {
+    "sword" : "sword.png",
+    "swordFullbright" : "swordunlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 3.0,
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "damageConfig" : {"damageSourceKind" : "broadsword","statusEffects" : [ "l6doomed" ],"knockbackMode" : "facing","timeout" : 0.5},
+    "fireTime" : 0.5,
+    "baseDps" : 15,
+	"comboSteps" : 5,
+	"swooshOffsetRegions" : [[3.0, -0.5, 6.5, 2.0],[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15}],
+
+    "stances" : {
+	  "windup1" : {"duration" : 0.1,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "preslash1" : {"duration" : 0.05,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "fire1" : {"duration" : 0.1,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "wait1" : {"duration" : 0.1,"armRotation" : -150,"weaponRotation" : 55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup2" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "fire2" : {"duration" : 0.2, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "wait2" : {"duration" : 0.1, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true}, 
+	  "windup3" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire3" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "wait3" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup4" : {"duration" : 0.2, "armRotation" : -150, "weaponRotation" : 55, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "fire4" : {"duration" : 0.2, "armRotation" : 0, "weaponRotation" : -90, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "wait4" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -10, "weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup5" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "wait5" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
+    }
+  },
+
+  "altAbilityType" : "blinkexplosion",
+  "altAbility" : {
+    "name" : "Chaotic Blink",
+	"elementalConfig" : {
+	  "physical" : {"projectileType" : "annihilatorswordalt"}
+	},
+	"maxDistance" : 25
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

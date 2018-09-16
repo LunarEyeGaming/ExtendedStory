@@ -14,9 +14,16 @@
             "frames" : 3,
             "cycle" : 0.12,
             "mode" : "transition",
-            "transition" : "off"
+            "transition" : "off",
+			"properties" : {
+			  "lightsOff" : ["glow", "glowwarning"]
+			}
           },
-          "off" : { },
+          "off" : {
+            "properties" : {
+			  "lightsOff" : ["glow", "glowwarning"]
+			}
+		  },
           "activate" : {
             "frames" : 3,
             "cycle" : 0.12,
@@ -25,7 +32,9 @@
           },
           "on" : {
             "properties" : {
-              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
+			  "lightsOn" : ["glow"],
+			  "lightsOff" : ["glowwarning"]
             }
 		  },
 		  "left" : {
@@ -70,7 +79,9 @@
 			"mode" : "loop",
 			"properties" : {
               "immediateSound" : "/sfx/tech/mech_activate4.ogg",
-			  "persistentSound" : "/sfx/melee/charge_full_hold1.ogg"
+			  "persistentSound" : "/sfx/melee/charge_full_hold1.ogg",
+			  "lightsOn" : ["glow"],
+			  "lightsOff" : ["glowwarning"]
             }
 		  },
 		  "fire2" : {
@@ -79,7 +90,9 @@
 			"mode" : "loop",
 			"properties" : {
               "immediateSound" : "/sfx/objects/crystaltrap_on1.ogg",
-			  "persistentSound" : "/sfx/objects/crystaltrap_loop.ogg"
+			  "persistentSound" : "/sfx/objects/crystaltrap_loop.ogg",
+			  "lightsOn" : ["glow"],
+			  "lightsOff" : ["glowwarning"]
             }
 		  },
 		  "upright" : {
@@ -124,7 +137,9 @@
 			"mode" : "loop",
 			"properties" : {
               "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
-			  "persistentSound" : "/sfx/interface/ancientflight_warning.ogg"
+			  "persistentSound" : "/sfx/interface/ancientflight_warning.ogg",
+			  "lightsOn" : ["glowwarning"],
+			  "lightsOff" : ["glow"]
             }
 		  }
         }
@@ -724,6 +739,20 @@
 
   "transformationGroups" : {
     "ball" : { "interpolated" : true }
+  },
+
+  "lights" : {
+    "glow" : {
+	  "active" : true,
+      "position" : [0, 1],
+      "color" : [106, 34, 132],
+      "transformationGroups" : ["ball"]
+    },
+	"glowwarning" : {
+      "position" : [0, 1],
+      "color" : [185, 24, 42],
+      "transformationGroups" : ["ball"]
+    }
   },
 
   "particleEmitters" : {

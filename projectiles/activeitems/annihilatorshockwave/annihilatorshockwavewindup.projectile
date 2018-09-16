@@ -1,0 +1,24 @@
+{
+  "projectileName" : "annihilatorshockwavewindup",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "annihilatorshockwave",
+	  "direction" : [0, 1],
+	  "inheritDamageFactor" : 0.1
+	},
+	{
+	  "action" : "sound",
+	  "options" : ["/sfx/gun/pulsecannon_blast1.ogg"]
+	}
+  ],
+  "onlyHitTerrain" : true,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}

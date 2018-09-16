@@ -17,7 +17,7 @@ function update(dt)
 	  if previousNumber == nil then
 	    previousNumber = 0
 	  end
-	  destroyerAttemptSpawn(20, previousNumber)
+	  destroyerAttemptSpawn(30, previousNumber)
 	  attemptSpawnRan = true
 	end
   end

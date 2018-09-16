@@ -91,31 +91,6 @@
                     }
                   },
                   {
-                    "title": "selector",
-                    "type": "composite",
-                    "name": "selector",
-                    "parameters": {},
-                    "children": [
-                      {
-                        "title": "hasFlag",
-                        "type": "action",
-                        "name": "hasFlag",
-                        "parameters": {
-                          "name": {"key": "exhausted"}
-                        }
-                      },
-                      {
-                        "title": "addEphemeralEffect",
-                        "type": "action",
-                        "name": "addEphemeralEffect",
-                        "parameters": {
-                          "duration": {"value": 10},
-                          "name": {"value": "cultistshield"}
-                        }
-                      }
-                    ]
-                  },
-                  {
                     "title": "Reset",
                     "type": "composite",
                     "name": "sequence",
@@ -244,12 +219,6 @@
                               "title": "cultistboss-sphereattack",
                               "type": "module",
                               "name": "cultistboss-sphereattack",
-                              "parameters": {}
-                            },
-                            {
-                              "title": "cultistboss-exhaust",
-                              "type": "module",
-                              "name": "cultistboss-exhaust",
                               "parameters": {}
                             },
                             {

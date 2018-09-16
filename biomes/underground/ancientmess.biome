@@ -1,0 +1,86 @@
+{
+  "name" : "ancientmess",
+  "friendlyName" : "Ancient Mess",
+
+
+  "spawnProfile" : {
+    "groups" : [
+      {
+        "select" : 1,
+        "pool" : [ 
+          [ 1.0, "ancientturret_es" ],
+		  [ 1.0, "ancienttrifangle_es" ],
+		  [ 1.0, "ancienttwigun_es" ],
+		  [ 1.0, "ancienttrailer_es" ]
+        ]
+      }
+    ]
+  },
+
+  "mainBlock" : "ancientblock",
+  "subBlocks" : [ "ancientbrick", "ledgebrick" ],
+  "ores" : "depth2",
+
+  "undergroundPlaceables" : {
+    "grassMod" : [ "tentaclegrass" ],
+    "grassModDensity" : 1,
+
+    "items" : [
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundChallengeDoors",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "challengedoor" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:layer2Chests",
+
+        "type" : "treasureBox",
+        "treasureBoxSets" : [ "basicChest" ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundweaponChests",
+
+        "type" : "treasureBox",
+        "treasureBoxSets" : [ "weaponChest" ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 0.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundtechChests",
+
+        "type" : "treasureBox",
+        "treasureBoxSets" : [ "techChest" ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundChests",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "statuspod" ] ],
+            "parameters" : { }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -53,13 +53,6 @@
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "arkite"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientfurnace"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "refinedlunarite"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destroyermgun"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destroyerstaff"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destroyerspear"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destroyercannon"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destructiumhead"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destructiumchest"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "destructiumpants"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ioncell"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "emptycell"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "staticcell"} },
@@ -90,6 +83,8 @@
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientshotgun"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "antiroteppback"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "antirotstim"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientplatform"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientbrick"} },
   
   
   {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/destroyerspawn.lua"},

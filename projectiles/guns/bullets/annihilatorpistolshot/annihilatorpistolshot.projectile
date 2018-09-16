@@ -1,0 +1,21 @@
+{
+  "projectileName" : "annihilatorpistolshot",
+  "physics" : "laser",
+  "image" : "annihilatorpistolshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "timeToLive" : 5,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet",
+  "lightColor" : [185, 24, 42]
+}

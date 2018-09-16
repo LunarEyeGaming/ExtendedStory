@@ -47,7 +47,7 @@
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
               "targetOnDamage": {"value": true},
-              "targetOutOfSightTime": {"value": 1}
+              "targetOutOfSightTime": {"value": 5}
             }
           },
           {
@@ -243,12 +243,24 @@
 									  "parameters": {}
 									},
 									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
 									  "title": "poisondragonboss-poisonsweep",
 									  "type": "module",
 									  "name": "poisondragonboss-poisonsweep",
 									  "parameters": {
-									    "startingPos": {"value": [-50, 0]},
-										"endingPos": {"value": [50, 0]},
+									    "startingPos": {"value": [-30, 0]},
+										"endingPos": {"value": [30, 0]},
 										"aimVector": {"value": [1, 0]},
 										"projectileOffset": {"value": [7.875, -1.5]}
 									  }
@@ -275,12 +287,24 @@
 									  "parameters": {}
 									},
 									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
 									  "title": "poisondragonboss-poisonsweep",
 									  "type": "module",
 									  "name": "poisondragonboss-poisonsweep",
 									  "parameters": {
-									    "startingPos": {"value": [50, 0]},
-										"endingPos": {"value": [-50, 0]},
+									    "startingPos": {"value": [30, 0]},
+										"endingPos": {"value": [-30, 0]},
 										"aimVector": {"value": [-1, 0]},
 										"projectileOffset": {"value": [-7.875, -1.5]}
 									  }
@@ -310,6 +334,51 @@
 									  "title": "poisondragonboss-slam",
 									  "type": "module",
 									  "name": "poisondragonboss-slam",
+									  "parameters": {}
+									}
+								  ]
+								}
+						      },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+								    {
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parameters": {
+									    "time": {"value": 0.01}
+									  }
+									},
+								    {
+                                      "title": "inverter",
+                                      "type": "decorator",
+                                      "name": "inverter",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "entityInSight",
+                                        "type": "action",
+                                        "name": "entityInSight",
+                                        "parameters": {
+                                          "entity": {"key": "target"}
+                                        }
+                                      }
+                                    },
+									{
+									  "title": "poisondragonboss-blockbuster",
+									  "type": "module",
+									  "name": "poisondragonboss-blockbuster",
 									  "parameters": {}
 									}
 								  ]

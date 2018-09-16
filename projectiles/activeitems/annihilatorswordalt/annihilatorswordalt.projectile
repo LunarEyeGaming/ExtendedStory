@@ -1,0 +1,44 @@
+{
+  "projectileName" : "annihilatorswordalt",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+      "count" : 10,
+	  "body" : [
+	    {
+	      "action" : "projectile",
+	      "type" : "invisibleprojectile",
+	      "offsetRange" : [20, 20, -20, -20],
+	      "config" : {
+	        "timeToLive" : 0,
+		    "power" : 50,
+			"damageTeam" : { "type" : "friendly" },
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+			  },
+			  {
+			    "action" : "projectile",
+				"type" : "explosivelasershot",
+				"fuzzAngle" : 180,
+				"config" : {
+				  "timeToLive" : 20
+				}
+			  }
+			]
+		  }
+		}
+	  ]
+    }
+  ],
+  "onlyHitTerrain" : true,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}
