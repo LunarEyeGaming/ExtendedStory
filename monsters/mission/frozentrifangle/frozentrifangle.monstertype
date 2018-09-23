@@ -70,8 +70,7 @@
 				  "type" : "iceplasma",
 				  "config" : {
  				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  }
 				},
 				{
@@ -82,8 +81,7 @@
 				  "angleAdjust" : 15,
 				  "config" : {
 				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  }
 				},
 				{ 
@@ -94,8 +92,7 @@
 				  "angleAdjust" : -15,
 				  "config" : {
 				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  }
 				},
 				{ 
@@ -104,8 +101,7 @@
 				  "type" : "iceplasma",
 				  "config" : {
 				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  } 
 				},
 				{ 
@@ -115,8 +111,7 @@
 				  "angleAdjust" : 15,
 				  "config" : {
 				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  }
 				},
 				{ 
@@ -126,8 +121,7 @@
 				  "angleAdjust" : -15,
 				  "config" : {
 				    "speed" : 40,
-					"power" : 25,
-					"damageKind" : "megadamageiceplasma"
+					"power" : 25
 				  }
 				},
 				{ 
@@ -165,7 +159,7 @@
 			  "actionOnReap" : [
 			    {
 				  "action" : "config",
-				  "file" : "/projectiles/explosions/megadamageexplosion/megadamageiceexplosionknockback.config"
+				  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
 				}
 			  ]
 			},

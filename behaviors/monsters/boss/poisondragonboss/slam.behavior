@@ -7,7 +7,7 @@
 	"/scripts/actions/projectiles.lua"
   ],
   "parameters": {
-    "slamNumber": 7
+    "slamNumber": 3
   },
   "root": {
     "title": "repeater",
@@ -182,7 +182,7 @@
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"value": [1, 0]},
-                    "offset": {"value": [0, -20]},
+                    "offset": {"value": [0, -13]},
                     "position": {"key": "self"},
                     "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "projectile", "type": "poisonthrower", "fuzzAngle": 180, "config": {"speed": 50}}]}},
                     "projectileType": {"value": "orbitalup"},

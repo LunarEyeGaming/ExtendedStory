@@ -397,6 +397,7 @@
     [1, {
       "fill" : [ 
         {"item" : ["liquidfabric", 20]},
+		{"item" : ["annihilatorplate", 20]},
 		{"item" : ["money", 1000]}
       ],
       "pool" : [
@@ -409,7 +410,17 @@
 		{"weight" : 1.0, "item" : ["liquidfabric", 7]},
 		{"weight" : 1.0, "item" : ["liquidfabric", 8]},
 		{"weight" : 1.0, "item" : ["liquidfabric", 9]},
-		{"weight" : 1.0, "item" : ["liquidfabric", 10]}
+		{"weight" : 1.0, "item" : ["liquidfabric", 10]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 1]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 2]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 3]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 4]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 5]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 6]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 7]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 8]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 9]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 10]}
       ],
       "poolRounds" : [
         [1, 1]

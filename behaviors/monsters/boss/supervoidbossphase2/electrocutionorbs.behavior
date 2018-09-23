@@ -101,7 +101,7 @@
     	    "type": "decorator",
     	    "name": "repeater",
     	    "parameters": {
-    	      "maxLoops": {"value": 20},
+    	      "maxLoops": {"value": 10},
     	      "untilSuccess": {"value": false}
     	    },
     	    "child": {

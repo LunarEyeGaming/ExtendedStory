@@ -132,6 +132,23 @@
           "velocity": {"value": [0, 0]}
         }
       },
+	  {
+        "title": "spawnFloorProjectiles",
+        "type": "action",
+        "name": "spawnFloorProjectiles",
+        "parameters": {
+          "areaWidth": {"value": 64},
+          "center": {"key": "spawn"},
+          "power": {"value": 10},
+          "projectileCount": {"value": 8},
+          "projectileType": {"value": "floorlava"},
+          "segmentWidth": {"value": 8},
+          "spawnHeight": {"value": -1}
+        },
+        "output": {
+          "projectiles": "lavaProjectiles"
+        }
+      },
       {
         "title": "repeater",
         "type": "decorator",
@@ -189,7 +206,7 @@
                 "spawnHeight": {"value": 0.625}
               },
               "output": {
-                "projectiles": "lavaProjectiles"
+                "projectiles": "columnProjectiles"
               }
             },
             {
@@ -219,7 +236,7 @@
                 "spawnHeight": {"value": 0.625}
               },
               "output": {
-                "projectiles": "lavaProjectiles"
+                "projectiles": "columnProjectiles"
               }
             },
             {
@@ -236,6 +253,46 @@
               "name": "timer",
               "parameters": {
                 "time": {"value": 2.4}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "filter",
+        "type": "decorator",
+        "name": "filter",
+        "parameters": {
+          "list": {"key": "lavaProjectiles"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "filterItem"}
+              }
+            },
+            {
+              "title": "inverter",
+              "type": "decorator",
+              "name": "inverter",
+              "parameters": {},
+              "child": {
+                "title": "sendEntityMessage",
+                "type": "action",
+                "name": "sendEntityMessage",
+                "parameters": {
+                  "entity": {"key": "filterItem"},
+                  "message": {"value": "sink"}
+                }
               }
             }
           ]

@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "destroyerbar", "count" : 10 },
+    { "item" : "durasteelbar", "count" : 2 },
+	{ "item" : "wire", "count" : 12 },
+    { "item" : "battery", "count" : 2 }
+  ],
+  "output" : { "item" : "destroyerspawnblockaugment", "count" : 1 },
+  "groups" : [ "craftinganvil3", "hazardgear", "all" ]
+}

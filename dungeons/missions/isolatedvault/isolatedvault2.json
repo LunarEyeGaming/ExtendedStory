@@ -1451,27 +1451,6 @@
                  "y":720
                 }, 
                 {
-                 "height":72,
-                 "id":939,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"radioMessages\" : [ \"hylotlmission05\", \"isolatedvault04\", \"isolatedvault05\", \"isolatedvault06\" ] }",
-                     "stagehand":"radiomessage"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":72,
-                 "x":1920,
-                 "y":584
-                }, 
-                {
                  "gid":5621,
                  "height":40,
                  "id":960,
@@ -2000,27 +1979,6 @@
                  "width":16,
                  "x":1160,
                  "y":640
-                }, 
-                {
-                 "height":8,
-                 "id":1410,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"ancientmicrogate",
-                     "parameters":"{ \"uniqueId\" : \"ancientmicrogate\" }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":2288,
-                 "y":808
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2706,7 +2664,7 @@
  "nextobjectid":1413,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.5",
+ "tiledversion":"1.1.6",
  "tileheight":8,
  "tilesets":[
         {

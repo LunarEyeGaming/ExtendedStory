@@ -51,6 +51,7 @@
 		  "action" : "projectile",
 		  "type" : "abyssvortex2",
 		  "fuzzAngle" : 180,
+	      "inheritDamageFactor" : 0.05,
 		  "config" : {
 		    "timeToLive" : 1.8,
 			"speed" : 50
@@ -91,60 +92,70 @@
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 36
+	  "angleAdjust" : 36,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 72
+	  "angleAdjust" : 72,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 108
+	  "angleAdjust" : 108,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 144
+	  "angleAdjust" : 144,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 180
+	  "angleAdjust" : 180,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 216
+	  "angleAdjust" : 216,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 252
+	  "angleAdjust" : 252,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 288
+	  "angleAdjust" : 288,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
 	  "type" : "abyssshot",
-	  "angleAdjust" : 324
+	  "angleAdjust" : 324,
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 3.5,
 	  "action" : "projectile",
-	  "type" : "abyssshot"
+	  "type" : "abyssshot",
+	  "inheritDamageFactor" : 0.1
 	},
 	{
 	  "time" : 0.1,

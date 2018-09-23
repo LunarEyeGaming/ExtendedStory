@@ -107,7 +107,7 @@
     			    "parameters": {
     			      "aimVector": {"key": "aimVector"},
     			      "offset": {"value": [0, 0]},
-    			      "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "projectile", "type": "presupervoidbullet", "config": {"actionOnReap": [{"action": "projectile", "type": "supervoidbullet_EH"}]}}]}},
+    			      "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "projectile", "type": "presupervoidbullet", "config": {"actionOnReap": [{"action": "projectile", "type": "supervoidbullet_EH"}]}}, {"action": "projectile", "type": "presupervoidbullet", "fuzzAngle" : 180, "config": {"actionOnReap": [{"action": "projectile", "type": "supervoidbullet_EH"}]}}]}},
     			      "projectileType": {"value": "orbitalup"}
     			    }
     	    	  },

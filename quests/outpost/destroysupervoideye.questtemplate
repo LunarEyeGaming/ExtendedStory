@@ -3,9 +3,9 @@
   "mainQuest" : true,
   "prerequisites" : [ "collectpoisonartifact", "collectfireartifact", "collecticeartifact", "collectelectricartifact", "collectabyssartifact" ],
   "title" : "The ^magenta;Supervoid^black; Eye^white;",
-  "text" : "All of the artifacts have been collected. The ^green;Supervoid Eye^reset; is a terrorizer of all universes, as it will absorb the energy of any universe in its wake. It is best that you proceed with caution and kill it on sight. This will be a really ^red;boring^reset; task, but you need to look through a lot of planets to find a ^orange;Supervoid Node^reset;.",
+  "text" : "All of the artifacts have been collected. The ^green;Supervoid Eye^reset; is a terrorizer of all universes, as it will absorb the energy of any universe in its wake. It is best that you proceed with caution and kill it on sight. You can get to it by locating a ^orange;Supervoid Node^reset;, which should be easy because of Supervoid Worlds.",
   "completionText" : "The universe has been saved again. The biggest threat to the multiverse has been destroyed!",
-  "moneyRange" : [500, 500],
+  "moneyRange" : [5000, 10000],
   "rewards" : [
     [ ["supervoidobliterator", 1] ]
   ],

@@ -107,7 +107,7 @@
           "baseValue" : 3000
         },
         "protection" : {
-          "baseValue" : 70
+          "baseValue" : 50
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -150,7 +150,13 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
-        }
+        },
+		"fireResistance" : {
+		  "baseValue" : -0.5
+		},
+		"iceResistance" : {
+		  "baseValue" : 1.0
+		}
       },
 
       "resources" : {

@@ -6,7 +6,7 @@
   "spawnProfile" : {
     "groups" : [
       {
-        "select" : 1,
+        "select" : 4,
         "pool" : [ 
           [ 1.0, "ancientturret_es" ],
 		  [ 1.0, "ancienttrifangle_es" ],
@@ -17,13 +17,31 @@
     ]
   },
 
+  "parallax" : "/parallax/underground/ancientmess.parallax",
+
   "mainBlock" : "ancientblock",
   "subBlocks" : [ "ancientbrick", "ledgebrick" ],
-  "ores" : "depth2",
+  "ores" : "depth1",
+
+  "ambientNoises" : {
+    "day" : {
+      "tracks" : [ "/sfx/environmental/arid_underground.ogg" ]
+    },
+    "night" : {
+      "tracks" : [ "/sfx/environmental/arid_underground.ogg" ]
+    }
+  },
+
+  "musicTrack" : {
+    "day" : {
+      "tracks" : [ "/music/lava-exploration1.ogg", "/music/lava-exploration2.ogg", "/music/inviolate-loop.ogg", "/music/drosera.ogg", "/music/temple-of-kluex.ogg", "/music/procyon.ogg", "/music/error-0xbfaf000.ogg" ]
+    },
+    "night" : {
+      "tracks" : [ "/music/lava-exploration1.ogg", "/music/lava-exploration2.ogg", "/music/inviolate-loop.ogg", "/music/drosera.ogg", "/music/temple-of-kluex.ogg", "/music/procyon.ogg", "/music/error-0xbfaf000.ogg" ]
+    }
+  },
 
   "undergroundPlaceables" : {
-    "grassMod" : [ "tentaclegrass" ],
-    "grassModDensity" : 1,
 
     "items" : [
       {
@@ -77,6 +95,62 @@
         "objectSets" : [
           {
             "pool" : [ [1, "statuspod" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "background",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundFossils",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "ancientbouldertrap" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "ceiling",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "ancienticetrap" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "ceiling",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "ancientflametrap" ] ],
+            "parameters" : { }
+          }
+        ]
+      },
+      {
+        "mode" : "ceiling",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [1, "ancientcrystaltrap" ] ],
             "parameters" : { }
           }
         ]

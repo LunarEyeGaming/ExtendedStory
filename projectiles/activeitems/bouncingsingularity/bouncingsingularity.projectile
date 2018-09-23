@@ -14,7 +14,6 @@
       "repeat" : true,
       "action" : "projectile",
       "type" : "blackholegravity",
-      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0
     },
 	{
@@ -52,6 +51,7 @@
   "power" : 50,
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
   "damageKind" : "abyss",
+  "damageRepeatTimeout" : 0.1,
   "actionOnCollide" : [
     {
 	  "action" : "config",

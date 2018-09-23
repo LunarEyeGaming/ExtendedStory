@@ -1,0 +1,15 @@
+{
+  "name" : "supertoxin",
+
+  "effectConfig" : {
+    "tickRate" : 1,
+    "tickDamage" : 1000
+  },
+  "defaultDuration" : 1000,
+
+  "scripts" : [
+    "supertoxin.lua"
+  ],
+
+  "animationConfig" : "supertoxin.animation"
+}

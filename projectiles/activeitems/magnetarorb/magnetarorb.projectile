@@ -18,7 +18,6 @@
       "repeat" : true,
       "action" : "projectile",
       "type" : "blackholegravity",
-      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0
     }
   ],
@@ -69,6 +68,7 @@
     }
   ],
   "timeToLive" : 10.0,
-  "power" : 10,
+  "damageRepeatTimeout" : 0.1,
+  "power" : 12,
   "persistentAudio" : "/sfx/projectiles/mech_wobbleshot_loop.ogg"
 }

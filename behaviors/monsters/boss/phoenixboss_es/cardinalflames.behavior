@@ -73,7 +73,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 20}
+          "maxLoops": {"value": 15}
         },
 		"child": {
 		  "title": "sequence",
@@ -100,7 +100,7 @@
     		    "aimVector": {"value": [1, 0]},
     		    "offset": {"value": [0, 0]},
     		    "projectileConfig": {"value": {}},
-    		    "projectileType": {"value": "cardinalflames_es"},
+    		    "projectileType": {"value": "phoenixmine_es"},
 				"position": {"key": "targetPos"}
     		  }
     		},
@@ -109,7 +109,7 @@
     	      "type": "action",
     	      "name": "timer",
     	      "parameters": {
-    	        "time": {"value": 0.75}
+    	        "time": {"value": 1.3}
     	      }
     	    }
 		  ]

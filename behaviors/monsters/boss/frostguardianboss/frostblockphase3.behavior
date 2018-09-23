@@ -200,29 +200,6 @@
 			  	  "duration": {"value": 2}
     		      }
     		    },
-	    	    {
-        	      "title": "entityPosition",
-        	      "type": "action",
-        	      "name": "entityPosition",
-        	      "parameters": {
-			        "entity": {"key": "target"}
-			      },
-			      "output": {
-			        "position": "targetPos"
-			      }
-        	    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_cardinaliciclesslower_es"},
-					"position": {"key": "targetPos"}
-    		      }
-    		    },
 			    {
 			      "title": "timer",
 				  "type": "action",
@@ -246,7 +223,7 @@
     		      "parameters": {
     		        "aimVector": {"value": [1, 0]},
     		        "offset": {"value": [-15, 8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.75}},
+    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
     		        "projectileType": {"value": "frostblockattack1_es"}
     		      }
     		    },
@@ -268,7 +245,7 @@
     		      "parameters": {
     		        "aimVector": {"value": [1, 0]},
     		        "offset": {"value": [-15, -8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.75}},
+    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
     		        "projectileType": {"value": "frostblockattack1_es"}
     		      }
     		    },
@@ -303,29 +280,6 @@
 			  	  "duration": {"value": 2}
     		      }
     		    },
-	    	    {
-        	      "title": "entityPosition",
-        	      "type": "action",
-        	      "name": "entityPosition",
-        	      "parameters": {
-			        "entity": {"key": "target"}
-			      },
-			      "output": {
-			        "position": "targetPos"
-			      }
-        	    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_cardinaliciclesslower_es"},
-					"position": {"key": "targetPos"}
-    		      }
-    		    },
 			    {
 			      "title": "timer",
 				  "type": "action",
@@ -349,7 +303,7 @@
     		      "parameters": {
     		        "aimVector": {"value": [1, 0]},
     		        "offset": {"value": [-15, 8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.75}},
+    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
     		        "projectileType": {"value": "frostblockattack1_es"}
     		      }
     		    },
@@ -360,7 +314,7 @@
     		      "parameters": {
     		        "aimVector": {"value": [1, 0]},
     		        "offset": {"value": [-15, 0]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.75}},
+    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
     		        "projectileType": {"value": "frostblockattack1_es"}
     		      }
     		    },
@@ -404,29 +358,6 @@
     		      "parameters": {
     		        "name": {"value": "invulnerable"},
 			  	  "duration": {"value": 2}
-    		      }
-    		    },
-	    	    {
-        	      "title": "entityPosition",
-        	      "type": "action",
-        	      "name": "entityPosition",
-        	      "parameters": {
-			        "entity": {"key": "target"}
-			      },
-			      "output": {
-			        "position": "targetPos"
-			      }
-        	    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_cardinaliciclesslower_es"},
-					"position": {"key": "targetPos"}
     		      }
     		    },
 			    {

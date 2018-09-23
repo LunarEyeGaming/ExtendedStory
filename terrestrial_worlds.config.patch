@@ -20,18 +20,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundabyss"]
+          "primaryRegion" : ["undergroundabyss", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergrounddarkabyss"],
+          "primaryRegion" : ["undergrounddarkabyss", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergrounddarkabyss"],
+          "primaryRegion" : ["undergrounddarkabyss", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundabyssfog"],
+          "primaryRegion" : ["undergroundabyssfog", "ancientmess"],
           "secondaryRegions" : []
         },
 		"core" : {
@@ -61,18 +61,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundeternalfire"]
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         }
       }
@@ -98,18 +98,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundeternalfrost"]
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
 		"core" : {
@@ -140,18 +140,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"]
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         }
       }
@@ -178,18 +178,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundvoltage"]
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         }
       }
@@ -567,6 +567,15 @@
       "caveLiquid" : ["supervoid"],
       "biome": [
         [1,["undergroundsupervoid"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/ancientmess",
+    "value" : {
+      "biome": [
+        [1,["ancientmess"]]
       ]
     }
   },

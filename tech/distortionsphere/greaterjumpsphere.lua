@@ -149,6 +149,9 @@ function update(args)
   end
   aimVectorAlt = world.distance(tech.aimPosition(), mcontroller.position())
   if self.active then
+    if args.moves["down"] and world.liquidAt({mcontroller.position()[1], mcontroller.position()[2] - 2}) then
+      mcontroller.controlApproachVelocity({mcontroller.xVelocity(), -100}, 200)
+    end
     --Fire Ability
     if args.moves["primaryFire"] and self.fireCooldownTimer == 0 and args.moves["run"] then
 	  animator.playSound("fire")

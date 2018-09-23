@@ -68,381 +68,269 @@
          "objects":[
                 {
                  "height":8,
-                 "id":1316,
+                 "id":1341,
                  "name":"",
                  "properties":
                     {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
+                     "monster":"supervoidpoptop"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":864,
-                 "y":216
+                 "x":296,
+                 "y":200
                 }, 
                 {
                  "height":8,
-                 "id":1317,
+                 "id":1342,
                  "name":"",
                  "properties":
                     {
-                     "monster":"crustoise",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"crustoiseVaultTreasure\" } ] }"
+                     "monster":"supervoidpoptop"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":624,
+                 "y":288
+                }, 
+                {
+                 "height":8,
+                 "id":1343,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":616,
+                 "y":584
+                }, 
+                {
+                 "height":8,
+                 "id":1344,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":328,
+                 "y":672
+                }, 
+                {
+                 "height":8,
+                 "id":1345,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":888,
+                 "y":568
+                }, 
+                {
+                 "height":8,
+                 "id":1346,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidvortex"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":816,
+                 "y":488
+                }, 
+                {
+                 "height":8,
+                 "id":1347,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidvortex"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":848,
-                 "y":120
+                 "y":192
                 }, 
                 {
                  "height":8,
-                 "id":1318,
+                 "id":1348,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"peblitVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":792,
-                 "y":104
+                 "x":208,
+                 "y":296
                 }, 
                 {
                  "height":8,
-                 "id":1319,
+                 "id":1349,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"peblitVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":872,
-                 "y":248
+                 "x":104,
+                 "y":496
                 }, 
                 {
                  "height":8,
-                 "id":1320,
+                 "id":1350,
                  "name":"",
                  "properties":
                     {
-                     "monster":"crustoise",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"crustoiseVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":672,
-                 "y":128
+                 "x":200,
+                 "y":856
                 }, 
                 {
                  "height":8,
-                 "id":1321,
+                 "id":1351,
                  "name":"",
                  "properties":
                     {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":656,
-                 "y":88
+                 "x":720,
+                 "y":512
                 }, 
                 {
                  "height":8,
-                 "id":1322,
+                 "id":1352,
                  "name":"",
                  "properties":
                     {
-                     "monster":"batong",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"batongVaultTreasure\" } ] }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":256,
-                 "y":96
+                 "x":752,
+                 "y":208
                 }, 
                 {
                  "height":8,
-                 "id":1323,
+                 "id":1353,
                  "name":"",
                  "properties":
                     {
-                     "monster":"batong",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"batongVaultTreasure\" } ] }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":360,
-                 "y":64
+                 "x":208,
+                 "y":160
                 }, 
                 {
                  "height":8,
-                 "id":1324,
+                 "id":1354,
                  "name":"",
                  "properties":
                     {
-                     "monster":"batong",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"batongVaultTreasure\" } ] }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":160,
-                 "y":96
-                }, 
-                {
-                 "height":8,
-                 "id":1325,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":216,
-                 "y":256
-                }, 
-                {
-                 "height":8,
-                 "id":1326,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"smoglin",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"smoglinVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":240,
-                 "y":552
-                }, 
-                {
-                 "height":8,
-                 "id":1327,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"crustoise",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"crustoiseVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":296,
-                 "y":432
-                }, 
-                {
-                 "height":8,
-                 "id":1330,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"fennix",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"fennixVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":320,
-                 "y":672
-                }, 
-                {
-                 "height":8,
-                 "id":1332,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 70 } }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":352,
-                 "y":640
-                }, 
-                {
-                 "height":8,
-                 "id":1333,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"fennix",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"fennixVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":424,
-                 "y":632
-                }, 
-                {
-                 "height":8,
-                 "id":1335,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"crustoise",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"crustoiseVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":144,
-                 "y":784
-                }, 
-                {
-                 "height":8,
-                 "id":1336,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"ignome",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"keepTargetInSight\" : false, \"keepTargetInRange\" : 200 } }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":96,
-                 "y":840
-                }, 
-                {
-                 "height":8,
-                 "id":1337,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":296,
-                 "y":872
+                 "x":480,
+                 "y":928
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -539,10 +427,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1341,
+ "nextobjectid":1355,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.5",
+ "tiledversion":"1.1.6",
  "tileheight":8,
  "tilesets":[
         {

@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt3cuN4zAQRVFnMBk5m8l7QpmVgV7Ian6K9ar0roG7abQkqg7prd9\/Xq83EVGD\/r1iU78P4U14u4a3V6e92T89G\/2c2k+z+1c9r+6tukR5\/2a\/u0+ornfkPqHnemMe71099Ry7pHbCHG\/M8cYcb7z7h7lveHuGuWd4927FBe9+7Rrh3acoI8xjTXZmnmGEd5z13axG53x1\/cy1EfsG77XZrXrtXhtxH\/V8q7Q7\/9mZZz4Pb521MvWcq6X2wBtrrPHGGGu8va0x9\/DFHWtHc\/WsK6Q2wBlznPHG+d5u5ZruqWd\/N88qz1EbdfdWrXP13mqjbtbq9e\/cQ23UxbvCu0TMQG3UxbvDrJ7wDtXMK8+t89o72KvfD+9c74oz7LTWrtbVZthtvd2sr2aonKmTt8r65xyrzPXqo\/Z5mveVf6VZqH26eo8869vaOnhnzXF2hop1jj4v66ydmGvGHFfWlbnGlefO7Am8Y2Ye9YzsmeN91nrnjP0NCu8c74jvVYW1m\/eJe46aRp9vvM+v6zfX6O9rvs9r7JvoszrqyvnO9911n7121RXvGNcZ94zr8NY4d+kzg5XPt\/mpPe9Sz1vdiRlm2b3ws\/HGWmOt8MZaZ53tjbXWOtMba711ljfWNawzvLGuY33aG+ta1lfeVN+ac9Q\/rH3C2iesfcLaJ6x9wtonrH3C2iesfcLaJ6x9wtonrH3C2iesfZr5qNdKe42e60\/q9dJ5Y7z7tmONd792vTHvF+Y+RVjj3SvMvcPbK865X3zHe4a7Z7h7Fm3OPqhb1Bn\/+H77m\/o9nbo7g1mpZ+BStivmMWajrnj3a2Zed\/+n9sV73XrGsqI13vPWT0g9Y3Xq+eONNd7Pts5cp3ruzt47ax35TRW8+1m\/B1xP\/7ZZ9zpZR5qr5+7ovbv2WVd3a5X3qXfhDOd7f7u\/+j0px5tqhbdXeHuFNxG59h\/yuNli",
+         "data":"eJzt3cFx6zAMhGF3kI7Szes7peSUmXdQYhIEuQvi18xeMpYI7ifJufnr9Xp9EUKuzufHHaGXsV7U8+CNN9544433Se+q94\/LHKqMHrvup1knvHP3P+qS5f2u+9X7BG9f78z7BO97vWfc8L4jePfyHrXD+67g3cv7nSHe9wXvOtltjrdv8O6ZTHO86wTv2ol0jne9RL53I+Z46xMxyjTH+7mTlc6zjfDeaz3zPlzpOuqeOYO6b6Xvu85mvVbPzbgO3jn9z3Z+cj28ddbKjOxdbYE73ljnWON9VyL7VjtgjTfWeea3e6v7V6Wjt7pzdTp5q7t2SAdvdcduudVb3atrbvNW96mwi5xT3Vvd\/V99uawzco7a0dlbNWf02rd4O\/tmzr9yjdHz1JZqb4e9ZHSAt6\/5jv3f5H3C3LmPldkr7E9tr94f3me9Hfvp6n3S2q2fyLzO+3GzfupI2Vknb5X1\/z259PZ0jPamdqzi7dTbzDxOczt6j6z122wVvF3i4D26XrR713tcEeW+I+vO3BN453SetcbuzvEe62TntUfzLyl4n\/HOeK8qrLt577jmqGn28433fu93rtnva97nHvfNju\/iEVee7\/O+q+6z567+n4D3mmv0O3vXeXhrnKvkp4PIoXaLRN23Our+V\/LCr4031lgTrIneDGusscYaa6yJn7V6v51z4jnC2yOn3pl463PKGm99Tlrj3csa717WePeyxruXNd69rPHuZY13L2u8e1nj3csa717WePeyxruXNd65mTlUM+K9p8d3cZlT3VulzBo79OwyR7WsWONdL6veqq4dZqiaiubq9asmwxrvWqlojrfeH++aqfCc4+1lvtsB717uePdyx7uO+9P18PZL1jP+4\/Pb3\/A+b7rLefb5x3u\/tUPwHjcb7Qrvepnp66\/PqX3xjlvPWDpa4z1vfUO6e6v7xxvrnenqre49aoB3Xe+VWUd+UwXvetafA65Zv3OFt9460xzvGtaz7k+fj\/SidqrsvWsvmb9rhnfMsmpfeGufXXUv6nnwxhtvvPH26IUQ4pdvhKkJ\/w==",
          "encoding":"base64",
          "height":124,
          "name":"front",
@@ -68,255 +68,345 @@
          "objects":[
                 {
                  "height":8,
-                 "id":1065,
+                 "id":1149,
                  "name":"",
                  "properties":
                     {
-                     "monster":"ignome",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"keepTargetInSight\" : false, \"keepTargetInRange\" : 200 } }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":560,
-                 "y":384
+                 "y":264
                 }, 
                 {
                  "height":8,
-                 "id":1066,
+                 "id":1150,
                  "name":"",
                  "properties":
                     {
-                     "monster":"ignome",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"keepTargetInSight\" : false, \"keepTargetInRange\" : 200 } }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":584,
-                 "y":400
+                 "x":912,
+                 "y":496
                 }, 
                 {
                  "height":8,
-                 "id":1067,
+                 "id":1151,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":360,
-                 "y":344
+                 "x":744,
+                 "y":856
                 }, 
                 {
                  "height":8,
-                 "id":1075,
+                 "id":1152,
                  "name":"",
                  "properties":
                     {
-                     "monster":"batong",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"batongVaultTreasure\" } ] }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":848,
-                 "y":80
+                 "x":888,
+                 "y":144
                 }, 
                 {
                  "height":8,
-                 "id":1076,
+                 "id":1153,
                  "name":"",
                  "properties":
                     {
-                     "monster":"crabcano",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"crabcanoVaultTreasure\" } ] }"
+                     "monster":"supervoidtrailer"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":480,
-                 "y":416
+                 "x":160,
+                 "y":488
                 }, 
                 {
                  "height":8,
-                 "id":1077,
+                 "id":1154,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"peblitVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":768,
-                 "y":328
+                 "x":528,
+                 "y":904
                 }, 
                 {
                  "height":8,
-                 "id":1078,
+                 "id":1155,
                  "name":"",
                  "properties":
                     {
-                     "monster":"fennix",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"fennixVaultTreasure\" } ] }"
+                     "monster":"supervoidvortex"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":840,
+                 "y":256
+                }, 
+                {
+                 "height":8,
+                 "id":1156,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidvortex"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":536,
+                 "y":88
+                }, 
+                {
+                 "height":8,
+                 "id":1157,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidvortex"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":120,
+                 "y":496
+                }, 
+                {
+                 "height":8,
+                 "id":1158,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidvortex"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":784,
+                 "y":608
+                }, 
+                {
+                 "height":8,
+                 "id":1159,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":112,
+                 "y":560
+                }, 
+                {
+                 "height":8,
+                 "id":1160,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":712,
-                 "y":304
-                }, 
-                {
-                 "height":8,
-                 "id":1080,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"fennix",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"fennixVaultTreasure\" } ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":792,
-                 "y":304
-                }, 
-                {
-                 "height":8,
-                 "id":1082,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":816,
-                 "y":840
-                }, 
-                {
-                 "height":8,
-                 "id":1083,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"pyromantle",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"pyromantleVaultTreasure\" } ], \"behaviorConfig\" : { \"targetQueryRange\" : 50 } }"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":880,
                  "y":872
                 }, 
                 {
                  "height":8,
-                 "id":1084,
+                 "id":1161,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"peblitVaultTreasure\" } ] }"
+                     "monster":"supervoidpoptop"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":720,
-                 "y":872
+                 "x":888,
+                 "y":560
                 }, 
                 {
                  "height":8,
-                 "id":1092,
+                 "id":1162,
                  "name":"",
                  "properties":
                     {
-                     "monster":"peblit",
-                     "parameters":"{ \"dropPools\" : [ { \"default\" : \"peblitVaultTreasure\" } ] }"
+                     "monster":"supervoidpoptop"
                     },
                  "propertytypes":
                     {
-                     "monster":"string",
-                     "parameters":"string"
+                     "monster":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":632,
-                 "y":920
+                 "x":800,
+                 "y":312
+                }, 
+                {
+                 "height":8,
+                 "id":1163,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":640,
+                 "y":296
+                }, 
+                {
+                 "height":8,
+                 "id":1164,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":680,
+                 "y":112
+                }, 
+                {
+                 "height":8,
+                 "id":1165,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":408,
+                 "y":464
+                }, 
+                {
+                 "height":8,
+                 "id":1166,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"supervoidpoptop"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":256,
+                 "y":496
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -413,10 +503,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1149,
+ "nextobjectid":1167,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.5",
+ "tiledversion":"1.1.6",
  "tileheight":8,
  "tilesets":[
         {
