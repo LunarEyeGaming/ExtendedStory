@@ -48,7 +48,7 @@
       },
       {
         "time" : 0.5,
-        "energyCost" : 20,
+        "energyCost" : 30,
         "cooldown" : 0.15,
         "projectileType" : "lightningthrower",
         "projectileCount" : 10,
@@ -60,7 +60,7 @@
       },
       {
         "time" : 1.0,
-        "energyCost" : 30,
+        "energyCost" : 90,
         "cooldown" : 0.25,
         "projectileType" : "electricplasmarocket",
         "projectileCount" : 5,
@@ -114,7 +114,7 @@
     "elementalConfig" : {
       "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
     },
-    "energyUsage" : 20,
+    "energyUsage" : 75,
 	"baseDps" : 5,
 	"fireTime" : 0.5
   },
