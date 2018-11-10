@@ -1,0 +1,21 @@
+{
+  "modId" : 410,
+  "modName" : "obliviumore",
+  "itemDrop" : "obliviumore",
+  "description" : "Oblivium Ore.",
+  "health" : 25,
+  "harvestLevel" : 6,
+  "breaksWithTile" : true,
+
+  "miningSounds" : [ "/sfx/tools/pickaxe_ore.ogg", "/sfx/tools/pickaxe_ore2.ogg" ],
+  "miningParticle" : "orespark",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "obliviumore.png",
+    "variants" : 8,
+    "multiColored" : false,
+    "zLevel" : 0,
+    "radiantLight" : [50, 50, 50]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name" : "multijump3_es",
+  "type" : "legs",
+
+  "scripts" : ["multijump.lua"],
+  "animator" : "multijump3_es.animation",
+
+  "description" : "5 full additional jumps.",
+  "shortDescription" : "Multi Jump Mk III",
+  "rarity" : "Legendary",
+  "icon" : "/tech/multijump3_es.png",
+
+  "chipCost" : 12,
+
+  "multiJumpCount" : 5
+}

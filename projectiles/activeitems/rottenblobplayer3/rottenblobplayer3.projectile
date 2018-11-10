@@ -1,0 +1,33 @@
+{
+  "projectileName" : "rottenblobplayer3",
+  "image" : "rottenblobplayer3.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "physics" : "grenade",
+  "timeToLive" : 0.4,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "rottenblobplayer",
+	  "angleAdjust" : 5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottenblobplayer",
+	  "angleAdjust" : 0
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottenblobplayer",
+	  "angleAdjust" : -5
+	}
+  ],
+  "power" : 12,
+  "speed" : 45,
+  "damageType" : "nodamage"
+}

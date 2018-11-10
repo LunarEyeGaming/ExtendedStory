@@ -10,6 +10,9 @@
   "category" : "rocketLauncher",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 16,
+  "critBonus" : 16,
 
   "inventoryIcon" : [
     { "image" : "rapidrl4_es.png:idle" }
@@ -26,7 +29,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/rocket_fire1.ogg" ],
-	  "altFire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
+	  "fireGuided" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
     }
   },
   "baseOffset" : [0.3, 0.4],
@@ -41,8 +44,12 @@
     "class" : "GunFire",
 
     "fireTime" : 0.25,
-    "baseDps" : 15.0,
-    "energyUsage" : 24,
+    "baseDps" : 24.0,
+<<<<<<< HEAD
+    "energyUsage" : 150,
+=======
+    "energyUsage" : 42,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     "inaccuracy" : 0.03,
     "fireType" : "auto",
 
@@ -89,7 +96,7 @@
   "altAbilityType" : "guidedrocket",
   "altAbility" : {
     "elementalConfig" : {
-      "fire" : { "projectileParameters" : {"speed" : 40, "rotationRate" : 8, "trailDistance" : 6.0, "trailProjectile" : "fuelairignition"}, "fireTime" : 1.0, "name" : "Guided Rocket" }
+      "fire" : { "projectileParameters" : {"speed" : 40, "rotationRate" : 8, "trailDistance" : 6.0, "trailProjectile" : "fuelairignition"}, "fireTime" : 1.0, "name" : "Guided Rocket", "baseDps" : 18 }
 	  }
   },
 

@@ -1,0 +1,58 @@
+{
+  "itemName" : "ancientslingshot",
+  "price" : 10,
+  "inventoryIcon" : "ancientslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "tooltipKind" : "bow",
+  "category" : "Ancient Slingshot",
+  "description" : "An extremely powerful slingshot. ^green;Heat-seeking shots.",
+  "shortdescription" : "^magenta;^reset;",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+
+  "level" : 10,
+  
+  "critChance" : 25,
+  "critBonus" : 25,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "ancientslingshot.png",
+    "bowFullbright" : "ancientslingshotunlit.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }},
+      "bowFullbright" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/melee/charge_up11.ogg" ],
+      "release" : [ "/sfx/gun/plasma_sniper1.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    "drawSpeedMultiplier" : "constant",
+    "projectileType" : "t10slingshot",
+    "powerProjectileType" : "t10cslingshot",
+	"stances" : {
+      "draw" : {
+		"backArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+		"backArmFrame" : "swimIdle.2"
+      }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

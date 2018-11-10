@@ -1,0 +1,20 @@
+{
+  "modId" : 409,
+  "modName" : "bacteriaore",
+  "itemDrop" : "bacteriaore_es",
+  "description" : "Bacteria.",
+  "health" : 2,
+  "harvestLevel" : 5,
+  "breaksWithTile" : true,
+
+  "miningSounds" : [ "/sfx/tools/pickaxe_ore.ogg", "/sfx/tools/pickaxe_ore2.ogg" ],
+  "miningParticle" : "orespark",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "bacteriaore.png",
+    "variants" : 8,
+    "multiColored" : false,
+    "zLevel" : 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "itemName" : "destroyerspawnblockaugment",
+  "price" : 2000,
+  "rarity" : "Legendary",
+  "category" : "eppAugment",
+  "inventoryIcon" : "destroyerspawnblock.png",
+  "description" : "An EPP module that makes you invisible to the Destroyer of Worlds.",
+  "shortdescription" : "Destroyer Camo Augment",
+
+  "augment" : {
+    "type" : "back",
+    "name" : "destroyerspawnblock",
+    "displayName" : "Destroyer Camo",
+    "displayIcon" : "/items/augments/back/destroyerspawnblock.png",
+    "effects" : [ "destroyerspawnblock" ]
+  },
+
+  "radioMessagesOnPickup" : [ "pickupaugment" ],
+
+  "scripts" : [ "/scripts/augments/augment.lua" ]
+}

@@ -1,0 +1,68 @@
+{
+  "projectileName" : "ancientbroadswordcrystal",
+  "physics" : "hover",
+  "timeToLive" : 6.35,
+  "image" : "ancientbroadswordcrystal.png",
+  "animationCycle" : 0.35,
+  "lightColor" : [90, 60, 110],
+  "frameNumber" : 6,
+  "windupFrames" : 3,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosionnontile.config"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : "glassshard"
+		}
+	  ]
+	},
+	{
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : "ancientenergy1"
+		}
+	  ]
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/objects/prism_break_large1.ogg", "/sfx/objects/prism_break_large2.ogg" ]
+	}
+  ],
+  "speed" : 0,
+  "power" : 0,
+  "damagePoly" : [],
+
+  "fullbright" : true,
+  "emitters" : [],
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : true,
+
+  "bounces" : -1,
+  "onlyHitTerrain" : true,
+
+  "scripts" : [ "ancientbroadswordcrystal.lua" ],
+
+  "projectileType" : "ancientbroadswordcrystal2",
+  "projectileParameters" : {},
+  "spawnRate" : 0.1,
+
+  "persistentAudio" : "/sfx/environmental/space_loop2.ogg"
+}

@@ -1,0 +1,83 @@
+{
+  "projectileName" : "gravwarpsingularity",
+  "bounces" : -1,
+  "timeToLive" : 3,
+  "image" : "gravwarpsingularity.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "option",
+	  "options" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "yellowglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "whiteglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "redglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "greenglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "blueglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "magentaglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "orangeglobe",
+		  "fuzzAngle" : 180
+		}
+	  ]
+	}
+  ],
+  "animationCycle" : 0.375,
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 5,
+  "power" : 5,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
+  "damageKind" : "abyss",
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ngravityexplosion",
+	  "inheritDamageFactor" : 0,
+	  "inheritSpeedFactor" : 0,
+	  "config" : {
+	    "timeToLive" : 2.0
+	  }
+	}
+  ],
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {}
+		}
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1,
+            "cycle" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ],
+          "image" : "<partImage>"
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : []
+    },
+    "slam" : {
+      "burstCount" : 20,
+      "offsetRegion" : [-8, -6, 8, -4],
+      "particles" : [
+        { "particle" : "dust4" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [  ],
+    "slam" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

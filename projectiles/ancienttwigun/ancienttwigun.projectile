@@ -1,0 +1,29 @@
+{
+  "projectileName" : "ancienttwigun",
+  "image" : "ancienttwigun.png",
+  "fullbright" : true,
+  "animationCycle" : 1.00,
+  "frameNumber" : 1,
+  "physics" : "grenade",
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "ancienttwigun",
+<<<<<<< HEAD
+	  "level" : 6
+=======
+	  "level" : 3
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+    },
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/tech/mech_activate4.ogg" ]
+	}
+  ],
+  "power" : 0.0,
+  "speed" : 50,
+  "damageType" : "ignoresdef",
+  "damageKind" : "nodamage"
+}

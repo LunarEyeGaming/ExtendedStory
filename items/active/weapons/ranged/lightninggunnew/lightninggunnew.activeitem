@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
+  
+  "critChance" : 20,
+  "critBonus" : 20,
 
   "inventoryIcon" : "lightninggunnew.png:empty",
 
@@ -51,7 +54,7 @@
       },
       {
         "time" : 0.5,
-        "energyCost" : 20,
+        "energyCost" : 75,
         "cooldown" : 0.15,
         "projectileType" : "lightningthrower",
         "projectileCount" : 10,
@@ -63,7 +66,7 @@
       },
       {
         "time" : 1.0,
-        "energyCost" : 30,
+        "energyCost" : 175,
         "cooldown" : 0.25,
         "projectileType" : "electricorb",
         "projectileCount" : 5,
@@ -129,7 +132,7 @@
 	"name" : "Lightning Beam",
 
     "fireTime" : 0.1,
-    "baseDps" : 15,
+    "baseDps" : 30,
     "energyUsage" : 30,
 
     "damageConfig" : {
@@ -147,7 +150,7 @@
       "startOffset" : [0, 0],
       "startSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
       "segmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
-      "endSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>?fade=0.5",
+      "endSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>?fade=00000000;0.6",
       "segmentSize" : 0.12,
       "overdrawLength" : 0.2,
       "taper" : 0,

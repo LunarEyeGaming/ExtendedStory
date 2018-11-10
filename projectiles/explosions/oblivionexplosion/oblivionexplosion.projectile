@@ -1,0 +1,16 @@
+{
+  "projectileName" : "oblivionexplosion",
+  "image" : "oblivionexplosion.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 6,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "plasma",
+
+  "piercing" : true,
+  "fullbright" : true,
+  "bounces" : -1,
+  "power" : 20,
+  "speed" : 0
+}

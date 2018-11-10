@@ -1,0 +1,13 @@
+{
+  "projectileName" : "rotaura",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "damagePoly" : [ [-180, 0], [-120, -120], [0, -180], [120, -120], [180, 0], [120, 120], [0, 180], [-120, 120] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "piercing" : true,
+  "damageKind" : "default",
+  "power" : 0,
+  "statusEffects" : ["rotaura2"]
+}

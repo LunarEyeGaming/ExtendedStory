@@ -1,0 +1,66 @@
+{
+  "projectileName" : "ancientstaffportal",
+  "physics" : "hover",
+  "timeToLive" : 6.35,
+  "image" : "ancientstaffportal.png",
+  "animationCycle" : 0.35,
+  "lightColor" : [90, 60, 110],
+  "frameNumber" : 4,
+  "windupFrames" : 3,
+  "winddownFrames" : 3,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear2.ogg" ]
+    },
+    {
+      "time" : 6,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+    }
+  ],
+  "speed" : 0,
+  "power" : 0,
+  "damagePoly" : [],
+
+  "fullbright" : true,
+  "emitters" : [],
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : true,
+
+  "bounces" : -1,
+  "onlyHitTerrain" : true,
+
+  "scripts" : [ "/projectiles/activeitems/staff/elementportal/elementportal.lua" ],
+
+  "projectileType" : "fireswarmer",
+  "projectileParameters" : {
+    "timeToLive": 0.1,
+	"speed": 0,
+	"onlyHitTerrain": true,
+	"processing" : "?scalenearest=0",
+	"actionOnReap": [
+	  {
+	    "action": "projectile",
+		"type": "supernovabeam",
+		"config": {
+		  "timeToLive": 0,
+		  "speed": 0
+		}
+	  }
+	]
+  },
+  "spawnRate" : 1.0,
+
+  "persistentAudio" : "/sfx/melee/barrier_create_electric.ogg"
+}

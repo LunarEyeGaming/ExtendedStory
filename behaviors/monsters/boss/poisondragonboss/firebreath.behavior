@@ -1,0 +1,335 @@
+{
+  "name": "poisondragonboss-firebreath",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "headRotationCenter": [4.125, 2.5],
+    "projectileSpawnOffset": [3.75, -3.5],
+    "headAngleOffset": 0.7
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+	    "title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "emitter": {"value": "firewindup"},
+		  "active": {"value": true}
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "self"}
+		},
+		"output": {
+		  "y": "hoverY"
+		}
+	  },
+	  {
+	    "title": "playSound",
+		"type": "action",
+		"name": "playSound",
+		"parameters": {
+		  "sound": {"value": "firebreath"},
+		  "loops": {"value": -1}
+		}
+	  },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 1.5}
+		}
+	  },
+	  {
+	    "title": "playSound",
+		"type": "action",
+		"name": "playSound",
+		"parameters": {
+		  "sound": {"value": "fire"}
+		}
+	  },
+	  {
+	    "title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "emitter": {"value": "firewindup"},
+		  "active": {"value": false}
+		}
+	  },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "attack"}
+        }
+      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.35}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+              "title": "Reset",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+			    {
+                  "title": "faceEntity",
+                  "type": "action",
+                  "name": "faceEntity",
+                  "parameters": {
+                    "entity": {"key": "target"}
+                  }
+                },
+                {
+                  "title": "vecMultiply",
+                  "type": "action",
+                  "name": "vecMultiply",
+                  "parameters": {
+                    "first": {"key": "<headRotationCenter>"},
+                    "second": {"value": ["facingDirection", 1]}
+                  },
+                  "output": {
+                    "vector": "headRotationCenter"
+                  }
+                },
+                {
+                  "title": "entityDirection",
+                  "type": "action",
+                  "name": "entityDirection",
+                  "parameters": {
+                    "entity": {"key": "self"},
+                    "offset": {"key": "headRotationCenter"},
+                    "target": {"key": "target"}
+                  },
+                  "output": {
+                    "vector": "aimVector"
+                  }
+                },
+                {
+                  "title": "vecMultiply",
+                  "type": "action",
+                  "name": "vecMultiply",
+                  "parameters": {
+                    "first": {"key": "aimVector"},
+                    "second": {"value": ["facingDirection", 1]}
+                  },
+                  "output": {
+                    "vector": "facingVector"
+                  }
+                },
+                {
+                  "title": "vecAngle",
+                  "type": "action",
+                  "name": "vecAngle",
+                  "parameters": {
+                    "vector": {"key": "facingVector"}
+                  },
+                  "output": {
+                    "angle": "targetAngle"
+                  }
+                },
+                {
+                  "title": "add",
+                  "type": "action",
+                  "name": "add",
+                  "parameters": {
+                    "addend": {"key": "<headAngleOffset>"},
+                    "number": {"key": "targetAngle"}
+                  },
+                  "output": {
+                    "result": "targetAngle"
+                  }
+                },
+                {
+                  "title": "vecRotate",
+                  "type": "action",
+                  "name": "vecRotate",
+                  "parameters": {
+                    "angle": {"key": "targetAngle"},
+                    "vector": {"key": "<projectileSpawnOffset>"}
+                  },
+                  "output": {
+                    "vector": "projectileOffset"
+                  }
+                },
+                {
+                  "title": "vecAdd",
+                  "type": "action",
+                  "name": "vecAdd",
+                  "parameters": {
+                    "first": {"key": "projectileOffset"},
+                    "second": {"key": "<headRotationCenter>"}
+                  },
+                  "output": {
+                    "vector": "projectileOffset"
+                  }
+                },
+                {
+                  "title": "vecMultiply",
+                  "type": "action",
+                  "name": "vecMultiply",
+                  "parameters": {
+                    "first": {"key": "projectileOffset"},
+                    "second": {"value": ["facingDirection", 1]}
+                  },
+                  "output": {
+                    "vector": "projectileOffset"
+                  }
+                },
+                {
+                  "title": "resetTransformationGroup",
+                  "type": "action",
+                  "name": "resetTransformationGroup",
+                  "parameters": {
+                    "transformationGroup": {"value": "head"}
+                  }
+                },
+                {
+                  "title": "rotateTransformationGroup",
+                  "type": "action",
+                  "name": "rotateTransformationGroup",
+                  "parameters": {
+                    "angle": {"key": "targetAngle"},
+                    "rotationCenter": {"key": "<headRotationCenter>"},
+                    "transformationGroup": {"value": "head"}
+                  }
+                },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				}
+              ]
+            }
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+              "title": "Reset",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"key": "projectileOffset"},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "projectile", "type": "poisondragonprojectile2", "fuzzAngle": 10}]}},
+                    "projectileType": {"value": "orbitalup"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				}
+              ]
+            }
+		  },
+		  {
+		    "title": "timer",
+			"type": "action",
+			"name": "timer",
+			"parameters": {
+			  "time": {"value": 10}
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "winddown"},
+          "type": {"value": "attack"}
+        }
+      },
+	  {
+	    "title": "stopAllSounds",
+		"type": "action",
+		"name": "stopAllSounds",
+		"parameters": {
+		  "sound": {"value": "firebreath"}
+		}
+	  },
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "head"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

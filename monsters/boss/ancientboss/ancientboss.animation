@@ -22,7 +22,7 @@
         "states" : {
           "visible" : {
             "frames" : 8,
-            "cycle" : 0.25,
+            "cycle" : 1,
             "mode" : "loop"
           },
           "invisible" : {
@@ -126,7 +126,11 @@
             "frames" : 4,
             "cycle" : 0.6,
             "mode" : "transition",
-            "transition" : "active"
+            "transition" : "active",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "active" : {
             "frames" : 8,
@@ -438,7 +442,8 @@
             "type" : "animated",
             "animation" : "/animations/ancientteleport/ancientteleport.animation",
             "timeToLive" : 1.0,
-            "layer" : "front"
+            "layer" : "front",
+			"fullbright" : true
           }
         }
       ]
@@ -473,6 +478,28 @@
         { "particle" : "fallingair" },
         { "particle" : "fallingair" },
         { "particle" : "fallingair" }
+      ]
+    },
+    "idle" : {
+	  "active" : true,
+      "emissionRate" : 100.0,
+      "particles" : [
+        { 
+		  "particle" : {
+            "type" : "textured",
+            "image" : "/monsters/boss/ancientboss/ufo/ufo.png:phase1.1?setcolor=892a9c?multiply=ffffff10",
+            "size" : 1,
+            "fade" : 1,
+			"destructionAction" : "fade",
+            "destructionTime" : 0.5,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0,
+            "layer" : "back"
+          } 
+		}
       ]
     },
     "landing" : {

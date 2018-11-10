@@ -9,13 +9,36 @@
   "fullbright" : true,
   "piercing" : true,
   "periodicActions" : [
-    {
+	{
       "time" : 0.01,
       "repeat" : true,
+<<<<<<< HEAD
+=======
       "action" : "projectile",
       "type" : "blackholegravity",
-      "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0
+    },
+	{
+      "time" : 0.01,
+      "repeat" : true,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 0],
+        "timeToLive" : 1.5,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "initialVelocity" : [4, 4],
+		  "position" : [1, 1]
+		}
+      }
     }
   ],
   "actionOnReap" : [
@@ -26,11 +49,27 @@
 	  "inheritSpeedFactor" : 0
 	}
   ],
-  "animationCycle" : 2.0,
+<<<<<<< HEAD
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  },
+=======
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+  "animationCycle" : 1,
   "lightColor" : [93, 10, 47],
   "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
-  "frameNumber" : 18,
+  "frameNumber" : 8,
   "power" : 50,
+  "damageRepeatTimeout" : 0.1,
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
   "damageKind" : "abyss"
 }

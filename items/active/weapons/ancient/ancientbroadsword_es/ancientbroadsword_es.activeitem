@@ -1,0 +1,138 @@
+{
+  "itemName" : "ancientbroadsword_es",
+  "price" : 1000,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A hilt with a high-voltage plasma blade.",
+  "shortdescription" : "^magenta;Ancient Broadsword^reset;",
+  "tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "broadsword"],
+  
+  "critChance" : 5,
+  "critBonus" : 2,
+
+  "inventoryIcon" : "ancientbroadsword_es.png:active.1",
+
+  "animation" : "ancientbroadsword_es.animation",
+  "animationParts" : {
+    "sword" : "ancientbroadsword_es.png",
+	"charge" : "charge.png",
+    "swordFullbright" : "ancientbroadswordfullbright_es.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire2" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire3" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire4" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire5" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire6" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire7" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire8" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "fire9" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ],
+      "physicalcharge" : ["/sfx/melee/staff_charge1.ogg"],
+      "physicalfullcharge" : ["/sfx/melee/sword_parry.ogg"],
+      "physicalchargedloop" : ["/sfx/melee/ancientbroadsword_charged_loop.ogg"],
+      "physicaldischarge" : ["/sfx/melee/elemental_aura_deactivate1.ogg"],
+      "physicalactivate" : ["/sfx/projectiles/plasma3.ogg"]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 1.5,
+
+  "elementalType" : "physical",
+  
+  "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "weaponRotation" : -10,
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "duration" : 1.1,
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charged" : {
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "discharge" : {
+      "duration" : 0.5,
+      "armRotation" : -10,
+      "weaponRotation" : -50,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "cooldown" : {
+      "duration" : 0.5,
+      "armRotation" : -45,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    }
+  },
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "damageConfig" : {"damageSourceKind" : "broadsword","knockbackMode" : "facing","timeout" : 0.5},
+    "fireTime" : 0.5,
+    "baseDps" : 15,
+	"comboSteps" : 9,
+	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.5,"knockback" : 25},{"baseDamageFactor" : 1.5,"knockback" : 40},{"baseDamageFactor" : 1.5,"knockback" : 40},{"baseDamageFactor" : 2.5,"knockback" : 40}],
+
+    "stances" : {
+      "windup1" : {"duration" : 0.15},
+	  "windup2" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire2" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait2" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup3" : {"duration" : 0.1, "armRotation" : 15, "weaponRotation" : -10, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "preslash3" : {"duration" : 0.025,"armRotation" : -20,"weaponRotation" : -30,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "fire3" : {"duration" : 0.15,"armRotation" : -90,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait3" : {"duration" : 0.2,"armRotation" : -90,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup4" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "fire4" : {"duration" : 0.3, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "wait4" : {"duration" : 0.1, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "windup5" : {"duration" : 0.15,"armRotation" : 0,"weaponRotation" : -60,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "fire5" : {"duration" : 0.2,"armRotation" : -135,"weaponRotation" : 55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "wait5" : {"duration" : 0.2,"armRotation" : -135,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup6" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire6" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait6" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup7" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire7" : {"duration" : 0.2,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait7" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup8" : {"duration" : 0.1, "armRotation" : 90, "weaponRotation" : -10, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "preslash8" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "fire8" : {"duration" : 0.15,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait8" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup9" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire9" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait9" : {"duration" : 0.3,"armRotation" : 50,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
+    }
+  },
+
+  "altAbilityType" : "ancientbroadswordalt",
+  "altAbility" : {},
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

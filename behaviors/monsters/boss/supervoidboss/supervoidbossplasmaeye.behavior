@@ -22,7 +22,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 3},
+          "maxLoops": {"value": 5},
           "untilSuccess": {"value": false}
         },
         "child": {
@@ -56,51 +56,50 @@
                 "sound": {"value": "spawnIceEruptions"}
               }
             },
-            {
-              "title": "offsetPosition",
+		    {
+              "title": "random",
               "type": "action",
-              "name": "offsetPosition",
+              "name": "random",
               "parameters": {
-                "offset": {"value": [-16, 0]},
-                "position": {"key": "spawn"}
+                "max": {"value": 20},
+                "min": {"value": -20}
               },
               "output": {
-                "position": "leftProjectile"
+                "number": "eyeX"
               }
             },
-            {
-              "title": "spawnFloorProjectiles",
+		    {
+              "title": "random",
               "type": "action",
-              "name": "spawnFloorProjectiles",
+              "name": "random",
               "parameters": {
-                "areaWidth": {"value": 32},
-                "center": {"key": "leftProjectile"},
-                "power": {"value": 10},
-                "projectileCount": {"value": 1},
-                "projectileType": {"value": "plasmaeye"},
-                "segmentWidth": {"value": 8},
-                "spawnHeight": {"value": 0.625}
+                "max": {"value": 20},
+                "min": {"value": -20}
               },
               "output": {
-                "projectiles": "lavaProjectiles"
+                "number": "eyeY"
               }
             },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.4}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 2.4}
-              }
-            }
+		    {
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, 0]},
+    	        "offset": {"value": ["eyeX", "eyeY"]},
+    	        "projectileConfig": {"value": {}},
+    	        "projectileType": {"value": "plasmaeye"},
+			    "scalePower": {"value": true}
+    	      }
+    	    },
+			{
+			  "title": "timer",
+			  "type": "action",
+			  "name": "timer",
+			  "parameters": {
+			    "time": {"value": 2}
+			  }
+			}
           ]
         }
       }

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "refinedaegisalt", "count" : 14 },
+    { "item" : "battery", "count" : 3 },
+	{ "item" : "refinedferozium", "count" : 14 },
+	{ "item" : "ioncell", "count" : 3 },
+	{ "item" : "solariumstar", "count" : 18 }
+  ],
+  "output" : { "item" : "ionflamethrower", "count" : 1 },
+  "groups" : [ "craftingaccelerator", "weapons", "all" ]
+}

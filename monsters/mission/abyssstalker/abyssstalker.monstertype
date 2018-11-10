@@ -56,7 +56,7 @@
 
             "projectileCount" : 1,
             "projectileType" : "invisibleprojectile",
-            "projectileParameters" : {"timeToLive" : 3.5, "power" : 100, "knockback" : 100, "damageKind" : "abysslash", "actionOnHit" : [{"action" : "sound", "options" : ["/sfx/npc/monsters/oogler_charge.ogg"]}], "damageTeam" : {"type" : "enemy"}},
+            "projectileParameters" : {"timeToLive" : 3.5, "power" : 50, "knockback" : 100, "damageKind" : "abysslash", "actionOnHit" : [{"action" : "projectile", "type" : "orbitalup", "config" : {"speed" : 0, "onlyHitTerrain" : true, "timeToLive" : 0, "actionOnReap" : [{"action" : "loop", "count" : 10, "body" : [{"action" : "sound", "options" : ["/sfx/npc/monsters/oogler_charge.ogg"]}]}]}}], "damageTeam" : {"type" : "enemy"}},
             "rotationCenter" : [0.0, 0.0],
             "fireSound" : "",
             "fireStateType" : "",

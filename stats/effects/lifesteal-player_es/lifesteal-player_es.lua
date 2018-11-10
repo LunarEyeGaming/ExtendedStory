@@ -12,7 +12,9 @@ function init()
 end
 
 function update(dt)
-  status.modifyResource("health", config.getParameter("healAmount"))
+  if entity.entityType() == "player" then
+    status.modifyResource("health", config.getParameter("healAmount"))
+  end
 end
 
 function uninit()

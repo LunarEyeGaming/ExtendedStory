@@ -1,0 +1,15 @@
+{
+  "type" : "spheredeactivaterarea",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/spheredeactivaterarea/spheredeactivaterarea.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-50, -50, 50, 50],
+
+  "music" : [],
+
+  "startFadeOutTime" : 2.0,
+  "fadeInTime" : 2.0,
+  "endFadeOutTime" : 2.0
+}

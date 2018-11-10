@@ -1,0 +1,796 @@
+{
+  "name": "ancientboss2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+	  {
+	    "title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "self"},
+		  "offset": {"value": [15, -9.8]}
+		},
+		"output": {
+		  "position": "leftfist"
+		}
+	  },
+	  {
+	    "title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "self"},
+		  "offset": {"value": [-15, -9.8]}
+		},
+		"output": {
+		  "position": "rightfist"
+		}
+	  },
+	  {
+<<<<<<< HEAD
+=======
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [0, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [10, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [20, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [30, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [40, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [-10, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [-20, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [-30, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [1, 0]},
+    	  "offset": {"value": [-40, 32]},
+    	  "projectileConfig": {"value": {}},
+    	  "projectileType": {"value": "ancientboss2_ceilingcollision"}
+    	}
+      },
+	  {
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+        "title": "spawnMonster",
+        "type": "action",
+        "name": "spawnMonster",
+        "parameters": {
+          "type": {"value": "leftfist"},
+		  "level": {"value": 10},
+		  "position": {"key": "leftfist"}
+        },
+		"output": {
+		  "entityId": "leftfistId"
+		}
+      },
+	  {
+        "title": "spawnMonster",
+        "type": "action",
+        "name": "spawnMonster",
+        "parameters": {
+          "type": {"value": "rightfist"},
+		  "level": {"value": 10},
+		  "position": {"key": "rightfist"}
+        },
+		"output": {
+		  "entityId": "rightfistId"
+		}
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 80},
+              "keepTargetInRange": {"value": 100},
+              "targetEntityTypes": {"value": ["player"]},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 1}
+            }
+          },
+          {
+            "title": "Spiderboss",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "Reset",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setDamageBar",
+                        "type": "action",
+                        "name": "setDamageBar",
+                        "parameters": {
+                          "type": {"value": "Special"}
+                        }
+                      },
+					  {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
+                        }
+                      },
+					  {
+					    "title": "setAnimationState",
+						"type": "action",
+						"name": "setAnimationState",
+						"parameters": {
+						  "state": {"value": "wake"},
+						  "type": {"value": "body"}
+						}
+					  },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.8}
+                        }
+                      },
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+        							  "title": "ancientboss2-fistattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-fistattack",
+        							  "parameters": {
+                                        "leftfistId": {"key": "leftfistId"},
+										"rightfistId": {"key": "rightfistId"},
+										"target": {"key": "target"},
+										"sourceId": {"key": "self"}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-orbattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-orbattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ancientboss2-minionattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-minionattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.75},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-fistattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-fistattack",
+        							  "parameters": {
+                                        "leftfistId": {"key": "leftfistId"},
+										"rightfistId": {"key": "rightfistId"},
+										"target": {"key": "target"},
+										"sourceId": {"key": "self"}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-orbattack2",
+        							  "type": "module",
+        							  "name": "ancientboss2-orbattack2",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ancientboss2-minionattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-minionattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.5},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-fistattack2",
+        							  "type": "module",
+        							  "name": "ancientboss2-fistattack2",
+        							  "parameters": {
+                                        "leftfistId": {"key": "leftfistId"},
+										"rightfistId": {"key": "rightfistId"},
+										"target": {"key": "target"},
+										"sourceId": {"key": "self"}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-laserattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-laserattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ancientboss2-minionattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-minionattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.25},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-fistattack2",
+        							  "type": "module",
+        							  "name": "ancientboss2-fistattack2",
+        							  "parameters": {
+                                        "leftfistId": {"key": "leftfistId"},
+										"rightfistId": {"key": "rightfistId"},
+										"target": {"key": "target"},
+										"sourceId": {"key": "self"}
+									  }
+        							},
+									{
+        							  "title": "ancientboss2-orbattack4",
+        							  "type": "module",
+        							  "name": "ancientboss2-orbattack4",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ancientboss2-orbattack3",
+        							  "type": "module",
+        							  "name": "ancientboss2-orbattack3",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ancientboss2-minionattack",
+        							  "type": "module",
+        							  "name": "ancientboss2-minionattack",
+        							  "parameters": {}
+        							}
+								  ]
+								}
+						      }
+							]
+                          }
+						]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+	              {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "abyssstalker"},
+		              "level": {"value": 1},
+		              "position": {"key": "self"}
+                    }
+                  },
+				  {
+				    "title": "queryEntity",
+					"type": "action",
+					"name": "queryEntity",
+					"parameters": {
+					  "entityTypes": {"value": ["monster"]},
+					  "range": {"value": 50}
+					},
+					"output": {
+					  "list": "monsters"
+					}
+				  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "monsters"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+				  {
+        		    "title": "ancientboss2-dying",
+        		    "type": "module",
+        		    "name": "ancientboss2-dying",
+        		    "parameters": { }
+        		  },
+	              {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "abyssstalker"},
+		              "level": {"value": 1},
+		              "position": {"key": "self"}
+                    }
+                  },
+				  {
+				    "title": "queryEntity",
+					"type": "action",
+					"name": "queryEntity",
+					"parameters": {
+					  "entityTypes": {"value": ["monster"]},
+					  "range": {"value": 50}
+					},
+					"output": {
+					  "list": "monsters"
+					}
+				  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "monsters"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAggressive",
+                    "type": "action",
+                    "name": "setAggressive",
+                    "parameters": {
+                      "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setDamageBar",
+                    "type": "action",
+                    "name": "setDamageBar",
+                    "parameters": {
+                      "type": {"value": "None"}
+                    }
+                  },
+				  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+				  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "deactivated"},
+					  "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  },
+				  {
+				    "title": "queryEntity",
+					"type": "action",
+					"name": "queryEntity",
+					"parameters": {
+					  "entityTypes": {"value": ["monster"]},
+					  "range": {"value": 50}
+					},
+					"output": {
+					  "list": "monsters"
+					}
+				  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "monsters"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+	              {
+	                "title": "offsetPosition",
+	            	"type": "action",
+	            	"name": "offsetPosition",
+	            	"parameters": {
+	            	  "position": {"key": "self"},
+	            	  "offset": {"value": [15, -9.8]}
+	            	},
+	            	"output": {
+	            	  "position": "leftfist"
+	            	}
+	              },
+	              {
+	                "title": "offsetPosition",
+	            	"type": "action",
+	            	"name": "offsetPosition",
+	            	"parameters": {
+	            	  "position": {"key": "self"},
+	            	  "offset": {"value": [-15, -9.8]}
+	            	},
+	            	"output": {
+	            	  "position": "rightfist"
+	            	}
+	              },
+	              {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "leftfist"},
+	            	  "level": {"value": 10},
+	            	  "position": {"key": "leftfist"}
+                    },
+	            	"output": {
+	            	  "entityId": "leftfistId"
+	            	}
+                  },
+	              {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "rightfist"},
+	            	  "level": {"value": 10},
+	            	  "position": {"key": "rightfist"}
+                    },
+	            	"output": {
+	            	  "entityId": "rightfistId"
+	            	}
+                  },
+				  {
+        		    "title": "flyToPosition",
+        		    "type": "action",
+        		    "name": "flyToPosition",
+        		    "parameters": {
+        		      "position": {"key": "spawn"},
+        		      "tolerance": {"value": 1}
+        		    }
+        		  },
+				  {
+        		    "title": "setVelocity",
+        		    "type": "action",
+        		    "name": "setVelocity",
+        		    "parameters": {
+        		      "velocity": {"value": [0, 0]}
+        		    }
+        		  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

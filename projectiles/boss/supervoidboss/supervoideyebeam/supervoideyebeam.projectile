@@ -1,0 +1,28 @@
+{
+  "projectileName" : "supervoideyebeam",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/staff/ancientbeam.ogg" ]
+    }
+  ],
+  "timeToLive" : 2.5,
+  "image" : "supervoideyebeam.png",
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "speed" : 1,
+  "animationCycle" : 2.5,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 25,
+  "power" : 50,
+  "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
+  "damageKind" : "plasma",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  }
+}

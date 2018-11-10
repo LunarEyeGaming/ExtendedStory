@@ -14,14 +14,6 @@
       "repeat" : false,
       "action" : "sound",
       "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
-    },
-	{
-      "time" : 0.1,
-      "repeat" : true,
-      "action" : "projectile",
-      "type" : "magnetarminegravity",
-      "inheritDamageFactor" : 0,
-      "inheritSpeedFactor" : 0
     }
   ],
   "actionOnReap" : [
@@ -77,6 +69,18 @@
         "color" : "blue"
       }
     ]
+  },
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 25,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -10,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
   },
 
   "controlRotation" : {

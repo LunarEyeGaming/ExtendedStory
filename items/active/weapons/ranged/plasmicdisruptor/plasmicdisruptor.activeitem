@@ -1,0 +1,128 @@
+{
+  "itemName" : "plasmicdisruptor",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A powerful rapid fire weapon.",
+  "shortdescription" : "Plasmic Disruptor",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "plasmicdisruptor.png:empty",
+
+  "animation" : "plasmicdisruptor.animation",
+  "animationParts" : {
+    "gun" : "plasmicdisruptor.png",
+    "gunfullbright" : "plasmicdisruptorunlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+	  "altFire" : [ "/sfx/gun/rocket_electric1.ogg" ]
+	}
+  },
+  "muzzleOffset" : [2, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "electric",
+
+  "primaryAbility" : {
+    "name" : "NAN",
+    "scripts" : ["/items/active/weapons/ranged/plasmicdisruptor/rapidchargefire.lua"],
+    "class" : "ChargeFire",
+	
+	"fireTimer" : 0.1,
+<<<<<<< HEAD
+	"baseDps" : 48,
+=======
+	"baseDps" : 80,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+	"fireTime" : 0.1,
+	"energyUsage" : 50,
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {"onlyHitTerrain" : true},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire",
+        "fireAnimationState" : "off"
+      },
+      {
+        "time" : 0.3999,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "disruptorshot_es",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {"speed" : 60},
+        "inaccuracy" : 0.04,
+<<<<<<< HEAD
+        "baseDamage" : 3,
+=======
+        "baseDamage" : 5,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+        "fireSound" : "fire2"
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"frontArmFrame" : "run.3"
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		"frontArmFrame" : "run.3"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		"frontArmFrame" : "run.3"
+      },
+      "cooldown" : {
+        "duration" : 0.04,
+        "armRotation" : 4,
+        "weaponRotation" : 4,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		"frontArmFrame" : "run.3"
+      }
+    }
+  },
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "electric" : { "name" : "Rocket", "projectileType" : "electricplasmarocket", "projectileCount" : 1, "fireTime" : 0.75, "inaccuracy" : 0.02, "projectileParameters" : {}}
+    },
+    "energyUsage" : 20,
+	"baseDps" : 20
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

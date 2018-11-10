@@ -5,7 +5,7 @@
   "category" : "Ancient Healer",
   "inventoryIcon" : "ancienthealing.png",
   "description" : "Converts ancient energy into repair material. Restores 150 health over 1 second.",
-  "shortdescription" : "^magenta; ^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "effects" : [ [
       {
         "effect" : "ancientheal"

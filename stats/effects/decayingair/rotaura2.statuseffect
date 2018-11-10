@@ -1,0 +1,15 @@
+{
+  "name" : "rotaura2",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5.0,
+
+  "scripts" : [
+    "rotaura.lua"
+  ],
+
+  "animationConfig" : "decayingair.animation",
+
+  "label" : "Decay - You're decaying from the rot aura's effects",
+  "icon" : "/interface/statuses/decayingair.png"
+}

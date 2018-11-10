@@ -1,26 +1,25 @@
---Original code is from tutorial about tile status effects.
 
 local oldUpdate = update
 
 function update(dt)
   oldUpdate(dt)
-  local gelPos = { mcontroller.xPosition(), math.floor(mcontroller.yPosition()-3)}
-  local modCheck = world.material(gelPos,"foreground")
-  if isn_getGelStatus(modCheck) == "burning" then
-    status.addEphemeralEffect("burning")
-  elseif isn_getGelStatus(modCheck) == "electrified" then
-	status.addEphemeralEffect("electrified")
-  elseif isn_getGelStatus(modCheck) == "shocked" then
-	status.addEphemeralEffect("shocked_es") 
+  currentPos = mcontroller.position()
+  tileCheckPos = {currentPos[1], currentPos[2] - 3}
+  tileType = world.material(tileCheckPos, "foreground")
+  if not (tileType == false or tileType == nil) then
+    statusType = returnStatusType(tileType)
   end
+  if statusType then
+    status.addEphemeralEffect(statusType)
+  end
+  statusType = nil
 end
 
-function isn_getGelStatus(geltype)
-    if geltype == "burningblock" then return "burning"
-    elseif geltype == "burningbrick" then return "burning"
-	elseif geltype == "chargedstone" then return "electrified"
-	elseif geltype == "chargedbrick" then return "electrified"
-	elseif geltype == "chargedsand" then return "electrified"
-	elseif geltype == "livinglightning" then return "shocked"
+function returnStatusType(tileType)
+    if tileType == "burningblock" then return "burning"
+	elseif tileType == "chargedstone" then return "electrified"
+	elseif tileType == "chargedbrick" then return "electrified"
+	elseif tileType == "chargedsand" then return "electrified"
+	elseif tileType == "livinglightning" then return "shocked"
     else return nil end
 end

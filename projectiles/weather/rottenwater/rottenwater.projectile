@@ -1,0 +1,20 @@
+{
+  "projectileName" : "rottenwater",
+  "physics" : "rain",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "damagePoly" : [ [-30, -30], [30, -30], [30, 30], [-30, 30] ],
+  "damageKind" : "hidden",
+  "actionOnReap" : [
+    {
+      "action" : "liquid",
+      "liquid" : "rottenwater",
+      "quantity" : 0.4
+    }
+  ],
+
+  "onlyHitTerrain" : true,
+  "hydrophobic" : true,
+  "masterOnly" : true
+}

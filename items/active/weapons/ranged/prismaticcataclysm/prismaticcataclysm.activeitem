@@ -7,9 +7,12 @@
   "description" : "An amazingly powerful gun fueled by prisilite stars.",
   "shortdescription" : "^cyan;Prism^pink;atic ^green;Catac^magenta;lysm^reset;",
   "tooltipKind" : "gun",
-  "category" : "uniqueWeapon",
+  "category" : "Crafted U. Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 25,
+  "critBonus" : 10,
 
   "inventoryIcon" : [
     { "image" : "prismaticcataclysm.png:idle.1" }

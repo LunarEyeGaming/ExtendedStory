@@ -16,5 +16,94 @@
       "poolRounds" : 1,
       "allowDuplication" : false
     }]
+  ],
+
+  "forgottentreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.5, "pool" : "basicTreasure"},
+        {"weight" : 0.15, "pool" : "healingItem"},
+        {"weight" : 0.05, "pool" : "weapon"},
+		{"weight" : 0.3, "pool" : "rottengoopMaterials"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
+  ],
+
+  "forgottentreasure2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.6, "pool" : "basicTreasure"},
+		{"weight" : 0.4, "pool" : "rottengoopMaterials"}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
+  ],
+
+  "rottengoopMaterials" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.5, "item" : ["bacteriaore_es", 5]},
+        {"weight" : 0.25, "item" : ["holestone", 50]},
+        {"weight" : 0.20, "item" : ["rottenjelly", 25]},
+        {"weight" : 0.05, "item" : ["rottengoop_es", 7]}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : true
+    }]
+<<<<<<< HEAD
+  ],
+  "bossvaultTreasure_es" : [
+    [1, {
+      "fill" : [ 
+        {"item" : ["essence", 50]},
+		{"pool" : "bossvaultWeapons_es"},
+		{"pool" : "essenceBurst"}
+      ],
+      "pool" : [
+        {"weight" : 1.0, "item" : ["essence", 2]},
+		{"weight" : 1.0, "item" : ["essence", 4]},
+		{"weight" : 1.0, "item" : ["essence", 6]},
+		{"weight" : 1.0, "item" : ["essence", 8]},
+		{"weight" : 1.0, "item" : ["essence", 10]},
+		{"weight" : 1.0, "item" : ["essence", 12]},
+		{"weight" : 1.0, "item" : ["essence", 14]},
+		{"weight" : 1.0, "item" : ["essence", 16]},
+		{"weight" : 1.0, "item" : ["essence", 18]},
+		{"weight" : 1.0, "item" : ["essence", 20]}
+      ],
+      "poolRounds" : [
+        [1, 1]
+      ]
+    }]
+  ],
+  "bossvaultWeapons_es" : [
+    [1, {
+      "fill" : [ ],
+      "pool" : [
+		{"weight" : 1.0, "item" : "ancientrifle"},
+		{"weight" : 1.0, "item" : "ancientshotgun"},
+		{"weight" : 1.0, "item" : "ancientpistol"},
+		{"weight" : 1.0, "item" : "ancientstaff"},
+		{"weight" : 1.0, "item" : "ancientmagnorbs"},
+		{"weight" : 1.0, "item" : "ancientcore"}
+      ],
+      "poolRounds" : [
+        [1, 1]
+      ]
+    }]
+=======
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   ]
 }

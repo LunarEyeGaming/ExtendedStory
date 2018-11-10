@@ -1,0 +1,120 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "charge" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "charge" : {
+            "frames" : 9,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "spark"
+          },
+          "spark" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "charged"
+          },
+          "charged" : {
+            "frames" : 10,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          },
+          "discharge" : {
+            "frames" : 9,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "staff" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "<partImage>",
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : ["weapon"]
+        }
+      },
+      "stone" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "fullbright" : true,
+          "image" : "<partImage>",
+          "offset" : [0.0, 0.0],
+          "focalPoint" : [0.0, 2.5],
+          "transformationGroups" : ["weapon"]
+        }
+      },
+      "chargeEffect" : {
+        "properties" : {
+          "zLevel" : 2,
+          "fullbright" : true,
+          "centered" : true,
+          "offset" : [0, 0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "charge" : {
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charging.<frame>"
+              }
+            },
+            "spark" : {
+              "properties" : {
+                "image" : "<partImage>:spark.<frame>"
+              }
+            },
+            "charged" : {
+              "properties" : {
+                "image" : "<partImage>:loop.<frame>"
+              }
+            },
+            "discharge" : {
+              "properties" : {
+                "image" : "<partImage>:discharge.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "particleEmitters" : {
+    "electriccharge" : {
+      "active" : false,
+      "transformationGroups" : ["weapon"],
+      "emissionRate" : 10,
+      "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
+      "particles" : [
+        {"particle" : "electricswoosh1"},
+        {"particle" : "electricswoosh2"},
+        {"particle" : "electricswoosh2"}
+      ]
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {}
+  },
+
+  "sounds" : {
+    "physicalcharge" : ["/sfx/melee/charge_up11.ogg"],
+    "physicalfullcharge" : ["/sfx/melee/giantsword_charge_full.ogg"],
+    "physicalchargedloop" : ["/sfx/npc/boss/tentacleboss_portal_loop.ogg"],
+    "physicaldischarge" : ["/sfx/npc/boss/frostguardianboss_frostblockwinddown.ogg"],
+    "physicalactivate" : ["/sfx/projectiles/plasma3.ogg"],
+
+    "zoneactivate" : ["/sfx/melee/staff_aura_activate.ogg"]
+  }
+}

@@ -8,7 +8,7 @@
   "animation" : "frostguardianboss_es.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -104,10 +104,14 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1000
+          "baseValue" : 3000
         },
         "protection" : {
-          "baseValue" : 70
+<<<<<<< HEAD
+          "baseValue" : 25
+=======
+          "baseValue" : 50
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -141,7 +145,22 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
-        }
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
+        },
+		"fireResistance" : {
+		  "baseValue" : -0.5
+		},
+		"iceResistance" : {
+		  "baseValue" : 1.0
+		}
       },
 
       "resources" : {

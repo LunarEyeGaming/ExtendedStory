@@ -1,0 +1,46 @@
+{
+  "projectileName" : "annihilatorshockwave",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 25,
+  "timeToLive" : 10,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [234, 106, 86],
+  "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 8,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+
+  "scripts" : [
+    "/scripts/projectiles/boomerangprojectile.lua"
+  ],
+  "periodicActions" : [
+    {
+	  "time" : 1,
+	  "repeat" : false,
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+	},
+	{
+	  "time" : 1,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "destroyerstaff1c",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "actionOnReap" : []
+	  }
+ 	}
+  ],
+  "scriptDelta" : 3,
+  "ignoreTerrain" : true,
+  "fullbright" : true,
+  "controlForce" : 120,
+  "targetTrackingForce" : 60,
+  "pickupDistance" : 1.0,
+  "snapDistance" : 4.0,
+  "minVelocity" : 1,
+  "damageKind" : "plasma"
+}

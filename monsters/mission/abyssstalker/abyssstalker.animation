@@ -60,13 +60,6 @@
                 "image" : "<partImage>:disappear.<frame>"
               }
             }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:idle.aggro"
-              }
-            }
           }
         }
       },
@@ -82,13 +75,6 @@
             "opened" : {
               "properties" : {
                 "image" : "<partImage>:opened"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:idle.aggro"
               }
             }
           }

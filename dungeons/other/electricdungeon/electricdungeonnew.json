@@ -1314,6 +1314,51 @@
                  "width":32,
                  "x":1184,
                  "y":4480
+                }, 
+                {
+                 "height":128,
+                 "id":1299,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/drosera.ogg\"], 2.0] }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":272,
+                 "x":528,
+                 "y":528
+                }, 
+                {
+                 "gid":7763,
+                 "height":8,
+                 "id":1300,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1128,
+                 "y":704
+                }, 
+                {
+                 "gid":7763,
+                 "height":8,
+                 "id":1301,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1104,
+                 "y":704
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1525,6 +1570,46 @@
                  "width":0,
                  "x":1152,
                  "y":672
+                }, 
+                {
+                 "height":0,
+                 "id":1303,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-48,
+                         "y":24
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1152,
+                 "y":672
+                }, 
+                {
+                 "height":0,
+                 "id":1304,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-24,
+                         "y":24
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1152,
+                 "y":672
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1596,10 +1681,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1299,
+ "nextobjectid":1305,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.4",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {

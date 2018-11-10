@@ -1,0 +1,16 @@
+{
+  "name" : "putridair",
+  "blockingStat" : "putridairImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "putridair.lua"
+  ],
+
+  "animationConfig" : "putridair.animation",
+
+  "label" : "Putrid Air - The rotten air causes you to rot away",
+  "icon" : "/interface/statuses/putridair.png"
+}

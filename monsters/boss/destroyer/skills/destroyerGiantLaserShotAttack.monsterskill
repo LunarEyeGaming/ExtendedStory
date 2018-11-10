@@ -9,7 +9,7 @@
     "destroyerGiantLaserShotAttack" : {
       "skillTime": 1,
       "bobTime" : 2,
-      "bobHeight" : 3,
+      "bobHeight" : 0,
 
       "projectileOffset" : [0, -4],
       "fireInterval" : 1.0,
@@ -17,7 +17,7 @@
         "type" : "destroyershot",
         "config" : {
           "speed" : 20,
-          "power" : 10,
+          "power" : 75,
           "movementSettings" : {
             "collisionEnabled" : false
           },
@@ -39,7 +39,7 @@
 				  "type" : "destroyershot",
 				  "angle" : 90,
 				  "fuzzAngle" : 180,
-				  "config" : { "power" : 10, "speed" : 30, "movementSettings" : { "collisionEnabled" : false } }
+				  "config" : { "power" : 75, "speed" : 30, "movementSettings" : { "collisionEnabled" : false } }
 				},
 				{
 				  "action" : "sound",

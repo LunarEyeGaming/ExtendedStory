@@ -44,7 +44,7 @@ end
 function activate()
   local rotation = mcontroller.rotation()
   world.spawnProjectile(
-      "laserbeaminitial",
+      "laserbeaminitial_es",
       mcontroller.position(),
       projectile.sourceEntity(),
       {math.cos(rotation), math.sin(rotation)},

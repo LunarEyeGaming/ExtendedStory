@@ -1,0 +1,24 @@
+{
+  "materialId" : 2017,
+  "materialName" : "holestone",
+  "particleColor" : [145, 119, 58, 255],
+  "itemDrop" : "holestone",
+  "description" : "A strange material that is rotting away. It smells awful.",
+  "shortdescription" : "Rotting Substance",
+  "glitchDescription" : "Disgusted. This material smells horrible.",
+  "floranDescription" : "Sssmells nassty.",
+  "novakidDescription" : "Some nasty smellin' stuff.",
+  "footstepSound" : "/sfx/blocks/footstep_brains.ogg",
+  "health" : 5,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "holestone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 2000
+  }
+}

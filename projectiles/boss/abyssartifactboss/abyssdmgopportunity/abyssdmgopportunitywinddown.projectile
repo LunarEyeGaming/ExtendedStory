@@ -1,0 +1,19 @@
+{
+  "projectileName" : "abyssdmgopportunitywinddown",
+  "image" : "abyssdmgopportunitywinddown.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "timeToLive" : 0.25,
+  "lightColor" : [50, 50, 50],
+  "animationLoops" : false,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "speed" : 0,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "default",
+  "fullbright" : true,
+  "actionOnReap" : [],
+  "periodicActions" : []
+}

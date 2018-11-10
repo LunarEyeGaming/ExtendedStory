@@ -1,0 +1,64 @@
+{
+  "projectileName" : "rottentoothbomb",
+  "image" : "rottentoothbomb.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "physics" : "arrow",
+  "timeToLive" : 10,
+  "bounces" : -1,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 0
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 45
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 90
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 135
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 180
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 225
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 270
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "rottentooth",
+	  "angleAdjust" : 315
+	}
+  ],
+  "actionOnCollide" : [
+    {
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/tar_hit_organic1.ogg", "/sfx/projectiles/tar_hit_organic2.ogg", "/sfx/projectiles/tar_hit_organic3.ogg", "/sfx/projectiles/tar_hit_organic4.ogg", "/sfx/projectiles/tar_hit_organic5.ogg" ]
+	}
+  ],
+  "power" : 3,
+  "speed" : 45,
+  "damageType" : "nodamage"
+}

@@ -1,0 +1,21 @@
+{
+  "frameGrid" : {
+    "size" : [58, 81],
+    "dimensions" : [4, 3],
+    "names" : [
+	  [ "idle", "disappear.1", "disappear.2", "disappear.3" ],
+	  [ "right.1", "up.1", "left.1", "down.1" ],
+	  [ "fire" ]
+    ]
+  },
+  "aliases" : {
+    "reappear.1" : "disappear.3",
+    "reappear.2" : "disappear.2",
+    "reappear.3" : "disappear.1",
+	
+	"right.2" : "idle",
+	"up.2" : "idle",
+	"left.2" : "idle",
+	"down.2" : "idle"
+  }
+}

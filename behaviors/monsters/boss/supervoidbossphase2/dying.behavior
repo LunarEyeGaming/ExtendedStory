@@ -1,0 +1,274 @@
+{
+  "name": "supervoidbossphase2-dying",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "emitParticles",
+            "type": "action",
+            "name": "emitParticles",
+            "parameters": {
+              "emitter": {"value": "dying"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 5.0}
+                }
+              },
+			  {
+			    "title": "setParticleEmitterActive",
+				"type": "action",
+				"name": "setParticleEmitterActive",
+				"parameters": {
+				  "emitter": {"value": "dying2"},
+				  "active": {"value": true}
+				}
+			  },
+			  {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 5.0}
+                }
+              },
+			  {
+			    "title": "setParticleEmitterActive",
+				"type": "action",
+				"name": "setParticleEmitterActive",
+				"parameters": {
+				  "emitter": {"value": "dying3"},
+				  "active": {"value": true}
+				}
+			  }
+            ]
+          },
+		  {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 4.5}
+                }
+              },
+			  {
+    		    "title": "spawnProjectile",
+    		    "type": "action",
+    		    "name": "spawnProjectile",
+    		    "parameters": {
+    		      "aimVector": {"value": [1, 0]},
+    		      "offset": {"value": [0, 0]},
+    		      "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "supervoidbullet_EH", "fuzzAngle": 180, "config": {"damageType": "nodamage", "speed": 50, "actionOnReap": []}}]}]}},
+    		      "projectileType": {"value": "orbitalup"}
+    		    }
+    	      }
+            ]
+          },
+		  {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 10}
+                }
+              },
+			  {
+			    "title": "repeater",
+				"type": "decorator",
+				"name": "repeater",
+				"parameters": {
+				  "maxLoops": {"value": -1}
+				},
+				"child": {
+				  "title": "sequence",
+				  "type": "composite",
+				  "name": "sequence",
+				  "parameters": {},
+				  "children": [
+				    {
+    			      "title": "spawnProjectile",
+    			      "type": "action",
+    			      "name": "spawnProjectile",
+    			      "parameters": {
+    			        "aimVector": {"value": [1, 0]},
+    			        "offset": {"value": [0, 0]},
+    			        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "fuzzAngle": 180, "offsetRange": [20, 20, -20, -20], "config": {"damageType": "nodamage", "timeToLive": 0, "power": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/supervoidexplosion2/supervoidexplosion2.config"}]}}]}]}},
+    			        "projectileType": {"value": "orbitalup"}
+    			      }
+    	    	    },
+					{
+					  "title": "timer",
+					  "type": "action",
+					  "name": "timer",
+					  "parameters": {
+					    "time": {"value": 6}
+					  }
+					}
+				  ]
+				}
+			  }
+            ]
+          },
+		  {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 22}
+                }
+              },
+			  {
+			    "title": "repeater",
+				"type": "decorator",
+				"name": "repeater",
+				"parameters": {
+				  "maxLoops": {"value": -1}
+				},
+				"child": {
+				  "title": "sequence",
+				  "type": "composite",
+				  "name": "sequence",
+				  "parameters": {},
+				  "children": [
+				    {
+    			      "title": "spawnProjectile",
+    			      "type": "action",
+    			      "name": "spawnProjectile",
+    			      "parameters": {
+    			        "aimVector": {"value": [1, 0]},
+    			        "offset": {"value": [0, 0]},
+    			        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "fuzzAngle": 180, "offsetRange": [20, 20, -20, -20], "config": {"damageType": "nodamage", "timeToLive": 0, "power": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/supervoidexplosion2/supervoidexplosion2.config"}]}}]}]}},
+    			        "projectileType": {"value": "orbitalup"}
+    			      }
+    	    	    },
+					{
+					  "title": "timer",
+					  "type": "action",
+					  "name": "timer",
+					  "parameters": {
+					    "time": {"value": 6}
+					  }
+					}
+				  ]
+				}
+			  }
+            ]
+          },
+		  {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 30}
+                }
+              },
+			  {
+			    "title": "repeater",
+				"type": "decorator",
+				"name": "repeater",
+				"parameters": {
+				  "maxLoops": {"value": 1}
+				},
+				"child": {
+				  "title": "sequence",
+				  "type": "composite",
+				  "name": "sequence",
+				  "parameters": {},
+				  "children": [
+				    {
+    			      "title": "spawnProjectile",
+    			      "type": "action",
+    			      "name": "spawnProjectile",
+    			      "parameters": {
+    			        "aimVector": {"value": [0, 0]},
+    			        "offset": {"value": [0, 0]},
+    			        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "particle", "specification": {"type" : "textured", "image" : "/monsters/boss/supervoidbossphase2/chargeup.png", "position" : [0, 0], "initialVelocity" : [0, 0], "finalVelocity" : [0, 0], "layer" : "back", "size": 3, "timeToLive" : 0, "destructionTime" : 2, "destructionAction" : "shrink", "fullbright" : true, "variance" : { "initialVelocity" : [0, 0], "finalVelocity" : [0, 0]}}}]}},
+    			        "projectileType": {"value": "orbitalup"}
+    			      }
+      		        },
+					{
+					  "title": "timer",
+					  "type": "action",
+					  "name": "timer",
+					  "parameters": {
+					    "time": {"value": 2}
+					  }
+					}
+				  ]
+				}
+			  },
+			  {
+			    "title": "setParticleEmitterActive",
+				"type": "action",
+				"name": "setParticleEmitterActive",
+				"parameters": {
+				  "emitter": {"value": "flash"},
+				  "active": {"value": true}
+				}
+			  }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

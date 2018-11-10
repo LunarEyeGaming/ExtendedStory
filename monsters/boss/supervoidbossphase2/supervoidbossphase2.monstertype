@@ -1,10 +1,10 @@
 {
-  "type" : "supervoidboss",
+  "type" : "supervoidbossphase2",
   "shortdescription" : "Supervoid Eye",
-  "categories" : [ "supervoidboss" ],
-  "parts" : [ "biome", "eye", "eyelit", "eyelid", "beam" ],
+  "categories" : [ "supervoidbossphase2" ],
+  "parts" : [ "eyeoverlay", "eye", "background", "beam", "eyeoverlaylaser", "vacuum" ],
 
-  "animation" : "supervoidboss.animation",
+  "animation" : "supervoidbossphase2.animation",
   "dropPools" : [ ],
 
   "baseParameters" : {
@@ -14,11 +14,22 @@
     "initialScriptDelta" : 1,
     "behaviorUpdateDelta" : 1,
 
-    "behavior" : "supervoidboss",
+    "behavior" : "supervoidbossphase2",
     "behaviorConfig" : {
       "deathMovementParameters" : {
         "gravityEnabled" : true,
         "bounceFactor" : 0.1
+      }
+    },
+	"forceRegions" : {
+      "vacuum" : {
+        "type" : "RadialForceRegion",
+        "outerRadius" : 300,
+        "innerRadius" : 1,
+        "targetRadialVelocity" : -40,
+        "center" : [0, 0],
+        "controlForce" : 140,
+        "categoryWhitelist" : [ "player" ]
       }
     },
 
@@ -67,22 +78,78 @@
 
     "damageParts" : {
       "beam" : {
-        "damage" : 25,
+        "damage" : 40,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma",
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0,
 
-        "damageTeam" : 0,
+        "damageTeam" : 0
+      },
+	  "stage3orb1" : {
+        "damage" : 40,
 
-        "statusEffects" : [
-          { "effect" : "beamburning", "duration" : 2.0 }
-        ]
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      },
+	  "stage3orb2" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      },
+	  "stage3orb3" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      },
+	  "stage3orb4" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      },
+	  "stage3orb5" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      },
+	  "stage3orb6" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0
+      }
+    },
+	"damageSources" : {
+      "windswept" : {
+        "poly" : [ [63, 63], [63, -63], [-63, -63], [-63, 63] ],
+        "damage" : 0.0,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "hidden",
+        "statusEffects" : [ "windswept" ],
+
+        "damageRepeatTimeout" : 0.5
       }
     },
 
-    "renderLayer" : "Projectile-20",
+    "renderLayer" : "BackgroundTile-10",
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
@@ -92,7 +159,7 @@
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [-8, -20], [-19, -13], [-20, -3], [-13, 4], [-6, 7], [6, 7], [13, 4], [20, -3], [19, -13], [8, -20] ],
+      "collisionPoly" : [ [10, 5], [10, -5], [5, -10], [-5, -10], [-10, -5], [-10, 5], [-5, 10], [5, 10] ],
 
       "mass" : 4.0,
       "walkSpeed" : 5,
@@ -106,7 +173,7 @@
       },
       "physicsEffectCategories" : ["boss"]
     },
-    "metaBoundBox" : [-25, -25, 25, 25],
+    "metaBoundBox" : [-63, -63, 63, 63],
 
     "touchDamage" : {
       "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
@@ -120,7 +187,7 @@
     "statusSettings" : {
       "statusProperties" : {
         "targetMaterialKind" : "organic",
-        "damageFlashColor" : "ff0000=0.15"
+        "damageFlashColor" : "000000=0.0"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -177,6 +244,18 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+		"megadamageResistance" : {
+		  "baseValue" : 1.0
+		},
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

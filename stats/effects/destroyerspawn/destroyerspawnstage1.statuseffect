@@ -1,5 +1,6 @@
 {
   "name" : "destroyerspawnstage1",
+  "blockingStat" : "destroyerspawnImmunity",
 
   "effectConfig" : {
     "directives" : "fade=FFAAAA=0.1",
@@ -11,7 +12,7 @@
     "energyCost" : 2.5,
     "healthDamage" : 5
   },
-  "defaultDuration" : 150,
+  "defaultDuration" : 30,
 
   "scripts" : [
     "destroyerspawnstage1.lua"
@@ -19,6 +20,6 @@
 
   "animationConfig" : "destroyerspawnstage1.animation",
 
-  "label" : "Your doom is approaching...",
+  "label" : "Your doom is approaching.",
   "icon" : "/interface/statuses/doomed.png"
 }

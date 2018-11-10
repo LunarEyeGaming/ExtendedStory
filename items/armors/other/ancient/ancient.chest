@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "chestarmour",
-  "description" : "A piece of armor that happens to survive the test of time.\n^cyan;Provides an ancient aura that protects you from the elements.",
+  "description" : "A piece of armor that happens to survive the test of time.\n^cyan;11% elemental damage reduction for each piece.",
   "shortdescription" : "Ancient Chestplate",
   "tooltipKind" : "armor",
   "maleFrames" : {
@@ -45,25 +45,27 @@
   ],
   
   "statusEffects" : [
+    "ancientchestplate",
+	"ancientsetbonus",
     {
       "stat" : "poisonResistance",
-      "amount" : 0.50
+      "amount" : 0.11
     },
     {
       "stat" : "electricResistance",
-      "amount" : 0.50
+      "amount" : 0.11
     },
     {
       "stat" : "iceResistance",
-      "amount" : 0.50
+      "amount" : 0.11
     },
     {
       "stat" : "fireResistance",
-      "amount" : 0.50
+      "amount" : 0.11
     },
     {
-      "stat" : "biomefreezingImmunity",
-      "amount" : 0.50
+      "stat" : "abyssResistance",
+      "amount" : 0.11
     }
   ],
 

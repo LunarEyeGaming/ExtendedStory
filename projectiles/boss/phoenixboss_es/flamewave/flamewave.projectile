@@ -12,7 +12,7 @@
   "piercing" : true,
   "flippable" : true,
   "damagePoly" : [ [8, -256], [8, 256], [-8, 256], [-8, -256] ],
-  "damageKind" : "megadamagefire",
+  "damageKind" : "fire",
   "persistentAudio" : "/sfx/objects/flametrap_loop.ogg",
   "periodicActions" : [
     {

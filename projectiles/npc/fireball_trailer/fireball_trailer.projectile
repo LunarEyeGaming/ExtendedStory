@@ -1,0 +1,43 @@
+{
+  "projectileName" : "fireball_trailer",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 3,
+  "image" : "fireball_trailer.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.5,
+  "lightColor" : [84, 47, 26],
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 4,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : {
+	        "type" : "animated",
+	    	"animation" : "/animations/smallflame/smallflame.animation",
+	    	"fullbright" : true,
+	    	"light" : [218, 83, 2],
+	    	"initialVelocity" : [0, 0],
+	    	"finalVelocity" : [0, 5],
+	    	"position" : [0, 0],
+	    	"timeToLive" : 1,
+	    	"variance" : {
+	    	  "initialVelocity" : [1, 1]
+	    	}
+	      }
+		}
+	  ]
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/blast_small_fire1.ogg", "/sfx/projectiles/blast_small_fire2.ogg", "/sfx/projectiles/blast_small_fire3.ogg" ]
+	}
+  ],
+  "power" : 20,
+  "damageKind" : "fire"
+}

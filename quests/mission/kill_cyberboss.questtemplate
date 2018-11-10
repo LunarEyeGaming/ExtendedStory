@@ -4,7 +4,7 @@
   "prerequisites" : [ ],
   "title" : "^red;The Novabot Facility",
   "text" : "...There...Are some coordinates on this ^green;cyber core^white;. Maybe there will be some ^orange;awesome things^white; there. I'll input the coordinates into SAIL and see where it leads to.",
-  "completionText" : "This place seems to be destroyed by the giant robot. Who was it that hacked the scientists' project? Was the giant robot the project they were talking about?",
+  "completionText" : "That giant bot seems to be the source of this material. It dropped a weapon amplifier. Perhaps I could make use of this in some way.",
   "moneyRange" : [0, 0],
   "rewards" : [],
   "speaker" : "questGiver",
@@ -28,12 +28,13 @@
     "conditions" : [
       {
         "type" : "gatherItem",
-        "itemName" : "ioncannonsupreme",
+        "itemName" : "weaponamplifier",
         "count" : 1,
         "consume" : false
       }
     ],
 	"associatedMission" : "cyberfacility",
+	"missionUnlockedCinema" : "/cinematics/coordinates.cinematic",
     "equipTech" : [
       "ancientflight"
     ]

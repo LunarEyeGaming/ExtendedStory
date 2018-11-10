@@ -1,0 +1,50 @@
+{
+  "projectileName" : "supervoidreplicatingorb",
+  "image" : "supervoidreplicatingorb.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 1,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "emitters" : [ ],
+  "power" : 100,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb2",
+	  "direction" : [1, 1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb2",
+	  "direction" : [1, -1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb2",
+	  "direction" : [-1, -1]
+    },
+	{
+      "action" : "projectile",
+      "type" : "supervoidreplicatingorb2",
+	  "direction" : [-1, 1]
+    },
+	{
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+    }
+  ],
+  "periodicActions" : [
+  ],
+  "damagePoly" : [ [-10, 10], [-10, -10], [10, -10], [10, 10] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+
+  "speed" : 40,
+  "timeToLive" : 1,
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

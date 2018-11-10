@@ -1,0 +1,33 @@
+{
+  "projectileName" : "rottenblob",
+  "physics" : "grenadezbomb",
+  "bounces" : 0,
+  "image" : "rottenblob.png",
+  "animationCycle" : 0.7,
+  "frameNumber" : 7,
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+	},
+    {
+	  "action" : "option",
+	  "options" : [
+	    { 
+          "action" : "liquid", 
+          "liquid" : "rottenwater", "quantity" : 6
+        },
+		{
+    	  "action" : "tile",
+    	  "materials" : [
+    	    {"kind" : "rottenjelly"}
+    	  ]
+    	}
+	  ]
+	}
+  ]
+}

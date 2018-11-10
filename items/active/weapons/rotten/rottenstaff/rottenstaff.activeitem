@@ -1,0 +1,110 @@
+{
+  "itemName" : "rottenstaff",
+  "price" : 1440,
+  "maxStack" : 1,
+  "level" : 3,
+  "rarity" : "Uncommon",
+  "description" : "A staff capable of causing decay in anything that touches its projectiles.",
+  "shortdescription" : "Rod of Decay",
+  "tooltipKind" : "staff",
+  "category" : "Staff",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","staff"],
+  
+  "critChance" : 10,
+  "critBonus" : 10,
+
+  "animation" : "rottenstaff.animation",
+  "animationParts" : {
+    "staff" : "rottenstaff.png",
+    "stone" : "staffglow.png",
+    "chargeEffect" : "staffcharge.png"
+  },
+  "animationCustom" : {
+    "lights" : {
+      "glow" : {
+        "color" : [66, 128, 66]
+      }
+    },
+    "particleEmitters" : {
+      "poisoncharge" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "emissionRate" : 10,
+        "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
+        "particles" : [
+          {"particle" : "poisonswoosh1"}
+        ]
+      }
+    },
+
+    "sounds" : {
+      "physicalactivate" : ["/sfx/melee/staff_aura_activate.ogg"]
+    }
+  },
+
+  "inventoryIcon" : "rottenstaff.png",
+
+  "scripts" : ["/items/active/weapons/staff/staff.lua"],
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "weaponRotation" : 0,
+      "twoHanded" : false,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "duration" : 1.1,
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "charged" : {
+      "armRotation" : 20,
+      "weaponRotation" : -20,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    },
+    "discharge" : {
+      "duration" : 0.5,
+      "armRotation" : -10,
+      "weaponRotation" : -50,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "cooldown" : {
+      "duration" : 0.5,
+      "armRotation" : -45,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : false,
+      "allowFlip" : true
+    }
+  },
+
+  "elementalType" : "poison",
+
+  "primaryAbilityType" : "elementorb",
+  "primaryAbility" : {"name" : "Stink Eye", "projectileType" : "rottenstaffprimary"},
+
+  "altAbilityType" : "elementorb",
+  "altAbility" : {
+    "name" : "Acidic Mine",
+	"projectileType" : "rottenstaffalt",
+
+    "maxCastRange" : 50
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

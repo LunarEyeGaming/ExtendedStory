@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "glass", "count" : 5 },
+    { "item" : "durasteelbar", "count" : 5 }
+  ],
+  "output" : { "item" : "emptycell", "count" : 1 },
+  "groups" : [ "craftingfurnace3", "ingredients", "all" ]
+}

@@ -6,11 +6,20 @@
   "maxStack" : 1,
   "tooltipKind" : "gun",
   "rarity" : "Legendary",
-  "description" : "The true handheld ion cannon.",
-  "shortdescription" : "^cyan;Supreme Ion Cannon^reset;",
+  "description" : "An ionizer that can shoot unstable grenades and a laser. ^cyan;Upgraded",
+  //"description" : "The true handheld ion cannon.",
+  "shortdescription" : "^cyan;Handheld Ion Cannon ^reset;",
+  //"shortdescription" : "^cyan;Supreme Ion Cannon^reset;",
+<<<<<<< HEAD
+  "category" : "^#5dbdba;Ion Weapon",
+=======
   "category" : "^cyan;Super Weapon",
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "itemTags" : ["weapon","ranged"],
   "twoHanded" : true,
+  
+  "critChance" : 2,
+  "critBonus" : 12,
 
   "animation" : "ioncannonsupreme.animation",
   "animationParts" : {
@@ -41,8 +50,13 @@
     "class" : "BeamFire",
 
     "fireTime" : 0.2,
-    "baseDps" : 60,
+<<<<<<< HEAD
+    "baseDps" : 30,
+    "energyUsage" : 60,
+=======
+    "baseDps" : 40,
     "energyUsage" : 30,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 
     "damageConfig" : {
       "statusEffects" : [ "ionized" ],
@@ -112,7 +126,11 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod", "baseDamage" : 1, "baseDps" : 10 }
+<<<<<<< HEAD
+      "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod", "baseDamage" : 5, "baseDps" : 20, "fireTime" : 3 }
+=======
+      "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod", "baseDamage" : 5, "baseDps" : 20 }
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     },
     "energyUsage" : 100
   },

@@ -1,0 +1,54 @@
+{
+  "itemName" : "durasteelslingshot",
+  "price" : 10,
+  "inventoryIcon" : "durasteelslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "tooltipKind" : "bow",
+  "category" : "Slingshot",
+  "description" : "A slingshot forged with durasteel and copper.",
+  "shortdescription" : "Durasteel Slingshot",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+  
+  "critChance" : 5,
+  "critBonus" : 5,
+
+  "level" : 4,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "durasteelslingshot.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/gun/bow_loose.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/bow_loose_perfect.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    //"drawSpeedMultiplier" : "constant",
+    "projectileType" : "t5slingshot",
+    "powerProjectileType" : "t5cslingshot",
+	"stances" : {
+      "draw" : {
+		"backArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+		"backArmFrame" : "swimIdle.2"
+      }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

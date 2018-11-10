@@ -60,15 +60,23 @@
 					  "list" : [
 					    {
 						  "action" : "spawnmonster",
-						  "type" : "frozentrailer",
+						  "type" : "ancienttrailer",
 						  "offset" : [3, 0],
-						  "level" : 5
+<<<<<<< HEAD
+						  "level" : 6
+=======
+						  "level" : 3
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 						},
 						{
 						  "action" : "spawnmonster",
-						  "type" : "frozentrailer",
+						  "type" : "ancienttrailer",
 						  "offset" : [-3, 0],
-						  "level" : 5
+<<<<<<< HEAD
+						  "level" : 6
+=======
+						  "level" : 3
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 						}
 					  ]
 					},
@@ -77,8 +85,9 @@
 					  "list" : [
 					    {
 						  "action" : "projectile",
-						  "type" : "frozentwigun",
+						  "type" : "ancienttwigun",
 						  "offset" : [3, 0],
+						  "angle" : 0,
 						  "fuzzAngle" : 20,
 						  "config" : {
 						    "damageTeam" : {"type" : "enemy"}
@@ -86,7 +95,7 @@
 						},
 						{
 						  "action" : "projectile",
-						  "type" : "frozentwigun",
+						  "type" : "ancienttwigun",
 						  "offset" : [-3, 0],
 						  "angle" : 180,
 						  "fuzzAngle" : 20,
@@ -101,19 +110,35 @@
 					  "list" : [
 					    {
 						  "action" : "spawnmonster",
-						  "type" : "frozentrifangle",
+						  "type" : "ancienttrifangle_es",
 						  "offset" : [3, 0],
-						  "level" : 5
+<<<<<<< HEAD
+						  "level" : 6
+=======
+						  "level" : 3
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 						},
 						{
 						  "action" : "spawnmonster",
-						  "type" : "frozentrifangle",
+						  "type" : "ancienttrifangle_es",
 						  "offset" : [-3, 0],
-						  "level" : 5
+<<<<<<< HEAD
+						  "level" : 6
+=======
+						  "level" : 3
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 						}
 					  ]
 					}
 				  ]
+				},
+				{
+				  "action" : "projectile",
+				  "type" : "invisibleprojectile",
+				  "config" : {
+				    "damageTeam" : {"type" : "enemy"},
+					"statusEffects" : [{"effect" : "invulnerable", "duration" : 3}]
+				  }
 				}
 			  ]
             },
@@ -217,7 +242,7 @@
           "baseValue" : 1000
         },
         "maxHealth" : {
-          "baseValue" : 100
+          "baseValue" : 50
         },
         "protection" : {
           "baseValue" : 0
@@ -228,7 +253,25 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
         "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
           "baseValue" : 1.0
         },
 		"poisonResistance" : {

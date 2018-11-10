@@ -10,9 +10,17 @@
   "category" : "^cyan;Super Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+<<<<<<< HEAD
+  "critChance" : 2,
+  "critBonus" : 12,
+=======
+  "critChance" : 15,
+  "critBonus" : 25,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 
   "inventoryIcon" : [
-    { "image" : "nuclearrocketlaunchericon.png" }
+    { "image" : "nuclearrocketlauncher.png:idle.1" }
   ],
 
   "animation" : "nuclearrocketlauncher.animation",
@@ -30,7 +38,8 @@
       "color" : [101, 52, 120]
     }},
     "sounds" : {
-      "fire" : [ "/sfx/projectiles/blast_small3.ogg" ]
+      "fire" : [ "/sfx/gun/superredeemer_fire.ogg" ],
+	  "electricGuided" : [ "/sfx/gun/solariumfusioncannon_fire.ogg" ]
     }
   },
   "baseOffset" : [0.7, 0.45],
@@ -46,15 +55,14 @@
 
     "fireTime" : 1.5,
     "baseDps" : 8.0,
-    "energyUsage" : 24,
+    "energyUsage" : 75,
     "inaccuracy" : 0.008,
     "fireType" : "auto",
 
-    "projectileType" : "fusionbubbleform",
+    "projectileType" : "superredeemershot",
     "projectileParameters" : {
       "knockback" : 40,
-      "speed" : 0.1,
-      "statusEffects" : [ "gammarays" ]
+      "speed" : 2
     },
     "projectileCount" : 1,
 
@@ -74,7 +82,10 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+		"animationStates" : {
+		  "middle" : "fire"
+		}
       },
       "cooldown" : {
         "duration" : 0.11,
@@ -92,8 +103,40 @@
   "altAbility" : {
     "elementalConfig" : {
       "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}}
-	  }
-    },
+	},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		"animationStates" : {
+		  "middle" : "fire2"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.11,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

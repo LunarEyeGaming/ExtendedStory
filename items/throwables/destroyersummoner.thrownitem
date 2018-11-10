@@ -80,76 +80,10 @@
         			  },
 					  "periodicActions" : [
 					    {
-						  "time" : 0.0,
+						  "time" : 0,
 						  "repeat" : false,
 						  "action" : "projectile",
-						  "type" : "invisibleprojectile",
-						  "direction" : [1.0, 0.0],
-						  "config" : {
-						    "movementSettings" : {
-							  "collisionEnabled" : false
-							},
-							"speed" : 200,
-							"timeToLive" : 0.5,
-							"power" : 0,
-							"piercing" : true,
-							"damageTeam" : { "type" : "indiscriminate" },
-							"actionOnReap" : [
-							  {
-							    "action" : "projectile",
-								"type" : "destroyerlasersweep",
-								"config" : {
-								  "timeToLive" : 4.53,
-								  "speed" : 0,
-								  "actionOnReap" : [
-								    {
-									  "action" : "projectile",
-									  "type" : "destroyerborder",
-									  "config" : {
-									    "damageTeam" : { "type" : "indiscriminate" }
-									  }
-									}
-								  ]
-								}
-							  }
-							]
-						  }
-						},
-						{
-						  "time" : 0.0,
-						  "repeat" : false,
-						  "action" : "projectile",
-						  "type" : "invisibleprojectile",
-						  "direction" : [-1.0, 0.0],
-						  "config" : {
-						    "movementSettings" : {
-							  "collisionEnabled" : false
-							},
-							"speed" : 200,
-							"timeToLive" : 0.5,
-							"power" : 0,
-							"piercing" : true,
-							"damageTeam" : { "type" : "indiscriminate" },
-							"actionOnReap" : [
-							  {
-							    "action" : "projectile",
-								"type" : "destroyerlasersweep",
-								"config" : {
-								  "timeToLive" : 4.53,
-								  "speed" : 0,
-								  "actionOnReap" : [
-								    {
-									  "action" : "projectile",
-									  "type" : "destroyerborder",
-									  "config" : {
-									    "damageTeam" : { "type" : "indiscriminate" }
-									  }
-									}
-								  ]
-								}
-							  }
-							]
-						  }
+						  "type" : "destroyerborderform"
 						},
 					    {
 						  "time" : 0.2,

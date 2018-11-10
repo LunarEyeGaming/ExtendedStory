@@ -1,0 +1,24 @@
+{
+  "projectileName" : "supervoidbullet_ELEC5",
+  "physics" : "laser",
+  "bounces" : -1,
+  "speed" : 100,
+  "timeToLive" : 0.25,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "piercing" : true,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

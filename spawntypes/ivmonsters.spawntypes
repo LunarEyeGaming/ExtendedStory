@@ -345,6 +345,171 @@
     }
   },
   {
+    "name" : "supervoidworm",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "supervoidworm_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "supervoidvortex",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "supervoidvortex",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "backgroundmimic_es",
+
+    "spawnParameters" : {
+      "area" : "surface",
+      "region" : "exposed",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.08,
+    "monsterType" : "forgotten-backgroundmimic_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "rottenfennix_es",
+
+    "spawnParameters" : {
+      "area" : "surface",
+      "region" : "exposed",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.08,
+    "monsterType" : "forgotten-rottenfennix_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "buglike_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "forgotten-buglike_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "eyecreature_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "forgotten-eyecreature_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "mouthcreature_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "forgotten-mouthcreature_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "rottenskull_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "forgotten-rottenskull_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "supervoiddroid",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "supervoiddroid",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "annihilatordrone",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.0005,
+    "monsterType" : "annihilatordrone",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "supervoidpoptop",
+
+    "spawnParameters" : {
+      "area" : "surface",
+      "region" : "exposed",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.08,
+    "monsterType" : "supervoidpoptop",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
     "name" : "teslapin",
 
     "spawnParameters" : {
@@ -370,6 +535,66 @@
     "groupSize" : [1, 1],
     "spawnChance" : 0.08,
     "monsterType" : "teslutter",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "ancientturret_es",
+
+    "spawnParameters" : {
+      "area" : "ceiling",
+      "region" : "enclosed",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "ancientturret_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "ancienttwigun_es",
+
+    "spawnParameters" : {
+      "area" : "ceiling",
+      "region" : "enclosed",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : "ancienttwigun",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "ancienttrifangle_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.0005,
+    "monsterType" : "ancienttrifangle_es",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
+    "name" : "ancienttrailer_es",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.0005,
+    "monsterType" : "ancienttrailer",
     "monsterParameters" : {
       "aggressive" : true
     }

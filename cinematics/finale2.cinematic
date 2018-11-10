@@ -1,3901 +1,1057 @@
 {
-  // scrapped this idea because it's just not necessary
   "muteSfx" : true,
   "muteMusic" : true,
   "skippable" : true,
-
   "camera" : [
-  // rumble 1
-    {
-      "timecode" : 1,
-      "zoom" : 1.0,
-      "pan" : [0, 0]
-    },
-    {
-      "timecode" : 1.1,
-      "zoom" : 1.0,
-      "pan" : [-0.1, 0]
-    },
-    {
-      "timecode" : 1.2,
-      "zoom" : 1.0,
-      "pan" : [0.1, 0]
-    },
-    {
-      "timecode" : 1.3,
-      "zoom" : 1.0,
-      "pan" : [-0.1, 0]
-    },
-    {
-      "timecode" : 1.4,
-      "zoom" : 1.0,
-      "pan" : [0.1, 0]
-    },
-    {
-      "timecode" : 1.5,
-      "zoom" : 1.0,
-      "pan" : [-0.2, 0]
-    },
-    {
-      "timecode" : 1.6,
-      "zoom" : 1.0,
-      "pan" : [0.2, 0]
-    },
-    {
-      "timecode" : 1.7,
-      "zoom" : 1.0,
-      "pan" : [-0.2, 0]
-    },
-    {
-      "timecode" : 1.8,
-      "zoom" : 1.0,
-      "pan" : [0.2, 0]
-    },
-    {
-      "timecode" : 1.9,
-      "zoom" : 1.0,
-      "pan" : [-0.3, 0]
-    },
-    {
-      "timecode" : 2,
-      "zoom" : 1.0,
-      "pan" : [0.3, 0]
-    },
-    {
-      "timecode" : 2.1,
-      "zoom" : 1.0,
-      "pan" : [-0.3, 0]
-    },
-    {
-      "timecode" : 2.2,
-      "zoom" : 1.0,
-      "pan" : [0.3, 0]
-    },
-    {
-      "timecode" : 2.3,
-      "zoom" : 1.0,
-      "pan" : [-0.4, 0]
-    },
-    {
-      "timecode" : 2.4,
-      "zoom" : 1.0,
-      "pan" : [0.4, 0]
-    },
-    {
-      "timecode" : 2.5,
-      "zoom" : 1.0,
-      "pan" : [-0.4, 0]
-    },
-    {
-      "timecode" : 2.6,
-      "zoom" : 1.0,
-      "pan" : [0.4, 0]
-    },
-    {
-      "timecode" : 2.65,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 2.7,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 2.75,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 2.8,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 2.85,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 2.9,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 2.95,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.05,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.1,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.15,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.2,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.25,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.3,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.35,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.4,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.45,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.5,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.55,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.6,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.65,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.7,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.75,
-      "zoom" : 1.0,
-      "pan" : [-1, 0]
-    },
-    {
-      "timecode" : 3.8,
-      "zoom" : 1.0,
-      "pan" : [1, 0]
-    },
-    {
-      "timecode" : 3.85,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 3.9,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 3.95,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.05,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.1,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.15,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.2,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.25,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.3,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.35,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.4,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.45,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.5,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.55,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.6,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.65,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.7,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.75,
-      "zoom" : 1.0,
-      "pan" : [-1.25, 0]
-    },
-    {
-      "timecode" : 4.8,
-      "zoom" : 1.0,
-      "pan" : [1.25, 0]
-    },
-    {
-      "timecode" : 4.85,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
-      "timecode" : 4.9,
-      "zoom" : 1.0,
-      "pan" : [1.5, 0]
-    },
-    {
-      "timecode" : 4.95,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
+    // Does shaking happen in space?
     {
       "timecode" : 5,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [0, 0]
     },
-    {
-      "timecode" : 5.05,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.1,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [-1, 0]
     },
-    {
-      "timecode" : 5.15,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.2,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [1, 0]
     },
-    {
-      "timecode" : 5.25,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.3,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [-1, 0]
     },
-    {
-      "timecode" : 5.35,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.4,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [1, 0]
     },
-    {
-      "timecode" : 5.45,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.5,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [-1, 0]
     },
-    {
-      "timecode" : 5.55,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.6,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [1, 0]
     },
-    {
-      "timecode" : 5.65,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.7,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [-1, 0]
     },
-    {
-      "timecode" : 5.75,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.8,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [1, 0]
     },
-    {
-      "timecode" : 5.85,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 5.9,
       "zoom" : 1.0,
-      "pan" : [1.5, 0]
+      "pan" : [-1, 0]
     },
-    {
-      "timecode" : 5.95,
-      "zoom" : 1.0,
-      "pan" : [-1.5, 0]
-    },
-    {
+	{
       "timecode" : 6,
       "zoom" : 1.0,
-      "pan" : [1.6, 0]
+      "pan" : [1, 0]
     },
-    {
-      "timecode" : 6.05,
-      "zoom" : 1.0,
-      "pan" : [-1.6, 0]
-    },
-    {
+	{
       "timecode" : 6.1,
       "zoom" : 1.0,
-      "pan" : [1.7, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 6.15,
-      "zoom" : 1.0,
-      "pan" : [-1.7, 0]
-    },
-    {
+	{
       "timecode" : 6.2,
       "zoom" : 1.0,
-      "pan" : [1.8, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 6.25,
-      "zoom" : 1.0,
-      "pan" : [-1.8, 0]
-    },
-    {
+	{
       "timecode" : 6.3,
       "zoom" : 1.0,
-      "pan" : [1.9, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 6.35,
-      "zoom" : 1.0,
-      "pan" : [-1.9, 0]
-    },
-    {
+	{
       "timecode" : 6.4,
       "zoom" : 1.0,
-      "pan" : [2.0, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 6.45,
-      "zoom" : 1.0,
-      "pan" : [-2.0, 0]
-    },
-    {
+	{
       "timecode" : 6.5,
       "zoom" : 1.0,
-      "pan" : [2.2, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 6.55,
-      "zoom" : 1.0,
-      "pan" : [-2.2, 0]
-    },
-    {
+	{
       "timecode" : 6.6,
       "zoom" : 1.0,
-      "pan" : [2.4, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 6.65,
-      "zoom" : 1.0,
-      "pan" : [-2.4, 0]
-    },
-    {
+	{
       "timecode" : 6.7,
       "zoom" : 1.0,
-      "pan" : [2.6, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 6.75,
-      "zoom" : 1.0,
-      "pan" : [-2.6, 0]
-    },
-    {
+	{
       "timecode" : 6.8,
       "zoom" : 1.0,
-      "pan" : [2.8, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 6.85,
-      "zoom" : 1.0,
-      "pan" : [-2.8, 0]
-    },
-    {
+	{
       "timecode" : 6.9,
       "zoom" : 1.0,
-      "pan" : [3.0, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 6.95,
-      "zoom" : 1.0,
-      "pan" : [-3.0, 0]
-    },
-    {
+	{
       "timecode" : 7,
       "zoom" : 1.0,
-      "pan" : [3.2, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 7.05,
-      "zoom" : 1.0,
-      "pan" : [-3.2, 0]
-    },
-    {
+	{
       "timecode" : 7.1,
       "zoom" : 1.0,
-      "pan" : [3.4, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 7.15,
-      "zoom" : 1.0,
-      "pan" : [-3.4, 0]
-    },
-    {
+	{
       "timecode" : 7.2,
       "zoom" : 1.0,
-      "pan" : [3.6, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 7.25,
-      "zoom" : 1.0,
-      "pan" : [-3.6, 0]
-    },
-    {
+	{
       "timecode" : 7.3,
       "zoom" : 1.0,
-      "pan" : [3.8, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 7.35,
-      "zoom" : 1.0,
-      "pan" : [-3.8, 0]
-    },
-    {
+	{
       "timecode" : 7.4,
       "zoom" : 1.0,
-      "pan" : [4.0, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 7.45,
-      "zoom" : 1.0,
-      "pan" : [-4.0, 0]
-    },
-    {
+	{
       "timecode" : 7.5,
       "zoom" : 1.0,
-      "pan" : [4.4, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 7.55,
-      "zoom" : 1.0,
-      "pan" : [-4.4, 0]
-    },
-    {
+	{
       "timecode" : 7.6,
       "zoom" : 1.0,
-      "pan" : [4.8, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 7.65,
-      "zoom" : 1.0,
-      "pan" : [-4.8, 0]
-    },
-    {
+	{
       "timecode" : 7.7,
       "zoom" : 1.0,
-      "pan" : [5.2, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 7.75,
-      "zoom" : 1.0,
-      "pan" : [-5.2, 0]
-    },
-    {
+	{
       "timecode" : 7.8,
       "zoom" : 1.0,
-      "pan" : [5.6, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 7.85,
-      "zoom" : 1.0,
-      "pan" : [-5.6, 0]
-    },
-    {
+	{
       "timecode" : 7.9,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 7.95,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 8.05,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8.1,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 8.15,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8.2,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 8.25,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8.3,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [-2, 0]
     },
-    {
-      "timecode" : 8.35,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8.4,
       "zoom" : 1.0,
-      "pan" : [6.0, 0]
+      "pan" : [2, 0]
     },
-    {
-      "timecode" : 8.45,
-      "zoom" : 1.0,
-      "pan" : [-6.0, 0]
-    },
-    {
+	{
       "timecode" : 8.5,
       "zoom" : 1.0,
-      "pan" : [0, 0]
+      "pan" : [-2, 0]
+    },
+	{
+      "timecode" : 8.6,
+      "zoom" : 1.0,
+      "pan" : [2, 0]
+    },
+	{
+      "timecode" : 8.7,
+      "zoom" : 1.0,
+      "pan" : [-2, 0]
+    },
+	{
+      "timecode" : 8.8,
+      "zoom" : 1.0,
+      "pan" : [2, 0]
+    },
+	{
+      "timecode" : 8.9,
+      "zoom" : 1.0,
+      "pan" : [-2, 0]
+    },
+	{
+      "timecode" : 9,
+      "zoom" : 1.0,
+      "pan" : [2, 0]
+    },
+	{
+      "timecode" : 9.1,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 9.2,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 9.3,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 9.4,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 9.5,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 9.6,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 9.7,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 9.8,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 9.9,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 10,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 10.1,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 10.2,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 10.3,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 10.4,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 10.5,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 10.6,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 10.7,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 10.8,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 10.9,
+      "zoom" : 1.0,
+      "pan" : [-3, 0]
+    },
+	{
+      "timecode" : 11,
+      "zoom" : 1.0,
+      "pan" : [3, 0]
+    },
+	{
+      "timecode" : 11.1,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 11.2,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 11.3,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 11.4,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 11.5,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 11.6,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 11.7,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 11.8,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 11.9,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 12,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 12.1,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 12.2,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 12.3,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 12.4,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 12.5,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 12.6,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 12.7,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 12.8,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 12.9,
+      "zoom" : 1.0,
+      "pan" : [-4, 0]
+    },
+	{
+      "timecode" : 13,
+      "zoom" : 1.0,
+      "pan" : [4, 0]
+    },
+	{
+      "timecode" : 13.1,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 13.2,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 13.3,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 13.4,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 13.5,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 13.6,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 13.7,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 13.8,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 13.9,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 14,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 14.1,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 14.2,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 14.3,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 14.4,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 14.5,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 14.6,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 14.7,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 14.8,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
+    },
+	{
+      "timecode" : 14.9,
+      "zoom" : 1.0,
+      "pan" : [-5, 0]
+    },
+	{
+      "timecode" : 15,
+      "zoom" : 1.0,
+      "pan" : [5, 0]
     }
   ],
-
-
   "panels" : [
-
-
-// ----------------------------------------------------------------------------------------------- PLANET SHAKING
     {
-      "startTime" : 0.6,
-      "endTime" : 15.0,
+	  "startTime" : 0,
+	  "endTime" : 60,
+      "drawables" : [
+        {
+          "image" : "/cinematics/black.png?setcolor=ffffff"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 0.5,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+	  "startTime" : 0,
+	  "endTime" : 60,
+      "drawables" : [
+        {
+          "image" : "/cinematics/black.png"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0.75,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 1.5,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+	{
+	  "startTime" : 0,
+	  "endTime" : 20,
       "drawables" : [
         {
           "image" : "/cinematics/starfield0.png"
         }
       ],
       "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
+		{
+          "timecode" : 0.75,
           "zoom" : 1.2,
-          "position" : [480, 270]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 0.6,
-      "endTime" : 15.0,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalestars2.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 0.5,
-          "position" : [400, 340]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 1.0,
-      "endTime" : 10,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetsurface.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [480, 0],
-          "frame" : 0
-        }
-      ]
-    },
-  
-    {
-      "startTime" : 1.0,
-      "endTime" : 10,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetsurfacecracks.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 2.5,
-          "alpha" : 0,
-          "zoom" : 1,
-          "position" : [480, 0]
-        },
-        {
-          "timecode" : 7.5,
-          "alpha" : 1,
-          "position" : [480, 0]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 1.0,
-      "endTime" : 10,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetsurfacerays.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 3,
-          "alpha" : 0.0,
-          "zoom" : 1,
-          "position" : [480, 230]
-        },
-        {
-          "timecode" : 8,
-          "alpha" : 1
-        }
-      ]
-    },
-
-    {
-      "startTime" : 1.0,
-      "endTime" : 15,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetsmoke.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0.2,
-          "zoom" : 1,
-          "position" : [480, 150]
-        },
-        {
-          "timecode" : 2.5,
-          "alpha" : 0.5,
-          "zoom" : 1.1,
-          "position" : [500, 150]
-        }
-      ]
-    },
-
-
-
-// ----------------------------------------------------------------------------------------------- PLANET EXPLODING
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetbg.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.2,
-          "position" : [480, 270]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalestars2.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 0.5,
-          "position" : [400, 340]
-        }
-      ]
-    },
-
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetdebris.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [480, 110]
-        },
-        {
-          "timecode" : 10,
-          "zoom" : 1.1
-        },
-        {
-          "timecode" : 14.5,
-          "zoom" : 1
-        },
-        {
-          "timecode" : 20.8,
-          "zoom" : 1.1
-        }
-      ]
-    },
-
-
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece7.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [350, 70]
-        },
-        {
-          "timecode" : 10,
-          "position" : [340, 75]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [340, 75]
-        },
-        {
-          "timecode" : 15.9,
-          "position" : [340, 77]
-        },
-        {
-          "timecode" : 16.8,
-          "position" : [340, 75]
-        },
-        {
-          "timecode" : 18,
-          "position" : [340, 77]
-        },
-        {
-          "timecode" : 18.8,
-          "position" : [340, 75]
-        },
-        {
-          "timecode" : 20,
-          "position" : [340, 77]
-        },
-        {
-          "timecode" : 20.8,
-          "position" : [340, 75]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece8.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [500, 120]
-        },
-        {
-          "timecode" : 10,
-          "position" : [510, 130]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [510, 130]
-        },
-        {
-          "timecode" : 15.5,
-          "position" : [510, 122]
-        },
-        {
-          "timecode" : 16.5,
-          "position" : [510, 130]
-        },
-        {
-          "timecode" : 17.5,
-          "position" : [510, 122]
-        },
-        {
-          "timecode" : 18.5,
-          "position" : [510, 130]
-        },
-        {
-          "timecode" : 19.5,
-          "position" : [510, 122]
-        },
-        {
-          "timecode" : 20.5,
-          "position" : [510, 130]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece9.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [550, 30]
-        },
-        {
-          "timecode" : 10,
-          "position" : [555, 30]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [555, 30]
-        },
-        {
-          "timecode" : 15.9,
-          "position" : [555, 31]
-        },
-        {
-          "timecode" : 17.2,
-          "position" : [555, 30]
-        },
-        {
-          "timecode" : 18.5,
-          "position" : [555, 31]
-        },
-        {
-          "timecode" : 19.8,
-          "position" : [555, 30]
-        },
-        {
-          "timecode" : 21,
-          "position" : [555, 31]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece10.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [640, 120]
-        },
-        {
-          "timecode" : 10,
-          "position" : [650, 130]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [650, 130]
-        },
-        {
-          "timecode" : 15.6,
-          "position" : [650, 131]
-        },
-        {
-          "timecode" : 16.7,
-          "position" : [650, 130]
-        },
-        {
-          "timecode" : 17.8,
-          "position" : [650, 131]
-        },
-        {
-          "timecode" : 18.9,
-          "position" : [650, 130]
-        },
-        {
-          "timecode" : 20,
-          "position" : [650, 131]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetveins.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [420, 110]
-        },
-        {
-          "timecode" : 10,
-          "zoom" : 1.1
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [420, 110]
-        },
-        {
-          "timecode" : 15.6,
-          "position" : [420, 112]
-        },
-        {
-          "timecode" : 16.7,
-          "position" : [420, 110]
-        },
-        {
-          "timecode" : 17.8,
-          "position" : [420, 112]
-        },
-        {
-          "timecode" : 18.9,
-          "position" : [420, 110]
-        },
-        {
-          "timecode" : 20,
-          "position" : [420, 112]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece1.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [170, 60]
-        },
-        {
-          "timecode" : 10,
-          "position" : [155, 60]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [155, 60]
-        },
-        {
-          "timecode" : 15.5,
-          "position" : [155, 64]
-        },
-        {
-          "timecode" : 16.3,
-          "position" : [155, 60]
-        },
-        {
-          "timecode" : 17.3,
-          "position" : [155, 64]
-        },
-        {
-          "timecode" : 18.1,
-          "position" : [155, 60]
-        },
-        {
-          "timecode" : 19.1,
-          "position" : [155, 64]
-        },
-        {
-          "timecode" : 20,
-          "position" : [155, 60]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece2.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [270, 100]
-        },
-        {
-          "timecode" : 10,
-          "position" : [250, 110]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [250, 110]
-        },
-        {
-          "timecode" : 16.5,
-          "position" : [250, 114]
-        },
-        {
-          "timecode" : 17.5,
-          "position" : [250, 110]
-        },
-        {
-          "timecode" : 19.5,
-          "position" : [250, 114]
-        },
-        {
-          "timecode" : 20.5,
-          "position" : [250, 110]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece3.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [260, 185]
-        },
-        {
-          "timecode" : 10,
-          "position" : [240, 200]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [240, 200]
-        },
-        {
-          "timecode" : 17.5,
-          "position" : [240, 197]
-        },
-        {
-          "timecode" : 19,
-          "position" : [240, 200]
-        },
-        {
-          "timecode" : 21,
-          "position" : [240, 197]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece6.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [720, 70]
-        },
-        {
-          "timecode" : 10,
-          "position" : [740, 70]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [740, 70]
-        },
-        {
-          "timecode" : 16.5,
-          "position" : [740, 75]
-        },
-        {
-          "timecode" : 19.5,
-          "position" : [740, 70]
-        },
-        {
-          "timecode" : 21,
-          "position" : [740, 75]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece5.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [590, 224]
-        },
-        {
-          "timecode" : 10,
-          "position" : [610, 230]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [610, 230]
-        },
-        {
-          "timecode" : 16,
-          "position" : [610, 232]
-        },
-        {
-          "timecode" : 18.5,
-          "position" : [610, 230]
-        },
-        {
-          "timecode" : 20,
-          "position" : [610, 233]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 8.5,
-      "endTime" : 35,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleplanetpiece4.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1,
-          "position" : [450, 98]
-        },
-        {
-          "timecode" : 10,
-          "position" : [465, 110]
-        },
-        {
-          "timecode" : 14.5,
-          "position" : [465, 110]
-        },
-        {
-          "timecode" : 16.5,
-          "position" : [465, 113]
-        },
-        {
-          "timecode" : 18,
-          "position" : [465, 110]
-        },
-        {
-          "timecode" : 20,
-          "position" : [465, 113]
-        }
-      ]
-    },
-
-
-
-/// ---------------------------------------------------------------------------------------------------------------- WHITE
-    {
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/white.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0,
-          "zoom" : 500,
           "alpha" : 0,
           "position" : [480, 270]
-        },
-        {
-          "timecode" : 0.5,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 1,
-          "alpha" : 1
         },
         {
           "timecode" : 1.5,
-          "alpha" : 0.0
-        },
-        {
-          "timecode" : 6.8,
-          "alpha" : 0.0
-        },
-        {
-          "timecode" : 8.5,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 8.6,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 9.1,
-          "alpha" : 0
-        }
-      ]
-    },
-
-
-
-
-// ------------------------------------------------------------------------------------------------------------ OUTPOST 1
-   
-
-    {
-      "startTime" : 14,
-      "endTime" : 23,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/black.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
+          "zoom" : 1.2,
           "alpha" : 1,
-          "zoom" : 5,
-          "position" : [480, 350],
-          "frame" : 0
-        }
-      ]
-    },
-
-    {
-      "startTime" : 14,
-      "endTime" : 23,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/opengate/opengatewarp.png:<frame>"
-        }
-      ],
-      "animationFrames" : 16,
-      "keyframes" : [
-        {
-          "timecode" : 0,
-          "alpha" : 1,
-          "zoom" : 1.3,
-          "position" : [460, 328],
-          "frame" : 0
-        },
-        {
-          "timecode" : 20,
-          "frame" : 300
-        }
-      ]
-    },
-
-    {
-      "startTime" : 14,
-      "endTime" : 23,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleoutpostbg.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [480, 350],
-          "frame" : 0
-        }
-      ]
-    },
-
-    {
-      "startTime" : 14,
-      "endTime" : 23,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleoutpostsadcrew.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [485, 212]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 14,
-      "endTime" : 23,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleoutpostesther.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 1,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 2.0,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 3,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 4,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 5,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 6,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 7,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 8,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 9,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 10,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 11,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 12,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 13,
-          "position" : [350, 205]
-        }
-      ]
-    },
-
-
-
-
-
-// ------------------------------------------------------------------------------------------------------- BLACK
-
-    {
-      "startTime" : 21.6,
-      "endTime" : 122.5,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/black.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 1,
-          "alpha" : 0,
-          "zoom" : 5,
-          "position" : [480, 350]
-        },{
-          "timecode" : 1.4,
-          "alpha" : 1,
-          "position" : [480, 350]
-        },
-        {
-          "timecode" : 2,
-          "alpha" : 0,
-          "position" : [480, 350]
-        },
-        {
-          "timecode" : 4.5,
-          "alpha" : 0,
-          "position" : [480, 350]
-        },
-        {
-          "timecode" : 7.2,
-          "alpha" : 1,
-          "position" : [480, 350]
-        }
-      ]
-    },
-
-
-// ----------------------------------------------------------------------------------------------- Cultivator encounter
-    {
-      "startTime" : 27,
-      "endTime" : 130,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalestardust1.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0,
-          "zoom" : 1,
-          "position" : [1000, 300]
-        },
-        {
-          "timecode" : 1,
-          "alpha" : 0.85
-        },
-        {
-          "timecode" : 100,
-          "position" : [850, 300]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 27,
-      "endTime" : 130,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalestardust2.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0,
-          "zoom" : 1,
-          "position" : [1000, 250]
-        },
-        {
-          "timecode" : 1,
-          "alpha" : 0.75
-        },
-        {
-          "timecode" : 100,
-          "position" : [0, 250]
-        }
-      ]
-    },
-    
-
-    {
-      "startTime" : 28,
-      "endTime" : 130,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalemovingstars.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0,
-          "zoom" : 0.5,
           "position" : [480, 270]
         },
         {
-          "timecode" : 1,
-          "zoom" : 0.7,
-          "alpha" : 0.6
-        },
-        {
-          "timecode" : 2,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 2.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 3,
-          "zoom" : 0.7,
-          "alpha" : 0.6
-        },
-        {
-          "timecode" : 4,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 4.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 5,
-          "zoom" : 0.7,
-          "alpha" : 0.6
-        },
-        {
-          "timecode" : 6,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 6.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 7,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 8,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 8.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 9,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 10,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 10.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 11,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 12,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 12.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 13,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 14,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 14.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 15,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 16,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 16.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
           "timecode" : 17,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 18,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 18.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 19,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 20,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 20.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 21,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 22,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 22.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 23,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 24,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 24.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 25,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 26,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 26.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 27,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 28,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 28.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 29,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 30,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 30.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 31,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 32,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 32.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 33,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 34,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 34.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 35,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 36,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 36.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 37,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 38,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 38.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 39,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 40,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 40.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 41,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 42,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 42.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 43,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 44,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 44.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 45,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 46,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 46.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 47,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 48,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 48.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 49,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 50,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 50.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 51,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 52,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 52.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 53,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 54,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 54.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 55,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 56,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 56.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 57,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 58,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 58.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 59,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 60,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 60.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 61,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 62,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 62.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 63,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 64,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 64.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 65,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 66,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 66.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 67,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 68,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 68.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 69,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 70,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 70.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 71,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 72,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 72.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 73,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 74,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 74.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 75,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 76,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 76.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 77,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 78,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 78.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 79,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 80,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 80.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 81,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 82,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 82.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 83,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 84,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 84.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 85,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 86,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 86.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 87,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 88,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 88.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 89,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 90,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 90.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 91,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 92,
-          "zoom" : 0.9,
-          "alpha" : 0
-        }
-      ]
-    },
-
-    {
-      "startTime" : 29,
-      "endTime" : 130,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalemovingstars2.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0,
-          "zoom" : 0.5,
+          "zoom" : 1.2,
+          "alpha" : 1,
           "position" : [480, 270]
         },
         {
-          "timecode" : 1,
-          "zoom" : 0.7,
-          "alpha" : 0.6
+          "timecode" : 17.1,
+          "zoom" : 1.19,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
-          "timecode" : 2,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 2.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 3,
-          "zoom" : 0.7,
-          "alpha" : 0.6
-        },
-        {
-          "timecode" : 4,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 4.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 5,
-          "zoom" : 0.7,
-          "alpha" : 0.6
-        },
-        {
-          "timecode" : 6,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 6.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 7,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 8,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 8.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 9,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 10,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 10.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 11,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 12,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 12.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 13,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 14,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 14.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 15,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 16,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 16.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 17,
-          "zoom" : 0.7,
-          "alpha" : 1
+          "timecode" : 17.5,
+          "zoom" : 1.15,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
           "timecode" : 18,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 18.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 19,
-          "zoom" : 0.7,
-          "alpha" : 1
+          "zoom" : 1.0,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
           "timecode" : 20,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 20.01,
+          "zoom" : 0.5,
           "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 21,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 22,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 22.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 23,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 24,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 24.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 25,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 26,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 26.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 27,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 28,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 28.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 29,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 30,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 30.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 31,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 32,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 32.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 33,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 34,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 34.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 35,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 36,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 36.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 37,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 38,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 38.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 39,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 40,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 40.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 41,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 42,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 42.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 43,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 44,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 44.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 45,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 46,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 46.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 47,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 48,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 48.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 49,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 50,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 50.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 51,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 52,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 52.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 53,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 54,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 54.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 55,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 56,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 56.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 57,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 58,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 58.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 59,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 60,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 60.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 61,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 62,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 62.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 63,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 64,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 64.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 65,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 66,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 66.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 67,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 68,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 68.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 69,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 70,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 70.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 71,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 72,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 72.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 73,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 74,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 74.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 75,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 76,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 76.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 77,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 78,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 78.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 79,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 80,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 80.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 81,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 82,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 82.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 83,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 84,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 84.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 85,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 86,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 86.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 87,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 88,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 88.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 89,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 90,
-          "zoom" : 0.9,
-          "alpha" : 0
-        },
-        {
-          "timecode" : 90.01,
-          "alpha" : 0,
-          "zoom" : 0.5
-        },
-        {
-          "timecode" : 91,
-          "zoom" : 0.7,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 92,
-          "zoom" : 0.9,
-          "alpha" : 0
+          "position" : [480, 270]
         }
       ]
     },
-
     {
-      "startTime" : 27,
-      "endTime" : 119.5,
+	  "startTime" : 0,
+	  "endTime" : 13,
       "drawables" : [
         {
-          "image" : "/cinematics/story/finale/sustained.png:<frame>"
+          "image" : "/cinematics/supervoideyecluster.png"
         }
       ],
-      "animationFrames" : 5,
       "keyframes" : [
         {
-          "timecode" : 3,
+          "timecode" : 0.75,
+          "zoom" : 0.5,
           "alpha" : 0,
-          "zoom" : 1.5,
-          "position" : [480, 260],
+          "position" : [480, 270],
           "frame" : 0
         },
         {
-          "timecode" : 5.5,
-          "alpha" : 1
-        },
-        {
-          "timecode" : 120,
-          "frame" : 600
-        }
-      ]
-    },
-
-
-
-    {
-      "startTime" : 119.5,
-      "endTime" : 120.05,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalewarpout.png:<frame>"
-        }
-      ],
-      "animationFrames" : 4,
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 0.4,
-          "zoom" : 1.5,
-          "position" : [480, 415],
-          "frame" : 0
-        },
-        {
-          "timecode" : 0.4,
+          "timecode" : 1.5,
+          "zoom" : 0.5,
           "alpha" : 1,
-          "frame" : 3
+          "position" : [480, 270]
         }
       ]
     },
-
-
-
-
-// ---------------------------------------------------------------------------------------------------------------- OUTPOST 2
-   
     {
-      "startTime" : 120.5,
-      "endTime" : 129.5,
+	  "startTime" : 9.8,
+	  "endTime" : 10.2,
       "drawables" : [
         {
-          "image" : "/cinematics/story/black.png"
+          "image" : "/cinematics/flash.png"
         }
       ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 5,
-          "position" : [480, 350],
-          "frame" : 0
-        }
-      ]
-    },
-
-    {
-      "startTime" : 120.5,
-      "endTime" : 129.5,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/opengate/opengatewarp.png:<frame>"
-        }
-      ],
-      "animationFrames" : 16,
       "keyframes" : [
         {
           "timecode" : 0,
+          "zoom" : 0,
+          "alpha" : 0,
+          "position" : [480, 270],
+          "frame" : 0
+        },
+        {
+          "timecode" : 0.15,
+          "zoom" : 1,
           "alpha" : 1,
-          "zoom" : 1.3,
-          "position" : [460, 328],
+          "position" : [480, 270]
+        },
+		{
+          "timecode" : 0.3,
+          "zoom" : 0,
+          "alpha" : 0,
+          "position" : [480, 270],
+          "frame" : 0
+        }
+      ]
+    },
+    {
+	  "startTime" : 10,
+	  "endTime" : 20,
+      "drawables" : [
+        {
+          "image" : "/cinematics/supervoidshockwave.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 0,
+          "alpha" : 1,
+          "position" : [480, 270],
+          "frame" : 0
+        },
+        {
+          "timecode" : 10,
+          "zoom" : 10,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+	  "startTime" : 11.5,
+	  "endTime" : 15,
+      "drawables" : [
+        {
+          "image" : "/cinematics/supervoideyecluster.png?setcolor=ffffff"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 0.5,
+          "alpha" : 0,
+          "position" : [480, 270],
+          "frame" : 0
+        },
+        {
+          "timecode" : 1.5,
+          "zoom" : 0.5,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+	{
+	  "startTime" : 14,
+	  "endTime" : 20,
+      "drawables" : [
+        {
+          "image" : "/cinematics/black.png?setcolor=ffffff"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 1.0,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 2.0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        }
+      ]
+    },
+	{
+	  "startTime" : 18,
+	  "endTime" : 43,
+      "drawables" : [
+        {
+          "image" : "/cinematics/starfield0.png"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 2.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 2,
+          "zoom" : 1.5,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 20,
+          "zoom" : 1.2,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 25,
+          "zoom" : 1.2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+	  "startTime" : 18,
+	  "endTime" : 43,
+      "drawables" : [
+        {
+          "image" : "/cinematics/supervoidstarscreen.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 2.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+		{
+          "timecode" : 2,
+          "zoom" : 1.5,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 20,
+          "zoom" : 1.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 20,
+          "zoom" : 1.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+	  "startTime" : 18,
+	  "endTime" : 43,
+      "drawables" : [
+        {
+          "image" : "/cinematics/darkness.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 0,
+          "alpha" : 1,
+          "position" : [480, 270],
           "frame" : 0
         },
         {
           "timecode" : 20,
-          "frame" : 300
+          "zoom" : 10,
+          "alpha" : 1,
+          "position" : [480, 270]
         }
       ]
     },
-
-    {
-      "startTime" : 120.5,
-      "endTime" : 129.5,
+	{
+	  "startTime" : 18,
+	  "endTime" : 43,
       "drawables" : [
         {
-          "image" : "/cinematics/story/finale/finaleoutpostbg.png"
+          "image" : "/cinematics/starfieldfinale2.png"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 2.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 2,
+          "zoom" : 1.5,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 20,
+          "zoom" : 1.0,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 25,
+          "zoom" : 1.0,
+          "alpha" : 0,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+	  "startTime" : 18,
+	  "endTime" : 43,
+      "drawables" : [
+        {
+          "image" : "/cinematics/supervoidshockwave.png"
         }
       ],
       "keyframes" : [
         {
-          "timecode" : 0.0,
+          "timecode" : 0,
+          "zoom" : 0,
           "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [480, 350]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 120.5,
-      "endTime" : 123.4,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleoutpostsadcrew.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [485, 212]
-        }
-      ]
-    },
-    
-    {
-      "startTime" : 123.4,
-      "endTime" : 128,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finalewarpin.png:<frame>"
-        }
-      ],
-      "animationFrames" : 5,
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [460, 347],
+          "position" : [480, 270],
           "frame" : 0
         },
         {
-          "timecode" : 0.3,
-          "frame" : 4
+          "timecode" : 20,
+          "zoom" : 10,
+          "alpha" : 1,
+          "position" : [480, 270]
         }
       ]
     },
-
-    {
-      "startTime" : 123.4,
-      "endTime" : 128,
+	{
+	  "startTime" : 43,
+	  "endTime" : 59,
       "drawables" : [
         {
-          "image" : "/cinematics/story/finale/finaleoutpostshockcrew.png"
+          "image" : "/cinematics/arkteleporterarea.png"
         }
       ],
       "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [485, 212]
-        }
-      ]
-    },
-
-    {
-      "startTime" : 120.5,
-      "endTime" : 129.5,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/finale/finaleoutpostesther.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1,
-          "zoom" : 1.5,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 1,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 2.0,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 3,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 4,
-          "position" : [350, 210]
+		{
+          "timecode" : 0,
+          "zoom" : 0.5,
+          "alpha" : 0,
+          "position" : [480, 270]
         },
         {
           "timecode" : 5,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 6,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 7,
-          "position" : [350, 205]
-        },
-        {
-          "timecode" : 8,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 9,
-          "position" : [350, 205]
+          "zoom" : 0.75,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
           "timecode" : 10,
-          "position" : [350, 210]
+          "zoom" : 1,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
           "timecode" : 11,
-          "position" : [350, 205]
+          "zoom" : 1,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
           "timecode" : 12,
-          "position" : [350, 210]
-        },
-        {
-          "timecode" : 13,
-          "position" : [350, 205]
+          "zoom" : 0.5,
+          "alpha" : 1,
+          "position" : [480, 270]
         }
       ]
     },
-
-// --------------------------------------------------------------------------------------------------------------------- cinematic bars
-
-    {
-      "startTime" : 0,
-      "endTime" : 127,
+	{
+	  "startTime" : 53,
+	  "endTime" : 54,
       "drawables" : [
         {
-          "image" : "/cinematics/story/blackbar.png"
+          "image" : "/cinematics/warpinfinale2.png:<frame>"
         }
       ],
       "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 2,
+          "alpha" : 1,
+          "position" : [480, 466],
+		  "frame" : 0
+        },
         {
-          "timecode" : 2.81,
+          "timecode" : 1,
+          "zoom" : 2,
+          "alpha" : 1,
+          "position" : [480, 466],
+		  "frame" : 15
+        },
+        {
+          "timecode" : 2,
           "zoom" : 1,
-          "alpha" : 0,
-          "position" : [480, 0]
-        },
-        {
-          "timecode" : 4.3,
-          "alpha" : 1
+          "alpha" : 1,
+          "position" : [480, 368],
+		  "frame" : 15
         }
       ]
     },
-
-    {
-      "startTime" : 0,
-      "endTime" : 127,
-      "drawables" : [
-        {
-          "image" : "/cinematics/story/blackbar.png"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 2.81,
-          "zoom" : 1,
-          "alpha" : 0,
-          "position" : [480, 540]
-        },
-        {
-          "timecode" : 4.3,
-          "alpha" : 1
-        }
-      ]
-    },
-
-
-// --------------------------------------------------------------------------------------------------------- DIALOGUE
-
-
-/*
-// ------------ Esther radio message 1
-    {
-      "startTime" : 2.5,
-      "endTime" : 9.5,
-      "useCamera" : false,
-      "drawables" : [
-        {
-          "image" : "/cinematics/radiomessagebg.png:<frame>"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [480, 50],
-          "frame" : 0
-        },
-        {
-          "timecode" : 0.5,
-          "frame" : 6
-        },
-        {
-          "timecode" : 146.5,
-          "frame" : 6
-        },
-        {
-          "timecode" : 147,
-          "frame" : 12
-        }
-      ]
-    },
-    {
-      "startTime" : 3,
-      "endTime" : 9.5,
-      "useCamera" : false,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/estherthoughtful.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "Something's wrong. The Ruin... its structure is unstable! Get out before-",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-    
-    */
-
-
-
-// ------------ Esther radio message 2
-    {
-      "startTime" : 15.5,
-      "endTime" : 21,
-      "drawables" : [
-        {
-          "image" : "/cinematics/radiomessagebg.png:<frame>"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [480, 50],
-          "frame" : 0
-        },
-        {
-          "timecode" : 0.5,
-          "frame" : 6
-        },
-        {
-          "timecode" : 5,
-          "frame" : 6
-        },
-        {
-          "timecode" : 5.5,
-          "frame" : 12
-        }
-      ]
-    },
-    {
-      "startTime" : 16,
-      "endTime" : 20.5,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/esthersad.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "... This can't be... ",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-
-
-    {
-      "startTime" : 33.5,
-      "endTime" : 119.51,
-      "drawables" : [
-        {
-          "image" : "/cinematics/radiomessagebg.png:<frame>"
-        }
-      ],
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [480, 50],
-          "frame" : 0
-        },
-        {
-          "timecode" : 0.5,
-          "frame" : 6
-        },
-        {
-          "timecode" : 86,
-          "frame" : 6
-        },
-        {
-          "timecode" : 86.5,
-          "frame" : 12
-        }
-      ]
-    },
-
-
-    {
-      "startTime" : 34,
-      "endTime" : 46,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "Protector... Do not follow the myriad souls of those that came before you.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-    
-    {
-      "startTime" : 46,
+	{
+      "startTime" : 54,
       "endTime" : 60,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "Though even I succumbed to the Ruin... When we fought, I shattered; broke apart into near infinite pieces...",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
+      "avatar" : "full",
       "keyframes" : [
         {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
+          "timecode" : 0,
+          "zoom" : 2,
+          "alpha" : 1,
           "frame" : 0,
-          "textPercentage" : 0
+          "position" : [480, 270]
         },
         {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
+          "timecode" : 1,
+          "zoom" : 1,
+          "alpha" : 1,
+          "frame" : 0,
+          "position" : [480, 270]
         }
       ]
     },
-
-    
     {
-      "startTime" : 60,
-      "endTime" : 79.5,
+	  "startTime" : 57,
+	  "endTime" : 62,
       "drawables" : [
         {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
+          "image" : "/cinematics/black.png"
         }
       ],
-      "animationFrames" : 2,
-      "text" : "Much was simply lost, though fragments of myself, ancient and wild, broke away and became something new... What little of myself remained stayed to watch what I had left behind.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
       "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
+		{
+          "timecode" : 0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
         },
         {
-          "timecode" : 0.3,
-          "textPercentage" : 0
+          "timecode" : 2,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
-          "timecode" : 3.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-
-    
-    {
-      "startTime" : 79.5,
-      "endTime" : 89.5,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "You united my artifacts, Protector. The six races I gifted now stand as one.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
+          "timecode" : 3,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
         },
         {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-
-    
-    {
-      "startTime" : 89.5,
-      "endTime" : 99.5,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "You have planted a seed of peace that will grow and spread throughout this vast universe.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-
-    
-    {
-      "startTime" : 99.5,
-      "endTime" : 109,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "The Ruin is destroyed, the universe is saved, but there is still so much to do.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
-        }
-      ]
-    },
-
-    
-    {
-      "startTime" : 109,
-      "endTime" : 119.5,
-      "drawables" : [
-        {
-          "image" : "/interface/chatbubbles/cultivatortalk.png:<frame>"
-        }
-      ],
-      "animationFrames" : 2,
-      "text" : "And now, to you, I give my final gift - the last of myself. Return Protector. Live again.",
-      "textPosition" : {
-        "position" : [34, 21],
-        "vAnchor" : "top",
-        "wrapWidth" : 218
-      },
-      "keyframes" : [
-        {
-          "timecode" : 0.0,
-          "alpha" : 1.0,
-          "zoom" : 1.0,
-          "position" : [366.5, 50],
-          "frame" : 0,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 0.3,
-          "textPercentage" : 0
-        },
-        {
-          "timecode" : 2.5,
-          "frame" : 8,
-          "textPercentage" : 1
+          "timecode" : 5,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
         }
       ]
     }
   ],
-// --------------------------------------------------------------------------------------------------------------------- Sound
-
-
   "audio" : [
     {
-      "timecode" : 0.0,
-      "endTimecode" : 16.0,
-      "resource" : "/sfx/cinematics/finale/tentacle_destruction.ogg"
+      "timecode" : 4.5,
+      "resource" : "/sfx/cinematics/protectorate/stage_rumbling.ogg"
     },
-
     {
-      "timecode" : 3.0,
-      "endTimecode" : 31,
-      "resource" : "/sfx/cinematics/finale/finale_music1.ogg"
+      "timecode" : 10,
+      "resource" : "/sfx/npc/boss/guardian_death_fade.ogg"
     },
-
     {
-      "timecode" : 16.3,
-      "endTimecode" : 18.5,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter1_slow_loop.ogg"
+      "timecode" : 10,
+      "resource" : "/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg"
     },
-
     {
-      "timecode" : 25.95,
-      "endTimecode" : 81,
-      "resource" : "/sfx/cinematics/finale/finale_music2.ogg"
+      "timecode" : 6.55,
+      "resource" : "/sfx/cinematics/finale2_explosionmusic.ogg"
     },
-
     {
-      "timecode" : 34.3,
-      "endTimecode" : 36.5,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
+      "timecode" : 15,
+      "resource" : "/sfx/cinematics/kaboom.ogg"
     },
-
     {
-      "timecode" : 46.3,
-      "endTimecode" : 48.5,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
+      "timecode" : 18,
+      "resource" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
     },
-
     {
-      "timecode" : 60.3,
-      "endTimecode" : 63.8,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
-    },
-
-    {
-      "timecode" : 72.5,
-      "endTimecode" : 224.5,
-      "resource" : "/sfx/cinematics/finale/finale_music3.ogg"
-    },
-
-    {
-      "timecode" : 79.8,
-      "endTimecode" : 82,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
-    },
-
-    {
-      "timecode" : 89.8,
-      "endTimecode" : 92,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
-    },
-
-    {
-      "timecode" : 99.8,
-      "endTimecode" : 102,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
-    },
-
-    {
-      "timecode" : 109.3,
-      "endTimecode" : 111.5,
-      "loops" : -1,
-      "resource" : "/sfx/interface/aichatter3_loop.ogg"
-    },
-
-    {
-      "timecode" : 119.5,
-      "resource" : "/sfx/cinematics/finale/finale_warpout.ogg"
-    },
-
-    {
-      "timecode" : 123.2,
+      "timecode" : 53,
       "resource" : "/sfx/tools/teleport_down.ogg"
     }
   ]

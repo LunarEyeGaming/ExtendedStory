@@ -19,43 +19,51 @@
       "/scripts/vec2.lua",
 
       "/monsters/boss/ancientboss/idleState.lua",
-      "/monsters/boss/ancientboss/dieState.lua"
+      "/monsters/boss/ancientboss/dieState.lua",
+	  "/monsters/boss/ancientboss/ancientbossreset.lua"
     ],
 
-    "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossSlamAttack", "ancientbossTeleportAttack", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack", "ancientbossSuperBarrageAttack", "crystalDoubleBeamAttack", "crystalIdleAttack", "crystalSineBeamAttack", "crystalSingleBeamAttack"],
-    "skillCount" : 12,
+    "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossSlamAttack", "ancientbossTeleportAttack", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack", "ancientbossSprayNPrayAttack2", "ancientbossSuperBarrageAttack", "ancientbossDoubleBeamAttack", "crystalIdleAttack", "ancientbossSineBeamAttack", "ancientbossSingleBeamAttack"],
+    "skillCount" : 14,
 
     "phases" : [
       {
-        "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack"]
+        "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossSwoopAttack", "ancientbossSprayNPrayAttack2"]
       },
       {
         "enterPhase" : "ancientbossReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
-        "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossMoveFireAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack"]
+        "skills" : ["ancientbossReinforcementsAttack2", "ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossMoveFireAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack"]
       },
       {
         "enterPhase" : "ancientbossReinforcementsAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.4,
-        "skills" : ["ancientbossMoveFireAttack", "ancientbossTeleportAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack"]
+        "healthPercentage" : 0.6,
+        "skills" : ["ancientbossMoveFireAttack", "ancientbossTeleportAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2"]
       },
       {
         "enterPhase" : "ancientbossPulseCannonAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.2,
-        "skills" : ["ancientbossSprayNPrayAttack", "ancientbossMoveFireAttack", "ancientbossPulseCannonAttack", "ancientbossReinforcementsAttack", "ancientbossSuperBarrageAttack", "crystalIdleAttack", "crystalIdleAttack", "crystalIdleAttack", "crystalIdleAttack", "crystalSingleBeamAttack", "crystalSineBeamAttack", "crystalDoubleBeamAttack", "crystalSineBeamAttack", "crystalSineBeamAttack", "crystalSineBeamAttack", "crystalDoubleBeamAttack", "crystalSingleBeamAttack", "crystalIdleAttack"]
+        "healthPercentage" : 0.4,
+        "skills" : ["ancientbossSprayNPrayAttack", "ancientbossReinforcementsAttack", "ancientbossSuperBarrageAttack", "ancientbossSingleBeamAttack", "ancientbossSineBeamAttack", "ancientbossDoubleBeamAttack", "crystalIdleAttack", "ancientbossPulseCannonAttack"]
       }
     ],
+    "jumpTargetDistance" : 4,
+    "jumpTime" : [0.4, 0.7],
 
     "queryTargetDistance" : 50.0,
     "switchTargetDistance" : 10.0,
-    "keepTargetInSight" : false,
+    "keepTargetInSight" : true,
+    "keepTargetInRange" : 70,
+    "targetOutOfSightTime" : 0.1,
 
     "cruiseDistance" : 25,
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
+
+    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
+    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
     "scale" : 1.0,
 
     "movementSettings" : {
@@ -140,6 +148,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

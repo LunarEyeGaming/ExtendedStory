@@ -22,7 +22,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 6},
+          "maxLoops": {"value": 10},
           "untilSuccess": {"value": false}
         },
         "child": {
@@ -75,9 +75,9 @@
               "parameters": {
                 "areaWidth": {"value": 32},
                 "center": {"key": "leftProjectile"},
-                "power": {"value": 10},
+                "power": {"value": 35},
                 "projectileCount": {"value": 4},
-                "projectileType": {"value": "plasmafloortele"},
+                "projectileType": {"value": "supervoidgaptele"},
                 "segmentWidth": {"value": 8},
                 "spawnHeight": {"value": 0.625}
               },
@@ -104,9 +104,9 @@
               "parameters": {
                 "areaWidth": {"value": 32},
                 "center": {"key": "rightProjectile"},
-                "power": {"value": 10},
+                "power": {"value": 35},
                 "projectileCount": {"value": 3},
-                "projectileType": {"value": "plasmafloortele"},
+                "projectileType": {"value": "supervoidgaptele"},
                 "segmentWidth": {"value": 8},
                 "spawnHeight": {"value": 0.625}
               },
@@ -127,7 +127,7 @@
               "type": "action",
               "name": "timer",
               "parameters": {
-                "time": {"value": 2.4}
+                "time": {"value": 1.6}
               }
             }
           ]

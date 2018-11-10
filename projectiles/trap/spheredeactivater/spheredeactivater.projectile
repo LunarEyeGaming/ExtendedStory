@@ -3,12 +3,11 @@
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
   "frameNumber" : 1,
   "speed" : 0,
-  "power" : 0,
-  "damagePoly" : [ [144, 160], [-144, 160], [-144, -160], [144, -160] ], 
+  "power" : 0, 
   "animationLoops" : false,
   "flippable" : true,
   "piercing" : true,
-  "damageRepeatTimeout" : 0.1,
+  "timeToLive" : 0,
   "damageKind" : "spheredeactivater",
   "statusEffects" : [
     "spheredeactivater"

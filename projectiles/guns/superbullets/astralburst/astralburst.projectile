@@ -1,0 +1,22 @@
+{
+  "projectileName" : "astralburst",
+  "image" : "astralburst.png",
+  "animationCycle" : 1,
+  "frameNumber" : 12,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/astralexplosion/astralburstexplosion.config"
+    }
+  ],
+<<<<<<< HEAD
+  "power" : 2.0,
+=======
+  "power" : 10.0,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+  "speed" : 50,
+  "damageKind" : "default",
+  "fullbright" : true
+}

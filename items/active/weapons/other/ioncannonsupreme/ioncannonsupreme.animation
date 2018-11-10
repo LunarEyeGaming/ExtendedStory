@@ -9,7 +9,7 @@
 			"cycle" : 0.25,
 			"mode" : "loop",
 			"properties" : {
-              "lightsOff" : ["red", "green", "blue"]
+              "lightsOff" : ["fire", "idle"]
             }
           },
           "idle" : {
@@ -17,7 +17,8 @@
             "cycle" : 0.5,
             "mode" : "loop",
             "properties" : {
-              "lightsOff" : ["red", "green", "blue"],
+              "lightsOff" : ["fire"],
+              "lightsOn" : ["idle"],
 			  "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg"
             }
           },
@@ -26,7 +27,8 @@
             "cycle" : 0.25,
             "mode" : "loop",
             "properties" : {
-              "lightsOn" : ["red", "green", "blue"]
+              "lightsOff" : ["idle"],
+              "lightsOn" : ["fire"]
             }
           }
         }
@@ -135,37 +137,26 @@
   },
 
   "lights" : {
-    "red" : {
+    "idle" : {
       "active" : false,
-      "color" : [0, 150, 255],
+      "color" : [59, 217, 215],
       "position" : [0, 0],
 
-      "flickerPeriod" : 0.75,
-      "flickerPeriodVariance" : 0.0,
-      "flickerMinIntensity" : 0.1,
-      "flickerMaxIntensity" : 0.6,
+      "flickerPeriod" : 4,
+      "flickerPeriodVariance" : 1,
+      "flickerMinIntensity" : 0.6,
+      "flickerMaxIntensity" : 0.7,
       "flickerIntensityVariance" : 0.0
     },
-    "green" : {
+    "fire" : {
       "active" : false,
-      "color" : [0, 90, 220],
+      "color" : [59, 217, 215],
       "position" : [0, 0],
 
       "flickerPeriod" : 0.5,
-      "flickerPeriodVariance" : 0.0,
-      "flickerMinIntensity" : 0.1,
-      "flickerMaxIntensity" : 0.6,
-      "flickerIntensityVariance" : 0.0
-    },
-    "blue" : {
-      "active" : false,
-      "color" : [0, 66, 200],
-      "position" : [0, 0],
-
-      "flickerPeriod" : 0.75,
-      "flickerPeriodVariance" : 0.0,
-      "flickerMinIntensity" : 0.6,
-      "flickerMaxIntensity" : 0.1,
+      "flickerPeriodVariance" : 0.4,
+      "flickerMinIntensity" : 0.9,
+      "flickerMaxIntensity" : 1,
       "flickerIntensityVariance" : 0.0
     }
   },

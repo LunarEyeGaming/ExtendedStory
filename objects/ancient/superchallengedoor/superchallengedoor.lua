@@ -77,8 +77,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Ancient \"Gauntlet\"",
-          planetName = "Lethal Dimension",
+          name = "Bossvault",
+          planetName = "Where it starts",
           icon = "default",
           warpAction = string.format("InstanceWorld:isolatedvault", storage.uuid, world.threatLevel())
         } }

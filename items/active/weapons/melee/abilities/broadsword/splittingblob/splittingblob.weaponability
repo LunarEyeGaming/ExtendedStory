@@ -1,0 +1,43 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "sounds" : {
+      "astralTear" : [ "/sfx/melee/blunt_kill_organic1.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Splitting Blob",
+    "type" : "splittingblob",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/astraltear/astraltear.lua"],
+    "class" : "AstralTear",
+
+    "projectileOffset" : [3,0],
+    "projectileType" : "rottenblobplayer3",
+
+    "baseDamage" : 10,
+    "energyUsage" : 50,
+    "cooldownTime" : 1.35,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.25,
+        "armRotation" : 70,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

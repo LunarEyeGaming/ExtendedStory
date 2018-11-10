@@ -6,10 +6,13 @@
   "description" : "A deadly plasma cannon fueled by solarium stars. ^yellow;Massive explosions!!!^reset;",
   "shortdescription" : "Solarium Fusion Cannon",
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "Crafted U. Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 7,
+  
+  "critChance" : 10,
+  "critBonus" : 100,
 
   "inventoryIcon" : "solariumfusioncannon.png:empty",
 

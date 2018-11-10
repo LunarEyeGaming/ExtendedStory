@@ -10,7 +10,7 @@
 			"mode" : "transition",
 			"transition" : "squirm",
 			"properties" : {
-              "lightsOff" : ["red", "green", "blue"]
+              "lightsOff" : ["fire", "idle"]
             }
           },
           "squirm" : {
@@ -18,7 +18,8 @@
             "cycle" : 1.0,
             "mode" : "loop",
             "properties" : {
-              "lightsOff" : ["red", "green", "blue"]
+              "lightsOff" : ["fire"],
+              "lightsOn" : ["idle"]
             }
           },
           "fire" : {
@@ -26,7 +27,8 @@
             "cycle" : 0.25,
             "mode" : "loop",
             "properties" : {
-              "lightsOn" : ["red", "green", "blue"]
+              "lightsOff" : ["idle"],
+              "lightsOn" : ["fire"]
             }
           }
         }
@@ -135,37 +137,26 @@
   },
 
   "lights" : {
-    "red" : {
+    "idle" : {
       "active" : false,
-      "color" : [0, 150, 255],
+      "color" : [59, 217, 215],
       "position" : [0, 0],
 
-      "flickerPeriod" : 0.75,
-      "flickerPeriodVariance" : 0.0,
-      "flickerMinIntensity" : 0.1,
-      "flickerMaxIntensity" : 0.6,
+      "flickerPeriod" : 4,
+      "flickerPeriodVariance" : 1,
+      "flickerMinIntensity" : 0.4,
+      "flickerMaxIntensity" : 0.5,
       "flickerIntensityVariance" : 0.0
     },
-    "green" : {
+    "fire" : {
       "active" : false,
-      "color" : [0, 90, 220],
+      "color" : [59, 217, 215],
       "position" : [0, 0],
 
-      "flickerPeriod" : 0.5,
-      "flickerPeriodVariance" : 0.0,
-      "flickerMinIntensity" : 0.1,
-      "flickerMaxIntensity" : 0.6,
-      "flickerIntensityVariance" : 0.0
-    },
-    "blue" : {
-      "active" : false,
-      "color" : [0, 66, 200],
-      "position" : [0, 0],
-
-      "flickerPeriod" : 0.75,
-      "flickerPeriodVariance" : 0.0,
+      "flickerPeriod" : 1,
+      "flickerPeriodVariance" : 0.1,
       "flickerMinIntensity" : 0.6,
-      "flickerMaxIntensity" : 0.1,
+      "flickerMaxIntensity" : 0.8,
       "flickerIntensityVariance" : 0.0
     }
   },
@@ -184,13 +175,14 @@
             "initialVelocity" : [0, 0.0],
             "finalVelocity" : [0, 0.0],
             "approach" : [0, 10],
-            "fade" : 0.3,
+            "fade" : 1,
             "destructionAction" : "shrink",
             "destructionTime" : 0.3,
             "size" : 0.6,
             "timeToLive" : 0.5,
             "fullbright" : true,
             "layer" : "front",
+			"light" : [59, 217, 215],
             "collidesForeground" : false,
             "variance" : {
               "position" : [0.0, 0.0],

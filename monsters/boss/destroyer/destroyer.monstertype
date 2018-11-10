@@ -8,7 +8,7 @@
   "animation" : "destroyer.animation",
   "reversed" : true,
 
-  "dropPools" : [ "dreadwingDrop" ],
+  "dropPools" : [ "destroyerTreasure" ],
 
   "baseParameters" : {
     "scripts" : [
@@ -22,24 +22,24 @@
       "/monsters/boss/destroyer/dieState.lua"
     ],
 
-    "skills" : ["destroyerBulletCirclesAttack", "destroyerSwoopAttack", "destroyerSkyGapAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"],
+    "skills" : ["destroyerBulletCirclesAttack", "destroyerDestructionShowerAttack", "destroyerSkyGapAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"],
     "skillCount" : 6,
 
     "phases" : [
       {
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerScatterAttack"]
       },
       {
         "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyGapAttack", "destroyerBulletCirclesAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerBulletCirclesAttack", "destroyerSkyGapAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyGapAttack", "destroyerBulletCirclesAttack", "destroyerDestructionShowerAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerDestructionShowerAttack", "destroyerSkyGapAttack"]
       },
       {
         "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.6,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack", "destroyerDestructionShowerAttack"]
       },
       {
         "enterPhase" : "destroyerSkyMegaLaserAttack",
@@ -51,7 +51,7 @@
         "enterPhase" : "destroyerSkyMegaLaserAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.2,
-        "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerDestructionShowerAttack", "destroyerDestructionShowerAttack", "destroyerScatterAttack"]
       }
     ],
 	"renderLayer" : "BackgroundTile-10",
@@ -62,7 +62,7 @@
 
     "cruiseDistance" : 25,
 
-    "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
+    "metaBoundBox" : [-14.0, -14.0, 14.0, 14.0],
     "scale" : 1.0,
 
     "movementSettings" : {
@@ -91,7 +91,8 @@
 
     "statusSettings" : {
       "statusProperties" : {
-        "targetMaterialKind" : "stone"
+        "targetMaterialKind" : "stone",
+        "damageFlashColor" : "000000=0.0"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -151,6 +152,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

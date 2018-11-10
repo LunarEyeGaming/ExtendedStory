@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "legarmour",
-  "description" : "This object seems to have extreme ancience.\n^cyan;Provides an ancient aura that protects you from the elements.",
+  "description" : "This object's age is beyond comprehension.\n^cyan;11% elemental damage reduction for each piece.",
   "shortdescription" : "Ancient Greaves",
   "tooltipKind" : "armor",
   "maleFrames" : "pants.png",
@@ -36,25 +36,27 @@
   ],
   
   "statusEffects" : [
+    "ancientpants",
+	"ancientsetbonus",
     {
       "stat" : "poisonResistance",
-      "amount" : 0.25
+      "amount" : 0.11
     },
     {
       "stat" : "electricResistance",
-      "amount" : 0.25
+      "amount" : 0.11
     },
     {
       "stat" : "iceResistance",
-      "amount" : 0.25
+      "amount" : 0.11
     },
     {
       "stat" : "fireResistance",
-      "amount" : 0.25
+      "amount" : 0.11
     },
     {
-      "stat" : "biomefreezingImmunity",
-      "amount" : 0.25
+      "stat" : "abyssResistance",
+      "amount" : 0.11
     }
   ],
 

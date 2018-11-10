@@ -10,6 +10,9 @@
   "category" : "rocketLauncher",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketlauncher"],
+  
+  "critChance" : 8,
+  "critBonus" : 8,
 
   "inventoryIcon" : [
     { "image" : "rapidrl3_es.png:idle" }
@@ -40,8 +43,8 @@
     "class" : "GunFire",
 
     "fireTime" : 0.25,
-    "baseDps" : 15.0,
-    "energyUsage" : 24,
+    "baseDps" : 21.0,
+    "energyUsage" : 36,
     "inaccuracy" : 0.03,
     "fireType" : "auto",
 

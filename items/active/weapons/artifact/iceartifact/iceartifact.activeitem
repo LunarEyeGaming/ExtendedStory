@@ -10,6 +10,9 @@
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
+  
+  "critChance" : 5,
+  "critBonus" : 5,
 
   "inventoryIcon" : "iceartifacticon.png",
 
@@ -23,14 +26,14 @@
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "fire",
+  "elementalType" : "ice",
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
     "chargeLevels" : [
       {
         "time" : 0,
-        "energyCost" : 5,
+        "energyCost" : 15,
         "cooldown" : 0.1,
         "projectileType" : "iceshot",
         "projectileParameters" : {
@@ -48,7 +51,7 @@
       },
       {
         "time" : 1.0,
-        "energyCost" : 40,
+        "energyCost" : 200,
         "cooldown" : 0.5,
         "projectileType" : "icestorm",
         "projectileParameters" : {

@@ -107,7 +107,9 @@ function update(args)
 	end
 	
 	velocity = vec2.mul(vec2.norm(direction), 50)
-	
+	if not args.moves["run"] then
+	  mcontroller.setVelocity(velocity)
+	end
 	mcontroller.controlApproachVelocity(velocity, 200.0)
 	
 	local direction = {0, 0}
@@ -115,6 +117,9 @@ function update(args)
 	local velocity = mcontroller.velocity()
 	
 	if velocity ~= 0 and not (args.moves["up"] or args.moves["down"] or args.moves["left"] or args.moves["right"]) then
+	  if not args.moves["run"] then
+	    mcontroller.setVelocity({0, 0})
+	  end
       mcontroller.controlApproachVelocity({0, 0}, 100)
 	end
 	if not args.moves["altFire"] and not args.moves["primaryFire"] then
@@ -141,7 +146,7 @@ function update(args)
 	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {math.cos(rotation), -math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
 	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {-math.cos(rotation), math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
 	  --mcontroller.controlRotation(0.3)
-	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 10, knockback = 30, timeToLive = 0.001})
+	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 10, knockback = 0, timeToLive = 0.001})
 	  altFireCooldownTimer = 100
 	  sphereEnergy = sphereEnergy - 5
 	  cooldownTimer()
@@ -150,7 +155,7 @@ function update(args)
 	
 	--Bash Ability
 	
-	if mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30 then
+	if (mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30) and args.moves["run"] then
 	  world.spawnProjectile("ancientspherebash", mcontroller.position(), entity.id(), {0, 0}, true)
 	  animator.setParticleEmitterActive("ancientspherebash", true)
 	else

@@ -1,0 +1,145 @@
+{
+  "globalTagDefaults" : {
+    "rotationFrame" : "0",
+    "ballDirectives" : "",
+	"mode" : "normal"
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "ballState" : {
+        "default" : "off",
+        "states" : {
+          "deactivate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "off"
+          },
+          "off" : { },
+          "activate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "on"
+          },
+          "on" : { },
+          "out" : {
+            "frames" : 8,
+            "cycle" : 0.25,
+            "mode" : "transition",
+            "transition" : "off"
+          },
+          "in" : {
+            "frames" : 8,
+            "cycle" : 0.25,
+            "mode" : "transition",
+            "transition" : "on"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "ballGlow" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "on" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:<mode>.<rotationFrame><ballDirectives>"
+              }
+            },
+			"out" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:blinkout.<frame>"
+              }
+            },
+			"in" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:blinkin.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "ball" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "deactivate" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "transform.png:deactivate.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "offset" : [0, 1.5],
+                "fullbright" : true,
+                "image" : "transform.png:activate.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<mode>.<rotationFrame><ballDirectives>"
+              }
+            },
+			"out" : {
+              "properties" : {
+                "image" : "<partImage>:blinkout.<frame>"
+              }
+            },
+			"in" : {
+              "properties" : {
+                "image" : "<partImage>:blinkin.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "ball" : { "interpolated" : true }
+  },
+
+  "particleEmitters" : {
+    "activateParticles" : {
+      "particles" : [ ]
+    },
+    "deactivateParticles" : {
+      "particles" : [ ]
+    },
+    "fire" : {
+	  "burstCount" : 3,
+      "particles" : [ 
+	    {"particle" : "rocketbarrelpuff"}
+	  ]
+    }
+  },
+
+  "sounds" : {
+    "activate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "deactivate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "forceDeactivate" : [ "/sfx/tech/tech_sonicsphere_charge1.ogg" ],
+	"activateBlink" : [ "/sfx/tech/tech_blink1.ogg" ],
+    "recharge" : [ "/sfx/tech/tech_blink_cooldown1.ogg" ],
+	"fire" : [ "/sfx/gun/grenade2.ogg" ],
+	"switchModes" : [ "/sfx/objects/outpostbutton.ogg" ]
+  }
+}

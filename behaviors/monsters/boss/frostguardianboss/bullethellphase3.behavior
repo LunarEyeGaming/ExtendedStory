@@ -74,7 +74,7 @@
     	      "parameters": {
     	        "aimVector": {"value": [-1, 0]},
     	        "offset": {"value": [0, 0]},
-    	        "projectileConfig": {"value": {"damageTeam": {"type": "enemy"}, "timeToLive": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "fg_icicle", "fuzzAngle": 180, "config": {"power": 200}}]}]}},
+    	        "projectileConfig": {"value": {"damageTeam": {"type": "enemy"}, "timeToLive": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "fg_icicle", "fuzzAngle": 180, "config": {"power": 100, "speed" : 15}}]}]}},
     	        "projectileType": {"value": "invisibleprojectile"}
     	      }
     	    },
@@ -84,6 +84,15 @@
     	      "name": "timer",
     	      "parameters": {
     	        "time": {"value": 1.0}
+    	      }
+    	    },
+		    {
+    	      "title": "addEphemeralEffect",
+    	      "type": "action",
+    	      "name": "addEphemeralEffect",
+    	      "parameters": {
+    	        "name": {"value": "invulnerable"},
+		  	    "duration": {"value": 1.01}
     	      }
     	    }
 		  ]

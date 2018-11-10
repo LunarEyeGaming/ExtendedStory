@@ -15,10 +15,6 @@ function detectStatusEffect(statusEffect)
         statusEffectExists = false
 	  end
     end
-	if statusEffectExists == true then
-	  return true
-	else
-	  return false
-    end
+	return statusEffectExists
   end
 end

@@ -88,5 +88,16 @@
       [0.1, "lightningrain_es"],
       [0.1, "chargedground"]
     ]
+  },
+  {
+    "op": "add",
+    "path": "/forgotten",
+    "value": [
+      [0.5, "worldrot"],
+      [0.2, "rottenrainlight"],
+      [0.15, "rottenrain"],
+      [0.1, "decayingair"],
+      [0.05, "sinkhole"]
+    ]
   }
 ]

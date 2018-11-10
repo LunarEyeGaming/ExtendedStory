@@ -1,0 +1,14 @@
+{
+  "name" : "ancienthead",
+
+  "effectConfig" : {
+    "chest" : "ancientchestplate",
+	"pants" : "ancientpants",
+	"setBonus" : "ancientsetbonus"
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "bonuscheckmain.lua"
+  ]
+}

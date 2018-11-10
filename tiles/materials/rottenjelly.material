@@ -1,0 +1,27 @@
+{
+  "materialId" : 2020,
+  "materialName" : "rottenjelly",
+  "particleColor" : [145, 119, 58, 255],
+  "itemDrop" : "rottenjelly",
+
+  "description" : "A mass of dissolved material. It has a horrible smell.",
+  "shortdescription" : "Dissolved Material",
+  "glitchDescription" : "Uncomfortable. I dislike the way this jelly jiggles; it has a foul odor.",
+  "floranDescription" : "Jiggly wiggly jelly.",
+  "novakidDescription" : "A mess 'o slimy lookin' jelly.",
+  "falling" : true,
+  "cascading" : true,
+  "footstepSound" : "/sfx/blocks/footstep_brains.ogg",
+  "health" : 2,
+  "category" : "materials",
+  
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "rottenjelly.png",
+    "variants" : 20,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1727
+  }
+}

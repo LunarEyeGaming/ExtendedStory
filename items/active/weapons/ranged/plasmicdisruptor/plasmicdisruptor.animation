@@ -1,0 +1,145 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "charge" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/charge_up15.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          },
+          "fullcharge" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "transition",
+			"transition" : "cooldown"
+          },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.0999,
+            "mode" : "transition",
+            "transition" : "fullcharge"
+          },
+		  "cooldown" : {
+		    "frames" : 4,
+			"cycle" : 0.4,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.7, 0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.7, 0],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "particleEmitters" : {
+    "muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    }
+  },
+
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [45, 28, 79]
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "fire" : [ ],
+	"fire2" : ["/sfx/gun/plasma_ar4.ogg"]
+  }
+}

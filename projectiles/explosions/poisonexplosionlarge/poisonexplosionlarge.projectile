@@ -1,0 +1,16 @@
+{
+  "projectileName" : "poisonexplosionlarge",
+  "image" : "poisonexplosionlarge.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 6,
+  "speed" : 0,
+  "lightColor" : [30, 160, 30],
+  "pointLight" : true,
+  "damagePoly" : [ [-74, 0], [-56, -56], [0, -74], [56, -56], [74, 0], [56, 56], [0, 74], [-56, 56] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "poisonplasma",
+  "knockback" : 30
+}

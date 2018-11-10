@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "solariumstar", "count" : 40 },
+    { "item" : "salvagearm", "count" : 65 },
+	{ "item" : "ancientblock", "count" : 300 },
+	{ "item" : "essence", "count" : 1000 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "mecharmancientcannon", "count" : 1 },
+  "groups" : [ "craftingmech", "mecharm" ]
+}

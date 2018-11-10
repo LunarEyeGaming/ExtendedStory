@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "destroyerbar", "count" : 10 },
+	{ "item" : "cobblestonematerial", "count" : 100 },
+	{ "item" : "solariumstar", "count" : 15 }
+  ],
+  "output" : { "item" : "destroyermgun", "count" : 1 },
+  "groups" : [ "craftingaccelerator", "weapons", "all" ]
+}

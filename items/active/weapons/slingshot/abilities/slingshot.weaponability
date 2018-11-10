@@ -1,0 +1,64 @@
+{
+  "ability" : {
+    "type" : "slingshot",
+    "class" : "Slingshot",
+    "name" : "Slingshot",
+    "scripts" : ["/items/active/weapons/slingshot/abilities/slingshot.lua"],
+
+    "walkWhileFiring" : true,
+
+    "fireOffset" : [1.75, 0],
+
+    "energyPerShot" : 30,
+
+    "cooldownTime" : 0.4,
+
+    "inaccuracy" : 0.01,
+
+    "drawFrameSelector" : "bowImageSelector",
+    "drawPowerMultiplier" : "drawTimeMultiplier",
+    "drawSpeedMultiplier" : "drawTimeMultiplier",
+
+    "drawArmFrames" : ["rotation", "rotation", "rotation", "swim.2", "swim.2"],
+
+    "projectileType" : "t1slingshot",
+    "powerProjectileType" : "t1cslingshot",
+    "powerProjectileTime" : [0.9, 1.1],
+    "projectileParameters" : {
+      "speed" : 80,
+      "power" : 6.5
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -90,
+        "weaponRotation" : 0,
+        "allowRotate" : true,
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+      "draw" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "allowRotate" : true,
+        "allowFlip" : true,
+        "twoHanded" : true,
+		"weaponOffset" : [0, -1],
+		
+		"backArmFrame" : "run.4"
+      },
+      "fire" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : true,
+		"weaponOffset" : [0, -1],
+
+        "frontArmFrame" : "idle.3",
+		"backArmFrame" : "run.4"
+      }
+    }
+  }
+}

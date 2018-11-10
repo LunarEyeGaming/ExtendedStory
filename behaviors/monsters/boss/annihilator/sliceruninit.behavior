@@ -1,0 +1,83 @@
+{
+  "name": "annihilator-sliceruninit",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "leftEyeOffset": [-2.5, 1],
+    "rightEyeOffset": [2.5, 1],
+    "progress": 0,
+    "maxAngle": 6.28
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": -1},
+          "untilSuccess": {"value": false}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+		    {
+			  "title": "multiply",
+			  "type": "action",
+			  "name": "multiply",
+			  "parameters": {
+			    "factor": {"value": -1},
+				"number": {"key": "progress"}
+			  },
+			  "output": {
+			    "result": "subValue"
+			  }
+			},
+			{
+			  "title": "add",
+			  "type": "action",
+			  "name": "add",
+			  "parameters": {
+			    "addend": {"key": "subValue"},
+				"number": {"value": 1}
+			  },
+			  "output": {
+			    "result": "angle"
+			  }
+			},
+		    {
+              "title": "rotateTransformationGroup",
+              "type": "action",
+              "name": "rotateTransformationGroup",
+              "parameters": {
+			    "angle": {"key": "angle"},
+				"transformationGroup": {"value": "gun"}
+			  }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.01}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

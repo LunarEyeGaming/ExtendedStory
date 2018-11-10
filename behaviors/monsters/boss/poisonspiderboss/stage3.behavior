@@ -31,7 +31,7 @@
         {
           "title": "Acid Spray",
           "type": "module",
-          "name": "poisonspiderboss-acidmines",
+          "name": "poisonspiderboss-acid",
           "parameters": {}
         },
         {
@@ -43,7 +43,7 @@
         {
           "title": "Acid Spray",
           "type": "module",
-          "name": "poisonspiderboss-acid",
+          "name": "poisonspiderboss-acidmines",
           "parameters": {}
         },
         {
@@ -90,9 +90,15 @@
           }
         },
         {
-          "title": "Acid Spray",
+          "title": "Plasma Slash",
           "type": "module",
           "name": "poisonspiderboss-plasmaslash",
+          "parameters": {}
+        },
+        {
+          "title": "Acid Spray",
+          "type": "module",
+          "name": "poisonspiderboss-acid",
           "parameters": {}
         }
       ]

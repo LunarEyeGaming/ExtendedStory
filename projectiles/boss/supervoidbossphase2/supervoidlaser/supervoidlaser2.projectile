@@ -1,0 +1,20 @@
+{
+  "projectileName" : "supervoidlaser2",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.2,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidlaser2.png",
+  "animationLoops" : false,
+  "animationCycle" : 0.2,
+  "damageType" : "IgnoresDef",
+  "frameNumber" : 5,
+  "fullbright" : true,
+  "power" : 0,
+  "damagePoly" : [ [-18.5, 1000], [-18.5, -1000], [18.5, -1000], [18.5, 1000] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [],
+  "damageKind" : "plasma"
+}

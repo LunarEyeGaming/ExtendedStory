@@ -1,0 +1,232 @@
+{
+  "name": "supervoidbossphase2-vacuum",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "winddown"},
+              "state": {"value": "windup"},
+              "type": {"value": "vacuum"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.8}
+                }
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": 1}
+                },
+                "children": [
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumleft"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumupleft"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumup"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumupright"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumright"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumdownright"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumdown"}
+                    }
+                  },
+                  {
+                    "title": "emitParticles",
+                    "type": "action",
+                    "name": "emitParticles",
+                    "parameters": {
+                      "emitter": {"value": "vacuumdownleft"}
+                    }
+                  },
+                  {
+                    "title": "failer",
+                    "type": "decorator",
+                    "name": "failer",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "setForceRegionActive",
+                          "type": "action",
+                          "name": "setForceRegionActive",
+                          "parameters": {
+                            "name": {"value": "vacuum"}
+                          }
+                        },
+                        {
+                          "title": "setDamageSourceActive",
+                          "type": "action",
+                          "name": "setDamageSourceActive",
+                          "parameters": {
+                            "name": {"value": "windswept"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": 20},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 1}
+                              }
+                            },
+                            {
+                              "title": "spawnProjectile",
+                              "type": "action",
+                              "name": "spawnProjectile",
+                              "parameters": {
+                                "aimVector": {"value": [1, 0]},
+                                "offset": {"value": [0, 0]},
+                                "position": {"key": "self"},
+                                "projectileConfig": {"value": {
+								  "timeToLive" : 0,
+								  "power" : 0,
+								  "damageKind" : "nodamage",
+								  "actionOnReap" : [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "supervoidbulletbuffed", "fuzzAngle": 180}]}]
+								}},
+                                "projectileType": {"value": "orbitalup"},
+                                "scalePower": {"value": true},
+                                "sourceEntity": {"key": "self"},
+                                "trackSource": {"value": false}
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 2}
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.4}
+        }
+      }
+    ]
+  }
+}

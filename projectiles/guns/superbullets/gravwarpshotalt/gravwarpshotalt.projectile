@@ -1,0 +1,21 @@
+{
+  "projectileName" : "gravwarpshotalt",
+  "physics" : "hover",
+  "bounces" : 0,
+  "image" : "gravwarpshotalt.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 6,
+  "power" : 15,
+  "speed" : 100,
+  "timeToLive" : 1,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/gravwarpsingularity/gravwarpsingularity.config"
+	}
+  ],
+  "supportsProcessing" : true,
+  "lightColor" : [80, 190, 60],
+  "fullbright" : true,
+  "damageKind" : "plasma"
+}

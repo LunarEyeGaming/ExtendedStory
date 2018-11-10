@@ -1,0 +1,339 @@
+{
+  "name": "phoenixboss_es-fireballattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/behavior.lua",
+    "/scripts/behavior/bdata.lua"
+  ],
+  "parameters": {
+    "fastWindupTime": 0.2,
+    "plasmaAttackX": 20,
+    "plasmaAttackY": 35,
+    "plasmaAttackFlySpeed": 40,
+    "plasmaMinY": 25
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [15, 4]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "startSweep"
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [-15, 4]},
+          "position": {"key": "spawn"}
+        },
+        "output": {
+          "position": "endSweep"
+        }
+      },
+      {
+        "title": "setDirection",
+        "type": "action",
+        "name": "setDirection",
+        "parameters": {},
+        "output": {
+          "direction": "wallDirection"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": 6},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "multiply",
+                      "type": "action",
+                      "name": "multiply",
+                      "parameters": {
+                        "factor": {"key": "<plasmaAttackX>"},
+                        "number": {"key": "wallDirection"}
+                      },
+                      "output": {
+                        "result": "xOffset"
+                      }
+                    },
+                    {
+                      "title": "random",
+                      "type": "action",
+                      "name": "random",
+                      "parameters": {
+                        "max": {"key": "<plasmaAttackY>"},
+                        "min": {"key": "<plasmaMinY>"}
+                      },
+                      "output": {
+                        "number": "yOffset"
+                      }
+                    },
+                    {
+                      "title": "offsetPosition",
+                      "type": "action",
+                      "name": "offsetPosition",
+                      "parameters": {
+                        "offset": {"value": ["xOffset", "yOffset"]},
+                        "position": {"key": "spawn"}
+                      },
+                      "output": {
+                        "position": "movePosition"
+                      }
+                    },
+                    {
+                      "title": "flyToPosition",
+                      "type": "action",
+                      "name": "flyToPosition",
+                      "parameters": {
+                        "position": {"key": "movePosition"},
+                        "speed": {"key": "<plasmaAttackFlySpeed>"},
+                        "tolerance": {"value": 1}
+                      }
+                    },
+                    {
+                      "title": "setVelocity",
+                      "type": "action",
+                      "name": "setVelocity",
+                      "parameters": {
+                        "velocity": {"value": [0, 0]}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "multiply",
+                      "type": "action",
+                      "name": "multiply",
+                      "parameters": {
+                        "factor": {"key": "<plasmaAttackX>"},
+                        "number": {"value": -1}
+                      },
+                      "output": {
+                        "result": "minXOffset"
+                      }
+                    },
+                    {
+                      "title": "random",
+                      "type": "action",
+                      "name": "random",
+                      "parameters": {
+                        "max": {"key": "<plasmaAttackX>"},
+                        "min": {"key": "minXOffset"}
+                      },
+                      "output": {
+                        "number": "xOffset"
+                      }
+                    },
+                    {
+                      "title": "multiply",
+                      "type": "action",
+                      "name": "multiply",
+                      "parameters": {
+                        "factor": {"key": "<plasmaAttackY>"},
+                        "number": {"value": 1}
+                      },
+                      "output": {
+                        "result": "yOffset"
+                      }
+                    },
+                    {
+                      "title": "offsetPosition",
+                      "type": "action",
+                      "name": "offsetPosition",
+                      "parameters": {
+                        "offset": {"value": ["xOffset", "yOffset"]},
+                        "position": {"key": "spawn"}
+                      },
+                      "output": {
+                        "position": "movePosition"
+                      }
+                    },
+                    {
+                      "title": "flyToPosition",
+                      "type": "action",
+                      "name": "flyToPosition",
+                      "parameters": {
+                        "position": {"key": "movePosition"},
+                        "speed": {"key": "<plasmaAttackFlySpeed>"},
+                        "tolerance": {"value": 1}
+                      }
+                    },
+                    {
+                      "title": "setVelocity",
+                      "type": "action",
+                      "name": "setVelocity",
+                      "parameters": {
+                        "velocity": {"value": [0, 0]}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "reverseDirection",
+                  "type": "action",
+                  "name": "reverseDirection",
+                  "parameters": {
+                    "direction": {"key": "wallDirection"}
+                  },
+                  "output": {
+                    "direction": "wallDirection"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": "<fastWindupTime>"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [0, -1]},
+<<<<<<< HEAD
+                    "projectileConfig": {"value": {}},
+                    "position": {"key": "self"},
+                    "projectileType": {"value": "phoenixfireballexplosive"},
+=======
+                    "projectileConfig": {"value": {"onlyHitTerrain" : false}},
+                    "position": {"key": "self"},
+                    "projectileType": {"value": "phoenixmine_es"},
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+                    "trackSource": {"value": false}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": "<fastWindupTime>"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.05}
+                  }
+                },
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "listPop",
+                      "type": "action",
+                      "name": "listPop",
+                      "parameters": {
+                        "list": {"key": "targets"}
+                      },
+                      "output": {
+                        "list": "targets",
+                        "entity": "cycledTarget"
+                      }
+                    },
+                    {
+                      "title": "listPushBack",
+                      "type": "action",
+                      "name": "listPushBack",
+                      "parameters": {
+                        "entity": {"key": "cycledTarget"},
+                        "list": {"key": "targets"}
+                      },
+                      "output" : {
+                        "list": "targets"
+                      }
+                    },
+                    {
+                      "title": "listGet",
+                      "type": "action",
+                      "name": "listGet",
+                      "parameters": {
+                        "list": {"key": "targets"}
+                      },
+                      "output": {
+                        "entity": "target"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

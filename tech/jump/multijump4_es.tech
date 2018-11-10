@@ -1,0 +1,17 @@
+{
+  "name" : "multijump4_es",
+  "type" : "legs",
+
+  "scripts" : ["multijump.lua"],
+  "animator" : "multijump4_es.animation",
+
+  "description" : "20 full jumps. What an extremely impressive talent!",
+  "shortDescription" : "Multi Jump Mk IV",
+  "rarity" : "Legendary",
+  "icon" : "/tech/multijump4_es.png",
+
+  "chipCost" : 16,
+
+  "multiJumpCount" : 20,
+  "multiJumpModifier" : 1.5
+}

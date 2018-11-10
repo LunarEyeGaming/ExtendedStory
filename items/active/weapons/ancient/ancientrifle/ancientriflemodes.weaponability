@@ -1,0 +1,143 @@
+{
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "ammoType" : {
+          "default" : "1",
+          "states" : {
+            "1" : {
+              "frames" : 2,
+			  "cycle" : 0.25,
+			  "mode" : "loop"
+            },
+            "2" : {
+              "frames" : 8,
+			  "cycle" : 0.8,
+			  "mode" : "loop"
+            },
+            "3" : {
+              "frames" : 2,
+			  "cycle" : 0.25,
+			  "mode" : "loop"
+            }
+          }
+        }
+      },
+
+      "parts" : {
+        "middle" : {
+          "properties" : {
+            "image" : null
+          },
+
+          "partStates" : {
+            "ammoType" : {
+              "1" : {
+                "properties" : {
+                  "image" : "<partImage>:auto.<frame><paletteSwaps>"
+                }
+              },
+              "2" : {
+                "properties" : {
+                  "image" : "<partImage>:burst.<frame><paletteSwaps>"
+                }
+              },
+              "3" : {
+                "properties" : {
+                  "image" : "<partImage>:grenade.<frame><paletteSwaps>"
+                }
+              }
+            }
+          }
+        },
+		"middleFullbright" : {
+          "properties" : {
+            "image" : null
+          },
+
+          "partStates" : {
+            "ammoType" : {
+              "1" : {
+                "properties" : {
+                  "image" : "<partImage>:auto.<frame><paletteSwaps>"
+                }
+              },
+              "2" : {
+                "properties" : {
+                  "image" : "<partImage>:burst.<frame><paletteSwaps>"
+                }
+              },
+              "3" : {
+                "properties" : {
+                  "image" : "<partImage>:grenade.<frame><paletteSwaps>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "sounds" : {
+      "switchAmmo" : [ "/sfx/interface/mech_energy_refill.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "type" : "ancientriflemodes",
+    "name" : "Switch Fire Mode",
+    "scripts" : ["/items/active/weapons/other/adaptablecrossbow/adaptableammo.lua"],
+    "class" : "AdaptableAmmo",
+
+    "adaptedAbilityIndex" : 1,
+
+    "ammoTypes" : [
+      {
+        "projectileType" : "ancientlasershot",
+        "energyUsage" : 40,
+		"fireTime" : 0.1,
+		"fireType" : "auto",
+		"baseDps" : 10
+      },
+      {
+        "projectileType" : "ancientlasershot",
+        "energyUsage" : 40,
+		"fireType" : "burst",
+		"burstCount" : 3,
+		"burstTime" : 0.08,
+		"fireTime" : 0.1,
+		"baseDps" : 15
+      },
+      {
+        "projectileType" : "ancientgrenade",
+        "energyUsage" : 80,
+		"fireTime" : 4.0,
+		"fireType" : "auto",
+		"baseDps" : 2
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+  
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "switch" : {
+        "aimAngle" : 0,
+        "armRotation" : -40,
+        "weaponRotation" : 60,
+        "weaponAngularVelocity" : -150,
+        "armAngularVelocity" : 100,
+        "twoHanded" : true,
+        "duration" : 0.4,
+  
+        "allowRotate" : false,
+        "allowFlip" : true
+      }
+    }
+  }
+}

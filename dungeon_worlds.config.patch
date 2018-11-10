@@ -16,6 +16,21 @@
   },
   {
     "op" : "add",
+    "path" : "/isolatedvault2",
+    "value" : {
+      "primaryDungeon" : "isolatedvault2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [300, 300, 300],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/novakidoutpost",
     "value" : {
       "primaryDungeon" : "novakidoutpost",
@@ -138,6 +153,21 @@
   },
   {
     "op" : "add",
+    "path" : "/supervoidbossarena2",
+    "value" : {
+      "primaryDungeon" : "supervoidbossarena2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/silence.ogg",
+      "biome": "outpost",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/supervoidbossworld",
     "value" : {
       "primaryDungeon" : "supervoidbossworld",
@@ -146,8 +176,8 @@
     "worldSize" : [2000, 2000],
     "dungeonBaseHeight" : 1000,
     "dungeonSurfaceHeight" : 810,
+	"biome": "supervoidmission",
     "ambientLightLevel" : [32, 32, 32],
-    "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
     "musicTrack" : "/music/inviolate-loop.ogg",
     "environmentStatusEffects" : ["dontstarve", "chaoticvoid"]
     }
@@ -165,6 +195,21 @@
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/drosera.ogg",
       "biome": "garden",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/annihilatormission",
+    "value" : {
+      "primaryDungeon" : "annihilatormission",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/silence.ogg",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   }

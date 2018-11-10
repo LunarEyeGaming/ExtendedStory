@@ -1,0 +1,37 @@
+{
+  "projectileName" : "supervoidbullet_ELEC2",
+  "physics" : "laser",
+  "bounces" : -1,
+  "speed" : 100,
+  "timeToLive" : 0.25,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "piercing" : true,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "supervoidbulletbuffed",
+	  "angle" : 0,
+	  "config" : {
+	    "timeToLive" : 0.25,
+		"speed" : 0,
+		"acceleration" : 0,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "supervoidbullet_ELEC3",
+			"fuzzAngle" : 180
+		  }
+		]
+	  }
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

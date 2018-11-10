@@ -115,7 +115,7 @@
     	      "name": "addEphemeralEffect",
     	      "parameters": {
     	        "name": {"value": "invulnerable"},
-		  	  "duration": {"value": 0.11}
+		  	  "duration": {"value": 0.21}
     	      }
     	    },
     	    {
@@ -123,7 +123,7 @@
     	      "type": "action",
     	      "name": "timer",
     	      "parameters": {
-    	        "time": {"value": 0.1}
+    	        "time": {"value": 0.2}
     	      }
     	    }
 		  ]

@@ -1,0 +1,154 @@
+{
+  "name": "poisondragonboss-poisonsweep",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "startingPos": [50, 0],
+	"endingPos": [-50, 0],
+	"aimVector": [1, 0],
+	"projectileOffset": [7.875, -1.5]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "offset": {"key": "<startingPos>"}
+		},
+		"output": {
+		  "position": "startingPosition"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "offset": {"key": "<endingPos>"}
+		},
+		"output": {
+		  "position": "endingPosition"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "startingPosition"},
+		  "speed": {"value": 25}
+		}
+	  },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "attack"}
+        }
+      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.35}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "endingPosition"},
+			  "speed": {"value": 75}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "<aimVector>"},
+                    "offset": {"key": "<projectileOffset>"},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "poisondragonprojectile3"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+                {
+                  "title": "playSound",
+                  "type": "action",
+                  "name": "playSound",
+                  "parameters": {
+                    "sound": {"value": "flameBreath"}
+                  }
+                },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "winddown"},
+          "type": {"value": "attack"}
+        }
+      }
+    ]
+  }
+}

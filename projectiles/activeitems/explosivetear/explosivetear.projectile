@@ -63,11 +63,59 @@
 	  "file" : "/projectiles/activeitems/explosivetear/explosivetearunstable.config"
 	},
 	{
-	  "time" : 0.01,
-	  "action" : "projectile",
-	  "type" : "blackholegravity"
+	  "time" : 0.25,
+	  "action" : "option",
+	  "options" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "yellowglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "whiteglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "redglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "greenglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "blueglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "magentaglobe",
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "orangeglobe",
+		  "fuzzAngle" : 180
+		}
+	  ]
 	}
   ],
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  },
 
   "persistentAudio" : "/sfx/projectiles/astraltear_loop.ogg"
 }

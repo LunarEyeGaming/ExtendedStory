@@ -4,12 +4,19 @@
   "maxStack" : 1,
   "level" : 10,
   "rarity" : "Legendary",
+<<<<<<< HEAD
+  "description" : "An extremely powerful staff that shoots laser beams.",
+=======
   "description" : "An extremely powerful staff that shoots gamma-ray lasers. ^red;Better not use the alt ability near nice stuff!^reset;",
-  "shortdescription" : "^magenta; ^reset;",
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "staff",
   "category" : "Ancient Staff",
   "twoHanded" : true,
   "itemTags" : ["weapon","staff","upgradeableWeapon"],
+  
+  "critChance" : 10,
+  "critBonus" : 10,
 
   "animation" : "/items/active/weapons/staff/ancientstaff/ancientstaff.animation",
   "animationParts" : {
@@ -30,7 +37,7 @@
         "emissionRate" : 10,
         "offsetRegion" : [-0.5, 1.0, 0.5, 2.5],
         "particles" : [
-          {"particle" : "kluexstaff"}
+          {"particle" : "ancientenergy1"}
         ]
       }
     },
@@ -95,8 +102,19 @@
   "primaryAbilityType" : "kluexshooter",
   "primaryAbility" : {"name" : "Laser Beam Shooter", "projectileType" : "delayedlaserbeam"},
 
-  "altAbilityType" : "kluexzone",
-  "altAbility" : {"name" : "Supernova", "projectileType" : "presupernovaspawner"},
+  "altAbilityType" : "kluexshooter",
+  "altAbility" : {
+    "name" : "Laser Portal",
+	"projectileType" : "ancientstaffportal",
+	"energyPerShot" : 100,
+	"projectileSpawnInterval" : 1000,
+
+    "maxCastRange" : 25,
+	"baseDamageFactor" : 1,
+    "projectileParameters" : {
+      "baseDamage" : 6
+    }
+  },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

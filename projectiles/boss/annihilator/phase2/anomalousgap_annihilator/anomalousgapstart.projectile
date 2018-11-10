@@ -1,0 +1,36 @@
+{
+  "projectileName" : "anomalousgapstart",
+  "image" : "/projectiles/activeitems/explosivetear/explosivetearstart.png",
+  "animationCycle" : 0.2,
+  "animationLoops" : false,
+  "frameNumber" : 5,
+  "timeToLive" : 0.2,
+  "lightColor" : [50, 50, 50],
+  "pointLight" : true,
+  "flippable" : true,
+  "piercing" : true,
+  "statusEffects" : [ ],
+  "power" : 5.0,
+  "speed" : 0,
+  "knockback" : 30,
+  "knockbackDirectional" : true,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "broadsword",
+  "fullbright" : true,
+  "damagePoly" : [[-24, 40], [0, 40], [32, -40], [8, -40]],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "anomalousgap",
+      "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 20,
+		"processing": "?scale=2"
+	  }
+    }
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/astraltear_start.ogg"
+}

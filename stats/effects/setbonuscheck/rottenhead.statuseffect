@@ -1,0 +1,15 @@
+{
+  "name" : "rottenhead",
+
+  "effectConfig" : {
+    "chest" : "rottenchestplate",
+	"pants" : "rottenpants",
+	"setBonus" : "rotaura",
+	"setBonusStats" : [ { "stat" : "decayingairImmunity", "amount" : 1 }, { "stat" : "acidicbacteriaImmunity", "amount" : 1 } ]
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "bonuscheckmain.lua"
+  ]
+}

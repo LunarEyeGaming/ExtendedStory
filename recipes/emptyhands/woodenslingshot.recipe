@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "plantfibre", "count" : 10 },
+	{ "item" : "darkwoodmaterial", "count" : 10 }
+  ],
+  "output" : {
+    "item" : "woodenslingshot",
+    "count" : 1
+  },
+  "groups" : [ "plain", "objects", "all", "tools" ]
+}

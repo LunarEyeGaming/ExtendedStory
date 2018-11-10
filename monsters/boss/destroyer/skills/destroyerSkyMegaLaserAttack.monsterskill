@@ -9,7 +9,7 @@
     "destroyerSkyMegaLaserAttack" : {
       "skillTime": 0.9,
       "bobTime" : 2,
-      "bobHeight" : 3,
+      "bobHeight" : 0,
 
       "projectileOffset" : [0, -4],
       "fireInterval" : 1.0,
@@ -66,7 +66,11 @@
 				  }
 				}
 			  ]
-            }
+            },
+			{
+			  "action" : "config",
+			  "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+			}
           ]
         }
       }

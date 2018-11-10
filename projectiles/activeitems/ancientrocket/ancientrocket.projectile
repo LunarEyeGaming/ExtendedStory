@@ -8,37 +8,45 @@
   "damageKindImage" : "icon.png",
   "physics" : "default",
   "emitters" : [ ],
-  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damagePoly" : [ [-8, 0], [-6, -6], [0, -8], [6, -6], [8, 0], [6, 6], [0, 8], [-6, 6] ],
   "damageKind" : "plasma",
   "speed" : 0,
+  "periodicActions" : [
+    {
+	  "time" : 0.03,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"size" : 1.5,
+		"destructionTime" : 0.5,
+		"variance" : {
+		  "size" : 0.5
+		}
+	  }
+	}
+  ],
   "actionOnReap" : [
     {
 	  "action" : "config",
 	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion2.config"
 	}
   ],
-  "periodicActions" : [
-	{
-	  "time" : 0.01,
-	  "action" : "projectile",
-	  "type" : "ancientrocket",
-	  "config" : {
-	    "timeToLive" : 0.25,
-		"actionOnReap" : [],
-		"periodicActions" : [],
-		"speed" : 0,
-		"persistentAudio" : "/music/silence.ogg"
-	  }
-	}
-  ],
   "timeToLive" : 5.0,
-  "power" : 50,
-  "statusEffects" : [
-    "gammarays"
-  ],
+<<<<<<< HEAD
+  "power" : 10
+=======
+  "power" : 10,
   "scripts" : [ "ancientrocketsinewave.lua" ],
   "scriptDelta" : 1,
   "waveAmplitude" : 0.5,
   "wavePeriod" : 0.5,
   "persistentAudio" : "/sfx/projectiles/redgiant.ogg"
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 }

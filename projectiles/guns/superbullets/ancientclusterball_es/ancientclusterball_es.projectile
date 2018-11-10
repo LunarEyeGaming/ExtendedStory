@@ -1,0 +1,81 @@
+{
+  "projectileName" : "ancientclusterball_es",
+<<<<<<< HEAD
+  "physics" : "hover",
+  "bounces" : 3,
+  "speed" : 30,
+  "timeToLive" : 5,
+=======
+  "physics" : "flybug",
+  "bounces" : 3,
+  "speed" : 30,
+  "timeToLive" : 1,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+  "lightColor" : [83, 28, 97],
+  "image" : "/projectiles/boss/ancientboss2/ancientorb_boss/ancientorb_boss.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "fullbright" : true,
+  "power" : 10,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+<<<<<<< HEAD
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosionnontile.config"
+=======
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion3.config"
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 45
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 135
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 225
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 270
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 315
+    }
+  ],
+  "damageKind" : "plasma"
+}

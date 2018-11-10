@@ -7,7 +7,7 @@
   "animation" : "poisonspiderboss.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -94,7 +94,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1000
+          "baseValue" : 2500
         },
         "protection" : {
           "baseValue" : 97
@@ -137,6 +137,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

@@ -14,11 +14,10 @@
   "hylotlDescription" : "This technology turns off my ancient sphere.",
   "novakidDescription" : "Some technology that looks like my ancient sphere.",
 
-  "category" : "Trap",
+  "category" : "decorative",
   "price" : 0,
   "printable" : false,
-  "lightColor" : [204, 184, 143],
-  "broadcastArea" : [18, 20, -18, -20],
+  "lightColor" : [150, 27, 27],
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
@@ -34,13 +33,13 @@
     }
   ],
 
-  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
   "animationParts" : {
     "bg" : "spheredeactivater.png",
     "fg" : "spheredeactivaterlit.png"
   },
 
-  "scripts" : [ "/objects/ancient/spheredeactivater/spheredeactivater.lua" ],
+  "scripts" : [ "/objects/wired/light/light.lua" ],
   "scriptDelta" : 60,
 
   "interactive" : false,

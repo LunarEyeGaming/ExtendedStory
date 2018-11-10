@@ -1,0 +1,474 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "movement" : {
+        "priority" : 1,
+        "default" : "fly",
+
+        "states" : {
+          "fly" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSoundRangeMultiplier" : 2.0
+            },
+            "frameProperties" : {
+              "immediateSound" : [ "", "/sfx/npc/boss/dragonboss_flap3.ogg", "", "", "", "/sfx/npc/boss/dragonboss_flap4.ogg", "", "" ]
+            }
+          },
+          "slam" : {
+            "frames" : 1
+          }
+        }
+      },
+      "attack" : {
+        "priority" : 2,
+        "default" : "idle",
+
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "attack" : {
+            "frames" : 3,
+            "cycle" : 0.6
+          },
+          "winddown" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "dying" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
+              "persistentSoundRangeMultiplier" : 2.0
+            }
+          },
+          "dyingcry" : {
+            "frames" : 3,
+            "cycle" : 0.6,
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
+              "persistentSoundRangeMultiplier" : 2.0
+            }
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+		  "transformationGroups" : ["body"]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "fly" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.fly.<frame>"
+              }
+            },
+            "slam" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.slam.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "head" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [5.625, 3.5],
+          "transformationGroups" : [ "head", "body" ]
+        },
+
+        "partStates" : {
+          "attack" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddown.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "dyingcry" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "headlit" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "offset" : [5.625, 3.5],
+          "transformationGroups" : [ "head", "body" ],
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "attack" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddown.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "dyingcry" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "stage" : "stage1"
+  },
+
+  "transformationGroups" : {
+    "head" : { "interpolated" : true},
+	"body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "predeath" : {
+      "active" : false,
+      "emissionRate" : 6,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+        { "particle" : "dust4" },
+        { "particle" : "dust2" },
+        { "particle" : "firesmoke" }
+      ]
+    },
+	"firewindup" : {
+      "active" : false,
+      "emissionRate" : 100,
+      "offsetRegion" : [4.125, 2.5, 4.125, 2.5],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/mediumflamepoison/mediumflamepoison.animation",
+            "timeToLive" : 1.0,
+            "rotation" : 0,
+            "initialVelocity" : [0, 0],
+            "layer" : "front",
+			"fullbright" : true,
+            "variance" : {
+              "rotation" : 180
+            }
+          }
+        }
+      ]
+    },
+    "slam" : {
+      "burstCount" : 20,
+      "offsetRegion" : [-8, -12, 8, -10],
+      "particles" : [
+        { "particle" : "dust4" }
+      ]
+    },
+	"spitwindup" : {
+      "active" : false,
+      "burstCount" : 75,
+      "offsetRegion" : [4.125, 2.5, 13, 0],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/poisondrip/poisondrip1.animation",
+            "timeToLive" : 1.0,
+            "rotation" : 0,
+            "initialVelocity" : [0, 0],
+            "layer" : "front",
+			"fullbright" : true,
+            "variance" : {
+              "rotation" : 180
+            }
+          }
+        }
+      ]
+    },
+    "deathPoof" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-5, -9, 5, 5],
+      "burstCount" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+			"position": [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+              "position" : [5, 5]
+            }
+          }
+        },
+	    {
+          "particle" : {
+            "type" : "textured",
+            "image" : "/animations/destroyerteleport/destroyerteleport.png:8",
+            "position" : [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.0,
+	    	"size" : 10,
+            "destructionTime" : 0.5,
+            "destructionAction" : "fade",
+            "fullbright" : true
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+    "flameBreath" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_fireball1.ogg", "/sfx/npc/boss/dragonboss_fireball3.ogg", "/sfx/npc/boss/dragonboss_fireball4.ogg", "/sfx/npc/boss/dragonboss_fireball5.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+	"fire" : {
+	  "pool" : ["/sfx/npc/boss/dragonboss_fireball1.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"spitwindup" : {
+	  "pool" : ["/sfx/npc/monsters/pteropod_windup.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"spit" : {
+	  "pool" : ["/sfx/npc/boss/poisondragonboss_spit.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"firebreath" : {
+	  "pool" : ["/sfx/objects/flametrap_loop.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+    "blockBuster1" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_blockbuster_start.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "blockBuster2" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_fireball2.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonArrival" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_roar_reverb.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonDeath" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_death.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonDeathExplosion" : {
+      "pool" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "slam" : {
+	  "pool" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
+	  "rangeMultiplier" : 2.0
+	}
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "projectileName" : "supervoidbullet_EH",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 100,
+  "timeToLive" : 10,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidbullet.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 2,
+  "power" : 100,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "supervoidbulletbuffed",
+	  "config" : {
+	    "timeToLive" : 0.25,
+		"speed" : 0,
+		"acceleration" : 0
+	  }
+	}
+  ],
+
+  "scripts" : [
+    "/scripts/projectiles/boomerangprojectile.lua"
+  ],
+  "scriptDelta" : 3,
+  "ignoreTerrain" : true,
+  "controlForce" : 120,
+  "targetTrackingForce" : 60,
+  "pickupDistance" : 1.0,
+  "snapDistance" : 4.0,
+  "minVelocity" : 1,
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef"
+}

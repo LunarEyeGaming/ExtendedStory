@@ -1,0 +1,216 @@
+{
+  "name": "annihilator-rocketattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "projOffset": [6, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "static"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rockets"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "rocketsfire"},
+          "type": {"value": "form1"}
+        }
+      },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 4}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [-1, 0]},
+    		    "offset": {"value": [-3, 3]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "annihilatormissile"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.1}
+      		  }
+      		}
+		  ]
+		}
+	  },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 4}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [1, 0]},
+    		    "offset": {"value": [3, 3]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "annihilatormissile"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.1}
+      		  }
+      		}
+		  ]
+		}
+	  },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 4}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [-1, 0]},
+    		    "offset": {"value": [-3, -3]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "annihilatormissile"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.1}
+      		  }
+      		}
+		  ]
+		}
+	  },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 4}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [1, 0]},
+    		    "offset": {"value": [3, -3]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "annihilatormissile"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 0.1}
+      		  }
+      		}
+		  ]
+		}
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
+  }
+}

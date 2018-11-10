@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 3,
+  
+  "critChance" : 4,
+  "critBonus" : 7,
 
   "inventoryIcon" : "tungstenchaingun.png:idle",
 
@@ -40,7 +43,7 @@
     "class" : "GunFire",
 
     "fireTime" : 0.05,
-    "baseDps" : 22.0,
+    "baseDps" : 12.0,
     "energyUsage" : 30,
     "inaccuracy" : 0.08,
 
@@ -62,8 +65,8 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,8 +77,8 @@
       },
       "cooldown" : {
         "duration" : 0.01,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -85,9 +88,9 @@
   },
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
-	"fireTime" : 0.1,
-	"baseDps" : 20,
-	"cooldownTime" : 0.1,
+	"fireTime" : 0.25,
+	"baseDps" : 12,
+	"cooldownTime" : 0.25,
 	"inaccuracy" : 0.01,
 	"energyUsage" : 40,
 	"projectileType" : "explosivebullet",

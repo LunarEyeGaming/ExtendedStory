@@ -1,0 +1,58 @@
+{
+  "itemName" : "aegisaltslingshot",
+  "price" : 10,
+  "inventoryIcon" : "aegisaltslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "tooltipKind" : "bow",
+  "category" : "Slingshot",
+  "description" : "A slingshot forged with aegisalt and powered by a battery.",
+  "shortdescription" : "Aegisalt Slingshot",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+
+  "level" : 5,
+  
+  "critChance" : 7,
+  "critBonus" : 10,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "aegisaltslingshot.png",
+    "bowFullbright" : "aegisaltslingshotunlit.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }},
+      "bowFullbright" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/melee/laser_weapon_swing2.ogg" ],
+      "perfectRelease" : [ "/sfx/melee/laser_weapon_swing1.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    "drawSpeedMultiplier" : "constant",
+    "projectileType" : "t6slingshot",
+    "powerProjectileType" : "t6cslingshot",
+	"stances" : {
+      "draw" : {
+		"backArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+		"backArmFrame" : "swimIdle.2"
+      }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

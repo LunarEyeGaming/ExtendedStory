@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "rottenjelly", "count" : 50 },
+	{ "item" : "liquidwater", "count" : 50 }
+  ],
+  "duration" : 0.15,
+  "output" : { "item" : "rottenwater", "count" : 50 },
+  "groups" : [ "craftingfurnace2", "ingredients", "all" ]
+}

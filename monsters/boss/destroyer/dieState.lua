@@ -27,8 +27,6 @@ function dieState.update(dt, stateData)
       stateData.timer = 1.6
     end
 
-    animator.rotateGroup("all", -13 * math.pi / 180)
-
     if stateData.timer > 1.0 then
       mcontroller.controlMove(-1, true)
     end
@@ -44,8 +42,6 @@ function dieState.update(dt, stateData)
         stateData.basePosition[2]
       }
       monster.flyTo(targetPosition)
-
-      animator.rotateGroup("all", sinAngle * inverseTimer * math.pi / 180)
     else
       monster.setDamageOnTouch(true)
       mcontroller.controlMove(-1, true)

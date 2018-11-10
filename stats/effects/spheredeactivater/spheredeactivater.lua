@@ -1,5 +1,4 @@
 function init()
-  world.sendEntityMessage(entity.id(), "queueRadioMessage", "spheredeactivater")
 
   self.soundInterval = config.getParameter("soundInterval")
   self.soundTimer = 0

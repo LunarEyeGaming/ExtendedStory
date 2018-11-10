@@ -1,0 +1,56 @@
+{
+  "projectileName" : "destroyerstaff1b",
+  "physics" : "hover",
+  "timeToLive" : 3,
+  "image" : "destroyerstaff1.png",
+  "animationCycle" : 0.3,
+  "lightColor" : [150, 75, 75],
+  "frameNumber" : 4,
+  "periodicActions" : [
+    {
+	  "time" : 0.05,
+	  "action" : "projectile",
+	  "type" : "explosivelasershot",
+	  "direction" : [0, -1],
+	  "offsetRange" : [20, 0, -20, 0],
+<<<<<<< HEAD
+	  "inheritDamageFactor" : 0.1,
+	  "config" : {
+	    "speed" : 100
+=======
+	  "config" : {
+	    "speed" : 100,
+		"power" : 10
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "destroyerstaff1c",
+<<<<<<< HEAD
+		  "inheritDamageFactor" : 0.1,
+=======
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+		  "fuzzAngle" : 180
+		}
+	  ]
+	}
+  ],
+  "speed" : 50,
+  "power" : 30,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : true,
+  "fullbright" : true,
+
+  "piercing" : true,
+  "bounces" : -1
+}

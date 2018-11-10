@@ -1,0 +1,80 @@
+{
+  "projectileName" : "regionalsingularity_annihilator",
+  "image" : "regionalsingularity_annihilator.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 1.0,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/annihilator/phase2/regionalsingularity_annihilator/regionalsingularity_annihilator.png?setcolor=000000",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.5
+	  }
+	},
+	{
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+        "timeToLive" : 1.0,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "position" : [24, 20]
+		}
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "sound",
+	  "options" : ["/sfx/projectiles/astraltear_stop2.ogg"]
+	},
+	{
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/annihilator/phase2/regionalsingularity_annihilator/regionalsingularity_annihilator.png?setcolor=000000",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "shrink",
+		"timeToLive" : 0.2,
+		"destructionTime" : 0.2
+	  }
+	}
+  ],
+  "boundBox" : [-24, -20, 24, 20],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 80,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["player"]
+    }
+  }
+}

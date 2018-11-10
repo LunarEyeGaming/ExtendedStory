@@ -1,0 +1,37 @@
+{
+  "projectileName" : "annihilatorbg",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "physics" : "bullet",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.01,
+  "bounces" : 0,
+  "fullbright" : true,
+  "onlyHitTerrain" : true,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "annihilatorbg"
+	},
+	{
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+	    "image" : "/flares/dark.png",
+	    "position" : [0, 0],
+	    "fullbright" : true,
+	    "timeToLive" : 1,
+	    "fade" : 1,
+	    "destructionTime" : 0.5,
+	    "size" : 5000,
+		"layer" : "back"
+	  }
+	}
+  ]
+}

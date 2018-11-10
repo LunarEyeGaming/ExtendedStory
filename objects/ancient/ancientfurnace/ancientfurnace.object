@@ -12,13 +12,10 @@
     "paneLayoutOverride" : {
       "windowtitle" : {
         "title" : " Ancient Furnace",
-        "subtitle" : " ^#b9b5b2;More things to smelt",
-        "icon" : {
-          "file" : "/interface/crafting/ancientforge.png"
-        }
+        "subtitle" : " ^#b9b5b2;More things to smelt"
       }
     },
-    "filter" : [ "ancientfurnace" ]
+    "filter" : [ "ancientfurnace", "craftingfurnace3" ]
   },
   "price" : 70,
 

@@ -22,7 +22,7 @@ end
 function destroy()
   if projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("altlaserbeaminitial", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 165, power = projectile.power(), powerMultiplier = projectile.powerMultiplier()})
+    world.spawnProjectile("altlaserbeaminitial_es", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 165, power = projectile.power(), powerMultiplier = projectile.powerMultiplier()})
     projectile.processAction(projectile.getParameter("explosionAction"))
   end
 end

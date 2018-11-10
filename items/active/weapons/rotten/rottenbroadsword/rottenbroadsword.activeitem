@@ -1,0 +1,46 @@
+{
+  "itemName" : "rottenbroadsword",
+  "price" : 960,
+  "level" : 3,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "description" : "A broadsword made from alien bacteria. Burn away your opponents with this.",
+  "shortdescription" : "The Corroder",
+  "tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "rottenbroadsword.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/combobroadsword.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "rottenbroadsword.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+	  "fire" : [ "/sfx/melee/swing_broadsword_poison1.ogg", "/sfx/melee/swing_broadsword_poison2.ogg", "/sfx/melee/swing_broadsword_poison3.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_shortsword_poison1.ogg", "/sfx/melee/swing_shortsword_poison2.ogg", "/sfx/melee/swing_shortsword_poison3.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_spear_poison1.ogg", "/sfx/melee/swing_spear_poison2.ogg", "/sfx/melee/swing_spear_poison3.ogg" ]
+	}
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "poison",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.5,
+    "baseDps" : 11.5,
+    "damageConfig" : {
+      "damageSourceKind" : "poisonbroadsword",
+	  "statusEffects" : ["bacterialacid"]
+    }
+  },
+
+  "altAbilityType" : "splittingblob",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

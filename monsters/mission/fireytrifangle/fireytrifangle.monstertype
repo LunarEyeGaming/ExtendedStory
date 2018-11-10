@@ -57,8 +57,7 @@
 		    "projectileType" : "fireplasma",
 		    "projectileParameters" : { 
 		      "speed" : 40, 
-		 	  "power" : 25,
-			  "damageKind" : "megadamagefireplasma"
+		 	  "power" : 25
 			},
 			"fireOffset" : [0, 0],
 			"onGround" : false,
@@ -90,7 +89,7 @@
 			  "actionOnReap" : [
 			    {
 				  "action" : "config",
-				  "file" : "/projectiles/explosions/megadamageexplosion/megadamagefireexplosionknockback.config"
+				  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
 				}
 			  ]
 			},

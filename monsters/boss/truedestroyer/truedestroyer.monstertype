@@ -85,7 +85,7 @@
     "deathParticles" : "deathPoof",
 
     "touchDamage" : {
-      "poly" : [ [-14.0, -2.0], [0.0, -6.0], [14.0, -2.0], [14.0, 0.0], [0.0, 6.0], [-14.0, 0.0] ],
+      "poly" : [ [8, 14], [-8, 14], [-14, 8], [-14, -8], [-8, -14], [8, -14], [14, -8], [14, 8] ],
       "damage" : 20,
 
       "teamType" : "enemy",
@@ -152,6 +152,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

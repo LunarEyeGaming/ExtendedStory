@@ -1,0 +1,233 @@
+{
+  "type" : "annihilator",
+  "shortdescription" : "The Annihilator",
+  "categories" : [ "annihilator" ],
+  "parts" : [ "body", "cannon", "laserbeam", "slicer" ],
+
+  "animation" : "annihilator.animation",
+  "dropPools" : [
+    {
+      "default" : "annihilatorTreasure"
+    }
+  ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
+
+    "behavior" : "annihilator",
+
+    "behaviorConfig" : {
+      "colorChangeWindup" : 0.4,
+      "colorChangeWinddown" : 0.4,
+
+      "windupTime" : 0.4,
+      "fastWindupTime" : 0.15,
+
+      "plasmaAttackFlySpeed" : 50,
+      "plasmaAttackX" : 20,
+      "plasmaAttackY" : 15,
+      "plasmaMinY" : 0
+    },
+	"renderLayer" : "Projectile-20",
+
+    "knockoutTime" : 0,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "destroy",
+
+    "portraitIcon" : "/monsters/boss/ancientavatar/ancientavatar.png:red.idle.1",
+
+    "metaBoundBox" : [-50, -50, 50, 50],
+    "scale" : 1.0,
+
+    "forceRegions" : {
+      "right" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "xTargetVelocity" : 100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+      "left" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "xTargetVelocity" : -100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+	  "up" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "yTargetVelocity" : 100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      },
+      "down" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-48, -40, 48, 40],
+        "yTargetVelocity" : -100,
+        "controlForce" : 150,
+        "categoryWhitelist" : [ "player" ]
+      }
+    },
+	"damageParts" : {
+	  "beam1" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam2" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam3" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      },
+	  "beam4" : {
+        "damage" : 40,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      }
+	},
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [6, 3], [6, -3], [3, -6], [-3, -6], [-6, -3], [-6, 3], [-3, 6], [3, 6] ],
+
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "flySpeed" : 11,
+      "airFriction" : 0.5,
+      "airForce" : 800.0,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [10, 5], [10, -5], [5, -10], [-5, -10], [-10, -5], [-10, 5], [-5, 10], [5, 10] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic",
+        "damageFlashColor" : "ff0000=0"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 2000
+        },
+        "protection" : {
+          "baseValue" : 60
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 1.0
+        }
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

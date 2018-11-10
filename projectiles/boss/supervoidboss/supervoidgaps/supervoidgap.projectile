@@ -1,0 +1,50 @@
+{
+  "projectileName" : "supervoidgap",
+  "physics" : "laser",
+  "bounces" : 1,
+  "speed" : 1,
+  "acceleration" : 50,
+  "timeToLive" : 8,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 0, 128],
+  "image" : "supervoidgap.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "power" : 20,
+  "damagePoly" : [ [-8, 32], [-8, -32], [8, -32], [8, 32] ],
+  "supportsProcessing" : true,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "particle",
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
+	  }
+	}
+  ],
+  "damageKind" : "plasma"
+}

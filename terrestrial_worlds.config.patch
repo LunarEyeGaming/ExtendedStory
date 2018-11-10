@@ -3,7 +3,7 @@
     "op" : "add",
     "path" : "/planetTypes/darkabyss",
     "value" : {
-      "threatRange" : [6, 6],
+      "threatRange" : [7, 7],
       "layers" : {
         "surface" : {
           "primaryRegion" : [ "darkabyss" ],
@@ -20,18 +20,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundabyss"]
+          "primaryRegion" : ["undergroundabyss", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergrounddarkabyss"],
+          "primaryRegion" : ["undergrounddarkabyss", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergrounddarkabyss"],
+          "primaryRegion" : ["undergrounddarkabyss", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundabyssfog"],
+          "primaryRegion" : ["undergroundabyssfog", "ancientmess"],
           "secondaryRegions" : []
         },
 		"core" : {
@@ -61,18 +61,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundeternalfire"]
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundeternalfire"],
+          "primaryRegion" : ["undergroundeternalfire", "ancientmess"],
           "secondaryRegions" : []
         }
       }
@@ -82,7 +82,7 @@
     "op" : "add",
     "path" : "/planetTypes/eternalfrost",
     "value" : {
-      "threatRange" : [6, 6],
+      "threatRange" : [7, 7],
       "layers" : {
         "surface" : {
           "primaryRegion" : [ "eternalfrost" ],
@@ -98,18 +98,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundeternalfrost"]
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundeternalfrost"],
+          "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
 		"core" : {
@@ -123,7 +123,7 @@
     "op" : "add",
     "path" : "/planetTypes/nuclearwasteland",
     "value" : {
-      "threatRange" : [5, 5],
+      "threatRange" : [7, 7],
       "layers" : {
         "surface" : {
           "primaryRegion" : [ "nuclearwasteland" ],
@@ -140,18 +140,18 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"]
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundnuclearwasteland"],
+          "primaryRegion" : ["undergroundnuclearwasteland", "ancientmess"],
           "secondaryRegions" : []
         }
       }
@@ -165,7 +165,7 @@
       "layers" : {
         "surface" : {
           "primaryRegion" : [ "voltage" ],
-          "secondaryRegion" : [ "midnight", "darkabyss" ],
+          "secondaryRegion" : [ "midnight", "darkabyss", "volcanic", "eternalfire" ],
 
           "dungeons" : [
             [1.0, "apextestfacility"], [1.0, "apexbase"], [1.0, "apexcamp"], [1.0, "apexcity"],
@@ -178,20 +178,94 @@
           ]
         },
         "subsurface" : {
-          "primaryRegion" : ["undergroundvoltage"]
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"]
         },
         "underground1" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground2" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         },
         "underground3" : {
-          "primaryRegion" : ["undergroundvoltage"],
+          "primaryRegion" : ["undergroundvoltage", "ancientmess"],
           "secondaryRegions" : []
         }
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/forgotten",
+    "value" : {
+      "threatRange" : [3, 3],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "forgotten" ],
+          "secondaryRegion" : [ ],
+
+          "dungeons" : [
+            [1.0, "apextestfacility"], [1.0, "apexbase"],
+            [1.0, "aviantemple"], [1.0, "aviantomb"],
+            [1.0, "dungeoncrawler"], [1.0, "evilfortress"],
+            [1.0, "hylotlruinedcastle"], [1.0, "hylotlcity"], [1.0, "humancamp"],
+            [1.0, "glitchsewer"]
+          ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundforgottenceiling"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["forgottenrough"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundforgotten"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundforgotten"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["coreforgotten"],
+		  "secondaryRegion" : []
+		}
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/planetTypes/supervoid",
+    "value" : {
+      "threatRange" : [10, 10],
+      "layers" : {
+        "surface" : {
+          "primaryRegion" : [ "supervoidsurface" ],
+          "secondaryRegion" : [ ],
+
+          "dungeons" : [ ]
+        },
+        "subsurface" : {
+          "primaryRegion" : ["undergroundsupervoid"]
+        },
+        "underground1" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+        "underground2" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+        "underground3" : {
+          "primaryRegion" : ["undergroundsupervoid"],
+          "secondaryRegions" : []
+        },
+		"core" : {
+		  "primaryRegion" : ["supervoidcore"],
+		  "secondaryRegion" : []
+		}
       }
     }
   },
@@ -297,7 +371,87 @@
       "biome" : [
         [0, [ "voltage" ]]
       ],
-      "subRegion" : ["bones", "electricdesert", "tar", "supervoid"]
+      "subRegion" : ["bones", "electricdesert", "tar", "supervoid", "livinglightning"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/supervoidsurface",
+    "value" : {
+      "caveLiquid" : [ "supervoid" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "supervoidsurface" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/forgotten",
+    "value" : {
+      "caveLiquid" : [ "rottenwater" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "forgotten" ]]
+      ],
+      "subRegion" : ["bones", "flesh"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundforgottenceiling",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/forgottenrough",
+    "value" : {
+      "caveLiquid" : [ "rottenwater" ],
+      "caveLiquidChanceRange" : [20, 100],
+      "blockSelector" : [ "ledgesSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "forgottenrough" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/undergroundforgotten",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/coreforgotten",
+    "value" : {
+      "caveLiquid" : ["rottenwater"],
+	  "oceanLiquid" : ["rottenwater"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["undergroundforgotten"]]
+      ]
     }
   },
   {
@@ -321,6 +475,18 @@
       "bgCaveSelector" : [ "empty" ],
       "biome" : [
         [0, [ "supervoid" ]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/livinglightning",
+    "value" : {
+      "blockSelector" : [ "remixedMildSurface" ],
+      "fgCaveSelector" : [ "surfaceCaves" ],
+      "bgCaveSelector" : [ "empty" ],
+      "biome" : [
+        [0, [ "livinglightning" ]]
       ]
     }
   },
@@ -396,6 +562,25 @@
   },
   {
     "op" : "add",
+    "path" : "/regionTypes/undergroundsupervoid",
+    "value" : {
+      "caveLiquid" : ["supervoid"],
+      "biome": [
+        [1,["undergroundsupervoid"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/regionTypes/ancientmess",
+    "value" : {
+      "biome": [
+        [1,["ancientmess"]]
+      ]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/regionTypes/coredarkabyss",
     "value" : {
       "caveLiquid" : ["liquidfabric"],
@@ -425,19 +610,19 @@
     }
   },
   {
-    "op": "add",
-    "path": "/regionTypes/garden/subRegion/-",
-    "value": "supervoid"
-  },
-  {
-    "op": "add",
-    "path": "/regionTypes/forest/subRegion/-",
-    "value": "supervoid"
-  },
-  {
-    "op": "add",
-    "path": "/regionTypes/desert/subRegion/-",
-    "value": "supervoid"
+    "op" : "add",
+    "path" : "/regionTypes/supervoidcore",
+    "value" : {
+      "caveLiquid" : ["supervoid"],
+	  "oceanLiquid" : ["supervoid"],
+      "fgCaveSelector" : [ "coreCaves" ],
+      "bgCaveSelector" : [ "coreBackgroundCaves" ],
+      "oceanLevelOffset" : -20,
+      "caveLiquidSeedDensityRange" : [4.0, 4.0],
+      "biome": [
+        [1,["supervoidcore"]]
+      ]
+    }
   },
   {
     "op": "add",
@@ -481,14 +666,12 @@
   },
   {
     "op": "add",
-    "path": "/regionTypes/moon/subRegion",
-    "value": [
-      "supervoid"
-    ]
+    "path": "/regionTypes/core/biome/1/1/-",
+    "value": "oblivioncore"
   },
   {
     "op": "add",
-    "path": "/regionTypes/barren/subRegion",
+    "path": "/regionTypes/moon/subRegion",
     "value": [
       "supervoid"
     ]

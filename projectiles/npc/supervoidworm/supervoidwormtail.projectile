@@ -1,0 +1,19 @@
+{
+  "projectileName" : "supervoidwormtail",
+  "image" : "supervoidwormtail.png",
+  "physics" : "bullet",
+  "lightColor" : [128, 0, 128],
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 25,
+  "speed" : 0,
+  "timeToLive" : 0.2,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : true,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma"
+}

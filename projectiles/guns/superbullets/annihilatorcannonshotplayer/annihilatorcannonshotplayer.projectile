@@ -1,0 +1,36 @@
+{
+  "projectileName" : "annihilatorcannonshotplayer",
+  "image" : "annihilatorcannonshotplayer.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [73, 0, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 5,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "explosivelasershot",
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 0.2,
+		  "config" : {
+		    "piercing" : true,
+			"periodicActions" : [],
+			"timeToLive" : 10
+		  }
+		}
+	  ]
+	}
+  ],
+  "power" : 10.0,
+  "damageKind" : "default",
+  "physics" : "laser",
+  "fullbright" : true
+}

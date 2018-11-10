@@ -245,7 +245,23 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.75}
+          "time": {"value": 0.25}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spiderslam"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
         }
       },
       {

@@ -5,7 +5,7 @@
   "spawnProfile" : {
     "groups" : [
       {
-        "select" : 2,
+        "select" : 4,
         "pool" : [ 
           [ 1.0, "livingbolt" ],
 		  [ 1.0, "livingbolt" ],
@@ -21,8 +21,8 @@
 
   "hueShiftOptions" : [0],
 
-  "mainBlock" : "chargedsand",
-  "subBlocks" : [ "livinglightning", "chargedstone" ],
+  "mainBlock" : "livinglightning",
+  "subBlocks" : [ "chargedstone" ],
   "ores" : "surface",
 
   "surfacePlaceables" : {

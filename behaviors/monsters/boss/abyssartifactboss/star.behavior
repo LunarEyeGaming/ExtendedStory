@@ -96,6 +96,14 @@
           "time": {"value": 2.0}
         }
       },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "starattack"}
+        }
+      },
       {
         "title": "setParticleEmitterActive",
         "type": "action",

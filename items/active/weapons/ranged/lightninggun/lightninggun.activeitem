@@ -6,10 +6,13 @@
   "description" : "A gun that shoots extremely high voltage electric bolts.",
   "shortdescription" : "^blue;Lightning Gun^reset;",
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "Crafted U. Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
+  
+  "critChance" : 10,
+  "critBonus" : 15,
 
   "inventoryIcon" : "lightninggunicon.png",
 
@@ -106,13 +109,13 @@
       }
     }
   },
-  "altAbilityType" : "grenadelauncher",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
       "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
     },
     "energyUsage" : 20,
-	"baseDps" : 20,
+	"baseDps" : 5,
 	"fireTime" : 0.5
   },
 

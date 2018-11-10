@@ -6,7 +6,7 @@
   "description" : "A type of cannon that shoots extremely dense balls of light.",
   "shortdescription" : "Magnetar Cannon",
   "tooltipKind" : "base",
-  "category" : "Cannon",
+  "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
@@ -91,7 +91,7 @@
         "projectileParameters" : {},
         "inaccuracy" : 0.1,
 		"spreadAngle" : 4,
-        "baseDamage" : 1,
+        "baseDamage" : 2,
         "fireSound" : "fire"
       },
       {
@@ -101,7 +101,7 @@
         "projectileType" : "magnetarorb",
         "projectileParameters" : { },
         "inaccuracy" : 0,
-        "baseDamage" : 4,
+        "baseDamage" : 6,
         "fireSound" : "fire2"
       }
     ],

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "rottengoop_es", "count" : 10 },
+	{ "item" : "liquidhealing", "count" : 50 }
+  ],
+  "output" : {
+    "item" : "rottenhead",
+    "count" : 1
+  },
+  "groups" : [ "craftinganvil2", "armours", "all" ]
+}

@@ -1,0 +1,48 @@
+{
+  "projectileName" : "gravwarpshot2",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "gravwarpshot1.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 6,
+  "power" : 5,
+  "speed" : 55,
+  "supportsProcessing" : true,
+  "timeToLive" : 10,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
+	},
+	{
+	  "action" : "loop",
+	  "count" : 2,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "gravwarpshotmini",
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 0.5
+		}
+	  ]
+	}
+  ],
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 10,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "lightColor" : [80, 190, 60],
+  "fullbright" : true,
+  "damageKind" : "plasma",
+  "scripts" : [ "/scripts/projectiles/sinewaveprojectile.lua" ],
+  "waveAmplitude" : 0.5,
+  "wavePeriod" : 0.5
+}

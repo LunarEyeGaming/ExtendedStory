@@ -1,0 +1,28 @@
+{
+  "projectileName" : "ancientturretspawn_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 5,
+  "timeToLive" : 0.24,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientturretspawn_es.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "damageKind" : "plasma",
+  "entityLimit" : 3,
+  "detectionRadius" : 70,
+  "monsterType" : "ancientturretfriendly_es",
+  "scripts" : [ "/scripts/projectiles/limitedprojectile.lua" ],
+  "destroyAction" : {
+    "action" : "projectile",
+	"type" : "ancientturretspawn2_es",
+	"direction" : [1, 0]
+  }
+}

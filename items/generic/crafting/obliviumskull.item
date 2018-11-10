@@ -1,0 +1,13 @@
+{
+  "itemName" : "obliviumskull",
+  "price" : 300,
+  "rarity" : "Legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "obliviumskull.png",
+  "description" : "Oblivium shaped into a skull. ^cyan;Can be used to make the Oblivion Katana.",
+  "shortdescription" : "Oblivium Skull",
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : [
+    "oblivionbroadsword"
+  ]
+}

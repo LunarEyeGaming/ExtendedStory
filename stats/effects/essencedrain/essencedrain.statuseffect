@@ -1,0 +1,20 @@
+{
+  "name" : "essencedrain",
+  "effectConfig" : {
+    "starvationCompoundDamage" : 20,
+    "movementModifiers" : {
+      "speedModifier" : 0.5
+    },
+    "soundInterval" : 0.5
+  },
+  "defaultDuration" : 0.1,
+
+  "scripts" : [
+    "essencedrain.lua"
+  ],
+
+  "animationConfig" : "essencedrain.animation",
+
+  "label" : "Essence Drain - Your vitality essence is being drained by the void.",
+  "icon" : "/interface/statuses/essencedrain.png"
+}

@@ -1,0 +1,54 @@
+{
+  "itemName" : "ironslingshot",
+  "price" : 10,
+  "inventoryIcon" : "ironslingshot.png:0",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "tooltipKind" : "bow",
+  "category" : "Slingshot",
+  "description" : "A slingshot made of iron rods tied together.",
+  "shortdescription" : "Iron Slingshot",
+  "twoHanded" : false,
+  "itemTags" : ["weapon", "ranged", "bow"],
+  
+  "critChance" : 2,
+  "critBonus" : 1,
+
+  "level" : 1,
+
+  "animation" : "/items/active/weapons/bow/bow.animation",
+  "animationParts" : {
+    "bow" : "ironslingshot.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0.375]
+      }}
+    }},
+    "sounds" : {
+      "draw" : [ "/sfx/gun/bow_draw1.ogg", "/sfx/gun/bow_draw2.ogg", "/sfx/gun/bow_draw3.ogg" ],
+      "release" : [ "/sfx/gun/bow_loose.ogg" ],
+      "perfectRelease" : [ "/sfx/gun/bow_loose_perfect.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/bow/bow.lua"],
+
+  "primaryAbilityType" : "slingshot",
+  "primaryAbility" : {
+    //"drawSpeedMultiplier" : "constant",
+    "projectileType" : "t2slingshot",
+    "powerProjectileType" : "t2cslingshot",
+	"stances" : {
+      "draw" : {
+		"backArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+		"backArmFrame" : "swimIdle.2"
+      }
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildbow.lua"
+}

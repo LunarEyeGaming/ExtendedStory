@@ -1,10 +1,11 @@
 {
   "itemName" : "upgrademodule_es",
-  "price" : 20,
+  "price" : 900,
   "rarity" : "Legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "upgrademodule_es.png",
   "description" : "An item used for upgrading weapons.",
   "shortdescription" : "Weapon Upgrade Module",
-  "itemTags" : [ "reagent" ]
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : ["ancientupgrademodule_es"]
 }

@@ -1,0 +1,265 @@
+{
+  "name": "poisondragonboss-charge",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+	"/scripts/actions/sensor.lua"
+  ],
+  "parameters": {
+    "headRotationCenter": [4.125, 2.5],
+    "chargeVelocity": [50, 0],
+    "headAngleOffset": 0.7,
+	"collisionDistance": [20, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+        "title": "faceEntity",
+        "type": "action",
+        "name": "faceEntity",
+        "parameters": {
+          "entity": {"key": "target"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.25}
+        }
+      },
+      {
+        "title": "entityDirection",
+        "type": "action",
+        "name": "entityDirection",
+        "parameters": {
+          "entity": {"key": "self"},
+          "offset": {"value": [0, 0]},
+          "target": {"key": "target"}
+        },
+        "output": {
+          "vector": "aimVector"
+        }
+      },
+      {
+        "title": "Reset",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "vecMultiply",
+            "type": "action",
+            "name": "vecMultiply",
+            "parameters": {
+              "first": {"key": "aimVector"},
+              "second": {"value": ["facingDirection", 1]}
+            },
+            "output": {
+              "vector": "facingVector"
+            }
+          },
+          {
+            "title": "vecAngle",
+            "type": "action",
+            "name": "vecAngle",
+            "parameters": {
+              "vector": {"key": "facingVector"}
+            },
+            "output": {
+              "angle": "targetAngle"
+            }
+          },
+          {
+            "title": "vecAngle",
+            "type": "action",
+            "name": "vecAngle",
+            "parameters": {
+              "vector": {"key": "aimVector"}
+            },
+            "output": {
+              "angle": "targetAngleBase"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Reset",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "vecRotate",
+            "type": "action",
+            "name": "vecRotate",
+            "parameters": {
+              "angle": {"key": "targetAngleBase"},
+              "vector": {"key": "<chargeVelocity>"}
+            },
+            "output": {
+              "vector": "chargeSpeed"
+            }
+          },
+		  {
+            "title": "vecRotate",
+            "type": "action",
+            "name": "vecRotate",
+            "parameters": {
+              "angle": {"key": "targetAngleBase"},
+              "vector": {"key": "<collisionDistance>"}
+            },
+            "output": {
+              "vector": "hitDistance"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Reset",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "resetTransformationGroup",
+            "type": "action",
+            "name": "resetTransformationGroup",
+            "parameters": {
+              "transformationGroup": {"value": "body"}
+            }
+          },
+          {
+            "title": "rotateTransformationGroup",
+            "type": "action",
+            "name": "rotateTransformationGroup",
+            "parameters": {
+              "angle": {"key": "targetAngle"},
+              "rotationCenter": {"value": [0, 0]},
+              "transformationGroup": {"value": "body"}
+            }
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": true}
+        }
+      },
+	  {
+	    "title": "setVelocity",
+		"type": "action",
+		"name": "setVelocity",
+		"parameters": {
+		  "velocity": {"key": "chargeSpeed"}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+				  "title": "setVelocity",
+				  "type": "action",
+				  "name": "setVelocity",
+				  "parameters": {
+				    "velocity": {"key": "chargeSpeed"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+            "title": "lineTileCollision",
+            "type": "action",
+            "name": "lineTileCollision",
+            "parameters": {
+              "offset": {"key": "hitDistance"}
+            }
+          },
+		  {
+		    "title": "timer",
+			"type": "action",
+			"name": "timer",
+			"parameters": {
+			  "time": {"value": 1.0}
+			}
+		  }
+		]
+	  },
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": false}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

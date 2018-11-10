@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 6,
+  
+  "critChance" : 25,
+  "critBonus" : 35,
 
   "inventoryIcon" : [
     { "image" : "aegisaltsniperrifle.png:idle" }
@@ -65,7 +68,7 @@
     "inaccuracy" : 0.0,
     "fireType" : "auto",
 
-    "projectileType" : "ancientlasershot",
+    "projectileType" : "aegisaltsnipershot",
     "projectileParameters" : {
       "knockback" : 20,
 	  "speed" : 200,

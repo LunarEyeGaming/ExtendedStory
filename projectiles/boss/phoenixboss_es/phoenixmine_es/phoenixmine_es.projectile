@@ -1,0 +1,71 @@
+{
+  "projectileName" : "phoenixmine_es",
+  "image" : "/projectiles/weather/largefireball/largefireball.png",
+  "physics" : "laser",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 1,
+  "bounces" : 0,
+  "fullbright" : true,
+  "renderLayer" : "Monster+50",
+  "piercing" : false,
+  "damagePoly" : [ [-8, 4], [-8, -4], [8, 0] ],
+  "damageKind" : "fire",
+  "onlyHitTerrain" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.05,
+	  "action" : "particle",
+	  "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/weather/largefireball/largefireball.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.5,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : {
+	        "type" : "animated",
+	    	"animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+	    	"fullbright" : true,
+	    	"light" : [218, 83, 2],
+	    	"initialVelocity" : [0, 0],
+	    	"finalVelocity" : [0, 5],
+	    	"position" : [0, 0],
+	    	"timeToLive" : 1,
+	    	"variance" : {
+	    	  "initialVelocity" : [5, 5]
+	    	}
+	      }
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "phoenixfiregrenade",
+<<<<<<< HEAD
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
+=======
+		  "fuzzAngle" : 180
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+		}
+	  ]
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/blast_small_fire1.ogg", "/sfx/projectiles/blast_small_fire2.ogg", "/sfx/projectiles/blast_small_fire3.ogg" ]
+	}
+  ]
+}

@@ -3,27 +3,29 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Uncommon",
-  "description" : "This thing is huge! Shoots explosive bullets.",
+  "description" : "A simple titanium chain gun. Turn your foes into minced meat!",
   "shortdescription" : "Titanium Chain Gun",
   "tooltipKind" : "gun",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 4,
+  
+  "critChance" : 3,
+  "critBonus" : 8,
 
-  "inventoryIcon" : "titaniumchaingun.png:idle",
+  "inventoryIcon" : "titaniumchaingunnew.png:idle",
 
-  "animation" : "/items/active/weapons/ranged/chaingun/titaniumchaingun/titaniumchaingun.animation",
+  "animation" : "titaniumchaingun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "titaniumchaingun.png",
-	"middleFullbright" : "titaniumchaingununlit.png",
+    "middle" : "titaniumchaingunnew.png",
     "barrel" : "",
-    "muzzleFlash" : "/projectiles/invisibleprojectile/invisibleprojectile.png"
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg", "/sfx/gun/mech_flakcannon3.ogg"],
+      "fire" : ["/sfx/gun/mp3.ogg"],
 	  "altFire" : ["/sfx/gun/rocket2.ogg"]
     }
   },
@@ -39,15 +41,15 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.07,
-    "baseDps" : 12.0,
-    "energyUsage" : 10,
+    "fireTime" : 0.03,
+    "baseDps" : 22.0,
+    "energyUsage" : 50,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
     "fireType" : "auto",
 
-    "projectileType" : "titaniumexplosivebullet",
+    "projectileType" : "bullet-2",
     "projectileParameters" : {
       "knockback" : 2
     },
@@ -62,8 +64,8 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,8 +76,8 @@
       },
       "cooldown" : {
         "duration" : 0.01,
-        "armRotation" : 1,
-        "weaponRotation" : 1,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
         "twoHanded" : true,
 
         "allowRotate" : false,

@@ -1,0 +1,120 @@
+{
+  "itemName" : "destroyermgun",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A rapid fire weapon that does some serious damage.",
+  "shortdescription" : "^#cc0000;Destroyer Machinegun^reset;",
+  "tooltipKind" : "base",
+  "category" : "^#660000;Destroyer Weapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+  
+  "critChance" : 2,
+  "critBonus" : 15,
+
+  "inventoryIcon" : "destroyermgun.png:empty",
+
+  "animation" : "destroyermgun.animation",
+  "animationParts" : {
+    "gun" : "destroyermgun.png",
+    "gunfullbright" : "destroyermgununlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+	  "altFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ]
+	}
+  },
+  "muzzleOffset" : [2, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "NAN",
+    "scripts" : ["/items/active/weapons/destroyer/destroyermgun/destroyermgunfire.lua"],
+    "class" : "ChargeFire",
+	
+	"fireTimer" : 0.1,
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0,
+        "projectileType" : "invisibleprojectile",
+        "projectileCount" : 1,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire",
+        "fireAnimationState" : "off"
+      },
+      {
+        "time" : 0.9999,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "explosivelasershot",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {"speed" : 60},
+        "inaccuracy" : 0.06,
+<<<<<<< HEAD
+        "baseDamage" : 2,
+=======
+        "baseDamage" : 5,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+        "fireSound" : "fire2"
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 4,
+        "weaponRotation" : 4,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { "name" : "Doomcannon Spread", "projectileType" : "doomshot", "projectileCount" : 5, "fireTime" : 0.5, "inaccuracy" : 0.08, "projectileParameters" : {}}
+    },
+    "energyUsage" : 20,
+	"baseDps" : 20
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

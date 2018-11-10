@@ -1,0 +1,225 @@
+{
+  "projectileName" : "cannonshot_annihilator",
+  "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png",
+  "physics" : "bullet",
+  "lightColor" : [150, 100, 100],
+  "animationCycle" : 0.3,
+  "frameNumber" : 8,
+  "power" : 50,
+  "speed" : 50,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "fullbright" : true,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 36,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 72,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 108,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 144,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 180,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 216,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 212,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 288,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 324,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 46,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 82,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 118,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 114,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 190,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 226,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 262,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 298,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 334,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 10,
+	  "delaySteps" : 1,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 16,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 92,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 128,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 164,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 200,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 236,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 272,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 308,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 344,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "cannonshotmini_annihilator",
+	  "angleAdjust" : 20,
+	  "delaySteps" : 2,
+	  "inheritDamageFactor" : 1
+	}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "frameGrid" : {
+    "size" : [129, 129],
+    "dimensions" : [6, 1],
+    "names" : [
+      [ "windup.1", "windup.2", "windup.3", "windup.4", "windup.5", "windup.6" ]
+    ]
+  },
+  "aliases" : {
+    "winddown.1" : "windup.6",
+    "winddown.2" : "windup.5",
+	"winddown.3" : "windup.4",
+	"winddown.4" : "windup.3",
+	"winddown.5" : "windup.2",
+	"winddown.6" : "windup.1"
+  }
+}

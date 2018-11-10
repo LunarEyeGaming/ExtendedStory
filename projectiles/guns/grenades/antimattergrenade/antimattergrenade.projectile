@@ -1,0 +1,21 @@
+{
+  "projectileName" : "antimattergrenade",
+  "image" : "antimattergrenade.png",
+  "fullbright" : true,
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "physics" : "grenade",
+  "timeToLive" : 1,
+  "bounces" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/antimatterexplosionsmall_es/antimatterexplosionsmall_es.config"
+    }
+  ],
+  "power" : 0,
+  "speed" : 45,
+  "lightColor" : [20, 150, 20],
+  "damageType" : "ignoresdef",
+  "damageKind" : "nodamage"
+}

@@ -68,6 +68,12 @@
 		  "initialVelocity" : [2, 0]
 		}
 	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg" ]
 	}
   ],
   "actionOnReap" : [

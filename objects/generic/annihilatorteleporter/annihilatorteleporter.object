@@ -1,0 +1,42 @@
+{
+  "objectName" : "annihilatorteleporter",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Rare",
+  "description" : "A strange transmitter found on Annihilator Drones. ^red;Annihilator Mission.",
+  "shortdescription" : "Signal Transmitter",
+  "race" : "generic",
+
+  "apexDescription" : "A complicated transmitter. It transmits signals that only its intended receiver will understand.",
+  "avianDescription" : "A transmitter that has unknown purposes.",
+  "floranDescription" : "Ssstrange rod with bulb on top.",
+  "glitchDescription" : "Neutral. A transmitter.",
+  "humanDescription" : "A strangely-colored transmitter.",
+  "hylotlDescription" : "A mysterious transmitter. Teleports you to a strange place.",
+  "novakidDescription" : "An strange-lookin' transmitter",
+
+  "category" : "teleporter",
+  "lightColor" : [124, 102, 56],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/annihilatormission.config",
+
+  "inventoryIcon" : "annihilatorteleportericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "annihilatorteleporter.png:<color>", "fullbright" : true }, { "image" : "annihilatorteleporterlit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

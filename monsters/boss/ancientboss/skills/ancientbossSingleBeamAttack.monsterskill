@@ -1,0 +1,15 @@
+{
+  "name" : "ancientbossSingleBeamAttack",
+  "label" : "BEAMS OF HURT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossSingleBeamAttack.lua" ],
+    "ancientbossSingleBeamAttack" : {
+      "skillTime" : 19,
+      "rotateInterval" : 19,
+        
+      "damagePerSecond" : 1000
+    }
+  }
+}

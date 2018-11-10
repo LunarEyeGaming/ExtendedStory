@@ -1,11 +1,11 @@
 {
   "input" : [
-    { "item" : "elementite", "count" : 1 },
-	{ "item" : "arkite", "count" : 1 }
+    { "item" : "elementite", "count" : 10 },
+	{ "item" : "arkite", "count" : 10 }
   ],
   "output" : {
     "item" : "ultimatium",
-    "count" : 1
+    "count" : 10
   },
   "duration" : 0.15,
   "groups" : [ "ancientfurnace", "bars", "all" ]

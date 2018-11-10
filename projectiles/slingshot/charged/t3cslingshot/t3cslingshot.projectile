@@ -1,0 +1,18 @@
+{
+  "projectileName" : "t3cslingshot",
+  "physics" : "grenade",
+  "image" : "t3cslingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 30,
+  "lightColor" : [102, 58, 31],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
+	}
+  ],
+  "damageKind" : "fire"
+}

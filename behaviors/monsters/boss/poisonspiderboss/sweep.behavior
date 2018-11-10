@@ -12,7 +12,8 @@
     "/scripts/actions/sensor.lua"
   ],
   "parameters": {
-    "acidSweepConfig": {"power": 100}
+    "acidSweepConfig": {"power": 100},
+    "slamMovementParameters": {"gravityEnabled": true, "airFriction": 0, "gravityMultiplier": 2}
   },
   "root": {
     "title": "sequence",
@@ -289,7 +290,7 @@
                                     "aimVector": {"value": [0, -1]},
                                     "offset": {"value": [0, -9]},
                                     "projectileConfig": {"value": "<acidSweepConfig>"},
-                                    "projectileType": {"value": "acidsweep_es"}
+                                    "projectileType": {"value": "acidsweepnohoming_es"}
                                   }
                                 },
                                 {
@@ -354,6 +355,193 @@
             ]
           }
         ]
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "legs"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "slam"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "spiderslam"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "controlParameters",
+            "type": "action",
+            "name": "controlParameters",
+            "parameters": {
+              "parameters": {"key": "<slamMovementParameters>"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "dynamic",
+                "type": "composite",
+                "name": "dynamic",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "lineTileCollision",
+                    "type": "action",
+                    "name": "lineTileCollision",
+                    "parameters": {
+                      "offset": {"value": [0, -20]}
+                    }
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              },
+              {
+                "title": "spawnProjectile",
+                "type": "action",
+                "name": "spawnProjectile",
+                "parameters": {
+                  "aimVector": {"value": [1, 0]},
+                  "offset": {"value": [0, -11]},
+                  "projectileType": {"value": "spiderslam"},
+                  "trackSource": {"value": true}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "spiderslam"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "slam"},
+                  "type": {"value": "legs"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.25}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "slam"}
+                }
+              },
+              {
+                "title": "burstParticleEmitter",
+                "type": "action",
+                "name": "burstParticleEmitter",
+                "parameters": {
+                  "emitter": {"value": "slam"}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {},
+        "children": [
+          {
+            "title": "inverter",
+            "type": "decorator",
+            "name": "inverter",
+            "parameters": {},
+            "child": {
+              "title": "lineTileCollision",
+              "type": "action",
+              "name": "lineTileCollision",
+              "parameters": {
+                "offset": {"value": [0, -17.5]}
+              }
+            }
+          },
+          {
+            "title": "controlFly",
+            "type": "action",
+            "name": "controlFly",
+            "parameters": {
+              "vector": {"value": [0, 1]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "controlFly",
+        "type": "action",
+        "name": "controlFly",
+        "parameters": {
+          "vector": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {}
       }
     ]
   }

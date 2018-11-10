@@ -7,9 +7,12 @@
   "description" : "What's better than a regular flamethrower? An ionizing flamethrower!",
   "shortdescription" : "^cyan;Ion Flamethrower^reset;",
   "tooltipKind" : "gun",
-  "category" : "uniqueWeapon",
+  "category" : "^#5dbdba;Ion Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
+  
+  "critChance" : 5,
+  "critBonus" : 5,
 
   "inventoryIcon" : "ionflamethrower.png:idle",
 
@@ -54,7 +57,7 @@
 	}
   },
 
-  "altAbilityType" : "grenadelauncher",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
 	  "ion" : {"projectileType" : "ionflamegrenade", "name" : "Ion Pellet"}

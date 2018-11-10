@@ -1,0 +1,69 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "sounds" : {
+      "fireTravelSlash" : [ "/sfx/melee/travelingslash_fire1.ogg" ],
+      "iceTravelSlash" : [ "/sfx/melee/travelingslash_ice2.ogg" ],
+      "physicalTravelSlash" : [ "/sfx/melee/ancientspearalt_fire.ogg" ],
+      "electricTravelSlash" : [ "/sfx/melee/travelingslash_electric4.ogg" ],
+      "poisonTravelSlash" : [ "/sfx/melee/travelingslash_poison2.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Ancient Lacerators",
+    "type" : "ancientspearalt",
+    "scripts" : ["/items/active/weapons/melee/abilities/spear/ancientspearalt/ancientspearalt.lua"],
+    "class" : "TravelingSlash",
+
+    "projectileOffset" : [0,0],
+    "elementalConfig" : {
+      "physical" : {
+	    "projectileType" : "ancientspearalt",
+		"baseDamageFactor" : 1,
+	
+		"projectileParameters" : {
+		  "baseDamage" : 14
+		},
+		"damageLevelMultiplier" : 1
+	  },
+      "fire" : {
+        "projectileType" : "firetravelingswoosh"
+      },
+      "ice" : {
+        "projectileType" : "icetravelingswoosh"
+      },
+      "poison" : {
+        "projectileType" : "poisontravelingswoosh"
+      },
+      "electric" : {
+        "projectileType" : "electrictravelingswoosh"
+      }
+    },
+
+    "baseDamage" : 7,
+    "energyUsage" : 120,
+    "cooldownTime" : 1.5,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.25,
+        "armRotation" : -45,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.4,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

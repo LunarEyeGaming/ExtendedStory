@@ -1,0 +1,346 @@
+{
+  "name": "eyebossrematch-messaging",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/status.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "phase1": 0.875,
+    "phase2": 0.75
+  },
+  "root": {
+    "title": "dynamic",
+    "type": "composite",
+    "name": "dynamic",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase1>"},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob1"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob1"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob2"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob2"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob3"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob3"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob4"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob4"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob5"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob5"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase2>"},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"value": 0},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob7"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob7"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob6"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob6"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob8"]},
+                      "entity": {"key": "rightspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["blob8"]},
+                      "entity": {"key": "leftspawner"},
+                      "message": {"value": "enableSpawner"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

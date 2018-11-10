@@ -7,6 +7,8 @@
   "speed" : 0,
   "fullbright" : true,
   "piercing" : true,
+<<<<<<< HEAD
+=======
   "periodicActions" : [
     {
       "time" : 0.01,
@@ -17,9 +19,10 @@
       "inheritSpeedFactor" : 0
     }
   ],
-  "animationCycle" : 0.375,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+  "animationCycle" : 1,
   "lightColor" : [93, 10, 47],
-  "frameNumber" : 5,
+  "frameNumber" : 1,
   "power" : 50,
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
@@ -38,5 +41,17 @@
 	  "action" : "config",
 	  "file" : "/projectiles/explosions/astralexplosion/astralexplosion.config"
 	}
-  ]
+  ],
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  }
 }

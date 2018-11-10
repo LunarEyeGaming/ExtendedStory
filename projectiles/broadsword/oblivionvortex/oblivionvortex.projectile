@@ -1,0 +1,66 @@
+{
+  "projectileName" : "oblivionvortex",
+  "physics" : "hover",
+  "timeToLive" : 15,
+  "image" : "oblivionvortex.png",
+  "animationCycle" : 0.35,
+  "lightColor" : [110, 80, 30],
+  "frameNumber" : 4,
+  "windupFrames" : 3,
+  "flippable" : true,
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "oblivionfireball",
+	  "fuzzAngle" : 180
+    }
+  ],
+  "speed" : 0,
+  "power" : 20,
+  "damagePoly" : [],
+  "piercing" : true,
+  "actionOnReap" : [
+	{
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "oblivionexplosion",
+		  "offsetRange" : [2, 2, -2, -2],
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "sound",
+		  "options" : ["/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg"]
+		}
+	  ]
+	}
+  ],
+
+  "fullbright" : true,
+  "emitters" : [],
+  
+  "boundBox" : [-100, -100, 100, 100],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    },
+	"itemmagnet" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 200,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["itemdrop"]
+    }
+  },
+
+  "bounces" : -1
+}

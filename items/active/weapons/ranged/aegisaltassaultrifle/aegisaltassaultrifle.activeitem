@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 6,
+  
+  "critChance" : 5,
+  "critBonus" : 5,
 
   "inventoryIcon" : [
     { "image" : "aegisaltassaultrifle.png:idle.1" }
@@ -65,7 +68,7 @@
     "inaccuracy" : 0.02,
     "fireType" : "auto",
 
-    "projectileType" : "ancientlasershot",
+    "projectileType" : "aegisaltbullet",
     "projectileParameters" : {
       "knockback" : 20,
 	  "actionOnReap" : [

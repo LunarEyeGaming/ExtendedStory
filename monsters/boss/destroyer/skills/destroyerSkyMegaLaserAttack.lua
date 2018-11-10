@@ -34,9 +34,9 @@ function destroyerSkyMegaLaserAttack.update(dt, stateData)
   local position = mcontroller.position()
 
   local toTarget = world.distance(self.targetPosition, position)
-  if toTarget[1] < -stateData.cruiseDistance or checkWalls(1) then
+  if toTarget[1] < -stateData.cruiseDistance then
     stateData.direction = -1
-  elseif toTarget[1] > stateData.cruiseDistance or checkWalls(-1) then
+  elseif toTarget[1] > stateData.cruiseDistance then
     stateData.direction = 1
   end
 

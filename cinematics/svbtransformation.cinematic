@@ -1,0 +1,46 @@
+{
+  "muteSfx" : true,
+  "muteMusic" : true,
+  "skippable" : true,
+  "panels" : [
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/black.png?setcolor=ffffff"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 0.5,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 8,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 8.5,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        }
+      ]
+    }
+  ],
+  "audio" : [
+    {
+      "timecode" : 8.5,
+      "resource" : "/music/silence.ogg"
+    }
+  ]
+}

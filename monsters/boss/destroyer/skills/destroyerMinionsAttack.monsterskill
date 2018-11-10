@@ -49,7 +49,7 @@
                     {
                       "action" : "spawnmonster",
                       "type" : "meleedestroyerminion",
-                      "level" : 3,
+                      "level" : 10,
                       "offset" : [0.0, 1.0],
                       "particle" : {
                         "type" : "animated",
@@ -104,7 +104,7 @@
                     {
                       "action" : "spawnmonster",
                       "type" : "rangeddestroyerminion",
-                      "level" : 3,
+                      "level" : 10,
                       "offset" : [0.0, 1.6],
                       "particle" : {
                         "type" : "animated",
@@ -159,7 +159,7 @@
                     {
                       "action" : "spawnmonster",
                       "type" : "explosivedestroyerminion",
-                      "level" : 3,
+                      "level" : 10,
                       "offset" : [0.0, 1.5],
                       "particle" : {
                         "type" : "animated",

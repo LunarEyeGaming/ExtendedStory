@@ -1,0 +1,20 @@
+{
+  "name" : "sinkhole",
+
+  "projectiles" : [
+    {
+      "projectile" : "sinkhole",
+      "parameters" : {
+        "power" : 0
+      },
+      "velocity" : [0, -50],
+      "ratePerX" : 0.002,
+      "spawnAboveRegion" : 30,
+      "spawnHorizontalPad" : 30,
+      "windAffectAmount" : 0.0
+    }
+  ],
+
+  "duration" : [10, 10],
+  "maximumWind" : 15.0
+}

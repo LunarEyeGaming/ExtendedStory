@@ -1,0 +1,142 @@
+{
+  "itemName" : "lightningblade_es",
+  "price" : 1000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A hilt with a high-voltage plasma blade.",
+  "shortdescription" : "^blue;Lightning Blade^reset;",
+  "tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "broadsword"],
+  
+  "critChance" : 5,
+  "critBonus" : 2,
+
+  "inventoryIcon" : "lightningbladeicon.png",
+
+  "animation" : "lightningblade.animation",
+  "animationParts" : {
+    "sword" : "lightningblade.png",
+    "swordFullbright" : "lightningbladeunlit.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire2" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire3" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire4" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire5" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire6" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+      "fire7" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
+	  "electricStart" : [ "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg" ],
+	  "electricBlast" : [ "/sfx/gun/antimattercannon_charged.ogg" ],
+	  "electricEnd" : [ "/sfx/melee/lightningblade_altwinddown.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 3.0,
+
+  "elementalType" : "electric",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "damageConfig" : {"damageSourceKind" : "electricbroadsword","statusEffects" : [ "electrified" ],"knockbackMode" : "facing","timeout" : 0.5},
+    "fireTime" : 0.5,
+    "baseDps" : 15,
+	"comboSteps" : 7,
+	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 2.5,"knockback" : 30},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 2.5,"knockback" : 40}],
+
+    "stances" : {
+	  "idle" : {"aimAngle" : 0},
+      "windup1" : {"duration" : 0.15, "aimAngle" : 0},
+	  "windup3" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+	  "fire3" : {"duration" : 0.3, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+	  "wait3" : {"duration" : 0.1, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+	  "windup4" : {"duration" : 0.15, "armRotation" : -150, "weaponRotation" : 55, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+	  "fire4" : {"duration" : 0.2, "armRotation" : 0, "weaponRotation" : -90, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+	  "wait4" : {"duration" : 0.1, "armRotation" : -90, "weaponRotation" : -10, "weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+	  "windup5" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "wait5" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+	  "windup6" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "fire6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "wait6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+	  "windup7" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "fire7" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+	  "wait7" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}
+    }
+  },
+
+  "altAbilityType" : "flamethrowersword",
+  "altAbility" : {
+    "name" : "Tesla Chaos",
+	"projectileType" : "invisibleprojectile",
+	"stances" : { 
+	  "windup" : { "duration" : 0.66, "armRotation" : 20, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : false, "animationStates" : { "sfx" : "windup" } }, 
+	  "fire" : { "armRotation" : 45, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : false } 
+	},
+	"baseDps" : 30,
+	"fireTime" : 0.1,
+	"projectileParameters" : {
+	  "damageTeam" : {"type" : "friendly"},
+	  "power" : 0,
+	  "piercing" : true,
+	  "timeToLive" : 0.02,
+	  "periodicActions" : [
+	    {
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "railgunlightning",
+		  "direction" : [0, -1],
+		  "offsetRange" : [60, 40, -60, 40],
+		  "config" : {
+		    "speed" : 100,
+			"power" : 1,
+			"actionOnReap" : [
+			  {
+			    "action" : "config",
+				"file" : "/projectiles/explosions/burstexplosion/electricburstexplosion.config"
+			  }
+			]
+		  }
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "teslabolt",
+		  "direction" : [1, 1]
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "teslabolt",
+		  "direction" : [-1, 1]
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "teslabolt",
+		  "direction" : [-1, -1]
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "teslabolt",
+		  "direction" : [1, -1]
+		}
+	  ]
+	}
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

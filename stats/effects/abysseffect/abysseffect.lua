@@ -1,7 +1,7 @@
 function init()
   animator.setParticleEmitterOffsetRegion("flames", mcontroller.boundBox())
   animator.setParticleEmitterActive("flames", true)
-  effect.setParentDirectives("fade=FFFFFF=0.2")
+  effect.setParentDirectives("brightness=-75")
 
   script.setUpdateDelta(5)
 

@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "umbralmatter", "count" : 1 },
+    { "item" : "emptycell", "count" : 1 }
+  ],
+  "output" : { "item" : "umbralmattercontained", "count" : 1 },
+  "groups" : [ "ancientfurnace", "ingredients", "all" ]
+}

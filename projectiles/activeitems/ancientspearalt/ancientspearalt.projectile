@@ -1,0 +1,78 @@
+{
+  "projectileName" : "ancientspearalt",
+  "physics" : "laser",
+  "timeToLive" : 2,
+  "image" : "ancientspearalt.png",
+  "animationCycle" : 0.3,
+  "lightColor" : [150, 100, 150],
+  "frameNumber" : 4,
+  "periodicActions" : [
+    {
+	  "time" : 1.66,
+	  "action" : "projectile",
+	  "type" : "energytravelingswoosh",
+	  "inheritDamageFactor" : 0.75,
+	  "config" : {
+	    "processing" : "?replace;008cd9=a451c4;60b8ea=d29ce7"
+	  }
+	},
+	{
+	  "time" : 1.66,
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/charge_full_swing2.ogg" ]
+	},
+	{
+	  "time" : 1.82,
+	  "action" : "projectile",
+	  "type" : "energytravelingswoosh",
+	  "inheritDamageFactor" : 0.75,
+	  "config" : {
+	    "processing" : "?replace;008cd9=a451c4;60b8ea=d29ce7"
+	  }
+	},
+	{
+	  "time" : 1.82,
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/charge_full_swing2.ogg" ]
+	},
+	{
+	  "time" : 1.99,
+	  "action" : "projectile",
+	  "type" : "energytravelingswoosh",
+	  "inheritDamageFactor" : 0.75,
+	  "config" : {
+	    "processing" : "?replace;008cd9=a451c4;60b8ea=d29ce7"
+	  }
+	},
+	{
+	  "time" : 1.99,
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/charge_full_swing2.ogg" ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "ancientlasershotsplit",
+	  "inheritDamageFactor" : 0.1
+    },
+	{
+      "action" : "projectile",
+      "type" : "ancientlasershothoming",
+	  "inheritDamageFactor" : 0.2
+    }
+  ],
+  "speed" : 0.01,
+  "power" : 1,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  
+  "scripts" : ["/scripts/projectiles/homingprojectile.lua"],
+  "rotationRate" : 10,
+  "trackingLimit" : 10.0,
+  "homingDistance" : 50,
+
+  "fullbright" : true,
+
+  "bounces" : 0
+}

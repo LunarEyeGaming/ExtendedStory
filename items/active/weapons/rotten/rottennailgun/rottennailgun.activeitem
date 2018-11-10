@@ -1,0 +1,98 @@
+{
+  "itemName" : "rottennailgun",
+  "level" : 3,
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "description" : "A weapon that shoots a lot of tooth-like formations.",
+  "shortdescription" : "Rotten Tooth Rifle",
+  "tooltipKind" : "gun",
+  "category" : "Assault Rifle",
+  "twoHanded" : true,
+  
+  "critChance" : 2,
+  "critBonus" : 4,
+  
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+
+  "inventoryIcon" : [
+    { "image" : "rottennailgun.png" }
+  ],
+
+  "animation" : "rottennailgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "rottennailgun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/needler1.ogg" ],
+	  "altFire" : [ "/sfx/melee/spear_kill_organic1.ogg" ]
+    }
+  },
+  "baseOffset" : [0.7, 0.5],
+  "muzzleOffset" : [1.3, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "poison",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.11,
+    "baseDps" : 5.0,
+    "energyUsage" : 45,
+    "inaccuracy" : 0.008,
+    "fireType" : "auto",
+
+    "projectileType" : "rottentooth",
+    "projectileParameters" : {
+      "knockback" : 4,
+      "speed" : 50
+    },
+    "projectileCount" : 1,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.11,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "elementalConfig" : {
+      "poison" : { "name" : "Tooth Bomb", "projectileType" : "rottentoothbomb", "projectileParameters" : {"speed" : 50}}
+	  },
+	"fireTime" : 3.0
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -10,6 +10,9 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
+  
+  "critChance" : 15,
+  "critBonus" : 45,
 
   "inventoryIcon" : "antimattercannon.png:empty",
 
@@ -38,7 +41,7 @@
         "cooldown" : 0.1,
         "projectileType" : "invisibleprojectile",
         "projectileCount" : 1,
-        "projectileParameters" : {},
+        "projectileParameters" : {"onlyHitTerrain" : true},
         "inaccuracy" : 0,
         "baseDamage" : 0,
         "fireSound" : "fire",
@@ -106,10 +109,15 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "poison" : { "name" : "Comp. Lightning Bolt", "projectileType" : "electricplasmarocket", "projectileCount" : 1, "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/lightningburst/lightningburst.config"}]}}
+      "poison" : { "name" : "Antimatter Grenades", "projectileType" : "antimattergrenade", "projectileParameters" : {}}
     },
     "energyUsage" : 20,
-	"baseDps" : 20
+	"baseDps" : 20,
+	"burstCount" : 10,
+	"inaccuracy" : 0.1,
+	"burstTime" : 0.05,
+	"fireType" : "burst",
+	"fireTime" : 0.25
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

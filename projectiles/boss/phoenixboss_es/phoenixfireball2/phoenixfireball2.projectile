@@ -1,6 +1,6 @@
 {
   "projectileName" : "phoenixfireball2",
-  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "image" : "/projectiles/weather/largefireball/largefireball.png",
   "physics" : "laser",
   "animationCycle" : 1,
   "frameNumber" : 1,
@@ -11,8 +11,8 @@
   "fullbright" : true,
   "renderLayer" : "Monster+50",
   "piercing" : false,
-  "damagePoly" : [ [-8, 4], [-8, -4], [8, 0] ],
-  "damageKind" : "megadamagefire",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "fire",
   "periodicActions" : [
     {
 	  "time" : 0.05,

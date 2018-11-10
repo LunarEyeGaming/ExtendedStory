@@ -1,0 +1,64 @@
+{
+  "name" : "destroyerDestructionShowerAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/destroyer/skills/destroyerDestructionShowerAttack.lua" ],
+
+    "destroyerDestructionShowerAttack" : {
+      "skillTime": 7,
+      "bobTime" : 2,
+      "bobHeight" : 0,
+
+      "projectileOffset" : [0, -4],
+      "fireInterval" : 0.2,
+      "projectile" : {
+        "type" : "invisibleprojectile",
+        "config" : {
+          "speed" : 0,
+		  "onlyHitTerrain" : true,
+          "timeToLive" : 0,
+		  "damageTeam" : { "type" : "enemy" },
+		  "actionOnReap" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "destroyershot",
+			  "offsetRange" : [50, 50, -50, 50],
+			  "direction" : [0, -1],
+			  "config" : {
+			    "periodicActions" : [
+				  {
+				    "time" : 0.1,
+					"action" : "config",
+					"file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+				  }
+				],
+				"speed" : 50,
+				"timeToLive" : 10,
+				"actionOnReap" : [
+				  {
+				    "action" : "loop",
+					"count" : 15,
+					"body" : [
+					  {
+					    "action" : "projectile",
+						"type" : "destroyergrenadeboss",
+						"fuzzAngle" : 180,
+						"config" : {"periodicActions" : []}
+					  }
+					]
+				  }
+				]
+			  }
+			},
+			{
+			  "action" : "sound",
+			  "options" : ["/sfx/gun/pulsecannon1.ogg"]
+			}
+		  ]
+        }
+      }
+    }
+  }
+}

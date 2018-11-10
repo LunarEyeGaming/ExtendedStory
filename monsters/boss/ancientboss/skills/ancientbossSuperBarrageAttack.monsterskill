@@ -8,23 +8,31 @@
 
     "ancientbossSuperBarrageAttack" : {
       "skillTime": 6.5,
-      "bobTime" : 2,
-      "bobHeight" : 3,
+      "bobTime" : 1,
+      "bobHeight" : 6,
 
       "projectileOffset" : [0, -4],
-      "fireInterval" : 0.35,
+      "fireInterval" : 0.7,
       "projectile" : {
-        "type" : "cellzap1",
+        "type" : "targetingprojectile",
         "config" : {
-          "speed" : 40,
-          "power" : 2,
-          "periodicActions" : [
+          "speed" : 0,
+          "actionOnReap" : [
             {
-              "time" : 0,
-              "repeat" : false,
               "action" : "sound",
               "options" : [ "/sfx/npc/boss/ancientboss_blast.ogg" ]
-            }
+            },
+			{
+			  "action" : "loop",
+			  "count" : 4,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "cellzap1",
+				  "fuzzAngle" : 15
+				}
+			  ]
+			}
           ]
         }
       }

@@ -1,0 +1,20 @@
+{
+  "frameGrid" : {
+    "size" : [185, 200],
+    "dimensions" : [11, 6],
+    "names" : [
+	  [ "deactivated", "wake.1", "wake.2", "wake.3" ],
+	  [ "idle.1", "idle.2", "idle.3", "idle.4" ],
+	  [ "windup1.1", "windup1.2", "windup1.3", "windup1.4", "windup1.5", null, "attack1.1", "attack1.2" ],
+	  [ "windup2.1", "windup2.2", "windup2.3", "windup2.4", "windup2.5", "windup2.6", null, "attack2.1", "attack2.2", "attack2.3", "attack2.4" ],
+	  [ "windup3.1", "windup3.2", "windup3.3", "windup3.4", "windup3.5", "windup3.6", null, "attack3.1", "attack3.2" ],
+	  [ "windup4.1", "windup4.2", "windup4.3", "windup4.4", "windup4.5", "windup4.6", null, "attack4.1", "attack4.2", "attack4.3", "attack4.4" ]
+    ]
+  },
+  "aliases" : {
+    "winddown1.1" : "windup1.5", "winddown1.2" : "windup1.4", "winddown1.3" : "windup1.3", "winddown1.4" : "windup1.2", "winddown1.5" : "windup1.1",
+	"winddown2.1" : "windup2.6", "winddown2.2" : "windup2.5", "winddown2.3" : "windup2.4", "winddown2.4" : "windup2.3", "winddown2.5" : "windup2.2", "winddown2.6" : "windup2.1",
+	"winddown3.1" : "windup3.6", "winddown3.2" : "windup3.5", "winddown3.3" : "windup3.4", "winddown3.4" : "windup3.3", "winddown3.5" : "windup3.2", "winddown3.6" : "windup3.1",
+	"winddown4.1" : "windup4.6", "winddown4.2" : "windup4.5", "winddown4.3" : "windup4.4", "winddown4.4" : "windup4.3", "winddown4.5" : "windup4.2", "winddown4.6" : "windup4.1"
+  }
+}

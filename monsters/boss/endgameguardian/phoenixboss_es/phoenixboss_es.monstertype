@@ -7,7 +7,7 @@
   "animation" : "phoenixboss_es.animation",
   "dropPools" : [
     {
-      "default" : "empty"
+      "default" : "endgameguardian"
     }
   ],
 
@@ -106,7 +106,7 @@
           "baseValue" : 3000
         },
         "protection" : {
-          "baseValue" : 25
+          "baseValue" : 60
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -146,6 +146,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

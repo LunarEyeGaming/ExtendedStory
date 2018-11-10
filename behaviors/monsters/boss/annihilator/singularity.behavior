@@ -1,0 +1,37 @@
+{
+  "name": "annihilator-singularity",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "chargeVelocity": [50, 0]
+  },
+  "root": {
+    "title": "randomize",
+    "type": "composite",
+    "name": "randomize",
+    "parameters": {},
+    "children": [
+      {
+	    "title": "annihilator-singularityhorizontal",
+		"type": "module",
+		"name": "annihilator-singularityhorizontal",
+		"parameters": {}
+	  },
+	  {
+	    "title": "annihilator-singularityvertical",
+		"type": "module",
+		"name": "annihilator-singularityvertical",
+		"parameters": {}
+	  }
+    ]
+  }
+}

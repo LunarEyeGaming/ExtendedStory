@@ -1,0 +1,28 @@
+{
+  "projectileName" : "destroyerstaffturret",
+  "physics" : "laser",
+  "timeToLive" : 0.5,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 4,
+  "periodicActions" : [
+  ],
+  "speed" : 0,
+  "power" : 30,
+  "damageKind" : "plasma",
+  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
+  "damageRepeatTimeout" : 0.25,
+
+  "orientationLocked" : false,
+  "fullbright" : true,
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/scripts/projectiles/turretlikeprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 50,
+  "trackingLimit" : 2.0,
+  "homingDistance" : 50
+}

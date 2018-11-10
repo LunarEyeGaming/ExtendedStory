@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "waste", "count" : 50 },
+    { "item" : "emptycell", "count" : 1 }
+  ],
+  "output" : { "item" : "venomsample", "count" : 1 },
+  "groups" : [ "ancientfurnace", "ingredients", "all" ]
+}

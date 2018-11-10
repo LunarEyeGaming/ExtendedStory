@@ -120,7 +120,7 @@
     "statusSettings" : {
       "statusProperties" : {
         "targetMaterialKind" : "organic",
-        "damageFlashColor" : "ff0000=0.15"
+        "damageFlashColor" : "ff0000=0"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -177,6 +177,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

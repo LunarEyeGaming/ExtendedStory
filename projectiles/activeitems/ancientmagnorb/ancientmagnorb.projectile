@@ -1,0 +1,50 @@
+{
+  "projectileName" : "ancientmagnorb",
+  "image" : "ancientmagnorb.png",
+  "windupFrames" : 3,
+  "pointLight" : false,
+  "flippable" : true,
+  "orientationLocked" : true,
+  "actionOnReap" : [ ],
+  "statusEffects" : [ ],
+  "frameNumber" : 2,
+  "animationCycle" : 0.25,
+  "damagePoly" : [[-3, 0], [0, 3], [3, 0], [0, -3]],
+  "power" : 5.0,
+  "speed" : 90,
+  "damageKind" : "hammer",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "fullbright" : true,
+  "timeToLive" : 3,
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "ancientcannonstar",
+	  "fuzzAngle" : 180,
+	  "config" : {
+	    "speed" : 0
+	  }
+	}
+  ],
+
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/magnorb_impact1.ogg",
+        "/sfx/projectiles/magnorb_impact2.ogg",
+        "/sfx/projectiles/magnorb_impact3.ogg"
+      ]
+    },
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
+  ],
+
+  "scripts" : [ "/scripts/projectiles/boomerangprojectile.lua" ],
+  "lightColor" : [83, 28, 97]
+}

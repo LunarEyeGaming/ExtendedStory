@@ -1,0 +1,210 @@
+{
+  "name": "eyebossrematch-animate",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/status.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/eyeboss.lua"
+  ],
+  "parameters": {
+    "phase1": 0.875,
+    "phase2": 0.75
+  },
+  "root": {
+    "title": "dynamic",
+    "type": "composite",
+    "name": "dynamic",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase1>"},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.8}
+                  }
+                },
+                {
+                  "title": "heartBeat",
+                  "type": "action",
+                  "name": "heartBeat",
+                  "parameters": {}
+                }
+              ]
+            }
+          },
+          {
+            "title": "tentacleMovement",
+            "type": "action",
+            "name": "tentacleMovement",
+            "parameters": {
+              "speedRange": {"value": [1, 2]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"key": "<phase2>"},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.5}
+                  }
+                },
+                {
+                  "title": "heartBeat",
+                  "type": "action",
+                  "name": "heartBeat",
+                  "parameters": {
+                    "moveDelays": {"value": {"left": 0, "middle": 0.075, "right": 0.15}},
+                    "moveTime": {"value": 0.15}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "tentacleMovement",
+            "type": "action",
+            "name": "tentacleMovement",
+            "parameters": {
+              "speedRange": {"value": [1.5, 2.5]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": 1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "percentage": {"value": 0},
+              "resource": {"value": "health"}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.25}
+                  }
+                },
+                {
+                  "title": "heartBeat",
+                  "type": "action",
+                  "name": "heartBeat",
+                  "parameters": {
+                    "moveDelays": {"value": {"left": 0, "middle": 0.05, "right": 0.1}},
+                    "moveTime": {"value": 0.1}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "tentacleMovement",
+            "type": "action",
+            "name": "tentacleMovement",
+            "parameters": {
+              "speedRange": {"value": [2, 3]}
+            }
+          }
+        ]
+      },
+      {
+        "title": "runner",
+        "type": "action",
+        "name": "runner",
+        "parameters": {}
+      }
+    ]
+  }
+}

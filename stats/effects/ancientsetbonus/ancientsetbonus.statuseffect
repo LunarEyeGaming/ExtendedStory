@@ -1,0 +1,13 @@
+{
+  "name" : "ancientsetbonus",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "ancientsetbonus.lua"
+  ],
+
+  "label" : "Ancient Power - 33% chance of nearby monsters exploding every hit",
+  "icon" : "/interface/statuses/ancientsetbonus.png"
+}

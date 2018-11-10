@@ -89,7 +89,7 @@
             "projectileType" : "mazeminiboss2shot",
             "projectileParameters" : {
               "speed" : 100,
-              "power" : 25
+              "power" : 5
             },
             "fireOffset" : [0, 0],
             "onGround" : false,
@@ -189,10 +189,10 @@
           "baseValue" : 1000
         },
         "maxHealth" : {
-          "baseValue" : 200
+          "baseValue" : 750
         },
         "protection" : {
-          "baseValue" : 0.5
+          "baseValue" : 50
         },
         "healthRegen" : {
           "baseValue" : 0.0

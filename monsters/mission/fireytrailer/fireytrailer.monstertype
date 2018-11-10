@@ -1,7 +1,7 @@
 {
   "type" : "fireytrailer",
   "shortdescription" : "Firey Trailer",
-  "description" : "Made with radioactive waste.",
+  "description" : "Made with the ability to shoot special fireballs.",
 
   "categories" : [ "fireytrailer" ],
   "parts" : [ "body" ],
@@ -73,7 +73,7 @@
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
-            "projectileType" : "fireball",
+            "projectileType" : "fireball_trailer",
             "projectileParameters" : {
               "power" : 30
             },

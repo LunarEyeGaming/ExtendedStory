@@ -1,0 +1,133 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "charge" : {
+            "frames" : 7,
+            "cycle" : 2.0,
+            "mode" : "transition",
+            "transition" : "fullcharge",
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/tentacleboss_beam_charge.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          },
+          "fullcharge" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "loop",
+            "properties" : {
+            }
+          },
+          "fire" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      },
+	  "beammuzzle" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : {},
+		  "on" : {
+		    "frames" : 2,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
+		}
+	  }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1.0, 0.7],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [1.0, 0.7],
+          "transformationGroups" : ["weapon"],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firing" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "fullcharge" : {
+              "properties" : {
+                "image" : "<partImage>:fullcharge"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "lights" : {
+    "idle" : {
+	  "active" : true,
+	  "position" : [0, 0],
+	  "color" : [100, 0, 0]
+	}
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "fire" : ["/music/silence.ogg"],
+	"fire2" : ["/sfx/gun/plasmacannon_fire.ogg"]
+  }
+}

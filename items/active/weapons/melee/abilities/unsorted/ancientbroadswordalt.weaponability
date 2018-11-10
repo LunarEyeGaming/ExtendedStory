@@ -1,0 +1,17 @@
+{
+  "ability" : {
+    "type" : "ancientbroadswordalt",
+    "name" : "Ancient Crystals",
+    "scripts" : ["/items/active/weapons/melee/abilities/unsorted/ancientbroadswordalt.lua"],
+    "class" : "ControlProjectile",
+
+    "maxCastRange" : 50,
+
+    "energyCost" : 300,
+
+    "projectileType" : "ancientbroadswordcrystal",
+    "projectileParameters" : {
+      "baseDamage" : 6
+    }
+  }
+}

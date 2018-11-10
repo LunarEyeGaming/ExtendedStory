@@ -15,6 +15,14 @@
     "parameters": {},
     "children": [
       {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 20}
+        }
+      },
+      {
         "title": "sequence",
         "type": "composite",
         "name": "sequence",
@@ -47,34 +55,14 @@
                 "type": "action",
                 "name": "sendEntityMessage",
                 "parameters": {
+                  "arguments": {"value": ["/cinematics/svbtransformation.cinematic"]},
                   "entity": {"key": "eachItem"},
-                  "message": {"value": "supervoidDestroyed"}
+                  "message": {"value": "playCinematic"}
                 }
               }
             }
           }
         ]
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 20}
-        }
-      },
-      {
-        "title": "spawnTargetedProjectile",
-        "type": "action",
-        "name": "spawnTargetedProjectile",
-        "parameters": {
-          "aimVector": {"key": "aimVector"},
-          "parameters": {"value": {"damageTeam" : {"type" : "enemy"}, "periodicActions" : [{"time" : 0, "repeat" : false, "action" : "config", "file" : "/projectiles/activeitems/supernova/supernova.config"}]}},
-          "position": {"key": "self"},
-          "projectileType": {"value": "invisibleprojectile"},
-          "target": {"key": "target"},
-          "trackSource": {"value": false}
-        }
       },
       {
         "title": "timer",
@@ -117,7 +105,7 @@
                 "type": "action",
                 "name": "sendEntityMessage",
                 "parameters": {
-                  "arguments": {"value": ["InstanceWorld:outpost=arkteleporter"]},
+                  "arguments": {"value": ["InstanceWorld:supervoidbossarena2"]},
                   "entity": {"key": "eachItem"},
                   "message": {"value": "warp"}
                 }

@@ -1,0 +1,99 @@
+{
+  "projectileName" : "ancientboss2_laser",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientboss2_laser.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "power" : 20,
+  "piercing" : true,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "fullbright" : true,
+  "periodicActions" : [
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "offset" : [0, -1],
+	  "config" : {
+	    "timeToLive" : 0.05,
+		"speed" : 0,
+		"movementSettings" : {
+		  "collisionEnabled" : false
+		},
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "ancientboss2_laser",
+			"direction" : [1, 0],
+			"config" : {
+			  "timeToLive" : 0.25,
+			  "actionOnReap" : []
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ancientboss2_laser",
+			"direction" : [-1, 0],
+			"config" : {
+			  "actionOnReap" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "ancientorb_boss",
+	              "offset" : [1, 0],
+				  "config" : {
+				    "timeToLive" : 0.05,
+					"speed" : 0,
+					"movementSettings" : {
+					  "collisionEnabled" : false
+					},
+					"actionOnReap" : [
+					  {
+					    "action" : "projectile",
+						"type" : "ancientboss2_laser",
+						"direction" : [0, -1],
+						"config" : {
+						  "actionOnReap" : [
+						    {
+							  "action" : "projectile",
+							  "type" : "ancientorb_boss",
+							  "offset" : [0, 1],
+							  "config" : {
+							    "timeToLive" : 0.05,
+								"speed" : 0,
+								"movementSettings" : {
+								  "collisionEnabled" : false
+								},
+								"actionOnReap" : [
+								  {
+								    "action" : "projectile",
+									"type" : "ancientboss2_laser",
+									"direction" : [1, 0],
+									"config" : {
+									  "actionOnReap" : []
+									}
+								  }
+								]
+							  }
+							}
+						  ]
+						}
+					  }
+					]
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "damageKind" : "plasma"
+}

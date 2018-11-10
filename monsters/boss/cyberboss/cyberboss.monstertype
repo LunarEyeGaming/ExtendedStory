@@ -1,6 +1,6 @@
 {
   "type" : "cyberboss",
-  "shortdescription" : "B.O.T.",
+  "shortdescription" : "Bot. Of. Terror.",
 
   "categories" : [ "cyberboss" ],
   "parts" : [ "cyberboss", "cyberbossdamage", "beam1", "beam2", "beam3", "beam4"],
@@ -159,6 +159,15 @@
         },
         "ionizedImmunity" : {
           "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
         }
       },
 

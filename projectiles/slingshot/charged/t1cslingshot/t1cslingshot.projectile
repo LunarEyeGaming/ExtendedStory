@@ -1,0 +1,13 @@
+{
+  "projectileName" : "t1cslingshot",
+  "physics" : "grenade",
+  "image" : "t1cslingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 20,
+  "lightColor" : [102, 58, 31],
+  "statusEffects" : ["burning"],
+  "damageKind" : "fire"
+}

@@ -1,0 +1,17 @@
+{
+  "name" : "lifesteal-enemy_es",
+  "effectConfig" : {
+    "healAmount" : 6,
+    "emissionRate" : 2
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "lifesteal-enemy_es.lua"
+  ],
+
+  "animationConfig" : "lifesteal-enemy_es.animation",
+
+  "label" : "Life Steal",
+  "icon" : "/interface/statuses/heal.png"
+}

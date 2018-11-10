@@ -1,0 +1,41 @@
+{
+  "objectName" : "supervoidbackground",
+  "colonyTags" : ["tentacle"],
+  "rarity" : "Common",
+  "price" : 600,
+  "scannable" : false,
+  "printable" : false,
+
+  "description" : "Background of phase 2 boss fight.",
+  "shortdescription" : "Supervoid Background",
+  "race" : "generic",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "supervoidbackground.png:<frame>?scalenearest=1000",
+      "imagePosition" : [-500, -500],
+	  "fullbright" : true,
+
+      "direction" : "left",
+      "flipImages" : true,
+      "renderLayer" : "BackgroundTile-20",
+
+      "collisionSpaces" : [ [4, 0] ],
+      "frames" : 40,
+      "animationCycle" : 4.0
+    },
+    {
+      "image" : "supervoidbackground.png:<frame>?scalenearest=1000",
+      "imagePosition" : [-500, -500],
+	  "fullbright" : true,
+
+      "direction" : "right",
+      "renderLayer" : "BackgroundTile-20",
+
+      "collisionSpaces" : [ [4, 0] ],
+      "frames" : 40,
+      "animationCycle" : 4.0
+    }
+  ]
+}

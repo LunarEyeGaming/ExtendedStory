@@ -1,0 +1,56 @@
+{
+  "objectName" : "bossvaultdoorgrind",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A mysterious doorway leading to a specific dimension. ^green;Made for grinding^reset;.",
+  "shortdescription" : "Bossvault Door - ^green;Grinding^reset;",
+  "race" : "ancient",
+
+  "apexDescription" : "This door seems like a challenge door; whatever lurks in there is dangerous.",
+  "avianDescription" : "A rather familiar door that leads to...death.",
+  "floranDescription" : "Ssstrange door with danger. Floran likess danger.",
+  "glitchDescription" : "Scared. This door contains something I would rather not face.",
+  "humanDescription" : "A mysterious doorway leading to a specific dimension. Specific loot can be found here, but it seems rather intimidating in there.",
+  "hylotlDescription" : "An enigmatic doorway that seems familiar...Entering the place could be lethal!",
+  "novakidDescription" : "Seems like there ain't much danger...Actually, don't think so.",
+
+  "lightColor" : [76, 60, 86],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "bossvaultdoorgrind.png:<color>.<frame>", "fullbright" : true }, { "image" : "bossvaultdoorgrindlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-16, 0],
+      "animationPosition" : [-16, 0],
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+
+      "lightPosition" : [0, 3],
+
+      "detectArea" : [ [-3, 0], [3, 5] ]
+    }
+  ],
+
+  "animation" : "/objects/ancient/bossvaultdoorgrind/bossvaultdoorgrind.animation",
+  "animationParts" : {
+    "bg" : "bossvaultdoorgrind.png",
+    "fg" : "bossvaultdoorgrindlit.png"
+  },
+
+  "scripts" : [ "/objects/ancient/bossvaultdoorgrind/bossvaultdoorgrind.lua" ],
+  "scriptDelta" : 20,
+
+  "vanishTime" : 1500,
+
+  "messagePlayerInterval" : 0.5,
+  "messagePlayerRange" : 30,
+
+  "health" : 10,
+  "smashOnBreak" : false
+}

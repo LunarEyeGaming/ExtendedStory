@@ -1,0 +1,46 @@
+{
+  "itemName" : "ancientspear_es",
+  "price" : 960,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A powerful spear that can take care of enemies both in front and behind.",
+  "shortdescription" : "^magenta;^reset;",
+  "tooltipKind" : "sword",
+  "category" : "Ancient Spear",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","spear"],
+  
+  "critChance" : 10,
+  "critBonus" : 7,
+
+  "inventoryIcon" : "ancientspear_es.png:active.1",
+
+  "animation" : "ancientspear_es.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "ancientspear_es.png",
+    "bladeFullbright" : "ancientspearfullbright_es.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "aimOffset" : -1.0,
+
+  "primaryAbilityType" : "spearstab",
+  "primaryAbility" : {
+    "fireTime" : 0.5,
+    "baseDps" : 15
+  },
+
+  "altAbilityType" : "ancientspearalt",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

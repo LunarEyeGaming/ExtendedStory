@@ -1,8 +1,8 @@
 {
-  // ------- LIMBO DIMENSION MESSAGES -------
+  // ------- BOSSVAULT MESSAGES -------
   "isolatedvault01" : {
     "type" : "mission",
-    "text" : "Scans show that life on this planet thrived. For unknown reasons, this planet is now a barren, scorched wasteland."
+    "text" : "Scans show that life on this planet thrived. For unknown reasons, it is now a barren, scorched wasteland."
   },
   "isolatedvault02" : {
     "type" : "mission",
@@ -11,8 +11,8 @@
   "isolatedvault03" : {
     "type" : "mission",
 	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
-    "text" : "^green;Rogue phase complete."
+	"portraitImage" : "/interface/chatbubbles/quantumsentrystatic2.png:<frame>",
+    "text" : "^green;Signal receiver detected.\n\n^red;ERROR: TARGET BLACKLIST UNREADABLE! Using default target blacklist."
   },
   "isolatedvault04" : {
     "type" : "mission",
@@ -21,17 +21,21 @@
   "isolatedvault05" : {
     "type" : "mission",
 	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
-    "text" : "^red;Warning: Temperatures are unsustainable. \nBeginning rogue phase.\n^orange;01001100 01101111 01100001 01100100 01101001 01101110 01100111 00101110 00101110 00101110"
+	"portraitImage" : "/interface/chatbubbles/quantumsentrystatic.png:<frame>",
+    "text" : "^red;Warning: Temperatures are unsustainable. \nSending SOS signal.\n^orange;01001100 01101111 01100001 01100100 01101001 01101110 01100111 00101110 00101110 00101110"
   },
+  //"isolatedvault06" : {
+    //"type" : "mission",
+    //"text" : "It is best that you dig to this area and do what Raziya wanted.\n^red;Proceed with caution, as there is an extremely deep chasm below you."
+  //},
   "isolatedvault06" : {
     "type" : "mission",
-    "text" : "It is best that you dig to this area and do what Raziya wanted."
+    "text" : "If you're going to dig to this area, I advise that you proceed to do so with caution.\n^red;Please note that there is an extremely deep chasm below you."
   },
   "isolatedvault07" : {
     "type" : "mission",
-	"senderName" : "Unknown",
-	"portraitImage" : "/interface/chatbubbles/static.png:<frame>",
+	"senderName" : "Omega the Quantum Sentry",
+	"portraitImage" : "/interface/chatbubbles/quantumsentry.png",
     "text" : "^red;WARNING: INTRUDER DETECTED! EXTERMINATE INTRUDER IMMEDIATELY!"
   },
   // ------- ROBOT FACILITY MESSAGES -------
@@ -51,13 +55,45 @@
     "type" : "mission",
 	"text" : "These rooms are quite dangerous and are riddled with traps. If you don't feel confident trying any of these, feel free to leave and return once you feel confident."
   },
+  //"robotfacility05" : {
+    //"type" : "mission",
+	//"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you, supposedly being the Bot of Terror Raziya constantly mentions. The chamber contains massive concentrations of the substance."
+  //},
   "robotfacility05" : {
     "type" : "mission",
-	"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you, supposedly being the Bot of Terror Raziya constantly mentions. The chamber contains massive concentrations of the substance."
+	"text" : "Readings show that a massive, octogon-shaped object lurks in the chamber below you. It is best that you prepare yourself to fight it with your strongest weapons."
   },
   "robotfacility06" : {
     "type" : "mission",
 	"text" : "You have found an area that can only be accessed by a cheater. Well done!"
+  },
+  "ancientsphere01" : {
+    "type" : "mission",
+	"text" : "It should be worth nothing that an Ancient Sphere has been forcibly equipped on your person. Please don't panic and follow the instructions."
+  },
+  "ancientsphere02" : {
+    "type" : "mission",
+	"text" : "First, press ^green;[F]^reset; to activate your Ancient Sphere. Default movement keys are ^orange;[W A S D]^reset;. Reach the tunnel above you to proceed."
+  },
+  "ancientsphere03" : {
+    "type" : "mission",
+	"text" : "Hold ^yellow;[Shift]^reset; to enter \"Absolute Mode\" - Any and all movements while holding shift will either be moving at full speed or no movement at all."
+  },
+  "ancientsphere04" : {
+    "type" : "mission",
+	"text" : "Press and hold ^green;[Fire]^reset; to activate a mining field, which will destroy all nearby blocks."
+  },
+  "ancientsphere05" : {
+    "type" : "mission",
+	"text" : "You have lost some energy. Hold ^green;[Space]^reset; to replenish this energy that you have lost."
+  },
+  "ancientsphere06" : {
+    "type" : "mission",
+	"text" : "Press and hold ^green;[Alt Fire]^reset; to activate a laser beam, a useful weapon in combat."
+  },
+  "ancientsphere07" : {
+    "type" : "mission",
+	"text" : "All basics for the Ancient Sphere have been covered. Please exit through the ^orange;conveniently-placed teleporter^reset; at the end."
   },
   // ------- OTHER MESSAGES -------
   "limbodoor" : {
@@ -67,35 +103,54 @@
   "biomefreezing" : {
     "unique" : false,
 	"portraitImage" : "yell.<frame>",
-    "text" : "WARNING! TEMPERATURES ON THIS PLANET ARE NEAR ABSOLUTE ZERO!\nFurther exploration without the Ancient set will result in a quick death!",
+    "text" : "WARNING! TEMPERATURES ON THIS PLANET ARE NEAR ABSOLUTE ZERO!\nFurther exploration without an ^orange;Ancient EPP^reset; will result in a quick death!",
 	"textSpeed" : 70
   },
   "biomeblaze" : {
     "unique" : false,
 	"portraitImage" : "yell.<frame>",
-    "text" : "WARNING! THE AIR ON THIS PLANET IS BURNING!\nFurther exploration without an Ancient EPP will result in a quick death!",
+    "text" : "WARNING! THE AIR ON THIS PLANET IS BURNING!\nFurther exploration without an ^orange;Ancient EPP^reset; will result in a quick death!",
 	"textSpeed" : 70
   },
   "biomeplutonium" : {
     "unique" : false,
 	"portraitImage" : "yell.<frame>",
-    "text" : "WARNING! RADIATION LEVELS ON THIS PLANET ARE EXTREMELY LETHAL!\nFurther exploration without an Ancient EPP will result in a quick death!",
+    "text" : "WARNING! RADIATION LEVELS ON THIS PLANET ARE EXTREMELY LETHAL!\nFurther exploration without an ^orange;Ancient EPP^reset; will result in a quick death!",
 	"textSpeed" : 70
   },
   "biomeelectric" : {
     "unique" : false,
 	"portraitImage" : "yell.<frame>",
-    "text" : "WARNING! THE AIR ON THIS PLANET HAS EXTREMELY HIGH ELECTRICAL CURRENT!\nFurther exploration without an Ancient EPP will result in a quick death!",
+    "text" : "WARNING! THE AIR ON THIS PLANET HAS EXTREMELY HIGH ELECTRICAL CURRENT!\nFurther exploration without an ^orange;Ancient EPP^reset; will result in a quick death!",
+	"textSpeed" : 70
+  },
+  "putridair" : {
+    "unique" : false,
+    "text" : "Please note that the air on this particular planet is causing you to rot. I recommend that you explore this planet with protection against this effect.",
 	"textSpeed" : 70
   },
   "chaoticvoid" : {
     "unique" : false,
-    "text" : "It's worth noting that this world is very chaotic and you are quickly becoming part of this chaotic void. Do not attempt further exploration without the ^red;dark matter EPP^reset;.",
+    "text" : "It's worth noting that this world is very chaotic and you are quickly becoming part of this chaotic void. Do not attempt further exploration without a ^orange;Dark Matter EPP^reset;.",
 	"textSpeed" : 70
   },
   "spheredeactivater" : {
+    "unique" : true,
+    "text" : "It should be noted that you just entered an area where your Ancient Sphere has completely stopped working. Do not attempt to use the Ancient Sphere at this moment.",
+	"textSpeed" : 70
+  },
+  "destroyerspawn" : {
     "unique" : false,
-    "text" : "It should be noted that you just entered an area where your ancient sphere has completely stopped working. Do not attempt to use the ancient sphere at this moment.",
+<<<<<<< HEAD
+=======
+    "text" : "It should be noted that you just entered an area where your Ancient Sphere has completely stopped working. Do not attempt to use the Ancient Sphere at this moment.",
+	"textSpeed" : 70
+  },
+  "destroyerspawn" : {
+    "unique" : false,
+>>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
+	"portraitImage" : "yell.<frame>",
+    "text" : "^red;!WARNING!\nThere is an unknown and extremely destructive presence nearby. \nBe prepared for a hard fight and a lot of tile destruction.",
 	"textSpeed" : 70
   }
 }

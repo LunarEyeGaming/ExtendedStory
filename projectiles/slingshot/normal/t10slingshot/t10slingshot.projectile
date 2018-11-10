@@ -1,0 +1,22 @@
+{
+  "projectileName" : "t10slingshot",
+  "physics" : "laser",
+  "image" : "t10slingshot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 50,
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "power" : 20,
+  "fullbright" : true,
+  "lightColor" : [83, 28, 97],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
+  ],
+  "scripts" : ["/scripts/projectiles/homingprojectile.lua"],
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0,
+  "damageKind" : "plasma"
+}

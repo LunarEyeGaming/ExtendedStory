@@ -1,5 +1,6 @@
 {
   "name" : "destroyerspawnstage3",
+  "blockingStat" : "destroyerspawnImmunity",
 
   "effectConfig" : {
     "directives" : "fade=FFAAAA=0.2",
@@ -11,7 +12,7 @@
     "energyCost" : 2.5,
     "healthDamage" : 5
   },
-  "defaultDuration" : 150,
+  "defaultDuration" : 30,
 
   "scripts" : [
     "destroyerspawnstage3.lua"

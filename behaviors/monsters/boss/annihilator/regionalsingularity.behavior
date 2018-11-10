@@ -1,0 +1,433 @@
+{
+  "name": "annihilator-regionalsingularity",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "chargeVelocity": [50, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 5}
+		}
+	  },
+      {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 1}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 3.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 3.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 3.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 3.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.5}
+    	      }
+    	    },
+			{
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 5.0}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 5.0}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 5.0}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 5.0}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.5}
+    	      }
+    	    },
+			{
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 6.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 6.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 6.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 6.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.5}
+    	      }
+    	    },
+			{
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 8}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 8}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 8}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 8}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.5}
+    	      }
+    	    },
+			{
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 9.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 9.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 9.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 9.5}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.5}
+    	      }
+    	    },
+			{
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 11}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, 20]},
+    	            "projectileConfig": {"value": {"timeToLive": 11}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [-24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 11}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        },
+				{
+    	          "title": "spawnProjectile",
+    	          "type": "action",
+    	          "name": "spawnProjectile",
+    	          "parameters": {
+    	            "aimVector": {"value": [0, 0]},
+    	            "offset": {"value": [24, -20]},
+    	            "projectileConfig": {"value": {"timeToLive": 11}},
+    	            "projectileType": {"value": "regionalsingularitywindup_annihilator"},
+			    	"scalePower": {"value": true}
+    	          }
+    	        }
+			  ]
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 11}
+    	      }
+    	    }
+		  ]
+		}
+	  }
+    ]
+  }
+}

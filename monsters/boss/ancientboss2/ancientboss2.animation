@@ -1,0 +1,585 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 1,
+        "default" : "deactivated",
+        "states" : {
+		  "deactivated" : {
+            "frames" : 1
+          },
+		  "wake" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "idle"
+          },
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
+          "windup1" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "attack1",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_openhand.ogg"
+            }
+          },
+          "windup2" : {
+            "frames" : 6,
+            "cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "attack2",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_openhand.ogg"
+            }
+          },
+          "windup3" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "attack3"
+          },
+          "windup4" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "attack4"
+          },
+          "winddown1" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_closehand.ogg"
+            }
+          },
+          "winddown2" : {
+            "frames" : 6,
+            "cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_closehand.ogg"
+            }
+          },
+          "winddown3" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "idle"
+          },
+          "winddown4" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+			"mode" : "transition",
+			"transition" : "idle"
+          },
+          "attack1" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "loop"
+          },
+          "attack2" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
+          "attack3" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg"
+			}
+          },
+          "attack4" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 12,
+            "cycle" : 1.2
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "body" : {
+		    "deactivated" : {
+              "properties" : {
+                "image" : "<partImage>:deactivated"
+              }
+            },
+			"wake" : {
+              "properties" : {
+                "image" : "<partImage>:wake.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "windup1" : {
+              "properties" : {
+                "image" : "<partImage>:windup1.<frame>"
+              }
+            },
+            "windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup2.<frame>"
+              }
+            },
+            "windup3" : {
+              "properties" : {
+                "image" : "<partImage>:windup3.<frame>"
+              }
+            },
+            "windup4" : {
+              "properties" : {
+                "image" : "<partImage>:windup4.<frame>"
+              }
+            },
+            "winddown1" : {
+              "properties" : {
+                "image" : "<partImage>:winddown1.<frame>"
+              }
+            },
+            "winddown2" : {
+              "properties" : {
+                "image" : "<partImage>:winddown2.<frame>"
+              }
+            },
+            "winddown3" : {
+              "properties" : {
+                "image" : "<partImage>:winddown3.<frame>"
+              }
+            },
+            "winddown4" : {
+              "properties" : {
+                "image" : "<partImage>:winddown4.<frame>"
+              }
+            },
+            "attack1" : {
+              "properties" : {
+                "image" : "<partImage>:attack1.<frame>"
+              }
+            },
+            "attack2" : {
+              "properties" : {
+                "image" : "<partImage>:attack2.<frame>"
+              }
+            },
+            "attack3" : {
+              "properties" : {
+                "image" : "<partImage>:attack3.<frame>"
+              }
+            },
+            "attack4" : {
+              "properties" : {
+                "image" : "<partImage>:attack4.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+          "zLevel" : 4,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+		    "deactivated" : {
+              "properties" : {
+                "image" : "<partImage>:deactivated"
+              }
+            },
+			"wake" : {
+              "properties" : {
+                "image" : "<partImage>:wake.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "windup1" : {
+              "properties" : {
+                "image" : "<partImage>:windup1.<frame>"
+              }
+            },
+            "windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup2.<frame>"
+              }
+            },
+            "windup3" : {
+              "properties" : {
+                "image" : "<partImage>:windup3.<frame>"
+              }
+            },
+            "windup4" : {
+              "properties" : {
+                "image" : "<partImage>:windup4.<frame>"
+              }
+            },
+            "winddown1" : {
+              "properties" : {
+                "image" : "<partImage>:winddown1.<frame>"
+              }
+            },
+            "winddown2" : {
+              "properties" : {
+                "image" : "<partImage>:winddown2.<frame>"
+              }
+            },
+            "winddown3" : {
+              "properties" : {
+                "image" : "<partImage>:winddown3.<frame>"
+              }
+            },
+            "winddown4" : {
+              "properties" : {
+                "image" : "<partImage>:winddown4.<frame>"
+              }
+            },
+            "attack1" : {
+              "properties" : {
+                "image" : "<partImage>:attack1.<frame>"
+              }
+            },
+            "attack2" : {
+              "properties" : {
+                "image" : "<partImage>:attack2.<frame>"
+              }
+            },
+            "attack3" : {
+              "properties" : {
+                "image" : "<partImage>:attack3.<frame>"
+              }
+            },
+            "attack4" : {
+              "properties" : {
+                "image" : "<partImage>:attack4.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"leftfist" : {"interpolated" : true},
+	"rightfist" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+    "windleft" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-32, -5, -32.0, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "windright" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [32.0, -5, 32, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [-64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [-3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/plasmapoof/plasmapoof.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz1/fizz1.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz1/fizz1.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz2/fizz2.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz2/fizz2.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz3/fizz3.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz3/fizz3.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz4/fizz4.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz4/fizz4.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ],
+    "preparePlasma" : [ "/sfx/melee/charge_up5.ogg" ],
+    "plasmaAttack" : [ "/sfx/melee/giantsword_charge_full.ogg" ],
+    "windup1" : [ "/sfx/melee/charge_up5.ogg" ],
+	"windup3" : [ "/sfx/npc/boss/crystalboss_beamin.ogg" ],
+	"winddown3" : [ "/sfx/npc/boss/crystalboss_beamout.ogg" ],
+    "spawnPlatforms" : [ ],
+    "prepareIce" : [ ],
+    "spawnIceEruptions" : [ "/sfx/melee/travelingslash_ice1.ogg" ],
+    "prepareWind" : [ "/sfx/melee/charge_up8.ogg" ],
+    "windFire" : [ "/sfx/gun/plasma_sniper4.ogg" ],
+    "lightningFire" : [ "/sfx/npc/boss/ancientavatar_lightningwindup.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "verticalOrigin" : 0,
+  
+  "layers" : [
+    {
+      "kind" : "divider/dirt",
+      "offset" : [0, 350],
+      "nohueshift" : true,
+      "lightMapped" : true,
+      "parallax" : 1.199
+    },
+    {
+      "kind" : "tile/desert",
+      "nohueshift" : true,
+      "lightMapped" : true,
+      "repeatY" : true,
+      "tileLimitTop" : 275,
+      "parallax" : 1.2
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 300],
+      "noRandomOffset" : true,
+      "parallax" : 2,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=0"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 290],
+      "noRandomOffset" : true,
+      "parallax" : 4,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-10"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 280],
+      "noRandomOffset" : true,
+      "parallax" : 5,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-20"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 270],
+      "noRandomOffset" : true,
+      "parallax" : 6,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-30"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 260],
+      "noRandomOffset" : true,
+      "parallax" : 7,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-40"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 250],
+      "noRandomOffset" : true,
+      "parallax" : 8,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-50"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 240],
+      "noRandomOffset" : true,
+      "parallax" : 9,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-60"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 235],
+      "noRandomOffset" : true,
+      "parallax" : 9.5,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-65"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 230],
+      "noRandomOffset" : true,
+      "parallax" : 10,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-70"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 225],
+      "noRandomOffset" : true,
+      "parallax" : 10.5,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-75"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 220],
+      "noRandomOffset" : true,
+      "parallax" : 11,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-80"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 215],
+      "noRandomOffset" : true,
+      "parallax" : 11.5,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-85"
+    },
+    {
+      "kind" : "holesgaplower",
+      "lightMapped" : true,
+      "offset" : [0, 210],
+      "noRandomOffset" : true,
+      "parallax" : 12,
+      "nohueshift" : true,
+      "directives" : "?saturation=0?brightness=-90"
+    },
+    {
+      "kind" : "hellodarknessmyoldfriend",
+      "offset" : [0, 0],
+      "noRandomOffset" : true,
+	  "repeatY" : true,
+      "parallax" : 99,
+      "nohueshift" : true
+    }
+  ]
+}

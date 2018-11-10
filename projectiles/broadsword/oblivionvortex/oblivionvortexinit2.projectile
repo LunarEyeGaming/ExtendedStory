@@ -1,0 +1,73 @@
+{
+  "projectileName" : "oblivionvortexinit2",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "animationLoops" : false,
+  "frameNumber" : 1,
+  "timeToLive" : 1,
+  "lightColor" : [50, 50, 50],
+  "pointLight" : true,
+  "flippable" : true,
+  "piercing" : true,
+  "statusEffects" : [ ],
+  "power" : 5.0,
+  "onlyHitTerrain" : true,
+  "speed" : 0,
+  "knockback" : 30,
+  "knockbackDirectional" : true,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "damageKind" : "broadsword",
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.2,
+	  "action" : "projectile",
+	  "type" : "oblivionexplosion",
+	  "offsetRange" : [2, 2, -2, -2],
+	  "fuzzAngle" : 180
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "oblivionexplosion",
+	  "offsetRange" : [2, 2, -2, -2],
+	  "fuzzAngle" : 180
+	},
+	{
+	  "time" : 0.2,
+	  "action" : "sound",
+	  "options" : ["/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg"]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : ["/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg"]
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "oblivionvortex"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "oblivionexplosion",
+		  "offsetRange" : [2, 2, -2, -2],
+		  "fuzzAngle" : 180
+		},
+		{
+		  "action" : "sound",
+		  "options" : ["/sfx/gun/grenadeblast_fire1.ogg", "/sfx/gun/grenadeblast_fire2.ogg", "/sfx/gun/grenadeblast_fire3.ogg"]
+		}
+	  ]
+	}
+  ]
+}
