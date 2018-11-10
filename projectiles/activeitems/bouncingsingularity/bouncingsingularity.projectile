@@ -12,16 +12,6 @@
 	{
       "time" : 0.01,
       "repeat" : true,
-<<<<<<< HEAD
-=======
-      "action" : "projectile",
-      "type" : "blackholegravity",
-      "inheritSpeedFactor" : 0
-    },
-	{
-      "time" : 0.01,
-      "repeat" : true,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
       "action" : "particle",
       "specification" : {
         "type" : "animated",
@@ -47,7 +37,6 @@
       "type" : "explosivesingularity"
 	}
   ],
-<<<<<<< HEAD
 
   "boundBox" : [-10, -10, 10, 10],
   "physicsForces" : {
@@ -60,8 +49,6 @@
       "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
     }
   },
-=======
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "animationCycle" : 1.0,
   "lightColor" : [93, 10, 47],
   "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],

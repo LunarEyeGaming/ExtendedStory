@@ -12,18 +12,6 @@
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "damageKind" : "plasma",
   "speed" : 20,
-<<<<<<< HEAD
-=======
-  "periodicActions" : [
-    {
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "projectile",
-      "type" : "blackholegravity",
-      "inheritSpeedFactor" : 0
-    }
-  ],
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "actionOnReap" : [
     {
 	  "action" : "projectile",

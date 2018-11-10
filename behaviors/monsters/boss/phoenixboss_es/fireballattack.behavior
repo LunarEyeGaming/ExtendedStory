@@ -258,15 +258,9 @@
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"value": [0, -1]},
-<<<<<<< HEAD
                     "projectileConfig": {"value": {}},
                     "position": {"key": "self"},
                     "projectileType": {"value": "phoenixfireballexplosive"},
-=======
-                    "projectileConfig": {"value": {"onlyHitTerrain" : false}},
-                    "position": {"key": "self"},
-                    "projectileType": {"value": "phoenixmine_es"},
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
                     "trackSource": {"value": false}
                   }
                 },

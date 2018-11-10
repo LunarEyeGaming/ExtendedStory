@@ -1,16 +1,9 @@
 {
   "projectileName" : "ancientclusterball_es",
-<<<<<<< HEAD
   "physics" : "hover",
   "bounces" : 3,
   "speed" : 30,
   "timeToLive" : 5,
-=======
-  "physics" : "flybug",
-  "bounces" : 3,
-  "speed" : 30,
-  "timeToLive" : 1,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "lightColor" : [83, 28, 97],
   "image" : "/projectiles/boss/ancientboss2/ancientorb_boss/ancientorb_boss.png",
   "animationCycle" : 1.0,
@@ -22,11 +15,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-<<<<<<< HEAD
       "file" : "/projectiles/explosions/ancientexplosion/ancientexplosionnontile.config"
-=======
-      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion3.config"
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     },
     {
       "action" : "projectile",

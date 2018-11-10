@@ -13,15 +13,9 @@
 	  "type" : "explosivelasershot",
 	  "direction" : [0, -1],
 	  "offsetRange" : [20, 0, -20, 0],
-<<<<<<< HEAD
 	  "inheritDamageFactor" : 0.1,
 	  "config" : {
 	    "speed" : 100
-=======
-	  "config" : {
-	    "speed" : 100,
-		"power" : 10
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 	  }
 	}
   ],
@@ -33,10 +27,7 @@
 	    {
 		  "action" : "projectile",
 		  "type" : "destroyerstaff1c",
-<<<<<<< HEAD
 		  "inheritDamageFactor" : 0.1,
-=======
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 		  "fuzzAngle" : 180
 		}
 	  ]

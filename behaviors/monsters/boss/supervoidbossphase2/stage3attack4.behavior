@@ -84,11 +84,7 @@
     			    "parameters": {
     			      "aimVector": {"value": [1, 0]},
     			      "offset": {"value": ["bullethellX", "bullethellY"]},
-<<<<<<< HEAD
     			      "projectileConfig": {"value": {"speed": 0, "acceleration": 0, "timeToLive": 1, "onlyHitTerrain": true, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "supervoidenergyshard", "fuzzAngle" : 180, "config": {"power": 80, "damageType": "IgnoresDef"}}]}]}},
-=======
-    			      "projectileConfig": {"value": {"speed": 0, "acceleration": 0, "timeToLive": 0.4, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "supervoidenergyshard", "fuzzAngle" : 180, "config": {"power": 80, "damageType": "IgnoresDef"}}]}]}},
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     			      "projectileType": {"value": "supervoidbullet"}
     			    }
     	    	  },

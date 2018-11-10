@@ -10,11 +10,7 @@
   //"description" : "The true handheld ion cannon.",
   "shortdescription" : "^cyan;Handheld Ion Cannon ^reset;",
   //"shortdescription" : "^cyan;Supreme Ion Cannon^reset;",
-<<<<<<< HEAD
   "category" : "^#5dbdba;Ion Weapon",
-=======
-  "category" : "^cyan;Super Weapon",
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "itemTags" : ["weapon","ranged"],
   "twoHanded" : true,
   
@@ -50,13 +46,8 @@
     "class" : "BeamFire",
 
     "fireTime" : 0.2,
-<<<<<<< HEAD
     "baseDps" : 30,
     "energyUsage" : 60,
-=======
-    "baseDps" : 40,
-    "energyUsage" : 30,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 
     "damageConfig" : {
       "statusEffects" : [ "ionized" ],
@@ -126,11 +117,7 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-<<<<<<< HEAD
       "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod", "baseDamage" : 5, "baseDps" : 20, "fireTime" : 3 }
-=======
-      "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod", "baseDamage" : 5, "baseDps" : 20 }
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     },
     "energyUsage" : 100
   },

@@ -7,11 +7,7 @@
     "scripts" : [ "/monsters/boss/ancientboss/skills/ancientbossReinforcementsAttack2.lua" ],
 
     "ancientbossReinforcementsAttack2" : {
-<<<<<<< HEAD
       "skillTime": 3,
-=======
-      "skillTime": 5,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
       "bobTime" : 0.5,
       "bobHeight" : 0,
 
@@ -29,12 +25,9 @@
 			}
 		  ],
           "speed" : 0,
-<<<<<<< HEAD
 		  "scripts" : [ "/scripts/projectiles/limitedprojectile.lua" ],
 		  "monsterType" : "ancienttrifangle_es",
 		  "entityLimit" : 3,
-=======
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
           "onlyhitTerrain" : true,
 		  "timeToLive" : 2,
           "actionOnReap" : [

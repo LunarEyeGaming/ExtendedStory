@@ -8,21 +8,12 @@
   "rarity" : "Legendary",
   "description" : "An ionizer that can shoot unstable grenades and a laser.",
   "shortdescription" : "^cyan;Handheld Ion Cannon^reset;",
-<<<<<<< HEAD
   "category" : "^#5dbdba;Ion Weapon",
   "itemTags" : ["weapon","ranged"],
   "twoHanded" : true,
   
   "critChance" : 1,
   "critBonus" : 5,
-=======
-  "category" : "uniqueWeapon",
-  "itemTags" : ["weapon","ranged"],
-  "twoHanded" : true,
-  
-  "critChance" : 10,
-  "critBonus" : 15,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 
   "animation" : "handheldioncannon.animation",
   "animationParts" : {

@@ -1,19 +1,11 @@
 {
   "projectileName" : "phoenixfireballexplosive",
   "image" : "/projectiles/weather/largefireball/largefireball.png",
-<<<<<<< HEAD
   "physics" : "laser",
   "animationCycle" : 1,
   "frameNumber" : 1,
   "power" : 50,
   "speed" : 0,
-=======
-  "physics" : "grenade",
-  "animationCycle" : 1,
-  "frameNumber" : 1,
-  "power" : 50,
-  "speed" : 25,
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   "timeToLive" : 1,
   "bounces" : 0,
   "fullbright" : true,
@@ -61,16 +53,11 @@
 		},
 		{
 		  "action" : "projectile",
-<<<<<<< HEAD
 		  "type" : "phoenixfireball",
 		  "fuzzAngle" : 180,
 		  "config" : {
 		    "timeToLive" : 0.5
 		  }
-=======
-		  "type" : "phoenixfiregrenade",
-		  "fuzzAngle" : 180
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 		}
 	  ]
 	},

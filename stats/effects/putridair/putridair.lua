@@ -1,8 +1,5 @@
 function init()
-<<<<<<< HEAD
   world.sendEntityMessage(entity.id(), "queueRadioMessage", "putridair", 1.0)
-=======
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
   animator.setParticleEmitterOffsetRegion("flames", mcontroller.boundBox())
   animator.setParticleEmitterActive("flames", true)
   effect.setParentDirectives("fade=638700=0.2")
