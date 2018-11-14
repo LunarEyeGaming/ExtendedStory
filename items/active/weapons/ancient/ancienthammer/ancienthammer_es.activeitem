@@ -4,9 +4,9 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "An ancient hammer. Surprisingly, it's very light!",
-  "shortdescription" : "^orange;Ancient Blaze^reset;",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "sword",
-  "category" : "hammer",
+  "category" : "Ancient Hammer",
   "twoHanded" : true,
   "level" : 10,
   "itemTags" : ["weapon","melee","hammer"],
@@ -14,34 +14,33 @@
   "critChance" : 25,
   "critBonus" : 55,
 
-  "inventoryIcon" : "ancienthammer_es.png",
+  "inventoryIcon" : "ancienthammernew_es.png",
 
   "animation" : "ancienthammer_es.animation",
   "animationParts" : {
     "handle" : "",
-    "blade" : "ancienthammer_es.png",
-    "bladefullbright" : "ancienthammerunlit_es.png"
+    "blade" : "ancienthammernew_es.png",
+    "bladefullbright" : "ancienthammernewunlit_es.png"
   },
   "animationCustom" : {
     "animatedParts" : { "parts" : { "swoosh" : { "properties" : {
       "offset" : [-2.0, 1.5]
     }}}},
     "sounds" : {
-      "fire" : [ "/sfx/melee/swing_hammer_fire1.ogg", "/sfx/melee/swing_hammer_fire2.ogg", "/sfx/melee/swing_hammer_fire3.ogg" ]
+      "fire" : [ "/sfx/melee/ancientspear_swing1.ogg", "/sfx/melee/ancientspear_swing2.ogg", "/sfx/melee/ancientspear_swing3.ogg" ]
     }
   },
 
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
 
-  "elementalType" : "fire",
+  "elementalType" : "physical",
 
   "primaryAbilityType" : "hammersmash",
   "primaryAbility" : {
     "fireTime" : 0.7,
     "baseDps" : 11,
     "damageConfig" : {
-      "damageSourceKind" : "firehammer",
-	  "statusEffects" : [ "burning" ]
+      "damageSourceKind" : "hammer"
     },
     "stances" : {
       "idle" : {
@@ -81,12 +80,15 @@
     }
   },
 
-  "altAbilityType" : "elementalpillar",
+  "altAbilityType" : "physicalshockwave",
   "altAbility" : {
     "elementalConfig" : {
-      "fire" : { 
-	    "name" : "Wall of Fire", 
-		"projectileType" : "firepillarshooter"		
+      "physical" : { 
+	    "name" : "Ancient Orboids", 
+		"projectileType" : "ancienthammeralt-windup",
+		"minChargeTime" : 1.5,
+		"chargeTime" : 1.6,
+		"energyUsage" : 100
 	  }
     }
   },

@@ -1,14 +1,14 @@
 {
-  "type" : "cybermini",
-  "shortdescription" : "Drone of Terror",
-  "description" : "A smaller clone used by the Bot of Terror as a weapon.",
+  "type" : "supervoiddemon",
+  "shortdescription" : "Supervoid Horror", // Your nightmares have become reality!
+  "description" : "The guard-dog of the Supervoid Energy. Class is ^red;aggressive^reset;.",
 
-  "categories" : [ "cybermini" ],
+  "categories" : [ "supervoiddemon" ],
   "parts" : [ "body" ],
 
-  "animation" : "cybermini.animation",
+  "animation" : "supervoiddemon.animation",
 
-  "dropPools" : ["money"],
+  "dropPools" : [ { "default" : "empty" } ],
 
   "baseParameters" : {
     "scripts" : [
@@ -16,37 +16,35 @@
     ],
 
     "behavior" : "monster",
-    "deathBehavior" : "monster-death",
 
-    "facingMode" : "transformation",
-
-    "seeThroughLiquid" : false,
+    "seeThroughLiquid" : true,
     "behaviorConfig" : {
       "damageOnTouch" : true,
 
-      "targetQueryRange" : 50,
+      "targetQueryRange" : 150,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 100,
-      "targetOutOfSightTime" : 10.0,
+      "keepTargetInRange" : 1000,
+      "targetOutOfSightTime" : 9999,
 
       "hurtWaitForGround" : false,
 
-      "wanderActions" : [
-        {
-          "name" : "action-stop",
-          "parameters" : {
-            "stopForce" : 20
-          }
-        }
+      "foundTargetActions" : [],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
       ],
+
+      "periodicActions" : [
+       ],
 
       "approachActions" : [
         {
           "name" : "approach-fall",
           "parameters" : {
-            "flyState" : "idle",
-            "idleState" : "idle",
+            "flyState" : "fly",
+            "idleState" : "fly",
             "friction" : 15,
             "dampenDistance" : 20,
             "dampenMultiplier" : 2
@@ -54,61 +52,52 @@
         }
       ],
 
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly",
+		  "parameters" : {
+            "usePathfinding" : false
+		  }
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [2,4],
+            "groundDistance" : 8,
+            "ceilingDistance" : 8,
+            "xVelocity" : 4,
+            "yVelocity" : 12
+          }
+        }
+      ],
+
       "concurrentActions" : [
         {
-          "name" : "rotate-part",
+          "name" : "action-globaltag",
           "parameters" : {
-            "group" : "orbiter1",
-            "speed" : 0.3
-          }
-        },
-        {
-          "name" : "rotate-part",
-          "parameters" : {
-            "group" : "orbiter2",
-            "speed" : -0.15
+            "tagName" : "aggro",
+            "tag" : ""
           }
         }
       ],
 
-      "concurrentHostileActions" : [
-        {
-          "name" : "rotate-part",
-          "parameters" : {
-            "group" : "orbiter1",
-            "speed" : 2.0
-          }
-        },
-        {
-          "name" : "rotate-part",
-          "parameters" : {
-            "group" : "orbiter2",
-            "speed" : -1.0
-          }
-        }
-      ],
-
-      "deathActions" : [
-        {
-          "name" : "action-projectile",
-          "parameters" : {
-            "projectileCount" : 1,
-            "projectileType" : "iongrenade",
-            "projectileParameters" : {"power" : 20},
-            "aimDirection" : [0, 0],
-            "inaccuracy" : 0,
-            "fireOffset" : [0, 0]
-          }
-        }
-      ]
+      "concurrentHostileActions" : []
     },
 
     "touchDamage" : {
       "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
-      "damage" : 15,
+      "damage" : 9,
 
       "teamType" : "enemy",
-      "damageSourceKind" : "impact",
+      "damageSourceKind" : "lash",
       "knockback" : 20,
       "statusEffects" : [ ]
     },
@@ -119,18 +108,15 @@
     "movementSettings" : {
       "collisionPoly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
 
-      "mass" : 2.0,
+      "mass" : 0.5,
       "walkSpeed" : 4,
       "runSpeed" : 12,
+	  "collisionEnabled" : false,
       "gravityEnabled" : false,
-      "ignorePlatformCollision" : true,
 
-      "bounceFactor" : 0.5,
-      "groundFriction" : 10,
-
-      "airFriction" : 0,
-      "airForce" : 15,
-      "flySpeed" : 35
+      "airFriction" : 0.5,
+      "airForce" : 20,
+      "flySpeed" : 30
     },
 
     "bodyMaterialKind" : "robotic",
@@ -142,11 +128,6 @@
     "deathParticles" : "deathPoof",
     "knockoutEffect" : "",
 
-    "healthLevelFunction" : "spaceMonsterLevelHealthMultiplier",
-    "powerLevelFunction" : "spaceMonsterLevelPowerMultiplier",
-
-    "stunDamageSuppression" : 0.2,
-
     "statusSettings" : {
       "statusProperties" : {
         "targetMaterialKind" : "robotic"
@@ -157,22 +138,19 @@
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
-        "/stats/spacemonster_primary.lua"
+        "/stats/monster_primary.lua"
       ],
       "primaryScriptDelta" : 5,
 
       "stats" : {
-        "grit" : {
-          "baseValue" : 0.25
-        },
         "knockbackStunTime" : {
-          "baseValue" : 0.3
+          "baseValue" : 0.5
         },
         "knockbackThreshold" : {
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 80
+          "baseValue" : 30
         },
         "protection" : {
           "baseValue" : 0.0
@@ -182,7 +160,37 @@
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
-        }
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireResistance" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "iceResistance" : {
+          "baseValue" : 0.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : -0.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 0.5
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+		"invulnerable" : {
+		  "baseValue" : 1.0
+		}
       },
 
       "resources" : {
@@ -200,6 +208,8 @@
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
-    "capturable" : false
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
   }
 }

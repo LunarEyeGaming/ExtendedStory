@@ -22,8 +22,8 @@
         "default" : "idle",
         "states" : {
           "idle" : {
-		    "frames" : 11,
-			"cycle" : 1.1,
+		    "frames" : 4,
+			"cycle" : 0.5,
 			"mode" : "loop"
           }
         }
@@ -75,7 +75,8 @@
           "centered" : true,
           "offset" : [-2.0, 1.5],
           "transformationGroups" : ["swoosh"],
-          "rotationCenter" : [0, 0]
+          "rotationCenter" : [0, 0],
+		  "fullbright" : true
         },
 
         "partStates" : {
@@ -87,7 +88,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "/items/active/weapons/melee/hammer/swoosh/fireswoosh.png:<frame>",
+                "image" : "/items/active/weapons/melee/hammer/swoosh/energyswooshpurple.png:<frame>",
                 "damageArea" : [[-3.5, 2], [-2.5, 3], [1, 3], [3, 1.75], [4, -0.25], [4, -2.25], [3, -3.25], [0, -2.5]]
               }
             }
@@ -106,9 +107,12 @@
     "physicalswoosh" : {
       "active" : false,
       "transformationGroups" : ["swoosh"],
-      "emissionRate" : 50,
+      "burstCount" : 5,
       "offsetRegion" : [-2.0, 0.0, 1.5, 5.0],
       "particles" : [
+	    { "particle" : "ancientenergy1"},
+        { "particle" : "ancientenergy2"},
+		{ "particle" : "ancientenergy3"}
       ]
     },
     "fireswoosh" : {

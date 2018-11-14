@@ -46,7 +46,7 @@ function update(dt)
   animator.setAnimationState("energybar", "on")
 
   animator.setGlobalTag("barDirectives", "?scalenearest;"..shieldHealthRatio..";1")
-  --Shield Cap, useful for fall damage on moons
+  --Shield Cap, useful for getting rid of negative damage, such as fall damage on moons
   if currentShieldHealth > maxShieldHealth then
     status.setResource("damageAbsorption", self.maxShieldHealth)
   end

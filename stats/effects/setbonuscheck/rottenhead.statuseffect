@@ -4,7 +4,7 @@
   "effectConfig" : {
     "chest" : "rottenchestplate",
 	"pants" : "rottenpants",
-	"setBonus" : "rotaura",
+	"setBonuses" : ["rotaura"],
 	"setBonusStats" : [ { "stat" : "decayingairImmunity", "amount" : 1 }, { "stat" : "acidicbacteriaImmunity", "amount" : 1 } ]
   },
   "defaultDuration" : 1,

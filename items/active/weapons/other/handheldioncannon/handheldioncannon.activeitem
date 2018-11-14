@@ -114,9 +114,9 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "ion" : { "name" : "Ion Grenade", "projectileType" : "iongrenade", "baseDps" : 10 }
+      "ion" : { "name" : "Ion Grenade", "projectileType" : "iongrenade", "baseDps" : 10, "fireTime" : 3 }
     },
-    "energyUsage" : 20
+    "energyUsage" : 50
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

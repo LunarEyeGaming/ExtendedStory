@@ -44,7 +44,7 @@
 
     "fireTime" : 0.03,
     "baseDps" : 20.0,
-    "energyUsage" : 25,
+    "energyUsage" : 100,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -99,7 +99,7 @@
 	"baseDps" : 20,
 	"cooldownTime" : 0.0,
 	"inaccuracy" : 0.1,
-	"energyUsage" : 20,
+	"energyUsage" : 125,
 	"elementalConfig" : {
 	  "physical" : { "projectileType" : "proximitymine", "projectileParameters" : { "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/laserburst/laserburst.config"}] } }
 	}

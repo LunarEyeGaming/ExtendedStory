@@ -1,0 +1,14 @@
+{
+  "name" : "ultimatiumhead",
+
+  "effectConfig" : {
+    "chest" : "ultimatiumchestplate",
+	"pants" : "ultimatiumpants",
+	"setBonuses" : ["ultimatiumshield"]
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "bonuscheckmain.lua"
+  ]
+}

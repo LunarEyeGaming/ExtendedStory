@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "legarmour",
-  "description" : "This object's age is beyond comprehension.\n^cyan;11% elemental damage reduction for each piece.",
+  "description" : "This object's age is beyond comprehension.\n^cyan;Elemental damage reduction and deals damage to enemies.",
   "shortdescription" : "Ancient Greaves",
   "tooltipKind" : "armor",
   "maleFrames" : "pants.png",
@@ -37,7 +37,6 @@
   
   "statusEffects" : [
     "ancientpants",
-	"ancientsetbonus",
     {
       "stat" : "poisonResistance",
       "amount" : 0.11

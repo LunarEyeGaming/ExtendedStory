@@ -4,17 +4,17 @@
   "level" : 10,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A hilt with a high-voltage plasma blade.",
-  "shortdescription" : "^magenta;Ancient Broadsword^reset;",
+  "description" : "An ancient hilt that creates crystals as lethal cutters.",
+  "shortdescription" : "^magenta;^reset;",
   "tooltipKind" : "sword",
-  "category" : "broadsword",
+  "category" : "Ancient Broadsword",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
   
   "critChance" : 5,
   "critBonus" : 2,
 
-  "inventoryIcon" : "ancientbroadsword_es.png:active.1",
+  "inventoryIcon" : "ancientbroadswordicon_es.png",
 
   "animation" : "ancientbroadsword_es.animation",
   "animationParts" : {
@@ -43,7 +43,7 @@
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
-  "activeTime" : 1.5,
+  "activeTime" : 3,
 
   "elementalType" : "physical",
   

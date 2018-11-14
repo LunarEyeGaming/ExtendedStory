@@ -1,7 +1,6 @@
 require "/scripts/status.lua"
 
 function init()
-<<<<<<< HEAD
   currentHealthAmount = status.resourcePercentage("health")
   tickTimer = config.getParameter("tickTimer", 1)
 end
@@ -11,24 +10,11 @@ function update(dt)
   oldHealthAmount = currentHealthAmount
   currentHealthAmount = status.resourcePercentage("health")
   if currentHealthAmount < oldHealthAmount then
-=======
-  tickTimer = config.getParameter("tickTimer", 1)
-  self.listener = damageListener("damageTaken", function()
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
     if tickTimer <= 0 then
 	  tickTimer = 1
 	  attemptDamage()
 	end
-<<<<<<< HEAD
   end
-=======
-  end)
-end
-
-function update(dt)
-  tickTimer = tickTimer - dt
-  self.listener:update()
->>>>>>> bdc64ba7133a751c26b47322227b721e705bbd54
 end
 
 function attemptDamage()

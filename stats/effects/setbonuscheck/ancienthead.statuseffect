@@ -4,7 +4,7 @@
   "effectConfig" : {
     "chest" : "ancientchestplate",
 	"pants" : "ancientpants",
-	"setBonus" : "ancientsetbonus"
+	"setBonuses" : [{"effect" : "ancientsetbonus", "duration" : 1}]
   },
   "defaultDuration" : 1,
 

@@ -3,6 +3,7 @@
 --Also, it is completely necessary to make statusEffectExists true or false. A lua error will be thrown if the return function is called in the for loop
 
 function detectStatusEffect(statusEffect)
+  statusEffectExists = false
   statusEffects = status.activeUniqueStatusEffectSummary()
   if statusEffect == nil then
     sb.logWarn("Value 'statusEffect' is not defined")
@@ -11,8 +12,6 @@ function detectStatusEffect(statusEffect)
       if effect[1] == statusEffect then
 	    statusEffectExists = true
 		break
-	  else
-        statusEffectExists = false
 	  end
     end
 	return statusEffectExists
