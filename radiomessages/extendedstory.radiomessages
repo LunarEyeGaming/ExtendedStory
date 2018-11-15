@@ -144,5 +144,11 @@
 	"portraitImage" : "yell.<frame>",
     "text" : "^red;!WARNING!\nThere is an unknown and extremely destructive presence nearby. \nBe prepared for a hard fight and a lot of tile destruction.",
 	"textSpeed" : 70
+  },
+  "supervoidsickness" : {
+    "unique" : false,
+	"portraitImage" : "yell.<frame>",
+    "text" : "WARNING! An extremely lethal entity has appeared within your vicinity! \nIt will hunt you down until you die or beam up.",
+	"textSpeed" : 70
   }
 }
