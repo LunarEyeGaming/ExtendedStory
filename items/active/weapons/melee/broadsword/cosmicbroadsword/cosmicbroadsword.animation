@@ -90,9 +90,19 @@
     },
 
     "parts" : {
-      "blade" : {
+	  "blade" : {
         "properties" : {
-          "zLevel" : 3,
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "<partImage><paletteSwaps>?<directives>",
+          "offset" : [0, 1.875],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0]
+        }
+      },
+      "bladeFullbright" : {
+        "properties" : {
+          "zLevel" : 1,
           "centered" : true,
           "fullbright" : true,
           "offset" : [0, 1.875],
@@ -128,7 +138,7 @@
       },
       "handle" : {
         "properties" : {
-          "zLevel" : 1,
+          "zLevel" : 2,
           "centered" : true,
           "image" : "<partImage><paletteSwaps>?<directives>",
           "offset" : [0, 1.875],
@@ -138,13 +148,37 @@
       },
       "handleFullbright" : {
         "properties" : {
-          "zLevel" : 2,
+          "zLevel" : 3,
           "centered" : true,
           "fullbright" : true,
-          "image" : "<partImage><paletteSwaps>?<directives>",
           "offset" : [0, 1.875],
           "transformationGroups" : ["weapon"],
           "rotationCenter" : [0, 0]
+        },
+
+        "partStates" : {
+          "blade" : {
+            "inactive" : {
+              "properties" : {
+                "image" : "<partImage>:inactive?<directives>"
+              }
+            },
+            "extend" : {
+              "properties" : {
+                "image" : "<partImage>:active?<directives>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active?<directives>"
+              }
+            },
+            "retract" : {
+              "properties" : {
+                "image" : "<partImage>:inactive?<directives>"
+              }
+            }
+          }
         }
       },
       "swoosh" : {
