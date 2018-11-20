@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "cryonicextract", "count" : 5 },
+	{ "item" : "arkite", "count" : 15 },
+	{ "item" : "magnorbs", "count" : 1 },
+	{ "item" : "weaponamplifier", "count" : 1 },
+	{ "item" : "ancientupgrademodule_es", "count" : 5 }
+  ],
+  "output" : { "item" : "upgradedmagnorbs_es", "count" : 1 },
+  "groups" : [ "upgradestation", "upgrades", "all" ]
+}

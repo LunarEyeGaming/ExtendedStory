@@ -12,58 +12,27 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/boss/bossMonster.lua",
-      "/monsters/simpleRangedAttack.lua",
-      "/scripts/stateMachine.lua",
-      "/scripts/util.lua",
-      "/scripts/vec2.lua",
-
-      "/monsters/boss/ancientboss/idleState.lua",
-      "/monsters/boss/ancientboss/dieState.lua",
-	  "/monsters/boss/ancientboss/ancientbossreset.lua"
+      "/monsters/monster.lua"
     ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
 
-    "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossSlamAttack", "ancientbossTeleportAttack", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack", "ancientbossSprayNPrayAttack2", "ancientbossSuperBarrageAttack", "ancientbossDoubleBeamAttack", "crystalIdleAttack", "ancientbossSineBeamAttack", "ancientbossSingleBeamAttack"],
-    "skillCount" : 14,
+    "behavior" : "ancientboss",
 
-    "phases" : [
-      {
-        "skills" : ["ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossSwoopAttack", "ancientbossSprayNPrayAttack2"]
-      },
-      {
-        "enterPhase" : "ancientbossReinforcementsAttack",
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.8,
-        "skills" : ["ancientbossReinforcementsAttack2", "ancientbossMoveFireAttack", "ancientbossSwoopAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossMoveFireAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack"]
-      },
-      {
-        "enterPhase" : "ancientbossReinforcementsAttack",
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.6,
-        "skills" : ["ancientbossMoveFireAttack", "ancientbossTeleportAttack", "ancientbossSlamAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2", "ancientbossPulseCannonAttack", "ancientbossSprayNPrayAttack", "ancientbossReinforcementsAttack", "ancientbossReinforcementsAttack2"]
-      },
-      {
-        "enterPhase" : "ancientbossPulseCannonAttack",
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.4,
-        "skills" : ["ancientbossSprayNPrayAttack", "ancientbossReinforcementsAttack", "ancientbossSuperBarrageAttack", "ancientbossSingleBeamAttack", "ancientbossSineBeamAttack", "ancientbossDoubleBeamAttack", "crystalIdleAttack", "ancientbossPulseCannonAttack"]
-      }
-    ],
-    "jumpTargetDistance" : 4,
-    "jumpTime" : [0.4, 0.7],
+    "behaviorConfig" : {
+      "colorChangeWindup" : 0.4,
+      "colorChangeWinddown" : 0.4,
 
-    "queryTargetDistance" : 50.0,
-    "switchTargetDistance" : 10.0,
-    "keepTargetInSight" : true,
-    "keepTargetInRange" : 70,
-    "targetOutOfSightTime" : 0.1,
+      "windupTime" : 0.4,
+      "fastWindupTime" : 0.15,
 
-    "cruiseDistance" : 25,
+      "plasmaAttackFlySpeed" : 50,
+      "plasmaAttackX" : 20,
+      "plasmaAttackY" : 15,
+      "plasmaMinY" : 0
+    },
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
-
-    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
-    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
     "scale" : 1.0,
 
     "movementSettings" : {
@@ -71,12 +40,19 @@
       "collisionPoly" : [ [-14.0, -4.0], [14.0, -4.0], [14.0, 4.0], [-14.0, 4.0] ],
 
       "mass" : 4.0,
-      "flySpeed" : 20,
-      "airForce" : 200.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "flySpeed" : 11,
+      "airFriction" : 0.5,
+      "airForce" : 800.0,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
       "physicsEffectCategories" : ["boss"]
     },
 
-    "knockoutTime" : 0.1,
+    "knockoutTime" : 0,
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
 
@@ -178,73 +154,6 @@
     "feetOffset" : [0, -8],
 
     "beamSourceOffset" : [0, -5.5],
-    "targetYOffsetRange" : [18.0, 22.0],
-
-    "attackTime" : 5.0,
-    "fireInterval" : 0.6,
-    "cooldownTime" : 0.25,
-
-    "projectiles" : {
-      "deathexplosion" : {
-        "type" : "regularexplosionknockback",
-        "config" : {
-          "speed" : 0.1,
-          "power" : 2,
-
-          "actionOnReap" : [
-            {
-              "action" : "config",
-              "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
-            },
-			{
-			  "action" : "item",
-			  "name" : "ancientfragment",
-			  "count" : 1
-			},
-			{
-			  "action" : "item",
-			  "name" : "ancientfragment",
-			  "count" : 1
-			},
-			{
-			  "action" : "item",
-			  "name" : "ancientfragment",
-			  "count" : 1
-			},
-			{
-			  "action" : "item",
-			  "name" : "ancientfragment",
-			  "count" : 1
-			}
-          ]
-        },
-
-        "fireTime" : 8.0,
-        "fireInterval" : 0.2,
-        "cooldown" : 0.1
-      },
-
-      "blockbreaker" : {
-        "type" : "invisibleprojectile",
-        "config" : {
-          "speed" : 0.1,
-          "power" : 0,
-
-          "actionOnReap" : [
-            {
-              "action" : "explosion",
-              "foregroundRadius" : 6,
-              "backgroundRadius" : 0,
-              "explosiveDamageAmount" : 100,
-              "delaySteps" : 1
-            }
-          ]
-        },
-
-        "fireTime" : 0.2,
-        "fireInterval" : 0.1,
-        "cooldown" : 0.1
-      }
-    }
+    "targetYOffsetRange" : [18.0, 22.0]
   }
 }

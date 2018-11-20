@@ -1,10 +1,15 @@
 {
   "frameGrid" : {
-    "size" : [27, 20],
-    "dimensions" : [12, 1],
+    "size" : [33, 32],
+    "dimensions" : [5, 1],
 
     "names" : [
-      [ "flying.1", "flying.2", "flying.3", "flying.4", "flying.5", "flying.6", "flying.7", "flying.8", "flying.9", "flying.10", "flying.11", "flying.12" ]
+      [ "closed", "opened.1", "opened.2", "opened.3", "opened.4" ]
     ]
+  },
+  "aliases" : {
+    "opened.5" : "opened.3",
+	"opened.6" : "opened.2",
+	"opened.7" : "opened.1"
   }
 }

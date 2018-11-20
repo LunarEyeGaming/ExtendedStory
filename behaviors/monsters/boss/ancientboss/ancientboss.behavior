@@ -41,8 +41,8 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 80},
-              "keepTargetInRange": {"value": 100},
+              "targetQueryRange": {"value": 150},
+              "keepTargetInRange": {"value": 150},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
@@ -140,7 +140,7 @@
                                 "type": "action",
                                 "name": "resourcePercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.0},
+                                  "percentage": {"value": 0.8},
                                   "resource": {"value": "health"}
                                 }
                               },
@@ -159,146 +159,168 @@
 								  "parameters": {},
 								  "children": [
 									{
-        							  "title": "ancientboss2-fistattack",
+        							  "title": "ancientboss-uppersweep",
         							  "type": "module",
-        							  "name": "ancientboss2-fistattack",
-        							  "parameters": {
-                                        "leftfistId": {"key": "leftfistId"},
-										"rightfistId": {"key": "rightfistId"},
-										"target": {"key": "target"},
-										"sourceId": {"key": "self"}
-									  }
-        							},
-									{
-        							  "title": "ancientboss2-orbattack",
-        							  "type": "module",
-        							  "name": "ancientboss2-orbattack",
+        							  "name": "ancientboss-uppersweep",
         							  "parameters": {}
         							},
 									{
-        							  "title": "ancientboss2-minionattack",
-        							  "type": "module",
-        							  "name": "ancientboss2-minionattack",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "inverter",
-        							  "type": "decorator",
-        							  "name": "inverter",
-        							  "parameters": {},
+									  "title": "repeater",
+									  "type": "decorator",
+									  "name": "repeater",
+									  "parameters": {
+									    "maxLoops": {"value": 2}
+									  },
 									  "child": {
-									    "title": "resourcePercentage",
-										"type": "action",
-										"name": "resourcePercentage",
-										"parameters": {
-										  "percentage": {"value": 0.75},
-										  "resource": {"value": "health"}
-										}
+									    "title": "sequence",
+										"type": "composite",
+										"name": "sequence",
+										"parameters": {},
+										"children": [
+										  {
+        								    "title": "ancientboss-playersweep",
+        								    "type": "module",
+        								    "name": "ancientboss-playersweep",
+        								    "parameters": {}
+        								  },
+										  {
+        								    "title": "ancientboss-playersweep2",
+        								    "type": "module",
+        								    "name": "ancientboss-playersweep2",
+        								    "parameters": {}
+        								  }
+										]
 									  }
-        							},
+									},
 									{
-        							  "title": "ancientboss2-fistattack",
+        							  "title": "ancientboss-playersweep",
         							  "type": "module",
-        							  "name": "ancientboss2-fistattack",
-        							  "parameters": {
-                                        "leftfistId": {"key": "leftfistId"},
-										"rightfistId": {"key": "rightfistId"},
-										"target": {"key": "target"},
-										"sourceId": {"key": "self"}
-									  }
-        							},
-									{
-        							  "title": "ancientboss2-orbattack2",
-        							  "type": "module",
-        							  "name": "ancientboss2-orbattack2",
+        							  "name": "ancientboss-playersweep",
         							  "parameters": {}
         							},
 									{
-        							  "title": "ancientboss2-minionattack",
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parmeters": {
+									    "time": {"value": 0.5}
+									  }
+									},
+									{
+        							  "title": "ancientboss-slam",
         							  "type": "module",
-        							  "name": "ancientboss2-minionattack",
+        							  "name": "ancientboss-slam",
+        							  "parameters": {}
+        							}
+								  ]
+								}
+						      }
+							]
+                          },
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.6},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+        							  "title": "ancientboss-minionattack",
+        							  "type": "module",
+        							  "name": "ancientboss-minionattack",
         							  "parameters": {}
         							},
 									{
-        							  "title": "inverter",
-        							  "type": "decorator",
-        							  "name": "inverter",
-        							  "parameters": {},
+									  "title": "repeater",
+									  "type": "decorator",
+									  "name": "repeater",
+									  "parameters": {
+									    "maxLoops": {"value": 2}
+									  },
 									  "child": {
-									    "title": "resourcePercentage",
-										"type": "action",
-										"name": "resourcePercentage",
-										"parameters": {
-										  "percentage": {"value": 0.5},
-										  "resource": {"value": "health"}
-										}
+									    "title": "sequence",
+										"type": "composite",
+										"name": "sequence",
+										"parameters": {},
+										"children": [
+										  {
+        								    "title": "ancientboss-playersweep",
+        								    "type": "module",
+        								    "name": "ancientboss-playersweep",
+        								    "parameters": {}
+        								  },
+										  {
+        								    "title": "ancientboss-playersweep2",
+        								    "type": "module",
+        								    "name": "ancientboss-playersweep2",
+        								    "parameters": {}
+        								  }
+										]
 									  }
-        							},
+									},
 									{
-        							  "title": "ancientboss2-fistattack2",
+        							  "title": "ancientboss-playersweep",
         							  "type": "module",
-        							  "name": "ancientboss2-fistattack2",
-        							  "parameters": {
-                                        "leftfistId": {"key": "leftfistId"},
-										"rightfistId": {"key": "rightfistId"},
-										"target": {"key": "target"},
-										"sourceId": {"key": "self"}
-									  }
-        							},
-									{
-        							  "title": "ancientboss2-laserattack",
-        							  "type": "module",
-        							  "name": "ancientboss2-laserattack",
+        							  "name": "ancientboss-playersweep",
         							  "parameters": {}
         							},
 									{
-        							  "title": "ancientboss2-minionattack",
-        							  "type": "module",
-        							  "name": "ancientboss2-minionattack",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "inverter",
-        							  "type": "decorator",
-        							  "name": "inverter",
-        							  "parameters": {},
-									  "child": {
-									    "title": "resourcePercentage",
-										"type": "action",
-										"name": "resourcePercentage",
-										"parameters": {
-										  "percentage": {"value": 0.25},
-										  "resource": {"value": "health"}
-										}
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parmeters": {
+									    "time": {"value": 0.5}
 									  }
+									},
+									{
+        							  "title": "ancientboss-minionattack2",
+        							  "type": "module",
+        							  "name": "ancientboss-minionattack2",
+        							  "parameters": {}
         							},
 									{
-        							  "title": "ancientboss2-fistattack2",
+        							  "title": "ancientboss-uppersweep",
         							  "type": "module",
-        							  "name": "ancientboss2-fistattack2",
-        							  "parameters": {
-                                        "leftfistId": {"key": "leftfistId"},
-										"rightfistId": {"key": "rightfistId"},
-										"target": {"key": "target"},
-										"sourceId": {"key": "self"}
+        							  "name": "ancientboss-uppersweep",
+        							  "parameters": {}
+        							},
+									{
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parmeters": {
+									    "time": {"value": 0.5}
 									  }
-        							},
+									},
 									{
-        							  "title": "ancientboss2-orbattack4",
+        							  "title": "ancientboss-slam",
         							  "type": "module",
-        							  "name": "ancientboss2-orbattack4",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "ancientboss2-orbattack3",
-        							  "type": "module",
-        							  "name": "ancientboss2-orbattack3",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "ancientboss2-minionattack",
-        							  "type": "module",
-        							  "name": "ancientboss2-minionattack",
+        							  "name": "ancientboss-slam",
         							  "parameters": {}
         							}
 								  ]
@@ -489,15 +511,6 @@
                     "name": "battleMusic",
                     "parameters": {
                       "enable": {"value": false}
-                    }
-                  },
-				  {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "deactivated"},
-					  "type": {"value": "body"}
                     }
                   },
                   {

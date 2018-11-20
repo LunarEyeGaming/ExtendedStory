@@ -12,85 +12,18 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/ghosts/erchiusghost/erchiusghost.lua"
     ],
 
-    "behavior" : "monster",
+    "speedupRange" : [75, 175],
+    "maxSpeed" : 30,
 
-    "seeThroughLiquid" : true,
-    "behaviorConfig" : {
-      "damageOnTouch" : true,
+    // The min speed depends on the erchius amount of the player
+    "minSpeedRange" : [24, 25],
+    "erchiusRange" : [0, 1],
 
-      "targetQueryRange" : 150,
-      "targetOnDamage" : true,
-      "keepTargetInSight" : true,
-      "keepTargetInRange" : 1000,
-      "targetOutOfSightTime" : 9999,
-
-      "hurtWaitForGround" : false,
-
-      "foundTargetActions" : [],
-
-      "fleeActions" : [ ],
-
-      "hostileActions" : [
-      ],
-
-      "periodicActions" : [
-       ],
-
-      "approachActions" : [
-        {
-          "name" : "approach-fall",
-          "parameters" : {
-            "flyState" : "fly",
-            "idleState" : "fly",
-            "friction" : 15,
-            "dampenDistance" : 20,
-            "dampenMultiplier" : 2
-          }
-        }
-      ],
-
-      "followActions" : [
-        {
-          "name" : "approach-teleport",
-          "parameters" : {
-          }
-        },
-        {
-          "name" : "approach-fly",
-		  "parameters" : {
-            "usePathfinding" : false
-		  }
-        }
-      ],
-
-      "wanderActions" : [
-        {
-          "name" : "wander-fly",
-          "parameters" : {
-            "wanderTime" : [2,4],
-            "groundDistance" : 8,
-            "ceilingDistance" : 8,
-            "xVelocity" : 4,
-            "yVelocity" : 12
-          }
-        }
-      ],
-
-      "concurrentActions" : [
-        {
-          "name" : "action-globaltag",
-          "parameters" : {
-            "tagName" : "aggro",
-            "tag" : ""
-          }
-        }
-      ],
-
-      "concurrentHostileActions" : []
-    },
+    "emissionRange" : 20,
+    "maxEmissionRate" : 100,
 
     "touchDamage" : {
       "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],

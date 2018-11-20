@@ -144,6 +144,19 @@
             "transition" : "idle"
           }
         }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 12,
+            "cycle" : 1.2
+          }
+        }
       }
     },
 
@@ -715,6 +728,26 @@
   },
 
   "sounds" : {
+    "windup1" : {
+      "pool" : [ "/sfx/melee/charge_up5.ogg" ],
+      "rangeMultiplier" : 3
+    },
+	"windup2" : {
+	  "pool" : [ "/sfx/melee/charge_up10.ogg" ],
+	  "rangeMultiplier" : 3
+	},
+	"fire1" : {
+      "pool" : [ "/sfx/npc/boss/guardian_stab.ogg" ],
+      "rangeMultiplier" : 3
+    },
+	"fire2" : {
+      "pool" : [ "/sfx/gun/pulsecannon_blast1.ogg" ],
+      "rangeMultiplier" : 3
+    },
+	"minionspawn1" : {
+      "pool" : [ "/sfx/gun/plasma_sniper4.ogg" ],
+      "rangeMultiplier" : 3
+    },
     "landing" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
     "stunned" : [ "/sfx/npc/boss/guardian_floorhazard_electric_loop.ogg" ],
     "teleportIn" : {

@@ -1,13 +1,13 @@
 {
-  "itemName" : "ancientmagnorbs",
+  "itemName" : "upgradedmagnorbs_es",
   "level" : 10,
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A super-charged upgrade of magnorbs.",
-  "shortdescription" : "^magenta; ^reset;",
+  "description" : "An experimental form of magnorbs that truly cripples the target. ^cyan;Upgraded",
+  "shortdescription" : "^#77e3e7;Magnorbs^reset; ^cyan;^reset;",
   "tooltipKind" : "base",
-  "category" : "Ancient Energy Pellets",
+  "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon"],
 
@@ -19,13 +19,31 @@
     "orb2" : "orb.png",
     "orb3" : "orb.png"
   },
-  "animationCustom" : { },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "parts" : {
+	    "gloveFullbright" : {
+          "properties" : {
+            "transformationGroups" : ["weapon"],
+            "offset" : [0, -0.25],
+            "centered" : true,
+			"zLevel" : 3,
+			"fullbright" : true,
+            "image" : "/items/active/weapons/other/upgradedmagnorbs_es/glovefullbright.png:<hand>"
+          }
+        }
+	  }
+	},
+	"sounds" : {
+	  "fire" : [ "/sfx/melee/upgradedmagnorbs_fire1.ogg", "/sfx/melee/upgradedmagnorbs_fire2.ogg" ]
+	}
+  },
 
-  "scripts" : ["/items/active/weapons/other/magnorbs/magnorbs.lua"],
+  "scripts" : ["/items/active/weapons/other/upgradedmagnorbs_es/magnorbs.lua"],
 
   "orbitRate" : 0.5,
 
-  "projectileType" : "ancientmagnorb",
+  "projectileType" : "upgradedmagnorb_es",
   "projectileParameters" : {
     "power" : 2.25,
     "knockback" : 5,

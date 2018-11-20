@@ -1,6 +1,6 @@
 {
-  "projectileName" : "ancientmagnorb",
-  "image" : "ancientmagnorb.png",
+  "projectileName" : "upgradedmagnorb_es",
+  "image" : "upgradedmagnorb_es.png",
   "windupFrames" : 3,
   "pointLight" : false,
   "flippable" : true,
@@ -22,10 +22,12 @@
     {
 	  "time" : 0.1,
 	  "action" : "projectile",
-	  "type" : "ancientcannonstar",
+	  "type" : "icecloud",
 	  "fuzzAngle" : 180,
 	  "config" : {
-	    "speed" : 0
+	    "speed" : 0,
+		"animationCycle" : 0.5,
+		"timeToLive" : 0.5
 	  }
 	}
   ],
@@ -41,7 +43,7 @@
     },
 	{
 	  "action" : "config",
-	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
 	}
   ],
 

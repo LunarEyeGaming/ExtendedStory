@@ -1,0 +1,41 @@
+{
+  "projectileName" : "ancientboss_spawntrifangle",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ancientorb_boss",
+	  "config" : {
+	    "speed" : 0,
+        "onlyhitTerrain" : true,
+		"timeToLive" : 2,
+        "actionOnReap" : [
+          {
+            "action" : "sound",
+            "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
+          },
+		  {
+			"action" : "projectile",
+			"type" : "laserburst",
+			"config" : {
+			  "onlyhitTerrain" : true
+			}
+		  },
+		  {
+			"action" : "spawnmonster",
+			"type" : "ancienttrifangle_es",
+			"level" : 5
+		  }
+        ]
+	  }
+	}
+  ],
+  "onlyHitTerrain" : true,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}

@@ -1,6 +1,6 @@
 function init()
   monster.setDeathParticleBurst("deathPoof")
-  animator.setAnimationState("movement", "flying")
+  animator.setAnimationState("movement", "closed")
 
   self.masterId = config.getParameter("masterId")
   self.minionIndex = config.getParameter("minionIndex")

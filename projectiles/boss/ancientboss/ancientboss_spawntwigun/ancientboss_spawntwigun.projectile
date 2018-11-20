@@ -1,0 +1,40 @@
+{
+  "projectileName" : "ancientboss_spawntwigun",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "purpleplasmatorpedo",
+	  "config" : {
+	    "actionOnReap" : [
+		  {
+            "action" : "spawnmonster",
+            "type" : "ancienttwigun",
+            "level" : 5,
+            "offset" : [0.0, 1.0],
+            "particle" : {
+              "type" : "animated",
+              "animation" : "/animations/ancientrelease/ancientrelease.animation",
+              "destructionTime" : 1,
+              "position" : [0, 2.375],
+              "timeToLive" : 0.2667,
+              "layer" : "front"
+            }
+          },
+          {
+            "action" : "sound",
+            "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+          }
+		]
+	  }
+	}
+  ],
+  "onlyHitTerrain" : true,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default"
+}

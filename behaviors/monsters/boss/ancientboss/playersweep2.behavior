@@ -1,0 +1,157 @@
+{
+  "name": "ancientboss-playersweep2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "target"}
+		},
+		"output": {
+		  "position": "targetPos"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "targetPos"},
+		  "offset": {"value": [20, 15]}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "targetPos"},
+		  "offset": {"value": [-20, 15]}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+	    "title": "esmodules-failsafeflight",
+		"type": "module",
+		"name": "esmodules-failsafeflight",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "speed": {"value": 50},
+		  "durationLimit": {"value": 1}
+		}
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+        	        "target": {"key": "target"}
+        	      },
+        	      "output": {
+        	        "vector": "aimVector"
+        	      }
+        	    },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "ancientboss-movefire",
+		    "type": "module",
+		    "name": "ancientboss-movefire",
+		    "parameters": {
+		      "position": {"key": "sweepEndPos"},
+		      "flightSpeed": {"value": 25},
+		      "projectileInterval": {"value": 0.1},
+		      "projectileType": {"value": "ancientboss_plasmashot"},
+		      "projectileOffset": {"value": [0, -5]},
+		      "aimVector": {"key": "aimVector"},
+		      "fireSound": {"value": "fire2"},
+		      "durationLimit": {"value": 2}
+		    }
+	      }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      }
+    ]
+  }
+}
