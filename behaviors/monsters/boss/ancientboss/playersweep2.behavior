@@ -47,7 +47,7 @@
 		"name": "offsetPosition",
 		"parameters": {
 		  "position": {"key": "targetPos"},
-		  "offset": {"value": [20, 15]}
+		  "offset": {"value": [20, 25]}
 		},
 		"output": {
 		  "position": "sweepStartPos"
@@ -59,7 +59,7 @@
 		"name": "offsetPosition",
 		"parameters": {
 		  "position": {"key": "targetPos"},
-		  "offset": {"value": [-20, 15]}
+		  "offset": {"value": [-20, 25]}
 		},
 		"output": {
 		  "position": "sweepEndPos"
