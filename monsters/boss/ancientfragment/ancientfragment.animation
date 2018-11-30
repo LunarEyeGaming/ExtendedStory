@@ -38,7 +38,26 @@
     "parts" : {
       "ufo" : {
 	    "properties" : {
-		  "fullbright" : true
+		},
+        "partStates" : {
+          "movement" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed.<frame>"
+              }
+            },
+			"opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "ufofullbright" : {
+	    "properties" : {
+		  "fullbright" : true,
+		  "zLevel" : 20
 		},
         "partStates" : {
           "movement" : {

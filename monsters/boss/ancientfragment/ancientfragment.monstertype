@@ -1,5 +1,5 @@
 {
-  "type" : "ancientfragment",
+  "type" : "ancientfragment", // Monster Name is Ancient Defender
 
   "categories" : [ "ancientfragment" ],
   "parts" : [ "ufo" ],
@@ -25,7 +25,7 @@
       "collisionPoly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
 
       "mass" : 1.0,
-      "flySpeed" : 50,
+      "flySpeed" : 20,
       "airFriction" : 0.25,
       "airForce" : 200.0,
       "physicsEffectCategories" : ["boss"]
@@ -102,10 +102,10 @@
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
 
-    "projectileType" : "ancientlasershot",
+    "projectileType" : "ancienthammeralt",
     "projectileConfig" : {
-      "speed" : 35,
-      "power" : 10,
+      "speed" : 70,
+      "power" : 5,
       "periodicActions" : [
         {
           "time" : 0,
@@ -116,8 +116,8 @@
       ]
     },
 
-    "attackTime" : 1.0,
-    "fireInterval" : 1.0,
-    "cooldownTime" : 1.0
+    "attackTime" : 2.0,
+    "fireInterval" : 2.0,
+    "cooldownTime" : 2.0
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "ancientboss-uppersweep",
+  "name": "ancientboss-lowerram",
   "description": "",
   "scripts": [
     "/scripts/actions/movement.lua",
@@ -20,27 +20,11 @@
     "parameters": {},
     "children": [
 	  {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "windup1"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1.2}
-        }
-      },
-	  {
 		"title": "loadUniqueEntity",
 		"type": "action",
 		"name": "loadUniqueEntity",
 		"parameters": {
-		  "uniqueId": {"value": "uppersweepstart"}
+		  "uniqueId": {"value": "lowersweepstart"}
 		},
 		"output": {
 		  "entity": "sweepStart"
@@ -51,7 +35,7 @@
 		"type": "action",
 		"name": "loadUniqueEntity",
 		"parameters": {
-		  "uniqueId": {"value": "uppersweepend"}
+		  "uniqueId": {"value": "lowersweepend"}
 		},
 		"output": {
 		  "entity": "sweepEnd"
@@ -80,37 +64,38 @@
 		}
 	  },
 	  {
+		"title": "ancientboss-teleportto",
+		"type": "module",
+		"name": "ancientboss-teleportto",
+		"parameters": {
+		  "teleportPosition": {"key": "sweepStartPos"}
+		}
+	  },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": true}
+        }
+      },
+	  {
 		"title": "flyToPosition",
 		"type": "action",
 		"name": "flyToPosition",
 		"parameters": {
-		  "position": {"key": "sweepStartPos"},
-		  "speed": {"value": 50}
+		  "position": {"key": "sweepEndPos"},
+		  "speed": {"value": 75}
 		}
 	  },
       {
-        "title": "setVelocity",
+        "title": "setDamageOnTouch",
         "type": "action",
-        "name": "setVelocity",
+        "name": "setDamageOnTouch",
         "parameters": {
-          "velocity": {"value": [0, 0]}
+          "touchDamage": {"value": false}
         }
       },
-	  {
-		"title": "ancientboss-movefire",
-		"type": "module",
-		"name": "ancientboss-movefire",
-		"parameters": {
-		  "position": {"key": "sweepEndPos"},
-		  "flightSpeed": {"value": 25},
-		  "projectileInterval": {"value": 0.2},
-		  "projectileType": {"value": "ancientboss_plasmashotwindup"},
-		  "projectileOffset": {"value": [0, -5]},
-		  "projectileConfig": {"value": {"power": 2}},
-		  "aimVector": {"value": [0, 0]},
-		  "fireSound": {"value": "fire1"}
-		}
-	  },
       {
         "title": "setVelocity",
         "type": "action",

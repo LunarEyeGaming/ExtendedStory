@@ -43,6 +43,24 @@
           "time": {"value": 1}
         }
       },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "I"},
+          "type": {"value": "invisible"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": false}
+        }
+      },
 	  {
         "title": "setAnimationState",
         "type": "action",
@@ -52,14 +70,41 @@
           "type": {"value": "movement"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
+	  {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
         "parameters": {
-          "time": {"value": 1}
-        }
-      },
+          "fail": {"value": -1},
+          "success": {"value": 2}
+        },
+        "children": [
+		  {
+    	    "title": "timer",
+    	    "type": "action",
+    	    "name": "timer",
+    	    "parameters": {
+    	      "time": {"value": 1}
+    	    }
+    	  },
+		  {
+		    "title": "addEphemeralEffect",
+		    "type": "action",
+		    "name": "addEphemeralEffect",
+		    "parameters": {
+		      "name": {"value": "invulnerable"}
+		    }
+		  }
+		]
+	  },
+	  {
+	    "title": "removeEphemeralEffect",
+	    "type": "action",
+	    "name": "removeEphemeralEffect",
+	    "parameters": {
+	      "name": {"value": "invulnerable"}
+	    }
+	  },
       {
         "title": "entityPosition",
         "type": "action",
@@ -105,6 +150,24 @@
         "name": "playSound",
         "parameters": {
           "sound": {"value": "teleportIn"}
+        }
+      },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": ""},
+          "type": {"value": "invisible"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": true}
         }
       },
       {

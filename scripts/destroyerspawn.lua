@@ -30,8 +30,8 @@ function update(dt)
 	  if previousNumber == nil then
 	    previousNumber = 0
 	  end
-	  if chancesList[world.threatLevel()] then
-	    destroyerAttemptSpawn(chancesList[world.threatLevel()], previousNumber)
+	  if chancesList[threatLevel] then
+	    destroyerAttemptSpawn(chancesList[threatLevel], previousNumber)
 	    attemptSpawnRan = true
 	  end
 	end
@@ -40,7 +40,7 @@ end
 
 function destroyerAttemptSpawn(spawnChance, previousNumber)
   spawnSuccessChance = math.random(1, spawnChance)
-  if spawnSuccessChance == spawnChance and not (world.type() == "unknown" or world.threatLevel() == 1 or world.isTileProtected(mcontroller.position())) then
+  if spawnSuccessChance == spawnChance and not (world.type() == "unknown" or threatLevel == 1 or world.isTileProtected(mcontroller.position())) then
     status.addEphemeralEffect("destroyerspawnstage1")
   end
 end

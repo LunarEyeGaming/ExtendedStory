@@ -1,5 +1,5 @@
 {
-  "name": "ancientboss-movefire",
+  "name": "ancientboss-movefire2",
   "description": "",
   "scripts": [
     "/scripts/actions/movement.lua",
@@ -17,8 +17,6 @@
 	"flightSpeed": 10,
 	"projectileType": "delayedplasmashot",
 	"projectileOffset": [0, -5],
-	"projectileConfig": {},
-	"aimVector": [1, 0],
 	"fireSound": "fire",
 	"durationLimit": 0
   },
@@ -84,18 +82,30 @@
 			  "name": "sequence",
 			  "parameters": {},
 			  "children": [
-			    {
-    		      "title": "spawnProjectile",
+                {
+                  "title": "entityDirection",
                   "type": "action",
-                  "name": "spawnProjectile",
+                  "name": "entityDirection",
                   "parameters": {
-                    "aimVector": {"key": "<aimVector>"},
+                    "entity": {"key": "self"},
+                    "target": {"key": "target"}
+                  },
+                  "output": {
+                    "vector": "aimVector"
+                  }
+                },
+				{
+                  "title": "spawnTargetedProjectile",
+                  "type": "action",
+                  "name": "spawnTargetedProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
                     "offset": {"key": "<projectileOffset>"},
+                    "parameters": {"value": {}},
                     "position": {"key": "self"},
-                    "projectileConfig": {"key": "<projectileConfig>"},
                     "projectileType": {"key": "<projectileType>"},
                     "scalePower": {"value": true},
-                    "sourceEntity": {"key": "self"},
+                    "target": {"key": "target"},
                     "trackSource": {"value": false}
                   }
                 },

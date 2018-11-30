@@ -13,7 +13,7 @@
   ],
   "parameters": {
     "teleportPosition": [101, 101],
-	"teleportDelay": 2
+	"teleportDelay": 1
   },
   "root": {
     "title": "sequence",
@@ -45,6 +45,15 @@
           "time": {"value": 1}
         }
       },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "I"},
+          "type": {"value": "invisible"}
+        }
+      },
 	  {
     	"title": "setAnimationState",
     	"type": "action",
@@ -54,14 +63,50 @@
     	  "type": {"value": "movement"}
     	}
       },
-      {
-        "title": "timer",
+	  {
+        "title": "setParticleEmitterActive",
         "type": "action",
-        "name": "timer",
+        "name": "setParticleEmitterActive",
         "parameters": {
-          "time": {"key": "<teleportDelay>"}
+          "emitter": {"value": "idle"},
+          "active": {"value": false}
         }
       },
+	  {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 2}
+        },
+        "children": [
+		  {
+    	    "title": "timer",
+    	    "type": "action",
+    	    "name": "timer",
+    	    "parameters": {
+    	      "time": {"key": "<teleportDelay>"}
+    	    }
+    	  },
+		  {
+		    "title": "addEphemeralEffect",
+		    "type": "action",
+		    "name": "addEphemeralEffect",
+		    "parameters": {
+		      "name": {"value": "invulnerable"}
+		    }
+		  }
+		]
+	  },
+	  {
+	    "title": "removeEphemeralEffect",
+	    "type": "action",
+	    "name": "removeEphemeralEffect",
+	    "parameters": {
+	      "name": {"value": "invulnerable"}
+	    }
+	  },
 	  {
 	    "title": "setPosition",
 		"type": "action",
@@ -94,6 +139,15 @@
           "time": {"value": 1}
         }
       },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": ""},
+          "type": {"value": "invisible"}
+        }
+      },
 	  {
     	"title": "setAnimationState",
     	"type": "action",
@@ -102,6 +156,15 @@
     	  "state": {"value": "visible"},
     	  "type": {"value": "movement"}
     	}
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": true}
+        }
       }
     ]
   }

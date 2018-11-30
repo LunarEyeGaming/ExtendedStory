@@ -1,5 +1,5 @@
 {
-  "name": "ancientboss-uppersweep",
+  "name": "ancientboss-plasmasweep",
   "description": "",
   "scripts": [
     "/scripts/actions/movement.lua",
@@ -24,7 +24,7 @@
         "type": "action",
         "name": "playSound",
         "parameters": {
-          "sound": {"value": "windup1"}
+          "sound": {"value": "windup4"}
         }
       },
       {
@@ -80,6 +80,30 @@
 		}
 	  },
 	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "offset": {"value": [0, -20]}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "sweepEndPos"},
+		  "offset": {"value": [0, -20]}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
 		"title": "flyToPosition",
 		"type": "action",
 		"name": "flyToPosition",
@@ -104,11 +128,10 @@
 		  "position": {"key": "sweepEndPos"},
 		  "flightSpeed": {"value": 25},
 		  "projectileInterval": {"value": 0.2},
-		  "projectileType": {"value": "ancientboss_plasmashotwindup"},
+		  "projectileType": {"value": "ancientpulse"},
 		  "projectileOffset": {"value": [0, -5]},
-		  "projectileConfig": {"value": {"power": 2}},
-		  "aimVector": {"value": [0, 0]},
-		  "fireSound": {"value": "fire1"}
+		  "aimVector": {"value": [0, -1]},
+		  "fireSound": {"value": "fire3"}
 		}
 	  },
       {

@@ -1,0 +1,25 @@
+{
+  "frameGrid" : {
+    "size" : [249, 86],
+    "dimensions" : [12, 2],
+
+    "names" : [
+      [ "appear.1", "appear.2", "appear.3", "appear.4", "appear.5", "appear.6", "appear.7", "appear.8", "appear.9", "appear.10", "appear.11", "appear.12" ],
+      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idleI.1", "idleI.2", "idleI.3", "idleI.4", "idleI.5" ]
+    ]
+  },
+  "aliases" : {
+    "disappear.1" : "appear.12",
+	"disappear.2" : "appear.11",
+	"disappear.3" : "appear.10",
+	"disappear.4" : "appear.9",
+	"disappear.5" : "appear.8",
+	"disappear.6" : "appear.7",
+	"disappear.7" : "appear.6",
+	"disappear.8" : "appear.5",
+	"disappear.9" : "appear.4",
+	"disappear.10" : "appear.3",
+	"disappear.11" : "appear.2",
+	"disappear.12" : "appear.1"
+  }
+}

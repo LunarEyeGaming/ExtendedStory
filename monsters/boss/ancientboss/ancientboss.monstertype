@@ -3,7 +3,7 @@
   "shortdescription" : "The Ancient One",
 
   "categories" : [ "ancientboss" ],
-  "parts" : [ "ufo", "pilot", "ufolit", "bodyglow", "eye", "beam1", "beam2", "beam3", "beam4" ],
+  "parts" : [ "ufo", "pilot", "bodyglow", "eye", "beam1", "beam2", "beam3", "beam4" ],
 
   "animation" : "ancientboss.animation",
   "reversed" : true,
@@ -19,18 +19,7 @@
 
     "behavior" : "ancientboss",
 
-    "behaviorConfig" : {
-      "colorChangeWindup" : 0.4,
-      "colorChangeWinddown" : 0.4,
-
-      "windupTime" : 0.4,
-      "fastWindupTime" : 0.15,
-
-      "plasmaAttackFlySpeed" : 50,
-      "plasmaAttackX" : 20,
-      "plasmaAttackY" : 15,
-      "plasmaMinY" : 0
-    },
+    "behaviorConfig" : {},
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
     "scale" : 1.0,
@@ -58,7 +47,7 @@
 
     "touchDamage" : {
       "poly" : [ [-14.0, -2.0], [0.0, -6.0], [14.0, -2.0], [14.0, 0.0], [0.0, 6.0], [-14.0, 0.0] ],
-      "damage" : 20,
+      "damage" : 10,
 
       "teamType" : "enemy",
       "damageSourceKind" : "hammer",
