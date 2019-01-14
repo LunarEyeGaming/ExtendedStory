@@ -1,0 +1,17 @@
+{
+  "kind" : "hioncannonreload",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/hioncannonreload/hioncannonreload.animation",
+    "position" : [0, 1],
+    "initialVelocity" : [0, 0],
+    "finalVelocity" : [0, -10],
+	"approach" : [0, 30],
+    "size" : 1,
+    "layer" : "back",
+    "timeToLive" : 0.5,
+	"fade" : 1,
+	"destructionAction" : "fade",
+	"destructionTime" : 0.5
+  }
+}

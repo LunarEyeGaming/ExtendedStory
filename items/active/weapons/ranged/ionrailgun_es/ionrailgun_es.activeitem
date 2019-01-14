@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "A gun that shoots super high velocity beams.",
   "shortdescription" : "^cyan;Ion Railgun^reset;",
-  "tooltipKind" : "base",
+  "tooltipKind" : "gun",
   "category" : "^#5dbdba;Ion Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
@@ -35,34 +35,15 @@
     "name" : "NAN",
     "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
     "class" : "ChargeFire",
-	"beamDamage" : 150,
-    "chargeLevels" : [
-      {
-        "time" : 0,
-        "energyCost" : 0,
-        "cooldown" : 0.1,
-        "projectileType" : "invisibleprojectile",
-        "projectileCount" : 1,
-        "projectileParameters" : {"damageType" : "nodamage"},
-        "inaccuracy" : 0,
-        "baseDamage" : 0,
-        "fireSound" : "fire",
-        "fireAnimationState" : "idle"
-      },
-      {
-        "time" : 1.5,
-        "energyCost" : 100,
-        "cooldown" : 0.25,
-        "projectileType" : "orbitalup",
-        "projectileCount" : 1,
-        "spreadAngle" : 0,
-        "projectileParameters" : {"power" : 50, "piercing" : true, "damageKind" : "ionplasma", "damageType" : "damage", "speed" : 800, "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}], "damageTeam" : {"type" : "friendly"}},
-        "inaccuracy" : 0,
-        "baseDamage" : 20,
-        "fireSound" : "fire2"
-      }
-    ],
+	"baseDamage" : 4,
+	"chargeTime" : 1.5,
+	"energyCost" : 50,
+	"cooldownTime" : 0.25,
     "beamLength" : 100,
+	//Display only
+	"baseDps" : 7,
+	"fireTime" : 1.75,
+	"energyUsage" : 50,
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -90,6 +71,7 @@
         "duration" : 0,
         "armRotation" : 0,
         "weaponRotation" : 0,
+        "weaponOffset" : [-0.2, 0],
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -99,6 +81,7 @@
         "duration" : 0.25,
         "armRotation" : 0,
         "weaponRotation" : 0,
+        "weaponOffset" : [-0.2, 0],
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -108,12 +91,14 @@
   },
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
-    "elementalConfig" : {"ion" : {"projectileType" : "ionchain1", "projectileParameters" : {"speed" : 40}}},
+    "elementalConfig" : {"ion" : {"projectileType" : "ionchain5", "projectileParameters" : {"speed" : 125, "power" : 0, "knockback" : 50}}},
     "energyUsage" : 20,
-	"baseDps" : 5,
+	"baseDps" : 0,
+	"baseDamage" : 0,
 	"fireTime" : 0.75,
-	"projectileCount" : 5,
-	"inaccuracy" : 0.07
+	"projectileCount" : 10,
+	"inaccuracy" : 0.08,
+	"name" : "Ion Gust"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

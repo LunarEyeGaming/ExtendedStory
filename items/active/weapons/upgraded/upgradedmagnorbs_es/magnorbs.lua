@@ -70,7 +70,7 @@ function update(dt, fireMode, shiftHeld)
   elseif fireMode == "alt" and not status.resourceLocked("energy") then
 	if spawnTimer == 0 then
 	  if status.overConsumeResource("energy", 50 * baseSpawnTimer) then
-	    world.spawnProjectile("iceplasmarocket", mcontroller.position(), activeItem.ownerEntityId(), vec2.norm(world.distance(activeItem.ownerAimPosition(), mcontroller.position())), false, {speed = 50, power = 75})
+	    world.spawnProjectile("iceplasmarocket", mcontroller.position(), activeItem.ownerEntityId(), vec2.norm(world.distance(activeItem.ownerAimPosition(), mcontroller.position())), false, {speed = 50, power = 5 * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1))})
 	    spawnTimer = baseSpawnTimer
 	  end
 	end

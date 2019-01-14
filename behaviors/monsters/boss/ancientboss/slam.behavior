@@ -357,12 +357,55 @@
           "velocity": {"value": [0, 0]}
         }
       },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+		  "sound": {"value": "stunned"},
+		  "loops": {"value": -1}
+		}
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "stunned"},
+          "active": {"value": true}
+        }
+      },
       {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.5}
+          "time": {"value": 3}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "stunned"},
+          "active": {"value": false}
+        }
+      },
+	  {
+        "title": "stopAllSounds",
+        "type": "action",
+        "name": "stopAllSounds",
+        "parameters": {
+		  "sound": {"value": "stunned"}
+		}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.01}
         }
       }
     ]

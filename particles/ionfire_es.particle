@@ -1,0 +1,20 @@
+{
+  "kind" : "ionfire_es",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/ionfire_es/ionfire_es.animation",
+    "position" : [0, 0],
+	"initialVelocity" : [0, 0],
+	"finalVelocity" : [0, 5],
+	"light" : [0, 97, 91],
+	"fade" : 1,
+	"timeToLive" : 1,
+	"fullbright" : true,
+	"destructionAction" : "shrink",
+	"destructionTime" : 0.2,
+	"size" : 0.6,
+	"variance" : {
+	  "initialVelocity" : [2, 2]
+	}
+  }
+}

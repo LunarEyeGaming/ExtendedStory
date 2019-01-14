@@ -10,7 +10,7 @@
   "emitters" : [ ],
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "damageKind" : "plasma",
-  "speed" : 20,
+  "speed" : 35,
   "periodicActions" : [
     {
 	  "time" : 0.125,
@@ -57,83 +57,9 @@
 	  "config" : {
 	    "damageTeam" : { "type" : "friendly" },
 		"power" : 0,
-		"timeToLive" : 4,
+		"timeToLive" : 0,
 		"bounces" : -1,
 		"piercing" : true,
-		"periodicActions" : [
-		  {
-		    "time" : 0,
-			"repeat" : false,
-			"action" : "projectile",
-			"type" : "vaporizerexplosionexpansionmod",
-			"config" : {
-			  "knockback" : 0,
-			  "damageType" : "nodamage",
-			  "piercing" : true,
-			  "bounces" : -1,
-			  "speed" : 0,
-			  "power" : 0, 
-			  "processing" : "?replace;ffffff=ffffff00?scalenearest;6;6?border=1;999999", 
-			  "animationCycle" : 0.6,
-			  "timeToLive" : 4.0
-			}
-		  },
-		  {
-		    "time" : 0,
-			"repeat" : false,
-			"action" : "particle",
-			"specification" : {
-			  "type" : "animated",
-              "animation" : "/animations/ionpulse/ionpulse.animation",
-              "position" : [0, 0],
-              "initialVelocity" : [0, 0.0],
-              "finalVelocity" : [0, 0.0],
-              "approach" : [0, 10],
-              "fade" : 0.3,
-              "destructionAction" : "shrink",
-              "destructionTime" : 0.3,
-              "size" : 1.0,
-              "timeToLive" : 0.5,
-              "fullbright" : true,
-              "layer" : "middle",
-              "collidesForeground" : false,
-              "variance" : {
-                "position" : [0.0, 0.0],
-                "initialVelocity" : [0, 0]
-			  }
-			}
-		  },
-		  {
-		    "time" : 0,
-			"repeat" : false,
-			"action" : "sound",
-			"options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
-		  },
-		  {
-		    "time" : 0.5,
-			"action" : "particle",
-			"specification" : {
-			  "type" : "animated",
-              "animation" : "/animations/ionpulse/ionpulse.animation",
-              "position" : [0, 0],
-              "initialVelocity" : [0, 0.0],
-              "finalVelocity" : [0, 0.0],
-              "approach" : [0, 10],
-              "fade" : 0.3,
-              "destructionAction" : "shrink",
-              "destructionTime" : 0.3,
-              "size" : 1.0,
-              "timeToLive" : 0.5,
-              "fullbright" : true,
-              "layer" : "middle",
-              "collidesForeground" : false,
-              "variance" : {
-                "position" : [0.0, 0.0],
-                "initialVelocity" : [0, 0]
-			  }
-			}
-		  }
-		],
 		"actionOnReap" : [
 		  {
 		    "action" : "projectile",

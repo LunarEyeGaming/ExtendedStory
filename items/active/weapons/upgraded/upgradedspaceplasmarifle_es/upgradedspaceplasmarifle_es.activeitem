@@ -1,0 +1,159 @@
+{
+  "itemName" : "upgradedspaceplasmarifle_es",
+  "level" : 10,
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Because in this universe, everything is about space! ^cyan;Upgraded",
+  "shortdescription" : "Plasma Assault Rifle ^cyan;^reset;",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+
+  "inventoryIcon" : "upgradedspaceplasmarifle_es.png",
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "upgradedspaceplasmarifle_es.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/unrand/spaceplasmarifle/muzzleflash.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "stateTypes" : { "middle" : {
+      "default" : "idle",
+      "states" : {
+        "idle" : {
+          "frames" : 10,
+          "cycle" : 0.6,
+          "mode" : "loop"
+        }
+      }}},
+      "parts" : { "middlefullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.5, 0.375],
+          "zLevel" : 1,
+          "transformationGroups" : ["weapon"],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "middle" : {
+            "idle" : {
+              "properties" : {
+                "image" : "/items/active/weapons/upgraded/upgradedspaceplasmarifle_es/upgradedspaceplasmariflefullbright_es.png:<frame>"
+              }
+            }
+          }
+        }
+      }}
+    },
+    "sounds" : {
+      "fire" : ["/sfx/gun/uspr_fire.ogg"],
+      "altFire" : [ "/sfx/gun/plasma_shotgun4.ogg" ]
+    }
+  },
+  "baseOffset" : [0.5, 0.375],
+  "muzzleOffset" : [1.875, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.07,
+    "baseDps" : 15,
+    "energyUsage" : 60,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.015,
+    "fireType" : "auto",
+
+    "projectileType" : "spaceplasma",
+    "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/pulsecannonexplosion/pulsecannonexplosion.config"}]},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Sticky Plasma Mines",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.5,
+    "energyUsage" : 35,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.09,
+	"burstCount" : 3,
+	"burstTime" : 0.15,
+    "fireType" : "burst",
+	"baseDamage" : 1,
+	"baseDps" : 5,
+
+    "useParticleEmitter" : false,
+
+    "projectileType" : "stickyplasma",
+    "projectileParameters" : {"actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/burstexplosion/electricburstexplosion.config"}]},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 4,
+        "weaponRotation" : 4,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : 4,
+        "weaponRotation" : 4,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,6 +1,6 @@
 {
   "type" : "supervoidbossphase2",
-  "shortdescription" : "Supervoid Eye",
+  "shortdescription" : "Exvoidimus",
   "categories" : [ "supervoidbossphase2" ],
   "parts" : [ "eyeoverlay", "eye", "background", "beam", "eyeoverlaylaser", "vacuum" ],
 
@@ -247,6 +247,24 @@
         },
 		"megadamageResistance" : {
 		  "baseValue" : 1.0
+		},
+		"abyssResistance" : {
+		  "baseValue" : 0.5
+		},
+		"electricResistance" : {
+		  "baseValue" : 0.5
+		},
+		"fireResistance" : {
+		  "baseValue" : 0.5
+		},
+		"iceResistance" : {
+		  "baseValue" : 0.5
+		},
+		"ionResistance" : {
+		  "baseValue" : 0.5
+		},
+		"poisonResistance" : {
+		  "baseValue" : 0.5
 		},
         "shadowImmunity" : {
          "baseValue" : 1

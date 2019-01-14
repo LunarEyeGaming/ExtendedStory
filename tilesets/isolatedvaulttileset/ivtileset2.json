@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":58,
+ "tilecount":59,
  "tileheight":82,
  "tileproperties":
     {
@@ -344,6 +344,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"forgottenchest",
+         "tilesetDirection":"right"
+        },
+     "58":
+        {
+         "imagePositionX":"-76",
+         "imagePositionY":"4",
+         "object":"ruinbusterlasershield",
          "tilesetDirection":"right"
         },
      "6":
@@ -723,6 +730,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "58":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1090,6 +1104,12 @@
          "imageheight":16,
          "imagewidth":16
         },
+     "58":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/debugsprite.png",
+         "imageheight":24,
+         "imagewidth":152
+        },
      "6":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
@@ -1115,6 +1135,6 @@
          "imagewidth":32
         }
     },
- "tilewidth":40,
+ "tilewidth":152,
  "type":"tileset"
 }

@@ -1,0 +1,29 @@
+{
+  "objectName" : "ruinbusterlasershield",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "description",
+  "shortdescription" : "RuinbusterLaserShield",
+  "race" : "generic",
+
+  "category" : "unnamed",
+
+  "inventoryIcon" : "debugsprite.png:off.1",
+  "orientations" : [
+    {
+      "image" : "debugsprite.png:off.1",
+      "imagePosition" : [-72, 0],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "ruinbusterlasershield.animation",
+  "animationPosition" : [4, 12],
+  "animationParts" : {
+    "shield" : "debugsprite.png"
+  },
+
+  "scripts" : [ "ruinbusterlasershield.lua" ]
+}

@@ -1,0 +1,118 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "shield" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+		    "frames" : 1
+		  },
+          "on" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "loop"
+		  },
+          "activate" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "on"
+		  },
+          "deactivate" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "off"
+		  },
+          "break" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
+        }
+      }
+    },
+    "parts" : {
+      "shield" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true
+        },
+        "partStates" : {
+          "shield" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:off.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:on.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:activate.<frame>"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:deactivate.<frame>"
+              }
+            },
+            "break" : {
+              "properties" : {
+                "image" : "<partImage>:break.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "lights" : {
+    "glow" : {
+      "active" : false,
+      "position" : [0.0, 1.0],
+      "color" : [36, 120, 36],
+      "pointLight" : true
+    }
+  },
+
+  "particleEmitters" : {
+    "charge" : {
+      "active" : false,
+      "offsetRegion" : [ -1.5, 0.5, 1.5, 0.5 ],
+      "emissionRate" : 5.0,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [81, 189, 59, 230],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "offsetRegion" : [0, 0, 0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 5.0],
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.1,
+            "approach" : [0, 10],
+            "timeToLive" : 0.35,
+            "light" : [150, 150, 50],
+            "variance" : {
+              "initialVelocity" : [0, 1.0]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "sounds" : {
+    "activate" : [],
+	"deactivate" : [],
+	"break" : []
+  }
+}

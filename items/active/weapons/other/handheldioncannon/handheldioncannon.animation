@@ -5,21 +5,27 @@
         "default" : "squirm",
         "states" : {
           "idle" : {
-            "frames" : 11,
-			"cycle" : 0.6,
+            "frames" : 5,
+			"cycle" : 0.5,
 			"mode" : "transition",
 			"transition" : "squirm",
 			"properties" : {
-              "lightsOff" : ["fire", "idle"]
-            }
+              "lightsOff" : ["fire", "idle"],
+              "particleEmittersOn" : ["reload"],
+			  "particleEmittersOff" : ["fire"]
+            },
+			"frameProperties" : {
+			  "immediateSound" : ["/sfx/gun/reload/rocket_reload_clip1.ogg", "", "", "", "/sfx/gun/mech_gravitymine_reload.ogg"]
+			}
           },
           "squirm" : {
-            "frames" : 8,
-            "cycle" : 1.0,
+            "frames" : 5,
+            "cycle" : 0.4,
             "mode" : "loop",
             "properties" : {
               "lightsOff" : ["fire"],
-              "lightsOn" : ["idle"]
+              "lightsOn" : ["idle"],
+              "particleEmittersOff" : ["reload"]
             }
           },
           "fire" : {
@@ -28,7 +34,8 @@
             "mode" : "loop",
             "properties" : {
               "lightsOff" : ["idle"],
-              "lightsOn" : ["fire"]
+              "lightsOn" : ["fire"],
+			  "particleEmittersOn" : ["fire"]
             }
           }
         }
@@ -52,7 +59,7 @@
       "gnome" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.0, 0.5],
+          "offset" : [0.5, 0.5],
           "transformationGroups" : ["weapon"]
         },
 
@@ -80,7 +87,7 @@
         "properties" : {
           "centered" : true,
 		  "fullbright" : true,
-          "offset" : [0.0, 0.5],
+          "offset" : [0.5, 0.5],
           "zLevel" : 1,
           
           "transformationGroups" : ["weapon"]
@@ -110,7 +117,7 @@
         "properties" : {
           "zLevel" : 2,
           "centered" : true,
-          "offset" : [2.0, 0.60],
+          "offset" : [2.2, 0.60],
           "fullbright" : true,
           "transformationGroups" : ["weapon"]
         },
@@ -191,7 +198,41 @@
           }
         }
       ]
-    }
+    },
+	"reload" : {
+      "active" : false,
+      "transformationGroups" : ["weapon"],
+      "emissionRate" : 2,
+      "particles" : [
+        {
+          "particle" : "hioncannonreload"
+        }
+      ]
+    },
+	"fire" : {
+	  "active" : false,
+	  "emissionRate" : 100,
+	  "offsetRegion" : [0.5, 0.25, 1, 0.25],
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "animated",
+			"animation" : "/animations/ionfire_es/ionfire_es.animation",
+			"position" : [1, 0],
+			"initialVelocity" : [5, 0],
+			"finalVelocity" : [0, 10],
+            "approach" : [0, 10],
+			"light" : [0, 97, 91],
+			"fade" : 1,
+			"timeToLive" : 1,
+			"fullbright" : true,
+			"destructionAction" : "shrink",
+			"destructionTime" : 0.2,
+			"size" : 0.6
+		  }
+		}
+	  ]
+	}
   },
 
   "sounds" : {

@@ -101,7 +101,7 @@
 			"mode" : "transition",
 			"transition" : "idle",
             "properties" : {
-              "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg",
+              "immediateSound" : "/sfx/npc/darkabyss/antimovementzone_windup.ogg",
               "immediateSoundRangeMultiplier" : 3
             }
 		  },
@@ -116,7 +116,7 @@
 			"mode" : "transition",
 			"transition" : "inactive",
             "properties" : {
-              "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
+              "immediateSound" : "/sfx/gun/ancientchaingun_beamstop.ogg",
               "immediateSoundRangeMultiplier" : 3
             }
 		  }
@@ -592,7 +592,7 @@
 	  "rangeMultiplier" : 3
 	},
 	"windup3" : {
-	  "pool" : [ "/sfx/melee/dragonhead_charge2.ogg" ],
+	  "pool" : [ "/sfx/npc/boss/annihilator_death.ogg" ],
 	  "rangeMultiplier" : 3
 	},
 	"windup4" : {

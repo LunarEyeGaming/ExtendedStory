@@ -5,16 +5,17 @@
         "default" : "idle",
         "states" : {
           "cooldown" : {
-            "frames" : 2,
-			"cycle" : 0.25,
-			"mode" : "loop",
+            "frames" : 6,
+			"cycle" : 1,
+			"mode" : "transition",
+			"transition" : "idle",
 			"properties" : {
               "lightsOff" : ["fire", "idle"]
             }
           },
           "idle" : {
-            "frames" : 5,
-            "cycle" : 0.5,
+            "frames" : 11,
+            "cycle" : 1.1,
             "mode" : "loop",
             "properties" : {
               "lightsOff" : ["fire"],
@@ -23,8 +24,8 @@
             }
           },
           "fire" : {
-            "frames" : 4,
-            "cycle" : 0.25,
+            "frames" : 11,
+            "cycle" : 0.4,
             "mode" : "loop",
             "properties" : {
               "lightsOff" : ["idle"],
@@ -33,6 +34,17 @@
           }
         }
       },
+	  "beamorigin" : {
+	    "default" : "off",
+		"states" : {
+		  "off" : {},
+		  "fire" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
+		}
+	  },
          
       "firing" : {
         "default" : "off",
@@ -52,7 +64,7 @@
       "gun" : {
         "properties" : {
           "centered" : true,
-          "offset" : [3.1, 0.5],
+          "offset" : [1.1, 0.5],
           "transformationGroups" : ["weapon"]
         },
 
@@ -70,7 +82,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "<partImage>:fire"
+                "image" : "<partImage>:fire.<frame>"
               }
             }
           }
@@ -80,7 +92,7 @@
         "properties" : {
           "centered" : true,
 		  "fullbright" : true,
-          "offset" : [3.1, 0.5],
+          "offset" : [1.1, 0.5],
           "zLevel" : 1,
           
           "transformationGroups" : ["weapon"]
@@ -100,7 +112,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "<partImage>:fire"
+                "image" : "<partImage>:fire.<frame>"
               }
             }
           }
@@ -110,15 +122,13 @@
         "properties" : {
           "zLevel" : 2,
           "centered" : true,
-          "offset" : [7.2, 0.5],
+          "offset" : [4, 0.5],
           "fullbright" : true,
           "transformationGroups" : ["weapon"]
         },
 
         "partStates" : {
-          "gun" : {
-            "idle" : {},
-            "cooldown" : {},
+          "beamorigin" : {
             "fire" : {
               "properties" : {
                 "image" : "<partImage>:<frame>"
@@ -158,6 +168,11 @@
       "flickerMinIntensity" : 0.9,
       "flickerMaxIntensity" : 1,
       "flickerIntensityVariance" : 0.0
+    },
+	"muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [0, 0, 0]
     }
   },
 
@@ -190,6 +205,11 @@
           }
         }
       ]
+    },
+	"muzzleFlash" : {
+      "transformationGroups" : ["muzzle"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
     }
   },
 

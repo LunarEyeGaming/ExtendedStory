@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "staticcell", "count" : 5 },
+	{ "item" : "arkite", "count" : 30 },
+	{ "item" : "spaceplasmarifle", "count" : 1 },
+	{ "item" : "weaponamplifier", "count" : 1 },
+	{ "item" : "ancientupgrademodule_es", "count" : 9 }
+  ],
+  "output" : { "item" : "upgradedspaceplasmarifle_es", "count" : 1 },
+  "groups" : [ "upgradestation", "upgrades", "all" ]
+}

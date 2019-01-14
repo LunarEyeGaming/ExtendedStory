@@ -1,0 +1,17 @@
+{
+  "name" : "supervoidhex",
+  "effectConfig" : {
+    "powerModifier" : 0.33,
+	"healingMultiplier" : 0.5
+  },
+  "defaultDuration" : 3,
+
+  "scripts" : [
+    "supervoidhex.lua"
+  ],
+
+  "animationConfig" : "supervoidhex.animation",
+
+  "label" : "Ocular Despair - Damage significantly decreased and healing inflicts damage",
+  "icon" : "/interface/statuses/essencedrain.png"
+}

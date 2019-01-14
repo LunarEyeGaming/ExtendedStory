@@ -1,0 +1,225 @@
+{
+  "name": "ruinbusterboss-rocketattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "left"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "right"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+			"title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepStartPos"},
+			  "speed": {"value": 50}
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepEndPos"},
+			  "speed": {"value": 25}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+        	        "target": {"key": "target"}
+        	      },
+        	      "output": {
+        	        "vector": "aimVector"
+        	      }
+        	    },
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, -12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "cyberbossmissile"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, 12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "cyberbossmissile"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "rocketfire"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.75}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
+  }
+}

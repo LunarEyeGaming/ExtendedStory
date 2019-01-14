@@ -1,0 +1,13 @@
+{
+  "frameGrid" : {
+    "size" : [39, 65],
+    "dimensions" : [3, 1],
+
+    "names" : [
+      [ "idle", "windup", "active" ]
+    ]
+  },
+  "aliases" : {
+    "winddown" : "windup"
+  }
+}

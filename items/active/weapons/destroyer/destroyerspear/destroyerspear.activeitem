@@ -70,8 +70,9 @@
 	},
 	"projectileParameters" : {
 	  "speed" : 35,
-	  "power" : 200
-	}
+	  "power" : 400
+	},
+	"baseDps" : 20
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -8,18 +8,17 @@
   "pointLight" : true,
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "cyberbossmissilenopierce"
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/enemyregularexplosion2.config"
     }
   ],
   "emitters" : [ "rocketsmoke" ],
-  "power" : 40.0,
+  "power" : 100.0,
   "speed" : 30.0,
-  "timeToLive" : 0.8,
+  "timeToLive" : 10.0,
   "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "default",
-  "piercing" : true,
 
   "scripts" : [ "cyberbossmissile.lua" ],
   "controlForce" : 90,

@@ -1,10 +1,11 @@
 {
   "input" : [
-    { "item" : "refinedaegisalt", "count" : 10 },
+    { "item" : "refinedaegisalt", "count" : 20 },
     { "item" : "battery", "count" : 3 },
-	{ "item" : "refinedferozium", "count" : 10 },
+	{ "item" : "ironbar", "count" : 10 },
 	{ "item" : "ioncell", "count" : 2 },
-	{ "item" : "solariumstar", "count" : 15 }
+	{ "item" : "solariumstar", "count" : 15 },
+	{ "item" : "refinedlunarite", "count" : 25 } // Placeholder for a new item that can only be acquired through specific circumstances.
   ],
   "output" : { "item" : "ionrailgun_es", "count" : 1 },
   "groups" : [ "craftingaccelerator", "weapons", "all" ]

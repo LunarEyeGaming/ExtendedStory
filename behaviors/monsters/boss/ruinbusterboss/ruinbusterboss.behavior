@@ -1,0 +1,321 @@
+{
+  "name": "ruinbusterboss",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 150},
+              "keepTargetInRange": {"value": 150},
+              "targetEntityTypes": {"value": ["player"]},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 9999}
+            }
+          },
+          {
+            "title": "faceDirection",
+            "type": "action",
+            "name": "faceDirection",
+            "parameters": {
+              "direction": {"value": 1}
+            }
+          },
+          {
+            "title": "Spiderboss",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "faceDirection",
+                    "type": "action",
+                    "name": "faceDirection",
+                    "parameters": {
+                      "direction": {"value": 1}
+                    }
+                  },
+                  {
+                    "title": "Reset",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setDamageBar",
+                        "type": "action",
+                        "name": "setDamageBar",
+                        "parameters": {
+                          "type": {"value": "Special"}
+                        }
+                      },
+					  {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.8}
+                        }
+                      },
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+						  {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+							  "fail": {"value": 1},
+                              "success": {"value": -1}
+							},
+							"children": [
+							  {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+        							  "title": "ruinbusterboss-rocketattack",
+        							  "type": "module",
+        							  "name": "ruinbusterboss-rocketattack",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ruinbusterboss-lasereyes",
+        							  "type": "module",
+        							  "name": "ruinbusterboss-lasereyes",
+        							  "parameters": {}
+        							},
+									{
+        							  "title": "ruinbusterboss-ramattack",
+        							  "type": "module",
+        							  "name": "ruinbusterboss-ramattack",
+        							  "parameters": {}
+        							}
+								  ]
+								}
+						      }
+							]
+                          }
+						]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+				  {
+        		    "title": "ancientboss2-dying",
+        		    "type": "module",
+        		    "name": "ancientboss2-dying",
+        		    "parameters": { }
+        		  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAggressive",
+                    "type": "action",
+                    "name": "setAggressive",
+                    "parameters": {
+                      "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setDamageBar",
+                    "type": "action",
+                    "name": "setDamageBar",
+                    "parameters": {
+                      "type": {"value": "None"}
+                    }
+                  },
+				  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  },
+				  {
+        		    "title": "flyToPosition",
+        		    "type": "action",
+        		    "name": "flyToPosition",
+        		    "parameters": {
+        		      "position": {"key": "spawn"},
+        		      "tolerance": {"value": 1}
+        		    }
+        		  },
+				  {
+        		    "title": "setVelocity",
+        		    "type": "action",
+        		    "name": "setVelocity",
+        		    "parameters": {
+        		      "velocity": {"value": [0, 0]}
+        		    }
+        		  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

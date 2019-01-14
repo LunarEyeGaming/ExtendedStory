@@ -1731,7 +1731,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":856,
+                 "x":736,
                  "y":416
                 }, 
                 {
@@ -1979,6 +1979,132 @@
                  "width":16,
                  "x":1160,
                  "y":640
+                }, 
+                {
+                 "height":32,
+                 "id":1413,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"uppersweepend\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1024,
+                 "y":288
+                }, 
+                {
+                 "height":32,
+                 "id":1414,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"uppersweepstart\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":368,
+                 "y":288
+                }, 
+                {
+                 "height":32,
+                 "id":1415,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"minionstart\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":528,
+                 "y":472
+                }, 
+                {
+                 "height":32,
+                 "id":1416,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"minionend\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":920,
+                 "y":472
+                }, 
+                {
+                 "height":32,
+                 "id":1417,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"lowersweepend\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1024,
+                 "y":576
+                }, 
+                {
+                 "height":32,
+                 "id":1418,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"lowersweepstart\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":368,
+                 "y":576
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2661,10 +2787,10 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1413,
+ "nextobjectid":1419,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.6",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {
