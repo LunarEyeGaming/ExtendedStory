@@ -24,7 +24,7 @@
 		"type": "action",
 		"name": "loadUniqueEntity",
 		"parameters": {
-		  "uniqueId": {"value": "left"}
+		  "uniqueId": {"value": "pos1"}
 		},
 		"output": {
 		  "entity": "sweepStart"
@@ -35,7 +35,7 @@
 		"type": "action",
 		"name": "loadUniqueEntity",
 		"parameters": {
-		  "uniqueId": {"value": "right"}
+		  "uniqueId": {"value": "pos4"}
 		},
 		"output": {
 		  "entity": "sweepEnd"

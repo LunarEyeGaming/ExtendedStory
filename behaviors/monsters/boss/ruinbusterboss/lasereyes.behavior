@@ -361,6 +361,16 @@
 			}
 		  },
 		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "eyes"}
+			}
+		  },
+		  {
 			"title": "timer",
 			"type": "action",
 			"name": "timer",

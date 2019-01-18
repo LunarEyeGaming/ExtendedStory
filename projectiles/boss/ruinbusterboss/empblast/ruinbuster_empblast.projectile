@@ -1,0 +1,38 @@
+{
+  "projectileName" : "ruinbuster_empblast",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "physics" : "laser",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 75,
+  "timeToLive" : 3,
+  "bounces" : 0,
+  "fullbright" : true,
+  "renderLayer" : "Monster+50",
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "electric",
+  "periodicActions" : [
+    {
+	  "time" : 0.05,
+	  "action" : "particle",
+	  "specification" : {
+	    "type" : "animated",
+		"animation" : "/animations/electroshock/electroshock.animation",
+		"fullbright" : true,
+		"light" : [218, 83, 2],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 0],
+		"position" : [0, 0],
+		"timeToLive" : 1,
+		"variance" : {
+		  "position" : [4, 4]
+		}
+	  }
+	}
+  ],
+  "actionOnReap" : [
+  ],
+  "statusEffects" : [ "empeffect" ]
+}

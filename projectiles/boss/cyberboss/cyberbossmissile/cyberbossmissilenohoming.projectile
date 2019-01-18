@@ -1,0 +1,22 @@
+{
+  "projectileName" : "cyberbossmissilenohoming",
+  "image" : "cyberbossmissile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 2,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [128, 128, 255],
+  "pointLight" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/enemyregularexplosion2.config"
+    }
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 100.0,
+  "speed" : 30.0,
+  "timeToLive" : 10.0,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

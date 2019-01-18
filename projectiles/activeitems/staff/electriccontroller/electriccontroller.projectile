@@ -1,7 +1,7 @@
 {
   "projectileName" : "electriccontroller",
   "physics" : "laser",
-  "timeToLive" : 6,
+  "timeToLive" : 2.5,
   "image" : "electriccontroller.png",
   "animationCycle" : 0.3,
   "lightColor" : [60, 30, 100],
@@ -78,6 +78,251 @@
           }
         }
       ]
+    },
+	{
+	  "time" : 2.0, 
+	  "repeat" : true, 
+	  "action" : "projectile", 
+	  "inheritDamageFactor" : 1,
+	  "type" : "energyfist",
+      "angle" : 90,
+      "fuzzAngle" : 180,
+	  "config" : {
+	    "speed" : 80,
+		"timeToLive" : 0.25,
+		"piercing" : true,
+		"processing" : "?0",
+		"periodicActions" : [
+		  {
+		    "time" : 0.025,
+			"action" : "projectile",
+			"type" : "energyfist", 
+	        "inheritDamageFactor" : 1,
+			"config" : {
+			  "piercing" : true,
+			  "speed" : 0,
+			  "processing" : "?0",
+			  "timeToLive" : 1,
+			  "actionOnReap" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "teslabolt", 
+	              "inheritDamageFactor" : 1,
+				  "config" : { "speed" : 0 }
+				}
+			  ]
+			}
+		  }
+		],
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "electricorb",
+			"direction" : [1.0, 0.0],
+			"config" : {
+			  "timeToLive" : 1,
+			  "periodicActions" : [
+			    {
+				  "time" : 0.25,
+				  "repeat" : false,
+				  "action" : "projectile",
+				  "type" : "energyfist", 
+	              "inheritDamageFactor" : 1,
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : {
+				    "speed" : 80,
+					"timeToLive" : 0.25,
+		            "piercing" : true,
+					"processing" : "?0",
+					"periodicActions" : [
+					  {
+					    "time" : 0.025,
+						"action" : "projectile",
+						"type" : "energyfist",
+						"config" : {
+						  "piercing" : true,
+						  "speed" : 0,
+						  "processing" : "?0",
+						  "timeToLive" : 1,
+						  "actionOnReap" : [
+						    {
+							  "action" : "projectile",
+							  "type" : "teslabolt", 
+	                          "inheritDamageFactor" : 1,
+							  "config" : { "speed" : 0 }
+							}
+						  ]
+						}
+					  }
+					],
+					"actionOnReap" : [
+					  {
+					    "action" : "projectile",
+						"type" : "electricorb",
+						"direction" : [1.0, 0.0],
+						"config" : {
+						  "timeToLive" : 1,
+						  "periodicActions" : [
+						    {
+							  "time" : 0.25,
+							  "repeat" : false,
+							  "action" : "projectile",
+							  "type" : "energyfist", 
+	                          "inheritDamageFactor" : 1,
+							  "angle" : 90,
+							  "fuzzAngle" : 180,
+							  "config" : {
+							    "speed" : 80,
+								"timeToLive" : 0.25,
+		                        "piercing" : true,
+								"processing" : "?0",
+								"periodicActions" : [
+								  {
+								    "time" : 0.025,
+									"action" : "projectile",
+									"type" : "energyfist",
+									"config" : {
+									  "piercing" : true,
+									  "speed" : 0,
+									  "processing" : "?0",
+									  "timeToLive" : 1,
+									  "actionOnReap" : [
+									    {
+										  "action" : "projectile",
+										  "type" : "teslabolt", 
+	                                      "inheritDamageFactor" : 1,
+										  "config" : { "speed" : 0 }
+										}
+									  ]
+									}
+								  }
+								],
+								"actionOnReap" : [
+								  {
+								    "action" : "projectile",
+									"type" : "electricorb",
+									"direction" : [1.0, 0.0],
+									"config" : {
+									  "timeToLive" : 1,
+									  "periodicActions" : [
+									    {
+										  "time" : 0.25,
+										  "repeat" : false,
+										  "action" : "projectile",
+										  "type" : "energyfist", 
+	                                      "inheritDamageFactor" : 1,
+										  "angle" : 90,
+										  "fuzzAngle" : 180,
+										  "config" : {
+										    "speed" : 80,
+											"timeToLive" : 0.25,
+											"piercing" : true,
+											"processing" : "?0",
+											"periodicActions" : [
+											  {
+											    "time" : 0.025,
+												"action" : "projectile",
+												"type" : "energyfist",
+												"config" : {
+												  "piercing" : true,
+												  "speed" : 0,
+												  "processing" : "?0",
+												  "timeToLive" : 1,
+												  "actionOnReap" : [
+												    {
+													  "action" : "projectile",
+													  "type" : "teslabolt", 
+	                                                  "inheritDamageFactor" : 1,
+										              "config" : { "speed" : 0 }
+													}
+												  ]
+												}
+											  }
+											],
+											"actionOnReap" : [
+											  {
+											    "action" : "projectile",
+												"type" : "electricorb",
+												"direction" : [1.0, 0.0],
+												"config" : {
+												  "timeToLive" : 1,
+												  "periodicActions" : [
+												    {
+													  "time" : 0.25,
+													  "repeat" : false,
+													  "action" : "projectile",
+													  "type" : "energyfist", 
+	                                                  "inheritDamageFactor" : 1,
+													  "angle" : 90,
+													  "fuzzAngle" : 180,
+													  "config" : {
+													    "speed" : 80,
+														"timeToLive" : 0.25,
+														"piercing" : true,
+														"processing" : "?0",
+														"periodicActions" : [
+														  {
+														    "time" : 0.025,
+															"action" : "projectile",
+															"type" : "energyfist",
+															"config" : {
+															  "piercing" : true,
+															  "speed" : 0,
+															  "processing" : "?0",
+															  "timeToLive" : 1,
+															  "actionOnReap" : [
+															    {
+																  "action" : "projectile",
+																  "type" : "teslabolt", 
+	                                                              "inheritDamageFactor" : 1,
+													              "config" : { "speed" : 0 }
+																}
+															  ]
+															}
+														  }
+														],
+														"actionOnReap" : [
+														  {
+														    "action" : "projectile",
+															"type" : "electricorb",
+															"direction" : [1.0, 0.0],
+															"config" : {
+															  "timeToLive" : 1,
+															  "actionOnReap" : [
+															    {
+															      "action" : "config",
+																  "file" : "/projectiles/boss/ancientavatar/lightningboltexplosion/lightningboltexplosion.config"
+																}
+															  ]
+															} 
+														  }
+														]
+													  }
+													}
+												  ]
+												}
+											  }
+											]
+										  }
+										}
+									  ]
+									}
+								  }
+								]
+							  }
+							}
+						  ]
+						}
+					  }
+					]
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  }
     }
   ],
   "actionOnReap" : [
@@ -99,12 +344,5 @@
 
   "piercing" : true,
   "bounces" : -1,
-
-  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
-
-  "controlMovement" : {
-    "maxSpeed" : 15,
-    "controlForce" : 80
-  },
   "persistentAudio" : "/sfx/melee/barrier_create_electric.ogg"
 }

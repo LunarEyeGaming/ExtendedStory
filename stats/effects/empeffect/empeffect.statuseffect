@@ -1,0 +1,20 @@
+{
+  "name" : "empeffect",
+  "effectConfig" : {
+    "starvationCompoundDamage" : 2,
+    "movementModifiers" : {
+      "speedModifier" : 0.5
+    },
+    "soundInterval" : 0.5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "empeffect.lua"
+  ],
+
+  "animationConfig" : "empeffect.animation",
+
+  "label" : "EMP Stun - Total energy drainage!",
+  "icon" : "/interface/statuses/electric.png"
+}
