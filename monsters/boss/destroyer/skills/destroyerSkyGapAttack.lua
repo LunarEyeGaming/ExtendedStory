@@ -12,6 +12,7 @@ function destroyerSkyGapAttack.enter()
     bobHeight = config.getParameter("destroyerSkyGapAttack.bobHeight"),
     skillTime = config.getParameter("destroyerSkyGapAttack.skillTime"),
     direction = util.randomDirection(),
+    vDirection = util.randomDirection(),
     basePosition = self.spawnPosition,
     cruiseDistance = config.getParameter("cruiseDistance")
   }
@@ -44,7 +45,7 @@ function destroyerSkyGapAttack.update(dt, stateData)
   local angle = 2.0 * math.pi * stateData.timer / stateData.bobTime
   local targetPosition = {
     position[1] + stateData.direction * 5,
-    stateData.basePosition[2] + stateData.bobHeight * math.cos(angle)
+    self.targetPosition[2] + stateData.cruiseDistance
   }
   flyTo(targetPosition)
 

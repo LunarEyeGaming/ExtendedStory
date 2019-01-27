@@ -7,7 +7,7 @@
 
   "animation" : "ruinbusterboss.animation",
 
-  "dropPools" : [ "ancientoneTreasure" ],
+  "dropPools" : [ "ruinbusterTreasure" ],
 
   "baseParameters" : {
     "scripts" : [
@@ -43,6 +43,19 @@
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
+	
+	"damageParts" : {
+	  "laser" : {
+        "damage" : 15,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma",
+        "knockback" : 0,
+        "damageRepeatTimeout" : 1.0,
+
+        "damageTeam" : 0
+      }
+	},
 
     "touchDamage" : {
       "poly" : [ [8.4375, 16.4375], [16.4375, 8.4375], [16.4375, -8.4375], [8.4375, -16.4375], [-8.4375, -16.4375], [-16.4375, -8.4375], [-16.4375, 8.4375], [-8.4375, 16.4375] ],
@@ -78,7 +91,7 @@
           "baseValue" : 2500
         },
         "protection" : {
-          "baseValue" : 50.0
+          "baseValue" : 25.0
         },
         "healthRegen" : {
           "baseValue" : 0.0

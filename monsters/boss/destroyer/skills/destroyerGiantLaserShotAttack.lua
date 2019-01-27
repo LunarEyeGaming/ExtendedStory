@@ -12,6 +12,7 @@ function destroyerGiantLaserShotAttack.enter()
     bobHeight = config.getParameter("destroyerGiantLaserShotAttack.bobHeight"),
     skillTime = config.getParameter("destroyerGiantLaserShotAttack.skillTime"),
     direction = util.randomDirection(),
+    vDirection = util.randomDirection(),
     basePosition = self.spawnPosition,
     cruiseDistance = config.getParameter("cruiseDistance")
   }
@@ -39,12 +40,18 @@ function destroyerGiantLaserShotAttack.update(dt, stateData)
   elseif toTarget[1] > stateData.cruiseDistance then
     stateData.direction = 1
   end
+  
+  if toTarget[2] < -stateData.cruiseDistance then
+    stateData.vDirection = -1
+  elseif toTarget[2] > stateData.cruiseDistance then
+    stateData.vDirection = 1
+  end
 
   stateData.timer = stateData.timer + dt
   local angle = 2.0 * math.pi * stateData.timer / stateData.bobTime
   local targetPosition = {
     position[1] + stateData.direction * 5,
-    stateData.basePosition[2] + stateData.bobHeight * math.cos(angle)
+    position[2] + stateData.vDirection * 5
   }
   flyTo(targetPosition)
 

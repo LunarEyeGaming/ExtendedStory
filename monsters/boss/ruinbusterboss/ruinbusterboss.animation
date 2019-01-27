@@ -373,7 +373,8 @@
             },
 			"fire" : {
               "properties" : {
-                "image" : "<partImage>:fire.<frame>"
+                "image" : "<partImage>:fire.<frame>",
+				"damageArea" : [ [30, 4.0625], [-30, 4.0625], [-30, -4.0625], [30, -4.0625] ]
               }
             },
 			"winddown" : {
@@ -705,63 +706,6 @@
     "teleportOut" : {
       "pool" : [ "/sfx/npc/boss/ancientboss_disappear.ogg" ],
       "rangeMultiplier" : 1.5
-    }
-  },
-
-  "lights" : {
-    "glow" : {
-      "active" : true,
-      "position" : [0, 0],
-      "color" : [200, 0, 200],
-      "pointLight" : false
-    },
-    "beam1" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam1-2" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam2" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam2-2" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam3" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam3-2" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam4" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
-    },
-    "beam4-2" : {
-      "active" : false,
-      "position" : [0, 0],
-      "color" : [255, 0, 255],
-      "pointLight" : false
     }
   }
 }

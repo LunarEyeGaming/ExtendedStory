@@ -11,7 +11,7 @@
   "fullbright" : true,
   "renderLayer" : "Monster+50",
   "piercing" : false,
-  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "damageKind" : "electric",
   "periodicActions" : [
     {
@@ -21,7 +21,7 @@
 	    "type" : "animated",
 		"animation" : "/animations/electroshock/electroshock.animation",
 		"fullbright" : true,
-		"light" : [218, 83, 2],
+		"light" : [2, 83, 218],
 		"initialVelocity" : [0, 0],
 		"finalVelocity" : [0, 0],
 		"position" : [0, 0],

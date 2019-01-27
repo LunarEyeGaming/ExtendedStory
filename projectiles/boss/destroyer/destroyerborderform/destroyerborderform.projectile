@@ -44,6 +44,34 @@
 	{
 	  "action" : "projectile",
 	  "type" : "invisibleprojectile",
+	  "direction" : [1.0, 0.0],
+	  "config" : {
+	    "movementSettings" : {
+		  "collisionEnabled" : false
+	    },
+		"speed" : 200,
+		"timeToLive" : 0.55,
+		"power" : 0,
+		"piercing" : true,
+		"damageTeam" : { "type" : "indiscriminate" },
+		"actionOnReap" : [
+	      {
+		    "action" : "projectile",
+			"type" : "destroyerlasersweep",
+			"config" : {
+			  "power" : 1000,
+			  "timeToLive" : 1000,
+			  "speed" : 0,
+			  "damageKind" : "megadamage",
+			  "piercing" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
 	  "direction" : [-1.0, 0.0],
 	  "config" : {
 	    "movementSettings" : {
@@ -51,6 +79,34 @@
 	    },
 		"speed" : 200,
 		"timeToLive" : 0.5,
+		"power" : 0,
+		"piercing" : true,
+		"damageTeam" : { "type" : "indiscriminate" },
+		"actionOnReap" : [
+	      {
+		    "action" : "projectile",
+			"type" : "destroyerlasersweep",
+			"config" : {
+			  "power" : 1000,
+			  "timeToLive" : 1000,
+			  "speed" : 0,
+			  "damageKind" : "megadamage",
+			  "piercing" : true
+			}
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "direction" : [-1.0, 0.0],
+	  "config" : {
+	    "movementSettings" : {
+		  "collisionEnabled" : false
+	    },
+		"speed" : 200,
+		"timeToLive" : 0.55,
 		"power" : 0,
 		"piercing" : true,
 		"damageTeam" : { "type" : "indiscriminate" },

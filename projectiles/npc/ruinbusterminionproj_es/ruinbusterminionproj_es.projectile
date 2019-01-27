@@ -1,0 +1,82 @@
+{
+  "projectileName" : "ruinbusterminionproj_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 10,
+  "image" : "ruinbusterminionproj_es.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 25,
+  "animationCycle" : 1,
+  "lightColor" : [0, 219, 95],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "frameNumber" : 4,
+  "power" : 15,
+  "damageKind" : "plasma",
+  "fullbright" : true,
+  
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 36,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 72,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 108,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 144,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 180,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 216,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 252,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 288,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "angleAdjust" : 324,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "ruinbusterminionprojsmall_es",
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ruinbusterprojexplosion_es/ruinbusterprojexplosion_es.config"
+	}
+  ]
+}

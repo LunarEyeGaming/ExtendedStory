@@ -22,7 +22,7 @@
       "/monsters/boss/truedestroyer/dieState.lua"
     ],
 
-    "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerScatterAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack", "quantumsentryDestructionAttack"],
+    "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack", "quantumsentryDestructionAttack"],
     "skillCount" : 7,
 
     "phases" : [
@@ -39,25 +39,25 @@
         "enterPhase" : "destroyerMinionsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.6,
-        "skills" : ["destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
+        "skills" : ["destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
       },
       {
         "enterPhase" : "destroyerMegaLaserAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.4,
-        "skills" : ["destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack"]
       },
       {
         "enterPhase" : "destroyerMegaLaserAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.2,
-        "skills" : ["destroyerScatterAttack", "destroyerSprayNPrayAttack", "destroyerScatterAttack", "destroyerLaserShotsAttack", "destroyerScatterAttack", "destroyerMegaLaserAttack", "destroyerScatterAttack", "destroyerMinionsAttack", "destroyerScatterAttack"]
+        "skills" : ["ufoTeleportAttack", "destroyerSprayNPrayAttack", "ufoTeleportAttack", "destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
       },
       {
         "enterPhase" : "destroyerSwoopAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.1,
-        "skills" : ["destroyerSwoopAttack", "destroyerSwoopAttack", "destroyerScatterAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerSwoopAttack", "destroyerScatterAttack"]
+        "skills" : ["destroyerSwoopAttack", "destroyerSwoopAttack", "ufoTeleportAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerSwoopAttack", "ufoTeleportAttack"]
       }
     ],
 

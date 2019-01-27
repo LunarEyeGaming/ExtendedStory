@@ -8,8 +8,8 @@
 
     "destroyerBulletCirclesAttack" : {
       "skillTime": 5,
-      "bobTime" : 2,
-      "bobHeight" : 0,
+      "orbitTime" : 10,
+      "orbitRadius" : 25,
 
       "projectileOffset" : [0, 0],
       "fireInterval" : 0.33,
@@ -37,7 +37,7 @@
 				  "type" : "destroyershot",
 				  "angle" : 90,
 				  "fuzzAngle" : 180,
-				  "config" : {"power" : 225, "speed" : 50, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ ] }
+				  "config" : {"power" : 125, "speed" : 50, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ ] }
 				}
 			  ]
 			}

@@ -1,0 +1,270 @@
+{
+  "name": "ruinbusterboss-minionattack2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "pos3"}
+		},
+		"output": {
+		  "entity": "fireId"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "fireId"}
+		},
+		"output": {
+		  "position": "firePos"
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+			"title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "firePos"},
+			  "speed": {"value": 50}
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "timer",
+			"type": "action",
+			"name": "timer",
+			"parameters": {
+			  "time": {"value": 3}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+        	        "target": {"key": "target"}
+        	      },
+        	      "output": {
+        	        "vector": "aimVector"
+        	      }
+        	    },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.5}
+				  }
+				},
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, -12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "spawnmonster", "type": "ruinbuster_minion_es", "level": 10}]}},
+                    "projectileType": {"value": "orbitalup"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, 12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "spawnmonster", "type": "ruinbuster_minion_es", "level": 10}]}},
+                    "projectileType": {"value": "orbitalup"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "rocketfire"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 9999}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+	    "title": "dynamic",
+		"type": "composite",
+		"name": "dynamic",
+		"parameters": {},
+		"children": [
+		  {
+		    "title": "parallel",
+			"type": "composite",
+			"name": "parallel",
+			"parameters": {
+			  "fail": {"value": 1},
+			  "success": {"value": -1}
+			},
+			"children": [
+			  {
+			    "title": "findMonster",
+    	        "type": "action",
+    	        "name": "findMonster",
+    	        "parameters": {
+    	          "orderBy": {"value": "nearest"},
+    	          "position": {"key": "self"},
+    	          "range": {"value": 100},
+    	          "type": {"value": "ruinbuster_minion_es"}
+    	        }
+			  },
+			  {
+			    "title": "repeater",
+				"type": "decorator",
+				"name": "repeater",
+				"parameters": {
+				  "maxLoops": {"value": -1}
+				},
+				"child": {
+				  "title": "sequence",
+				  "type": "composite",
+				  "name": "sequence",
+				  "parameters": {},
+				  "children": [
+				    {
+				      "title": "addEphemeralEffect",
+					  "type": "action",
+					  "name": "addEphemeralEffect",
+					  "parameters": {
+					    "name": {"value": "invulnerable"}
+					  }
+			  	    },
+					{
+					  "title": "timer",
+					  "type": "action",
+					  "name": "timer",
+					  "parameters": {
+					    "time": {"value": 0.1}
+					  }
+					}
+				  ]
+				}
+			  }
+			]
+		  },
+		  {
+		    "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.0}
+            }
+		  }
+		]
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
+  }
+}

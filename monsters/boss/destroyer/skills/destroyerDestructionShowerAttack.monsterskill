@@ -42,10 +42,8 @@
 					"count" : 15,
 					"body" : [
 					  {
-					    "action" : "projectile",
-						"type" : "destroyergrenadeboss",
-						"fuzzAngle" : 180,
-						"config" : {"periodicActions" : []}
+					    "action" : "config",
+					    "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
 					  }
 					]
 				  }

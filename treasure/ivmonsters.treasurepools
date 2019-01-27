@@ -126,6 +126,21 @@
       ]
     }]
   ],
+  "ruinbusterTreasure" : [
+    [0, {
+      "fill" : [
+		{"item" : "weaponamplifier"},
+		{"item" : ["money", 2500]}
+      ],
+      "pool" : [
+        {"weight" : 1.0, "pool" : "empty"}
+      ],
+      "poolRounds" : [
+        [0.80, 0],
+        [0.20, 1]
+      ]
+    }]
+  ],
   "ruinseedTreasure" : [
     [1, {
       "fill" : [

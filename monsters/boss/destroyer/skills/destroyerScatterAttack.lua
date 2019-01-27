@@ -7,7 +7,8 @@ function destroyerScatterAttack.enter()
   animator.burstParticleEmitter("teleport")
   animator.playSound("teleportOut")
   return { 
-    timer = config.getParameter("destroyerScatterAttack.skillTime")
+    timer = config.getParameter("destroyerScatterAttack.skillTime"),
+	offsetRange = config.getParameter("destroyerScatterAttack.offsetRange")
   }
 end
 
@@ -26,17 +27,9 @@ function destroyerScatterAttack.update(dt, stateData)
       animator.setAnimationState("movement", "invisible")
     end
 
-    if self.targetPosition ~= nil then
-      flyTo({
-        self.targetPosition[1],
-        self.spawnPosition[2]
-      })
-    else
-      mcontroller.controlFly({ 0, 1 })
-    end
-
     if stateData.timer < 0.3 and not destroyerScatterAttack.reappeared then
       destroyerScatterAttack.reappeared = true
+	  mcontroller.setPosition({self.targetPosition[1] + math.random(stateData.offsetRange[3], stateData.offsetRange[1]), self.targetPosition[2] + math.random(stateData.offsetRange[4], stateData.offsetRange[2])})
       animator.burstParticleEmitter("teleport")
       animator.playSound("teleportIn")
     end

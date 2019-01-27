@@ -8,10 +8,11 @@ function destroyerBulletCirclesAttack.enter()
 
   return {
     timer = 0,
-    bobTime = config.getParameter("destroyerBulletCirclesAttack.bobTime"),
-    bobHeight = config.getParameter("destroyerBulletCirclesAttack.bobHeight"),
+    orbitTime = config.getParameter("destroyerBulletCirclesAttack.orbitTime"),
+    orbitRadius = config.getParameter("destroyerBulletCirclesAttack.orbitRadius"),
     skillTime = config.getParameter("destroyerBulletCirclesAttack.skillTime"),
     direction = util.randomDirection(),
+    vDirection = util.randomDirection(),
     basePosition = self.spawnPosition,
     cruiseDistance = config.getParameter("cruiseDistance")
   }
@@ -33,18 +34,11 @@ function destroyerBulletCirclesAttack.update(dt, stateData)
 
   local position = mcontroller.position()
 
-  local toTarget = world.distance(self.targetPosition, position)
-  if toTarget[1] < -stateData.cruiseDistance then
-    stateData.direction = -1
-  elseif toTarget[1] > stateData.cruiseDistance then
-    stateData.direction = 1
-  end
-
   stateData.timer = stateData.timer + dt
-  local angle = 2.0 * math.pi * stateData.timer / stateData.bobTime
+  local angle = 2.0 * math.pi * stateData.timer / stateData.orbitTime
   local targetPosition = {
-    position[1] + stateData.direction * 5,
-    stateData.basePosition[2] + stateData.bobHeight * math.cos(angle)
+    self.targetPosition[1] + stateData.orbitRadius * math.sin(angle),
+    self.targetPosition[2] + stateData.orbitRadius * math.cos(angle)
   }
   flyTo(targetPosition)
 

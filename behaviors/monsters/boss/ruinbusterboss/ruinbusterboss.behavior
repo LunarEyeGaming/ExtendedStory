@@ -341,15 +341,15 @@
 	        							  "parameters": {}
 	        							},
 										{
-	        							  "title": "ruinbusterboss-minionattack",
+	        							  "title": "ruinbusterboss-minionattack2",
 	        							  "type": "module",
-	        							  "name": "ruinbusterboss-minionattack",
+	        							  "name": "ruinbusterboss-minionattack2",
 	        							  "parameters": {}
 	        							},
 										{
-	        							  "title": "ruinbusterboss-ramattack",
+	        							  "title": "ruinbusterboss-rocketattack2",
 	        							  "type": "module",
-										  "name": "ruinbusterboss-ramattack",
+										  "name": "ruinbusterboss-rocketattack2",
 										  "parameters": {}
 										},
 										{
@@ -359,15 +359,21 @@
 										  "parameters": {}
 										},
 										{
-										  "title": "ruinbusterboss-rocketattacknohoming",
+										  "title": "ruinbusterboss-ramattack",
 										  "type": "module",
-										  "name": "ruinbusterboss-rocketattacknohoming",
+										  "name": "ruinbusterboss-ramattack",
 										  "parameters": {}
 										},
 										{
 										  "title": "ruinbusterboss-overloaders",
 										  "type": "module",
         								  "name": "ruinbusterboss-overloaders",
+        								  "parameters": {}
+        								},
+										{
+										  "title": "ruinbusterboss-carpetbomb",
+										  "type": "module",
+        								  "name": "ruinbusterboss-carpetbomb",
         								  "parameters": {}
         								}
                     	    	      ]
@@ -413,9 +419,9 @@
                     }
                   },
 				  {
-        		    "title": "ancientboss2-dying",
+        		    "title": "ruinbusterboss-dying",
         		    "type": "module",
-        		    "name": "ancientboss2-dying",
+        		    "name": "ruinbusterboss-dying",
         		    "parameters": { }
         		  },
                   {
@@ -473,9 +479,18 @@
         		    "name": "flyToPosition",
         		    "parameters": {
         		      "position": {"key": "spawn"},
+					  "speed" : {"value" : 50},
         		      "tolerance": {"value": 1}
         		    }
         		  },
+				  {
+                    "title": "resetTransformationGroup",
+                    "type": "action",
+                    "name": "resetTransformationGroup",
+                    "parameters": {
+                      "transformationGroup": {"value": "body"}
+                    }
+                  },
 				  {
         		    "title": "setVelocity",
         		    "type": "action",

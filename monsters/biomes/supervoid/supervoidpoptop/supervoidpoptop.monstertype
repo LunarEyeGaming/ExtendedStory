@@ -1,7 +1,7 @@
 {
   "type" : "supervoidpoptop",
   "shortdescription" : "Poptop Seeker",
-  "description" : "An infected variant of a poptop. It is completely blind, but its blindness has been replaced with incredible hearing.",
+  "description" : "An infected variant of a poptop. It is completely blind, lacking any eyes, but its blindness has been replaced with incredible hearing.",
 
   "categories" : [ "supervoidpoptop" ],
   "parts" : [ "body" ],
@@ -35,13 +35,13 @@
           "name" : "action-charge",
           "cooldown" : 3,
           "parameters" : {
-            "maximumRange" : 5,
+            "maximumRange" : 20,
             "windupTime" : 0.4,
 
             "aimAtTarget" : false,
             "aimDirection" : [1, 0.5],
             "chargeTime" : [0.3, 0.3],
-            "chargeSpeed" : 25,
+            "chargeSpeed" : 50,
             "chargeControlForce" : 200,
             "wallCrashSound" : "",
             "wallCrashEmitter" : "",
@@ -112,7 +112,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],
-      "damage" : 14,
+      "damage" : 28,
 
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
@@ -170,7 +170,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 60
+          "baseValue" : 150
         },
         "protection" : {
           "baseValue" : 0.0

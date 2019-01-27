@@ -69,19 +69,6 @@
       ],
 
       "concurrentHostileActions" : [
-        {
-          "name" : "action-projectile",
-          "parameters" : {
-            "projectileCount" : 1,
-            "projectileType" : "ancientorb_trailer",
-            "projectileParameters" : {
-              "power" : 10
-            },
-            "aimDirection" : [0, 0],
-            "inaccuracy" : 0,
-            "fireOffset" : [0, 0.0]
-          }
-        }
       ],
 
       "deathActions" : [

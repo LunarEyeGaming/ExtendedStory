@@ -79,7 +79,8 @@
 			  "actionOnReap" : [
 			    {
 				  "action" : "projectile",
-				  "type" : "presupervoidbullet"
+				  "type" : "presupervoidbullet",
+				  "inheritDamageFactor" : 1
 				}
 			  ]
             },
@@ -95,7 +96,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.5, 1.5], [1.5, 0.5], [1.5, -0.5], [0.5, -1.5], [-0.5, -1.5], [-1.5, -0.5], [-1.5, 0.5], [-0.5, 1.5] ],
-      "damage" : 20,
+      "damage" : 2,
 
       "teamType" : "enemy",
       "damageSourceKind" : "impact",
@@ -158,7 +159,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 75
+          "baseValue" : 125
         },
         "protection" : {
           "baseValue" : 0.0
