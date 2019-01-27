@@ -17,13 +17,12 @@
       "body" : [
         {
           "action" : "projectile",
-          "inheritDamageFactor" : 0 ,
+          "inheritDamageFactor" : 0.2,
           "type" : "abyssfire",
           "angle" : 90,
           "fuzzAngle" : 180,
           "config" : {
             "speed" : 10,
-			"power" : 50,
 			"piercing" : true
           }
         }
@@ -39,13 +38,12 @@
       "body" : [
         {
           "action" : "projectile",
-          "inheritDamageFactor" : 0 ,
+          "inheritDamageFactor" : 0.2,
           "type" : "abyssfire",
           "angle" : 90,
           "fuzzAngle" : 180,
           "config" : {
             "speed" : 10,
-			"power" : 50,
 			"piercing" : true
           }
         }
