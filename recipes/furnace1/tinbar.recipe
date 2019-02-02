@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "tinore", "count" : 2 }
+  ],
+  "output" : {
+    "item" : "tinbar",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

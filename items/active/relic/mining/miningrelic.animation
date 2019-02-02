@@ -1,0 +1,153 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "gun" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "windup" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "loop"
+		  },
+		  "active" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "loop"
+		  },
+		  "winddown" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "loop"
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.75, 0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "fullbright" : true,
+		  "anchorPart" : "gun"
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "burnout" : {
+        "properties" : {
+          "zLevel" : 1,
+          "fullbright" : true,
+		  "anchorPart" : "gun"
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<burnOutLevel>.idle"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:<burnOutLevel>.windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:<burnOutLevel>.active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<burnOutLevel>.winddown.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+  
+  "globalTagDefaults" : {
+    "burnOutLevel" : ""
+  },
+  "particleEmitters" : {
+    "burnedOut" : {
+	  "active" : false,
+	  "offsetRegion" : [0.75, 0.5, -0.75, -0.5],
+	  "emissionRate" : 5,
+	  "particles" : [
+	    {
+		  "particle" : "rocketbarrelpuff"
+		}
+	  ]
+	}
+  },
+
+  "sounds" : {
+    "reload" : ["/sfx/gun/reload/rocket_reload_clip1.ogg"],
+    "fire" : ["/sfx/gun/rocket2.ogg"]
+  }
+}

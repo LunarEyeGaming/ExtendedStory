@@ -163,7 +163,7 @@
     "op" : "add",
     "path" : "/displayOres/abyssshard",
     "value" : {
-      "displayName" : "Abyss Shard",
+      "displayName" : "Umbrium Shard",
       "icon" : "/items/generic/crafting/abyssshard.png"
     }
   },
@@ -213,6 +213,14 @@
     "value" : {
       "displayName" : "Bacteria Ore",
       "icon" : "/items/generic/crafting/bacteriaore.png"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/displayOres/tinore",
+    "value" : {
+      "displayName" : "Tin Ore",
+      "icon" : "/items/generic/crafting/tinore.png"
     }
   },
   {

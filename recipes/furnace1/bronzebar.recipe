@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "tinbar", "count" : 2 },
+	{ "item" : "copperbar", "count" : 2 }
+  ],
+  "output" : {
+    "item" : "bronzebar",
+    "count" : 4
+  },
+  "duration" : 0.15,
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

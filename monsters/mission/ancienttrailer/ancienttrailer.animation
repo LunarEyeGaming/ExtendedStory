@@ -36,7 +36,7 @@
       "body" : {
         "properties" : {
           "zLevel" : 1,
-          "transformationGroups" : [ "body" ],
+          "transformationGroups" : [ "body", "aim", "facing" ],
           "offset" : [0.0, 0.0]
         },
         "partStates" : {
@@ -106,7 +106,8 @@
 
   "transformationGroups" : {
     "body" : { "interpolated" : true },
-    "facing" : { "interpolated" : false }
+    "facing" : { "interpolated" : false },
+	"aim" : { "interpolated" : true }
   },
 
   "effects" : {

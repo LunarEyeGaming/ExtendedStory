@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":59,
+ "tilecount":64,
  "tileheight":82,
  "tileproperties":
     {
@@ -353,6 +353,13 @@
          "object":"ruinbusterlasershield",
          "tilesetDirection":"right"
         },
+     "59":
+        {
+         "imagePositionX":"-20",
+         "imagePositionY":"0",
+         "object":"miningrelicteleporter",
+         "tilesetDirection":"right"
+        },
      "6":
         {
          "\/\/description":"A portal with mysterious properties.",
@@ -361,6 +368,34 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"frozenreturnportal",
+         "tilesetDirection":"right"
+        },
+     "60":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"miningrelicbluetrap",
+         "tilesetDirection":"right"
+        },
+     "61":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"miningrelicbluetrap",
+         "tilesetDirection":"right"
+        },
+     "62":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"miningrelicbluetrap",
+         "tilesetDirection":"right"
+        },
+     "63":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"miningrelicbluetrap",
          "tilesetDirection":"right"
         },
      "7":
@@ -737,11 +772,46 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "59":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "60":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "61":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "62":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "63":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -1110,11 +1180,41 @@
          "imageheight":24,
          "imagewidth":152
         },
+     "59":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicteleporter.png",
+         "imageheight":64,
+         "imagewidth":40
+        },
      "6":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssportal.png",
          "imageheight":33,
          "imagewidth":32
+        },
+     "60":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicbluetrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "61":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicbluetrapup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "62":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicbluetrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "63":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicbluetrapright.png",
+         "imageheight":16,
+         "imagewidth":8
         },
      "7":
         {

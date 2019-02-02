@@ -54,13 +54,13 @@
 
       "approachActions" : [
         {
-          "name" : "approach-leadorbit",
+          "name" : "approach-fall",
           "parameters" : {
             "flyState" : "fly",
             "idleState" : "idle",
-            "distance" : 20,
-            "tangentialSpeed" : 20,
-            "tangentialForce" : 40
+            "friction" : 15,
+            "dampenDistance" : 20,
+            "dampenMultiplier" : 2
           }
         }
       ],
@@ -69,6 +69,60 @@
       ],
 
       "concurrentHostileActions" : [
+	    {
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 80,
+            "minimumRange" : 2,
+            "windupTime" : 1000,
+            "windupState" : "",
+
+            "projectileCount" : 1,
+            "projectileType" : "invisibleprojectile",
+            "projectileParameters" : {"onlyHitTerrain" : true},
+            "rotationCenter" : [0.0, 0.0],
+            "fireSound" : "",
+            "fireStateType" : "",
+            "fireState" : "",
+            "fireDelay" : 0.0,
+            "faceTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : true,
+			"onGround" : false,
+            "damageRepeatGroup" : "",
+
+            "winddownState" : "",
+            "winddownTime" : 0.0
+          }
+        },
+	    {
+          "name" : "action-fire",
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 80,
+            "minimumRange" : 2,
+            "windupTime" : 0,
+            "windupState" : "",
+
+            "projectileCount" : 1,
+            "projectileType" : "ancientorb_trailer",
+            "projectileParameters" : {},
+            "rotationCenter" : [0.0, 0.0],
+            "fireSound" : "",
+            "fireStateType" : "",
+            "fireState" : "",
+            "fireDelay" : 0.5,
+            "faceTarget" : false,
+            "rotateAim" : false,
+            "holdAim" : false,
+			"onGround" : false,
+            "damageRepeatGroup" : "",
+
+            "winddownState" : "",
+            "winddownTime" : 0.0
+          }
+        }
       ],
 
       "deathActions" : [
@@ -122,8 +176,8 @@
       "groundFriction" : 10,
 
       "airFriction" : 0,
-      "airForce" : 120,
-      "flySpeed" : 40
+      "airForce" : 45,
+      "flySpeed" : 5
     },
 
     "bodyMaterialKind" : "stone",

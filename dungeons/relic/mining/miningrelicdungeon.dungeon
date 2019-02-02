@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "miningrelicdungeon",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "miningrelicdungeon" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "miningrelicdungeon",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "miningrelicdungeon.json" ]
+    }
+  ]
+}

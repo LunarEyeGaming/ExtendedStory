@@ -1,0 +1,162 @@
+{
+  "objectName" : "miningrelicbluetrap",
+  "colonyTags" : ["ancient","evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "This trap fires globes to deter invaders.",
+  "shortdescription" : "Blue Globe Trap",
+  "race" : "ancient",
+
+  "apexDescription" : "A globe trap, definitely one to avoid.",
+  "avianDescription" : "Ouch! Globes and feathers don't mix!",
+  "floranDescription" : "Globe trap is Floran's worssst enemy!",
+  "glitchDescription" : "Terrified. It's just a little globe trap, nothing that can't be overcome.",
+  "humanDescription" : "A trusty, reliable globe trap.",
+  "hylotlDescription" : "The swift warrior fears not the globes.",
+  "novakidDescription" : "Simple yet deadly. My favourite kind.",
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "miningrelicbluetrapicon.png",
+  "orientations" : [
+    {
+      "image" : "miningrelicbluetrap.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrap.png",
+        "fg" : "miningrelicbluetrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [0, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "miningrelicbluetrap.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrap.png",
+        "fg" : "miningrelicbluetrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [1, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "miningrelicbluetrapleft.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrapleft.png",
+        "fg" : "miningrelicbluetrapleft.png"
+      },
+
+      "projectileDirection" : [1, 0],
+      "projectilePosition" : [0.7, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "miningrelicbluetrapright.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrapright.png",
+        "fg" : "miningrelicbluetrapright.png"
+      },
+
+      "projectileDirection" : [-1, 0],
+      "projectilePosition" : [0.3, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "miningrelicbluetrapceiling.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrapceiling.png",
+        "fg" : "miningrelicbluetrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "miningrelicbluetrapceiling.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "miningrelicbluetrapceiling.png",
+        "fg" : "miningrelicbluetrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [1, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ "/sfx/gun/aegisaltpistol_start.ogg" ],
+      "on" : [ "/sfx/melee/charge_up15.ogg" ],
+      "off" : [ "/sfx/gun/aegisaltpistol_stop.ogg" ]
+    }
+  },
+
+  "soundEffect" : "/sfx/tech/tech_particlethrust.ogg", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 1.0, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "blueglobenohover", // name of projectile (required)
+  "projectileConfig" : { // extra configuration overrides for projectile
+    "damageTeam" : { "type" : "environment" },
+    "power" : 100,
+    "speed" : 10
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 6, "particle" : "greystoneshard" } ]
+}

@@ -36,13 +36,6 @@ function update(dt)
     self.radioMessage(dt)
   end
 
-  if animator.animationState("portal") == "gone" then
-    object.smash()
-    return
-  elseif storage.vanishTime and world.time() > storage.vanishTime then
-    animator.setAnimationState("portal", "vanish")
-  end
-
   local players = world.entityQuery(self.detectArea[1], self.detectArea[2], {
       includedTypes = {"player"},
       boundMode = "CollisionArea"

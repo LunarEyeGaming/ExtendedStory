@@ -5,7 +5,7 @@
   "frameNumber" : 1,
   "fullbright" : true,
   "damageKindImage" : "icon.png",
-  "power" : 0,
+  "power" : 10,
   "physics" : "default",
   "emitters" : [ ],
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
@@ -15,27 +15,11 @@
   "periodicActions" : [ ],
   "actionOnReap" : [ 
     {
-      "action" : "projectile",
-      "type" : "targetingprojectile",
-	  "config" : {
-	    "actionOnReap" : [
-		  {
-		    "action" : "projectile",
-			"type" : "ancientlasershot",
-			"inheritDamageFactor" : 1,
-			"config" : {
-			  "speed" : 20
-			}
-		  },
-		  {
-		    "action" : "sound",
-			"options" : [ "/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_pistol2.ogg", "/sfx/gun/plasma_pistol3.ogg" ]
-		  }
-		]
-	  }
-    }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
   ],
 
-  "speed" : 0,
+  "speed" : 20,
   "timeToLive" : 2.0
 }

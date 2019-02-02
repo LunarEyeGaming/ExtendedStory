@@ -1,0 +1,201 @@
+{
+  "itemName" : "miningrelic1",
+  "price" : 850,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A bronze drill that has practically infinite energy.",
+  "shortdescription" : "Bronze Energy Drill",
+  "tooltipKind" : "miningrelic",
+  "category" : "Relic Item ^#ffffff;| ^red;1",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 2,
+
+  "inventoryIcon" : "miningicon.png:1",
+
+  "animation" : "miningrelic.animation",
+  "animationParts" : {
+    "gun" : "miningactiveitem.png",
+    "gunfullbright" : "",
+	"burnout" : "burnout.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "stateTypes" : {
+	    "energy" : {
+          "default" : "idle",
+          "states" : {
+            "idle" : {},
+            "windup1" : {
+              "frames" : 3,
+              "cycle" : 0.25,
+              "mode" : "loop",
+			  "properties" : {
+                "immediateSound" : "/sfx/melee/drillspear_windup3.ogg"
+			  }
+            },
+            "windup2" : {
+              "frames" : 3,
+              "cycle" : 0.25,
+              "mode" : "loop",
+			  "properties" : {
+                "immediateSound" : "/sfx/melee/drillspear_winddown2.ogg"
+			  }
+            },
+            "active1" : {},
+            "active2" : {
+              "frames" : 3,
+              "cycle" : 0.18,
+              "mode" : "loop",
+              "properties" : {
+                "persistentSound" : "/sfx/melee/drillspear_active_loop2.ogg",
+                "persistentSoundStopTime" : 0.1
+              }
+            }
+          }
+        },
+		"gun" : {
+		  "states" : {
+		    "windup" : {
+			  "frames" : 2,
+			  "cycle" : 0.2
+			}
+		  }
+		}
+	  },
+	  "parts" : {
+	    "drillenergy" : {
+          "properties" : {
+            "zLevel" : 2,
+            "centered" : true,
+            "fullbright" : true,
+            "offset" : [2.0, 0.0],
+            "transformationGroups" : ["weapon"],
+
+            "drillTip" : [1, 0],
+            "drillSource1" : [-1.0, -1.5],
+            "drillSource2" : [0.0, 0.0],
+            "drillSource3" : [-1.0, 1.5]
+          },
+
+          "partStates" : {
+            "energy" : {
+              "windup1" : {
+                "properties" : {
+                  "image" : "drillenergy.png:windup1.<frame>"
+                }
+              },
+              "windup2" : {
+                "properties" : {
+                  "image" : "drillenergy.png:windup2.<frame>"
+                }
+              },
+              "active1" : {
+                "properties" : {
+                  "image" : "drillenergy.png:active.<frame>",
+                  "damageArea" : [[-2.5, 0.0625], [-0.75, -1.375], [1.25, 0.0625], [-0.75, 1.25]]
+                }
+              },
+              "active2" : {
+                "properties" : {
+                  "image" : "drillenergy.png:active.<frame>",
+                  "damageArea" : [[-2.5, 0.0625], [-0.75, -1.375], [1.25, 0.0625], [-0.75, 1.25]]
+                }
+              }
+            }
+          }
+        }
+	  }
+	}
+  },
+  "muzzleOffset" : [1.875, 0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Mine Away",
+    "scripts" : ["/items/active/relic/mining/miningrelicability.lua"],
+    "class" : "MiningRelicAbility",
+	"firingMode" : "drill",
+	"burnOutTime" : 30,
+	"burnOutRecharge" : 3,
+	"burnOutCooldown" : 18,
+	"burnOutStages" : 10,
+
+    "tileDamage" : 0.5,
+    "tileDamageRate" : 0.15,
+    "damageTileDepth" : 3,
+	
+	"chargeTime" : 0.5,
+
+    "damageTimeout" : 0.25,
+    "damageConfig" : {
+      "damageSourceKind" : "plasma",
+      "statusEffects" : [ ],
+      "knockbackMode" : "aim",
+      "knockback" : 25,
+      "baseDamage" : 0.5
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "idle",
+		  "energy" : "idle"
+		}
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "windup",
+		  "energy" : "windup1"
+		}
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "energy" : "active2"
+		}
+      },
+      "winddown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates" : {
+		  "energy" : "windup2"
+		}
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildminingrelic.lua"
+}

@@ -212,5 +212,20 @@
       "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
+  },
+  {
+    "op" : "add",
+    "path" : "/miningrelicdungeon",
+    "value" : {
+      "primaryDungeon" : "miningrelicdungeon",
+      "threatLevel" : 1,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "dungeonSurfaceHeight" : 1400,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/drosera.ogg",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
   }
 ]

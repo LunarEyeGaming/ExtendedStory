@@ -6,7 +6,7 @@
         "states" : {
           "off" : {},
           "charge" : {
-            "frames" : 4,
+            "frames" : 8,
             "cycle" : 1.0,
             "mode" : "transition",
             "transition" : "fullcharge",
@@ -18,14 +18,29 @@
           "fullcharge" : {
             "frames" : 3,
             "cycle" : 0.2,
-            "mode" : "loop"
+            "mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/objects/terraforge_loop2.ogg"
+			}
           },
           "fire" : {
             "frames" : 4,
-            "cycle" : 0.2,
+            "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "off"
-          }
+          },
+		  "fire2" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "off"
+		  },
+		  "fire3" : {
+		    "frames" : 2,
+			"cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "off"
+		  }
         }
       },
 	  "beamorigin" : {
@@ -45,7 +60,7 @@
       "gun" : {
         "properties" : {
           "centered" : true,
-          "offset" : [1.6, 0.5],
+          "offset" : [1.1, 0.5],
           "transformationGroups" : ["weapon"]
         },
 
@@ -70,6 +85,16 @@
               "properties" : {
                 "image" : "<partImage>:fire.<frame>"
               }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2.<frame>"
+              }
+            },
+            "fire3" : {
+              "properties" : {
+                "image" : "<partImage>:fire3.<frame>"
+              }
             }
           }
         }
@@ -77,7 +102,7 @@
       "gunfullbright" : {
         "properties" : {
           "centered" : true,
-          "offset" : [1.6, 0.5],
+          "offset" : [1.1, 0.5],
           "transformationGroups" : ["weapon"],
           "zLevel" : 1,
           "fullbright" : true
@@ -103,6 +128,16 @@
             "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2.<frame>"
+              }
+            },
+            "fire3" : {
+              "properties" : {
+                "image" : "<partImage>:fire3.<frame>"
               }
             }
           }

@@ -13,9 +13,8 @@
       "file" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion.config"
     }
   ],
-  "power" : 0,
+  "power" : 1,
   "speed" : 45,
   "lightColor" : [20, 150, 150],
-  "damageType" : "ignoresdef",
-  "damageKind" : "nodamage"
+  "damageType" : "nodamage"
 }

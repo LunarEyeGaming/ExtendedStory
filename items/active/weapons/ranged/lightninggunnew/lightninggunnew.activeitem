@@ -31,7 +31,7 @@
       "beamImpact" : [ "/sfx/gun/lightningcoil1.ogg", "/sfx/gun/lightningcoil2.ogg", "/sfx/gun/lightningcoil3.ogg" ]
 	}
   },
-  "muzzleOffset" : [2, 1.0],
+  "muzzleOffset" : [3.25, 0.5],
   "animationScripts" : ["/items/active/effects/chain.lua"],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
@@ -50,7 +50,8 @@
         "projectileParameters" : {},
         "inaccuracy" : 0,
         "baseDamage" : 3,
-        "fireSound" : "fire"
+        "fireSound" : "fire",
+        "fireAnimationState" : "fire3"
       },
       {
         "time" : 0.5,
@@ -62,7 +63,8 @@
         "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "electricplasmarocket", "fuzzAngle" : 50}]},
         "inaccuracy" : 0,
         "baseDamage" : 9,
-        "fireSound" : "fire2"
+        "fireSound" : "fire2",
+        "fireAnimationState" : "fire2"
       },
       {
         "time" : 1.0,
@@ -125,7 +127,6 @@
       }
     }
   },
-  "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
     "class" : "BeamFire",
