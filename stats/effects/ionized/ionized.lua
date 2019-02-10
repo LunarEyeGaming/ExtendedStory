@@ -15,6 +15,8 @@ function init()
       damageSourceKind = "ionplasma",
       sourceEntityId = entity.id()
     })
+  self.speedModifier = 1
+  self.speedFactor = config.getParameter("speedFactor", 0.5)
 end
 
 function update(dt)
@@ -28,5 +30,7 @@ function update(dt)
         damageSourceKind = "ionplasma",
         sourceEntityId = entity.id()
       })
+	self.speedModifier = self.speedModifier * self.speedFactor
+    mcontroller.controlModifiers({speedModifier = self.speedModifier})
   end
 end

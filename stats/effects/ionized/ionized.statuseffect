@@ -2,7 +2,9 @@
   "name" : "ionized",
   "blockingStat" : "ionizedImmunity",
 
-  "effectConfig" : {},
+  "effectConfig" : {
+    "speedFactor" : 0.1
+  },
   "defaultDuration" : 15.0,
 
   "scripts" : [

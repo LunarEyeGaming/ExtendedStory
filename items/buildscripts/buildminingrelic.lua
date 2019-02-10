@@ -73,6 +73,7 @@ function build(directory, config, parameters, level, seed)
     config.tooltipFields.drillRangeLabel = util.round(config.primaryAbility.damageTileDepth or 1, 1)
     config.tooltipFields.coolingRateLabel = util.round(config.primaryAbility.burnOutRecharge or 0, 1)
 	config.tooltipFields.cooldownLabel = util.round(config.primaryAbility.burnOutCooldown or 0, 1)
+	config.tooltipFields.beamLengthLabel = util.round(config.primaryAbility.beamLength or 0, 1)
     if elementalType ~= "physical" then
       config.tooltipFields.damageKindImage = "/interface/elements/"..elementalType..".png"
     end

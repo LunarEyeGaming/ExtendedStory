@@ -106,6 +106,9 @@
           }
         }
 	  }
+	},
+	"sounds" : {
+	  "burnout" : [ "/sfx/projectiles/flame_burning.ogg" ]
 	}
   },
   "muzzleOffset" : [1.875, 0.125],
@@ -138,7 +141,7 @@
       "statusEffects" : [ ],
       "knockbackMode" : "aim",
       "knockback" : 25,
-      "baseDamage" : 0.5
+      "baseDamage" : 3
     },
 
     "stances" : {

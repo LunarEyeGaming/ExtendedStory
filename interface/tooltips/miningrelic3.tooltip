@@ -1,0 +1,98 @@
+{
+  "background" : {
+    "type" : "background",
+    "fileHeader" : "/interface/tooltips/header.png",
+    "fileBody" : "/interface/tooltips/bodyobject3.png",
+    "fileFooter" : "/interface/tooltips/footerobject3.png"
+  },
+  "moneyIcon" : {
+    "type" : "image",
+    "position" : [97, 23],
+    "file" : "/interface/money.png"
+  },
+  "priceLabel" : {
+    "type" : "label",
+    "position" : [110, 23],
+    "hAnchor" : "left",
+    "value" : "tree"
+  },
+  "burnOutTimeTitleLabel" : {
+    "type" : "label",
+    "position" : [9, 41],
+    "hAnchor" : "left",
+    "value" : "Burn-out Time:"
+  },
+  "burnOutTimeLabel" : {
+    "type" : "label",
+    "position" : [130, 41],
+    "hAnchor" : "right",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "cooldownTitleLabel" : {
+    "type" : "label",
+    "position" : [9, 59],
+    "hAnchor" : "left",
+    "value" : "Cooldown:"
+  },
+  "cooldownLabel" : {
+    "type" : "label",
+    "position" : [130, 59],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "beamLengthTitleLabel" : {
+    "type" : "label",
+    "position" : [9, 68],
+    "hAnchor" : "left",
+    "value" : "Beam Length:"
+  },
+  "beamLengthLabel" : {
+    "type" : "label",
+    "position" : [130, 68],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "coolingRateTitleLabel" : {
+    "type" : "label",
+    "position" : [9, 50],
+    "hAnchor" : "left",
+    "value" : "Cooling Rate:"
+  },
+  "coolingRateLabel" : {
+    "type" : "label",
+    "position" : [130, 50],
+    "hAnchor" : "right",
+    "wrapWidth" : 126
+  },
+  "handednessLabel" : {
+    "type" : "label",
+    "position" : [90, 134],
+    "hAnchor" : "right",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "rarityLabel" : {
+    "type" : "label",
+    "position" : [7, 23],
+    "hAnchor" : "left",
+    "centered" : true,
+    "wrapWidth" : 126
+  },
+  "damageKindImage" : {
+    "type" : "image",
+    "position" : [120, 90],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [16, 16],
+    "minSize" : [16, 16]
+  },
+  "objectImage" : {
+    "type" : "image",
+    "position" : [70, 105],
+    "file" : "",
+    "centered" : true,
+    "maxSize" : [60, 60],
+    "minSize" : [60, 60]
+  }
+}

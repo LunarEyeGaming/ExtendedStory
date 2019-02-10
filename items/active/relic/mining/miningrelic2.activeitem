@@ -1,0 +1,117 @@
+{
+  "itemName" : "miningrelic2",
+  "price" : 850,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An autohammer that fires destructive energy waves.",
+  "shortdescription" : "Steel Energy Autohammer",
+  "tooltipKind" : "miningrelic2",
+  "category" : "Relic Item ^#ffffff;| ^orange;2",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 3,
+
+  "inventoryIcon" : "miningicon.png:2",
+
+  "animation" : "miningrelic.animation",
+  "animationParts" : {
+    "gun" : "miningactiveitem2.png",
+    "gunfullbright" : "",
+	"burnout" : "burnout2.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "stateTypes" : {
+		"gun" : {
+		  "states" : {
+		    "active" : {
+			  "frames" : 3,
+			  "cycle" : 0.3,
+			  "mode" : "transition",
+			  "transition" : "idle"
+			}
+		  }
+		}
+	  }
+	},
+	"sounds" : {
+	  "fire" : [ "/sfx/gun/miningrelic2_fire.ogg" ],
+	  "burnout" : [ "/sfx/melee/energywhip_impact3.ogg" ]
+	}
+  },
+  "muzzleOffset" : [1.875, 0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Mine Away",
+    "scripts" : ["/items/active/relic/mining/miningrelicability.lua"],
+    "class" : "MiningRelicAbility",
+	"firingMode" : "proj",
+	"burnOutTime" : 20,
+	"burnOutRecharge" : 2,
+	"burnOutCooldown" : 18,
+	"burnOutStages" : 10,
+
+    "fireTime" : 0.75,
+    "baseDamage" : 5,
+    "projectileParameters" : {},
+	"projectileType" : "miningrelic2proj",
+	"inaccuracy" : 0.0,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		}
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		}
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "active"
+		}
+      },
+      "winddown" : {
+        "duration" : 0.0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates" : {}
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildminingrelic.lua"
+}

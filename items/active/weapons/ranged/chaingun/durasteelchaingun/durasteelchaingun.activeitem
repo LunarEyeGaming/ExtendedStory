@@ -89,13 +89,13 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "name" : "Grav Bombs",
-	"fireTime" : 0.1,
-	"baseDps" : 20,
+	"fireTime" : 0.3,
+	"baseDps" : 13,
 	"cooldownTime" : 0.0,
 	"inaccuracy" : 0.1,
-	"energyUsage" : 20,
+	"energyUsage" : 40,
 	"elementalConfig" : {
-	  "physical" : { "projectileType" : "gravitybomb", "config" : { "speed" : 100 } }
+	  "physical" : { "projectileType" : "energyshardplayer", "projectileParameters" : {"damageType" : "nodamage"} }
 	}
   },
 

@@ -1,0 +1,21 @@
+{
+  "projectileName" : "miningrelic2proj",
+  "physics" : "laser",
+  "image" : "miningrelic2proj.png",
+  "speed" : 35,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "timeToLive" : 5,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/miningrelic2explosion/miningrelic2explosion.config"
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet",
+  "lightColor" : [69, 23, 9],
+  "damagePoly" : [ [ 4, 8.5 ], [4, -8.5], [-4, -8.5], [-4, 8.5] ]
+}

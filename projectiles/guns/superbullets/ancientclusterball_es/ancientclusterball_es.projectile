@@ -16,55 +16,82 @@
     {
       "action" : "config",
       "file" : "/projectiles/explosions/ancientexplosion/ancientexplosionnontile.config"
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 0
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 45
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 90
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 135
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 180
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 225
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 270
-    },
-    {
-      "action" : "projectile",
-      "type" : "ancientorbsmallg_es",
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 315
     }
   ],
-  "damageKind" : "plasma"
+  "actionOnTimeout" : [
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 45,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 90,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 135,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 180,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 225,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 270,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientorbsmallg_es",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 315,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "nodamage"
 }

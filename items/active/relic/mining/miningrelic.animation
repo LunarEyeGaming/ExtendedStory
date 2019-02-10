@@ -127,6 +127,7 @@
 
   "transformationGroups" : {
     "weapon" : {},
+    "beamEnd" : {},
     "muzzle" : {}
   },
   
@@ -143,11 +144,42 @@
 		  "particle" : "rocketbarrelpuff"
 		}
 	  ]
-	}
+	},
+	"beamCollision" : {
+      "active" : false,
+      "transformationGroups" : ["muzzle", "beamEnd"],
+      "emissionRate" : 30,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/plasmapoof/plasmapoof.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 0.6,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+			"light" : [59, 217, 215],
+            "collidesForeground" : false,
+            "variance" : {
+              "position" : [0.0, 0.0],
+              "initialVelocity" : [0, 0]
+            }
+          }
+        }
+      ]
+    }
   },
 
   "sounds" : {
     "reload" : ["/sfx/gun/reload/rocket_reload_clip1.ogg"],
-    "fire" : ["/sfx/gun/rocket2.ogg"]
+    "fire" : ["/sfx/gun/rocket2.ogg"],
+	"burnout" : []
   }
 }
