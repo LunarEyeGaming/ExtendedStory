@@ -2701,7 +2701,7 @@
                  "visible":true,
                  "width":16,
                  "x":1512,
-                 "y":1992
+                 "y":1984
                 }, 
                 {
                  "gid":7730,
@@ -2721,7 +2721,7 @@
                  "visible":true,
                  "width":16,
                  "x":1720,
-                 "y":1440
+                 "y":1432
                 }, 
                 {
                  "gid":7730,
@@ -2761,7 +2761,7 @@
                  "visible":true,
                  "width":16,
                  "x":1720,
-                 "y":1432
+                 "y":1424
                 }, 
                 {
                  "gid":7730,
@@ -2781,7 +2781,7 @@
                  "visible":true,
                  "width":16,
                  "x":1512,
-                 "y":1984
+                 "y":1976
                 }, 
                 {
                  "gid":7730,
@@ -2862,42 +2862,6 @@
                  "width":16,
                  "x":1456,
                  "y":2880
-                }, 
-                {
-                 "gid":7640,
-                 "height":16,
-                 "id":2460,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1440,
-                 "y":2848
-                }, 
-                {
-                 "gid":7640,
-                 "height":16,
-                 "id":2461,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1456,
-                 "y":2848
-                }, 
-                {
-                 "gid":7640,
-                 "height":16,
-                 "id":2462,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1472,
-                 "y":2848
                 }, 
                 {
                  "gid":7640,
@@ -3916,6 +3880,108 @@
                  "width":360,
                  "x":4328,
                  "y":1744
+                }, 
+                {
+                 "gid":7145,
+                 "height":16,
+                 "id":2663,
+                 "name":"",
+                 "properties":
+                    {
+                     "object":"ims_threatlevel_es",
+                     "parameters":"{ \"spawner\" : { \"monsterTypes\" : [\"mazeminiboss2\"], \"monsterParams\" : { \"aggressive\" : true }, \"position\" : [0, 0], \"positionVariance\" : [0, 0], \"frequency\" : [1, 1], \"stock\" : 1, \"trigger\" : \"wire\", \"outOfSight\" : false } }"
+                    },
+                 "propertytypes":
+                    {
+                     "object":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1720,
+                 "y":1448
+                }, 
+                {
+                 "gid":7145,
+                 "height":16,
+                 "id":2665,
+                 "name":"",
+                 "properties":
+                    {
+                     "object":"ims_threatlevel_es",
+                     "parameters":"{ \"spawner\" : { \"monsterTypes\" : [\"mazeminiboss1\"], \"monsterParams\" : { \"aggressive\" : true }, \"position\" : [0, 0], \"positionVariance\" : [0, 0], \"frequency\" : [1, 1], \"stock\" : 1, \"trigger\" : \"wire\", \"outOfSight\" : false } }"
+                    },
+                 "propertytypes":
+                    {
+                     "object":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1512,
+                 "y":2000
+                }, 
+                {
+                 "gid":7145,
+                 "height":16,
+                 "id":2667,
+                 "name":"",
+                 "properties":
+                    {
+                     "object":"ims_threatlevel_es",
+                     "parameters":"{ \"spawner\" : { \"monsterTypes\" : [\"mazeminiboss1\"], \"monsterParams\" : { \"aggressive\" : true }, \"position\" : [0, 0], \"positionVariance\" : [0, 0], \"frequency\" : [1, 1], \"stock\" : 1, \"trigger\" : \"wire\", \"outOfSight\" : false } }"
+                    },
+                 "propertytypes":
+                    {
+                     "object":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2400,
+                 "y":2208
+                }, 
+                {
+                 "gid":7829,
+                 "height":16,
+                 "id":2669,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1440,
+                 "y":2848
+                }, 
+                {
+                 "gid":7829,
+                 "height":16,
+                 "id":2670,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1456,
+                 "y":2848
+                }, 
+                {
+                 "gid":7829,
+                 "height":16,
+                 "id":2671,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1472,
+                 "y":2848
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -7475,7 +7541,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-80,
@@ -7495,7 +7561,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-80,
@@ -7555,7 +7621,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-256,
@@ -7575,7 +7641,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-256,
@@ -7995,7 +8061,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-80,
@@ -8035,7 +8101,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":-8
                         }, 
                         {
                          "x":-256,
@@ -8887,6 +8953,66 @@
                  "width":0,
                  "x":4648,
                  "y":2016
+                }, 
+                {
+                 "height":0,
+                 "id":2664,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":8
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1728,
+                 "y":1424
+                }, 
+                {
+                 "height":0,
+                 "id":2666,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":8
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1520,
+                 "y":1976
+                }, 
+                {
+                 "height":0,
+                 "id":2668,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":80
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":2408,
+                 "y":2112
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -8940,63 +9066,6 @@
                  "width":8,
                  "x":1680,
                  "y":3952
-                }, 
-                {
-                 "height":8,
-                 "id":2386,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"mazeminiboss1"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":1520,
-                 "y":1984
-                }, 
-                {
-                 "height":8,
-                 "id":2387,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"mazeminiboss2"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":1728,
-                 "y":1432
-                }, 
-                {
-                 "height":8,
-                 "id":2389,
-                 "name":"",
-                 "properties":
-                    {
-                     "monster":"mazeminiboss3"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":2408,
-                 "y":2200
                 }, 
                 {
                  "height":8,
@@ -9078,7 +9147,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":2663,
+ "nextobjectid":2672,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.5",
@@ -9237,7 +9306,7 @@
          "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }, 
         {
-         "firstgid":8825,
+         "firstgid":8830,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/tentacle.json"
         }],
  "tilewidth":8,

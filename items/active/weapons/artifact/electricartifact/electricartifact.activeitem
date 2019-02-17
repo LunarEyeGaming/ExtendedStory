@@ -384,293 +384,59 @@
 
   "altAbilityType" : "elementorb",
   "altAbility" : {
-    "name" : "Thunder Beam", 
+    "name" : "Voltage Burst", 
 	"projectileType" : "electricorb", 
 	"projectileParameters" : {
-	  "timeToLive" : 3.01,
+	  "timeToLive" : 0.51,
 	  "power" : 0,
-	  "controlMovement" : {"maxSpeed" : 8, "controlForce" : 200},
+	  "controlMovement" : {"maxSpeed" : 20, "controlForce" : 200},
 	  "periodicActions" : [
-	    {
-		  "time" : 0.1,
-		  "repeat" : true,
-		  "action" : "projectile",
-		  "type" : "preshortbeam",
-		  "direction" : [0.0, -1.0],
-		  "offset" : [0.0, -1.0],
-		  "config" : {
-		    "actionOnReap" : [{"action" : "projectile", "type" : "shortbeam", "config" : {"speed" : 100}}],
-			"speed" : 100
-		  }
-		},
 		{
 		  "time" : 0,
 		  "repeat" : false,
 		  "action" : "sound",
-		  "options" : ["/sfx/npc/boss/tentacleboss_beam_charge.ogg"]
+		  "options" : ["/sfx/melee/charge_up15.ogg"]
 		},
 		{
-		  "time" : 0.01,
-		  "action" : "projectile",
-		  "type" : "meleelash",
-		  "direction" : [1.0, 0.0],
-		  "offset" : [1.0, 0.0],
-		  "config" : {"fullbright" : true, "power" : 0}
-		},
-		{
-		  "time" : 0.01,
-		  "action" : "projectile",
-		  "type" : "meleelash",
-		  "direction" : [-1.0, 0.0],
-		  "offset" : [-1.0, 0.0],
-		  "config" : {"fullbright" : true, "power" : 0}
-		},
-		{
-		  "time" : 3.0,
+		  "time" : 0.5,
 		  "action" : "projectile",
 		  "type" : "electricorb",
 		  "config" : {
-		    "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg",
+			"timeToLive" : 1,
 		    "periodicActions" : [
 			  {
-			    "time" : 0.0,
-				"repeat" : false,
-				"action" : "projectile",
-				"type" : "thunderbeam",
-				"direction" : [0.0, -1.0],
-				"config" : {
-				  "speed" : 100,
-				  "periodicActions" : [
-				    {
-					  "time" : 0.01,
-					  "action" : "projectile",
-					  "type" : "thunderbeam"
-					},
-					{
-					  "time" : 0.0,
-					  "repeat" : false,
-					  "action" : "sound",
-					  "options" : ["/sfx/npc/boss/tentacleboss_beam_blast.ogg"] 
+				"time" : 0.25,
+				"action" : "loop",
+				"count" : 10,
+				"body" : [
+				  {
+					"action" : "projectile",
+					"type" : "orbitalup",
+					"inheritDamageFactor" : 1,
+					"config" : {
+					  "timeToLive" : 0,
+					  "damageType" : "nodamage",
+					  "speed" : 0,
+					  "piercing" : false,
+					  "actionOnTimeout" : [
+						{
+						  "action" : "projectile",
+						  "type" : "railgunlightning",
+						  "inheritDamageFactor" : 0.3,
+						  "fuzzAngle" : 180
+						}
+					  ],
+					  "actionOnReap" : []
 					}
-				  ],
-				  "actionOnReap" : [
-				    {
-					  "action" : "projectile",
-					  "type" : "invisibleprojectile",
-					  "config" : {
-					    "damageTeam" : {"type" : "friendly"},
-					    "periodicActions" : [
-						  {
-						    "time" : 0.01,
-							"action" : "particle",
-							"specification" : {
-							  "type" : "animated",
-                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
-                              "position" : [0, 0],
-                              "initialVelocity" : [0, 0.0],
-                              "finalVelocity" : [0, 0.0],
-                              "approach" : [0, 10],
-                              "fade" : 0.3,
-                              "destructionAction" : "shrink",
-                              "destructionTime" : 0.3,
-                              "size" : 1.0,
-                              "timeToLive" : 0.5,
-                              "fullbright" : true,
-                              "layer" : "front",
-                              "collidesForeground" : false,
-                              "variance" : {
-                                "position" : [0.0, 0.0],
-                                "initialVelocity" : [0, 0]
-							  }
-			   				}
-						  },
-						  {
-						    "time" : 0.1,
-							"action" : "projectile",
-							"type" : "lightning",
-							"angle" : 90,
-							"fuzzAngle" : 180,
-							"config" : {"timeToLive" : 1, "damageTeam" : {"type" : "friendly"}}
-						  }
-						],
-						"timeToLive" : 6,
-						"piercing" : true,
-						"bounces" : -1,
-						"persistentAudio" : "/sfx/objects/crystaltrap_loop.ogg",
-		                "actionOnReap" : [
-		                  {
-			                "action" : "sound",
-			                "options" : ["/sfx/objects/crystaltrap_off.ogg"]
-			              }
-		                ]
-					  }
-					},
-					{
-					  "action" : "projectile",
-					  "type" : "astraltear",
-					  "direction" : [1.0, 0.0],
-					  "config" : {
-					    "periodicActions" : [
-						  {
-						    "time" : 0.01,
-							"action" : "particle",
-							"specification" : {
-							  "type" : "animated",
-                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
-                              "position" : [0, 0],
-                              "initialVelocity" : [0, 0.0],
-                              "finalVelocity" : [0, 0.0],
-                              "approach" : [0, 10],
-                              "fade" : 0.3,
-                              "destructionAction" : "shrink",
-                              "destructionTime" : 0.3,
-                              "size" : 1.0,
-                              "timeToLive" : 0.5,
-                              "fullbright" : true,
-                              "layer" : "front",
-                              "collidesForeground" : false,
-                              "variance" : {
-                                "position" : [0.0, 0.0],
-                                "initialVelocity" : [0, 0]
-							  }
-			   				}
-						  }
-						],
-						"timeToLive" : 6,
-						"piercing" : true,
-						"persistentAudio" : "/sfx/melee/barrier_create_electric.ogg",
-						"speed" : 20,
-						"processing" : "?0",
-						"power" : 30,
-                        "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
-						"knockback" : 50,
-						"actionOnReap" : [
-						  {
-							"action" : "particle",
-							"specification" : {
-							  "type" : "animated",
-                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
-                              "position" : [0, 0],
-                              "initialVelocity" : [0, 0.0],
-                              "finalVelocity" : [0, 0.0],
-                              "approach" : [0, 10],
-                              "fade" : 0.3,
-                              "destructionAction" : "shrink",
-                              "destructionTime" : 0.3,
-                              "size" : 2.0,
-                              "timeToLive" : 0.5,
-                              "fullbright" : true,
-                              "layer" : "front",
-                              "collidesForeground" : false,
-                              "variance" : {
-                                "position" : [0.0, 0.0],
-                                "initialVelocity" : [0, 0]
-							  }
-			   				}
-						  },
-						  {
-						    "action" : "sound",
-							"options" : ["/sfx/npc/boss/crystalboss_beamin.ogg"]
-						  }
-						]
-					  }
-					},
-					{
-					  "action" : "projectile",
-					  "type" : "astraltear",
-					  "direction" : [-1.0, 0.0],
-					  "config" : {
-					    "periodicActions" : [
-						  {
-						    "time" : 0.01,
-							"action" : "particle",
-							"specification" : {
-							  "type" : "animated",
-                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
-                              "position" : [0, 0],
-                              "initialVelocity" : [0, 0.0],
-                              "finalVelocity" : [0, 0.0],
-                              "approach" : [0, 10],
-                              "fade" : 0.3,
-                              "destructionAction" : "shrink",
-                              "destructionTime" : 0.3,
-                              "size" : 1.0,
-                              "timeToLive" : 0.5,
-                              "fullbright" : true,
-                              "layer" : "front",
-                              "collidesForeground" : false,
-                              "variance" : {
-                                "position" : [0.0, 0.0],
-                                "initialVelocity" : [0, 0]
-							  }
-			   				}
-						  }
-						],
-						"timeToLive" : 6,
-						"piercing" : true,
-						"persistentAudio" : "/sfx/melee/barrier_create_electric.ogg",
-						"speed" : 20,
-						"processing" : "?0",
-						"power" : 30,
-                        "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
-						"knockback" : 50,
-						"actionOnReap" : [
-						  {
-							"action" : "particle",
-							"specification" : {
-							  "type" : "animated",
-                              "animation" : "/animations/plasmapoof/plasmapoof.animation",
-                              "position" : [0, 0],
-                              "initialVelocity" : [0, 0.0],
-                              "finalVelocity" : [0, 0.0],
-                              "approach" : [0, 10],
-                              "fade" : 0.3,
-                              "destructionAction" : "shrink",
-                              "destructionTime" : 0.3,
-                              "size" : 2.0,
-                              "timeToLive" : 0.5,
-                              "fullbright" : true,
-                              "layer" : "front",
-                              "collidesForeground" : false,
-                              "variance" : {
-                                "position" : [0.0, 0.0],
-                                "initialVelocity" : [0, 0]
-							  }
-			   				}
-						  },
-						  {
-						    "action" : "sound",
-							"options" : ["/sfx/npc/boss/crystalboss_beamin.ogg"]
-						  }
-						]
-					  }
-					}
-				  ]
-				}
+				  }
+				]
 			  },
 			  {
-			    "time" : 0.01,
-				"action" : "projectile",
-				"type" : "meleelash",
-				"direction" : [1.0, 0.0],
-				"offset" : [1.0, 0.0],
-				"config" : {"fullbright" : true, "power" : 0}
-			  },
-			  {
-			    "time" : 0.01,
-				"action" : "projectile",
-				"type" : "meleelash",
-				"direction" : [-1.0, 0.0],
-				"offset" : [-1.0, 0.0],
-				"config" : {"fullbright" : true, "power" : 0}
+			    "time" : 0.25,
+				"action" : "sound",
+				"options" : [ "/sfx/gun/shockblast.ogg" ]
 			  }
-			],
-		    "actionOnReap" : [
-		      {
-			    "action" : "sound",
-			    "options" : ["/sfx/npc/boss/crystalboss_beamout.ogg"]
-			  }
-		    ]
+			]
 		  }
 		}
 	  ]
