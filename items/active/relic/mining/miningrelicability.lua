@@ -22,7 +22,6 @@ function MiningRelicAbility:init()
       activeItem.setScriptedAnimationParameter("chains", {})
       animator.setParticleEmitterActive("beamCollision", false)
       animator.stopAllSounds("fireLoop")
-      self.weapon:setStance(self.stances.idle)
 	end
   end
   usingItem = false
@@ -41,7 +40,7 @@ function MiningRelicAbility:update(dt, fireMode, shiftHeld)
   if not usingItem then
     self.burnOutTimer = math.max(0, self.burnOutTimer - self.dt * self.burnOutRecharge)
   end
-  activeItem.setInstanceValue("self.burnOutTimer", self.burnOutTimer)
+  activeItem.setInstanceValue("burnOutTimer", self.burnOutTimer)
   self.burnedOutTimer = math.max(0, self.burnedOutTimer - self.dt)
   activeItem.setInstanceValue("burnedOutTimer", self.burnedOutTimer)
   if self.firingMode == "beam" then
@@ -179,7 +178,7 @@ function MiningRelicAbility:beamFire()
     coroutine.yield()
   end
 
-  self:BeamFire_reset()
+  self:reset()
   animator.playSound("fireEnd")
 
   self.cooldownTimer = self.fireTime
@@ -244,12 +243,14 @@ function MiningRelicAbility:drawBeam(endPos, didCollide)
   activeItem.setScriptedAnimationParameter("chains", {newChain})
 end
 
-function MiningRelicAbility:BeamFire_reset()
-  self.weapon:setDamage()
-  activeItem.setScriptedAnimationParameter("chains", {})
-  animator.setParticleEmitterActive("beamCollision", false)
-  animator.stopAllSounds("fireStart")
-  animator.stopAllSounds("fireLoop")
+function MiningRelicAbility:reset()
+  if self.firingMode == "beam" then
+    self.weapon:setDamage()
+    activeItem.setScriptedAnimationParameter("chains", {})
+    animator.setParticleEmitterActive("beamCollision", false)
+    animator.stopAllSounds("fireStart")
+    animator.stopAllSounds("fireLoop")
+  end
 end
 
 function MiningRelicAbility:firePosition()

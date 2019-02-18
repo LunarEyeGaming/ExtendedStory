@@ -1,0 +1,22 @@
+{
+  "verticalOrigin" : -15,
+
+  "layers" : [
+    {
+      "kind" : "supervoideyelarge",
+      "parallax" : 9998,
+	  "offset" : [512, 256],
+      "noRandomOffset" : true,
+      "repeatY" : true,
+      "nohueshift" : true,
+	  "unlit" : true
+    },
+    {
+      "kind" : "hellodarknessmyoldfriend",
+      "parallax" : 9999,
+      "repeatY" : true,
+      "noRandomOffset" : true,
+      "nohueshift" : true
+    }
+  ]
+}
