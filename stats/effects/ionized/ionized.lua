@@ -31,6 +31,7 @@ function update(dt)
         sourceEntityId = entity.id()
       })
 	self.speedModifier = self.speedModifier * self.speedFactor
+	sb.logInfo("%s", self.speedModifier)
     mcontroller.controlModifiers({speedModifier = self.speedModifier})
   end
 end

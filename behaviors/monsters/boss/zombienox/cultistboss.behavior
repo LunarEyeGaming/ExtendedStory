@@ -116,14 +116,6 @@
                         }
                       },
                       {
-                        "title": "battleMusic",
-                        "type": "action",
-                        "name": "battleMusic",
-                        "parameters": {
-                          "enable": {"value": true}
-                        }
-                      },
-                      {
                         "title": "sequentialdialognoskip",
                         "type": "module",
                         "name": "sequentialdialognoskip",
@@ -272,14 +264,6 @@
                     "parameters": {
                       "state": {"value": "idle"},
                       "type": {"value": "body"}
-                    }
-                  },
-                  {
-                    "title": "battleMusic",
-                    "type": "action",
-                    "name": "battleMusic",
-                    "parameters": {
-                      "enable": {"value": false}
                     }
                   },
                   {

@@ -40,7 +40,7 @@
 
   "primaryAbilityType" : "flamethrower",
   "primaryAbility" : {
-    "baseDps" : 10,
+    "baseDps" : 25,
     "energyUsage" : 30,
 	"projectileType" : "ionflamethrower",
 	"stances" : {
@@ -62,7 +62,9 @@
     "elementalConfig" : {
 	  "ion" : {"projectileType" : "ionflamegrenade", "name" : "Ion Pellet"}
 	},
-	"energyUsage" : 30
+	"baseDamage" : 7,
+	"energyUsage" : 30,
+	"fireTime" : 5
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -3,9 +3,9 @@
   "blockingStat" : "ionizedImmunity",
 
   "effectConfig" : {
-    "speedFactor" : 0.1
+    "speedFactor" : 0.5
   },
-  "defaultDuration" : 15.0,
+  "defaultDuration" : 2.5,
 
   "scripts" : [
     "ionized.lua"

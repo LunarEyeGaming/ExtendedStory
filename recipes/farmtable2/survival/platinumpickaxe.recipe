@@ -1,9 +1,8 @@
 {
   "input" : [
-    { "item" : "ironbar", "count" : 5 },
-    { "item" : "liquidoil", "count" : 10 },
-    { "item" : "torch", "count" : 1 }
+    { "item" : "darkwoodmaterial", "count" : 50 },
+    { "item" : "platinumbar", "count" : 15 }
   ],
-  "output" : { "item" : "mininglantern", "count" : 1 },
-  "groups" : [ "craftingfarm", "survival" ]
+  "output" : { "item" : "platinumpickaxe", "count" : 1 },
+  "groups" : [ "craftingfarm2", "survival" ]
 }

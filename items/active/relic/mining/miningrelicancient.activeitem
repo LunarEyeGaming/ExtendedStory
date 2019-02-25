@@ -1,0 +1,186 @@
+{
+  "itemName" : "miningrelicancient",
+  "price" : 850,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "An extremely energetic mining laser with basically infinite energy.",
+  "shortdescription" : "^magenta;Galactic Manipulator^reset;",
+  "tooltipKind" : "miningrelic3",
+  "category" : "Relic Item ^#ffffff;| ^blue;5 ^magenta;Galactic",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 10,
+
+  "inventoryIcon" : "miningicon.png:6",
+
+  "animation" : "miningrelic.animation",
+  "animationParts" : {
+    "gun" : "miningactiveitemancient.png",
+    "gunfullbright" : "miningactiveitemancientfullbright.png",
+	"burnout" : "burnoutancient.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+	  "stateTypes" : {
+		"gun" : {
+		  "states" : {
+		    "windup" : {
+			  "frames" : 6,
+			  "cycle" : 1.1,
+			  "mode" : "transition",
+			  "transition" : "active",
+			  "properties" : {
+			    "persistentSound" : "/sfx/melee/charge_up8.ogg"
+			  }
+			},
+			"winddown" : {
+			  "frames" : 6,
+			  "cycle" : 0.5,
+			  "mode" : "transition",
+			  "transition" : "idle"
+			}
+		  }
+		}
+	  }
+	},
+	"sounds" : {
+	  "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart.ogg" ],
+      "fireLoop" : [ "/sfx/gun/ancientchaingun_beamloop.ogg" ],
+      "fireEnd" : [ "/sfx/gun/ancientchaingun_beamstop.ogg" ],
+      "beamImpact" : [ "/sfx/gun/ancientchaingun_beamimpact.ogg" ],
+	  "burnout" : [ "/sfx/tech/mech_explosion_windup.ogg" ]
+	},
+	"particleEmitters" : {
+	  "beamCollision" : {
+	    "particles" : [
+		  {
+            "particle" : {
+              "type" : "animated",
+              "animation" : "/animations/shards/ancientenergy.animation",
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0.0],
+              "finalVelocity" : [0, 2.0],
+              "approach" : [0, 10],
+              "fade" : 0.3,
+              "destructionAction" : "shrink",
+              "destructionTime" : 0.3,
+              "size" : 1.2,
+              "timeToLive" : 0.5,
+              "fullbright" : true,
+              "layer" : "front",
+              "collidesForeground" : false,
+              "variance" : {
+                "position" : [0.2, 0.2],
+                "initialVelocity" : [2, 0]
+              }
+            }
+          }
+		]
+	  }
+	}
+  },
+  "muzzleOffset" : [1.25, 0.125],
+  "animationScripts" : ["/items/active/effects/chain.lua"],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Mine Away",
+    "scripts" : ["/items/active/relic/mining/miningrelicability.lua"],
+    "class" : "MiningRelicAbility",
+	"firingMode" : "beam2",
+	"burnOutTime" : 60,
+	"burnOutRecharge" : 3,
+	"burnOutCooldown" : 8,
+	"burnOutStages" : 10,
+
+    "beamLength" : 60,
+	"fireTime" : 0.1,
+	"baseDps" : 10,
+	"inaccuracy" : 0,
+    "damageConfig" : {
+      "statusEffects" : [ "gammarays" ],
+      "damageSourceKind" : "plasma",
+      "knockback" : 5
+    },
+    "chain" : {
+      "startOffset" : [0, 0],
+      "startSegmentImage" : "/items/active/relic/mining/beamstartancient.png",
+      "segmentImage" : "/items/active/relic/mining/beammidancient.png",
+      "endSegmentImage" : "/items/active/relic/mining/beamendancient.png",
+      "segmentSize" : 0.72,
+      "overdrawLength" : 0.2,
+      "taper" : 0,
+	  "fullbright" : true,
+      "waveform" : {
+        "frequency" : 4,
+        "amplitude" : 0.15,
+        "movement" : 10.0
+      }
+    },
+	
+	"chargeTime" : 1.1,
+	
+	"tileDamage" : 3,
+	"tileDamageRadius" : 3,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "idle"
+		}
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "windup"
+		}
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "active"
+		}
+      },
+      "winddown" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates" : {
+		  "gun" : "winddown"
+		}
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildminingrelic.lua"
+}

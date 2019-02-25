@@ -407,6 +407,111 @@
         "parameters": {
           "time": {"value": 0.01}
         }
+      },
+	  {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "teleport"}
+        }
+      },
+	  {
+    	"title": "playSound",
+    	"type": "action",
+    	"name": "playSound",
+    	"parameters": {
+    	  "sound": {"value": "teleportOut"}
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": "I"},
+          "type": {"value": "invisible"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": false}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "movement"}
+        }
+      },
+	  {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 2}
+        },
+        "children": [
+		  {
+    	    "title": "timer",
+    	    "type": "action",
+    	    "name": "timer",
+    	    "parameters": {
+    	      "time": {"value": 1}
+    	    }
+    	  },
+		  {
+		    "title": "addEphemeralEffect",
+		    "type": "action",
+		    "name": "addEphemeralEffect",
+		    "parameters": {
+		      "name": {"value": "invulnerable"}
+		    }
+		  }
+		]
+	  },
+	  {
+	    "title": "removeEphemeralEffect",
+	    "type": "action",
+	    "name": "removeEphemeralEffect",
+	    "parameters": {
+	      "name": {"value": "invulnerable"}
+	    }
+	  },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "target"}
+        },
+        "output": {
+          "position": "targetPos"
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "spawn"}
+        }
       }
     ]
   }

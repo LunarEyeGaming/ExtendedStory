@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "scorchedcore", "count" : 5 },
+	{ "item" : "arkite", "count" : 15 },
+	{ "item" : "drillspear", "count" : 1 },
+	{ "item" : "weaponamplifier", "count" : 1 },
+	{ "item" : "ancientupgrademodule_es", "count" : 11 }
+  ],
+  "output" : { "item" : "upgradeddrillspear_es", "count" : 1 },
+  "groups" : [ "upgradestation", "upgrades", "all" ]
+}

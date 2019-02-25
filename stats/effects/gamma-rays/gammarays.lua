@@ -7,7 +7,7 @@ function init()
 
   self.tickTime = 2
   self.tickTimer = self.tickTime
-  self.damage = 2
+  self.damage = 8
 
   status.applySelfDamageRequest({
       damageType = "IgnoresDef",
@@ -21,7 +21,6 @@ function update(dt)
   self.tickTimer = self.tickTimer - dt
   if self.tickTimer <= 0 then
     self.tickTimer = self.tickTime
-    self.damage = self.damage * 1.2
     status.applySelfDamageRequest({
         damageType = "IgnoresDef",
         damage = self.damage,
