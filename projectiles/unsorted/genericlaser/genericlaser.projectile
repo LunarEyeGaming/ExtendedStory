@@ -1,6 +1,6 @@
 {
   "projectileName" : "genericlaser",
-  "physics" : "laser",
+  "physics" : "default",
   "image" : "genericlaser.png",
   "damageKindImage" : "icon.png",
   "speed" : 100,
@@ -27,7 +27,7 @@
 	    	"light" : [218, 83, 2],
 	    	"initialVelocity" : [0, 0],
 	    	"finalVelocity" : [0, 5],
-	    	"position" : [0, 0],
+	    	"position" : [3, 0],
 	    	"timeToLive" : 1,
 	    	"variance" : {
 	    	  "initialVelocity" : [5, 5]
