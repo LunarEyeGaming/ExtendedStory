@@ -1,0 +1,126 @@
+{
+  "projectileName" : "calamitycannonshotbig",
+  "physics" : "default",
+  "bounces" : 0,
+  "speed" : 50,
+  "timeToLive" : 0.5,
+  "lightColor" : [83, 28, 97],
+  "image" : "calamitycannonshotbig.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "power" : 10,
+  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "supportsProcessing" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.01,
+	  "action" : "loop",
+	  "count" : 20,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : {
+	        "type" : "ember",
+		    "color" : [191, 73, 44, 100],
+		    "position" : [0, 0],
+		    "initialVelocity" : [0, 0],
+		    "finalVelocity" : [0, 0],
+		    "timeToLive" : 0.0,
+		    "size" : 2,
+		    "light" : [94, 30, 14],
+		    "destructionAction" : "fade",
+			"fullbright" : true,
+		    "destructionTime" : 0.5,
+			"layer" : "middle",
+		    "variance" : {
+		      "size" : 0.5,
+		      "position" : [1, 1],
+		      "initialVelocity" : [10, 10]
+		    }
+	      }
+		}
+	  ]
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/calamitycannonexplosion/calamitycannonexplosion.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 45,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 90,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 135,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 180,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 225,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 270,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    },
+    {
+      "action" : "projectile",
+      "type" : "calamitycannonshoth",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 315,
+	  "config" : {
+	    "damageType" : "nodamage"
+	  }
+    }
+  ],
+  "damageKind" : "plasma",
+  "damageType" : "nodamage"
+}

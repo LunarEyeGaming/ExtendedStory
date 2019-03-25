@@ -34,7 +34,7 @@
     }},
     "sounds" : {
       "fire" : [ "/sfx/gun/superredeemer_fire.ogg" ],
-	  "electricGuided" : [ "/sfx/gun/solariumfusioncannon_fire.ogg" ]
+	  "altFire" : [ "/sfx/gun/solariumfusioncannon_fire.ogg" ]
     }
   },
   "baseOffset" : [0.7, 0.45],
@@ -94,10 +94,10 @@
     }
   },
 
-  "altAbilityType" : "guidedrocket",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}}
+      "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}, "fireTime" : 5}
 	},
 
     "stances" : {

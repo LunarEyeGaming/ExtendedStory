@@ -5,7 +5,7 @@ local returnStatusType = {
   chargedstone = "electrified",
   chargedbrick = "electrified",
   chargedsand = "electrified",
-  livinglightning = "shocked"
+  livinglightning = "shocked_es"
 }  --undefined tiles return nil
  
  
