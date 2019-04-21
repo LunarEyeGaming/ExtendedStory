@@ -13,31 +13,13 @@
   "power" : 0,
   "damageKind" : "nodamage",
   "periodicActions" : [
-    {
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "particle",
-      "specification" : {
-        "type" : "animated",
-        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
-        "position" : [0, 0],
-        "layer" : "front",
-        "timeToLive" : 1.0,
-        "destructionTime" : 0.0,
-        "destructionAction" : "fade",
-        "fullbright" : true,
-		"variance" : {
-		  "position" : [10, 10]
-		}
-      }
-    },
 	{
       "time" : 0.01,
       "repeat" : true,
       "action" : "particle",
       "specification" : {
         "type" : "animated",
-        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "animation" : "/animations/lightningsparks/lightningsparks.animation",
         "position" : [0, 0],
         "layer" : "front",
         "timeToLive" : 1.0,
@@ -91,14 +73,6 @@
 	  "xTargetVelocity" : 0,
       "controlForce" : 1000,
       "categoryWhitelist" : ["player"]
-    },
-	"vacuum" : {
-	  "type" : "RadialForceRegion",
-      "outerRadius" : 20,
-      "innerRadius" : 4,
-      "targetRadialVelocity" : -5,
-      "controlForce" : 1000,
-      "categoryWhitelist" : ["player"]
-	}
+    }
   }
 }

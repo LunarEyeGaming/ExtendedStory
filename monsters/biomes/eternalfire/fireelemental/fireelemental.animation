@@ -7,12 +7,12 @@
         "states" : {
           "idle" : {
             "frames" : 6,
-            "cycle" : 3.0,
+            "cycle" : 0.6,
             "mode" : "loop"
           },
           "fly" : {
             "frames" : 6,
-            "cycle" : 1.0,
+            "cycle" : 0.6,
             "mode" : "loop"
           }
         }
@@ -93,7 +93,8 @@
           "zLevel" : 30,
           "offset" : [1.75, 0.0],
           "transformationGroups" : [ "orbiter1" ],
-          "image" : "<partImage>"
+          "image" : "<partImage>",
+		  "fullbright" : true
         }
       },
       "orbiter2" : {
@@ -101,7 +102,8 @@
           "zLevel" : 30,
           "offset" : [2.5, 0.0],
           "transformationGroups" : [ "orbiter2" ],
-          "image" : "<partImage>"
+          "image" : "<partImage>",
+		  "fullbright" : true
         }
       }
     }

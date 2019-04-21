@@ -4,13 +4,13 @@
   "image" : "genericlaser.png",
   "damageKindImage" : "icon.png",
   "speed" : 100,
-  "animationCycle" : 1,
-  "frameNumber" : 1,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
   "power" : 20,
   "movementSettings" : {
-    "collisionPoly" : [ [3.5, 0], [3.25, -0.25], [0, 0], [3.5, 0.25] ]
+    "collisionPoly" : [ [3.125, 0], [2.875, -0.25], [-2.5, 0], [2.875, -0.25] ]
   },
-  "damagePoly" : [ [28, 0], [26, -2], [0, 0], [26, 2] ],
+  "damagePoly" : [ [28, 0], [26, -2], [-20, 0], [26, 2] ],
   "timeToLive" : 5,
   "fullbright" : true,
   "actionOnReap" : [

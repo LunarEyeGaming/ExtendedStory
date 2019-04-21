@@ -1,0 +1,149 @@
+{
+  "type" : "iceartifactbossnew_es",
+  "shortdescription" : "Cryonia; Super-charged Armor",
+
+  "categories" : [ "iceartifactbossnew_es" ],
+  "parts" : [ "body" ],
+
+  "animation" : "iceartifactbossnew_es.animation",
+
+  "dropPools" : [ "ruinbusterTreasure" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
+
+    "behavior" : "iceartifactbossnew_es",
+
+    "behaviorConfig" : {},
+
+    "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [-16.875, -16.4375], [16.875, -16.4375], [16.875, 16.4375], [-16.875, 16.4375] ],
+
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "flySpeed" : 11,
+      "airFriction" : 0.5,
+      "airForce" : 800.0,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "knockoutTime" : 0,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+	
+	"damageParts" : {},
+
+    "touchDamage" : {
+      "poly" : [ [8.4375, 16.4375], [16.4375, 8.4375], [16.4375, -8.4375], [8.4375, -16.4375], [-8.4375, -16.4375], [-16.4375, -8.4375], [-16.4375, 8.4375], [-8.4375, 16.4375] ],
+      "damage" : 10,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 2500
+        },
+        "protection" : {
+          "baseValue" : 25.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        },
+        "shadowImmunity" : {
+         "baseValue" : 1
+        },
+        "radiationburnImmunity" : { 
+          "baseValue" : 1
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "beamSourceOffset" : [0, -5.5],
+    "targetYOffsetRange" : [18.0, 22.0]
+  }
+}

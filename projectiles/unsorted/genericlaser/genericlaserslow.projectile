@@ -1,0 +1,47 @@
+{
+  "projectileName" : "genericlaserslow",
+  "physics" : "default",
+  "image" : "genericlaserslow.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 25,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 20,
+  "movementSettings" : {
+    "collisionPoly" : [ [0.5, 0], [0, -0.25], [-0.5, 0], [0, -0.25] ]
+  },
+  "damagePoly" : [ [4, 0], [0, -2], [-4, 0], [0, 2] ],
+  "timeToLive" : 5,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 10,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : {
+	        "type" : "animated",
+	    	"animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+	    	"fullbright" : true,
+	    	"light" : [218, 83, 2],
+	    	"initialVelocity" : [0, 0],
+	    	"finalVelocity" : [0, 5],
+	    	"position" : [0, 0],
+	    	"timeToLive" : 1,
+	    	"variance" : {
+	    	  "initialVelocity" : [5, 5]
+	    	}
+	      }
+		}
+	  ]
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/fireball_spit.ogg" ]
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet",
+  "lightColor" : [128, 0, 0]
+}

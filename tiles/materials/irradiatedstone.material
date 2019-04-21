@@ -1,0 +1,24 @@
+{
+  "materialId" : 2021,
+  "materialName" : "irradiatedstone",
+  "particleColor" : [7, 20, 1, 255],
+  "itemDrop" : "irradiatedstone",
+  "description" : "A piece of stone that is radioactive.",
+  "shortdescription" : "Irradiated Stone",
+  "glitchDescription" : "Disgusted. This piece of stone is horrifically irradiated.",
+  "floranDescription" : "Green rockssss.",
+  "novakidDescription" : "This piece of stone ain't no ordinary stone.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 8,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "irradiatedstone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "multiColored" : true,
+    "occludesBelow" : true,
+    "zLevel" : 20
+  }
+}

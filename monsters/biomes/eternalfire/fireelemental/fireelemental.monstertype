@@ -1,7 +1,7 @@
 {
   "type" : "fireelemental",
   "shortdescription" : "Fire Elemental",
-  "description" : "A wandering piece of eternally burning stone that is sentient and hostile.",
+  "description" : "A wandering fireball that will shoot fireballs at its target.",
 
   "categories" : [ "fireelemental" ],
   "parts" : [ "body" ],
@@ -85,6 +85,30 @@
             "group" : "orbiter2",
             "speed" : -1.0
           }
+        },
+		{
+          "name" : "action-projectile",
+		  "cooldown" : 1,
+          "parameters" : {
+            "projectileCount" : 1,
+            "projectileType" : "orbitalup",
+            "projectileParameters" : {
+              "power" : 30,
+			  "timeToLive" : 0,
+			  "speed" : 0,
+			  "actionOnReap" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "fireelemental_fireballwindup",
+				  "offsetRange" : [2, 2, -2, -2],
+				  "inheritDamageFactor" : 1
+				}
+			  ]
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0.0]
+          }
         }
       ],
 
@@ -93,50 +117,8 @@
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
-            "projectileType" : "invisibleprojectile",
-            "projectileParameters" : {
-			  "periodicActions" : [
-			    {
-				  "action" : "projectile",
-				  "type" : "abysselementalshard1",
-				  "time" : 0,
-				  "repeat" : false,
-				  "angle" : 90,
-				  "fuzzAngle" : 180,
-				  "config" : {
-				    "processing" : "?replace;363332=ffffff;232121=ff9b69;111111=d17d54;000000=9c361f"
-				  }
-				},
-				{
-				  "action" : "projectile",
-				  "type" : "abysselementalshard2",
-				  "time" : 0,
-				  "repeat" : false,
-				  "angle" : 90,
-				  "fuzzAngle" : 180,
-				  "config" : {
-				    "processing" : "?replace;363332=ffffff;232121=ff9b69;111111=d17d54;000000=9c361f"
-				  }
-				},
-				{
-				  "action" : "projectile",
-				  "type" : "ancientexplosion",
-				  "config" : {
-				    "processing" : "?hueshift=108",
-					"periodicActions" : [
-					  {
-					    "action" : "sound",
-						"options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ],
-						"time" : 0,
-						"repeat" : false
-					  }
-					]
-				  },
-				  "time" : 0,
-				  "repeat" : false
-				}
-			  ]
-			},
+            "projectileType" : "fireplasmaexplosion",
+            "projectileParameters" : {},
             "aimDirection" : [1, 0],
             "inaccuracy" : 0,
             "fireOffset" : [0, 0]
@@ -170,8 +152,8 @@
       "groundFriction" : 10,
 
       "airFriction" : 0,
-      "airForce" : 15,
-      "flySpeed" : 35
+      "airForce" : 30,
+      "flySpeed" : 15
     },
 
     "bodyMaterialKind" : "stone",
@@ -182,9 +164,6 @@
     },
     "deathParticles" : "deathPoof",
     "knockoutEffect" : "",
-
-    "healthLevelFunction" : "spaceMonsterLevelHealthMultiplier",
-    "powerLevelFunction" : "spaceMonsterLevelPowerMultiplier",
 
     "stunDamageSuppression" : 0.2,
 

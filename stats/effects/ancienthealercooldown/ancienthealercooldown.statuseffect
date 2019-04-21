@@ -1,0 +1,13 @@
+{
+  "name" : "ancienthealercooldown",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 20,
+
+  "scripts" : [
+    "ancienthealercooldown.lua"
+  ],
+
+  "label" : "Essence Poisoning - Ancient Healer is unusable",
+  "icon" : "/interface/statuses/ancienthealercooldown.png"
+}

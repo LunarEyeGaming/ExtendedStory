@@ -4,7 +4,7 @@
   "price" : 150,
   "category" : "Ancient Healer",
   "inventoryIcon" : "ancienthealing.png",
-  "description" : "Converts ancient energy into repair material. Restores 150 health over 1 second.",
+  "description" : "A bottle of ancient essence. Instantly restores 150 health. 20 second cooldown.",
   "shortdescription" : "^magenta;^reset;",
   "effects" : [ [
       {
@@ -12,13 +12,8 @@
       }
     ] ],
   "emote" : "",
-  "emitters" : [ "bandageuse" ],
+  "emitters" : [ "drinkinghealing" ],
   "blockingEffects" : [
-    "salveheal",
-    "bandageheal",
-    "medkitheal",
-    "nanowrapheal",
-	"ancientheal",
-	"ancientheal2"
+	"ancienthealercooldown"
   ]
 }

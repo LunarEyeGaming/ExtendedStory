@@ -2,12 +2,13 @@
   "name" : "ancientheal",
   "effectConfig" : {
     "healAmount" : 150,
-    "emissionRate" : 15
+    "emissionRate" : 15,
+	"cooldownEffect" : "ancienthealercooldown"
   },
-  "defaultDuration" : 1,
+  "defaultDuration" : 0.1,
 
   "scripts" : [
-    "heal.lua"
+    "healcooldown.lua"
   ],
 
   "animationConfig" : "heal.animation",

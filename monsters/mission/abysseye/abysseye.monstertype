@@ -82,7 +82,7 @@
 			"windupState" : "windup",
 			"windupTime" : 1.0,
 			"projectileType" : "abyssvortex", // Base attack
-			"projectileParameters" : {"speed" : 50},
+			"projectileParameters" : {"speed" : 50, "power" : 25},
 			"fireOffset" : [0, 0],
 			"onGround" : false,
 			"fireState" : "",
@@ -109,28 +109,6 @@
 			"onGround" : false,
 			"fireState" : "",
 			"fireSound" : "fire",
-			"winddownStopForce" : 0,
-			"winddownState" : "",
-			"winddownTime" : 1.0
-		  }
-		},
-		{
-		  "name" : "action-fire",
-		  "cooldown" : 12,
-		  "parameters" : {
-		    "requireLineOfSight" : true,
-			"maximumRange" : 100,
-			"minimumRange" : 60,
-			"windupStopForce" : 20,
-			"windupState" : "windup3",
-			"windupTime" : 3.0,
-			"projectileType" : "invisibleprojectile", // GET OVER HERE!!!
-			"projectileParameters" : {"speed" : 500, "onlyHitTerrain" : true, "movementSettings" : {"collisionEnabled" : false}, "timeToLive" : 0.2, "actionOnReap" : [{"action" : "projectile", "type" : "blackholegravity2", "config" : {"speed" : -50, "onlyHitTerrain" : true}}]},
-			"fireOffset" : [0, 0],
-			"onGround" : false,
-			"projectileCount" : 1,
-			"fireState" : "",
-			"fireSound" : "fire3",
 			"winddownStopForce" : 0,
 			"winddownState" : "",
 			"winddownTime" : 1.0
@@ -169,7 +147,7 @@
     },
 
     "touchDamage" : {
-      "poly" : [ [-5.3125, 0], [-2.8125, 1.375], [0, 2], [2.8125, 1.375], [5.3125, 0], [2.8125, -1.375], [0, -2], [-2.8125, -1.375] ],
+      "poly" : [ [-3, 0], [-2.3125, 1.375], [0, 2.5], [2.3125, 1.375], [3, 0], [2.3125, -1.375], [0, -2.5], [-2.3125, -1.375] ],
       "damage" : 35,
 
       "teamType" : "enemy",
@@ -182,7 +160,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [-5.3125, 0], [-2.8125, 1.375], [0, 2], [2.8125, 1.375], [5.3125, 0], [2.8125, -1.375], [0, -2], [-2.8125, -1.375] ],
+      "collisionPoly" : [ [-3, 0], [-2.3125, 1.375], [0, 2.5], [2.3125, 1.375], [3, 0], [2.3125, -1.375], [0, -2.5], [-2.3125, -1.375] ],
 
       "mass" : 2.0,
       "walkSpeed" : 4,

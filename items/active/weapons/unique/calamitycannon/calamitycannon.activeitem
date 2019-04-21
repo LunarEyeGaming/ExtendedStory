@@ -42,6 +42,18 @@
         "baseDamage" : 8,
         "fireSound" : "fire"
       },
+	  {
+        "time" : 1.0,
+        "energyCost" : 30,
+        "cooldown" : 0.15,
+        "projectileType" : "calamitycannonshoth",
+        "projectileCount" : 3,
+        "spreadAngle" : 30,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 9,
+        "fireSound" : "fire"
+      },
       {
         "time" : 1.5,
         "energyCost" : 100,

@@ -105,7 +105,7 @@
             "windupTime" : 0.2,
 
             "projectileType" : "orbitalup",
-            "projectileParameters" : {"timeToLive" : 0, "speed" : 0, "actionOnReap" : [{"action" : "loop", "count" : 10, "body" : [{"action" : "option", "options" : [{"action" : "projectile", "type" : "genericlaser", "fuzzAngle" : 15, "config" : {"speed" : 25}}, {"action" : "projectile", "type" : "genericlaser", "fuzzAngle" : 15, "config" : {"speed" : 20}}, {"action" : "projectile", "type" : "genericlaser", "fuzzAngle" : 15, "config" : {"speed" : 15}}, {"action" : "projectile", "type" : "genericlaser", "fuzzAngle" : 15, "config" : {"speed" : 10}}]}]}]},
+            "projectileParameters" : {"timeToLive" : 0, "speed" : 0, "actionOnReap" : [{"action" : "loop", "count" : 10, "body" : [{"action" : "option", "options" : [{"action" : "projectile", "type" : "genericlaserslow", "fuzzAngle" : 15, "config" : {"speed" : 25}}, {"action" : "projectile", "type" : "genericlaserslow", "fuzzAngle" : 15, "config" : {"speed" : 20}}, {"action" : "projectile", "type" : "genericlaserslow", "fuzzAngle" : 15, "config" : {"speed" : 15}}, {"action" : "projectile", "type" : "genericlaserslow", "fuzzAngle" : 15, "config" : {"speed" : 10}}]}]}]},
 			"projectileCount" : 1,
 			"projectileInterval" : 0,
             "fireOffset" : [1, 0],

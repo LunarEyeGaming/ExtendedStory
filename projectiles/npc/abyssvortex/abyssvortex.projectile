@@ -7,62 +7,12 @@
   "damageKindImage" : "icon.png",
   "speed" : 1,
   "animationCycle" : 1.8,
-  "lightColor" : [10, 10, 10],
+  "lightColor" : [35, 35, 35],
   "frameNumber" : 25,
   "power" : 50,
   "damageKind" : "abyss",
   
-  "actionOnReap" : [
-    {
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 36
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 72
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 108
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 144
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 180
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 216
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 252
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 288
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot",
-	  "angleAdjust" : 324
-	},
-	{
-	  "action" : "projectile",
-	  "type" : "abyssshot"
-	}
-  ],
+  "actionOnReap" : [],
 
   "boundBox" : [-10, -10, 10, 10],
   "physicsForces" : {

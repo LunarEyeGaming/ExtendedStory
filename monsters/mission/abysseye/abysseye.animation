@@ -12,8 +12,8 @@
 			}
 		  },
           "open" : {
-            "frames" : 2,
-            "cycle" : 0.2,
+            "frames" : 7,
+            "cycle" : 0.3,
             "mode" : "transition",
 			"transition" : "idle",
             "properties" : {
@@ -22,7 +22,7 @@
             }
           },
           "close" : {
-            "frames" : 3,
+            "frames" : 8,
             "cycle" : 0.3,
             "properties" : {
               "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg",

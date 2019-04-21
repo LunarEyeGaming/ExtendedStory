@@ -1,0 +1,51 @@
+{
+  "projectileName" : "fireelemental_fireballwindup",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 1.5,
+  "image" : "fireelemental_fireball.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.5,
+  "lightColor" : [84, 47, 26],
+  "frameNumber" : 4,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : ["/sfx/melee/travelingslash_fire2.ogg"]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "fireshard"
+        }
+      ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "targetingprojectile",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fireelemental_fireball",
+			"inheritDamageFactor" : 1
+		  }
+		]
+	  }
+	}
+  ],
+  "power" : 20,
+  "damageKind" : "fire"
+}
