@@ -1,0 +1,20 @@
+{
+  "kind" : "destroyerflamesmall",
+  "definition" : {
+    "type" : "animated",
+    "animation" : "/animations/destroyerflamesmall/destroyerflamesmall.animation",
+    "position" : [0, 0],
+	"initialVelocity" : [0, 0],
+	"finalVelocity" : [0, 5],
+	"light" : [97, 0, 0],
+	"fade" : 1,
+	"timeToLive" : 1,
+	"fullbright" : true,
+	"destructionAction" : "shrink",
+	"destructionTime" : 0.2,
+	"size" : 1,
+	"variance" : {
+	  "initialVelocity" : [2, 2]
+	}
+  }
+}

@@ -29,6 +29,9 @@ function initCommonParameters()
   moving = false
   timeMovement = 0.01
   self.lowEnergyTimer = 0
+  self.fireCooldown = config.getParameter("fireCooldown", 1.5)
+  self.fireCooldownTimer = 0
+  self.rechargeActive = false
 end
 
 function translateBroadcastArea()
@@ -141,15 +144,16 @@ function update(args)
 	end
 	
 	--Alt Ability
+    self.fireCooldownTimer = math.max(0, self.fireCooldownTimer - args.dt)
 	
-	if args.moves["altFire"] and altFireCooldownTimer == 0 and not args.moves["primaryFire"] then
-	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {math.cos(rotation), -math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
-	  --world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), {-math.cos(rotation), math.sin(rotation)}, true, {power = 10, knockback = 30, timeToLive = 0.001})
-	  --mcontroller.controlRotation(0.3)
-	  world.spawnProjectile("chaingunlaserbeam", mcontroller.position(), entity.id(), aimVectorAlt, true, {power = 10, knockback = 0, timeToLive = 0.001})
-	  altFireCooldownTimer = 100
-	  sphereEnergy = sphereEnergy - 5
-	  cooldownTimer()
+	if args.moves["altFire"] and not args.moves["primaryFire"] then
+	  if self.fireCooldownTimer == 0 then
+	    local aimVectorAlt = world.distance(aimPosition, mcontroller.position())
+	    world.spawnProjectile("ancientclusterball_es", mcontroller.position(), entity.id(), aimVectorAlt, false, {power = 50 * status.stat("powerMultiplier"), speed = 100})
+	    sphereEnergy = sphereEnergy - self.fireCooldown * 100
+		self.fireCooldownTimer = self.fireCooldown
+		animator.playSound("fire")
+	  end
 	  animator.setAnimationState("ballState", "fire2")
 	end
 	
@@ -167,11 +171,16 @@ function update(args)
 	if args.moves["jump"] and sphereEnergy < 10000 and not (args.moves["left"] or args.moves["right"] or args.moves["up"] or args.moves["down"] or args.moves["primaryFire"] or args.moves["altFire"]) then
 	  sphereEnergy = sphereEnergy + 5
 	  animator.setParticleEmitterActive("ancientsphererecharge", true)
+	  if not self.rechargeActive then
+	    animator.playSound("recharge", -1)
+		self.rechargeActive = true
+	  end
 	else
 	  animator.setParticleEmitterActive("ancientsphererecharge", false)
+	  animator.stopAllSounds("recharge")
+	  self.rechargeActive = false
 	end
 	rotation = mcontroller.rotation()
-	aimVectorAlt = world.distance(aimPosition, mcontroller.position())
 
     updateAngularVelocity(args.dt)
     updateRotationFrame(args.dt)
@@ -184,60 +193,6 @@ function update(args)
 
     animator.setGlobalTag("barDirectives", "scalenearest;"..sphereEnergyRatio..";1")
 	
-	--Boosts
-	--[[  
-	elseif args.moves["right" and "jump"] then
-	  mcontroller.controlApproachXVelocity(80.0, 60.0)
-	  animator.setAnimationState("ballState", "right")
-	  
-	elseif args.moves["left" and "jump"] then
-	  mcontroller.controlApproachXVelocity(-80.0, 60.0)
-	  animator.setAnimationState("ballState", "left")
-	  
-	elseif args.moves["up" and "jump"] then
-	  mcontroller.controlApproachYVelocity(80.0, 60.0)
-	  animator.setAnimationState("ballState", "up")
-	  
-	elseif args.moves["down" and "jump"] then
-	  mcontroller.controlApproachYVelocity(-80.0, 60.0)
-	  animator.setAnimationState("ballState", "down")
-	  
-	--Diagonals
-	  
-	elseif args.moves["right" and "up"] then
-	  mcontroller.controlApproachVelocity({50.0, 50.0}, 40.0)
-	  animator.setAnimationState("ballState", "upright")
-	  
-	elseif args.moves["right" and "down"] then
-	  mcontroller.controlApproachVelocity({50.0, -50.0}, 40.0)
-	  animator.setAnimationState("ballState", "downright")
-	  
-	elseif args.moves["left" and "down"] then
-	  mcontroller.controlApproachVelocity({-50.0, -50.0}, 40.0)
-	  animator.setAnimationState("ballState", "downleft")
-	  
-	elseif args.moves["left" and "up"] then
-	  mcontroller.controlApproachVelocity({-50.0, 50.0}, 40.0)
-	  animator.setAnimationState("ballState", "upleft")
-	  
-	--Boosted diagonals
-	  
-	elseif args.moves["right" and "up" and "jump"] then
-	  mcontroller.controlApproachVelocity({80.0, 80.0}, 60.0)
-	  animator.setAnimationState("ballState", "upright")
-	  
-	elseif args.moves["right" and "down" and "jump"] then
-	  mcontroller.controlApproachVelocity({80.0, -80.0}, 60.0)
-	  animator.setAnimationState("ballState", "downright")
-	  
-	elseif args.moves["left" and "down" and "jump"] then
-	  mcontroller.controlApproachVelocity({-80.0, -80.0}, 60.0)
-	  animator.setAnimationState("ballState", "downleft")
-	  
-	elseif args.moves["left" and "up" and "jump"] then
-	  mcontroller.controlApproachVelocity({-80.0, 80.0}, 60.0)
-	  animator.setAnimationState("ballState", "upleft")
-	]]
   if deactivaterCheck == true then
 	  attemptActivation()
 	  animator.setAnimationState("ballState", "deactivate")
@@ -258,12 +213,6 @@ function update(args)
     deactivate()
   end
   
-end
-
-function cooldownTimer()
-  while altFireCooldownTimer > 0 do
-    altFireCooldownTimer = altFireCooldownTimer - 1
-  end
 end
 
 function attemptActivation()

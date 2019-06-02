@@ -1,0 +1,17 @@
+{
+  "projectileName" : "frostcorephase2spiked",
+  "image" : "frostcorephase2spiked.png",
+  "physics" : "laser",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 50,
+  "timeToLive" : 20,
+  "bounces" : -1,
+  "piercing" : true,
+  "fullbright" : true,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "renderLayer" : "Monster+50",
+  "periodicActions" : [ ]
+}

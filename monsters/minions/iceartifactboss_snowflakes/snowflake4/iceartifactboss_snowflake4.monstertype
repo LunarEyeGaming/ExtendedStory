@@ -1,0 +1,153 @@
+{
+  "type" : "iceartifactboss_snowflake4",
+
+  "categories" : [ "iceartifactboss_snowflake4" ],
+  "parts" : [ "body" ],
+
+  "animation" : "iceartifactboss_snowflake4.animation",
+  "reversed" : true,
+
+  "dropPools" : [ "money" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/minions/iceartifactboss_snowflakes/snowflake4/iceartifactboss_snowflake4.lua",
+      "/monsters/simpleRangedAttack.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "metaBoundBox" : [-2.5, -2.5, 2.5, 2.5],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+
+      "mass" : 1.0,
+      "flySpeed" : 15,
+      "airFriction" : 0.25,
+      "airForce" : 35.0,
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "targetRadius" : 30.0,
+    "targetSearchTime" : 0.5,
+    "targetHoldTime" : 5.0,
+
+    "blockedSensors" : [ [1.5, -1.1], [1.5, -0.5], [1.5, 0.5], [1.5, 1.1] ],
+
+    "knockoutTime" : 0.5,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "touchDamage" : {
+      "poly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
+      "damage" : 15,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 150
+        },
+        "protection" : {
+          "baseValue" : 50.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "projectileType" : "orbitalup",
+    "projectileConfig" : {
+      "speed" : 0,
+      "power" : 20,
+	  "timeToLive" : 0,
+      "actionOnReap" : [
+	    {
+		  "action" : "loop",
+		  "count" : 10,
+		  "body" : [
+		    {
+		      "action" : "projectile",
+		      "type" : "iceshotgrenade",
+			  "inheritDamageFactor" : 1,
+		      "fuzzAngle" : 180,
+			  "config" : {
+			    "speed" : 50,
+				"bounces" : 3,
+				"actionOnReap" : [
+				  {
+				    "action" : "config",
+					"file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+				  }
+				]
+			  }
+		    },
+			{
+		      "action" : "projectile",
+		      "type" : "fg_iciclehoming",
+			  "inheritDamageFactor" : 1,
+		      "fuzzAngle" : 180,
+			  "config" : {
+			    "speed" : 20
+			  }
+		    }
+		  ]
+		},
+        {
+          "action" : "sound",
+          "options" : [ "/sfx/npc/minion/snowflake4_fire.ogg" ]
+        }
+      ]
+    },
+
+    "attackTime" : 0.1,
+    "fireInterval" : 0.1,
+    "cooldownTime" : 3.0
+  }
+}

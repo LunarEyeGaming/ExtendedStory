@@ -1,0 +1,26 @@
+{
+  "projectileName" : "hypothermiaglobe",
+  "image" : "hypothermiaglobe.png",
+  "physics" : "hover",
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "frameNumber" : 10,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 10,
+  "bounces" : -1,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "lightColor" : [7, 134, 140],
+  "damageKind" : "ice",
+  "fullbright" : true,
+  "hydrophobic" : false,
+  "orientationLocked" : true,
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+	}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "projectileName" : "frostburnfireballsmall_es",
+  "image" : "frostburnfireballsmall_es.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 5,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "renderLayer" : "Monster+50",
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+	}
+  ],
+  "power" : 50.0,
+  "speed" : 30,
+  "damageKind" : "plasma"
+}

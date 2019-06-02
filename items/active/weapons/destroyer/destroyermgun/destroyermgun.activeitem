@@ -24,7 +24,20 @@
   "animationCustom" : {
     "sounds" : {
 	  "altFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ]
-	}
+	},
+	"particleEmitters" : {
+      "altMuzzleFlash" : {
+        "active" : false,
+        "transformationGroups" : ["muzzle"],
+        "emissionRate" : 8,
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : [
+          { "particle" : "destroyerflamesmall"},
+          { "particle" : "destroyerflamesmall"},
+          { "particle" : "destroyerflamesmall"}
+        ]
+      }
+    }
   },
   "muzzleOffset" : [2, 0.5],
 
@@ -103,7 +116,7 @@
       }
     }
   },
-  "altAbilityType" : "grenadelauncher",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
       "physical" : { "name" : "Doomcannon Spread", "projectileType" : "doomshot", "projectileCount" : 5, "fireTime" : 0.5, "inaccuracy" : 0.08, "projectileParameters" : {}}

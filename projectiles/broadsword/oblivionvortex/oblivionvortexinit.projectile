@@ -25,7 +25,7 @@
 	  "time" : 0.2,
 	  "action" : "projectile",
 	  "type" : "oblivionexplosionsmall",
-	  "offsetRange" : [2, 2, -2, -2],
+	  "offsetRange" : [-2, -2, 2, 2],
 	  "fuzzAngle" : 180,
 	  "config" : {
 	    "processing" : "?scalenearest=0.5"
@@ -36,7 +36,7 @@
 	  "repeat" : false,
 	  "action" : "projectile",
 	  "type" : "oblivionexplosionsmall",
-	  "offsetRange" : [2, 2, -2, -2],
+	  "offsetRange" : [-2, -2, 2, 2],
 	  "fuzzAngle" : 180,
 	  "config" : {
 	    "processing" : "?scalenearest=0.5"

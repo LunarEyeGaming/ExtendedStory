@@ -72,71 +72,7 @@
     }
   },
 
-  "altAbilityType" : "flamethrowersword",
-  "altAbility" : {
-    "name" : "Tesla Chaos",
-	"projectileType" : "invisibleprojectile",
-	"stances" : { 
-	  "windup" : { "duration" : 0.66, "armRotation" : 20, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : false, "animationStates" : { "sfx" : "windup" } }, 
-	  "fire" : { "armRotation" : 45, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : false } 
-	},
-	"baseDps" : 30,
-	"fireTime" : 0.1,
-	"projectileParameters" : {
-	  "damageTeam" : {"type" : "friendly"},
-	  "power" : 0,
-	  "piercing" : true,
-	  "timeToLive" : 0.02,
-	  "periodicActions" : [
-	    {
-		  "time" : 0,
-		  "repeat" : false,
-		  "action" : "projectile",
-		  "type" : "railgunlightning",
-		  "direction" : [0, -1],
-		  "offsetRange" : [60, 40, -60, 40],
-		  "config" : {
-		    "speed" : 100,
-			"power" : 1,
-			"actionOnReap" : [
-			  {
-			    "action" : "config",
-				"file" : "/projectiles/explosions/burstexplosion/electricburstexplosion.config"
-			  }
-			]
-		  }
-		},
-		{
-		  "time" : 0,
-		  "repeat" : false,
-		  "action" : "projectile",
-		  "type" : "teslabolt",
-		  "direction" : [1, 1]
-		},
-		{
-		  "time" : 0,
-		  "repeat" : false,
-		  "action" : "projectile",
-		  "type" : "teslabolt",
-		  "direction" : [-1, 1]
-		},
-		{
-		  "time" : 0,
-		  "repeat" : false,
-		  "action" : "projectile",
-		  "type" : "teslabolt",
-		  "direction" : [-1, -1]
-		},
-		{
-		  "time" : 0,
-		  "repeat" : false,
-		  "action" : "projectile",
-		  "type" : "teslabolt",
-		  "direction" : [1, -1]
-		}
-	  ]
-	}
-  },
+  "altAbilityType" : "lightningslam",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

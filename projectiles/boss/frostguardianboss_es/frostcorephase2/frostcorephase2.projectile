@@ -6,7 +6,7 @@
   "frameNumber" : 1,
   "power" : 0,
   "speed" : 0,
-  "timeToLive" : 13.5,
+  "timeToLive" : 9,
   "bounces" : 0,
   "fullbright" : true,
   "onlyHitTerrain" : true,
@@ -17,48 +17,80 @@
     {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargeting",
+      "type" : "fg_iciclelargetargeting",
+	  "inheritDamageFactor" : 1,
 	  "direction" : [0, -1]
     },
 	{
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargeting",
-	  "offset" : [2, 0],
-	  "direction" : [0, -1],
+      "type" : "targetingprojectile",
+	  "inheritDamageFactor" : 1,
 	  "config" : {
-	    "timeToLive" : 1.25
+	    "timeToLive" : 1.0,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_iciclehoming",
+	        "inheritDamageFactor" : 1,
+			"angleAdjust" : 0
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "fg_iciclehoming",
+	        "inheritDamageFactor" : 1,
+			"angleAdjust" : 15
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "fg_iciclehoming",
+	        "inheritDamageFactor" : 1,
+			"angleAdjust" : -15
+		  }
+		]
 	  }
     },
-	{
-      "time" : 1.5,
-      "action" : "projectile",
-      "type" : "fg_icicletargeting",
-	  "offset" : [-2, 0],
-	  "direction" : [0, -1],
-	  "config" : {
-	    "timeToLive" : 1.25
-	  }
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
     },
 	{
-      "time" : 1.5,
-      "action" : "projectile",
-      "type" : "fg_icicletargeting",
-	  "offset" : [4, 0],
-	  "direction" : [0, -1],
-	  "config" : {
-	    "timeToLive" : 1.5
+	  "time" : 0.0,
+	  "repeat" : false,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+	    "type" : "textured",
+		"image" : "/projectiles/boss/frostguardianboss_es/frostcorephase1/frostcorephase1.png?setcolor=ffffff",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"destructionTime" : 0.25
 	  }
-    },
+	}
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "targetingprojectile",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "frostcorephase2spiked",
+			"inheritDamageFactor" : 1
+		  }
+		]
+	  }
+	},
 	{
-      "time" : 1.5,
-      "action" : "projectile",
-      "type" : "fg_icicletargeting",
-	  "offset" : [-4, 0],
-	  "direction" : [0, -1],
-	  "config" : {
-	    "timeToLive" : 1.5
-	  }
-    }
+	  "action" : "sound",
+	  "options" : [ "/sfx/melee/charge_full_swing1.ogg" ]
+	}
   ]
 }

@@ -19,7 +19,7 @@
 		  "action" : "projectile",
 		  "inheritDamageFactor" : 0.05,
 		  "type" : "invisibleprojectile",
-		  "offsetRange" : [5, 5, -5, -5],
+		  "offsetRange" : [-5, -5, 5, 5],
 		  "config" : {
 		    "periodicActions" : [
 			  {

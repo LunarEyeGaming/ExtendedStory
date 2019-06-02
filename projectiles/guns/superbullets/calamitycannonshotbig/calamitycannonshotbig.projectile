@@ -22,13 +22,13 @@
 		  "action" : "particle",
 	      "specification" : {
 	        "type" : "ember",
-		    "color" : [191, 73, 44, 100],
+		    "color" : [218, 83, 2, 100],
 		    "position" : [0, 0],
 		    "initialVelocity" : [0, 0],
 		    "finalVelocity" : [0, 0],
 		    "timeToLive" : 0.0,
 		    "size" : 2,
-		    "light" : [94, 30, 14],
+		    "light" : [163, 38, 0],
 		    "destructionAction" : "fade",
 			"fullbright" : true,
 		    "destructionTime" : 0.5,
@@ -46,7 +46,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/calamitycannonexplosion/calamitycannonexplosion.config"
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
     },
 	{
       "action" : "projectile",

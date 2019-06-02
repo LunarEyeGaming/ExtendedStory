@@ -1,0 +1,123 @@
+{
+  "type" : "iceartifactboss_iceblock",
+
+  "categories" : [ "iceartifactboss_iceblock" ],
+  "parts" : [ "body" ],
+
+  "animation" : "iceartifactboss_iceblock.animation",
+  "reversed" : true,
+
+  "dropPools" : [ "money" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/minions/iceartifactboss_iceblock/iceartifactboss_iceblock.lua",
+      "/monsters/simpleRangedAttack.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua"
+    ],
+
+    "metaBoundBox" : [-2.5, -2.5, 2.5, 2.5],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+      "collisionPoly" : [ [3, 4], [3, -4], [-3, -4], [-3, 4] ],
+
+      "mass" : 1.0,
+      "flySpeed" : 50,
+      "airFriction" : 0.25,
+      "airForce" : 35.0,
+      "physicsEffectCategories" : ["boss"]
+    },
+
+    "targetRadius" : 30.0,
+    "targetSearchTime" : 0.5,
+    "targetHoldTime" : 5.0,
+
+    "blockedSensors" : [ [1.5, -1.1], [1.5, -0.5], [1.5, 0.5], [1.5, 1.1] ],
+
+    "knockoutTime" : 0.5,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "touchDamage" : {
+      "poly" : [ [3, 4], [3, -4], [-3, -4], [-3, 4] ],
+      "damage" : 15,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 9999999
+        },
+        "protection" : {
+          "baseValue" : 100.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+
+    "projectileType" : "fg_iciclehoming",
+    "projectileConfig" : {
+      "speed" : 45,
+      "power" : 25,
+      "periodicActions" : [
+        {
+          "time" : 0,
+          "repeat" : false,
+          "action" : "sound",
+          "options" : [ "/sfx/npc/boss/cultistboss_sphere_attack.ogg" ]
+        }
+      ]
+    },
+
+    "attackTime" : 1,
+    "fireInterval" : 0.3,
+    "cooldownTime" : 1.5
+  }
+}

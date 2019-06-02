@@ -62,7 +62,7 @@
 	            "type" : "antimatterexplosionsmall_es",
 	            "angle" : 90,
 	            "fuzzAngle" : 180,
-	            "offsetRange" : [ 5, 5, -5, -5 ]
+	            "offsetRange" : [ -5, -5, 5, 5 ]
 	          }
 	        ]
 	      },
@@ -91,7 +91,7 @@
 	            "type" : "antimatterexplosionsmall_es",
 	            "angle" : 90,
 	            "fuzzAngle" : 180,
-	            "offsetRange" : [ 10, 10, -10, -10 ]
+	            "offsetRange" : [ -10, -10, 10, 10 ]
 	          }
 	        ]
 	      },
@@ -120,7 +120,7 @@
 	            "type" : "antimatterexplosionsmall_es",
 	            "angle" : 90,
 	            "fuzzAngle" : 180,
-	            "offsetRange" : [ 20, 20, -20, -20 ]
+	            "offsetRange" : [ -20, -20, 20, 20 ]
 	          }
 	        ]
 	      }

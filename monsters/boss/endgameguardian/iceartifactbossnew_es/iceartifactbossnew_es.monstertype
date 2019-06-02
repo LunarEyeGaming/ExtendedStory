@@ -1,9 +1,9 @@
 {
   "type" : "iceartifactbossnew_es",
-  "shortdescription" : "Cryonia; Super-charged Armor",
+  "shortdescription" : "Cryonia",
 
   "categories" : [ "iceartifactbossnew_es" ],
-  "parts" : [ "body" ],
+  "parts" : [ "body", "beam" ],
 
   "animation" : "iceartifactbossnew_es.animation",
 
@@ -22,10 +22,11 @@
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
     "scale" : 1.0,
+	"renderLayer" : "Projectile-20",
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [-16.875, -16.4375], [16.875, -16.4375], [16.875, 16.4375], [-16.875, 16.4375] ],
+      "collisionPoly" : [ [-8, -8], [8, -8], [8, 8], [-8, 8] ],
 
       "mass" : 4.0,
       "walkSpeed" : 5,
@@ -43,11 +44,19 @@
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
-	
-	"damageParts" : {},
+
+    "damageParts" : {
+      "beam" : {
+        "damage" : 25,
+		"damageTeam" : 0,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "plasma"
+      }
+    },
 
     "touchDamage" : {
-      "poly" : [ [8.4375, 16.4375], [16.4375, 8.4375], [16.4375, -8.4375], [8.4375, -16.4375], [-8.4375, -16.4375], [-16.4375, -8.4375], [-16.4375, 8.4375], [-8.4375, 16.4375] ],
+      "poly" : [ [4, 8], [8, 4], [8, -4], [4, -8], [-4, -8], [-8, -4], [-8, 4], [-4, 8] ],
       "damage" : 10,
 
       "teamType" : "enemy",
@@ -77,10 +86,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2500
+          "baseValue" : 3500
         },
         "protection" : {
-          "baseValue" : 25.0
+          "baseValue" : 50
         },
         "healthRegen" : {
           "baseValue" : 0.0

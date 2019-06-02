@@ -1,0 +1,276 @@
+{
+  "name": "iceartifactbossnew_es-slam",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+	"/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "slamNumber": 4
+  },
+  "root": {
+    "title": "repeater",
+	"type": "decorator",
+	"name": "repeater",
+	"parameters": {
+	  "maxLoops": {"value": "<slamNumber>"},
+	  "untilSuccess": {"value": false}
+	},
+	"child": {
+	  "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+	    {
+          "title": "controlParameters",
+          "type": "action",
+          "name": "controlParameters",
+          "parameters": {
+            "parameters": {"value": {"gravityEnabled": false}}
+          }
+        },
+	    {
+          "title": "entityPosition",
+          "type": "action",
+          "name": "entityPosition",
+          "parameters": {
+		    "entity": {"key": "target"}
+		  },
+		  "output": {
+		    "position": "targetPos"
+		  }
+        },
+        {
+          "title": "offsetPosition",
+          "type": "action",
+          "name": "offsetPosition",
+          "parameters": {
+            "offset": {"value": [0, 20]},
+            "position": {"key": "targetPos"}
+          },
+          "output": {
+            "position": "preslam"
+          }
+        },
+        {
+          "title": "setParticleEmitterActive",
+          "type": "action",
+          "name": "setParticleEmitterActive",
+          "parameters": {
+            "active": {"value": true},
+            "emitter": {"value": "glowparticles"}
+          }
+        },
+		{
+		  "title": "parallel",
+		  "type": "composite",
+		  "name": "parallel",
+		  "parameters": {
+		    "fail": {"value": -1},
+			"success": {"value": 1}
+		  },
+		  "children": [
+		    {
+			  "title": "timer",
+			  "type": "action",
+			  "name": "timer",
+			  "parameters": {
+			    "time": {"value": 3}
+			  }
+			},
+			{
+        	  "title": "flyToPosition",
+        	  "type": "action",
+        	  "name": "flyToPosition",
+        	  "parameters": {
+        	    "position": {"key": "preslam"},
+				"speed": {"value": 50},
+        	    "tolerance": {"value": 1}
+        	  }
+        	}
+		  ]
+		},
+        {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, 0]}
+          }
+        },
+	    {
+          "title": "timer",
+          "type": "action",
+          "name": "timer",
+          "parameters": {
+            "time": {"value": 0.15}
+          }
+        },
+        {
+          "title": "setDamageOnTouch",
+          "type": "action",
+          "name": "setDamageOnTouch",
+          "parameters": {
+            "touchDamage": {"value": true}
+          }
+        },
+	    {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, -50]}
+          }
+        },
+		{
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": -1}
+          },
+          "children": [
+		    {
+              "title": "controlParameters",
+              "type": "action",
+              "name": "controlParameters",
+              "parameters": {
+                "parameters": {"value": {"gravityEnabled": true}}
+              }
+            },
+            {
+              "title": "dynamic",
+              "type": "composite",
+              "name": "dynamic",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "onGround",
+                  "type": "action",
+                  "name": "onGround",
+                  "parameters": {}
+                },
+                {
+                  "title": "runner",
+                  "type": "action",
+                  "name": "runner",
+                  "parameters": {}
+                }
+              ]
+            }
+		  ]
+		},
+		{
+          "title": "repeater",
+          "type": "decorator",
+          "name": "repeater",
+          "parameters": {
+            "maxLoops": {"value": 20},
+            "untilSuccess": {"value": false}
+          },
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+    	        "title": "random",
+    	        "type": "action",
+    	        "name": "random",
+    	        "parameters": {
+    	          "max": {"value": 48},
+    	          "min": {"value": -48}
+    	        },
+    	        "output": {
+    	          "number": "projX"
+    	        }
+    	      },
+			  {
+    		    "title": "spawnProjectile",
+    		    "type": "action",
+    		    "name": "spawnProjectile",
+    		    "parameters": {
+    		      "aimVector": {"value": [0, -1]},
+    		      "offset": {"value": ["projX", 19]},
+    		      "projectileConfig": {"value": {"speed": 50}},
+				  "position": {"key": "spawn"},
+    		      "projectileType": {"value": "fg_icicle"},
+                  "scalePower": {"value": true}
+    		    }
+    		  }
+            ]
+          }
+        },
+		{
+    	  "title": "spawnProjectile",
+    	  "type": "action",
+    	  "name": "spawnProjectile",
+    	  "parameters": {
+    	    "aimVector": {"value": [-1, 0]},
+    	    "offset": {"value": [0, 0]},
+    	    "projectileConfig": {"value": {}},
+    	    "projectileType": {"value": "icicleshockwave_es"},
+            "scalePower": {"value": true}
+    	  }
+    	},
+		{
+    	  "title": "spawnProjectile",
+    	  "type": "action",
+    	  "name": "spawnProjectile",
+    	  "parameters": {
+    	    "aimVector": {"value": [1, 0]},
+    	    "offset": {"value": [0, 0]},
+    	    "projectileConfig": {"value": {}},
+    	    "projectileType": {"value": "icicleshockwave_es"},
+            "scalePower": {"value": true}
+    	  }
+    	},
+        {
+          "title": "setParticleEmitterActive",
+          "type": "action",
+          "name": "setParticleEmitterActive",
+          "parameters": {
+            "active": {"value": false},
+            "emitter": {"value": "glowparticles"}
+          }
+        },
+		{
+          "title": "playSound",
+          "type": "action",
+          "name": "playSound",
+          "parameters": {
+		    "sound": {"value": "slam"}
+		  }
+        },
+		{
+		  "title": "burstParticleEmitter",
+		  "type": "action",
+		  "name": "burstParticleEmitter",
+		  "parameters": {
+		    "emitter": {"value": "slam"}
+		  }
+		},
+        {
+          "title": "setDamageOnTouch",
+          "type": "action",
+          "name": "setDamageOnTouch",
+          "parameters": {
+            "touchDamage": {"value": false}
+          }
+        },
+	    {
+          "title": "timer",
+          "type": "action",
+          "name": "timer",
+          "parameters": {
+            "time": {"value": 1.0}
+          }
+        }
+      ]
+	}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "projectileName" : "frostburnballwindup_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "frostburnballwindup_es.png",
+  "fullbright" : true,
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.3,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "frostburnball_es",
+	  "inheritDamageFactor" : 1
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

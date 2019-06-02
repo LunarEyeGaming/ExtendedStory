@@ -10,7 +10,7 @@
       "action" : "projectile",
       "type" : "acidsweepmineactive",
 	  "angle" : 0,
-	  "offsetRange" : [ 1, 0.1, -1, 0.1 ]
+	  "offsetRange" : [ -1, 0.1, 1, 0.1 ]
     },
 	{
 	  "action": "sound",

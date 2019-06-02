@@ -1,0 +1,35 @@
+{
+  "projectileName" : "frostburnfireballsmallhoming_es",
+  "image" : "frostburnfireballsmall_es.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 5,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "renderLayer" : "Monster+50",
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "frostburnshard"
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fireball_spit.ogg" ]
+    }
+  ],
+  "power" : 50.0,
+  "speed" : 30,
+  "damageKind" : "plasma",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

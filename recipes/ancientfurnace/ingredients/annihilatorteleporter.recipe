@@ -1,7 +1,6 @@
 {
   "input" : [
-    { "item" : "annihilatorplate", "count" : 20 },
-	{ "item" : "destroyerbar", "count" : 20 }
+    { "item" : "annihilatorplate", "count" : 20 }
   ],
   "output" : { "item" : "annihilatorteleporter", "count" : 1 },
   "groups" : [ "ancientfurnace", "ingredients", "all" ]

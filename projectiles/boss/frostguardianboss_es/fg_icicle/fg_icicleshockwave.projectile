@@ -1,6 +1,6 @@
 {
   "projectileName" : "fg_icicleshockwave",
-  "image" : "fg_icicle.png",
+  "image" : "fg_frostburnicicle.png",
   "physics" : "laser",
   "animationCycle" : 1,
   "frameNumber" : 1,
@@ -8,8 +8,8 @@
   "speed" : 0,
   "timeToLive" : 0.5,
   "bounces" : 0,
-  "fullbright" : true,
   "piercing" : false,
+  "fullbright" : true,
   "damagePoly" : [ [-8, 4], [-8, -4], [8, 0] ],
   "damageKind" : "ice",
   "actionOnReap" : [
@@ -19,7 +19,7 @@
 	  "body" : [
 	    {
 		  "action" : "particle",
-	      "specification" : "iceshard"
+	      "specification" : "frostburniceshard"
 		}
 	  ]
 	},

@@ -86,7 +86,7 @@
 		    {
 			  "action" : "projectile",
 			  "type" : "laserburst",
-			  "offsetRange" : [3, 3, -3, -3],
+			  "offsetRange" : [-3, -3, 3, 3],
 			  "config" : {
 			    "periodicActions" : [
 				  {
@@ -178,7 +178,7 @@
 		        {
 		    	  "action" : "projectile",
 			      "type" : "orbitalup",
-			      "offsetRange" : [3, 3, -3, -3],
+			      "offsetRange" : [-3, -3, 3, 3],
 			      "config" : {
 			        "timeToLive" : 0,
 					"speed" : 0,

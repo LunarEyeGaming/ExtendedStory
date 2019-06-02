@@ -1,0 +1,22 @@
+{
+  "projectileName" : "iceprobespawning_es",
+  "image" : "iceprobespawning_es.png",
+  "animationCycle" : 1.5,
+  "frameNumber" : 15,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "renderLayer" : "Monster+50",
+  "fullbright" : true,
+  "timeToLive" : 1.5,
+  "actionOnReap" : [
+    {
+	  "action" : "spawnmonster",
+	  "type" : "iceartifactboss_iceprobe",
+	  "level" : 10
+	}
+  ],
+  "power" : 0.0,
+  "speed" : 0,
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

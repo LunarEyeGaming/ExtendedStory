@@ -1,0 +1,35 @@
+{
+  "projectileName" : "fg_iciclelargehoming",
+  "image" : "fg_iciclelarge.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "damagePoly" : [ [-40, 20], [-40, -20], [40, 0] ],
+  "renderLayer" : "Monster+50",
+  "actionOnReap" : [
+    {
+	  "action" : "loop",
+	  "count" : 40,
+	  "body" : [
+	    {
+		  "action" : "particle",
+	      "specification" : "iceshard"
+		}
+	  ]
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg", "/sfx/projectiles/ice_break5.ogg", "/sfx/projectiles/ice_break6.ogg", "/sfx/projectiles/ice_break7.ogg", "/sfx/projectiles/ice_break8.ogg", "/sfx/projectiles/ice_break9.ogg", "/sfx/projectiles/ice_break10.ogg" ]
+	}
+  ],
+  "power" : 50.0,
+  "speed" : 30,
+  "damageKind" : "ice",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}

@@ -614,7 +614,7 @@
 							    {
 								  "action": "projectile",
 								  "type": "invisibleprojectile",
-								  "offsetRange": [5, 5, -5, -5],
+								  "offsetRange": [-5, -5, 5, 5],
 								  "config": {
 								    "timeToLive": 0,
 									"damageType": "NoDamage",

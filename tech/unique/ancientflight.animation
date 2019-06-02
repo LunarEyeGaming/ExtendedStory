@@ -89,8 +89,8 @@
 			"cycle" : 0.25,
 			"mode" : "loop",
 			"properties" : {
-              "immediateSound" : "/sfx/objects/crystaltrap_on1.ogg",
-			  "persistentSound" : "/sfx/objects/crystaltrap_loop.ogg",
+              "immediateSound" : "/sfx/tools/energypickaxe_start.ogg",
+			  "persistentSound" : "/sfx/melee/charge_full_hold1.ogg",
 			  "lightsOn" : ["glow"],
 			  "lightsOff" : ["glowwarning"]
             }
@@ -738,7 +738,8 @@
   },
 
   "transformationGroups" : {
-    "ball" : { "interpolated" : true }
+    "ball" : { "interpolated" : true },
+    "beamEnd" : {}
   },
 
   "lights" : {
@@ -787,6 +788,8 @@
     "deactivate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
     "forceDeactivate" : [ "/sfx/tech/tech_sonicsphere_charge1.ogg" ],
 	"shutdown" : [ "/sfx/tech/mech_explosion_windup.ogg" ],
-	"move" : [ "/sfx/tech/vehicle_appear3.ogg" ]
+	"move" : [ "/sfx/tech/vehicle_appear3.ogg" ],
+    "fire" : [ "/sfx/gun/ancientshotgun_altfire.ogg" ],
+    "recharge" : [ "/sfx/tech/tech_hoverloop.ogg" ]
   }
 }

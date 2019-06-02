@@ -1,0 +1,37 @@
+{
+  "projectileName" : "frostportalunstablewindup_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "frostportalwindup_es.png",
+  "fullbright" : true,
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.3,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_portal_open.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "frostportal_es",
+	  "inheritDamageFactor" : 1,
+	  "direction" : [0, 0],
+	  "config" : {
+	    "power" : 0,
+		"periodicActions" : [],
+		"timeToLive" : 32,
+		"actionOnReap" : [],
+		"processing" : "?scalenearest=2"
+	  }
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

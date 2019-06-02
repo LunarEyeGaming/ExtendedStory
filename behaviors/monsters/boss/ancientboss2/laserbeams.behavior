@@ -89,7 +89,7 @@
     	      "parameters": {
     	        "aimVector": {"value": [0, 0]},
     	        "offset": {"value": [0, -13]},
-    	        "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "offsetRange": [31, 0, -31, 0], "config": {"onlyHitTerrain": true, "speed": 0, "periodicActions": [{"time": 0.1, "action": "projectile", "type": "ancientorb_boss", "config": {"timeToLive": 1, "onlyHitTerrain": true, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "ancientboss2_laser", "direction": [0, 1], "config": {"actionOnReap": [], "power": 100}}]}}], "timeToLive": 1, "actionOnReap": []}}]}]}},
+    	        "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "offsetRange": [-31, 0, 31, 0], "config": {"onlyHitTerrain": true, "speed": 0, "periodicActions": [{"time": 0.1, "action": "projectile", "type": "ancientorb_boss", "config": {"timeToLive": 1, "onlyHitTerrain": true, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "ancientboss2_laser", "direction": [0, 1], "config": {"actionOnReap": [], "power": 100}}]}}], "timeToLive": 1, "actionOnReap": []}}]}]}},
     	        "projectileType": {"value": "orbitalup"}
     	      }
     	    },

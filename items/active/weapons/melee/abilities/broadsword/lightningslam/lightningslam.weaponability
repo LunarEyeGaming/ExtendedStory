@@ -1,0 +1,151 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "swoosh" : {
+          "states" : {
+            "flip" : {},
+			"slam" : {}
+          }
+        }
+      },
+
+      "parts" : {
+        "swoosh" : {
+          "partStates" : {
+            "swoosh" : {
+              "flip" : {
+                "properties" : {
+                  "image" : "/items/active/weapons/melee/abilities/broadsword/lightningslam/<elementalType>swoosh.png",
+                  "offset" : [2.25, 2.75],
+                  "damageArea" : [[-6.0, -3.5], [-6.0, 0], [-3.5, 2.5], [0, 2.5], [2.5, 0], [2.5, -3.5], [0, -6.0], [-3.5, -6.0]]
+                }
+              },
+			  "slam" : {
+			    "properties" : {
+				  "image" : "/items/active/weapons/melee/abilities/broadsword/lightningslam/<elementalType>slam.png",
+				  "zLevel" : 20,
+				  "offset" : [3, 0],
+                  "damageArea" : [[0, 1], [0, -1], [3, 0]]
+				}
+			  }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "flip" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "offsetRegion" : [-4, -4, 5, 5],
+        "emissionRate" : 70,
+        "particles" : [
+          { "particle" : "electricalburn"},
+          { "particle" : "electricswoosh1"},
+          { "particle" : "electricswoosh2"}
+        ]
+      },
+	  "slam" : {
+        "active" : false,
+        "transformationGroups" : ["weapon"],
+        "offsetRegion" : [-1, -1, 1, 2],
+        "emissionRate" : 70,
+        "particles" : [
+          { "particle" : "electricalburn"},
+          { "particle" : "electricswoosh1"},
+          { "particle" : "electricswoosh2"}
+        ]
+      }
+    },
+    "sounds" : {
+      "flipSlash" : [ "/sfx/melee/laser_flip_slash.ogg" ],
+	  "electricimpact" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
+	  "slamCharge" : [ "/sfx/melee/lightningblade_altwindup2.ogg" ],
+	  "slamming" : [ "/sfx/npc/boss/ufo_stunned.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Lightning Slam",
+    "type" : "lightningslam",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/lightningslam/lightningslam.lua"],
+    "class" : "LightningSlam",
+
+    "cooldownTime" : 2.0,
+
+    "damageConfig" : {
+      "damageSourceKind" : "electricbroadsword",
+      "statusEffects" : [ "electrified" ],
+      "baseDamage" : 6,
+      "knockback" : [0, -35],
+      "timeout" : 0.2,
+      "timeoutGroup" : "alt"
+    },
+
+    "flipMovementParameters" : {
+      "collisionPoly" : [ [-2.0, -1.0], [-1.0, -2.0], [1.0, -2.0], [2.0, -1.0], [2.0, 1.0], [1.0, 2.0], [-1.0, 2.0], [-2.0, 1.0] ]
+    },
+
+    "energyUsage" : 200.0,
+    "rotations" : 3,
+    "rotationTime" : 0.2,
+
+    "jumpVelocity" : [40, 60],
+    "jumpDuration" : 0.2,
+	
+	"slamFreezeTime" : 0.25,
+	"slamSpeed" : 100,
+
+    "projectileType" : "electricshockwave",
+    "projectileParameters" : {
+      "power" : 3.5,
+      "knockback" : 35,
+      "knockbackMode" : "facing"
+    },
+    "shockWaveBounds" : [-0.4, -1.375, 0.4, 0.0],
+    "shockwaveHeight" : 1.375,
+    "maxDistance" : 25,
+    "bothDirections" : true,
+
+    "impactLine" : [ [1.25, -1.5], [1.25, -4.5] ],
+    "impactWeaponOffset" : 0.75,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.2,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "flip" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "slamwindup" : {
+        "armRotation" : 45,
+        "weaponRotation" : 135,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "slamfinish" : {
+        "armRotation" : -45,
+        "weaponRotation" : 225,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

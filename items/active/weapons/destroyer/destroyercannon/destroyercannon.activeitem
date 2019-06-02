@@ -28,10 +28,14 @@
 	"particleEmitters" : {
       "altMuzzleFlash" : {
         "active" : false,
-        "emissionRate" : 8,
         "transformationGroups" : ["muzzle"],
-        "offsetRegion" : [-0.25, -0.5, -0.25, -0.5],
-        "particles" : [ ]
+        "emissionRate" : 8,
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : [
+          { "particle" : "destroyerflamesmall"},
+          { "particle" : "destroyerflamesmall"},
+          { "particle" : "destroyerflamesmall"}
+        ]
       }
     }
   },

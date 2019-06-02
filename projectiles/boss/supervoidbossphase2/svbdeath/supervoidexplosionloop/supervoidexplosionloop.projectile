@@ -22,7 +22,7 @@
 		  "action" : "projectile",
 		  "type" : "orbitalup",
 		  "fuzzAngle" : 180,
-		  "offsetRange" : [20, 20, -20, -20],
+		  "offsetRange" : [-20, -20, 20, 20],
 		  "config" : {
 		    "damageType" : "nodamage",
 			"speed" : 0,

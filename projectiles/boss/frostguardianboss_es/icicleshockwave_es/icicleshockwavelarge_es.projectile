@@ -1,0 +1,28 @@
+{
+  "projectileName" : "icicleshockwavelarge_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 50,
+  "timeToLive" : 5,
+  "periodicActions" : [
+    {
+	  "time" : 0.25,
+	  "action" : "projectile",
+	  "type" : "fg_frostburniciclelarge",
+	  "direction" : [0, -1],
+	  "inheritDamageFactor" : 1
+	},
+	{
+	  "time" : 0.25,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+	}
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

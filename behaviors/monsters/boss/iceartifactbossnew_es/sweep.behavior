@@ -1,0 +1,289 @@
+{
+  "name": "iceartifactbossnew_es-sweep",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "sweepdownleft"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "sweepdownright"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "speed": {"value": 50}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepEndPos"},
+			  "speed": {"value": 25}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [0, 1]},
+                    "offset": {"value": [0, 0]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"power": 40}},
+                    "projectileType": {"value": "frostburnballwindup_es"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "fire1"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "sweepupleft"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "sweepupright"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "speed": {"value": 50}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepEndPos"},
+			  "speed": {"value": 25}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [0, -1]},
+                    "offset": {"value": [0, 0]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"power": 40}},
+                    "projectileType": {"value": "frostburnballwindup_es"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "fire1"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "speed": {"value": 50}
+		}
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      }
+    ]
+  }
+}

@@ -3,6 +3,7 @@
   "type" : "head",
 
   "scripts" : ["ancientflight.lua"],
+  "animationScripts" : ["/items/active/effects/chain.lua"],
   "animator" : "ancientflight.animation",
 
   "description" : "Turn into a sphere that allows flight! ^green;[F]",
@@ -50,6 +51,7 @@
       "autoJump" : false
     }
   },
+  "fireCooldown" : 0.5,
 
   "ballSpeed" : 14,
 

@@ -1,0 +1,22 @@
+{
+  "projectileName" : "iceprobespawn_es",
+  "image" : "iceprobespawn_es.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "renderLayer" : "Monster+50",
+  "fullbright" : true,
+  "timeToLive" : 1,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "iceprobespawning_es",
+	  "direction" : [1, 0]
+	}
+  ],
+  "power" : 0.0,
+  "speed" : 30,
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

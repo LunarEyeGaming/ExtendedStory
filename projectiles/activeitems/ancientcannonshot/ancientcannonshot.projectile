@@ -28,7 +28,7 @@
 	          {
 		        "action" : "projectile",
 		        "type" : "invisibleprojectile",
-		        "offsetRange" : [20, 20, -20, -20],
+		        "offsetRange" : [-20, -20, 20, 20],
 		        "config" : {
 		          "timeToLive" : 0,
 			      "power" : 50,
@@ -52,7 +52,7 @@
 	          {
 		        "action" : "projectile",
 		        "type" : "invisibleprojectile",
-		        "offsetRange" : [10, 10, -10, -10],
+		        "offsetRange" : [-10, -10, 10, 10],
 		        "config" : {
 		          "timeToLive" : 0,
 			      "power" : 50,
@@ -76,7 +76,7 @@
 	          {
 		        "action" : "projectile",
 		        "type" : "invisibleprojectile",
-		        "offsetRange" : [5, 5, -5, -5],
+		        "offsetRange" : [-5, -5, 5, 5],
 		        "config" : {
 		          "timeToLive" : 0,
 			      "power" : 50,

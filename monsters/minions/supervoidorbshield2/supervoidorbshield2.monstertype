@@ -59,7 +59,7 @@
 					  "action" : "projectile",
 					  "type" : "supervoidbulletbuffed",
 					  "direction" : [0, -1],
-					  "offsetRange" : [50, 50, -50, 50]
+					  "offsetRange" : [-50, 50, 50, 50]
 					}
 				  ]
 				}
@@ -113,7 +113,7 @@
       "statusEffects" : [ ]
     },
 
-    "metaBoundBox" : [-4, -4, 4, 4],
+    "metaBoundBox" : [-9, -9, 9, 9],
     "scale" : 1.0,
 
     "movementSettings" : {

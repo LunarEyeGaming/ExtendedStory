@@ -1,0 +1,916 @@
+{
+  "name": "iceartifactbossnew_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 9999},
+              "keepTargetInRange": {"value": 9999},
+              "targetEntityTypes": {"value": ["player"]},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 1}
+            }
+          },
+          {
+            "title": "Spiderboss",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "Reset",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setDamageBar",
+                        "type": "action",
+                        "name": "setDamageBar",
+                        "parameters": {
+                          "type": {"value": "Special"}
+                        }
+                      },
+                      {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.8}
+                        }
+                      },
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.66},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "iceartifactbossnew_es-snowflakecheck",
+                                    "type": "module",
+                                    "name": "iceartifactbossnew_es-snowflakecheck",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "iceartifactbossnew_es-intro",
+                                    "type": "module",
+                                    "name": "iceartifactbossnew_es-intro",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "iceartifactbossnew_es-frostblockattack",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostblockattack",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-frostcoresphase1",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostcoresphase1",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-sweep",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-sweep",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-frostblockattack3",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostblockattack3",
+                                          "parameters": { }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.33},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "iceartifactbossnew_es-transition1",
+                                    "type": "module",
+                                    "name": "iceartifactbossnew_es-transition1",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "iceartifactbossnew_es-frostblockattack2",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostblockattack2",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-frostcoresphase2",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostcoresphase2",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-slam",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-slam",
+                                          "parameters": { }
+                                        },
+                                        {
+                                          "title": "iceartifactbossnew_es-frostportals",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-frostportals",
+                                          "parameters": { }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "iceartifactbossnew_es-transition2",
+                                    "type": "module",
+                                    "name": "iceartifactbossnew_es-transition2",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "iceartifactbossnew_es-corefrenzy",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-corefrenzy",
+                                          "parameters": { }
+                                        },
+										{
+                                          "title": "iceartifactbossnew_es-adds",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-adds",
+                                          "parameters": { }
+                                        },
+										{
+                                          "title": "iceartifactbossnew_es-corefrenzy2",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-corefrenzy2",
+                                          "parameters": { }
+                                        },
+										{
+										  "title": "setAnimationState",
+										  "type": "action",
+										  "name": "setAnimationState",
+										  "parameters": {
+										    "state": {"value": "off"},
+											"type": {"value": "beam"}
+										  }
+										},
+										{
+										  "title": "resetTransformationGroup",
+										  "type": "action",
+										  "name": "resetTransformationGroup",
+										  "parameters": {
+										    "transformationGroup": {"value": "beam"}
+										  }
+										},
+										{
+                                          "title": "iceartifactbossnew_es-slam2",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-slam2",
+                                          "parameters": { }
+                                        },
+										{
+                                          "title": "iceartifactbossnew_es-corefrenzy3",
+                                          "type": "module",
+                                          "name": "iceartifactbossnew_es-corefrenzy3",
+                                          "parameters": { }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "phoenixboss_es-dying",
+                    "type": "module",
+                    "name": "phoenixboss_es-dying",
+                    "parameters": { }
+                  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAggressive",
+                    "type": "action",
+                    "name": "setAggressive",
+                    "parameters": {
+                      "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setDamageBar",
+                    "type": "action",
+                    "name": "setDamageBar",
+                    "parameters": {
+                      "type": {"value": "None"}
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idlephase1"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "setGlobalTag",
+                    "type": "action",
+                    "name": "setGlobalTag",
+                    "parameters": {
+                      "tag": {"value": "1"},
+                      "type": {"value": "phase"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "entity": {"key": "frost_block1"},
+                      "message": {"value": "deactivate"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "entity": {"key": "frost_block2"},
+                      "message": {"value": "deactivate"}
+                    }
+                  },
+                  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
+                    "parameters": {
+                      "active": {"value": false},
+                      "emitter": {"value": "glowparticles"}
+                    }
+                  },
+                  {
+                    "title": "resetTransformationGroup",
+                    "type": "action",
+                    "name": "resetTransformationGroup",
+                    "parameters": {
+                      "transformationGroup": {"value": "particle"}
+                    }
+                  },
+                  {
+                    "title": "resetTransformationGroup",
+                    "type": "action",
+                    "name": "resetTransformationGroup",
+                    "parameters": {
+                      "transformationGroup": {"value": "beam"}
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake1"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake1"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake1"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake2"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake2"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake2"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake3"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake3"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake3"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake4"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake4"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake4"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake5"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake5"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake5"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "loadUniqueEntity",
+                          "type": "action",
+                          "name": "loadUniqueEntity",
+                          "parameters": {
+                            "uniqueId": {"value": "snowflake6"}
+                          },
+                          "output": {
+                            "entity": "iceartifactboss_snowflake6"
+                          }
+                        },
+                        {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "iceartifactboss_snowflake6"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [12, 16]}
+                    },
+                    "output": {
+                      "position": "snowflake1"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [18, 0]}
+                    },
+                    "output": {
+                      "position": "snowflake2"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [12, -16]}
+                    },
+                    "output": {
+                      "position": "snowflake3"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [-12, -16]}
+                    },
+                    "output": {
+                      "position": "snowflake4"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [-18, 0]}
+                    },
+                    "output": {
+                      "position": "snowflake5"
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "offset": {"value": [-12, 16]}
+                    },
+                    "output": {
+                      "position": "snowflake6"
+                    }
+                  },
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "speed" : {"value" : 50},
+                      "tolerance": {"value": 1}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake1"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake1"},
+                      "parameters": {"value": {"uniqueId": "snowflake1"}}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake2"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake2"},
+                      "parameters": {"value": {"uniqueId": "snowflake2"}}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake3"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake3"},
+                      "parameters": {"value": {"uniqueId": "snowflake3"}}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake4"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake4"},
+                      "parameters": {"value": {"uniqueId": "snowflake4"}}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake5"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake5"},
+                      "parameters": {"value": {"uniqueId": "snowflake5"}}
+                    }
+                  },
+                  {
+                    "title": "spawnMonster",
+                    "type": "action",
+                    "name": "spawnMonster",
+                    "parameters": {
+                      "type": {"value": "iceartifactboss_snowflake6"},
+                      "level": {"value": 10},
+                      "position": {"key": "snowflake6"},
+                      "parameters": {"value": {"uniqueId": "snowflake6"}}
+                    }
+                  },
+                  {
+                    "title": "setDamageOnTouch",
+                    "type": "action",
+                    "name": "setDamageOnTouch",
+                    "parameters": {
+                      "touchDamage": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

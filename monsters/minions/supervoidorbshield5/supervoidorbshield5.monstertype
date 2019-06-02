@@ -54,7 +54,7 @@
 			    {
 				  "action" : "projectile",
 				  "type" : "supervoidreplicatingorb",
-				  "offsetRange" : [60, 60, -20, -20],
+				  "offsetRange" : [-20, -20, 60, 60],
 				  "config" : {
 				    "speed" : 0,
 					"timeToLive" : 5,
@@ -124,7 +124,7 @@
       "statusEffects" : [ ]
     },
 
-    "metaBoundBox" : [-4, -4, 4, 4],
+    "metaBoundBox" : [-9, -9, 9, 9],
     "scale" : 1.0,
 
     "movementSettings" : {

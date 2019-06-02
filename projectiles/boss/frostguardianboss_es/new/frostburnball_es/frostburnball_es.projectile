@@ -1,0 +1,47 @@
+{
+  "projectileName" : "frostburnball_es",
+  "image" : "frostburnball_es.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "damagePoly" : [ [-40, 0], [-25, -25], [0, -40], [25, -25], [40, 0], [25, 25], [0, 40], [-25, 25] ],
+  "renderLayer" : "Monster+50",
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/frostburnballexplosion/frostburnballexplosion.config"
+	}
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/frostburnballfx_es/frostburnballfx_es.animation",
+        "position" : [0, 0],
+        "layer" : "middle",
+        "timeToLive" : 0.5,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "position" : [4, 4]
+		}
+      }
+    }
+  ],
+  "power" : 50.0,
+  "speed" : 30,
+  "damageKind" : "plasma",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
+}
