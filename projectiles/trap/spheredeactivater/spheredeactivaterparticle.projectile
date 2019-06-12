@@ -1,0 +1,27 @@
+{
+  "projectileName" : "spheredeactivaterparticle",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0, 
+  "animationLoops" : false,
+  "flippable" : true,
+  "piercing" : true,
+  "timeToLive" : 0,
+  "onlyHitTerrain" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "option",
+	  "options" : [
+	    {
+	      "action" : "particle",
+	      "specification" : "energyblade"
+	    },
+		{
+	      "action" : "particle",
+	      "specification" : "energyblade2"
+	    }
+	  ]
+	}
+  ]
+}

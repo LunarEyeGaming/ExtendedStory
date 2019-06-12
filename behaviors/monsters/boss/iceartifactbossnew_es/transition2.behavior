@@ -20,11 +20,12 @@
     "parameters": {},
     "children": [
       {
-        "title": "timer",
+        "title": "setParticleEmitterActive",
         "type": "action",
-        "name": "timer",
+        "name": "setParticleEmitterActive",
         "parameters": {
-          "time": {"value": 0.75}
+          "active": {"value": false},
+          "emitter": {"value": "glowparticles"}
         }
       },
       {
@@ -33,6 +34,14 @@
         "name": "setDamageOnTouch",
         "parameters": {
           "touchDamage": {"value": false}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
         }
       },
       {

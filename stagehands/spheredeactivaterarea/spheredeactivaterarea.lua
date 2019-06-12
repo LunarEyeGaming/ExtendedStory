@@ -1,4 +1,5 @@
 require "/scripts/stagehandutil.lua"
+require "/scripts/extendedstorymisc.lua"
 
 function init()
   self.players = {}
@@ -18,4 +19,5 @@ function update(dt)
   for _, playerId in pairs(newPlayers) do
     world.spawnProjectile("spheredeactivater", world.entityPosition(playerId), entity.id(), {1, 0}, false, {damageTeam = {type = "indiscriminate"}})
   end
+  spawnProjectileAlongBorder(translateBroadcastArea(), {"spheredeactivaterparticle"})
 end

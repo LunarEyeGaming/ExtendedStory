@@ -46,8 +46,7 @@
   "primaryAbility" : {
     "damageConfig" : {"damageSourceKind" : "abyssbroadsword","statusEffects" : [ "abysseffect" ],"knockbackMode" : "facing","timeout" : 0.5},
     "fireTime" : 0.5,
-	"baseDps" : 30, 
-	"energyUsage" : 30,
+	"baseDps" : 19,
 	"comboSteps" : 9,
 	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[1.5, -1.0, 5.5, 1.0],[1.5, -1.0, 5.5, 1.0],[1.5, -1.0, 5.5, 1.0],[-0.75, 0.0, -4.25, -5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0],[0.75, 0.0, 4.25, 5.0]],
 	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 40},{"baseDamageFactor" : 0.5,"knockback" : 40},{"baseDamageFactor" : 0.5,"knockback" : 40},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.5,"knockback" : 10},{"baseDamageFactor" : 1.5,"knockback" : 15},{"baseDamageFactor" : 1.5,"knockback" : 15},{"baseDamageFactor" : 2.0,"knockback" : 50}],
@@ -81,8 +80,8 @@
 	  "preslash8" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
 	  "fire8" : {"duration" : 0.5,"armRotation" : -45,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
 	  "wait8" : {"duration" : 0.5,"armRotation" : -90,"weaponRotation" : -20,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
-	  "windup9" : {"duration" : 0.5,"armRotation" : 45,"weaponRotation" : -60, "weaponAngularVelocity" : -1080,"weaponOffset" : [0, -2],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false, "animationStates" : {"sfx" : "fire9windup"}},
-	  "preslash9" : {"duration" : 0.5,"armRotation" : 90,"weaponRotation" : -60, "weaponAngularVelocity" : -1080,"weaponOffset" : [0, -2],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "windup9" : {"duration" : 1.0,"armRotation" : 45,"weaponRotation" : -60, "weaponAngularVelocity" : -1080, "armAngularVelocity" : 90,"weaponOffset" : [0, -2],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false, "animationStates" : {"sfx" : "fire9windup"}},
+	  "preslash9" : {"duration" : 0.1,"armRotation" : 135,"weaponRotation" : -60, "weaponAngularVelocity" : -1080,"weaponOffset" : [0, -2],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
 	  "fire9" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
 	  "wait9" : {"duration" : 0.8,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
     }

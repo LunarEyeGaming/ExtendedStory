@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":64,
+ "tilecount":69,
  "tileheight":82,
  "tileproperties":
     {
@@ -396,6 +396,33 @@
          "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"miningrelicbluetrap",
+         "tilesetDirection":"right"
+        },
+     "64":
+        {
+         "material":"permafrostblock_es"
+        },
+     "65":
+        {
+         "material":"permafrostbrick_es"
+        },
+     "66":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"frostburnwalllight",
+         "tilesetDirection":"right"
+        },
+     "67":
+        {
+         "liquid":"liquidnitrogenexpansionmod",
+         "source":"true"
+        },
+     "68":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"permafrostdoor",
          "tilesetDirection":"right"
         },
      "7":
@@ -817,6 +844,33 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "64":
+        {
+         "material":"string"
+        },
+     "65":
+        {
+         "material":"string"
+        },
+     "66":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "67":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "68":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "7":
         {
          "\/\/description":"string",
@@ -1215,6 +1269,36 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/miningrelicbluetrapright.png",
          "imageheight":16,
          "imagewidth":8
+        },
+     "64":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/permafrostblock_es.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "65":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/permafrostbrick_es.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "66":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnwalllight.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "67":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/liquidnitrogen.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "68":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/permafrostdoor.png",
+         "imageheight":40,
+         "imagewidth":48
         },
      "7":
         {

@@ -1,0 +1,24 @@
+{
+  "materialId" : 2023,
+  "materialName" : "permafrostbrick_es",
+  "particleColor" : [94, 82, 156, 255],
+  "itemDrop" : "permafrostbrick_es",
+  "description" : "A brick carved from permafrost stone.",
+  "shortdescription" : "Permafrost Brick",
+  "glitchDescription" : "Amazed. This brick looks cool.",
+  "floranDescription" : "Cold and lifelesss. Floran likess cold brick.",
+  "novakidDescription" : "A brick made of permafrost.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 15,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "permafrostbrick_es.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1500
+  }
+}

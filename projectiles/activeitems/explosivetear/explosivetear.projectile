@@ -69,37 +69,44 @@
 	    {
 		  "action" : "projectile",
 		  "type" : "yellowglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "whiteglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "redglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "greenglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "blueglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "magentaglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		},
 		{
 		  "action" : "projectile",
 		  "type" : "orangeglobe",
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 1
 		}
 	  ]
 	}

@@ -1,0 +1,70 @@
+{
+  "objectName" : "frostburnwalllight",
+  "colonyTags" : ["light"],
+  "rarity" : "Uncommon",
+  "printable" : false,
+  "category" : "light",
+  "lightColor" : [168, 136, 242],
+  "lightPosition" : [0, 0],
+  "price" : 45,
+  "description" : "A light that burns brightly with frostburn energy.",
+  "shortdescription" : "Frostburn Light",
+  "race" : "avian",
+
+  "apexDescription" : "A wall light that is primitive but effective.",
+  "avianDescription" : "A wall light with a frostburn flame burning brightly inside.",
+  "floranDescription" : "Cold and burning. Floran iss confusssed and sscared.",
+  "glitchDescription" : "Impressed. The flame in this light burns brightly.",
+  "humanDescription" : "Cold and hot didn't mix last time I checked.",
+  "hylotlDescription" : "It's surprising how this flame doesn't melt its support.",
+  "novakidDescription" : "A frozen flame in the wall. Doesn't make no sense to me.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "frostburnwalllight.png:<color>.<frame>",
+      "imagePosition" : [-8, -8],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "animationParts" : {
+        "bg" : "frostburnwalllight.png",
+        "fg" : "frostburnwalllightlit.png"
+      },
+      "animationPosition" : [-8, -8],
+
+      "spaces" : [ [0, 0], [-1, 0], [0, -1], [-1, -1] ],
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "frostburnwalllight.png:<color>.<frame>",
+      "imagePosition" : [-8, -8],
+
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "frostburnwalllight.png",
+        "fg" : "frostburnwalllightlit.png"
+      },
+      "animationPosition" : [-8, -8],
+
+      "spaces" : [ [0, 0], [-1, 0], [0, -1], [-1, -1] ],
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationParts" : {
+    "bg" : "frostburnwalllight.png",
+    "fg" : "frostburnwalllightlit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "interactive" : false,
+
+  "inputNodes" : [ [0, 0] ]
+
+}

@@ -416,9 +416,9 @@
                     }
                   },
                   {
-                    "title": "phoenixboss_es-dying",
+                    "title": "iceartifactbossnew_es-dying",
                     "type": "module",
-                    "name": "phoenixboss_es-dying",
+                    "name": "iceartifactbossnew_es-dying",
                     "parameters": { }
                   },
                   {
@@ -477,6 +477,15 @@
                     "parameters": {
                       "state": {"value": "idlephase1"},
                       "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "beam"}
                     }
                   },
                   {

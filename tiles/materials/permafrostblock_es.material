@@ -1,0 +1,24 @@
+{
+  "materialId" : 2022,
+  "materialName" : "permafrostblock_es",
+  "particleColor" : [94, 82, 156, 255],
+  "itemDrop" : "permafrostblock_es",
+  "description" : "A mix of stone and water that is significantly harder.",
+  "shortdescription" : "Permafrost Stone",
+  "glitchDescription" : "Observant. This ice-like material is much harder than standard ice.",
+  "floranDescription" : "Cold sstone. Floran can't break sstone with ssspear.",
+  "novakidDescription" : "Surely hard as a rock.",
+  "footstepSound" : "/sfx/blocks/footstep_crystal.ogg",
+  "health" : 15,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "permafrostblock_es.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 1500
+  }
+}

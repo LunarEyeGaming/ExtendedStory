@@ -1,0 +1,65 @@
+{
+  "objectName" : "permafrostdoor",
+  "colonyTags" : ["ancient","door"],
+  "printable" : false,
+  "rarity" : "Legendary",
+
+  "category" : "door",
+  "price" : 0,
+  "description" : "A surprisingly sturdy door made of carved permafrost stone. This door cannot melt.",
+  "shortdescription" : "Permafrost Door",
+  "race" : "generic",
+
+  "apexDescription" : "A door made of permafrost stone.",
+  "avianDescription" : "A sturdy door that cannot melt.",
+  "floranDescription" : "Cold door made of cold ssstone.",
+  "glitchDescription" : "Inquisitive. How did people from ancient times make a door out of permafrost?",
+  "humanDescription" : "That door is ^green;cool^reset;.",
+  "hylotlDescription" : "A door made of ice that is hard as stone.",
+  "novakidDescription" : "This door's a strange sight.",
+
+  "inventoryIcon" : "permafrostdooricon.png",
+  "orientations" : [
+    {
+      "image" : "permafrostdoor.png:default",
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "flipImages" : true,
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "permafrostdoor.png:default",
+      "imagePosition" : [-20, 0],
+      "renderLayer" : "Object+5",
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ],
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/airlock_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/airlock_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "permafrostdoor.png"
+  },
+  "animationPosition" : [-20, 0],
+
+  "inputNodes" : [ [-1, 4] ],
+  "outputNodes" : [ [0, 0] ]
+}

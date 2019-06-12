@@ -16,7 +16,15 @@
 		    "frames" : 8,
 			"cycle" : 1,
 			"mode" : "loop"
-		  }
+		  },
+		  "dying" : {
+		    "frames" : 9,
+			"cycle" : 1.35,
+			"mode" : "transition",
+			"transition" : "dying2"
+		  },
+		  "dying2" : {},
+		  "dying3" : {}
         }
       },
 	  "glow" : {
@@ -143,6 +151,21 @@
               "properties" : {
                 "image" : "<partImage>:idle<phase>.<frame>"
               }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:dying.<frame>"
+              }
+            },
+            "dying2" : {
+              "properties" : {
+                "image" : "<partImage>:dying2"
+              }
+            },
+            "dying3" : {
+              "properties" : {
+                "image" : "<partImage>:dying3"
+              }
             }
           }
         }
@@ -170,6 +193,21 @@
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle<phase>.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:dying.<frame>"
+              }
+            },
+            "dying2" : {
+              "properties" : {
+                "image" : "<partImage>:dying2"
+              }
+            },
+            "dying3" : {
+              "properties" : {
+                "image" : "<partImage>:dying3"
               }
             }
           }
@@ -386,6 +424,22 @@
         }
       ]
     },
+	"parasitedeath" : {
+      "burstCount" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/iceartifactparasitedeath_es/iceartifactparasitedeath_es.animation",
+            "position" : [0, -2],
+            "initialVelocity" : [0.0, 0.0],
+            "layer" : "front",
+            "timeToLive" : 1.0,
+            "fullbright" : true
+          }
+        }
+      ]
+    },
     "slam" : {
       "burstCount" : 20,
       "offsetRegion" : [-8, -14, 8, -12],
@@ -394,184 +448,7 @@
       ]
     },
     "deathPoof" : {
-      "particles" : [
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/plasmapoof/plasmapoof.animation",
-            "size" : 1,
-            "angularVelocity" : 35,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [0, 0],
-            "finalVelocity" : [0, 0],
-            "approach" : [1, 1],
-            "timeToLive" : 0.4,
-            "layer" : "middle"
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz1/fizz1.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [-8, 8],
-            "finalVelocity" : [-3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [-4, 2],
-              "finalVelocity" : [-3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz1/fizz1.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [8, 8],
-            "finalVelocity" : [3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [4, 2],
-              "finalVelocity" : [3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz2/fizz2.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [-8, 8],
-            "finalVelocity" : [-3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [-4, 2],
-              "finalVelocity" : [-3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz2/fizz2.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [8, 8],
-            "finalVelocity" : [3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [4, 2],
-              "finalVelocity" : [3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz3/fizz3.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [-8, 8],
-            "finalVelocity" : [-3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [-4, 2],
-              "finalVelocity" : [-3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz3/fizz3.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [8, 8],
-            "finalVelocity" : [3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [4, 2],
-              "finalVelocity" : [3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz4/fizz4.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [-8, 8],
-            "finalVelocity" : [-3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [-4, 2],
-              "finalVelocity" : [-3, -4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/fizz4/fizz4.animation",
-            "size" : 1,
-            "angularVelocity" : 20,
-            "fade" : 1,
-            "destructionTime" : 1,
-            "position" : [0, 0],
-            "initialVelocity" : [8, 8],
-            "finalVelocity" : [3, -4],
-            "approach" : [15, 15],
-            "timeToLive" : 3.45,
-            "layer" : "middle",
-            "variance" : {
-              "initialVelocity" : [4, 2],
-              "finalVelocity" : [3, -4]
-            }
-          }
-        }
-      ]
+      "particles" : [ ]
     }
   },
 
@@ -602,6 +479,14 @@
     },
 	"bullethellfire" : {
 	  "pool" : [ "/sfx/gun/flamethrower_stop.ogg" ],
+	  "rangeMultiplier" : 1.5
+	},
+	"dying" : {
+	  "pool" : [ "/sfx/tech/mech_explosion_windup.ogg" ],
+	  "rangeMultiplier" : 1.5
+	},
+	"parasitedeath" : {
+	  "pool" : [ "/sfx/npc/quadruped/teethyhead_attack1.ogg" ],
 	  "rangeMultiplier" : 1.5
 	}
   }
