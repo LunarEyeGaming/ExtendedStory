@@ -1,11 +1,11 @@
 {
-  "projectileName" : "calamitycannonshotbig",
+  "projectileName" : "rockvaporcannonshotbig",
   "physics" : "default",
   "bounces" : 0,
   "speed" : 50,
   "timeToLive" : 0.5,
   "lightColor" : [83, 28, 97],
-  "image" : "calamitycannonshotbig.png",
+  "image" : "rockvaporcannonshotbig.png",
   "animationCycle" : 0.4,
   "frameNumber" : 4,
   "fullbright" : true,
@@ -50,7 +50,7 @@
     },
 	{
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 0,
 	  "config" : {
@@ -59,7 +59,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 45,
 	  "config" : {
@@ -68,7 +68,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 90,
 	  "config" : {
@@ -77,7 +77,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 135,
 	  "config" : {
@@ -86,7 +86,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 180,
 	  "config" : {
@@ -95,7 +95,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 225,
 	  "config" : {
@@ -104,7 +104,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 270,
 	  "config" : {
@@ -113,7 +113,7 @@
     },
     {
       "action" : "projectile",
-      "type" : "calamitycannonshoth",
+      "type" : "rockvaporcannonshoth",
       "inheritDamageFactor" : 0.2,
       "angleAdjust" : 315,
 	  "config" : {

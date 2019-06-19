@@ -1,5 +1,5 @@
 {
-  "itemName" : "calamitycannon",
+  "itemName" : "rockvaporcannon",
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
@@ -14,12 +14,12 @@
   "critChance" : 1,
   "critBonus" : 5,
 
-  "inventoryIcon" : "calamitycannon.png:idle.1",
+  "inventoryIcon" : "rockvaporcannon.png:idle.1",
 
-  "animation" : "calamitycannon.animation",
+  "animation" : "rockvaporcannon.animation",
   "animationParts" : {
-    "gun" : "calamitycannon.png",
-    "gunfullbright" : "calamitycannonunlit.png"
+    "gun" : "rockvaporcannon.png",
+    "gunfullbright" : "rockvaporcannonunlit.png"
   },
   "animationCustom" : {
     "sounds" : {
@@ -39,7 +39,7 @@
         "time" : 0,
         "energyCost" : 20,
         "cooldown" : 0.2,
-        "projectileType" : "calamitycannonshot",
+        "projectileType" : "rockvaporcannonshot",
         "projectileCount" : 1,
         "inaccuracy" : 0.01,
         "baseDamage" : 8,
@@ -49,7 +49,7 @@
         "time" : 1.0,
         "energyCost" : 30,
         "cooldown" : 0.15,
-        "projectileType" : "calamitycannonshoth",
+        "projectileType" : "rockvaporcannonshoth",
         "projectileCount" : 3,
         "spreadAngle" : 30,
         "projectileParameters" : {},
@@ -61,7 +61,7 @@
         "time" : 1.5,
         "energyCost" : 100,
         "cooldown" : 0.5,
-        "projectileType" : "calamitycannonshotbig",
+        "projectileType" : "rockvaporcannonshotbig",
         "projectileParameters" : {},
         "inaccuracy" : 0,
         "baseDamage" : 20,
@@ -111,7 +111,7 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {
-	    "projectileType" : "calamitycannonshot"
+	    "projectileType" : "rockvaporcannonshot"
 	  }
     },
 	"fireTime" : 2.5,

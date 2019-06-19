@@ -101,7 +101,7 @@
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
                     "offset": {"key": "<projectileOffset>"},
-                    "parameters": {"value": {}},
+                    "parameters": {"value": {"power": 10}},
                     "position": {"key": "self"},
                     "projectileType": {"key": "<projectileType>"},
                     "scalePower": {"value": true},

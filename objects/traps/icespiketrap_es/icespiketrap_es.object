@@ -1,0 +1,171 @@
+{
+  "objectName" : "icespiketrap_es",
+  "colonyTags" : ["ancient","evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "This trap fires ice spikes to deter invaders.",
+  "shortdescription" : "Ice Spike Trap",
+  "race" : "ancient",
+
+  "apexDescription" : "Such defenses are primitive but effective.",
+  "avianDescription" : "An interesting way of keeping out intruders.",
+  "floranDescription" : "Sharp sspikes come from trap.",
+  "glitchDescription" : "Frightened. This trap shoots out icicles that can easily kill.",
+  "humanDescription" : "Yikes! A giant icicle!",
+  "hylotlDescription" : "The fact that ice can be so deadly is startling.",
+  "novakidDescription" : "A giant ice spike. That's a gnarly-lookin' trap.",
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "icespiketrapicon.png",
+  "orientations" : [
+    {
+      "image" : "icespiketrap.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "icespiketrap.png",
+        "fg" : "icespiketrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [0, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "icespiketrap.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "icespiketrap.png",
+        "fg" : "icespiketrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [1, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "icespiketrapleft.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "icespiketrapleft.png",
+        "fg" : "icespiketrapleft.png"
+      },
+
+      "projectileDirection" : [1, 0],
+      "projectilePosition" : [0.7, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "icespiketrapright.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "icespiketrapright.png",
+        "fg" : "icespiketrapright.png"
+      },
+
+      "projectileDirection" : [-1, 0],
+      "projectilePosition" : [0.3, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "icespiketrapceiling.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "icespiketrapceiling.png",
+        "fg" : "icespiketrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "icespiketrapceiling.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "icespiketrapceiling.png",
+        "fg" : "icespiketrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [1, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ "/sfx/npc/boss/kluexboss_iceform1.ogg", "/sfx/npc/boss/kluexboss_iceform2.ogg" ],
+      "on" : [ ],
+      "off" : [ ]
+    }
+  },
+
+  "soundEffect" : "", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 3.0, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "orbitalup", // name of projectile (required)
+  "projectileConfig" : { // extra configuration overrides for projectile
+    "damageTeam" : { "type" : "environment" },
+    "power" : 100,
+    "speed" : 16,
+	"timeToLive" : 0.1,
+	"onlyHitTerrain" : true,
+	"actionOnReap" : [
+	  {
+	    "action" : "projectile",
+		"type" : "icespikewindup_es",
+		"inheritDamageFactor" : 1
+	  }
+	]
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 6, "particle" : "iceshard" } ]
+}

@@ -1,0 +1,49 @@
+{
+  "objectName" : "frostburnmushroom2",
+  "colonyTags" : [],
+  "rarity" : "Uncommon",
+  "description" : "Mushrooms with frostburn energy in its cap.",
+  "shortdescription" : "Frostburn Mushrooms",
+  "race" : "generic",
+
+  "apexDescription" : "Beautifully glowing frostburn mushrooms that are harmful to consume.",
+  "avianDescription" : "These mushrooms are pretty tiny, but consuming one can be dangerous.",
+  "floranDescription" : "These look tasssty.",
+  "glitchDescription" : "Pleased. These glowing mushrooms provide much welcome natural light.",
+  "humanDescription" : "These mushrooms are very bizarre. I wouldn't want to eat them anyways.",
+  "hylotlDescription" : "Mushrooms like these are a rare sight.",
+  "novakidDescription" : "Interesting lil' guys.",
+
+  "category" : "light",
+  "printable" : false,
+
+  "lightColor" : [64, 41, 153],
+
+  "inventoryIcon" : "frostburnmushroom2.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "frostburnmushroom2.png", "fullbright" : true }, { "image" : "frostburnmushroom2lit.png" } ],
+      "flipImages" : true,
+      "imagePosition" : [-8, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "left",
+      "lightPosition" : [0, 2]
+    },
+    {
+      "imageLayers" : [ { "image" : "frostburnmushroom2.png", "fullbright" : true }, { "image" : "frostburnmushroom2lit.png" } ],
+      "imagePosition" : [-8, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+      "lightPosition" : [0, 2]
+    }
+  ],
+
+  "breakDropOptions" : [
+    [ [ "frostburnmushroomfood", 1, { } ] ]
+  ],
+
+  "biomePlaced" : true
+}

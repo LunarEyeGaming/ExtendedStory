@@ -7,8 +7,9 @@ function init()
   self.concurrentCooldown = self.defaultConcurrentCooldown
   self.active = false
   self.movementMode = "align"
-  monster.setUniqueId(config.getParameter("uniqueId"))
-
+  if config.getParameter("uniqueId") then
+    monster.setUniqueId(config.getParameter("uniqueId"))
+  end
   if animator.hasSound("deathPuff") then
     monster.setDeathSound("deathPuff")
   end

@@ -1,22 +1,125 @@
 {
-  "projectileName" : "blueglobenohover",
+  "projectileName" : "icespike_es",
   "physics" : "laser",
   "bounces" : 0,
-  "speed" : 30,
-  "timeToLive" : 10,
+  "speed" : 0,
+  "timeToLive" : 1,
   "damageKindImage" : "icon.png",
-  "lightColor" : [40, 80, 180],
-  "image" : "blueglobenohover.png",
-  "animationCycle" : 1.0,
-  "frameNumber" : 2,
+  "image" : "icespike_es.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
   "power" : 2,
-  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
+  "damagePoly" : [ [-20, 8], [-20, -8], [20, 0] ],
   "supportsProcessing" : true,
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/globeexplosions/blueglobeexplosion/blueglobeexplosion.config"
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg", "/sfx/projectiles/ice_break5.ogg", "/sfx/projectiles/ice_break6.ogg", "/sfx/projectiles/ice_break7.ogg", "/sfx/projectiles/ice_break8.ogg", "/sfx/projectiles/ice_break9.ogg", "/sfx/projectiles/ice_break10.ogg" ]
+    },
+    {
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "looping" : true,
+            "animation" : "/animations/statuseffects/frozen/frozen.animation",
+            "size" : 0.5,
+            "approach" : [30, 30],
+            "timeToLive" : 0.5,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.425,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [2.5, 1.0],
+              "finalVelocity" : [1.5, 1.5],
+              "timeToLive" : 0.3
+            }
+          }
+        },
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "looping" : true,
+            "animation" : "/animations/frozendust2/frozendust2.animation",
+            "size" : 0.5,
+            "approach" : [30, 30],
+            "timeToLive" : 0.5,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.425,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [2.5, 1.0],
+              "finalVelocity" : [1.5, 1.5],
+              "timeToLive" : 0.3
+            }
+          }
+        },
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "looping" : true,
+            "animation" : "/animations/shards/iceshard.animation",
+            "size" : 1,
+            "approach" : [30, 30],
+            "timeToLive" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 1,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [2.5, 1.0],
+              "finalVelocity" : [5, 5],
+              "timeToLive" : 1
+            }
+          }
+        },
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "looping" : true,
+            "animation" : "/animations/shards/iceshard.animation",
+            "size" : 1,
+            "approach" : [30, 30],
+            "timeToLive" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 1,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [2.5, 1.0],
+              "finalVelocity" : [5, 5],
+              "timeToLive" : 1
+            }
+          }
+        },
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [99, 216, 232, 255],
+            "fade" : 0.9,
+            "approach" : [30, 30],
+            "light" : [50, 140, 160],
+            "timeToLive" : 0.5,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [2.5, 1.0],
+              "finalVelocity" : [1.5, 1.5],
+              "size" : 0.5,
+              "timeToLive" : 0.3,
+              "fade" : 0.3
+            }
+          }
+        }
+      ]
     }
   ],
-  "damageKind" : "plasma"
+  "damageKind" : "ice",
+  "piercing" : true,
+  "damageType" : "IgnoresDef"
 }

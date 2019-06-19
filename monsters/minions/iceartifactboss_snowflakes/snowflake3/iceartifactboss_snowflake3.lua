@@ -7,6 +7,9 @@ function init()
   self.defaultConcurrentCooldown = 3
   self.concurrentCooldown = self.defaultConcurrentCooldown
   self.projectileDamage = 40
+  if config.getParameter("uniqueId") then
+    monster.setUniqueId(config.getParameter("uniqueId"))
+  end
   offsetRange = {20, 20, -20, -20}
 
   if animator.hasSound("deathPuff") then

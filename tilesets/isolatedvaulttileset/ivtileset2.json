@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":69,
+ "tilecount":84,
  "tileheight":82,
  "tileproperties":
     {
@@ -372,7 +372,7 @@
         },
      "60":
         {
-         "imagePositionX":"-8",
+         "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"miningrelicbluetrap",
          "tilesetDirection":"right"
@@ -425,6 +425,13 @@
          "object":"permafrostdoor",
          "tilesetDirection":"right"
         },
+     "69":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"icespiketrap_es",
+         "tilesetDirection":"right"
+        },
      "7":
         {
          "\/\/description":"It looks like it was made to hold something important.",
@@ -435,6 +442,76 @@
          "object":"fireartifactaltar",
          "tilesetDirection":"right"
         },
+     "70":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"icespiketrap_es",
+         "tilesetDirection":"right"
+        },
+     "71":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"icespiketrap_es",
+         "tilesetDirection":"right"
+        },
+     "72":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"icespiketrap_es",
+         "tilesetDirection":"right"
+        },
+     "73":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnmushroom1",
+         "tilesetDirection":"right"
+        },
+     "74":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnmushroom2",
+         "tilesetDirection":"right"
+        },
+     "75":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnmushroom3",
+         "tilesetDirection":"right"
+        },
+     "76":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnmushroom4",
+         "tilesetDirection":"right"
+        },
+     "77":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnmushroom5",
+         "tilesetDirection":"right"
+        },
+     "78":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"frostburntorch",
+         "tilesetDirection":"right"
+        },
+     "79":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"frostburntorch",
+         "tilesetDirection":"right"
+        },
      "8":
         {
          "\/\/description":"A door that appears to be completely unaffected by the test of time.",
@@ -443,6 +520,34 @@
          "imagePositionX":"-20",
          "imagePositionY":"0",
          "object":"fireydoor",
+         "tilesetDirection":"right"
+        },
+     "80":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"frostburntorch",
+         "tilesetDirection":"right"
+        },
+     "81":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"irradiatedtorch",
+         "tilesetDirection":"right"
+        },
+     "82":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"irradiatedtorch",
+         "tilesetDirection":"right"
+        },
+     "83":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"irradiatedtorch",
          "tilesetDirection":"right"
         },
      "9":
@@ -871,6 +976,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "69":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "7":
         {
          "\/\/description":"string",
@@ -881,11 +993,109 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "70":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "71":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "72":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "73":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "74":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "75":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "76":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "77":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "78":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "79":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "8":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "80":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "81":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "82":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "83":
+        {
          "imagePositionX":"string",
          "imagePositionY":"string",
          "object":"string",
@@ -1300,17 +1510,107 @@
          "imageheight":40,
          "imagewidth":48
         },
+     "69":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/icespiketrap_es.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
      "7":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/fireartifactaltar.png",
          "imageheight":30,
          "imagewidth":32
         },
+     "70":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/icespiketrapleft_es.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "71":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/icespiketrapright_es.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "72":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/icespiketrapup_es.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "73":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnmushroom1.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "74":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnmushroom2.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "75":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnmushroom3.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "76":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnmushroom4.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "77":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnmushroom5.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "78":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburntorch.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "79":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburntorchleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
      "8":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/fireydoor.png",
          "imageheight":40,
          "imagewidth":40
+        },
+     "80":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburntorchright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "81":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedtorch.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "82":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedtorchleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "83":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedtorchright.png",
+         "imageheight":16,
+         "imagewidth":8
         },
      "9":
         {

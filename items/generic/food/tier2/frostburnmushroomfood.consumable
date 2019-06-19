@@ -1,0 +1,28 @@
+{
+  "itemName" : "frostburnmushroomfood",
+  "rarity" : "Uncommon",
+  "price" : 150,
+  "category" : "food",
+  "inventoryIcon" : "frostburnmushroomfood.png",
+  "description" : "This mushroom provides some helpful effects but is also harmful.",
+  "shortdescription" : "Frostburn Mushroom",
+  "effects" : [ [
+    {
+        "effect" : "frostburn_es",
+        "duration" : 5
+    },
+	{
+        "effect" : "frostmushresistance",
+        "duration" : 90
+    }
+  ] ],
+  "foodValue" : 10,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : [],
+  "rottingMultiplier" : 10,
+  "blockingEffects" : [
+    "wellfed"
+  ]
+}

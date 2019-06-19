@@ -1,0 +1,15 @@
+{
+  "name" : "frostburn_es",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "frostburn_es.lua"
+  ],
+
+  "animationConfig" : "frostburn_es.animation",
+
+  "label" : "Frostburn - You are burning and freezing. Wait what?",
+  "icon" : "/interface/statuses/frozenfire.png"
+}
