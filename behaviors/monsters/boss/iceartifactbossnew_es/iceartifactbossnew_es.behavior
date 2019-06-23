@@ -89,14 +89,6 @@
                     "parameters": {},
                     "children": [
                       {
-                        "title": "setDamageBar",
-                        "type": "action",
-                        "name": "setDamageBar",
-                        "parameters": {
-                          "type": {"value": "Special"}
-                        }
-                      },
-                      {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -150,11 +142,25 @@
                                 "name": "sequence",
                                 "parameters": {},
                                 "children": [
+								  {
+                                    "title": "iceartifactbossnew_es-snowflakecontrol",
+                                    "type": "module",
+                                    "name": "iceartifactbossnew_es-snowflakecontrol",
+                                    "parameters": {}
+                                  },
                                   {
                                     "title": "iceartifactbossnew_es-snowflakecheck",
                                     "type": "module",
                                     "name": "iceartifactbossnew_es-snowflakecheck",
                                     "parameters": {}
+                                  },
+                                  {
+                                    "title": "setDamageBar",
+                                    "type": "action",
+                                    "name": "setDamageBar",
+                                    "parameters": {
+                                      "type": {"value": "Special"}
+                                    }
                                   },
                                   {
                                     "title": "iceartifactbossnew_es-intro",
@@ -541,282 +547,6 @@
                     }
                   },
                   {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake1"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake1"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake1"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake2"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake2"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake2"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake3"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake3"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake3"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake4"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake4"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake4"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake5"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake5"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake5"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "loadUniqueEntity",
-                          "type": "action",
-                          "name": "loadUniqueEntity",
-                          "parameters": {
-                            "uniqueId": {"value": "snowflake6"}
-                          },
-                          "output": {
-                            "entity": "iceartifactboss_snowflake6"
-                          }
-                        },
-                        {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "iceartifactboss_snowflake6"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [12, 16]}
-                    },
-                    "output": {
-                      "position": "snowflake1"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [18, 0]}
-                    },
-                    "output": {
-                      "position": "snowflake2"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [12, -16]}
-                    },
-                    "output": {
-                      "position": "snowflake3"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [-12, -16]}
-                    },
-                    "output": {
-                      "position": "snowflake4"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [-18, 0]}
-                    },
-                    "output": {
-                      "position": "snowflake5"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "offset": {"value": [-12, 16]}
-                    },
-                    "output": {
-                      "position": "snowflake6"
-                    }
-                  },
-                  {
                     "title": "flyToPosition",
                     "type": "action",
                     "name": "flyToPosition",
@@ -832,72 +562,6 @@
                     "name": "setVelocity",
                     "parameters": {
                       "velocity": {"value": [0, 0]}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake1"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake1"},
-                      "parameters": {"value": {"uniqueId": "snowflake1"}}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake2"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake2"},
-                      "parameters": {"value": {"uniqueId": "snowflake2"}}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake3"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake3"},
-                      "parameters": {"value": {"uniqueId": "snowflake3"}}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake4"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake4"},
-                      "parameters": {"value": {"uniqueId": "snowflake4"}}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake5"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake5"},
-                      "parameters": {"value": {"uniqueId": "snowflake5"}}
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "iceartifactboss_snowflake6"},
-                      "level": {"value": 10},
-                      "position": {"key": "snowflake6"},
-                      "parameters": {"value": {"uniqueId": "snowflake6"}}
                     }
                   },
                   {

@@ -275,7 +275,7 @@
 											    {
 											      "action": "projectile",
 												  "type": "railgunlightning",
-												  "offsetRange": [40, 35, -40, 35],
+												  "offsetRange": [-40, 35, 40, 35],
 												  "direction" : [0, -1],
 												  "config": {
 												    "speed": 100,

@@ -393,6 +393,7 @@ function deactivate()
   animator.setParticleEmitterActive("ancientspherebash", false)
   animator.setParticleEmitterActive("ancientsphererecharge", false)
   animator.setAnimationState("energybar", "off")
+  animator.stopAllSounds("recharge")
 end
 
 function minY(poly)

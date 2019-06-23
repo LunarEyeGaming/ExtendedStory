@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":84,
+ "tilecount":90,
  "tileheight":82,
  "tileproperties":
     {
@@ -548,6 +548,48 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"irradiatedtorch",
+         "tilesetDirection":"right"
+        },
+     "84":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"fallingicicletrap_es",
+         "tilesetDirection":"right"
+        },
+     "85":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"-8",
+         "object":"permafrostpressureplatform",
+         "tilesetDirection":"right"
+        },
+     "86":
+        {
+         "imagePositionX":"-28",
+         "imagePositionY":"0",
+         "object":"fdimteleporter2",
+         "tilesetDirection":"right"
+        },
+     "87":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"cryoniastatue",
+         "tilesetDirection":"right"
+        },
+     "88":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"frostburnpearlswitch",
+         "tilesetDirection":"right"
+        },
+     "89":
+        {
+         "imagePositionX":"-28",
+         "imagePositionY":"0",
+         "object":"fdimteleporter",
          "tilesetDirection":"right"
         },
      "9":
@@ -1101,6 +1143,48 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "84":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "85":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "86":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "87":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "88":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "89":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "9":
         {
          "\/\/description":"string",
@@ -1611,6 +1695,42 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/irradiatedtorchright.png",
          "imageheight":16,
          "imagewidth":8
+        },
+     "84":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/fallingicicletrap.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "85":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/permafrostpressureplatform.png",
+         "imageheight":16,
+         "imagewidth":40
+        },
+     "86":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/fdimteleporter2.png",
+         "imageheight":64,
+         "imagewidth":56
+        },
+     "87":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/cryoniastatue.png",
+         "imageheight":72,
+         "imagewidth":48
+        },
+     "88":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/frostburnpearlswitch.png",
+         "imageheight":48,
+         "imagewidth":16
+        },
+     "89":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/fdimteleporter.png",
+         "imageheight":64,
+         "imagewidth":56
         },
      "9":
         {

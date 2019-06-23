@@ -1,0 +1,54 @@
+{
+  "objectName" : "fdimteleporter2",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A door to the Cryonia Temple.",
+  "shortdescription" : "Temple Entrance",
+  "race" : "ancient",
+
+  "apexDescription" : "This door looks menacing!",
+  "avianDescription" : "What surprises will I find in this temple?",
+  "floranDescription" : "Giant mouth isss entrance to temple.",
+  "glitchDescription" : "Curious. What lies in this temple?",
+  "humanDescription" : "An interesting design for a door to an ancient temple. It's intimidating.",
+  "hylotlDescription" : "A primitively-made door that has a design of an open mouth.",
+  "novakidDescription" : "Them ancients made a menacin' door.",
+
+  "lightColor" : [76, 60, 86],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "fdimteleporter2.png", "fullbright" : true }, { "image" : "fdimteleporter2lit.png" } ],
+      "imagePosition" : [-28, 0],
+      "animationPosition" : [-28, 0],
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+
+      "lightPosition" : [0, 3],
+
+      "detectArea" : [ [-3, 0], [3, 5] ]
+    }
+  ],
+
+  "animation" : "fdimteleporter2.animation",
+  "animationParts" : {
+    "bg" : "fdimteleporter2.png",
+    "fg" : "fdimteleporter2lit.png"
+  },
+
+  "scripts" : [ "fdimteleporter2.lua" ],
+  "scriptDelta" : 20,
+
+  "messagePlayerInterval" : 0.5,
+  "messagePlayerRange" : 30,
+
+  "health" : 10,
+  "smashOnBreak" : true
+}

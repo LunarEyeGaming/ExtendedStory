@@ -24,7 +24,7 @@
 		    {
 			  "action" : "projectile",
 			  "type" : "destroyershot",
-			  "offsetRange" : [50, 50, -50, 50],
+			  "offsetRange" : [-50, 50, 50, 50],
 			  "direction" : [0, -1],
 			  "config" : {
 			    "periodicActions" : [

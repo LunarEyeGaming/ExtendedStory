@@ -1,0 +1,43 @@
+{
+  "objectName" : "cryoniastatue",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Common",
+  "description" : "A statue depicting the god Cryonia.",
+  "shortdescription" : "Cryonia Statue",
+  "race" : "generic",
+
+  "apexDescription" : "A statue of an ancient god.",
+  "avianDescription" : "This statue represents an ancient god. I wonder what blessings it gave its people.",
+  "floranDescription" : "Sssilly sstatue made by tribesss.",
+  "glitchDescription" : "Observent. This statue appears to be constructed many eons ago.",
+  "humanDescription" : "A statue of a god. What was its purpose?",
+  "hylotlDescription" : "This statue seems to represent a god lost to time.",
+  "novakidDescription" : "This god seems to be an interesting fella to meet.",
+
+  "category" : "light",
+  "printable" : false,
+
+  "lightColor" : [64, 41, 153],
+
+  "inventoryIcon" : "cryoniastatue.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "cryoniastatue.png", "fullbright" : true }, { "image" : "cryoniastatuelit.png" } ],
+      "flipImages" : true,
+      "imagePosition" : [-24, 0],
+      "spaceScan" : 0.1,
+      "direction" : "left",
+      "lightPosition" : [0, 2]
+    },
+    {
+      "imageLayers" : [ { "image" : "cryoniastatue.png", "fullbright" : true }, { "image" : "cryoniastatuelit.png" } ],
+      "imagePosition" : [-24, 0],
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "lightPosition" : [0, 2]
+    }
+  ],
+  
+  "health" : 5
+}

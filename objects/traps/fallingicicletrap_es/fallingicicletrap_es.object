@@ -1,0 +1,94 @@
+{
+  "objectName" : "fallingicicletrap_es",
+  "colonyTags" : ["ancient","evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "An icicle that is about to fall.",
+  "shortdescription" : "Loose Icicle",
+  "race" : "ancient",
+
+  "apexDescription" : "This icicle appears to be loose.",
+  "avianDescription" : "That icicle looks loose and really sharp. I should be cautious.",
+  "floranDescription" : "An icicle. Floran doess not want to ssstand under that.",
+  "glitchDescription" : "Observant. This icicle looks like it is about to fall.",
+  "humanDescription" : "Shouldn't stand under that.",
+  "hylotlDescription" : "A really sharp icicle that looks like it can fall at any moment.",
+  "novakidDescription" : "Better not stand under that.",
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "fallingicicletrapicon.png",
+  "orientations" : [
+    {
+      "image" : "fallingicicletrap.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "fallingicicletrap.png",
+        "fg" : "fallingicicletrap.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0.5, 0.8],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "fallingicicletrap.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "fallingicicletrap.png",
+        "fg" : "fallingicicletrap.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0.5, 0.8],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ "/sfx/npc/boss/kluexboss_iceform1.ogg", "/sfx/npc/boss/kluexboss_iceform2.ogg" ],
+      "on" : [ ],
+      "off" : [ ]
+    }
+  },
+
+  "soundEffect" : "", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 9999, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "fg_icicleg", // name of projectile (required)
+  "projectileConfig" : { // extra configuration overrides for projectile
+    "damageTeam" : { "type" : "environment" },
+    "power" : 100,
+    "speed" : 0,
+	"damageType" : "ignoresdef"
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 6, "particle" : "iceshard" } ]
+}

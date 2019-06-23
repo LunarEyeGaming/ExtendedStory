@@ -1,0 +1,10 @@
+{
+  "input" : [
+	{ "item" : "burningbar", "count" : 25 },
+	{ "item" : "essence", "count" : 200 },
+	{ "item" : "scorchedcore", "count" : 10 },
+	{ "item" : "2handedgunmodule_es", "count" : 1 }
+  ],
+  "output" : { "item" : "rockvaporcannon", "count" : 1 },
+  "groups" : [ "ancientforge", "weapons", "all" ]
+}

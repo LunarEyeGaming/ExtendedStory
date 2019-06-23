@@ -1,0 +1,74 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "switchState" : {
+        "default" : "off",
+        "states" : {
+          "on" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+			"properties" : {
+			  "persistentSound" : "/sfx/tools/energypickaxe_idle.ogg"
+			}
+          },
+          "off" : {
+            "frames" : 4,
+            "cycle" : 0.4
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "switch" : {
+        "properties" : {
+          "centered" : false,
+		  "fullbright" : true
+        },
+
+        "partStates" : {
+          "switchState" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:turningOn.<frame>"
+              }
+            },
+
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:turningOff.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  "switchlit" : {
+        "properties" : {
+          "centered" : false,
+		  "zLevel" : 1
+        },
+
+        "partStates" : {
+          "switchState" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:turningOn.<frame>"
+              }
+            },
+
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:turningOff.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "on" : [],
+    "off" : []
+  }
+}

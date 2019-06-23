@@ -1,0 +1,23 @@
+{
+  "projectileName" : "fdimpuzzlehint2",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 1.5,
+  "image" : "fdimpuzzlehint2.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.4,
+  "lightColor" : [132, 92, 224],
+  "frameNumber" : 8,
+  "fullbright" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/globeexplosions/blueglobeexplosion/blueglobeexplosion.config"
+	}
+  ],
+  "power" : 0,
+  "damageKind" : "plasma",
+  "onlyHitTerrain" : true
+}

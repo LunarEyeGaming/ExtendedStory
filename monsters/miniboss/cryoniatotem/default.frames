@@ -1,0 +1,20 @@
+{
+  "frameGrid" : {
+    "size" : [70, 70],
+    "dimensions" : [19, 3],
+
+    "names" : [
+      [ "wake.1", "wake.2", "wake.3", "wake.4", "wake.5", "wake.6"],
+      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8", null, "hurt.1" ],
+      [ "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6", "fire.7", "fire.8", null, "slam.1", "slam.2", "slam.3", "slam.4", "slam.5", "slam.6", "slam.7", "slam.8", "slam.9", "slam.10"]
+    ]
+  },
+  "aliases" : {
+    "sleep.1" : "wake.6",
+    "sleep.2" : "wake.5",
+    "sleep.3" : "wake.4",
+    "sleep.4" : "wake.3",
+    "sleep.5" : "wake.2",
+    "sleep.6" : "wake.1"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "objectName" : "fdimteleporter",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A giant hole that leads to a cave.",
+  "shortdescription" : "Permafrost Cave Entrance",
+  "race" : "ancient",
+
+  "apexDescription" : "I wonder what will be inside of this cave.",
+  "avianDescription" : "This massive hole will lead to a cave. What's in it?",
+  "floranDescription" : "Sssimple cave entrancce.",
+  "glitchDescription" : "Unimpressed. A simple cave entrance.",
+  "humanDescription" : "Whoever made this entrance was very unoriginal.",
+  "hylotlDescription" : "A cave entrance surrounded by permafrost stone.",
+  "novakidDescription" : "Not particularly a cool-lookin' entrance.",
+
+  "lightColor" : [0, 0, 0],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "fdimteleporter.png"} ],
+      "imagePosition" : [-28, 0],
+      "animationPosition" : [-28, 0],
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+
+      "lightPosition" : [0, 3],
+
+      "detectArea" : [ [-3, 0], [3, 5] ]
+    }
+  ],
+
+  "animation" : "fdimteleporter.animation",
+  "animationParts" : {
+    "bg" : "",
+    "fg" : "fdimteleporter.png"
+  },
+
+  "scripts" : [ "fdimteleporter.lua" ],
+  "scriptDelta" : 20,
+
+  "messagePlayerInterval" : 0.5,
+  "messagePlayerRange" : 30,
+
+  "health" : 10,
+  "smashOnBreak" : true
+}
