@@ -489,7 +489,7 @@
                  "y":1168
                 }, 
                 {
-                 "gid":2147492536,
+                 "gid":8888,
                  "height":40,
                  "id":1219,
                  "name":"",
@@ -943,6 +943,26 @@
                  "width":16,
                  "x":1816,
                  "y":1920
+                }, 
+                {
+                 "gid":8671,
+                 "height":64,
+                 "id":1263,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"bosscheckpoint\"}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":936,
+                 "y":1688
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -996,7 +1016,19 @@
         {
          "draworder":"topdown",
          "name":"anchors etc",
-         "objects":[],
+         "objects":[
+                {
+                 "gid":229,
+                 "height":8,
+                 "id":1262,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":2432,
+                 "y":680
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1013,7 +1045,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1261,
+ "nextobjectid":1264,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
