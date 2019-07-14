@@ -1,0 +1,99 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "portal" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+		    "frames" : 4,
+			"cycle" : 2,
+			"mode" : "loop"
+		  },
+          "opened" : {},
+          "open" : {
+            "frames" : 8,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "opened"
+          },
+          "close" : {
+            "frames" : 8,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : false,
+		  "fullbright" : true
+        },
+
+        "partStates" : {
+          "portal" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "portal" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "on" : [ "/sfx/objects/stonedoor_open.ogg" ],
+    "off" : [ "/sfx/objects/stonedoor_close.ogg" ]
+  }
+}

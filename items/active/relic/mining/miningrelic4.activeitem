@@ -81,10 +81,10 @@
 
     "beamLength" : 45,
 	"fireTime" : 0.2,
-	"baseDps" : 10,
+	"baseDps" : 5,
 	"inaccuracy" : 0,
     "damageConfig" : {
-      "statusEffects" : [ "burning" ],
+      "statusEffects" : [ ],
       "damageSourceKind" : "fireplasma",
       "knockback" : 5
     },

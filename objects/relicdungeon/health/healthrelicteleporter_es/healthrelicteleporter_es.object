@@ -1,0 +1,54 @@
+{
+  "objectName" : "healthrelicteleporter_es",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A door with a heart-shaped light fixed to it.",
+  "shortdescription" : "Relic Door",
+  "race" : "ancient",
+
+  "apexDescription" : "This mysterious door has a heart on it. I wonder where this leads me to.",
+  "avianDescription" : "A shrine with a mysterious door. Who built it?",
+  "floranDescription" : "Sstrange door. Floran mysstified.",
+  "glitchDescription" : "Curious. What is the destination of this mysterious door?",
+  "humanDescription" : "Where will this door take me?",
+  "hylotlDescription" : "A doorway with unknown origins.",
+  "novakidDescription" : "Looks like this door is related to healing.",
+
+  "lightColor" : [76, 60, 86],
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "healthrelicteleporter.png:<frame>", "fullbright" : true }, { "image" : "healthrelicteleporterlit.png:<frame>" } ],
+      "imagePosition" : [-16, 0],
+      "animationPosition" : [-16, 0],
+      "spaceScan" : 0.1,
+
+      "anchors" : [ "bottom" ],
+      "direction" : "right",
+
+      "lightPosition" : [0, 3],
+
+      "detectArea" : [ [-3, 0], [3, 5] ]
+    }
+  ],
+
+  "animation" : "healthrelicteleporter_es.animation",
+  "animationParts" : {
+    "bg" : "healthrelicteleporter.png",
+    "fg" : "healthrelicteleporterlit.png"
+  },
+
+  "scripts" : [ "healthrelicteleporter_es.lua" ],
+  "scriptDelta" : 20,
+
+  "messagePlayerInterval" : 0.5,
+  "messagePlayerRange" : 30,
+
+  "health" : 10,
+  "smashOnBreak" : true
+}

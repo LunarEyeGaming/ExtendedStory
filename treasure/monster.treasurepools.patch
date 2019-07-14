@@ -1,0 +1,38 @@
+[
+  {
+    "op": "add",
+    "path": "/guardianTreasure/0/1/fill",
+    "value": [
+      {
+        "item": "ancientforgematerial"
+      }
+    ]
+  },
+  {
+    "op": "replace",
+    "path": "/guardianTreasure/0/1/pool/0/weight",
+    "value": 0.5
+  },
+  {
+    "op": "add",
+    "path": "/guardianTreasure/0/1/pool/-",
+    "value": {
+      "weight": 0.5,
+      "pool": "empty"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/guardianTreasure/0/1/poolRounds/0/0",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/guardianTreasure/0/1/poolRounds/0/1",
+    "value": 1
+  },
+  {
+    "op": "remove",
+    "path": "/guardianTreasure/0/1/poolRounds/1"
+  }
+]

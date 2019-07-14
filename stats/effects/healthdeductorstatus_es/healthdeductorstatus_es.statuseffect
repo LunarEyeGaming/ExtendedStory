@@ -1,0 +1,12 @@
+{
+  "name" : "healthdeductorstatus_es",
+
+  "effectConfig" : {
+    "percentage" : 0.01
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "healthdeductorstatus_es.lua"
+  ]
+}

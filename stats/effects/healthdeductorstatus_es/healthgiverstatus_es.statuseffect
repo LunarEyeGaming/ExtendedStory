@@ -1,0 +1,12 @@
+{
+  "name" : "healthgiverstatus_es",
+
+  "effectConfig" : {
+    "percentage" : 1.0
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "healthdeductorstatus_es.lua"
+  ]
+}

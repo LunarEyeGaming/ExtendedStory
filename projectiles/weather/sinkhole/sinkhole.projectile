@@ -33,7 +33,7 @@
 	  "time" : 0.01,
 	  "action" : "projectile",
 	  "type" : "orbitalup",
-	  "offsetRange" : [10, 10, -10, -10],
+	  "offsetRange" : [-10, -10, 10, 10],
 	  "config" : {
 	    "timeToLive" : 0,
 		"speed" : 0,
@@ -52,7 +52,7 @@
 	  "time" : 0.01,
 	  "action" : "projectile",
 	  "type" : "orbitalup",
-	  "offsetRange" : [16, 16, -16, -16],
+	  "offsetRange" : [-16, -16, 16, 16],
 	  "config" : {
 	    "timeToLive" : 0,
 		"speed" : 0,
@@ -71,7 +71,7 @@
 	  "time" : 0.01,
 	  "action" : "projectile",
 	  "type" : "orbitalup",
-	  "offsetRange" : [20, 20, -20, -20],
+	  "offsetRange" : [-20, -20, 20, 20],
 	  "config" : {
 	    "timeToLive" : 0,
 		"speed" : 0,

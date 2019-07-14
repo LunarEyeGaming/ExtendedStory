@@ -1001,5 +1001,40 @@
         }
       }
     }
+  },
+  {
+    "op" : "add",
+    "path" : "/healthrelicdungeon",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "healthrelicdungeon",
+      "beamUpRule" : "AnywhereWithWarning",
+      "disableDeathDrops" : true,
+      "seed" : 1234,
+      "spawningEnabled" : false,
+
+      "skyParameters" : {
+        "spaceLevel" : 3000,
+        "ambientLightLevel" : [ 24, 28, 24 ],
+        "skyType" : "barren",
+        "horizonImages" : [ ],
+        "dayLength" : 10000,
+        "surfaceLevel" : 1200,
+        "seed" : -5288806180628666923,
+        "skyColoring" : {
+          "mainColor" : [200, 200, 255],
+
+          "morningColors" : [[200, 200, 255], [200, 200, 255]],
+          "dayColors" : [[200, 200, 255], [200, 200, 255]],
+          "eveningColors" : [[200, 200, 255], [200, 200, 255]],
+          "nightColors" : [[200, 200, 255], [200, 200, 255]],
+
+          "morningLightColor" : [200, 200, 200],
+          "dayLightColor" : [200, 200, 200],
+          "eveningLightColor" : [200, 200, 200],
+          "nightLightColor" : [200, 200, 200]
+        }
+      }
+    }
   }
 ]

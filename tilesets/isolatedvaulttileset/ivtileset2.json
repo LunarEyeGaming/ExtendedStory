@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":90,
+ "tilecount":113,
  "tileheight":82,
  "tileproperties":
     {
@@ -39,12 +39,103 @@
          "\/\/shortdescription":"Irradiated Stone Slab",
          "material":"radioactivewalls1"
         },
+     "100":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
+        },
+     "101":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthdeductorplayertrap_es",
+         "tilesetDirection":"right"
+        },
+     "102":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthdeductorplayertrap_es",
+         "tilesetDirection":"right"
+        },
+     "103":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthdeductorplayertrap_es",
+         "tilesetDirection":"right"
+        },
+     "104":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthdeductorplayertrap_es",
+         "tilesetDirection":"right"
+        },
+     "105":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthdeductortrap_es",
+         "tilesetDirection":"right"
+        },
+     "106":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthdeductortrap_es",
+         "tilesetDirection":"right"
+        },
+     "107":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthdeductortrap_es",
+         "tilesetDirection":"right"
+        },
+     "108":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthdeductortrap_es",
+         "tilesetDirection":"right"
+        },
+     "109":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthgivertrap_es",
+         "tilesetDirection":"right"
+        },
      "11":
         {
          "\/\/description":"Small stone bricks that are severely irradiated.",
          "\/\/name":"radioactivewalls2",
          "\/\/shortdescription":"Irradiated Stone Brick",
          "material":"radioactivewalls2"
+        },
+     "110":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthgivertrap_es",
+         "tilesetDirection":"right"
+        },
+     "111":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthgivertrap_es",
+         "tilesetDirection":"right"
+        },
+     "112":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthgivertrap_es",
+         "tilesetDirection":"right"
         },
      "12":
         {
@@ -601,6 +692,76 @@
          "imagePositionY":"0",
          "object":"iceartifactaltar",
          "tilesetDirection":"right"
+        },
+     "90":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healingorbsocket_es",
+         "tilesetDirection":"right"
+        },
+     "91":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"healingorbsocket_es",
+         "tilesetDirection":"right"
+        },
+     "92":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healingorbsocket_es",
+         "tilesetDirection":"right"
+        },
+     "93":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healingorbsocket_es",
+         "tilesetDirection":"right"
+        },
+     "94":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healingorbsocket_es",
+         "tilesetDirection":"right"
+        },
+     "95":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"healthtransitiondoor_es",
+         "tilesetDirection":"right"
+        },
+     "96":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
+        },
+     "97":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
+        },
+     "98":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
+        },
+     "99":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
@@ -632,12 +793,103 @@
          "\/\/shortdescription":"string",
          "material":"string"
         },
+     "100":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "101":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "102":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "103":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "104":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "105":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "106":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "107":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "108":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "109":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "11":
         {
          "\/\/description":"string",
          "\/\/name":"string",
          "\/\/shortdescription":"string",
          "material":"string"
+        },
+     "110":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "111":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "112":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         },
      "12":
         {
@@ -1194,6 +1446,76 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "90":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "91":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "92":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "93":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "94":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "95":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "96":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "97":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "98":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "99":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -1216,11 +1538,89 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "100":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/ihealingorbsocketup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "101":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductorplayertrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "102":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductorplayertrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "103":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductorplayertrapright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "104":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductorplayertrapup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "105":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductortrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "106":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductortrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "107":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductortrapright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "108":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthdeductortrapup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "109":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthgivertrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
      "11":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/radioactivewalls2.png",
          "imageheight":8,
          "imagewidth":8
+        },
+     "110":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthgivertrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "111":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthgivertrapright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "112":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthgivertrapup.png",
+         "imageheight":8,
+         "imagewidth":16
         },
      "12":
         {
@@ -1737,6 +2137,66 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/iceartifactaltar.png",
          "imageheight":30,
          "imagewidth":32
+        },
+     "90":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healingorbsocket.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "91":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healingorbsocketback.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "92":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healingorbsocketleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "93":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healingorbsocketright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "94":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healingorbsocketup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "95":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthtransitiondoor.png",
+         "imageheight":40,
+         "imagewidth":16
+        },
+     "96":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/ihealingorbsocket.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "97":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/ihealingorbsocketback.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "98":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/ihealingorbsocketleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "99":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/ihealingorbsocketright.png",
+         "imageheight":16,
+         "imagewidth":8
         }
     },
  "tilewidth":152,

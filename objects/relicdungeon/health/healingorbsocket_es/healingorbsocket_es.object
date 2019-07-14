@@ -1,0 +1,172 @@
+{
+  "objectName" : "healingorbsocket_es",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "A socket for an orb that can be healed.",
+  "shortdescription" : "Healing Orb Socket",
+  "race" : "ancient",
+
+  "apexDescription" : "This piece of technology activates when its orb is fully healed.",
+  "avianDescription" : "The healing gun that I have must be used on this mechanism.",
+  "floranDescription" : "Floran hasss healing gun. Floran thinkss it must be ussed on floating orb.",
+  "glitchDescription" : "Conclusive. This orb must be what this healing gun is for.",
+  "humanDescription" : "A floating orb. I think this is what the healing gun is used for.",
+  "hylotlDescription" : "An ancient orb with a socket. It must require the healing gun for proper functionality. An interesting piece of technology.",
+  "novakidDescription" : "This laser-shootin' gun must be used on this floatin' orb.",
+
+  "inventoryIcon" : "healingorbsocket.png:default.off",
+  "orientations" : [
+    {
+      "image" : "healingorbsocket.png:<color>.off",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "healingorbsocket.png",
+        "fg" : "healingorbsocketlit.png"
+      },
+
+      "monsterPosition" : [0, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "healingorbsocket.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "healingorbsocket.png",
+        "fg" : "healingorbsocketlit.png"
+      },
+
+      "monsterPosition" : [1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "healingorbsocketleft.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "healingorbsocketleft.png",
+        "fg" : "healingorbsocketleftlit.png"
+      },
+
+      "monsterPosition" : [2, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "healingorbsocketright.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "healingorbsocketright.png",
+        "fg" : "healingorbsocketrightlit.png"
+      },
+
+      "monsterPosition" : [-1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "healingorbsocketceiling.png:<color>.off",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "healingorbsocketceiling.png",
+        "fg" : "healingorbsocketceilinglit.png"
+      },
+
+      "monsterPosition" : [0, -1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "healingorbsocketceiling.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "healingorbsocketceiling.png",
+        "fg" : "healingorbsocketceilinglit.png"
+      },
+
+      "monsterPosition" : [1, -1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "healingorbsocketback.png:<color>.off",
+      "imagePosition" : [-8, -8],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, -8],
+      "animationParts" : {
+        "bg" : "healingorbsocketback.png",
+        "fg" : "healingorbsocketbacklit.png"
+      },
+
+      "monsterPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "healingorbsocketback.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "healingorbsocketback.png",
+        "fg" : "healingorbsocketbacklit.png"
+      },
+
+      "monsterPosition" : [1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+  
+  "monsterType" : "healingorb_es",
+
+  "animation" : "/objects/wired/switch/switchtoggle2lit.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/interface/sniper_mark_pitch8.ogg" ],
+      "off" : [ "/sfx/interface/sniper_mark_pitch4.ogg" ]
+    }
+  },
+  
+  "outputNodes" : [ [0, 0] ],
+
+  "scripts" : [ "healingorbsocket_es.lua" ],
+  "scriptDelta" : 20,
+
+  "health" : 10
+}

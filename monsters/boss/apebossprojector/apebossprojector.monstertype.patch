@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/baseParameters/statusSettings/stats/abysseffectImmunity",
+    "value": {
+      "baseValue": 1.0
+    }
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/statusSettings/stats/ionizedImmunity",
+    "value": {
+      "baseValue": 1.0
+    }
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/statusSettings/stats/acidicbacteriaImmunity",
+    "value": {
+      "baseValue": 1.0
+    }
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/statusSettings/stats/decayingairImmunity",
+    "value": {
+      "baseValue": 1.0
+    }
+  }
+]

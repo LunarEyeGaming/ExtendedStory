@@ -7,7 +7,7 @@
   "shortdescription" : "^cyan;Ice Artifact^reset;",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
-  "twoHanded" : false,
+  "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
   
@@ -21,8 +21,25 @@
     "gun" : "iceartifact.png",
     "gunfullbright" : "iceartifactfullbright.png"
   },
-  "animationCustom" : {},
-  "muzzleOffset" : [2.5, 0.5],
+  "animationCustom" : {
+    "sounds" : {
+	  "altFire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
+	},
+	"particleEmitters" : {
+      "altMuzzleFlash" : {
+        "active" : false,
+        "transformationGroups" : ["muzzle"],
+        "emissionRate" : 8,
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : [
+          { "particle" : "frostburnshard"},
+          { "particle" : "frostburnshard"},
+          { "particle" : "frostburnshard"}
+        ]
+      }
+    }
+  },
+  "muzzleOffset" : [3.0, 1.0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -34,58 +51,43 @@
       {
         "time" : 0,
         "energyCost" : 15,
-        "cooldown" : 0.1,
-        "projectileType" : "iceshot",
+        "cooldown" : 0.25,
+        "projectileType" : "frostburnfireballsmall_es",
         "projectileParameters" : {
-		  "speed" : 80,
-		  "actionOnReap" : [
-		    {
-			  "action" : "config",
-			  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
-			}
-		  ]
+		  "speed" : 80
 		},
         "inaccuracy" : 0,
         "baseDamage" : 5,
         "fireSound" : "fire"
       },
+	  {
+        "time" : 0.5,
+        "energyCost" : 75,
+        "cooldown" : 0.25,
+        "projectileType" : "frostburnfireballsmall_es",
+        "projectileParameters" : {
+		  "speed" : 80
+		},
+        "inaccuracy" : 0,
+        "baseDamage" : 7,
+		"projectileCount" : 10,
+		"spreadAngle" : 5,
+        "fireSound" : "fire"
+      },
       {
         "time" : 1.0,
         "energyCost" : 200,
-        "cooldown" : 0.5,
-        "projectileType" : "icestorm",
+        "cooldown" : 1.5,
+        "projectileType" : "iceorb",
         "projectileParameters" : {
 		  "power" : 20,
+		  "speed" : 80,
+		  "timeToLive" : 1.0,
 		  "actionOnReap" : [
 		    {
-			  "action" : "config",
-			  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
-			},
-			{
-			  "action" : "loop",
-			  "count" : 5,
-			  "body" : [
-			    {
-				  "action" : "projectile",
-				  "type" : "iceshotgrenade",
-				  "angle" : 90,
-				  "fuzzAngle" : 180,
-				  "config" : {
-				    "physics" : "grenade",
-					"power" : 20,
-					"piercing" : true,
-				    "actionOnReap" : [
-					  {
-					    "action" : "projectile",
-						"type" : "iceeruption",
-						"direction" : [1.0, 0.0],
-						"offset" : [0.0, 3.0],
-						"config" : {"timeToLive" : 3, "bounces" : -1, "power" : 20}
-					  }
-					]
-				  }
-				}
-			  ]
+			  "action" : "projectile",
+			  "type" : "frostportalplayerwindup_es",
+			  "inheritDamageFactor" : 1
 			}
 		  ]
 		},
@@ -93,7 +95,59 @@
         "baseDamage" : 10,
         "fireSound" : "fire2"
       }
-    ]
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelaunchernosprite",
+  "altAbility" : {
+    "elementalConfig" : {
+      "ice" : {
+	    "projectileType" : "fg_frostburnicicle",
+		"projectileParameters" : {"speed" : 50}
+	  }
+    },
+	"fireTime" : 2.5,
+	"projectileCount" : 8,
+	"inaccuracy" : 0.08,
+	"energyUsage" : 30,
+	"baseDps" : 50
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

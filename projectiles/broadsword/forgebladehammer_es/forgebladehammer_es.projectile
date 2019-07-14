@@ -1,0 +1,24 @@
+{
+  "projectileName" : "forgebladehammer_es",
+  "physics" : "default",
+  "timeToLive" : 3,
+  "image" : "forgebladehammer_es.png",
+  "animationCycle" : 0.6,
+  "lightColor" : [87, 33, 1],
+  "frameNumber" : 8,
+  "speed" : 1,
+  "acceleration" : 75,
+  "power" : 30,
+  "damageKind" : "firehammer",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/elementimpact/fireimpact.config"
+    }
+  ],
+
+  "bounces" : 0
+}

@@ -200,7 +200,7 @@
 							    "time" : 0.01,
 								"action" : "projectile",
 								"type" : "destroyerexplosion",
-								"offsetRange" : [ 20, 20, -20, -20 ],
+								"offsetRange" : [ -20, -20, 20, 20 ],
 								"config" : {
 								  "periodicActions" : [
 								    {

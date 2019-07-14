@@ -1,0 +1,160 @@
+{
+  "objectName" : "healthorbspawner_es",
+  "colonyTags" : ["ancient","evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "A mechanism that fires a healing orb upon activation.",
+  "shortdescription" : "Health Orb Spawner",
+  "race" : "ancient",
+
+  "apexDescription" : "This mechanism fires orbs that provide instant recovery.",
+  "avianDescription" : "I instantly recover if I touch the orb launched from this thing.",
+  "floranDescription" : "Orb makess Floran ssstrong.",
+  "glitchDescription" : "Relieved. I can recover instantly using the orb that was emitted.",
+  "humanDescription" : "Heals are always a great sight.",
+  "hylotlDescription" : "Dying shouldn't be a concern for now.",
+  "novakidDescription" : "There ain't no worrying about dyin' now.",
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "healthorbspawner.png:default.off",
+  "orientations" : [
+    {
+      "image" : "healthorbspawner.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "healthorbspawner.png",
+        "fg" : "healthorbspawnerlit.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [0, 0.5],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "healthorbspawner.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "healthorbspawner.png",
+        "fg" : "healthorbspawnerlit.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [1, 0.5],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "healthorbspawnerleft.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "healthorbspawnerleft.png",
+        "fg" : "healthorbspawnerleftlit.png"
+      },
+
+      "projectileDirection" : [1, 0],
+      "projectilePosition" : [0.5, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "healthorbspawnerright.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "healthorbspawnerright.png",
+        "fg" : "healthorbspawnerrightlit.png"
+      },
+
+      "projectileDirection" : [-1, 0],
+      "projectilePosition" : [0.5, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "healthorbspawnerceiling.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "healthorbspawnerceiling.png",
+        "fg" : "healthorbspawnerceilinglit.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0, 0.5],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "healthorbspawnerceiling.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "healthorbspawnerceiling.png",
+        "fg" : "healthorbspawnerceilinglit.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [1, 0.5],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ ],
+      "on" : [ "/sfx/interface/ship_confirm1.ogg" ],
+      "off" : [ ]
+    }
+  },
+
+  "soundEffect" : "", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 25, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 100, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 9999, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "instanthealthorb_es", // name of projectile (required)
+  "projectileConfig" : { // extra configuration overrides for projectile
+    "damageTeam" : { "type" : "environment" }
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
+  "smashParticles" : [ { "count" : 6, "particle" : "greystoneshard" } ]
+}

@@ -1,0 +1,25 @@
+{
+  "projectileName" : "healthdeductorplayerwindup_es",
+  "physics" : "illusion",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.8,
+  "damageKindImage" : "icon.png",
+  "image" : "healthdeductorplayerwindup.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "windupFrames" : 4,
+  "fullbright" : true,
+  "lightColor" : [150, 100, 50],
+  "power" : 15,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "healthdeductorplayer_es",
+	  "inheritDamageFactor" : 1
+    }
+  ],
+  "damageKind" : "nodamage",
+  "onlyHitTerrain" : true
+}

@@ -7,7 +7,7 @@ function init()
 
   self.tickTime = 0.5
   self.tickTimer = self.tickTime
-  self.damage = 10
+  self.damage = 3
 end
 
 function update(dt)

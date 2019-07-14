@@ -88,10 +88,10 @@
 
     "beamLength" : 35,
 	"fireTime" : 0.2,
-	"baseDps" : 10,
+	"baseDps" : 3,
 	"inaccuracy" : 0,
     "damageConfig" : {
-      "statusEffects" : [ "bacterialacid" ],
+      "statusEffects" : [ ],
       "damageSourceKind" : "acid",
       "knockback" : 5
     },

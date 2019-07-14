@@ -58,8 +58,8 @@
 	"burnOutStages" : 10,
 
     "fireTime" : 0.75,
-    "baseDamage" : 5,
-    "projectileParameters" : {},
+    "baseDamage" : 1,
+    "projectileParameters" : {"timeToLive" : 1},
 	"projectileType" : "miningrelic2proj",
 	"inaccuracy" : 0.0,
 

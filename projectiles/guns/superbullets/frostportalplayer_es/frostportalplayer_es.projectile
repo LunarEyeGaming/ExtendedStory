@@ -1,0 +1,80 @@
+{
+  "projectileName" : "frostportalplayer_es",
+  "image" : "/projectiles/boss/frostguardianboss_es/new/frostportal_es/frostportal_es.png",
+  "physics" : "laser",
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 3,
+  "bounces" : -1,
+  "fullbright" : true,
+  "renderLayer" : "Monster+50",
+  "piercing" : true,
+  "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
+  "damageKind" : "ice",
+  "periodicActions" : [
+    {
+	  "time" : 1.0,
+	  "action" : "actions",
+	  "list" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 0,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 45,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 90,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 135,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 180,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 225,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 270,
+		  "inheritDamageFactor" : 0.25
+		},
+		{
+		  "action" : "projectile",
+		  "type" : "frostburnfireballsmallhoming_es",
+		  "angleAdjust" : 315,
+		  "inheritDamageFactor" : 0.25
+		}
+	  ]
+	}
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/frostburnballexplosion/frostburnballexplosion.config"
+	}
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/astraltear_loop.ogg"
+}

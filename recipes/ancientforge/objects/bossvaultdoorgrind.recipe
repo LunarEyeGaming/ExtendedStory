@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "superchallengedoor", "count" : 1 },
+	{ "item" : "essence", "count" : 200 },
+	{ "item" : "ancientfragment", "count": 1 }
+  ],
+  "output" : {
+    "item" : "bossvaultdoorgrind",
+    "count" : 1
+  },
+  "groups" : [ "ancientforge", "objects", "all" ]
+}

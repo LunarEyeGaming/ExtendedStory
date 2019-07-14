@@ -1,0 +1,12 @@
+{
+  "name" : "healingpistoldamage_es",
+
+  "effectConfig" : {
+    "percentageChange" : -0.01
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "healingpistolheal_es.lua"
+  ]
+}

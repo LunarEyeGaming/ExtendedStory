@@ -332,5 +332,5 @@ function MiningRelicAbility:aimVector(angleAdjust)
 end
 
 function MiningRelicAbility:uninit()
-
+  self:reset()
 end

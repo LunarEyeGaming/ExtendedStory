@@ -1,9 +1,9 @@
 require "/scripts/util.lua"
 require "/scripts/interp.lua"
 
-MiningRelicAbility = WeaponAbility:new()
+HealthRelicAbility = WeaponAbility:new()
 
-function MiningRelicAbility:init()
+function HealthRelicAbility:init()
   self.weapon:setStance(self.stances.idle)
 
   self.burnOutTimer = config.getParameter("burnOutTimer", 0)
@@ -28,7 +28,7 @@ function MiningRelicAbility:init()
   usingItem = false
 end
 
-function MiningRelicAbility:update(dt, fireMode, shiftHeld)
+function HealthRelicAbility:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
   burnOutProgress = self.burnOutTimer / self.burnOutTime
   if self.burnedOutTimer == 0 then
@@ -59,7 +59,7 @@ function MiningRelicAbility:update(dt, fireMode, shiftHeld)
   end
 end
 
-function MiningRelicAbility:charge()
+function HealthRelicAbility:charge()
   self.weapon:setStance(self.stances.charge)
   usingItem = true
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
@@ -81,7 +81,7 @@ function MiningRelicAbility:charge()
   self:setState(self.winddown)
 end
 
-function MiningRelicAbility:drillFire()
+function HealthRelicAbility:drillFire()
   self.weapon:setStance(self.stances.fire)
 
   self.tileDamageTimer = 0
@@ -109,7 +109,7 @@ function MiningRelicAbility:drillFire()
   self:setState(self.winddown)
 end
 
-function MiningRelicAbility:projFire()
+function HealthRelicAbility:projFire()
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
       self:setState(self.winddown)
@@ -135,7 +135,7 @@ function MiningRelicAbility:projFire()
   self:setState(self.winddown)
 end
 
-function MiningRelicAbility:beamFire()
+function HealthRelicAbility:beamFire()
   animator.playSound("fireStart")
   animator.playSound("fireLoop", -1)
 
@@ -186,7 +186,7 @@ function MiningRelicAbility:beamFire()
   self:setState(self.winddown)
 end
 
-function MiningRelicAbility:winddown()
+function HealthRelicAbility:winddown()
   usingItem = false
   self.weapon:setStance(self.stances.winddown)
   self.weapon:updateAim()
@@ -205,7 +205,7 @@ function MiningRelicAbility:winddown()
   end)
 end
 
-function MiningRelicAbility:fireProjectiles()
+function HealthRelicAbility:fireProjectiles()
   local params = copy(self.projectileParameters)
   params.power = self.baseDamage * config.getParameter("damageLevelMultiplier")
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
@@ -219,7 +219,7 @@ function MiningRelicAbility:fireProjectiles()
     )
 end
 
-function MiningRelicAbility:drillDamageTiles()
+function HealthRelicAbility:drillDamageTiles()
   local pos = mcontroller.position()
   local tipPosition = vec2.add(pos, activeItem.handPosition(animator.partPoint("drillenergy", "drillTip")))
   for i = 1, 3 do
@@ -232,7 +232,7 @@ function MiningRelicAbility:drillDamageTiles()
   end
 end
 
-function MiningRelicAbility:drawBeam(endPos, didCollide)
+function HealthRelicAbility:drawBeam(endPos, didCollide)
   local newChain = copy(self.chain)
   newChain.startOffset = self.weapon.muzzleOffset
   newChain.endPosition = endPos
@@ -244,7 +244,7 @@ function MiningRelicAbility:drawBeam(endPos, didCollide)
   activeItem.setScriptedAnimationParameter("chains", {newChain})
 end
 
-function MiningRelicAbility:BeamFire_reset()
+function HealthRelicAbility:BeamFire_reset()
   self.weapon:setDamage()
   activeItem.setScriptedAnimationParameter("chains", {})
   animator.setParticleEmitterActive("beamCollision", false)
@@ -252,16 +252,16 @@ function MiningRelicAbility:BeamFire_reset()
   animator.stopAllSounds("fireLoop")
 end
 
-function MiningRelicAbility:firePosition()
+function HealthRelicAbility:firePosition()
   return vec2.add(mcontroller.position(), activeItem.handPosition(self.weapon.muzzleOffset))
 end
 
-function MiningRelicAbility:aimVector(angleAdjust)
+function HealthRelicAbility:aimVector(angleAdjust)
   local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + angleAdjust + sb.nrand(self.inaccuracy, 0))
   aimVector[1] = aimVector[1] * self.weapon.aimDirection
   return aimVector
 end
 
-function MiningRelicAbility:uninit()
-
+function HealthRelicAbility:uninit()
+  self:reset()
 end

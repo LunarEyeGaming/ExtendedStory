@@ -32,7 +32,7 @@
 	}
   },
   "muzzleOffset" : [3.25, 0.5],
-  "animationScripts" : ["/items/active/effects/chain.lua"],
+  "animationScripts" : ["/items/active/effects/lightning.lua"],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -128,11 +128,11 @@
     }
   },
   "altAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
-    "class" : "BeamFire",
-	"name" : "Lightning Beam",
+    "scripts" : ["/items/active/weapons/ranged/abilities/teslastream_es/teslastream_es.lua"],
+    "class" : "TeslaStream",
+	"name" : "Lightning Stream",
 
-    "fireTime" : 0.1,
+    "fireTime" : 0.01,
     "baseDps" : 30,
     "energyUsage" : 60,
 
@@ -143,24 +143,31 @@
     },
 
     "beamLength" : 50,
+	"inaccuracy" : 0.0,
+	"connectRadius" : 10,
+	"arcCooldownTime" : 0.1,
+	"maxConnections" : 12,
+	"arcDamageFactor" : 10,
+	
+	"lightningStartColor" : [225, 225, 255, 220],
+	"lightningEndColor" : [115, 115, 255, 0],
 
-    "beamTransitionTime" : 0.25,
-    "beamTransitionFrames" : 4,
+    "lightningConfig" : {
+      "displacement" : 1.0,
+      "minDisplacement" : 0.125,
+      "forks" : 2,
+      "forkAngleRange" : 0.45,
+      "width" : 1.5,
+	  "color" : [225, 225, 255, 220]
+    },
 
-    "chain" : {
-      "startOffset" : [0, 0],
-      "startSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
-      "segmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>",
-      "endSegmentImage" : "/items/active/weapons/ranged/lightninggunnew/rainbow.png:<beamFrame>?fade=00000000;0.6",
-      "segmentSize" : 0.12,
-      "overdrawLength" : 0.2,
-      "taper" : 0,
-      "waveform" : {
-        "frequency" : 0.5,
-        "amplitude" : 0.4,
-        "movement" : 10.0
-      },
-      "fullbright" : true
+	"miniLightningConfig" : {
+      "displacement" : 0.5,
+      "minDisplacement" : 0.05,
+      "forks" : 1,
+      "forkAngleRange" : 0.2,
+      "width" : 1,
+	  "color" : [225, 225, 255, 200]
     },
 
     "stances" : {
@@ -170,7 +177,11 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+
+        "animationStates" : {
+		  "firing" : "off"
+        }
       },
       "fire" : {
         "armRotation" : 0,
@@ -181,11 +192,10 @@
         "allowFlip" : true,
 
         "animationStates" : {
-		  "beamorigin" : "fire",
 		  "firing" : "fullcharge"
         }
       },
-      "cooldown" : {
+      "winddown" : {
         "duration" : 0.5,
         "armRotation" : 0,
         "weaponRotation" : 0,
@@ -195,7 +205,6 @@
         "allowFlip" : true,
 
         "animationStates" : {
-		  "beamorigin" : "idle",
 		  "firing" : "off"
         }
       }

@@ -27,8 +27,12 @@
 		{"weight" : 0.3, "pool" : "rottengoopMaterials"}
       ],
       "poolRounds" : [
-        [0.20, 0],
-        [0.80, 1]
+        [0.05, 0],
+        [0.35, 1],
+        [0.20, 2],
+        [0.10, 3],
+        [0.10, 4],
+        [0.20, 5]
       ],
       "allowDuplication" : true
     }]

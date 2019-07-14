@@ -1,0 +1,173 @@
+{
+  "objectName" : "healingorbsocketinverted_es",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+
+  "description" : "<todo>.",
+  "shortdescription" : "Healing Orb Socket (NOT)",
+  "race" : "ancient",
+
+  "apexDescription" : "<todo>.",
+  "avianDescription" : "<todo>.",
+  "floranDescription" : "<todo>.",
+  "glitchDescription" : "<todo>.",
+  "humanDescription" : "<todo>.",
+  "hylotlDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
+
+  "inventoryIcon" : "ihealingorbsocket.png:default.off",
+  "orientations" : [
+    {
+      "image" : "ihealingorbsocket.png:<color>.off",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "ihealingorbsocket.png",
+        "fg" : "ihealingorbsocketlit.png"
+      },
+
+      "monsterPosition" : [0, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "ihealingorbsocket.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "ihealingorbsocket.png",
+        "fg" : "ihealingorbsocketlit.png"
+      },
+
+      "monsterPosition" : [1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "ihealingorbsocketleft.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketleft.png",
+        "fg" : "ihealingorbsocketleftlit.png"
+      },
+
+      "monsterPosition" : [2, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "ihealingorbsocketright.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketright.png",
+        "fg" : "ihealingorbsocketrightlit.png"
+      },
+
+      "monsterPosition" : [-1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "ihealingorbsocketceiling.png:<color>.off",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketceiling.png",
+        "fg" : "ihealingorbsocketceilinglit.png"
+      },
+
+      "monsterPosition" : [0, -1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "ihealingorbsocketceiling.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketceiling.png",
+        "fg" : "ihealingorbsocketceilinglit.png"
+      },
+
+      "monsterPosition" : [1, -1],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "ihealingorbsocketback.png:<color>.off",
+      "imagePosition" : [-8, -8],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, -8],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketback.png",
+        "fg" : "ihealingorbsocketbacklit.png"
+      },
+
+      "monsterPosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "ihealingorbsocketback.png:<color>.off",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "ihealingorbsocketback.png",
+        "fg" : "ihealingorbsocketbacklit.png"
+      },
+
+      "monsterPosition" : [1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+  
+  "monsterType" : "healingorb_es",
+  "inverted" : true,
+
+  "animation" : "/objects/wired/switch/switchtoggle2lit.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/interface/sniper_mark_pitch8.ogg" ],
+      "off" : [ "/sfx/interface/sniper_mark_pitch4.ogg" ]
+    }
+  },
+  
+  "outputNodes" : [ [0, 0] ],
+
+  "scripts" : [ "healingorbsocket_es.lua" ],
+  "scriptDelta" : 20,
+
+  "health" : 10
+}

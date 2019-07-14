@@ -9,21 +9,6 @@
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
     "config" : "/interface/windowconfig/ancientforge.config",
-    "paneLayoutOverride" : {
-      "windowtitle" : {
-        "title" : " Ancient Forge",
-        "subtitle" : " ^#b9b5b2;Ancient armor and weapons",
-        "icon" : {
-          "file" : "/interface/crafting/ancientforge.png"
-        }
-      },
-      "lblConsumeTab" : {
-        "type" : "image",
-        "file" : "/interface/crafting/tabicon_ancientmaterials.png",
-        "position" : [80, 223],
-        "zlevel" : 3
-      }
-    },
     "filter" : [ "ancientforge" ]
   },
   "price" : 500,
@@ -45,12 +30,9 @@
       "lightPosition" : [0, 1],
 
       "imagePosition" : [-16, 0],
-      "frames" : 20,
-      "animationCycle" : 2.5,
+      "frames" : 4,
+      "animationCycle" : 0.4,
 	  "spaces" : [
-	    [-1, 5], [0, 5], [1, 5],
-		[-1, 4], [0, 4], [1, 4],
-		[-1, 3], [0, 3], [1, 3],
 		[-1, 2], [0, 2], [1, 2],
 		[-1, 1], [0, 1], [1, 1],
 		[-1, 0], [0, 0], [1, 0]
@@ -65,12 +47,9 @@
       "lightPosition" : [0, 1],
 
       "imagePosition" : [-16, 0],
-      "frames" : 20,
-      "animationCycle" : 2.5,
+      "frames" : 4,
+      "animationCycle" : 0.4,
 	  "spaces" : [
-	    [-1, 5], [0, 5], [1, 5],
-		[-1, 4], [0, 4], [1, 4],
-		[-1, 3], [0, 3], [1, 3],
 		[-1, 2], [0, 2], [1, 2],
 		[-1, 1], [0, 1], [1, 1],
 		[-1, 0], [0, 0], [1, 0]

@@ -1,0 +1,11 @@
+{
+  "input" : [
+    { "item" : "essence", "count" : 1500 },
+	{ "item" : "solariumstar", "count" : 25 }
+  ],
+  "output" : {
+    "item" : "superchallengedoor",
+    "count" : 1
+  },
+  "groups" : [ "ancientforge", "objects", "all" ]
+}

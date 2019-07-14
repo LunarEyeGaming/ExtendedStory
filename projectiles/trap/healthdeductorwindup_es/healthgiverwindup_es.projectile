@@ -1,0 +1,25 @@
+{
+  "projectileName" : "healthgiverwindup_es",
+  "physics" : "illusion",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.8,
+  "damageKindImage" : "icon.png",
+  "image" : "healthgiverwindup.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "windupFrames" : 4,
+  "fullbright" : true,
+  "lightColor" : [100, 100, 150],
+  "power" : 0,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "healthgiver_es",
+	  "inheritDamageFactor" : 1
+    }
+  ],
+  "damageKind" : "nodamage",
+  "onlyHitTerrain" : true
+}

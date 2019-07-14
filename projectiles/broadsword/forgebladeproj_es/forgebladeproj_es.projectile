@@ -1,0 +1,50 @@
+{
+  "projectileName" : "forgebladeproj_es",
+  "image" : "forgebladeproj_es.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "physics" : "laser",
+  "fullbright" : true,
+  "lightColor" : [218, 83, 2],
+  "timeToLive" : 2.0,
+  "bounces" : 0,
+  "damagePoly" : [ [20.5, 0], [-8, 4.5], [-20.5, 0], [-8, -4.5] ],
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "forgebladehammer_es",
+	  "fuzzAngle" : 180,
+	  "inheritDamageFactor" : 0.5
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "forgebladeprojsmall_es",
+	  "angleAdjust" : 5,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "forgebladeprojsmall_es",
+	  "angleAdjust" : 0,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "forgebladeprojsmall_es",
+	  "angleAdjust" : -5,
+	  "inheritDamageFactor" : 0.5
+	}
+  ],
+  "power" : 12,
+  "speed" : 1,
+  "acceleration" : 100,
+  "damageType" : "nodamage",
+  "damageKind" : "firebroadsword"
+}

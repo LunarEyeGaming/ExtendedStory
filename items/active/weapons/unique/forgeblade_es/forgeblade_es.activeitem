@@ -1,0 +1,85 @@
+{
+  "itemName" : "forgeblade_es",
+  "price" : 1000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "The superheated blade forged inside a volcano.",
+  "shortdescription" : "^orange;Forgeblade^reset;",
+  "tooltipKind" : "sword",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon", "melee", "broadsword"],
+  
+  "critChance" : 5,
+  "critBonus" : 2,
+
+  "inventoryIcon" : "icon.png",
+
+  "animation" : "forgeblade_es.animation",
+  "animationParts" : {
+    "sword" : "sword.png",
+    "swordFullbright" : "swordfullbright.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_broadsword_fire1.ogg", "/sfx/melee/swing_broadsword_fire2.ogg", "/sfx/melee/swing_broadsword_fire3.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_broadsword_fire1.ogg", "/sfx/melee/swing_broadsword_fire2.ogg", "/sfx/melee/swing_broadsword_fire3.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
+      "fire4" : [ "/sfx/melee/swing_shortsword_fire1.ogg", "/sfx/melee/swing_shortsword_fire2.ogg", "/sfx/melee/swing_shortsword_fire3.ogg" ],
+      "fire5" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
+      "fire6" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
+      "fire7" : [ "/sfx/melee/swing_broadsword_fire1.ogg", "/sfx/melee/swing_broadsword_fire2.ogg", "/sfx/melee/swing_broadsword_fire3.ogg" ],
+	  "electricStart" : [ "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg" ],
+	  "electricBlast" : [ "/sfx/gun/antimattercannon_charged.ogg" ],
+	  "electricEnd" : [ "/sfx/melee/lightningblade_altwinddown.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
+
+  "activeTime" : 3.0,
+
+  "elementalType" : "fire",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "damageConfig" : {"damageSourceKind" : "firebroadsword","statusEffects" : [ "burning" ],"knockbackMode" : "facing","timeout" : 0.5},
+    "fireTime" : 0.8,
+    "baseDps" : 10,
+	"comboSteps" : 7,
+	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[3.0, -0.5, 6.5, 2.0],[1.5, -1.0, 5.5, 1.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 0.5,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 2.5,"knockback" : 40}],
+
+    "stances" : {
+	  "idle" : {"aimAngle" : 0},
+      "windup1" : {"duration" : 0.15},
+	  "fire1" : {"duration" : 0.4},
+	  "windup2" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "preslash2" : {"duration" : 0.05,"armRotation" : -100,"weaponRotation" : -85,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire2" : {"duration" : 0.35,"armRotation" : 50,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait2" : {"duration" : 0.3,"armRotation" : 85,"weaponRotation" : -125,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup3" : {"duration" : 0.2, "armRotation" : 125, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "fire3" : {"duration" : 0.4, "armRotation" : 65, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "wait3" : {"duration" : 0.3, "armRotation" : 0, "weaponRotation" : -125, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "windup4" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "fire4" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false},
+	  "wait4" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup5" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire5" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait5" : {"duration" : 0.3,"armRotation" : 0,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup6" : {"duration" : 0.15,"armRotation" : -165,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire6" : {"duration" : 0.3,"armRotation" : -15,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait6" : {"duration" : 0.3,"armRotation" : -15,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup7" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "preslash7" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+	  "fire7" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "wait7" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
+    }
+  },
+
+  "altAbilityType" : "travelingslash",
+  "altAbility" : {"elementalConfig" : {"fire" : {"projectileType" : "forgebladeproj_es"}}, "name" : "Forge Caster", "energyUsage" : 200, "cooldownTime" : 2.5},
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

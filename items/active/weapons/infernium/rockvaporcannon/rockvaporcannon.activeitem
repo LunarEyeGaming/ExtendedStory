@@ -47,7 +47,7 @@
       },
 	  {
         "time" : 1.0,
-        "energyCost" : 30,
+        "energyCost" : 75,
         "cooldown" : 0.15,
         "projectileType" : "rockvaporcannonshoth",
         "projectileCount" : 3,
@@ -59,7 +59,7 @@
       },
       {
         "time" : 1.5,
-        "energyCost" : 100,
+        "energyCost" : 200,
         "cooldown" : 0.5,
         "projectileType" : "rockvaporcannonshotbig",
         "projectileParameters" : {},
@@ -107,7 +107,7 @@
     }
   },
 
-  "altAbilityType" : "grenadelauncher",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {

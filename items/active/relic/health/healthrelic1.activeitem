@@ -3,20 +3,20 @@
   "price" : 850,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A bronze drill that has practically infinite energy.",
-  "shortdescription" : "Bronze Energy Drill",
-  "tooltipKind" : "miningrelic",
+  "description" : "The tome teaches the user how to cast a basic healing spell.",
+  "shortdescription" : "Novice Healing Spell",
+  "tooltipKind" : "base",
   "category" : "Relic Item ^#ffffff;| ^red;1",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
-  "level" : 2,
+  "level" : 3,
 
-  "inventoryIcon" : "miningicon.png:1",
+  "inventoryIcon" : "healthicon.png:1",
 
-  "animation" : "miningrelic.animation",
+  "animation" : "healthrelic.animation",
   "animationParts" : {
-    "fire" : "healthrelicfire1.png",
-    "gunfullbright" : ""
+    "hold" : "spellhold.png",
+	"charge" : "spellcharge.png"
   },
   "animationCustom" : {
     "animatedParts" : {
@@ -119,37 +119,33 @@
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "name" : "Mine Away",
-    "scripts" : ["/items/active/relic/mining/miningrelicability.lua"],
-    "class" : "MiningRelicAbility",
-	"firingMode" : "drill",
-	"burnOutTime" : 30,
-	"burnOutRecharge" : 3,
-	"burnOutCooldown" : 18,
-	"burnOutStages" : 10,
-
-    "tileDamage" : 0.5,
-    "tileDamageRate" : 0.15,
-    "damageTileDepth" : 3,
+    "name" : "Cheese the boss using healing",
+    "scripts" : ["/items/active/relic/health/healthrelicability.lua"],
+    "class" : "HealthRelicAbility",
 	
-	"chargeTime" : 0.5,
-
-    "damageTimeout" : 0.25,
-    "damageConfig" : {
-      "damageSourceKind" : "plasma",
-      "statusEffects" : [ ],
-      "knockbackMode" : "aim",
-      "knockback" : 25,
-      "baseDamage" : 3
-    },
+	"chargeTime" : 1.0,
 
     "stances" : {
       "idle" : {
-        "armRotation" : 0,
+        "armRotation" : -15,
         "weaponRotation" : 0,
         "twoHanded" : false,
 
-        "allowRotate" : true,
+        "allowRotate" : false,
+        "allowFlip" : true,
+		
+		"animationStates" : {
+		  "gun" : "idle",
+		  "energy" : "idle"
+		}
+      },
+	  "precharge" : {
+	    "duration" : 1.0,
+        "armRotation" : -45,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
         "allowFlip" : true,
 		
 		"animationStates" : {
@@ -162,7 +158,7 @@
         "weaponRotation" : 0,
         "twoHanded" : false,
 
-        "allowRotate" : true,
+        "allowRotate" : false,
         "allowFlip" : true,
 		
 		"animationStates" : {
