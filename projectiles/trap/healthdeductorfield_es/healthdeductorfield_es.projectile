@@ -36,7 +36,7 @@
   "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
   "damageKind" : "nodamage",
   "piercing" : true,
-  "statusEffects" : [ "healthdeductorstatus_es" ],
+  "statusEffects" : [ "healthdeductorstatus_es", "healimpaired_es" ],
 
   "speed" : 25
 }

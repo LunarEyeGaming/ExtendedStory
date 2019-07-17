@@ -5,19 +5,19 @@ require "/scripts/util.lua"
 HealingPistolAbility = WeaponAbility:new()
 
 function HealingPistolAbility:init()
-  --[[
-  inValidInstanceWorld = false
-  instanceWorld = world.type()
-  for _, v in pairs (config.getParameter("validInstanceWorlds")) do
-    if instanceWorld == v then
-	  inValidInstanceWorld = true
-	  break
-	end
+  if self.validInstanceWorlds then
+    inValidInstanceWorld = false
+    instanceWorld = world.type()
+    for _, v in pairs (self.validInstanceWorlds) do
+      if instanceWorld == v then
+	    inValidInstanceWorld = true
+	    break
+	  end
+    end
+    if not inValidInstanceWorld then
+      item.consume(1)
+    end
   end
-  if not inValidInstanceWorld then
-    item.consume(1)
-  end
-  ]]
   self.damageConfig.baseDamage = self.baseDps * self.fireTime
 
   self.weapon:setStance(self.stances.idle)

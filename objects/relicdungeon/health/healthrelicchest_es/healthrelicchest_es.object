@@ -1,0 +1,52 @@
+{
+  "objectName" : "healthrelicchest_es",
+  "colonyTags" : ["storage"],
+  "rarity" : "Legendary",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+
+  "category" : "storage",
+  "price" : 70,
+  "description" : "<todo>.",
+  "shortdescription" : "<todo>",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "<todo>.",
+  "avianDescription" : "<todo>.",
+  "floranDescription" : "<todo>.",
+  "glitchDescription" : "<todo>.",
+  "humanDescription" : "<todo>.",
+  "hylotlDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "healthrelicchest.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlit.png:<color>.<key>" } ],
+      "imagePosition" : [-16, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "healthrelicchest.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlit.png:<color>.<key>" } ],
+      "imagePosition" : [-16, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/chest_small_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/chest_small_close.ogg" ],
+  "slotCount" : 1,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

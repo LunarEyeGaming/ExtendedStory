@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":113,
+ "tilecount":117,
  "tileheight":82,
  "tileproperties":
     {
@@ -135,6 +135,34 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"healthgivertrap_es",
+         "tilesetDirection":"right"
+        },
+     "113":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthorbspawner_es",
+         "tilesetDirection":"right"
+        },
+     "114":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthorbspawner_es",
+         "tilesetDirection":"right"
+        },
+     "115":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"healthorbspawner_es",
+         "tilesetDirection":"right"
+        },
+     "116":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"healthorbspawner_es",
          "tilesetDirection":"right"
         },
      "12":
@@ -702,7 +730,7 @@
         },
      "91":
         {
-         "imagePositionX":"-8",
+         "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"healingorbsocket_es",
          "tilesetDirection":"right"
@@ -744,7 +772,7 @@
         },
      "97":
         {
-         "imagePositionX":"-8",
+         "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"healingorbsocketinverted_es",
          "tilesetDirection":"right"
@@ -885,6 +913,34 @@
          "tilesetDirection":"string"
         },
      "112":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "113":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "114":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "115":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "116":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -1619,6 +1675,30 @@
      "112":
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthgivertrapup.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "113":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthorbspawner.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "114":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthorbspawnerleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "115":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthorbspawnerright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "116":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthorbspawnerup.png",
          "imageheight":8,
          "imagewidth":16
         },

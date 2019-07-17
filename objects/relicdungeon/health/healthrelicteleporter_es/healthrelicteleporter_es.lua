@@ -62,7 +62,7 @@ function onInteraction(args)
           name = "???",
           planetName = "Unknown Dimension",
           icon = "default",
-          warpAction = string.format("InstanceWorld:healingrelicdungeon:%s:%s", storage.uuid, world.threatLevel())
+          warpAction = string.format("InstanceWorld:healthrelicdungeon:%s:%s", storage.uuid, world.threatLevel())
         } }
       }
     }

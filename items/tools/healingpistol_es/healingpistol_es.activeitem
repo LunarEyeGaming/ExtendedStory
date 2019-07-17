@@ -37,6 +37,7 @@
   "primaryAbility" : {
     "scripts" : ["/items/tools/healingpistol_es/healingpistolability.lua"],
     "class" : "HealingPistolAbility",
+	"validInstanceWorlds" : ["healthrelicdungeon"],
 
     "fireTime" : 0.1,
     "baseDps" : 0,

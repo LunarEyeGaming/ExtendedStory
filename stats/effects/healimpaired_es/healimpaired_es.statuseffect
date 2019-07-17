@@ -1,0 +1,14 @@
+{
+  "name" : "healimpaired_es",
+  "effectConfig" : {
+    "blockedStatusEffects" : [ "bandageheal", "medkitheal", "nanowrapheal", "salveheal", "bottledwaterheal", "ancientheal", "ancientheal2" ]
+  },
+  "defaultDuration" : 9999,
+
+  "scripts" : [
+    "healimpaired_es.lua"
+  ],
+
+  "label" : "Crippled Healing - Healing items cannot be used.",
+  "icon" : "/interface/statuses/healblock.png"
+}
