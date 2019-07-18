@@ -1,5 +1,6 @@
 {
   "name" : "healimpaired_es",
+  "blockingStat" : "healimpairedStatusImmunity",
   "effectConfig" : {
     "blockedStatusEffects" : [ "bandageheal", "medkitheal", "nanowrapheal", "salveheal", "bottledwaterheal", "ancientheal", "ancientheal2" ]
   },

@@ -1,0 +1,58 @@
+{
+  "objectName" : "healthrelicchestlock_es",
+  "colonyTags" : ["storage"],
+  "rarity" : "Legendary",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+
+  "category" : "storage",
+  "price" : 70,
+  "description" : "A chest designed to unlock something upon inserting an item.",
+  "shortdescription" : "Vitalium Lock Chest",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "Putting my healing gun inside of this chest unlocks something.",
+  "avianDescription" : "I need to put my healing gun inside of this chest in order to continue.",
+  "floranDescription" : "Floran needss to put gun inside chesst to continue.",
+  "glitchDescription" : "Upset. Looks like I need to put this gun in this chest to proceed.",
+  "humanDescription" : "I must put my healing gun in this chest.",
+  "hylotlDescription" : "A chest with a key decorated on it. It looks like I need to put my gun into this chest.",
+  "novakidDescription" : "Seriously? I need to get rid of my sweet healing gun to proceed?",
+
+  "inventoryIcon" : "iconlock.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "healthrelicchestlock.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlocklit.png:<color>.<key>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "healthrelicchestlock.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlocklit.png:<color>.<key>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "outputNodes" : [ [0, 0] ],
+  "scripts" : [ "/objects/scripts/chestlock_es.lua" ],
+  "acceptedItems" : [ "healingpistol_es" ],
+  "deleteItem" : false,
+  
+
+  "openSounds" : [ "/sfx/objects/chest_small_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/chest_small_close.ogg" ],
+  "slotCount" : 1,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}

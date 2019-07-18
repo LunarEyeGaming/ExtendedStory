@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":117,
+ "tilecount":119,
  "tileheight":82,
  "tileproperties":
     {
@@ -163,6 +163,20 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"healthorbspawner_es",
+         "tilesetDirection":"right"
+        },
+     "117":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"healthrelicchest_es",
+         "tilesetDirection":"right"
+        },
+     "118":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"healthrelicchestlock_es",
          "tilesetDirection":"right"
         },
      "12":
@@ -947,6 +961,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "117":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "118":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "12":
         {
          "\/\/description":"string",
@@ -1700,6 +1728,18 @@
         {
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthorbspawnerup.png",
          "imageheight":8,
+         "imagewidth":16
+        },
+     "117":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthrelicchest.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "118":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthrelicchestlock.png",
+         "imageheight":16,
          "imagewidth":16
         },
      "12":

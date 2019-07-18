@@ -7,24 +7,24 @@
 
   "category" : "storage",
   "price" : 70,
-  "description" : "<todo>.",
-  "shortdescription" : "<todo>",
+  "description" : "A chest with glowing strips of blue light.",
+  "shortdescription" : "Vitalium Dungeon Chest",
   "race" : "generic",
   "health" : 1.5,
 
-  "apexDescription" : "<todo>.",
-  "avianDescription" : "<todo>.",
-  "floranDescription" : "<todo>.",
-  "glitchDescription" : "<todo>.",
-  "humanDescription" : "<todo>.",
-  "hylotlDescription" : "<todo>.",
-  "novakidDescription" : "<todo>.",
+  "apexDescription" : "This chest must contain something important.",
+  "avianDescription" : "There is something important inside this chest.",
+  "floranDescription" : "Chesst hass important thing inssside.",
+  "glitchDescription" : "Observative. This chest must have an important tool inside.",
+  "humanDescription" : "This is a chest. Whatever is inside of it must be important.",
+  "hylotlDescription" : "A chest that seems to have an essential item inside of it.",
+  "novakidDescription" : "A glowin' chest with something inside. Must be important.",
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
       "imageLayers" : [ { "image" : "healthrelicchest.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlit.png:<color>.<key>" } ],
-      "imagePosition" : [-16, 0],
+      "imagePosition" : [-8, 0],
 
       "direction" : "left",
       "flipImages" : true,
@@ -34,7 +34,7 @@
     },
     {
       "imageLayers" : [ { "image" : "healthrelicchest.png:<color>.<key>", "fullbright" : true }, { "image" : "healthrelicchestlit.png:<color>.<key>" } ],
-      "imagePosition" : [-16, 0],
+      "imagePosition" : [-8, 0],
 
       "direction" : "right",
 

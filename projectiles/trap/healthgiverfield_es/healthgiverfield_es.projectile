@@ -36,7 +36,7 @@
   "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
   "damageKind" : "nodamage",
   "piercing" : true,
-  "statusEffects" : [ "healthgiverstatus_es" ],
+  "statusEffects" : [ "healthgiverstatus_es", "healimpairedblock_es" ],
 
   "speed" : 25
 }

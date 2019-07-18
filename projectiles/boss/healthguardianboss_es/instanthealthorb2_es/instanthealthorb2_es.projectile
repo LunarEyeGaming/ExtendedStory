@@ -1,0 +1,23 @@
+{
+  "projectileName" : "instanthealthorb2_es",
+  "physics" : "hover",
+  "image" : "instanthealthorb.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 5,
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "power" : 0,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "timeToLive" : 9999,
+  "fullbright" : true,
+  "actionOnReap" : [
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/statuseffects/powerup.ogg" ]
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "nodamage",
+  "statusEffects" : [ "healthgiverstatus_es", "healimpairedblock_es" ],
+  "lightColor" : [0, 128, 0]
+}

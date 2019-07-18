@@ -8,5 +8,7 @@ end
 function update(dt)
   if status.resourcePercentage("health") > self.finalPercentage then
     status.modifyResourcePercentage("health", self.changeRate * dt)
+  else
+    effect.expire()
   end
 end
