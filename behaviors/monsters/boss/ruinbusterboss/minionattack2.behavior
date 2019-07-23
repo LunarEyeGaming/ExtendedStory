@@ -41,36 +41,6 @@
 		  "position": "firePos"
 		}
 	  },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "animate",
-			"type": "action",
-			"name": "animate",
-			"parameters": {
-			  "fallback": {"value": "winddown"},
-			  "state": {"value": "windup"},
-			  "type": {"value": "thrusters"}
-			}
-		  },
-		  {
-			"title": "flyToPosition",
-			"type": "action",
-			"name": "flyToPosition",
-			"parameters": {
-			  "position": {"key": "firePos"},
-			  "speed": {"value": 50}
-			}
-		  }
-		]
-	  },
       {
         "title": "setVelocity",
         "type": "action",
@@ -93,7 +63,7 @@
 			"type": "action",
 			"name": "timer",
 			"parameters": {
-			  "time": {"value": 3}
+			  "time": {"value": 0.7}
 			}
 		  },
 		  {

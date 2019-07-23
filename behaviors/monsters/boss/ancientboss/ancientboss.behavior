@@ -51,14 +51,6 @@
             }
           },
           {
-            "title": "faceDirection",
-            "type": "action",
-            "name": "faceDirection",
-            "parameters": {
-              "direction": {"value": 1}
-            }
-          },
-          {
             "title": "Spiderboss",
             "type": "composite",
             "name": "dynamic",
@@ -88,14 +80,6 @@
                     "parameters": {
                       "percentage": {"value": 0},
                       "resource": {"value": "health"}
-                    }
-                  },
-                  {
-                    "title": "faceDirection",
-                    "type": "action",
-                    "name": "faceDirection",
-                    "parameters": {
-                      "direction": {"value": 1}
                     }
                   },
                   {
@@ -222,14 +206,6 @@
                                     }
                                   ]
                                 }
-                              },
-                              {
-                                "title": "faceDirection",
-                                "type": "action",
-                                "name": "faceDirection",
-                                "parameters": {
-                                  "direction": {"value": 1}
-                                }
                               }
                             ]
                           },
@@ -339,14 +315,6 @@
                                 "parameters": {
                                   "tag": {"value": "phase2"},
                                   "type": {"value": "phase"}
-                                }
-                              },
-                              {
-                                "title": "faceDirection",
-                                "type": "action",
-                                "name": "faceDirection",
-                                "parameters": {
-                                  "direction": {"value": 1}
                                 }
                               }
                             ]
@@ -544,14 +512,6 @@
                                 "parameters": {
                                   "tag": {"value": "phase3"},
                                   "type": {"value": "phase"}
-                                }
-                              },
-                              {
-                                "title": "faceDirection",
-                                "type": "action",
-                                "name": "faceDirection",
-                                "parameters": {
-                                  "direction": {"value": 1}
                                 }
                               }
                             ]
@@ -767,14 +727,6 @@
                                 "parameters": {
                                   "tag": {"value": "phase4"},
                                   "type": {"value": "phase"}
-                                }
-                              },
-                              {
-                                "title": "faceDirection",
-                                "type": "action",
-                                "name": "faceDirection",
-                                "parameters": {
-                                  "direction": {"value": 1}
                                 }
                               }
                             ]

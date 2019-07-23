@@ -1,0 +1,61 @@
+{
+  "projectileName" : "electricalregion_es",
+  "image" : "electricalregion.png",
+  "physics" : "laser",
+  "animationCycle" : 0.75,
+  "frameNumber" : 9,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 0.75,
+  "bounces" : -1,
+  "fullbright" : true,
+  "renderLayer" : "Monster+50",
+  "piercing" : false,
+  "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
+  "damageKind" : "electric",
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "particle",
+	  "specification" : {
+        "type" : "animated",
+        "looping" : true,
+        "animation" : "/animations/teslabolt/teslabolt.animation",
+        "position" : [0, 0],
+        "finalVelocity" : [0, 0],
+        "approach" : [50, 50],
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.425,
+        "fade" : 1,
+        "fullbright" : true,
+        "light" : [25, 92, 107],
+        "size" : 0.5,
+        "layer" : "middle",
+        "timeToLive" : 0.425,
+        "variance" : {
+          "position" : [4.375, 4.375],
+          "rotation" : 180
+        }
+      }
+	},
+	{
+	  "time" : 0.05,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "fuzzAngle" : 180,
+	  "config" : {
+	    "speed" : 43.75,
+		"timeToLive" : 0.1,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "particle",
+			"specification" : "electricswoosh1"
+		  }
+		]
+	  }
+	}
+  ],
+  "actionOnReap" : [
+  ]
+}

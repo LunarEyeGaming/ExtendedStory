@@ -1,0 +1,19 @@
+{
+  "projectileName" : "plagueorb",
+  "physics" : "hover",
+  "image" : "plagueorb.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "power" : 100,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "timeToLive" : 9,
+  "fullbright" : true,
+  "emitters" : [],
+  "damageKind" : "plasma",
+  "teamType" : "enemy",
+  "damageRepeatTimeout" : 0,
+  "statusEffects" : [ "healimpaired_es", "healthplague_es" ],
+  "lightColor" : [0, 0, 0]
+}

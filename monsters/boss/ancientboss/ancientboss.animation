@@ -128,7 +128,8 @@
       "ufo" : {
         "properties" : {
           "rotationGroup" : "all",
-          "zLevel" : 2
+          "zLevel" : 2,
+		  "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -151,7 +152,8 @@
         "properties" : {
           "rotationGroup" : "all",
           "zLevel" : 3,
-		  "fullbright" : true
+		  "fullbright" : true,
+		  "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -159,28 +161,6 @@
             "visible" : {
               "properties" : {
                 "image" : "<partImage>:<phase>.<frame>"
-              }
-            },
-            "invisible" : {
-              "properties" : {
-                "image" : ""
-              }
-            }
-          }
-        }
-      },
-	  
-      "pilot" : {
-        "properties" : {
-          "rotationGroup" : "all",
-          "zLevel" : 1
-        },
-
-        "partStates" : {
-          "movement" : {
-            "visible" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
               }
             },
             "invisible" : {
@@ -205,45 +185,6 @@
             "on" : {
               "properties" : {
                 "image" : "<partImage>:<frame>"
-              }
-            }
-          }
-        }
-      },
-
-      "eye" : {
-        "properties" : {
-          "zLevel" : 1,
-          "offset" : [0.125, -0.25],
-		  "fullbright" : true,
-          "rotationGroup" : "all"
-        },
-
-        "partStates" : {
-          "eye" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "attack" : {
-              "properties" : {
-                "image" : "<partImage>:fire"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            },
-            "hurt" : {
-              "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
               }
             }
           }
@@ -279,7 +220,8 @@
     }
   },
   "transformationGroups" : {
-    "facing" : { "interpolated" : false }
+    "facing" : { "interpolated" : false },
+	"body" : { "interpolated" : true }
   },
   "globalTagDefaults" : {
     "phase" : "phase1",

@@ -1,0 +1,16 @@
+{
+  "name" : "healthplague_es",
+  "blockingStat" : "healthplagueStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 200,
+
+  "scripts" : [
+    "healthplague_es.lua"
+  ],
+
+  "animationConfig" : "healthplague_es.animation",
+
+  "label" : "Health Plague - Constantly taking damage",
+  "icon" : "/interface/statuses/healthplague_es.png"
+}

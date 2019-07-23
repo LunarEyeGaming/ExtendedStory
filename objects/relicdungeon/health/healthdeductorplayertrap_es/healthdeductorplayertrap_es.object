@@ -149,7 +149,8 @@
   "fireTimeVariance" : 0.0, // variation in rate of fire
   "projectile" : "healthdeductorplayerwindup_es", // name of projectile (required)
   "projectileConfig" : { // extra configuration overrides for projectile
-    "damageTeam" : { "type" : "environment" }
+    "damageTeam" : { "type" : "environment" },
+	"power" : 40
   },
   
   "health" : 5,

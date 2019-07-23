@@ -1,0 +1,139 @@
+{
+  "name": "healthguardianboss_es-plaguewaveattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/kluexboss.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "windupTime": 0.4,
+    "pillarCount": 2
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "healthguardianboss_es-changecolor",
+        "type": "module",
+        "name": "healthguardianboss_es-changecolor",
+        "parameters": {
+          "color": {"value": "red"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "attack"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "plasmaAttack"}
+        }
+      },
+      {
+        "title": "spawnFloorProjectiles",
+        "type": "action",
+        "name": "spawnFloorProjectiles",
+        "parameters": {
+          "areaWidth": {"value": 64},
+          "center": {"key": "spawn"},
+          "power": {"value": 0},
+          "projectileCount": {"value": 8},
+          "projectileType": {"value": "plaguewave"},
+          "segmentWidth": {"value": 8},
+          "spawnHeight": {"value": -1}
+        },
+        "output": {
+          "projectiles": "lavaProjectiles"
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "lavaProjectiles"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "eachItem"}
+              }
+            }
+          ]
+        }
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<windupTime>"}
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "pillars"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityExists",
+              "type": "action",
+              "name": "entityExists",
+              "parameters": {
+                "entity": {"key": "eachItem"}
+              }
+            },
+            {
+              "title": "sendEntityMessage",
+              "type": "action",
+              "name": "sendEntityMessage",
+              "parameters": {
+                "entity": {"key": "eachItem"},
+                "message": {"value": "destroy"}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

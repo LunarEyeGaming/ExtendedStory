@@ -1,0 +1,61 @@
+{
+  "projectileName" : "electricalregionwindup_es",
+  "physics" : "illusion",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 1.0,
+  "damageKindImage" : "icon.png",
+  "image" : "electricalregionwindup.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "fullbright" : true,
+  "power" : 15,
+  "supportsProcessing" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.1,
+	  "action" : "particle",
+	  "specification" : {
+        "type" : "animated",
+        "looping" : true,
+        "animation" : "/animations/teslabolt/teslabolt.animation",
+        "position" : [0, 0],
+        "finalVelocity" : [0, 0],
+        "approach" : [50, 50],
+        "destructionAction" : "shrink",
+        "destructionTime" : 0.425,
+        "fade" : 1,
+        "fullbright" : true,
+        "light" : [25, 92, 107],
+        "size" : 0.5,
+        "layer" : "middle",
+        "timeToLive" : 0.425,
+        "variance" : {
+          "position" : [4.375, 4.375],
+          "rotation" : 180
+        }
+      }
+	}
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "electricalregion_es",
+	  "inheritDamageFactor" : 1
+    },
+	{
+      "action" : "projectile",
+      "type" : "whipshock",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 0
+	  }
+    },
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/electricalregion_appear.ogg" ]
+	}
+  ],
+  "damageKind" : "nodamage",
+  "onlyHitTerrain" : true
+}

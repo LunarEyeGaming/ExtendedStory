@@ -40,8 +40,9 @@
   ],
   "power" : 5,
   "damagePoly" : [ [-8, 0], [2, 3], [8, 0], [2, -3] ],
-  "damageKind" : "nodamage",
+  "damageKind" : "plasma",
   "piercing" : false,
+  "damageType" : "ignoresdef",
 
   "speed" : 75
 }

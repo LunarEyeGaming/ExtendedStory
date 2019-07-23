@@ -1,14 +1,14 @@
 {
   "projectileName" : "instanthealthorb2_es",
   "physics" : "hover",
-  "image" : "instanthealthorb.png",
+  "image" : "instanthealthorb2.png",
   "damageKindImage" : "icon.png",
   "speed" : 5,
   "animationCycle" : 0.4,
   "frameNumber" : 4,
   "power" : 0,
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
-  "timeToLive" : 9999,
+  "timeToLive" : 14,
   "fullbright" : true,
   "actionOnReap" : [
 	{
@@ -18,6 +18,6 @@
   ],
   "emitters" : [ ],
   "damageKind" : "nodamage",
-  "statusEffects" : [ "healthgiverstatus_es", "healimpairedblock_es" ],
+  "statusEffects" : [ "healthgiverstatus_es", "healimpairedblock_es", "healthplagueblock_es" ],
   "lightColor" : [0, 128, 0]
 }

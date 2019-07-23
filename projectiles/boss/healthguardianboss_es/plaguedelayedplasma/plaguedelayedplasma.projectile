@@ -1,0 +1,37 @@
+{
+  "projectileName" : "plaguedelayedplasma",
+  "image" : "plaguedelayedplasma.png",
+  "animationCycle" : 0.4,
+  "lightColor" : [0, 0, 0],
+  "frameNumber" : 8,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "actionOnReap" : [
+  ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+  "power" : 200,
+  "statusEffects" : [ "healimpaired_es", "healthplague_es" ],
+
+  "speed" : 0,
+  "timeToLive" : 1.5,
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+      {
+        "action" : "projectile",
+        "inheritDamageFactor" : 1,
+        "type" : "redpulsecannonexplosion"
+      },
+      {
+        "action" : "light",
+        "color" : "red"
+      }
+    ]
+  },
+  "scripts" : [ "plaguedelayedplasma.lua" ],
+  "scriptDelta" : 1
+}

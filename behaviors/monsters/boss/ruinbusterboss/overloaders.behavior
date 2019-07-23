@@ -103,7 +103,7 @@
 			"type": "action",
 			"name": "timer",
 			"parameters": {
-			  "time": {"value": 3}
+			  "time": {"value": 1}
 			}
 		  },
 		  {
@@ -119,38 +119,28 @@
 			  "name": "sequence",
 			  "parameters": {},
 			  "children": [
-			    {
-        	      "title": "entityDirection",
-        	      "type": "action",
-        	      "name": "entityDirection",
-        	      "parameters": {
-        	        "target": {"key": "target"}
-        	      },
-        	      "output": {
-        	        "vector": "aimVector"
-        	      }
-        	    },
 				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.5}
-				  }
-				},
-			    {
-    		      "title": "spawnProjectile",
+                  "title": "random",
                   "type": "action",
-                  "name": "spawnProjectile",
+                  "name": "random",
                   "parameters": {
-                    "aimVector": {"key": "aimVector"},
-                    "offset": {"value": [-12, -12]},
-                    "position": {"key": "self"},
-                    "projectileConfig": {"value": {}},
-                    "projectileType": {"value": "electriccontroller"},
-                    "scalePower": {"value": true},
-                    "sourceEntity": {"key": "self"},
-                    "trackSource": {"value": false}
+                    "max": {"value": 70},
+                    "min": {"value": -70}
+                  },
+                  "output": {
+                    "number": "regionX"
+                  }
+                },
+		        {
+                 "title": "random",
+                  "type": "action",
+                  "name": "random",
+                  "parameters": {
+                    "max": {"value": 20},
+                    "min": {"value": -20}
+                  },
+                  "output": {
+                    "number": "regionY"
                   }
                 },
 			    {
@@ -158,11 +148,11 @@
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
-                    "aimVector": {"key": "aimVector"},
-                    "offset": {"value": [-12, 12]},
+                    "aimVector": {"value": [0, 0]},
+                    "offset": {"value": ["regionX", "regionY"]},
                     "position": {"key": "self"},
                     "projectileConfig": {"value": {}},
-                    "projectileType": {"value": "electriccontroller"},
+                    "projectileType": {"value": "electricalregionwindup_es"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
                     "trackSource": {"value": false}
@@ -181,7 +171,7 @@
 				  "type": "action",
 				  "name": "timer",
 				  "parameters": {
-				    "time": {"value": 9999}
+				    "time": {"value": 0.07}
 				  }
 				}
 			  ]

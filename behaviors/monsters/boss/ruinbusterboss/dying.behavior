@@ -126,8 +126,8 @@
 						  "type": "action",
 						  "name": "controlApproachVelocity",
 						  "parameters": {
-						    "velocity": {"value": [0, 0]},
-						    "force": {"value": 100}
+						    "velocity": {"value": [0, -3]},
+						    "force": {"value": 25}
 						  }
 					    },
 						{
@@ -148,48 +148,48 @@
 					"parameters": {
 					  "time": {"value": 3}
 					}
-				  },
-				  {
-                    "title": "parallel",
-                    "type": "composite",
-                    "name": "parallel",
+				  }
+				]
+			  },
+			  {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "controlParameters",
+                    "type": "action",
+                    "name": "controlParameters",
                     "parameters": {
-                      "fail": {"value": -1},
-                      "success": {"value": -1}
-                    },
+                      "parameters": {"value": {"gravityEnabled": true}}
+                    }
+                  },
+                  {
+                    "title": "dynamic",
+                    "type": "composite",
+                    "name": "dynamic",
+                    "parameters": {},
                     "children": [
                       {
-                        "title": "controlParameters",
+                        "title": "onGround",
                         "type": "action",
-                        "name": "controlParameters",
-                        "parameters": {
-                          "parameters": {"value": {"gravityEnabled": true}}
-                        }
+                        "name": "onGround",
+                        "parameters": {}
                       },
                       {
-                        "title": "dynamic",
-                        "type": "composite",
-                        "name": "dynamic",
-                        "parameters": {},
-                        "children": [
-                          {
-                            "title": "onGround",
-                            "type": "action",
-                            "name": "onGround",
-                            "parameters": {}
-                          },
-                          {
-                            "title": "runner",
-                            "type": "action",
-                            "name": "runner",
-                            "parameters": {}
-                          }
-                        ]
+                        "title": "runner",
+                        "type": "action",
+                        "name": "runner",
+                        "parameters": {}
                       }
                     ]
                   }
-				]
-			  }
+                ]
+              }
 			]
 		  }
 		]

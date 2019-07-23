@@ -12,7 +12,7 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
-    "acidSprayConfig": {"power": 100}
+    "angleFactor": 0.01
   },
   "root": {
     "title": "sequence",
@@ -21,11 +21,348 @@
     "parameters": {},
     "children": [
 	  {
-	    "title": "repeater",
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+	      "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    	          "title": "random",
+    	          "type": "action",
+    	          "name": "random",
+    	          "parameters": {
+    	            "max": {"value": 14},
+    	            "min": {"value": -14}
+    	          },
+    	          "output": {
+    	            "number": "explodeX"
+    	          }
+    	        },
+			    {
+    	          "title": "random",
+    	          "type": "action",
+    	          "name": "random",
+    	          "parameters": {
+    	            "max": {"value": 3},
+    	            "min": {"value": -3}
+    	          },
+     	         "output": {
+    	            "number": "explodeY"
+    	          }
+    	        },
+			    {
+    		      "title": "spawnProjectile",
+    		      "type": "action",
+    		      "name": "spawnProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [0, 0]},
+    		        "offset": {"value": ["explodeX", "explodeY"]},
+    		        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}, {"action": "loop", "count": 3, "body": [{"action": "item", "name": "ancientfragment", "count": 1}]}]}},
+    		        "projectileType": {"value": "orbitalup"}
+    		      }
+    		    },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+                  "title": "setGlobalTag",
+                  "type": "action",
+                  "name": "setGlobalTag",
+                  "parameters": {
+                    "tag": {"value": "phase3"},
+                    "type": {"value": "phase"}
+                  }
+                },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.15}
+				  }
+				},
+                {
+                  "title": "setGlobalTag",
+                  "type": "action",
+                  "name": "setGlobalTag",
+                  "parameters": {
+                    "tag": {"value": "phase4"},
+                    "type": {"value": "phase"}
+                  }
+                },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.15}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "sequence",
+		    "type": "composite",
+		    "name": "sequence",
+		    "parameters": {},
+		    "children": [
+			  {
+			    "title": "parallel",
+				"type": "composite",
+				"name": "parallel",
+				"parameters": {
+				  "fail": {"value": -1},
+				  "success": {"value": 1}
+				},
+				"children": [
+				  {
+				    "title": "repeater",
+					"type": "decorator",
+					"name": "repeater",
+					"parameters": {},
+					"child": {
+					  "title": "sequence",
+					  "type": "composite",
+					  "name": "sequence",
+					  "parameters": {},
+					  "children": [
+					    {
+					      "title": "controlApproachVelocity",
+						  "type": "action",
+						  "name": "controlApproachVelocity",
+						  "parameters": {
+						    "velocity": {"value": [0, -1]},
+						    "force": {"value": 25}
+						  }
+					    },
+						{
+						  "title": "timer",
+						  "type": "action",
+						  "name": "timer",
+						  "parameters": {
+						    "time": {"value": 0.01}
+						  }
+						}
+					  ]
+					}
+				  },
+				  {
+				    "title": "timer",
+					"type": "action",
+					"name": "timer",
+					"parameters": {
+					  "time": {"value": 3}
+					}
+				  }
+				]
+			  },
+			  {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": -1}
+                },
+                "children": [
+				  {
+                    "title": "controlParameters",
+                    "type": "action",
+                    "name": "controlParameters",
+                    "parameters": {
+                      "parameters": {"value": {"gravityEnabled": true}}
+                    }
+                  },
+				  {
+				    "title": "sequence",
+					"type": "composite",
+					"name": "sequence",
+					"parameters": {},
+					"children": [
+				      {
+            	        "title": "resetTransformationGroup",
+            	        "type": "action",
+            	        "name": "resetTransformationGroup",
+            	        "parameters": {
+					      "transformationGroup": {"value": "body"}
+				        }
+            	      },
+					  {
+            	        "title": "entityDirection",
+            	        "type": "action",
+            	        "name": "entityDirection",
+            	        "parameters": {
+					      "target": {"key": "target"}
+				        },
+						"output": {
+						  "direction": "targetDirection"
+						}
+            	      },
+					  {
+                        "title": "vecMultiply",
+                        "type": "action",
+                        "name": "vecMultiply",
+                        "parameters": {
+                          "first": {"value": [25, 0]},
+                          "second": {"value": ["targetDirection", 1]}
+                        },
+                        "output": {
+                          "vector": "facingVelocity"
+                        }
+                      },
+				      {
+				    	"title": "controlApproachVelocity",
+				    	"type": "action",
+				    	"name": "controlApproachVelocity",
+				    	"parameters": {
+				    	  "velocity": {"key": "facingVelocity"},
+					      "force": {"value": 500}
+				    	}
+				      },
+				      {
+				    	"title": "velocity",
+				    	"type": "action",
+				    	"name": "velocity",
+				    	"parameters": {},
+				    	"output": {
+				    	  "velocity": "currentVelocity"
+				    	}
+				      },
+				      {
+					    "title": "offsetPosition",
+				    	"type": "action",
+				    	"name": "offsetPosition",
+				    	"parameters": {
+				    	  "offset": {"key": "currentVelocity"}
+				    	},
+				    	"output": {
+				    	  "position": "toVelocity"
+				    	}
+				      },
+				      {
+				    	"title": "distance",
+				    	"type": "action",
+				    	"name": "distance",
+				    	"parameters": {
+				    	  "to": {"key": "toVelocity"}
+				    	},
+				    	"output": {
+				    	  "magnitude": "toVelocityMagnitude"
+				    	}
+				      },
+				      {
+				    	"title": "multiply",
+					    "type": "action",
+					    "name": "multiply",
+					    "parameters": {
+					      "factor": {"key": "<angleFactor>"},
+					      "number": {"key": "toVelocityMagnitude"}
+					    },
+					    "output": {
+					      "result": "rotateAngle"
+					    }
+				      },
+				      {
+				    	"title": "multiply",
+					    "type": "action",
+					    "name": "multiply",
+					    "parameters": {
+					      "factor": {"key": "targetDirection"},
+					      "number": {"key": "rotateAngle"}
+					    },
+					    "output": {
+					      "result": "rotateAngle"
+					    }
+				      },
+				      {
+            	        "title": "rotateTransformationGroup",
+            	        "type": "action",
+            	        "name": "rotateTransformationGroup",
+            	        "parameters": {
+				          "angle": {"key": "rotateAngle"},
+					      "transformationGroup": {"value": "body"}
+				        }
+            	      },
+				      {
+            	        "title": "timer",
+            	        "type": "action",
+            	        "name": "timer",
+            	        "parameters": {
+				          "time": {"value": 0.01}
+				        }
+            	      }
+					]
+				  },
+                  {
+                    "title": "dynamic",
+                    "type": "composite",
+                    "name": "dynamic",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "onGround",
+                        "type": "action",
+                        "name": "onGround",
+                        "parameters": {}
+                      },
+                      {
+                        "title": "runner",
+                        "type": "action",
+                        "name": "runner",
+                        "parameters": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+			]
+		  }
+		]
+	  },
+	  {
+		"title": "repeater",
 		"type": "decorator",
 		"name": "repeater",
 		"parameters": {
-		  "maxLoops": {"value": 15}
+		  "maxLoops": {"value": 20}
 		},
 		"child": {
 		  "title": "sequence",
@@ -57,25 +394,17 @@
                 "number": "explodeY"
               }
             },
-		    {
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, 0]},
-    	        "offset": {"value": ["explodeX", "explodeY"]},
-    	        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}, {"action": "loop", "count": 3, "body": [{"action": "item", "name": "ancientfragment", "count": 1}]}]}},
-    	        "projectileType": {"value": "orbitalup"}
-    	      }
-    	    },
 			{
-			  "title": "timer",
-			  "type": "action",
-			  "name": "timer",
-			  "parameters": {
-			    "time": {"value": 0.2}
-			  }
-			}
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [0, 0]},
+    		    "offset": {"value": ["explodeX", "explodeY"]},
+    		    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}]}},
+    		    "projectileType": {"value": "orbitalup"}
+    		  }
+    	    }
 		  ]
 		}
 	  }

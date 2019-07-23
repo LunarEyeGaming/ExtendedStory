@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":119,
+ "tilecount":120,
  "tileheight":82,
  "tileproperties":
     {
@@ -177,6 +177,13 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"healthrelicchestlock_es",
+         "tilesetDirection":"right"
+        },
+     "119":
+        {
+         "imagePositionX":"-20",
+         "imagePositionY":"0",
+         "object":"healthrelicteleporter_es",
          "tilesetDirection":"right"
         },
      "12":
@@ -975,6 +982,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "119":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "12":
         {
          "\/\/description":"string",
@@ -1741,6 +1755,12 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthrelicchestlock.png",
          "imageheight":16,
          "imagewidth":16
+        },
+     "119":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/healthrelicteleporter.png",
+         "imageheight":64,
+         "imagewidth":40
         },
      "12":
         {

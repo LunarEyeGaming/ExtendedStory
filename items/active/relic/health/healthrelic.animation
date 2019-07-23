@@ -1,122 +1,93 @@
 {
   "animatedParts" : {
     "stateTypes" : {
-      "gun" : {
+      "hold" : {
         "default" : "idle",
         "states" : {
-          "idle" : {},
+		  "invisible" : {},
+          "idle" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+			"mode" : "loop"
+		  },
+          "disappear" : {
+		    "frames" : 3,
+			"cycle" : 0.3,
+			"mode" : "transition",
+			"transition" : "invisible"
+		  }
+        }
+      },
+	  "charge" : {
+        "default" : "inactive",
+        "states" : {
+		  "inactive" : {},
           "windup" : {
-		    "frames" : 1,
-			"cycle" : 1,
-			"mode" : "loop"
+		    "frames" : 8,
+			"cycle" : 1.0,
+			"mode" : "transition",
+			"transition" : "charged"
 		  },
-		  "active" : {
-		    "frames" : 1,
-			"cycle" : 1,
-			"mode" : "loop"
-		  },
-		  "winddown" : {
-		    "frames" : 1,
-			"cycle" : 1,
-			"mode" : "loop"
+		  "charged" : {},
+          "winddown" : {
+		    "frames" : 2,
+			"cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "inactive"
 		  }
         }
       }
     },
 
     "parts" : {
-      "gun" : {
+      "hold" : {
         "properties" : {
           "zLevel" : 0,
           "centered" : true,
-          "offset" : [0.75, 0],
-          "transformationGroups" : ["weapon"]
+          "offset" : [0, 0],
+          "transformationGroups" : ["weapon"],
+          "fullbright" : true
         },
 
         "partStates" : {
-          "gun" : {
+          "hold" : {
             "idle" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
-            "windup" : {
+            "disappear" : {
               "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "active" : {
-              "properties" : {
-                "image" : "<partImage>:active.<frame>"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
+                "image" : "<partImage>:disappear.<frame>"
               }
             }
           }
         }
       },
-      "gunfullbright" : {
+      "charge" : {
         "properties" : {
           "zLevel" : 1,
-          "fullbright" : true,
-		  "anchorPart" : "gun"
+          "centered" : true,
+          "offset" : [-2, 3],
+          "transformationGroups" : ["weapon"],
+          "fullbright" : true
         },
 
         "partStates" : {
           "gun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
             "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup.<frame>"
               }
             },
-            "active" : {
+            "charged" : {
               "properties" : {
-                "image" : "<partImage>:active.<frame>"
+                "image" : "<partImage>:charged"
               }
             },
             "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
-              }
-            }
-          }
-        }
-      },
-      "burnout" : {
-        "properties" : {
-          "zLevel" : 1,
-          "fullbright" : true,
-		  "anchorPart" : "gun"
-        },
-
-        "partStates" : {
-          "gun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:<burnOutLevel>.idle"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:<burnOutLevel>.windup.<frame>"
-              }
-            },
-            "active" : {
-              "properties" : {
-                "image" : "<partImage>:<burnOutLevel>.active.<frame>"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:<burnOutLevel>.winddown.<frame>"
               }
             }
           }
@@ -135,46 +106,29 @@
     "burnOutLevel" : ""
   },
   "particleEmitters" : {
-    "burnedOut" : {
+    "spellCharge" : {
 	  "active" : false,
-	  "offsetRegion" : [0.75, 0.5, -0.75, -0.5],
+	  "offsetRegion" : [-3, 2, -1, 4],
 	  "emissionRate" : 5,
 	  "particles" : [
 	    {
-		  "particle" : "rocketbarrelpuff"
-		}
-	  ]
-	},
-	"beamCollision" : {
-      "active" : false,
-      "transformationGroups" : ["muzzle", "beamEnd"],
-      "emissionRate" : 30,
-      "particles" : [
-        {
           "particle" : {
             "type" : "animated",
-            "animation" : "/animations/plasmapoof/plasmapoof.animation",
+            "animation" : "/animations/healthrelicparticle_es/healthrelicparticle_es.animation",
             "position" : [0, 0],
             "initialVelocity" : [0, 0.0],
             "finalVelocity" : [0, 0.0],
             "approach" : [0, 10],
             "fade" : 1,
-            "destructionAction" : "shrink",
-            "destructionTime" : 0.3,
-            "size" : 0.6,
+            "size" : 1,
             "timeToLive" : 0.5,
             "fullbright" : true,
-            "layer" : "front",
-			"light" : [59, 217, 215],
-            "collidesForeground" : false,
-            "variance" : {
-              "position" : [0.0, 0.0],
-              "initialVelocity" : [0, 0]
-            }
+            "layer" : "middle",
+            "collidesForeground" : false
           }
         }
-      ]
-    }
+	  ]
+	}
   },
 
   "sounds" : {

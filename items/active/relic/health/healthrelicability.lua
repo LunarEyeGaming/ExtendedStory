@@ -5,11 +5,8 @@ HealthRelicAbility = WeaponAbility:new()
 
 function HealthRelicAbility:init()
   self.weapon:setStance(self.stances.idle)
-
-  self.burnOutTimer = config.getParameter("burnOutTimer", 0)
-  self.burnedOutTimer = config.getParameter("burnedOutTimer", 0)
   self.chargeTimer = self.chargeTime or 0
-  self.fireTimer = self.fireTime or 0
+  self.cooldownTimer = self.cooldownTime or 0
   self.impactSoundTimer = 0
   if self.damageConfig then
     self.damageConfig.baseDamage = (self.baseDps or 0) * (self.fireTime or 0)
@@ -25,22 +22,11 @@ function HealthRelicAbility:init()
       self.weapon:setStance(self.stances.idle)
 	end
   end
-  usingItem = false
 end
 
 function HealthRelicAbility:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
   burnOutProgress = self.burnOutTimer / self.burnOutTime
-  if self.burnedOutTimer == 0 then
-    animator.setGlobalTag("burnOutLevel", math.floor(burnOutProgress * self.burnOutStages))
-	animator.setParticleEmitterActive("burnedOut", false)
-  else
-    animator.setGlobalTag("burnOutLevel", math.floor((self.burnedOutTimer / self.burnOutCooldown) * self.burnOutStages))
-	animator.setParticleEmitterActive("burnedOut", true)
-  end
-  if not usingItem then
-    self.burnOutTimer = math.max(0, self.burnOutTimer - self.dt * self.burnOutRecharge)
-  end
   activeItem.setInstanceValue("self.burnOutTimer", self.burnOutTimer)
   self.burnedOutTimer = math.max(0, self.burnedOutTimer - self.dt)
   activeItem.setInstanceValue("burnedOutTimer", self.burnedOutTimer)
@@ -60,6 +46,8 @@ function HealthRelicAbility:update(dt, fireMode, shiftHeld)
 end
 
 function HealthRelicAbility:charge()
+  self.weapon:setStance(self.stances.precharge)
+  util.wait(self.stances.precharge.duration)
   self.weapon:setStance(self.stances.charge)
   usingItem = true
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
@@ -115,17 +103,11 @@ function HealthRelicAbility:projFire()
       self:setState(self.winddown)
       return
     end
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnedOutTimer = self.burnOutCooldown
-      animator.playSound("burnout")
-	  break
-	end
 	if self.fireTimer == 0 then
       self:fireProjectiles()
       animator.playSound("fire")
 	  self.fireTimer = self.fireTime or 0
       self.weapon:setStance(self.stances.fire)
-      self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.fireTime)
     end
     if self.stances.fire.duration then
       util.wait(self.stances.fire.duration)
@@ -141,12 +123,6 @@ function HealthRelicAbility:beamFire()
 
   local wasColliding = false
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
-    self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.dt)
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnedOutTimer = self.burnOutCooldown
-      animator.playSound("burnout")
-	  break
-	end
     local beamStart = self:firePosition()
     local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), self.beamLength))
     local beamLength = self.beamLength
@@ -187,7 +163,6 @@ function HealthRelicAbility:beamFire()
 end
 
 function HealthRelicAbility:winddown()
-  usingItem = false
   self.weapon:setStance(self.stances.winddown)
   self.weapon:updateAim()
   self.chargeTimer = self.chargeTime or 0
@@ -219,19 +194,6 @@ function HealthRelicAbility:fireProjectiles()
     )
 end
 
-function HealthRelicAbility:drillDamageTiles()
-  local pos = mcontroller.position()
-  local tipPosition = vec2.add(pos, activeItem.handPosition(animator.partPoint("drillenergy", "drillTip")))
-  for i = 1, 3 do
-    local sourcePosition = vec2.add(pos, activeItem.handPosition(animator.partPoint("drillenergy", "drillSource" .. i)))
-    local drillTiles = world.collisionBlocksAlongLine(sourcePosition, tipPosition, nil, self.damageTileDepth)
-    if #drillTiles > 0 then
-      world.damageTiles(drillTiles, "foreground", sourcePosition, "blockish", self.tileDamage, 99)
-      world.damageTiles(drillTiles, "background", sourcePosition, "blockish", self.tileDamage, 99)
-    end
-  end
-end
-
 function HealthRelicAbility:drawBeam(endPos, didCollide)
   local newChain = copy(self.chain)
   newChain.startOffset = self.weapon.muzzleOffset
@@ -242,14 +204,6 @@ function HealthRelicAbility:drawBeam(endPos, didCollide)
   end
 
   activeItem.setScriptedAnimationParameter("chains", {newChain})
-end
-
-function HealthRelicAbility:BeamFire_reset()
-  self.weapon:setDamage()
-  activeItem.setScriptedAnimationParameter("chains", {})
-  animator.setParticleEmitterActive("beamCollision", false)
-  animator.stopAllSounds("fireStart")
-  animator.stopAllSounds("fireLoop")
 end
 
 function HealthRelicAbility:firePosition()
@@ -263,5 +217,4 @@ function HealthRelicAbility:aimVector(angleAdjust)
 end
 
 function HealthRelicAbility:uninit()
-  self:reset()
 end

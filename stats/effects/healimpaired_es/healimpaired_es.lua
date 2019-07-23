@@ -1,6 +1,7 @@
 function init()
   self.blockedStatusEffects = config.getParameter("blockedStatusEffects")
   effect.addStatModifierGroup({{stat = "healingStatusImmunity", amount = 1}})
+  script.setUpdateDelta(1)
 end
 
 function update(dt)

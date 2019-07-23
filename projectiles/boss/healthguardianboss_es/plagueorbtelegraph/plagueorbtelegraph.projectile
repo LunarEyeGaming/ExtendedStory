@@ -1,0 +1,33 @@
+{
+  "projectileName" : "plagueorbtelegraph",
+  "physics" : "hover",
+  "image" : "plagueorbtelegraph.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "power" : 0,
+  "piercing" : true,
+  "damagePoly" : [ [0, 0] ],
+  "timeToLive" : 4,
+  "fullbright" : true,
+  "emitters" : [],
+  "damageKind" : "nodamage",
+  "teamType" : "enemy",
+  "damageRepeatTimeout" : 0,
+  "lightColor" : [0, 0, 0],
+  "actionOnReap" : [
+	{
+	  "action" : "loop",
+	  "count" : 1,
+	  "body" : [
+	    {
+	      "action" : "projectile",
+	      "type" : "plagueorb",
+	      "angle" : 0,
+	      "fuzzAngle" : 0
+	    }
+	  ]
+	}
+  ]
+}

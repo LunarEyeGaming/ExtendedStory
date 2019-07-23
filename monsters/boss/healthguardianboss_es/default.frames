@@ -1,0 +1,21 @@
+{
+  "frameGrid" : {
+    "size" : [90, 90],
+    "dimensions" : [14, 3],
+    "names" : [
+      ["blue.idle.1", "blue.idle.2", "blue.idle.3", "blue.idle.4", null, "blue.transitionin.1", "blue.transitionin.2", "blue.transitionin.3", "blue.transitionin.4"],
+      ["green.idle.1", "green.idle.2", "green.idle.3", "green.idle.4", null, "green.transitionin.1", "green.transitionin.2", "green.transitionin.3", "green.transitionin.4", null, "green.attack.1", "green.attack.2", "green.attack.3", "green.attack.4"],
+      ["red.idle.1", "red.idle.2", "red.idle.3", "red.idle.4", null, "red.transitionin.1", "red.transitionin.2", "red.transitionin.3", "red.transitionin.4", null, "red.attack.1", "red.attack.2", "red.attack.3", "red.attack.4"]
+    ]
+  },
+  "aliases" : {
+    "blue.transitionout.1" : "blue.transitionin.4", "green.transitionout.1" : "green.transitionin.4", "red.transitionout.1" : "red.transitionin.4",
+    "blue.transitionout.2" : "blue.transitionin.3", "green.transitionout.2" : "green.transitionin.3", "red.transitionout.2" : "red.transitionin.3",
+    "blue.transitionout.3" : "blue.transitionin.2", "green.transitionout.3" : "green.transitionin.2", "red.transitionout.3" : "red.transitionin.2",
+    "blue.transitionout.4" : "blue.transitionin.1", "green.transitionout.4" : "green.transitionin.1", "red.transitionout.4" : "red.transitionin.1",
+
+    "green.attack.5" : "green.attack.3", "red.attack.5" : "red.attack.3",
+    "green.attack.6" : "green.attack.2", "red.attack.6" : "red.attack.2",
+    "green.attack.7" : "green.attack.1", "red.attack.7" : "red.attack.1"
+  }
+}

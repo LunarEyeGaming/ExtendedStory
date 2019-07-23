@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "The tome teaches the user how to cast a basic healing spell.",
   "shortdescription" : "Novice Healing Spell",
-  "tooltipKind" : "base",
+  "tooltipKind" : "staff",
   "category" : "Relic Item ^#ffffff;| ^red;1",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged"],
@@ -19,93 +19,6 @@
 	"charge" : "spellcharge.png"
   },
   "animationCustom" : {
-    "animatedParts" : {
-	  "stateTypes" : {
-	    "energy" : {
-          "default" : "idle",
-          "states" : {
-            "idle" : {},
-            "windup1" : {
-              "frames" : 3,
-              "cycle" : 0.25,
-              "mode" : "loop",
-			  "properties" : {
-                "immediateSound" : "/sfx/melee/drillspear_windup3.ogg"
-			  }
-            },
-            "windup2" : {
-              "frames" : 3,
-              "cycle" : 0.25,
-              "mode" : "loop",
-			  "properties" : {
-                "immediateSound" : "/sfx/melee/drillspear_winddown2.ogg"
-			  }
-            },
-            "active1" : {},
-            "active2" : {
-              "frames" : 3,
-              "cycle" : 0.18,
-              "mode" : "loop",
-              "properties" : {
-                "persistentSound" : "/sfx/melee/drillspear_active_loop2.ogg",
-                "persistentSoundStopTime" : 0.1
-              }
-            }
-          }
-        },
-		"fire" : {
-		  "states" : {
-		    "windup" : {
-			  "frames" : 2,
-			  "cycle" : 0.2
-			}
-		  }
-		}
-	  },
-	  "parts" : {
-	    "drillenergy" : {
-          "properties" : {
-            "zLevel" : 2,
-            "centered" : true,
-            "fullbright" : true,
-            "offset" : [2.0, 0.0],
-            "transformationGroups" : ["weapon"],
-
-            "drillTip" : [1, 0],
-            "drillSource1" : [-1.0, -1.5],
-            "drillSource2" : [0.0, 0.0],
-            "drillSource3" : [-1.0, 1.5]
-          },
-
-          "partStates" : {
-            "energy" : {
-              "windup1" : {
-                "properties" : {
-                  "image" : "drillenergy.png:windup1.<frame>"
-                }
-              },
-              "windup2" : {
-                "properties" : {
-                  "image" : "drillenergy.png:windup2.<frame>"
-                }
-              },
-              "active1" : {
-                "properties" : {
-                  "image" : "drillenergy.png:active.<frame>",
-                  "damageArea" : [[-2.5, 0.0625], [-0.75, -1.375], [1.25, 0.0625], [-0.75, 1.25]]
-                }
-              },
-              "active2" : {
-                "properties" : {
-                  "image" : "drillenergy.png:active.<frame>",
-                  "damageArea" : [[-2.5, 0.0625], [-0.75, -1.375], [1.25, 0.0625], [-0.75, 1.25]]
-                }
-              }
-            }
-          }
-        }
-	  }
-	},
 	"sounds" : {
 	  "burnout" : [ "/sfx/projectiles/flame_burning.ogg" ]
 	}
@@ -124,6 +37,7 @@
     "class" : "HealthRelicAbility",
 	
 	"chargeTime" : 1.0,
+	
 
     "stances" : {
       "idle" : {
@@ -135,12 +49,12 @@
         "allowFlip" : true,
 		
 		"animationStates" : {
-		  "gun" : "idle",
-		  "energy" : "idle"
+		  "hold" : "idle",
+		  "charge" : "inactive"
 		}
       },
 	  "precharge" : {
-	    "duration" : 1.0,
+	    "duration" : 0.75,
         "armRotation" : -45,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -149,8 +63,7 @@
         "allowFlip" : true,
 		
 		"animationStates" : {
-		  "gun" : "idle",
-		  "energy" : "idle"
+		  "hold" : "disappear"
 		}
       },
       "charge" : {
@@ -160,27 +73,15 @@
 
         "allowRotate" : false,
         "allowFlip" : true,
+		"frontArmFrame" : "fall.4",
+		"backArmFrame" : "fall.4",
 		
 		"animationStates" : {
-		  "gun" : "windup",
-		  "energy" : "windup1"
+		  "charge" : "windup"
 		}
       },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
-
-        "allowRotate" : true,
-        "allowFlip" : true,
-		
-		"animationStates" : {
-		  "energy" : "active2"
-		}
-      },
-      "winddown" : {
-        "duration" : 0.25,
+      "discharge" : {
+        "duration" : 0.5,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -189,11 +90,11 @@
         "allowFlip" : false,
 		
 		"animationStates" : {
-		  "energy" : "windup2"
+		  "charge" : "discharge"
 		}
       }
     }
   },
 
-  "builder" : "/items/buildscripts/buildminingrelic.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

@@ -443,8 +443,8 @@
   "annihilatordroneTreasure" : [
     [1, {
       "pool" : [
-        {"weight" : 0.95, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.05, "item" : "annihilatorteleporter"}
+        {"weight" : 0.75, "pool" : "largeRobotTreasure"},
+        {"weight" : 0.25, "item" : "annihilatorteleporter"}
       ],
       "poolRounds" : [
         [0.20, 0],

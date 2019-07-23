@@ -180,63 +180,21 @@
               }
             },
             {
-              "title": "offsetPosition",
-              "type": "action",
-              "name": "offsetPosition",
-              "parameters": {
-                "offset": {"value": [-16, 0]},
-                "position": {"key": "spawn"}
-              },
-              "output": {
-                "position": "leftProjectile"
-              }
-            },
-            {
               "title": "spawnFloorProjectiles",
               "type": "action",
               "name": "spawnFloorProjectiles",
               "parameters": {
-                "areaWidth": {"value": 32},
-                "center": {"key": "leftProjectile"},
+                "areaWidth": {"value": 64},
+                "center": {"key": "spawn"},
                 "power": {"value": 10},
-                "projectileCount": {"value": 4},
+                "projectileCount": {"value": 7},
 				"projectileConfig": {"value": {}},
                 "projectileType": {"value": "flamecolumntele"},
                 "segmentWidth": {"value": 8},
                 "spawnHeight": {"value": 0.625}
               },
               "output": {
-                "projectiles": "columnProjectiles"
-              }
-            },
-            {
-              "title": "offsetPosition",
-              "type": "action",
-              "name": "offsetPosition",
-              "parameters": {
-                "offset": {"value": [16, 0]},
-                "position": {"key": "spawn"}
-              },
-              "output": {
-                "position": "rightProjectile"
-              }
-            },
-            {
-              "title": "spawnFloorProjectiles",
-              "type": "action",
-              "name": "spawnFloorProjectiles",
-              "parameters": {
-                "areaWidth": {"value": 32},
-                "center": {"key": "rightProjectile"},
-                "power": {"value": 10},
-                "projectileCount": {"value": 3},
-                "projectileType": {"value": "flamecolumntele"},
-				"projectileConfig": {"value": {}},
-                "segmentWidth": {"value": 8},
-                "spawnHeight": {"value": 0.625}
-              },
-              "output": {
-                "projectiles": "columnProjectiles"
+                "projectiles": "lavaProjectiles"
               }
             },
             {

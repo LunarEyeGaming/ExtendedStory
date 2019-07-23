@@ -1,0 +1,34 @@
+{
+  "projectileName" : "plaguewave",
+  "image" : "plaguewave.png",
+  "animationCycle" : 0.8,
+  "physics" : "illusion",
+  "movementSettings" : {
+    "collisionPoly" : [ [4, 1], [4, -1], [-4, -1], [-4, 1] ]
+  },
+  "frameNumber" : 8,
+  "pointLight" : false,
+  "lightColor" : [0, 0, 0],
+  "fullbright" : true,
+  "speed" : 50,
+  "power" : 0.0,
+  "bounces" : -1,
+  "timeToLive" : 2.3,
+  "orientationLocked" : true,
+
+  "piercing" : true,
+  "flippable" : true,
+  "damagePoly" : [ [-32, -8], [-32, 2], [32, 2], [32, -8] ],
+  "damageKind" : "fire",
+  "statusEffects" : [
+    "healthplague_es", 
+	"healimpaired_es"
+  ],
+
+  "scripts" : [ "plaguewave.lua" ],
+  "scriptDelta" : 1,
+
+  "clientEntityMode" : "ClientSlaveOnly",
+
+  "persistentAudio" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg"
+}

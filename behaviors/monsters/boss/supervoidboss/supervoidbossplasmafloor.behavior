@@ -57,55 +57,14 @@
               }
             },
             {
-              "title": "offsetPosition",
-              "type": "action",
-              "name": "offsetPosition",
-              "parameters": {
-                "offset": {"value": [-16, 0]},
-                "position": {"key": "spawn"}
-              },
-              "output": {
-                "position": "leftProjectile"
-              }
-            },
-            {
               "title": "spawnFloorProjectiles",
               "type": "action",
               "name": "spawnFloorProjectiles",
               "parameters": {
-                "areaWidth": {"value": 32},
+                "areaWidth": {"value": 64},
                 "center": {"key": "leftProjectile"},
                 "power": {"value": 35},
-                "projectileCount": {"value": 4},
-                "projectileType": {"value": "supervoidgaptele"},
-                "segmentWidth": {"value": 8},
-                "spawnHeight": {"value": 0.625}
-              },
-              "output": {
-                "projectiles": "lavaProjectiles"
-              }
-            },
-            {
-              "title": "offsetPosition",
-              "type": "action",
-              "name": "offsetPosition",
-              "parameters": {
-                "offset": {"value": [16, 0]},
-                "position": {"key": "spawn"}
-              },
-              "output": {
-                "position": "rightProjectile"
-              }
-            },
-            {
-              "title": "spawnFloorProjectiles",
-              "type": "action",
-              "name": "spawnFloorProjectiles",
-              "parameters": {
-                "areaWidth": {"value": 32},
-                "center": {"key": "rightProjectile"},
-                "power": {"value": 35},
-                "projectileCount": {"value": 3},
+                "projectileCount": {"value": 7},
                 "projectileType": {"value": "supervoidgaptele"},
                 "segmentWidth": {"value": 8},
                 "spawnHeight": {"value": 0.625}
