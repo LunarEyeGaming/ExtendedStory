@@ -38,15 +38,7 @@
   ],
 
   "damagePoly" : [],
-  "damageKind" : "megadamage",
-  "periodicActions" : [
-    {
-      "time" : 0.5,
-      "repeat" : true,
-      "action" : "config",
-      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
-    }
-  ],
+  "damageKind" : "plasma",
 
   "speed" : 0,
   "timeToLive" : 1.5,

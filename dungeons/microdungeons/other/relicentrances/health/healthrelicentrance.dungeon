@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "name" : "healthrelicentrance",
+    "species" : "generic",
+    "rules" : [
+    ],
+
+    "anchor" : [ "healthrelicentrance" ],
+
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "healthrelicentrance",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "healthrelicentrance.json" ]
+    }
+  ]
+}

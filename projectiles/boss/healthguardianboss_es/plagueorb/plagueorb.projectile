@@ -6,14 +6,14 @@
   "speed" : 0,
   "animationCycle" : 0.4,
   "frameNumber" : 4,
-  "power" : 100,
+  "power" : 0,
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "timeToLive" : 9,
   "fullbright" : true,
   "emitters" : [],
   "damageKind" : "plasma",
   "teamType" : "enemy",
-  "damageRepeatTimeout" : 0,
-  "statusEffects" : [ "healimpaired_es", "healthplague_es" ],
+  "damageRepeatTimeout" : 1,
+  "statusEffects" : [ "healthplague_es", "plagueorbdamage_es" ],
   "lightColor" : [0, 0, 0]
 }

@@ -134,6 +134,39 @@
                           "name": "sequence",
                           "parameters": {},
                           "children": [
+                            {
+                              "title": "healthguardianboss_es-changecolor",
+                              "type": "module",
+                              "name": "healthguardianboss_es-changecolor",
+                              "parameters": {
+                                "color": {"value": "red"}
+                              }
+                            },
+							{
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "attack"},
+                                "type": {"value": "body"}
+                              }
+                            },
+							{
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.90}
+                              }
+                            },
+							{
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "plasmaAttack"}
+                              }
+                            },
 							{
                               "title": "healthguardianboss_es-plagueorbattack",
                               "type": "module",
@@ -177,6 +210,21 @@
                               }
                             },
 							{
+                              "title": "inverter",
+                              "type": "decorator",
+                              "name": "inverter",
+                              "parameters": {},
+                              "child": {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.5},
+                                  "resource": {"value": "health"}
+                                }
+                              }
+                            },
+							{
                               "title": "healthguardianboss_es-changecolor",
                               "type": "module",
                               "name": "healthguardianboss_es-changecolor",
@@ -207,21 +255,6 @@
                               "name": "playSound",
                               "parameters": {
                                 "sound": {"value": "plasmaAttack"}
-                              }
-                            },
-							{
-                              "title": "inverter",
-                              "type": "decorator",
-                              "name": "inverter",
-                              "parameters": {},
-                              "child": {
-                                "title": "resourcePercentage",
-                                "type": "action",
-                                "name": "resourcePercentage",
-                                "parameters": {
-                                  "percentage": {"value": 0.5},
-                                  "resource": {"value": "health"}
-                                }
                               }
                             },
 							{
@@ -313,7 +346,7 @@
     		        "parameters": {
     		          "aimVector": {"value": [1, 0]},
     		          "offset": {"value": [0, 0]},
-    		          "projectileConfig": {"value": {}},
+    		          "projectileConfig": {"value": {"power": 0}},
     		          "projectileType": {"value": "instanthealthorb2_es"},
 				      "position": {"key": "targetPos"}
     		        }

@@ -10,46 +10,56 @@
     {
       "action" : "config",
       "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
-    },
-	{
+    }
+  ],
+  "actionOnTimeout" : [
+    {
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 0
+	  "angleAdjust" : 0,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 45
+	  "angleAdjust" : 45,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 90
+	  "angleAdjust" : 90,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 135
+	  "angleAdjust" : 135,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 180
+	  "angleAdjust" : 180,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 225
+	  "angleAdjust" : 225,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 270
+	  "angleAdjust" : 270,
+      "inheritDamageFactor" : 0.1
 	},
 	{
 	  "action" : "projectile",
 	  "type" : "rottentooth",
-	  "angleAdjust" : 315
+	  "angleAdjust" : 315,
+      "inheritDamageFactor" : 0.1
 	}
   ],
   "actionOnCollide" : [

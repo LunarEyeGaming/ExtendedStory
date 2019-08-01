@@ -15,7 +15,7 @@
           },
           "activating" : {
             "frames" : 5,
-            "cycle" : 0.4,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "active",
             "properties" : {
@@ -36,7 +36,7 @@
           },
           "deactivating" : {
             "frames" : 5,
-            "cycle" : 0.4,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "inactive",
             "properties" : {

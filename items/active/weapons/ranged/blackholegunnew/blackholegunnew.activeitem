@@ -3,8 +3,8 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A gun that shoots singularities! ^green;Gravity ammo!^reset; \nPrimary:        Sticky Black Hole\nSpecial:    Bouncing Black Hole",
-  "shortdescription" : "^#a600cc;Black Hole Cannon^reset;",
+  "description" : "A shoulder cannon that manipulates spacetime by launching dark matter.",
+  "shortdescription" : "^#a600cc;Dark Matter Launcher^reset;",
   "tooltipKind" : "base",
   "category" : "Unique Weapon ^white;| ^#a600cc;Mythical",
   "twoHanded" : true,
@@ -14,7 +14,7 @@
   "critChance" : 50,
   "critBonus" : 50,
 
-  "inventoryIcon" : "blackholegunnew.png:empty",
+  "inventoryIcon" : "blackholegunnewicon.png",
 
   "animation" : "blackholegunnew.animation",
   "animationParts" : {
@@ -27,7 +27,7 @@
 	  "altFire" : ["/sfx/gun/plasmacannon_fire.ogg"]
 	}
   },
-  "muzzleOffset" : [2.3, 1.4],
+  "muzzleOffset" : [2.3, 0.5],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -52,7 +52,7 @@
         "time" : 2.5,
         "energyCost" : 70,
         "cooldown" : 0.25,
-        "projectileType" : "chargedsingularity",
+        "projectileType" : "darkmattershot_es",
         "projectileCount" : 1,
         "spreadAngle" : 1,
         "projectileParameters" : {},
@@ -76,10 +76,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-		"animationStates" : {
-		  "blackhole" : "delaycharge"
-		}
+        "allowFlip" : true
       },
       "fire" : {
         "duration" : 0,
@@ -88,10 +85,7 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-		"animationStates" : {
-		  "blackhole" : "off"
-		}
+        "allowFlip" : false
       },
       "cooldown" : {
         "duration" : 0.25,
@@ -147,10 +141,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-		"animationStates" : {
-		  "blackhole" : "delaycharge"
-		}
+        "allowFlip" : true
       },
       "fire" : {
         "duration" : 0,
@@ -159,10 +150,7 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-		"animationStates" : {
-		  "blackhole" : "off"
-		}
+        "allowFlip" : false
       },
       "cooldown" : {
         "duration" : 0.25,

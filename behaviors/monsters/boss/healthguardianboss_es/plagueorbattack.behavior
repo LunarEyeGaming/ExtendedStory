@@ -65,7 +65,8 @@
     	        "aimVector": {"value": [0, 0]},
     	        "offset": {"value": ["explodeX", "explodeY"]},
     	        "projectileConfig": {"value": {"timeToLive": 1, "power" : 0, "periodicActions": []}},
-    	        "projectileType": {"value": "plagueorbtelegraph"}
+    	        "projectileType": {"value": "plagueorbtelegraph"},
+                "scalePower": {"value": true}
     	      }
     	    }
 		  ]

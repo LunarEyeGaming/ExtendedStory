@@ -1357,7 +1357,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"detectArea\" : [ [-33, -14], [32, 11] ], \"detectDuration\" : 15, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
+                     "parameters":"{ \"detectArea\" : [ [-33, -14], [32, 11] ], \"detectDuration\" : 8, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
                     },
                  "propertytypes":
                     {
@@ -1669,7 +1669,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"detectArea\" : [ [-34, -14], [35, 11] ], \"detectDuration\" : 15, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
+                     "parameters":"{ \"detectArea\" : [ [-34, -14], [35, 11] ], \"detectDuration\" : 8, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
                     },
                  "propertytypes":
                     {
@@ -1898,7 +1898,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"detectArea\" : [ [-36, -25], [37, 30] ], \"detectDuration\" : 15, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
+                     "parameters":"{ \"detectArea\" : [ [-36, -25], [37, 30] ], \"detectDuration\" : 8, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
                     },
                  "propertytypes":
                     {
@@ -2399,7 +2399,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"detectArea\" : [ [-43, -23], [43, 29] ], \"detectDuration\" : 15, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
+                     "parameters":"{ \"detectArea\" : [ [-43, -23], [43, 29] ], \"detectDuration\" : 8, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
                     },
                  "propertytypes":
                     {
@@ -8071,11 +8071,11 @@
          "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }, 
         {
-         "firstgid":8883,
+         "firstgid":8913,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/techmanagement.json"
         }, 
         {
-         "firstgid":8884,
+         "firstgid":8914,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/breakable.json"
         }],
  "tilewidth":8,

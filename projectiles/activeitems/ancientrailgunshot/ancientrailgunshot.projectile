@@ -14,5 +14,7 @@
   "fullbright" : true,
   "animationLoops" : false,
   "emitters" : [ ],
+  "piercing" : true,
+  "damagePoly" : [ [30, 3.5], [-30, 3.5], [-30, -3.5], [30, -3.5] ],
   "damageKind" : "plasmabullet"
 }

@@ -26,6 +26,7 @@
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "bronzebar"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "emptycell"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "excavitecrystal"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "vitaliumcrystal"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ioncell"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "meteoricsteelbar"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "noviumore"} },
@@ -127,14 +128,5 @@
   // ***SCRIPTS***
   {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/destroyerspawn.lua"},
   {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/tilestatusdetection_es.lua"},
-  {
-    "op": "add",
-    "path": "/sphereDeactivator",
-    "value": {
-      "scripts": [
-        "/scripts/spheredeactivatordetection.lua"
-      ],
-      "scriptDelta": 1
-    }
-  }
+  {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/passiveitems_es.lua"}
 ]

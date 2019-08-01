@@ -29,7 +29,7 @@
 			"transition" : "charged"
 		  },
 		  "charged" : {},
-          "winddown" : {
+          "discharge" : {
 		    "frames" : 2,
 			"cycle" : 0.5,
 			"mode" : "transition",
@@ -68,13 +68,13 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "offset" : [-2, 3],
+          "offset" : [-1, 3],
           "transformationGroups" : ["weapon"],
           "fullbright" : true
         },
 
         "partStates" : {
-          "gun" : {
+          "charge" : {
             "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup.<frame>"
@@ -85,7 +85,7 @@
                 "image" : "<partImage>:charged"
               }
             },
-            "winddown" : {
+            "discharge" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
               }
@@ -108,7 +108,7 @@
   "particleEmitters" : {
     "spellCharge" : {
 	  "active" : false,
-	  "offsetRegion" : [-3, 2, -1, 4],
+	  "offsetRegion" : [-2, 2, 0, 4],
 	  "emissionRate" : 5,
 	  "particles" : [
 	    {
@@ -132,8 +132,9 @@
   },
 
   "sounds" : {
-    "reload" : ["/sfx/gun/reload/rocket_reload_clip1.ogg"],
-    "fire" : ["/sfx/gun/rocket2.ogg"],
-	"burnout" : []
+    "precharge" : ["/sfx/spell/healthrelic_precharge.ogg"],
+    "charge" : ["/sfx/spell/healthrelic_charge.ogg"],
+    "fire" : ["/sfx/spell/healthrelic_fire.ogg"],
+    "discharge" : [ ]
   }
 }

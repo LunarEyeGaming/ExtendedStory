@@ -1,0 +1,72 @@
+{
+  "projectileName" : "healthrelicprojectileancient_es",
+  "physics" : "hover",
+  "image" : "healthrelicprojectileancient.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "power" : 0,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "timeToLive" : 6,
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/healthrelicparticle_es/healthrelicparticleancient_es.animation",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0.0],
+        "finalVelocity" : [0, 0.0],
+        "approach" : [0, 10],
+        "fade" : 1,
+        "size" : 1,
+        "timeToLive" : 0.5,
+        "fullbright" : true,
+        "layer" : "middle",
+        "collidesForeground" : false,
+        "variance" : {
+          "position" : [1, 1]
+        }
+      }
+    }
+  ],
+  "actionOnReap" : [
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/statuseffects/powerup.ogg" ]
+	},
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "animation" : "/animations/healthrelicparticle_es/healthrelicparticleancient_es.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 5],
+            "approach" : [2, 10],
+            "fade" : 1,
+            "size" : 1,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "middle",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [5, 5]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "emitters" : [ ],
+  "damageKind" : "nodamage",
+  "statusEffects" : [ "healthrelicstatus1_es" ],
+  "lightColor" : [51, 10, 74]
+}

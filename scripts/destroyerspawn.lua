@@ -20,7 +20,7 @@ function update(dt)
   }
   threatLevel = world.threatLevel()
   if status.resourceMax("health") >= 160 then
-    if world.timeOfDay() <= 0.1 and world.timeOfDay() >= 0 then
+    if world.timeOfDay() <= 0.1 and world.timeOfDay() >= 0 then  -- If the world is experiencing sunrise
 	  worldTimeRange = true
 	else
 	  worldTimeRange = false

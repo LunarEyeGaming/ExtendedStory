@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "healthrelic4_es", "count" : 1 },
+    { "item" : "essence", "count" : 125 },
+    { "item" : "ancientfragment", "count" : 30 }
+  ],
+  "output" : { "item" : "healthrelicancient_es", "count" : 1 },
+  "groups" : [ "ancientforge", "weapons", "all" ]
+}

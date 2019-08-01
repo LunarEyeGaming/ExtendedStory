@@ -1,0 +1,12 @@
+{
+  "name" : "healthrelicstatus2_es",
+
+  "effectConfig" : {
+    "healAmount" : 8
+  },
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "healthrelicstatus_es.lua"
+  ]
+}

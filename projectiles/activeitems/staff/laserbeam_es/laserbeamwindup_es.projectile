@@ -14,7 +14,8 @@
   "actionOnReap" : [
     {
 	  "action" : "projectile",
-	  "type" : "laserbeam_es"
+	  "type" : "laserbeam_es",
+	  "inheritDamageFactor" : 1
 	}
   ],
   "timeToLive" : 0.49,

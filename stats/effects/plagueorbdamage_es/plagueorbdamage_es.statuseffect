@@ -1,0 +1,11 @@
+{
+  "name" : "plagueorbdamage_es",
+  "blockingStat" : "healthplagueStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.01,
+
+  "scripts" : [
+    "plagueorbdamage_es.lua"
+  ]
+}

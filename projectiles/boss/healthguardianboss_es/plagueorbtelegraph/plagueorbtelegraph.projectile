@@ -14,6 +14,7 @@
   "emitters" : [],
   "damageKind" : "nodamage",
   "teamType" : "enemy",
+  "onlyHitTerrain" : true,
   "damageRepeatTimeout" : 0,
   "lightColor" : [0, 0, 0],
   "actionOnReap" : [
@@ -24,8 +25,7 @@
 	    {
 	      "action" : "projectile",
 	      "type" : "plagueorb",
-	      "angle" : 0,
-	      "fuzzAngle" : 0
+	      "inheritDamageFactor" : 1
 	    }
 	  ]
 	}

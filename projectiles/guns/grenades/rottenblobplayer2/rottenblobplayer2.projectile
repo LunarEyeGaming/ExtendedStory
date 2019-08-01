@@ -19,7 +19,8 @@
 		  "action" : "projectile",
 		  "type" : "rottenblobplayer",
 		  "angle" : 90,
-		  "fuzzAngle" : 180
+		  "fuzzAngle" : 180,
+          "inheritDamageFactor" : 0.2
 		}
 	  ]
 	}

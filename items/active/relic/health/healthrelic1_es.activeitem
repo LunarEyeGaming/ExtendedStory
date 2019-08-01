@@ -1,5 +1,5 @@
 {
-  "itemName" : "healthrelic1",
+  "itemName" : "healthrelic1_es",
   "price" : 850,
   "maxStack" : 1,
   "rarity" : "Legendary",
@@ -7,7 +7,7 @@
   "shortdescription" : "Novice Healing Spell",
   "tooltipKind" : "staff",
   "category" : "Relic Item ^#ffffff;| ^red;1",
-  "twoHanded" : false,
+  "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 3,
 
@@ -18,26 +18,25 @@
     "hold" : "spellhold.png",
 	"charge" : "spellcharge.png"
   },
-  "animationCustom" : {
-	"sounds" : {
-	  "burnout" : [ "/sfx/projectiles/flame_burning.ogg" ]
-	}
-  },
-  "muzzleOffset" : [1.875, 0.125],
+  "animationCustom" : {},
 
-  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
-
-  "handGrip" : "wrap",
+  "scripts" : ["/items/active/weapons/spell/spell.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "name" : "Cheese the boss using healing",
+    "name" : "Health Orbs",
     "scripts" : ["/items/active/relic/health/healthrelicability.lua"],
     "class" : "HealthRelicAbility",
 	
-	"chargeTime" : 1.0,
-	
+	"chargeTime" : 1.5,
+    "cooldownTime" : 3.0,
+    "energyCost" : 100,
+    
+	"projectileOffsetRegion" : [-30, -10, 30, 10],
+    "projectileType" : "healthrelicprojectile_es",
+    "projectileParameters" : {"damageTeam" : {"type" : "enemy"}},
+    "projectileCount" : 5,
 
     "stances" : {
       "idle" : {
@@ -46,12 +45,7 @@
         "twoHanded" : false,
 
         "allowRotate" : false,
-        "allowFlip" : true,
-		
-		"animationStates" : {
-		  "hold" : "idle",
-		  "charge" : "inactive"
-		}
+        "allowFlip" : true
       },
 	  "precharge" : {
 	    "duration" : 0.75,
@@ -60,41 +54,30 @@
         "twoHanded" : false,
 
         "allowRotate" : false,
-        "allowFlip" : true,
-		
-		"animationStates" : {
-		  "hold" : "disappear"
-		}
+        "allowFlip" : true
       },
       "charge" : {
         "armRotation" : 0,
         "weaponRotation" : 0,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : true,
 		"frontArmFrame" : "fall.4",
-		"backArmFrame" : "fall.4",
-		
-		"animationStates" : {
-		  "charge" : "windup"
-		}
+		"backArmFrame" : "fall.4"
       },
       "discharge" : {
         "duration" : 0.5,
         "armRotation" : 0,
         "weaponRotation" : 0,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-		
-		"animationStates" : {
-		  "charge" : "discharge"
-		}
+        "allowFlip" : false
       }
     }
   },
+  "learnBlueprintsOnPickup" : ["healthrelic2_es"],
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

@@ -8,7 +8,7 @@
   },
   "frameNumber" : 8,
   "pointLight" : false,
-  "lightColor" : [0, 0, 0],
+  "lightColor" : [0, 50, 0],
   "fullbright" : true,
   "speed" : 50,
   "power" : 0.0,
@@ -18,8 +18,8 @@
 
   "piercing" : true,
   "flippable" : true,
-  "damagePoly" : [ [-32, -8], [-32, 2], [32, 2], [32, -8] ],
-  "damageKind" : "fire",
+  "damagePoly" : [ [-32, -16], [-32, 16], [32, 16], [32, -16] ],
+  "damageKind" : "plasma",
   "statusEffects" : [
     "healthplague_es", 
 	"healimpaired_es"
@@ -30,5 +30,5 @@
 
   "clientEntityMode" : "ClientSlaveOnly",
 
-  "persistentAudio" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg"
+  "persistentAudio" : "/sfx/projectiles/guidedrocket_poison_loop.ogg"
 }

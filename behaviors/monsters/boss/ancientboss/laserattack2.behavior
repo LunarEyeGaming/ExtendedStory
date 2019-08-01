@@ -1,0 +1,311 @@
+{
+  "name": "ancientboss-laserattack2",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+	  /*{
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "windup4"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.2}
+        }
+      },*/
+	  {
+		"title": "ancientboss-teleportto",
+		"type": "module",
+		"name": "ancientboss-teleportto",
+		"parameters": {
+		  "teleportPosition": {"key": "spawn"},
+		  "teleportDelay": {"value": 1.5}
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "lowersweepstart"}
+		},
+		"output": {
+		  "entity": "lowersweepstart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "lowersweepend"}
+		},
+		"output": {
+		  "entity": "lowersweepend"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "uppersweepstart"}
+		},
+		"output": {
+		  "entity": "uppersweepstart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "uppersweepend"}
+		},
+		"output": {
+		  "entity": "uppersweepend"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "minionstart"}
+		},
+		"output": {
+		  "entity": "minionstart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "minionend"}
+		},
+		"output": {
+		  "entity": "minionend"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "uppersweepstart"}
+		},
+		"output": {
+		  "position": "position1"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "uppersweepend"}
+		},
+		"output": {
+		  "position": "position2"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "lowersweepstart"}
+		},
+		"output": {
+		  "position": "position3"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "lowersweepend"}
+		},
+		"output": {
+		  "position": "position4"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "minionstart"}
+		},
+		"output": {
+		  "position": "position5"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "minionend"}
+		},
+		"output": {
+		  "position": "position6"
+		}
+	  },
+	  {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 10}
+        },
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+			  "title": "randomize",
+			  "type": "composite",
+			  "name": "randomize",
+			  "parameters": {},
+			  "children": [
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position1"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    },
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position2"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    },
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position3"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    },
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position4"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    },
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position5"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    },
+				{
+    		      "title": "spawnTargetedProjectile",
+    		      "type": "action",
+    		      "name": "spawnTargetedProjectile",
+    		      "parameters": {
+    		        "aimVector": {"value": [1, 0]},
+    		        "offset": {"value": [0, 0]},
+					"position": {"key": "position6"},
+    		        "parameters": {"value": {}},
+    		        "projectileType": {"value": "supernovabeam"},
+                    "scalePower": {"value": true},
+                    "target": {"key": "target"},
+                    "trackSource": {"value": false}
+    		      }
+    		    }
+			  ]
+			},
+			{
+			  "title": "timer",
+			  "type": "action",
+			  "name": "timer",
+			  "parameters": {
+			    "time": {"value": 1.0}
+			  }
+			}
+		  ]
+		}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

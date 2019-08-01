@@ -50,7 +50,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [-3, -0.625], [-3, 4], [3, 4], [3, -0.625] ],
+      "collisionPoly" : [ [3, -3.625], [3, 4], [0.125, 4], [0.125, -3.625] ],
 
       "mass" : 4.0,
       "walkSpeed" : 5,

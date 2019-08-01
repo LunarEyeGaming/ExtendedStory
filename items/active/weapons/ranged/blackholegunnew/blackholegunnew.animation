@@ -6,7 +6,7 @@
         "states" : {
           "off" : {},
           "charge" : {
-            "frames" : 9,
+            "frames" : 12,
             "cycle" : 2.5,
             "mode" : "transition",
             "transition" : "fullcharge",
@@ -16,51 +16,28 @@
             }
           },
           "fullcharge" : {
-            "frames" : 3,
-            "cycle" : 0.9,
+            "frames" : 2,
+            "cycle" : 0.25,
             "mode" : "loop",
             "properties" : {
               "persistentSound" : "/sfx/gun/blackholegun_charged.ogg"
             }
           },
           "fire" : {
-            "frames" : 3,
-            "cycle" : 0.2,
+            "frames" : 7,
+            "cycle" : 0.4,
             "mode" : "transition",
             "transition" : "off"
           }
         }
-      },
-	  "blackhole" : {
-	    "default" : "off",
-		"states" : {
-		  "off" : {},
-		  "delaycharge" : {
-		    "frames" : 1,
-			"cycle" : 2.0,
-			"mode" : "transition",
-			"transition" : "charging"
-		  },
-		  "charging" : {
-		    "frames" : 4,
-			"cycle" : 0.5,
-			"mode" : "transition",
-			"transition" : "charged"
-		  },
-		  "charged" : {
-		    "frames" : 1,
-			"cycle" : 1.0,
-			"mode" : "loop"
-		  }
-		}
-	  }
+      }
     },
 
     "parts" : {
       "gun" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.1, 0.75],
+          "offset" : [0.75, 0.75],
           "transformationGroups" : ["weapon"]
         },
 
@@ -92,7 +69,7 @@
       "gunfullbright" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.1, 0.75],
+          "offset" : [0.75, 0.75],
           "transformationGroups" : ["weapon"],
           "zLevel" : 1,
           "fullbright" : true
@@ -122,40 +99,6 @@
             }
           }
         }
-      },
-      "blackhole" : {
-        "properties" : {
-          "centered" : true,
-          "offset" : [3.2, 0.5],
-          "transformationGroups" : ["weapon"],
-          "zLevel" : 1,
-          "fullbright" : true
-        },
-
-        "partStates" : {
-          "blackhole" : {
-            "off" : {
-              "properties" : {
-                "image" : ""
-              }
-            },
-            "delaycharge" : {
-              "properties" : {
-                "image" : ""
-              }
-            },
-            "charging" : {
-              "properties" : {
-                "image" : "<partImage>:charging.<frame>"
-              }
-            },
-            "charged" : {
-              "properties" : {
-                "image" : "<partImage>:charged"
-              }
-            }
-          }
-        }
       }
     }
   },
@@ -166,7 +109,7 @@
   },
 
   "sounds" : {
-    "fire" : ["/music/silence.ogg"],
+    "fire" : [ ],
 	"fire2" : ["/sfx/gun/blackholegun_fire.ogg"]
   }
 }

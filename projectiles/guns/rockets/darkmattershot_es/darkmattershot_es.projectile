@@ -1,0 +1,41 @@
+{
+  "projectileName" : "darkmattershot_es",
+  "image" : "darkmattershot.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "lightColor" : [46, 0, 18],
+  "physics" : "laser",
+  "fullbright" : true,
+  "speed" : 75,
+  "power" : 10.0,
+  "damageKind" : "plasma",
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+        "position" : [0, 0],
+        "layer" : "front",
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 0],
+        "timeToLive" : 1.5,
+        "destructionTime" : 0.0,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "initialVelocity" : [4, 4],
+		  "position" : [1, 1]
+		}
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosion_es.config"
+	}
+  ]
+}

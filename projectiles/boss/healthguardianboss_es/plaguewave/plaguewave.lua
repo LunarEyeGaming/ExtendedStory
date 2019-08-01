@@ -7,7 +7,7 @@ function init()
   self.goal = vec2.add(self.spawn, {0, 60})
 
   self.speed = 35
-  self.sinkSpeed = 2
+  self.sinkSpeed = 0
 
   message.setHandler("sink", function(_, _)
     self.sinking = true

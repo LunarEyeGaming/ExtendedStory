@@ -149,7 +149,7 @@
   "fireTimeVariance" : 0.0, // variation in rate of fire
   "projectile" : "healthgiverwindup_es", // name of projectile (required)
   "projectileConfig" : { // extra configuration overrides for projectile
-    "damageTeam" : { "type" : "indiscriminate" }
+    "damageTeam" : { "type" : "enemy" }
   },
   
   "health" : 5,

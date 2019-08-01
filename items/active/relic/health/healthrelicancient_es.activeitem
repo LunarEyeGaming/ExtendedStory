@@ -1,0 +1,163 @@
+{
+  "itemName" : "healthrelicancient_es",
+  "price" : 850,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "The tome teaches the user how to cast a powerful healing spell.",
+  "shortdescription" : "^magenta;Galactic Healing Spell^reset;",
+  "tooltipKind" : "staff",
+  "category" : "Relic Item ^#ffffff;| ^green;4 ^magenta;Galactic",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 7,
+
+  "inventoryIcon" : "healthicon.png:5",
+
+  "animation" : "healthrelic.animation",
+  "animationParts" : {
+    "hold" : "spellholdancient.png",
+	"charge" : "spellchargeancient.png"
+  },
+  "animationCustom" : {
+    "particleEmitters" : {
+      "spellCharge" : {
+	    "active" : false,
+	    "offsetRegion" : [-2, 2, 0, 4],
+	    "emissionRate" : 5,
+	    "particles" : [
+	      {
+            "particle" : {
+              "type" : "animated",
+              "animation" : "/animations/healthrelicparticle_es/healthrelicparticleancient_es.animation",
+              "position" : [0, 0],
+              "initialVelocity" : [0, 0.0],
+              "finalVelocity" : [0, 0.0],
+              "approach" : [0, 10],
+              "fade" : 1,
+              "size" : 1,
+              "timeToLive" : 0.5,
+              "fullbright" : true,
+              "layer" : "middle",
+              "collidesForeground" : false
+            }
+          }
+	    ]
+	  }
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/spell/spell.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Health Orbs",
+    "scripts" : ["/items/active/relic/health/healthrelicability.lua"],
+    "class" : "HealthRelicAbility",
+	
+	"chargeTime" : 1.0,
+    "cooldownTime" : 2.2,
+    "energyCost" : 80,
+    "noInitialCooldown" : true,
+    
+	"projectileOffsetRegion" : [-10, -10, 10, 10],
+    "projectileType" : "healthrelicprojectileancient_es",
+    "projectileParameters" : {"damageTeam" : {"type" : "enemy"}, "statusEffects" : [ "healthrelicstatus5_es" ]},
+    "projectileCount" : 11,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -15,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+	  "precharge" : {
+	    "duration" : 0.75,
+        "armRotation" : -45,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		"frontArmFrame" : "fall.4",
+		"backArmFrame" : "fall.4"
+      },
+      "discharge" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  
+  "altAbility" : {
+    "name" : "Healing Zone",
+    "scripts" : ["/items/active/relic/health/healthrelicability.lua"],
+    "class" : "HealthRelicAbility",
+	
+	"chargeTime" : 1.5,
+    "cooldownTime" : 3.0,
+    "energyCost" : 100,
+    
+	"projectileOffsetRegion" : [0, 0, 0, 0],
+    "projectileType" : "healingzone",
+    "projectileParameters" : {},
+    "projectileCount" : 1,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -15,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+	  "precharge" : {
+	    "duration" : 0.75,
+        "armRotation" : -45,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		"frontArmFrame" : "fall.4",
+		"backArmFrame" : "fall.4"
+      },
+      "discharge" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
