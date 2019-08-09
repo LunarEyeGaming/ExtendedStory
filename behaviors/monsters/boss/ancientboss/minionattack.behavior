@@ -19,6 +19,14 @@
     "name": "sequence",
     "parameters": {},
     "children": [
+      {
+        "title": "stopAllSounds",
+        "type": "action",
+        "name": "stopAllSounds",
+        "parameters": {
+		  "sound": {"value": "stunned"}
+		}
+      },
 	  {
         "title": "playSound",
         "type": "action",

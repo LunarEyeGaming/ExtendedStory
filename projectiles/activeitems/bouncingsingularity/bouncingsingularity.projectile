@@ -33,8 +33,8 @@
   ],
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-      "type" : "explosivesingularity"
+	  "action" : "config",
+      "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosion_es.config"
 	}
   ],
 

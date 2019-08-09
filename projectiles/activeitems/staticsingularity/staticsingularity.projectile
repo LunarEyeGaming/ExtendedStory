@@ -11,7 +11,7 @@
   "lightColor" : [93, 10, 47],
   "frameNumber" : 4,
   "power" : 50,
-  "damageRepeatTimeout" : 0.1,
+  "damageRepeatTimeout" : 0.3,
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
   "damageKind" : "abyss",
@@ -27,7 +27,7 @@
 	},
 	{
 	  "action" : "config",
-	  "file" : "/projectiles/explosions/astralexplosion/astralexplosion.config"
+	  "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosionlarge_es.config"
 	}
   ],
 
