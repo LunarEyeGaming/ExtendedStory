@@ -62,7 +62,7 @@
               "name": "spawnFloorProjectiles",
               "parameters": {
                 "areaWidth": {"value": 64},
-                "center": {"key": "leftProjectile"},
+                "center": {"key": "spawn"},
                 "power": {"value": 35},
                 "projectileCount": {"value": 7},
                 "projectileType": {"value": "supervoidgaptele"},
