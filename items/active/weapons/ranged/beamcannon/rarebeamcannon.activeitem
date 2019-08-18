@@ -32,8 +32,8 @@
     "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
     "class" : "BeamFire",
 
-    "fireTime" : 0.1,
-    "baseDps" : 10,
+    "fireTime" : [0.1, 0.2],
+    "baseDps" : [15, 20],
     "energyUsage" : 20,
 
     "damageConfig" : {

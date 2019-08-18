@@ -16,13 +16,13 @@
   "actionOnReap" : [
     {
 	  "action" : "projectile",
-	  "type" : "invisibleprojectile",
+	  "type" : "orbitalup",
 	  "angle" : 0,
 	  "offset" : [ 0.0, 1.0 ],
 	  "config" : {
 	    "onlyHitTerrain" : true,
 		"timeToLive" : 0,
-		"speed" : 90,
+		"speed" : 0,
 		"actionOnReap" : [
 		  {
 		    "action" : "config",

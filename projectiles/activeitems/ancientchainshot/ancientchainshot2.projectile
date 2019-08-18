@@ -1,6 +1,6 @@
 {
-  "projectileName" : "ancientchainshot",
-  "physics" : "laser",
+  "projectileName" : "ancientchainshot2",
+  "physics" : "illusion",
   "damageKindImage" : "icon.png",
   "image" : "ancientchainshot.png",
   "animationCycle" : 0.5,
@@ -33,6 +33,5 @@
   "damageKind" : "plasma",
   "piercing" : true,
 
-  "scripts" : [ "/scripts/projectiles/chainbullet.lua" ],
-  "chainProjectile" : "ancientchainshot2"
+  "scripts" : [ "/scripts/projectiles/chainbullet.lua" ]
 }

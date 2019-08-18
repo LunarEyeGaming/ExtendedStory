@@ -1,0 +1,28 @@
+A world overrun by a massive colony of mushrooms. Some are bioluminescent, others spew gas.
+Friendly Name: "Fungal Colony"
+Variants:
+    *Glowing
+    *Foggy
+    *Elemental:
+        *Incinerated (Fire)
+        *Frigid (Ice)
+        *Toxic (Poison)
+        *Abyssal (Abyss)
+        *Electrified (Electric)
+        *Radiant (Radiance)
+    *Explosive(mushrooms explode, all enemies are explosive-based)
+    *Tall and Proud (contains mushroom trees)
+    *Normal and bland (default variant)
+    *Infectious (players may only stay on the planet for a certain amount of time unless they have immunity to it)
+Weather:
+    *Clear
+    *Sporing Season(spore clouds frequently form); Passive
+        *Spore Rain - spores float to the ground
+        *Sprouting - enemies may spawn from rapidly-growing eggs; Hostile
+    *Glowing Rain (Glowing Variant only)
+    *Meteor Shower (Incinerated Variant only)
+    *Poison Rain (Toxic Variant only)
+    *Abyssal Burst (Abyssal Variant only; floor vents explode, causing clouds of dark gas to linger in the air); Hostile
+    *Lightning (Electric Variant only; extremely violent lightning storms happen, but no rain); Hostile
+    *Tranquil Light (Radiance Variant only; the environment is peaceful, players receive passive regeneration and a mobility boost, glowing particles slowly drift to the ground); Passive
+    *Ember (Incinerated Variant only)
