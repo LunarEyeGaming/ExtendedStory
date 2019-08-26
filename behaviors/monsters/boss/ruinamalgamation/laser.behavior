@@ -3,7 +3,8 @@
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
-    "/scripts/actions/time.lua"
+    "/scripts/actions/time.lua",
+    "/scripts/actions/math.lua"
   ],
   "parameters": {
     "fireStart": 0.45
@@ -14,7 +15,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
@@ -32,14 +33,22 @@
         }
       },
 	  {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+		  "direction": {"value": 1}
+		}
+      },
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -48,31 +57,62 @@
           "type": {"value": "eye1"}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 3}
-		}
+          "time": {"value": 2.5}
+        }
       },
-	  {
+      {
+        "title": "entityDirection",
+        "type": "action",
+        "name": "entityDirection",
+        "parameters": {
+          "target": {"key": "target"}
+        },
+        "output": {
+          "direction": "targetDirection"
+        }
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"value": 0.01},
+          "number": {"key": "targetDirection"}
+        },
+        "output": {
+          "result": "rotateAngle"
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "windup"},
           "type": {"value": "beam"}
-		}
+        }
       },
-	  {
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 300},
-		  "untilSuccess": {"value": false}
-		},
+          "maxLoops": {"value": 300},
+          "untilSuccess": {"value": false}
+        },
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -84,63 +124,63 @@
               "type": "action",
               "name": "rotateTransformationGroup",
               "parameters": {
-			    "angle": {"value": 0.01},
-		        "rotationCenter": {"value": [-1.3, 3.5]},
-				"transformationGroup": {"value": "beam"}
-			  }
+                "angle": {"key": "rotateAngle"},
+                "rotationCenter": {"value": [-1.3, 3.5]},
+                "transformationGroup": {"value": "beam"}
+              }
             },
-			{
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-			    "time": {"value": 0.01}
-			  }
+                "time": {"value": 0.01}
+              }
             }
           ]
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "beam"}
-		}
+        }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.25}
-		}
+          "time": {"value": 0.25}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye1"}
-		}
+        }
       },
-	  {
+      {
         "title": "resetTransformationGroup",
         "type": "action",
         "name": "resetTransformationGroup",
         "parameters": {
-		  "transformationGroup": {"value": "beam"}
-		}
+          "transformationGroup": {"value": "beam"}
+        }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 1.5}
-		}
+          "time": {"value": 1.5}
+        }
       }
     ]
   }

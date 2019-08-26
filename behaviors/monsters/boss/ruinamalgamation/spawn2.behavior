@@ -1,5 +1,5 @@
 {
-  "name": "ruinamalgamation-bullethell",
+  "name": "ruinamalgamation-spawn2",
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
@@ -14,7 +14,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
@@ -32,14 +32,6 @@
         }
       },
 	  {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-		  "time": {"value": 0.5}
-		}
-      },
-	  {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
@@ -48,20 +40,27 @@
 		}
       },
 	  {
-        "title": "setAnimationState",
+        "title": "timer",
         "type": "action",
-        "name": "setAnimationState",
+        "name": "timer",
         "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "eye3"}
-        }
+		  "time": {"value": 0.5}
+		}
+      },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+		  "sound": {"value": "roar"}
+		}
       },
 	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 1.5}
+		  "time": {"value": 3.0}
 		}
       },
 	  {
@@ -69,7 +68,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 10},
+		  "maxLoops": {"value": 25},
 		  "untilSuccess": {"value": false}
 		},
         "child": {
@@ -84,33 +83,64 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [1, 0]},
-                "offset": {"value": [-5, -2]},
+                "offset": {"value": [0, 0]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {
 				  "timeToLive": 0,
 				  "damageType": "NoDamage",
-                  "speed": 0,
-                  "power": 30,
 				  "actionOnReap": [
 				    {
-					  "action": "loop",
-					  "count": 10,
-					  "body": [
-					    {
-						  "action": "projectile",
-						  "type": "ruinseedenergy_es",
-                          "inheritDamageFactor": 1,
-						  "fuzzAngle": 180
-						}
-					  ]
-					},
-					{
-					  "action": "sound",
-					  "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
+					  "action": "projectile",
+					  "type": "invisibleprojectile",
+					  "offsetRange": [-50, -10, 50, 10],
+					  "config": {
+					    "timeToLive": 0,
+						"damageType": "NoDamage",
+						"actionOnReap": [
+						  {
+                            "action": "option",
+                            "options": [
+                              {
+						        "action": "spawnmonster",
+							    "type": "tentaclegnat",
+							    "level": 5
+						      },
+                              {
+						        "action": "spawnmonster",
+							    "type": "tentaclebomb",
+							    "level": 5
+						      },
+                              {
+						        "action": "spawnmonster",
+							    "type": "tentacleghost",
+							    "level": 5
+						      }
+                            ]
+                          },
+						  {
+						    "action": "loop",
+							"count": 20,
+							"body": [
+							  {
+							    "action": "particle",
+								"specification": "tentaclegooshard"
+							  },
+							  {
+							    "action": "particle",
+								"specification": "tentacleshard"
+							  }
+							]
+						  },
+						  {
+						    "action": "sound",
+							"options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
+						  }
+						]
+					  }
 					}
 				  ]
 				}},
-                "projectileType": {"value": "orbitalup"},
+                "projectileType": {"value": "invisibleprojectile"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
@@ -121,28 +151,11 @@
               "type": "action",
               "name": "timer",
               "parameters": {
-		        "time": {"value": 1.0}
+		        "time": {"value": 0.1}
 		      }
             }
           ]
         }
-      },
-	  {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-		  "time": {"value": 0.5}
-		}
-      },
-	  {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "winddown"},
-          "type": {"value": "eye3"}
-		}
       }
     ]
   }

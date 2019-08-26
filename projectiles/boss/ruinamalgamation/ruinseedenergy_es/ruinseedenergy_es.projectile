@@ -1,0 +1,32 @@
+{
+  "projectileName" : "ruinseedenergy_es",
+  "image" : "ruinseedenergy.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "speed" : 50,
+  "physics" : "hover",
+  "timeToLive" : 1,
+  
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "targetingprojectile",
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "actionOnReap" : [
+          {
+            "action" : "projectile",
+            "type" : "ruinseedenergy2_es",
+            "inheritDamageFactor" : 1
+          }
+        ]
+      }
+    }
+  ],
+
+  "lightColor" : [125, 25, 0],
+  "fullbright" : true,
+  
+  "power" : 50,
+  "damageKind" : "plasma"
+}

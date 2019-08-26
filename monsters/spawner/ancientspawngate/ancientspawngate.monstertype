@@ -192,7 +192,8 @@
 
       "airFriction" : 4,
       "airForce" : 40,
-      "flySpeed" : 3
+      "flySpeed" : 3,
+      "physicsEffectCategories" : ["stationarymonster"]
     },
 
     "bodyMaterialKind" : "stone",

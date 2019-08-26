@@ -69,7 +69,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 1},
+		  "maxLoops": {"value": 5},
 		  "untilSuccess": {"value": false}
 		},
         "child": {
@@ -83,7 +83,7 @@
               "type": "action",
               "name": "spawnProjectile",
               "parameters": {
-                "aimVector": {"value": [1, 0]},
+                "aimVector": {"value": [0, 1]},
                 "offset": {"value": [1, -4]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {}},
@@ -92,6 +92,14 @@
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
+            },
+	        {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+		        "time": {"value": 0.1}
+		      }
             }
           ]
         }
@@ -111,6 +119,65 @@
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye4"}
+		}
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+		  "maxLoops": {"value": 10},
+		  "untilSuccess": {"value": false}
+		},
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+	        {
+              "title": "entityPosition",
+              "type": "action",
+              "name": "entityPosition",
+              "parameters": {
+		        "entity": {"key": "target"}
+		      },
+		      "output": {
+		        "position": "targetPos"
+	      	  }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, 1]},
+                "offset": {"value": [0, 0]},
+                "position": {"key": "targetPos"},
+                "projectileConfig": {"value": {"power": 30}},
+                "projectileType": {"value": "ruinseedsupervoidspawner_es"},
+                "scalePower": {"value": true},
+                "sourceEntity": {"key": "self"},
+                "trackSource": {"value": false}
+              }
+            },
+	        {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+		        "time": {"value": 1.0}
+		      }
+            }
+          ]
+        }
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+		  "time": {"value": 0.5}
 		}
       }
     ]

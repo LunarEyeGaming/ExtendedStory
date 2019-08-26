@@ -202,268 +202,267 @@
                         }
                       },
                       {
-                        "title": "repeater",
-                        "type": "decorator",
-                        "name": "repeater",
-                        "parameters": {
-                          "maxLoops": {"value": -1},
-                          "untilSuccess": {"value": false}
-                        },
-                        "child": {
-                          "title": "sequence",
-                          "type": "composite",
-                          "name": "sequence",
-                          "parameters": {},
-                          "children": [
-                            {
-                              "title": "parallel",
-                              "type": "composite",
-                              "name": "parallel",
-                              "parameters": {
-							    "fail": {"value": 1},
-                                "success": {"value": -1}
-							  },
-							  "children": [
-							    {
-								  "title": "repeater",
-								  "type": "decorator",
-								  "name": "repeater",
-								  "parameters": {
-								    "maxLoops": {"value": -1},
-									"untilSuccess": {"value": false}
-								  },
-								  "child": {
-								    "title": "sequence",
-									"type": "composite",
-									"name": "sequence",
-									"parameters": {},
-									"children": [
-									  {
-									    "title": "ruinamalgamation-slam",
-										"type": "module",
-										"name": "ruinamalgamation-slam",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-laser",
-										"type": "module",
-										"name": "ruinamalgamation-laser",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-spawn",
-										"type": "module",
-										"name": "ruinamalgamation-spawn",
-										"parameters": {}
-									  },
-									  {
-                                        "title": "inverter",
-                                        "type": "decorator",
-                                        "name": "inverter",
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.5},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "ruinamalgamation-slam",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-slam",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
                                         "parameters": {},
-                                        "child": {
-                                          "title": "resourcePercentage",
-                                          "type": "action",
-                                          "name": "resourcePercentage",
-                                          "parameters": {
-                                            "percentage": {"value": 0.8},
-                                            "resource": {"value": "health"}
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "title": "succeeder",
-                                        "type": "decorator",
-                                        "name": "succeeder",
-                                        "parameters": {},
-                                        "child": {
-                                          "title": "sequence",
-                                          "type": "composite",
-                                          "name": "sequence",
-                                          "parameters": {},
-                                          "children": [
-                                            {
+                                        "children": [
+                                          {
+                                            "title": "ruinamalgamation-laser",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-laser",
+                                            "parameters": {}
+                                          },
+                                          {
+                                            "title": "inverter",
+                                            "type": "decorator",
+                                            "name": "inverter",
+                                            "parameters": {},
+                                            "child": {
                                               "title": "resourcePercentage",
                                               "type": "action",
                                               "name": "resourcePercentage",
                                               "parameters": {
-                                                "percentage": {"value": 0.61},
-                                                "resource": {"value": "health"}
+                                                "resource": {"value": "health"},
+                                                "percentage": {"value": 0.8}
                                               }
-                                            },
-					                        {
-                                              "title": "setAnimationState",
-                                              "type": "action",
-                                              "name": "setAnimationState",
-                                              "parameters": {
-                                                "state": {"value": "stage2"},
-                                                "type": {"value": "body"}
-		                                      }
                                             }
-                                          ]
-                                        }
-                                      },
-									  {
-									    "title": "ruinamalgamation-slam",
-										"type": "module",
-										"name": "ruinamalgamation-slam",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-portal",
-										"type": "module",
-										"name": "ruinamalgamation-portal",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-spawn",
-										"type": "module",
-										"name": "ruinamalgamation-spawn",
-										"parameters": {}
-									  },
-									  {
-                                        "title": "inverter",
-                                        "type": "decorator",
-                                        "name": "inverter",
-                                        "parameters": {},
-                                        "child": {
-                                          "title": "resourcePercentage",
-                                          "type": "action",
-                                          "name": "resourcePercentage",
-                                          "parameters": {
-                                            "percentage": {"value": 0.6},
-                                            "resource": {"value": "health"}
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "title": "succeeder",
-                                        "type": "decorator",
-                                        "name": "succeeder",
-                                        "parameters": {},
-                                        "child": {
-                                          "title": "sequence",
-                                          "type": "composite",
-                                          "name": "sequence",
-                                          "parameters": {},
-                                          "children": [
-                                            {
+                                          },
+                                          {
+                                            "title": "ruinamalgamation-portal",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-portal",
+                                            "parameters": {}
+                                          },
+                                          {
+                                            "title": "inverter",
+                                            "type": "decorator",
+                                            "name": "inverter",
+                                            "parameters": {},
+                                            "child": {
                                               "title": "resourcePercentage",
                                               "type": "action",
                                               "name": "resourcePercentage",
                                               "parameters": {
-                                                "percentage": {"value": 0.41},
-                                                "resource": {"value": "health"}
+                                                "resource": {"value": "health"},
+                                                "percentage": {"value": 0.6}
                                               }
-                                            },
-					                        {
-                                              "title": "setAnimationState",
-                                              "type": "action",
-                                              "name": "setAnimationState",
-                                              "parameters": {
-                                                "state": {"value": "stage3"},
-                                                "type": {"value": "body"}
-		                                      }
                                             }
-                                          ]
-                                        }
-                                      },
-									  {
-									    "title": "ruinamalgamation-slam",
-										"type": "module",
-										"name": "ruinamalgamation-slam",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-bullethell",
-										"type": "module",
-										"name": "ruinamalgamation-bullethell",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-spawn",
-										"type": "module",
-										"name": "ruinamalgamation-spawn",
-										"parameters": {}
-									  },
-									  {
-                                        "title": "inverter",
-                                        "type": "decorator",
-                                        "name": "inverter",
-                                        "parameters": {},
-                                        "child": {
-                                          "title": "resourcePercentage",
-                                          "type": "action",
-                                          "name": "resourcePercentage",
-                                          "parameters": {
-                                            "percentage": {"value": 0.4},
-                                            "resource": {"value": "health"}
+                                          },
+                                          {
+                                            "title": "ruinamalgamation-bullethell",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-bullethell",
+                                            "parameters": {}
                                           }
-                                        }
-                                      },
-                                      {
-                                        "title": "succeeder",
-                                        "type": "decorator",
-                                        "name": "succeeder",
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "title": "ruinamalgamation-spawn",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-spawn",
+                                      "parameters": {}
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "title": "ruinamalgamation-animate",
+                                "type": "module",
+                                "name": "ruinamalgamation-animate",
+                                "parameters": {}
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "ruinamalgamation-slam",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-slam",
+                                      "parameters": {
+                                        "slamNumber": {"value": 6}
+                                      }
+                                    },
+                                    {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
                                         "parameters": {},
-                                        "child": {
-                                          "title": "sequence",
-                                          "type": "composite",
-                                          "name": "sequence",
-                                          "parameters": {},
-                                          "children": [
-                                            {
+                                        "children": [
+                                          {
+                                            "title": "ruinamalgamation-laser",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-laser",
+                                            "parameters": {}
+                                          },
+                                          {
+                                            "title": "ruinamalgamation-portal",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-portal",
+                                            "parameters": {}
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "title": "ruinamalgamation-spawn2",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-spawn2",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ruinamalgamation-slam",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-slam",
+                                      "parameters": {
+                                        "slamNumber": {"value": 6}
+                                      }
+                                    },
+                                    {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
+                                        "parameters": {},
+                                        "children": [
+                                          {
+                                            "title": "ruinamalgamation-bullethell",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-bullethell",
+                                            "parameters": {}
+                                          },
+                                          {
+                                            "title": "inverter",
+                                            "type": "decorator",
+                                            "name": "inverter",
+                                            "parameters": {},
+                                            "child": {
                                               "title": "resourcePercentage",
                                               "type": "action",
                                               "name": "resourcePercentage",
                                               "parameters": {
-                                                "percentage": {"value": 0.0},
-                                                "resource": {"value": "health"}
+                                                "resource": {"value": "health"},
+                                                "percentage": {"value": 0.4}
                                               }
-                                            },
-					                        {
-                                              "title": "setAnimationState",
-                                              "type": "action",
-                                              "name": "setAnimationState",
-                                              "parameters": {
-                                                "state": {"value": "stage4"},
-                                                "type": {"value": "body"}
-		                                      }
                                             }
-                                          ]
-                                        }
-                                      },
-									  {
-									    "title": "ruinamalgamation-slam",
-										"type": "module",
-										"name": "ruinamalgamation-slam",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-voidshot",
-										"type": "module",
-										"name": "ruinamalgamation-voidshot",
-										"parameters": {}
-									  },
-									  {
-									    "title": "ruinamalgamation-spawn",
-										"type": "module",
-										"name": "ruinamalgamation-spawn",
-										"parameters": {}
-									  }
-									]
-								  }
-								},
-								{
-								  "title": "ruinamalgamation-animate",
-								  "type": "module",
-								  "name": "ruinamalgamation-animate",
-								  "parameters": {}
-								}
-							  ]
-                            }
-                          ]
-                        }
+                                          },
+                                          {
+                                            "title": "ruinamalgamation-voidshot",
+                                            "type": "module",
+                                            "name": "ruinamalgamation-voidshot",
+                                            "parameters": {}
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "title": "ruinamalgamation-spawn",
+                                      "type": "module",
+                                      "name": "ruinamalgamation-spawn",
+                                      "parameters": {}
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "title": "ruinamalgamation-animate",
+                                "type": "module",
+                                "name": "ruinamalgamation-animate",
+                                "parameters": {}
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   }

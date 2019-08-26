@@ -1,0 +1,44 @@
+{
+  "projectileName" : "ruinseedsupervoidblast_es",
+  "image" : "ruinseedsupervoidblast.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 1,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/supervoidblast/supervoidblast.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "damagePoly" : [ [-10, 10], [-10, -10], [10, -10], [10, 10] ],
+  "damageKind" : "plasma",
+
+  "speed" : 100,
+  "timeToLive" : 2.5,
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

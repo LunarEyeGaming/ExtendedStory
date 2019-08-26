@@ -1,0 +1,79 @@
+{
+  "projectileName" : "ruinseedsvkunaiswitchleft_es",
+  "physics" : "illusion",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "option",
+      "options" : [
+        {
+          "action" : "projectile",
+          "type" : "orbitalup",
+          "inheritDamageFactor" : 1,
+          "offset" : [0, -2.5],
+          "direction" : [0, 1],
+          "config" : {
+            "speed" : 10,
+            "timeToLive" : 0.5,
+            "periodicActions" : [
+              {
+                "time" : 0,
+                "repeat" : false,
+                "action" : "projectile",
+                "type" : "ruinseedsvkunaitele_es",
+                "inheritDamageFactor" : 1,
+                "direction" : [-1, 0]
+              },
+              {
+                "time" : 0.1,
+                "action" : "projectile",
+                "type" : "ruinseedsvkunaitele_es",
+                "inheritDamageFactor" : 1,
+                "direction" : [-1, 0]
+              }
+            ],
+            "actionOnReap" : []
+          }
+        },
+        {
+          "action" : "projectile",
+          "type" : "orbitalup",
+          "inheritDamageFactor" : 1,
+          "offset" : [0, 2.5],
+          "direction" : [0, -1],
+          "config" : {
+            "speed" : 10,
+            "timeToLive" : 0.5,
+            "periodicActions" : [
+              {
+                "time" : 0,
+                "repeat" : false,
+                "action" : "projectile",
+                "type" : "ruinseedsvkunaitele_es",
+                "inheritDamageFactor" : 1,
+                "direction" : [-1, 0]
+              },
+              {
+                "time" : 0.1,
+                "action" : "projectile",
+                "type" : "ruinseedsvkunaitele_es",
+                "inheritDamageFactor" : 1,
+                "direction" : [-1, 0]
+              }
+            ],
+            "actionOnReap" : []
+          }
+        }
+      ]
+    }
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

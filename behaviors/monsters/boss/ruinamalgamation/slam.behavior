@@ -24,6 +24,41 @@
       "parameters": {},
       "children": [
 	    {
+          "title": "setAnimationState",
+          "type": "action",
+          "name": "setAnimationState",
+          "parameters": {
+            "state": {"value": "off"},
+            "type": {"value": "beam"}
+	  	  }
+        },
+	    {
+          "title": "setAnimationState",
+          "type": "action",
+          "name": "setAnimationState",
+          "parameters": {
+            "state": {"value": "idle"},
+            "type": {"value": "eye1"}
+		  }
+        },
+	    {
+          "title": "setAnimationState",
+          "type": "action",
+          "name": "setAnimationState",
+          "parameters": {
+            "state": {"value": "idle"},
+            "type": {"value": "eye2"}
+		  }
+        },
+	    {
+          "title": "resetTransformationGroup",
+          "type": "action",
+          "name": "resetTransformationGroup",
+          "parameters": {
+		    "transformationGroup": {"value": "beam"}
+		  }
+        },
+	    {
           "title": "controlParameters",
           "type": "action",
           "name": "controlParameters",
@@ -68,7 +103,7 @@
 			  "type": "action",
 			  "name": "timer",
 			  "parameters": {
-			    "time": {"value": 7}
+			    "time": {"value": 5}
 			  }
 			},
 			{
@@ -150,9 +185,9 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [1, 0]},
-                "offset": {"value": [6, -1.375]},
+                "offset": {"value": [6, -6]},
                 "position": {"key": "self"},
-                "projectileConfig": {"value": {"power": 20}},
+                "projectileConfig": {"value": {"power": 30}},
                 "projectileType": {"value": "energyflame"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
@@ -165,9 +200,9 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [-1, 0]},
-                "offset": {"value": [-6, -1.375]},
+                "offset": {"value": [-6, -6]},
                 "position": {"key": "self"},
-                "projectileConfig": {"value": {"power": 20}},
+                "projectileConfig": {"value": {"power": 30}},
                 "projectileType": {"value": "energyflame"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
@@ -192,6 +227,36 @@
 		    "emitter": {"value": "slam"}
 		  }
 		},
+        {
+          "title": "spawnProjectile",
+          "type": "action",
+          "name": "spawnProjectile",
+          "parameters": {
+            "aimVector": {"value": [1, 0]},
+            "offset": {"value": [6, -1.375]},
+            "position": {"key": "self"},
+            "projectileConfig": {"value": {"power": 30}},
+            "projectileType": {"value": "ruinseedshockwave_es"},
+            "scalePower": {"value": true},
+            "sourceEntity": {"key": "self"},
+            "trackSource": {"value": false}
+          }
+        },
+        {
+          "title": "spawnProjectile",
+          "type": "action",
+          "name": "spawnProjectile",
+          "parameters": {
+            "aimVector": {"value": [-1, 0]},
+            "offset": {"value": [-6, -1.375]},
+            "position": {"key": "self"},
+            "projectileConfig": {"value": {"power": 30}},
+            "projectileType": {"value": "ruinseedshockwave_es"},
+            "scalePower": {"value": true},
+            "sourceEntity": {"key": "self"},
+            "trackSource": {"value": false}
+          }
+        },
         {
           "title": "setDamageOnTouch",
           "type": "action",

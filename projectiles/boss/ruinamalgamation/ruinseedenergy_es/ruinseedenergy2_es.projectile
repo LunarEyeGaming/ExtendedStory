@@ -1,0 +1,52 @@
+{
+  "projectileName" : "ruinseedenergy2_es",
+  "image" : "ruinseedenergy.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "speed" : 1,
+  "physics" : "laser",
+  "acceleration" : 50,
+  
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/impact_plasma.ogg" ]
+    },
+    {
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.5,
+            "color" : [230, 160, 160, 255],
+            "light" : [190, 60, 60],
+            "fullbright" : true,
+            "destructionTime" : 0.1,
+            "destructionAction" : "shrink",
+            "fade" : 0.9,
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.1,
+            "layer" : "middle",
+            "variance" : {
+              "position" : [0.25, 0.25],
+              "size" : 0.5,
+              "initialVelocity" : [13, 13],
+              "timeToLive" : 0.1
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "lightColor" : [125, 25, 0],
+  "fullbright" : true,
+  
+  "power" : 50,
+  "damageKind" : "plasma"
+}

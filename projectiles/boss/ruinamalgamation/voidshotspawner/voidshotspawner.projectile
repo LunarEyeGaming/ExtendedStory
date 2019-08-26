@@ -1,8 +1,7 @@
 {
   "projectileName" : "voidshotspawner",
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
-  "animationCycle" : 0.4,
-  "lightColor" : [150, 100, 100],
+  "animationCycle" : 1,
   "frameNumber" : 1,
   "fullbright" : true,
   "damageKindImage" : "icon.png",
@@ -10,7 +9,6 @@
   "emitters" : [ ],
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "damageKind" : "plasma",
-  "damageType" : "IgnoresDef",
   "piercing" : true,
   
   "periodicActions" : [
@@ -19,22 +17,20 @@
     {
 	  "action" : "sound",
 	  "options" : ["/sfx/gun/supervoidobliterator_fire.ogg"]
-	}
+	},
+    {
+      "action" : "projectile",
+      "type" : "ruinseedsupervoidblast_es",
+      "inheritDamageFactor" : 1,
+      "angle" : 90,
+      "fuzzAngle" : 15,
+      "config" : {
+        "actionOnReap" : []
+      }
+    }
   ],
 
   "speed" : 0,
   "timeToLive" : 0.0,
-  "scripts" : [ "voidshotspawner.lua" ],
-  "scriptDelta" : 1,
-  "renderLayer" : "Monster+50",
-
-  "explosionAction" : {
-    "action" : "actions",
-    "list" : [
-      {
-        "action" : "light",
-        "color" : "red"
-      }
-    ]
-  }
+  "renderLayer" : "Monster+50"
 }
