@@ -647,11 +647,10 @@
       "beamUpRule" : "AnywhereWithWarning",
       "dungeonWorld" : "abyssartifactdungeon",
       "disableDeathDrops" : true,
-      "seed" : 1234,
 
       "skyParameters" : {
         "spaceLevel" : 3000,
-        "ambientLightLevel" : [ 24, 28, 24 ],
+        "ambientLightLevel" : [ 0, 0, 0 ],
         "satellites" : [ {
           "pos" : [ 0.310561, 0.35497 ],
           "layers" : [ {

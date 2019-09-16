@@ -103,12 +103,24 @@
   "particleEmitters" : {
     "deathPoof" : {
       "particles" : [ ]
+    },
+    "teleportOut" : {
+      "burstCount" : 15,
+      "particles" : [
+        { "particle" : "shadowsmoke" }
+      ]
+    },
+    "teleportIn" : {
+      "burstCount" : 15,
+      "particles" : [
+        { "particle" : "shadowsmoke" }
+      ]
     }
   },
 
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-    "fire" : [ "/sfx/gun/twigun_shot1.ogg", "/sfx/gun/twigun_shot2.ogg", "/sfx/gun/twigun_shot3.ogg" ]
+    "fire" : [ "/sfx/humanoid/shadowvillager_chatter1.ogg", "/sfx/humanoid/shadowvillager_chatter2.ogg", "/sfx/humanoid/shadowvillager_chatter3.ogg" ]
   }
 }

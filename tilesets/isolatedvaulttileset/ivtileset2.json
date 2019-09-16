@@ -8,7 +8,7 @@
  "margin":0,
  "name":"ivtileset2",
  "spacing":0,
- "tilecount":120,
+ "tilecount":127,
  "tileheight":82,
  "tileproperties":
     {
@@ -194,6 +194,52 @@
          "imagePositionX":"-20",
          "imagePositionY":"0",
          "object":"poisonartifactaltar",
+         "tilesetDirection":"right"
+        },
+     "120":
+        {
+         "material":"darkobsidian"
+        },
+     "121":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnlarge1_es",
+         "tilesetDirection":"right"
+        },
+     "122":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnlarge2_es",
+         "tilesetDirection":"right"
+        },
+     "123":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnmedium1_es",
+         "tilesetDirection":"right"
+        },
+     "124":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnmedium2_es",
+         "tilesetDirection":"right"
+        },
+     "125":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnsmall1_es",
+         "tilesetDirection":"right"
+        },
+     "126":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssswarmurnsmall2_es",
          "tilesetDirection":"right"
         },
      "13":
@@ -999,6 +1045,52 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "120":
+        {
+         "material":"string"
+        },
+     "121":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "122":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "123":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "124":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "125":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "126":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "13":
         {
          "\/\/description":"string",
@@ -1767,6 +1859,48 @@
          "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/poisonartifactaltar.png",
          "imageheight":40,
          "imagewidth":32
+        },
+     "120":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/tiles\/darkobsidian.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "121":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnlarge1.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "122":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnlarge2.png",
+         "imageheight":24,
+         "imagewidth":16
+        },
+     "123":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnmedium1.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "124":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnmedium2.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "125":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnsmall1.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "126":
+        {
+         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/abyssswarmurnsmall2.png",
+         "imageheight":8,
+         "imagewidth":8
         },
      "13":
         {

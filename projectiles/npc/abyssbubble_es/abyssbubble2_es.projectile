@@ -1,0 +1,28 @@
+{
+  "projectileName" : "abyssbubble2_es",
+  "image" : "abyssbubble_es.png",
+  "physics" : "flame",
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "frameNumber" : 3,
+  "power" : 50,
+  "speed" : 25,
+  "timeToLive" : 10,
+  "bounces" : -1,
+  "piercing" : true,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "lightColor" : [27, 27, 27],
+  "damageKind" : "abyss",
+  "statusEffects" : [
+    "abysseffect"
+  ],
+  "hydrophobic" : false,
+  "orientationLocked" : true,
+  "actionOnReap" : [
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/abyssbubbleexplosion_es/abyssbubbleexplosion_es.config"
+	}
+  ]
+}
