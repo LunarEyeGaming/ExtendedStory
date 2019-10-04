@@ -95,12 +95,39 @@
     },
 
     {
-      "name" : "junction1T",
+      "name" : "junction1",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction1T" ] ]
+        [ "doNotConnectToPart", [ "junction1" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroomTEMPLATE2.json" ],
+      "def" : [ "tmx", "abyssdungeonroom2a.json" ],
+      "chance" : 2
+    },
+    {
+      "name" : "junction2",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ],
+        [ "doNotConnectToPart", [ "junction2" ] ]
+      ],
+      "def" : [ "tmx", "abyssdungeonroom2b.json" ],
+      "chance" : 2
+    },
+    {
+      "name" : "junction3",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ],
+        [ "doNotConnectToPart", [ "junction3" ] ]
+      ],
+      "def" : [ "tmx", "abyssdungeonroom2c.json" ],
+      "chance" : 2
+    },
+    {
+      "name" : "junction4",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ],
+        [ "doNotConnectToPart", [ "junction4" ] ]
+      ],
+      "def" : [ "tmx", "abyssdungeonroom2d.json" ],
       "chance" : 2
     },
 
@@ -201,21 +228,38 @@
       "chance" : 1
     },
     {
-      "name" : "corner3T",
+      "name" : "corner4a",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncornerTEMPLATE3.json" ],
+      "def" : [ "tmx", "abyssdungeoncorner4a.json" ],
       "chance" : 1
     },
     {
-      "name" : "corner4T",
+      "name" : "corner4b",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncornerTEMPLATE4.json" ],
+      "def" : [ "tmx", "abyssdungeoncorner4b.json" ],
       "chance" : 1
     },
+    {
+      "name" : "corner4c",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ]
+      ],
+      "def" : [ "tmx", "abyssdungeoncorner4c.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "corner4d",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ]
+      ],
+      "def" : [ "tmx", "abyssdungeoncorner4d.json" ],
+      "chance" : 1
+    },
+
     {
       "name" : "endtop",
       "rules" : [

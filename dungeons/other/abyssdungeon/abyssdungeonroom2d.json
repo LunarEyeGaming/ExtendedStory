@@ -1,30 +1,30 @@
 { "backgroundcolor":"#000000",
- "height":60,
+ "height":63,
  "infinite":false,
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzzERACAMALFqQSkjshCECDAB5XoZfv+siL5UvtEiKseb\/8TLy8vLy5v9w8vLy8vLy1sv3vwnXl5eXl7e7B\/eu97TfBkvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy\/v914VbAPlbc0k",
+         "data":"eJzt2TsKgDAQRdGsxdW62CzCVgQ\/iGYC7xSXpJyTsbO31rr0onUZW7WXnZ2dnZ2dnZ2dnZ2dvdY+ev7K2NnZc2JnZ8+JnZ09J3Z29pzY2dlzYmdnz4mdPd1+96\/ueM7Wfr7j\/etmeYcqc6X9bIav\/dXOp\/6\/9n31LhXmq1lGfOuV9r+cs+\/+bj+J9uS9s7Ozs7Ozsyu5DZzqtP4=",
          "encoding":"base64",
-         "height":60,
+         "height":63,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":60,
+         "width":63,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJztmEEOwyAMBPOWvrTHPqfqC1tuFULgmLUNeEfyjWx3oiRFXBfJwOtx9tD37KHv2SPxHfFuTATZfAvZfAvZfAvZfAvRvr+sZz1aFwnRvt7PAX11a2roO7cOBX11a2qy+Ur\/Z1b0tYS+ttDX+AcrUL6fzvxzim8rp5Wn\/T57D+reneQrgb70jXb19vWGvntkr9iJvrhsi07SfaMmO4peJ+m+UZMdxajTzJ57R99Vs1fsRF9c9oqd6IvLXrETfXHZnp12Oa9roemEPK\/zRtsJdV7nDd\/fPbKRnRC9rHKtes10s8hE0eum6YfOQzPqd6cjMssKScde1zvX09cf+tL3JF\/iwxf75R28",
+         "data":"eJztl0EOwyAMBHlLX9vnVP1Pv9FzxSGnEgfwBkMyI+0R40EROCkB9PF81OeT\/tOyPmcmvH3jjjvua7uvUFsB7rjjvkZtBbjj3tLf24i3dg1fQUr91ax7GfHWHhVPf5b3KPfWufIos\/ZV6g133HG\/t7uq\/8jgjnuEuzW7Xt29Zna9qvue\/9nes7hHBXfccccdd9wJGZnIWT86PbN+9Hkp92+d9dX\/RqX7cEsJa\/8kOl+LvX03LB+v+9H+Z7sfoXDvJdo943H3MIN7Jsrdex8q6J3rPCjuYwUR39xWw\/MOKTi7PgDcB\/X7OKq2Atxxx32N2gqs\/8WavlvW4z4PuON+N3dYjx8V\/zRr",
          "encoding":"base64",
-         "height":60,
+         "height":63,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":60,
+         "width":63,
          "x":0,
          "y":0
         }, 
@@ -45,40 +45,76 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":8794,
-                 "height":40,
-                 "id":1825,
+                 "gid":250,
+                 "height":8,
+                 "id":1831,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":40,
-                 "x":16,
-                 "y":200
+                 "width":8,
+                 "x":240,
+                 "y":16
+                }, 
+                {
+                 "gid":250,
+                 "height":8,
+                 "id":1832,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":240,
+                 "y":496
                 }, 
                 {
                  "gid":247,
                  "height":8,
-                 "id":1827,
+                 "id":1833,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":488,
+                 "y":304
+                }, 
+                {
+                 "gid":247,
+                 "height":8,
+                 "id":1834,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":8,
-                 "y":184
+                 "y":304
                 }, 
                 {
-                 "gid":250,
-                 "height":8,
-                 "id":1853,
+                 "gid":8794,
+                 "height":40,
+                 "id":1835,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
-                 "x":344,
-                 "y":472
+                 "width":40,
+                 "x":448,
+                 "y":320
+                }, 
+                {
+                 "gid":8794,
+                 "height":40,
+                 "id":1836,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":16,
+                 "y":320
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -149,7 +185,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1854,
+ "nextobjectid":1837,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -302,13 +338,9 @@
         {
          "firstgid":8924,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
-        }, 
-        {
-         "firstgid":8929,
-         "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/breakable.json"
         }],
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":60
+ "width":63
 }
