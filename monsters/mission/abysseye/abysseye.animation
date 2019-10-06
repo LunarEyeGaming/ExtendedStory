@@ -7,6 +7,9 @@
         "states" : {
 		  "invisible" : {},
           "idle" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop",
             "properties" : {
 			  "particleEmittersOff" : [ "windup", "windup2", "windup3" ]
 			}
@@ -30,24 +33,36 @@
             }
           },
 		  "windup" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop",
 		    "properties" : {
               "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup.ogg",
 			  "particleEmittersOn" : [ "windup" ]
 			}
 		  },
 		  "windup2" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop",
 		    "properties" : {
               "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup2.ogg",
 			  "particleEmittersOn" : [ "windup2" ]
 			}
 		  },
 		  "windup3" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop",
 		    "properties" : {
               "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup3.ogg",
 			  "particleEmittersOn" : [ "windup3" ]
 			}
 		  },
 		  "windup4" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop",
 		    "properties" : {
               "immediateSound" : "/sfx/npc/boss/guardian_delayedshot_charge1.ogg"
 			}
@@ -80,7 +95,7 @@
           "body" : {
             "idle" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
             "open" : {
@@ -95,22 +110,22 @@
             },
 			"windup" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
 			"windup2" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
 			"windup3" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
 			"windup4" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             }
           },
