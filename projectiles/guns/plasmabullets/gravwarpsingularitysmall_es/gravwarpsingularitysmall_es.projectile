@@ -1,0 +1,31 @@
+{
+  "projectileName" : "gravwarpsingularitysmall_es",
+  "physics" : "laser",
+  "bounces" : -1,
+  "image" : "gravwarpsingularitysmall.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 5,
+  "speed" : 0,
+  "timeToLive" : 5,
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 10,
+      "innerRadius" : 1,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    }
+  },
+  "supportsProcessing" : true,
+  "piercing" : true,
+  "lightColor" : [80, 190, 60],
+  "fullbright" : true,
+  "damageKind" : "plasma",
+  
+  "scripts" : [ "/scripts/projectiles/rotatingprojectile.lua" ],
+  "rotateRate" : -0.5
+}

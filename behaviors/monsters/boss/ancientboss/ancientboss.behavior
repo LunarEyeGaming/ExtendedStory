@@ -248,6 +248,24 @@
                                       "parameters": {}
                                     },
                                     {
+                                      "title": "ancientboss-uppersweep",
+                                      "type": "module",
+                                      "name": "ancientboss-uppersweep",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ancientboss-lowerram",
+                                      "type": "module",
+                                      "name": "ancientboss-lowerram",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ancientboss-slam",
+                                      "type": "module",
+                                      "name": "ancientboss-slam",
+                                      "parameters": {}
+                                    },
+                                    {
                                       "title": "repeater",
                                       "type": "decorator",
                                       "name": "repeater",
@@ -282,12 +300,6 @@
                                       "parameters": {}
                                     },
                                     {
-                                      "title": "ancientboss-slam",
-                                      "type": "module",
-                                      "name": "ancientboss-slam",
-                                      "parameters": {}
-                                    },
-                                    {
                                       "title": "ancientboss-minionattack2",
                                       "type": "module",
                                       "name": "ancientboss-minionattack2",
@@ -297,12 +309,6 @@
                                       "title": "ancientboss-uppersweep",
                                       "type": "module",
                                       "name": "ancientboss-uppersweep",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "ancientboss-lowerram",
-                                      "type": "module",
-                                      "name": "ancientboss-lowerram",
                                       "parameters": {}
                                     }
                                   ]
@@ -353,7 +359,11 @@
                                       "type": "module",
                                       "name": "ancientboss-shieldattack",
                                       "parameters": {
-                                        "shieldCoreCount": {"value": 5}
+                                        "shieldCoreCount": {"value": 5},
+                                        "shieldCoreMinX": {"value": -20},
+                                        "shieldCoreMaxX": {"value": 20},
+                                        "shieldCoreMinY": {"value": -10},
+                                        "shieldCoreMaxY": {"value": 10}
                                       }
                                     }
                                   },
@@ -550,7 +560,11 @@
                                       "type": "module",
                                       "name": "ancientboss-shieldattack",
                                       "parameters": {
-                                        "shieldCoreCount": {"value": 8}
+                                        "shieldCoreCount": {"value": 8},
+                                        "shieldCoreMinX": {"value": -30},
+                                        "shieldCoreMaxX": {"value": 30},
+                                        "shieldCoreMinY": {"value": -10},
+                                        "shieldCoreMaxY": {"value": 10}
                                       }
                                     }
                                   },
@@ -578,6 +592,48 @@
                                           "title": "ancientboss-minionattack",
                                           "type": "module",
                                           "name": "ancientboss-minionattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-lowerram",
+                                          "type": "module",
+                                          "name": "ancientboss-lowerram",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-uppersweep",
+                                          "type": "module",
+                                          "name": "ancientboss-uppersweep",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-laserattack",
+                                          "type": "module",
+                                          "name": "ancientboss-laserattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-plasmachaos",
+                                          "type": "module",
+                                          "name": "ancientboss-plasmachaos",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-minionattack2",
+                                          "type": "module",
+                                          "name": "ancientboss-minionattack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-slam",
+                                          "type": "module",
+                                          "name": "ancientboss-slam",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-plasmasweep",
+                                          "type": "module",
+                                          "name": "ancientboss-plasmasweep",
                                           "parameters": {}
                                         },
                                         {
@@ -612,42 +668,6 @@
                                           "title": "ancientboss-playersweep",
                                           "type": "module",
                                           "name": "ancientboss-playersweep",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-plasmachaos",
-                                          "type": "module",
-                                          "name": "ancientboss-plasmachaos",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-slam",
-                                          "type": "module",
-                                          "name": "ancientboss-slam",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-plasmasweep",
-                                          "type": "module",
-                                          "name": "ancientboss-plasmasweep",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-lowerram",
-                                          "type": "module",
-                                          "name": "ancientboss-lowerram",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-minionattack2",
-                                          "type": "module",
-                                          "name": "ancientboss-minionattack2",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-laserattack",
-                                          "type": "module",
-                                          "name": "ancientboss-laserattack",
                                           "parameters": {}
                                         },
                                         {
