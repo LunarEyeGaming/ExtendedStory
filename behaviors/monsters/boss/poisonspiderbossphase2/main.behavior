@@ -336,13 +336,13 @@
 							  "parameters": {},
 							  "children": [
 							    {
-							  "title": "setVelocity",
-							  "type": "action",
-							  "name": "setVelocity",
-							  "parameters": {
-								"velocity": {"value": [2, 0]}
-							  }
-							},
+							      "title": "setVelocity",
+							      "type": "action",
+							      "name": "setVelocity",
+							      "parameters": {
+							    	"velocity": {"value": [2, 0]}
+							      }
+							    },
 							    {
 								  "title": "randomize",
 								  "type": "composite",

@@ -1,0 +1,177 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "eyetentacles" : {
+        "priority" : 3,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 1,
+            "mode" : "loop"
+          }
+        }
+      },
+      "eye" : {
+        "priority" : 3,
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "windup" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "fire"
+          },
+          "fire" : {},
+          "winddown" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "vortextele" : {
+            "frames" : 7,
+            "cycle" : 0.7,
+            "mode" : "end"
+          },
+          "miniontele" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+            "mode" : "end"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "eye" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "eye" : {
+		    "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle"
+			  }
+			},
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            },
+            "vortextele" : {
+              "properties" : {
+                "image" : "<partImage>:vortextele.<frame>"
+              }
+            },
+            "miniontele" : {
+              "properties" : {
+                "image" : "<partImage>:miniontele.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "eyetentacles" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "eyetentacles" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "eyeState" : "1"
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"eyepupil" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+	"idle" : {
+	  "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	},
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ ],
+    "pupilOpen" : [ "/sfx/npc/monsters/anglure_windup.ogg" ],
+    "anomalywindup" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
+	"beamwindup" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup.ogg"],
+	"beamfire" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam2.ogg"],
+	"beamwindup2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup2.ogg"],
+	"beamfire2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg"],
+	"abysstearswindup" : ["/sfx/npc/boss/abyssartifactboss_abysstearswindup.ogg"],
+	"starattack" : ["/sfx/npc/boss/abyssartifactboss_starattack.ogg"],
+	"pain" : ["/sfx/npc/boss/crystalboss_pain1.ogg", "/sfx/npc/boss/crystalboss_pain2.ogg"],
+	"roar" : ["/sfx/npc/boss/tentacleboss_roar.ogg"],
+	"abysseyeswindup" : ["/sfx/npc/darkabyss/abysseye_windup2.ogg"],
+	"dying" : [ "/sfx/npc/boss/tentacleboss_death.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

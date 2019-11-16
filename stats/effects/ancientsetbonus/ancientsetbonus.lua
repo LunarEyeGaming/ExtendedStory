@@ -28,6 +28,6 @@ function attackMonsters()
   self.position = mcontroller.position()
   affectedMonsters = world.entityQuery(self.position, 30, {includedTypes = {"monster", "npc"}})
   for _, monster in pairs(affectedMonsters) do
-    world.spawnProjectile("ancientexplosion", world.entityPosition(monster), entity.id(), {0, 0}, false, {power = 500, statusEffects = {"gammarays"}})
+    world.spawnProjectile("ancientexplosion", world.entityPosition(monster), entity.id(), {0, 0}, false, {power = 50, statusEffects = {"gammarays"}})
   end
 end

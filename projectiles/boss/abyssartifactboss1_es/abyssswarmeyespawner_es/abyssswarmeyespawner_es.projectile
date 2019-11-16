@@ -1,0 +1,26 @@
+{
+  "projectileName" : "abyssswarmeyespawner_es",
+  "image" : "abyssswarmeyespawner.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "flippable" : false,
+  "fullbright" : true,
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "onlyHitTerrain" : true,
+  "physics" : "laser",
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "abyssswarmeye_es",
+      "level" : 10
+    }
+  ],
+  "timeToLive" : 5,
+
+  "speed" : 75,
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

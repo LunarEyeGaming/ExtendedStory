@@ -1,0 +1,54 @@
+{
+  "projectileName" : "abyssbossspellexplosive_es",
+  "image" : "abyssbossspell.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "flippable" : true,
+  "fullbright" : true,
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "physics" : "laser",
+  "movementSettings" : {
+    "bounceFactor" : 1.0
+  },
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/abyssexplosion_es/abyssexplosion_es.config"
+    },
+    {
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "abyssbosscloud_es",
+          "inheritDamageFactor" : 1,
+          "fuzzAngle" : 180
+        }
+      ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "targetingprojectile",
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "actionOnReap" : [
+          {
+            "action" : "projectile",
+            "type" : "abyssbossspelltail_es",
+            "inheritDamageFactor" : 1
+          }
+        ]
+      }
+    }
+  ],
+  "timeToLive" : 5,
+
+  "speed" : 50,
+  "damagePoly" : [ [-1, 0], [2, -6], [8, -9], [14, -6], [17, 0], [14, 6], [8, 9], [2, 6] ],
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

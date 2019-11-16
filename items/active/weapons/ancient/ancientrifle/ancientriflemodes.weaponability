@@ -6,18 +6,18 @@
           "default" : "1",
           "states" : {
             "1" : {
-              "frames" : 2,
-			  "cycle" : 0.25,
+              "frames" : 4,
+			  "cycle" : 0.4,
 			  "mode" : "loop"
             },
             "2" : {
-              "frames" : 8,
-			  "cycle" : 0.8,
+              "frames" : 4,
+			  "cycle" : 0.4,
 			  "mode" : "loop"
             },
             "3" : {
-              "frames" : 2,
-			  "cycle" : 0.25,
+              "frames" : 4,
+			  "cycle" : 0.4,
 			  "mode" : "loop"
             }
           }

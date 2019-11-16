@@ -14,12 +14,12 @@
 	"/scripts/behavior/bdata.lua"
   ],
   "parameters": {
-    "shieldCoreCount" : 5,
+    "projectileCount" : 75,
 	"spawnInterval" : 0.1,
-	"shieldCoreMinX" : -70,
-	"shieldCoreMaxX" : 40,
-	"shieldCoreMinY" : -20,
-	"shieldCoreMaxY" : 20
+	"minX" : -70,
+	"maxX" : 40,
+	"minY" : -20,
+	"maxY" : 20
   },
   "root": {
     "title": "sequence",
@@ -65,7 +65,7 @@
 		"type": "decorator",
 		"name": "repeater",
 		"parameters": {
-		  "maxLoops": {"value": 150}
+		  "maxLoops": {"key": "<projectileCount>"}
 		},
 		"child": {
 		  "title": "sequence",
@@ -78,8 +78,8 @@
 			  "type": "action",
 			  "name": "random",
 			  "parameters": {
-			    "max": {"key": "<shieldCoreMaxX>"},
-				"min": {"key": "<shieldCoreMinX>"}
+			    "max": {"key": "<maxX>"},
+				"min": {"key": "<minX>"}
 			  },
 			  "output": {
 			    "number": "spawnX"
@@ -90,8 +90,8 @@
 			  "type": "action",
 			  "name": "random",
 			  "parameters": {
-			    "max": {"key": "<shieldCoreMaxY>"},
-				"min": {"key": "<shieldCoreMinY>"}
+			    "max": {"key": "<maxY>"},
+				"min": {"key": "<minY>"}
 			  },
 			  "output": {
 			    "number": "spawnY"

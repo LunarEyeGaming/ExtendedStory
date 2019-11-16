@@ -38,10 +38,10 @@
 	  },
       "middleFullbright" : {
         "properties" : {
-          "centered" : true,
 		  "zLevel" : 1,
+          "centered" : true,
           "image" : "<partImage><paletteSwaps>",
-          "offset" : [1.0, 0.0], // x offset is set dynamically
+          "offset" : [1, 0.5], // x offset is set dynamically
           "transformationGroups" : ["weapon"],
 		  "fullbright" : true
         }

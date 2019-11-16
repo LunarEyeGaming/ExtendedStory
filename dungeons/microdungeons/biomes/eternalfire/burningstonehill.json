@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2bESgzAMA9B8ev+3bL3r3C5sQGMsW06tQVsCeoQLHGxjPDZFURRFURRFUaB5jjEqp4MRZWf3zXSzO2aa2d2yzexemV52p2wzu4+8cV52l2wzu4e88nbzvk\/SzWsxr+RFmFFe630V4f7H9ZXXZpZ3jVTxXu2fiOfJ1Xlm5lXxWs3dvbPzKnlneyPer1BmrzfyOkV835C3hvXIe9fMWlPP2nb13jFX9yL\/IbGtv7zo\/4Rs65nX6rTYvR1RXoRxz+t7vFXSyeo1s3vLG2ddybz3RO5Zle1oZ2VzpLWaO8vKNmc7PebZeUfjmE6rf3Y8u7\/HzO6h9MsHBiSwKQ==",
+         "data":"eJzt2TESwjAMRFGfhbtxD+5LOmaooXHDmCDFWq2Ct\/gdgX0kExjYWrttSimllFJKqdDurbXKrWCMsrP3ZrrZGzPN7G3ZZvauTC97U7aZvUdenJe9JdvM3iGvvKt5n19azesxn8kbYY7yeq8rhPsfz6+8PrO856iKd+\/+GfF5svc6luOqeL3m1b3W4yp5rbsjvl9FmWe9yPcJ8fuGvDWsI+9RM+uczpxbpPd6GVfBe8TsMXqK8kb+h4Rweu2zVo8b7bS4I5xWe5Zzzxxp7D3ez\/cZw9ob7ekhrGwvyrz3nEz3r01Ib5bdugF1PSPt3tfqOyPvWTN2dNHOymaktZo7y8o2ZztnzNbjRo9jOr1+6+PZ+2fM7B1qvV4Un04h",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -17,13 +17,13 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1D0OgzAMhuGcpffq\/QfGSp07RUKVQ7DjX\/K9kicQ9UNQW0MIIYQQQgghhNb7TiZrkh1n1sxuyX4j23FxrV+nhnquVdwz4Zwtx0y9q9F7WYn7La56R54791haKbem9d\/j8Z\/g6dIcDe\/serax8GY2W3ijTZbeirObl+uO3tPbHL0jvPCuGnf2VjdLi947wlzVrlG0wdoHb96B97leq6JdFbzvFz1P8o6MnKng1XBK7N5eK+ddt5fXyzkza\/chJsLah9qnj4U12mtlvnpmpHu2k6XXy353h9W4Zg0797da07Fq2a3Hsmibp\/VctNPT2tvFeU66q+S+jHHPJNPZSau8O6rdD18ktUc=",
+         "data":"eJzt1EsOgzAMRdGspXvr6hlW6rijSKhyCHb8Je9KHoGoD0FtDSGEEEIIIYQQWu87maxJdpxZM7sl+41sx8W1fp0a6rlWcc+Ec7YcM\/WuRu9lJe63uOodee7cY2ml3JrWf4\/Hf4KnS3M0vLPr2cbCm9ls4Y02WXorzm5erjt6T29z9I7wwrtq3Nlb3Swteu8Ic1W7RtEGax+8eQfe53qtinZV8L5f9DzJOzJypoJXwymxe3utnHfdXl4v58ys3YeYCGsfap8+FtZor5X56pmR7tlOll4v+90dVuOaNezc32pNx6pltx7Lom2e1nPRTk9rbxfnOemukvsyxj2TTGcnrfLuqHY\/Mii8dw==",
          "encoding":"base64",
          "height":60,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -497,7 +497,7 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
+         "source":"..\/..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }],
  "tilewidth":8,
  "type":"map",

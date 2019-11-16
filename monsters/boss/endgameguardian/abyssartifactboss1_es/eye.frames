@@ -1,0 +1,18 @@
+{
+  "frameGrid" : {
+    "size" : [71, 71],
+    "dimensions" : [8, 4],
+
+    "names" : [
+      [ "idle" ],
+      [ "windup.1", "windup.2", "fire" ],
+      [ "vortextele.1", "vortextele.2", "vortextele.3", "vortextele.4", "vortextele.5", "vortextele.6", "vortextele.7" ],
+      [ "miniontele.1", "miniontele.2", "miniontele.3", "miniontele.4", "miniontele.5", "miniontele.6" ]
+    ]
+  },
+  
+  "aliases" : {
+    "winddown.1" : "windup.2",
+	"winddown.2" : "windup.1"
+  }
+}

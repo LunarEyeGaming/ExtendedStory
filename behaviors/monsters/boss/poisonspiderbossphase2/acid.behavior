@@ -70,73 +70,63 @@
           "sound": {"value": "spit"}
         }
       },
+      {
+        "title": "entityDirection",
+        "type": "action",
+        "name": "entityDirection",
+        "parameters": {
+          "target": {"key": "target"}
+        },
+        "output": {
+          "vector": "aimVector"
+        }
+      },
 	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
         "parameters": {
-          "aimVector": {"value": [1, 0]},
+          "aimVector": {"key": "aimVector"},
           "offset": {"value": [9, 0]},
           "projectileConfig": {
 		    "value": {
-			  "damageTeam": {"type": "enemy"},
-			  "power": 0,
 			  "piercing": true,
-			  "timeToLive": 0.01,
-			  "periodicActions": [
+              "speed": 0,
+			  "timeToLive": 0,
+			  "actionOnReap": [
 			    {
-				  "time": 0,
-				  "repeat": false,
 				  "action": "projectile",
 				  "type": "acidsweep_es",
-				  "config": {
-				    "power": 50
-				  }
+                  "inheritDamageFactor": 1
 				},
 				{
-				  "time": 0,
-				  "repeat": false,
 				  "action": "projectile",
 				  "type": "acidsweep_es",
 				  "angleAdjust": 15,
-				  "config": {
-				    "power": 50
-				  }
+                  "inheritDamageFactor": 1
 				},
 				{
-				  "time": 0,
-				  "repeat": false,
 				  "action": "projectile",
 				  "type": "acidsweep_es",
 				  "angleAdjust": -15,
-				  "config": {
-				    "power": 50
-				  }
+                  "inheritDamageFactor": 1
 				},
 				{
-				  "time": 0,
-				  "repeat": false,
 				  "action": "projectile",
 				  "type": "acidsweep_es",
 				  "angleAdjust": 30,
-				  "config": {
-				    "power": 50
-				  }
+                  "inheritDamageFactor": 1
 				},
 				{
-				  "time": 0,
-				  "repeat": false,
 				  "action": "projectile",
 				  "type": "acidsweep_es",
 				  "angleAdjust": -30,
-				  "config": {
-				    "power": 50
-				  }
+                  "inheritDamageFactor": 1
 				}
 			  ]
 			}
 		  },
-          "projectileType": {"value": "invisibleprojectile"}
+          "projectileType": {"value": "orbitalup"}
         }
       },
 	  {
