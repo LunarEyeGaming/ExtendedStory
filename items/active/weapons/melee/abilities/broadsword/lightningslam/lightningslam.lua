@@ -68,8 +68,6 @@ function LightningSlam:flip()
 
     coroutine.yield()
   end
-
-  status.clearPersistentEffects("weaponMovementAbility")
   animator.setAnimationState("swoosh", "idle")
   mcontroller.setRotation(0)
   animator.setParticleEmitterActive("flip", false)
@@ -109,6 +107,8 @@ function LightningSlam:slam()
   animator.setAnimationState("swoosh", "idle")
   animator.stopAllSounds("slamming")
   self:spawnProjectiles()
+
+  status.clearPersistentEffects("weaponMovementAbility")
   self.cooldownTimer = self.cooldownTime
 end
 
@@ -118,10 +118,10 @@ function LightningSlam:spawnProjectiles()
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
   params.power = params.power * config.getParameter("damageLevelMultiplier")
   position = world.lineCollision(mcontroller.position(), {mcontroller.position()[1], mcontroller.position()[2] - 50}) or mcontroller.position()
-  world.spawnProjectile("lightningboltexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
   local impact, impactHeight = self:impactPosition()
 
   if impact then
+    world.spawnProjectile("lightningboltexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
     self.weapon.weaponOffset = {0, impactHeight + self.impactWeaponOffset}
     local directions = {1}
     if self.bothDirections then directions[2] = -1 end
