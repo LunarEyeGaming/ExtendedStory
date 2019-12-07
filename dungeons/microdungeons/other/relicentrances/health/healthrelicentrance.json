@@ -45,18 +45,6 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":8912,
-                 "height":64,
-                 "id":750,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":224,
-                 "y":368
-                }, 
-                {
                  "gid":2147490127,
                  "height":16,
                  "id":751,
@@ -235,6 +223,18 @@
                  "width":8,
                  "x":248,
                  "y":232
+                }, 
+                {
+                 "gid":8812,
+                 "height":64,
+                 "id":775,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":224,
+                 "y":368
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -353,7 +353,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":775,
+ "nextobjectid":776,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -497,7 +497,7 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
+         "source":"..\/..\/..\/..\/..\/tilesets\/objects\/extendedstoryobjects-other.json"
         }],
  "tilewidth":8,
  "type":"map",

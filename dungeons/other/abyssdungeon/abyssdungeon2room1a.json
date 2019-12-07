@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt1z0OwCAIBWDP0tP2Or2Xh2g6dCH+IKLlFQYWE4fvgYnklFKOclvn4afCHvaw+6mw8+2XMJ\/nnvSuVfuIB93OyeI9s9hrTXvJTc0lv4VctPpO3T176xzBXjKW7L3ckOxcn4W5Xt33WhacuUe2c+bBav+l9j\/8cXbbLZX2f35HJlqzg2i30Pev3u7MTrGy72Hf66X7kwf77HtDstf2ptF+I9ppDl7stTmY2RlQ7L3dUfL+Uexa3pY9ylfduGybiw==",
+         "data":"eJzt1z0OwCAIBWDP0hv2aL2Xh2g6dCH+IKLlFQYWE4fvgYnklFKOclvn4afCHvaw+6mw8+2XMJ\/nnvSuVfuIB93OyeI9s9hrTXvJTc0lv4VctPpO3T176xzBXjKW7L3ckOxcn4W5Xt33WhacuUe2c+bBav+l9j\/8cXbbLZX2f35HJlqzg2i30Pev3u7MTrGy72Hf66X7kwf77HtDstf2ptF+I9ppDl7stTmY2RlQ7L3dUfL+Uexa3pY9ylfdqBoP1g==",
          "encoding":"base64",
          "height":32,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1jkWgCAMRdG4Bnfgal2xtY2NHIhhyID84nVaXMHARUQXWrbzWCfYYYd9nST2mllJ2zvv2V3jarWn5mh+LTvnjuLXsEvcsP\/LLnVH8MOOPQ+7jd3brWX\/+gbeZgt79GCf3xXxn+ptf5K6o86WVjdnn+E86XFz\/lnO0x53zm5xh8rNQ82ZaGVvPeM0\/SP3e8ku9VjbU3\/pmVZ7jcfDLmn0mtfc66L7ufciriXy7wakDDdb",
+         "data":"eJzt1jkWgCAMRdG4BnfgDt28tY2NHIhhyID84nVaXMHARUQXWrbzWCfYYYd9nST2mllJ2zvv2V3jarWn5mh+LTvnjuLXsEvcsP\/LLnVH8MOOPQ+7jd3brWX\/+gbeZgt79GCf3xXxn+ptf5K6o86WVjdnn+E86XFz\/lnO0x53zm5xh8rNQ82ZaGVvPeM0\/SP3e8ku9VjbU3\/pmVZ7jcfDLmn0mtfc66L7ufciriXy7wZjmAtV",
          "encoding":"base64",
          "height":32,
          "name":"front",
@@ -45,30 +45,6 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":8794,
-                 "height":40,
-                 "id":1825,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":448,
-                 "y":200
-                }, 
-                {
-                 "gid":8794,
-                 "height":40,
-                 "id":1826,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":16,
-                 "y":200
-                }, 
-                {
                  "gid":247,
                  "height":8,
                  "id":1827,
@@ -91,6 +67,30 @@
                  "width":8,
                  "x":8,
                  "y":184
+                }, 
+                {
+                 "gid":8826,
+                 "height":40,
+                 "id":1831,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":8,
+                 "y":200
+                }, 
+                {
+                 "gid":8826,
+                 "height":40,
+                 "id":1832,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":440,
+                 "y":200
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -161,7 +161,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1831,
+ "nextobjectid":1833,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -305,15 +305,19 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8914,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8918,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
+        }, 
+        {
+         "firstgid":8802,
+         "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
+        }, 
+        {
+         "firstgid":8826,
+         "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,
  "type":"map",

@@ -1,4 +1,10 @@
 { "columns":0,
+ "grid":
+    {
+     "height":40,
+     "orientation":"orthogonal",
+     "width":40
+    },
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
@@ -11,7 +17,7 @@
          "\/\/description":"A door that appears to be completely unaffected by the test of time.",
          "\/\/name":"abyssdoor",
          "\/\/shortdescription":"Abyss Door",
-         "imagePositionX":"-20",
+         "imagePositionX":"-24",
          "imagePositionY":"0",
          "object":"abyssdoor",
          "tilesetDirection":"right"
@@ -182,7 +188,7 @@
         {
          "image":"..\/images\/objects\/abyssdoor.png",
          "imageheight":40,
-         "imagewidth":40
+         "imagewidth":48
         },
      "1":
         {
@@ -245,6 +251,6 @@
          "imagewidth":24
         }
     },
- "tilewidth":40,
+ "tilewidth":48,
  "type":"tileset"
 }
