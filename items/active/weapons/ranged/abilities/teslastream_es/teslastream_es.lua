@@ -42,8 +42,8 @@ function TeslaStream:fire()
   local wasColliding = false
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) and status.overConsumeResource("energy", (self.energyUsage or 0) * self.dt) do
     local beamStart = self:firePosition()
-    beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), math.min(self.beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition()))))
-    local beamLength = self.beamLength
+    local beamLength = math.min(self.beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition()))
+    local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
 
     local collidePoint = world.lineCollision(beamStart, beamEnd)
     if collidePoint then
@@ -61,14 +61,16 @@ function TeslaStream:fire()
 	local entities = world.entityQuery(beamEnd, self.connectRadius, {includedTypes = {"monster", "npc"}})
 	if self.arcCooldownTimer == 0 then
 	  for i, monster in ipairs(entities) do
-        if i <= self.maxConnections then
-		  world.spawnProjectile("lightningguncurrent", world.entityPosition(monster), entity.id(), {0, 0}, false, {power = (self.damageConfig.baseDamage * (self.arcCooldownTime / self.fireTime) / self.maxConnections) * math.min(self.maxConnections, #entities) * self.arcDamageFactor, timeToLive = 0})
+        local entityPos = world.entityPosition(monster)
+        local entCollidePoint = world.lineCollision(beamEnd, entityPos)
+        if i <= self.maxConnections and not entCollidePoint then
+		  world.spawnProjectile("lightningguncurrent", entityPos, entity.id(), {0, 0}, false, {power = (self.damageConfig.baseDamage * (self.arcCooldownTime / self.fireTime) / self.maxConnections) * math.min(self.maxConnections, #entities) * self.arcDamageFactor, timeToLive = 0})
 		end
 	  end
 	  self.arcCooldownTimer = self.arcCooldownTime
     end
 
-    self.weapon:setDamage(self.damageConfig, {self.weapon.muzzleOffset, {self.weapon.muzzleOffset[1] + math.min(beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition())), self.weapon.muzzleOffset[2]}}, self.fireTime)
+    self.weapon:setDamage(self.damageConfig, {self.weapon.muzzleOffset, {self.weapon.muzzleOffset[1] + beamLength, self.weapon.muzzleOffset[2]}}, self.fireTime)
 
     self:drawBolt(beamEnd, entities)
 
@@ -111,9 +113,17 @@ function TeslaStream:winddown()
       util.lerp(colorFactor, self.lightningStartColor[3], self.lightningEndColor[3]),
       util.lerp(colorFactor, self.lightningStartColor[4], self.lightningEndColor[4])
     }
+    
+    local beamStart = self:firePosition()
+    local beamLength = math.min(self.beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition()))
+    local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
+    local collidePoint = world.lineCollision(beamStart, beamEnd)
+    if collidePoint then
+      beamEnd = collidePoint
+    end
     newChain.color = lightningColor
-    newChain.worldStartPosition = self:firePosition()
-    newChain.worldEndPosition = activeItem.ownerAimPosition()
+    newChain.worldStartPosition = beamStart
+    newChain.worldEndPosition = beamEnd
     activeItem.setScriptedAnimationParameter("lightning", {newChain, newChain})
     activeItem.setScriptedAnimationParameter("lightningSeed", math.floor((os.time() + (os.clock() % 1)) * 1000))
   end)
@@ -125,7 +135,9 @@ function TeslaStream:drawBolt(endPos, monsters)
   newChain.worldEndPosition = endPos
   self.lightning = {}
   for i, monster in ipairs(monsters) do
-    if i <= self.maxConnections then
+    local entityPos = world.entityPosition(monster)
+    local entCollidePoint = world.lineCollision(endPos, entityPos)
+    if i <= self.maxConnections and not entCollidePoint then
 	  bolt = copy(self.miniLightningConfig)
 	  bolt.worldStartPosition = endPos
 	  bolt.worldEndPosition = world.entityPosition(monster)

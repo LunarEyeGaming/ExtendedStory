@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt18ENwjAMQFHPwqQcYRvEXB0CMUAkFJLaSd\/hn+unqqlzRNwPaXCPW8SZ8fLy8vLy8vL+2jva7eh9RTte3tW8VzuveHl5eXnzvL0746re3p2Cl7ei92rnFS\/vv96zn8\/L26pn\/1rZ2\/N\/5s138I6LN3+mbzPuvpW9M+5GvLwjmvUtVvXOele8vBneSvHmz7SS91koXl7eveLNn4mXd5RXe\/YBmGcNPg==",
+         "data":"eJzt18ENgzAMQFHPUlWdk2u3qZiLISoGiFSlCU7CO\/wzfkIE54jYDqlxr2fElfHy8vLy8vLy\/toe5Vb0fqIcL+9s3rudV7y8vLy8ed7anXFWb+1Owcs7ovdu5xUv77\/eq5\/Py1uqZv+a2Vvzf+bNd\/C2izd\/prMed9+RvT3uRry8Ler1LY7q7fWueHkzvCPFmz\/TTN73Y5x4eXnXijd\/Jl7eVl6t2Rca0wQR",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztmMsJwzAQRFVLqksZOaackH7cS9hDIBghyfvRfjIP5uYM88ACOa0BoM\/ztp6jtcc5V35P8Ua6Fb7wha8flpvgq9cdcRN89bojboKvXnfETfDV69696T2ItNsS7qbXINJuSySbRq7SbitwfnN0R9wEX73uiJvgq9cdcRN89botNq3cGbndXow2rdwZud1ezDZxXVe6PfA+v71ndge+8IUvfLm+WanmO7t\/VfOd3b+q+RLS\/yez+Y6AL++ZLGTylX77Epl8pd++RCZfQuJKZPOV4uWrcRY5ePlqnEUOnu\/qblfC0vfbdw8UK9\/fPm9Ha99zn7ejpW+vz9vxqm\/vmUqBb+3At3bAf\/AB85shfQ==",
+         "data":"eJztmNsJAjEURFOLiLVZhiWJ\/diL3A9BlpBk7yP34RyYv3WYAxvI2hoA+tyu63m39jjmzO8p3ki3whe+8PXDchN89bojboKvXnfETfDV6464Cb563bs3vQaRdlvC3fQcRNptiWTTyFXabQXOb47uiJvgq9cdcRN89bojboKvXrfFppU7I7fbi9GmlTsjt9uL2Sau60q3B97nt\/fM7sAXvvCFL9c3K9V8Z\/evar6z+1c1X0L6\/2Q23xHw5T2ThUy+0m9fIpOv9NuXyORLSFyJbL5SvHw1ziIHL1+Ns8jB813d7UpY+n777pc4sfL97fN2tPY99nk7Wvr2+rwdz\/r2nqkU+NYOfGsH\/AcfqeuwXw==",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -506,6 +506,10 @@
         {
          "firstgid":8929,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/breakable.json"
+        }, 
+        {
+         "firstgid":9239,
+         "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }],
  "tilewidth":8,
  "type":"map",
