@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztz7ENACAMA8HMwqSUDMsQzICEEilc8bV9O2Ju6XFrRGTGy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLe+fN3ufl5eXl5eXl7RZv\/SdeXl5eXt7qP7y8vLy8vLz9+t2rnh10tAkk",
+         "data":"eJztz0ENACAMBMF6wShuMIcINJCQNinz2Pfd7Ii5pcetEZEZLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8v7503e5+Xl5eXl5eXt1u89Z94eXl5eXmr\/\/Dy8vLy8vL263evenYAX58vMw==",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztz8ENhDAQQ9HUstVRxh5pkl4Qh5UQyiEED+Nkv6W5JZZfKYTos37abyvle707\/4\/LztOtePHizUvkJry6bsdNeHXdjpvw6rodN+HVdTtuwqvrdtyEV9ftuAmvrttxE15dt+MmvLpux014dd2Om\/Dquh03tXTX3rx9ePHixdvrfSN4tZ14299EBK+2080bEbx9b0YJ3r43owRv35tRgjd7UWzU3l\/HYnpK77kj2xXtvXZkuyK9tY5s1xNv7c1Mh3fuwzv3kf\/IDlmv8EY=",
+         "data":"eJzt0MEJwzAQRFH14kbTTa5B\/aSXEMjBCEOUzaw1a\/7A3uRhnlsjRJ\/7Nn\/P1m7j\/fL9+1bn36148eJdl8xNeHXdjpvw6rodN+HVdTtuwqvrdtyEV9ftuAmvrttxE15dt+MmvLpux014dd2Om\/Dquh034dV1O26a6T56c\/bhxYsXb9R7RvBqO\/HOv8kIXm2nmzcjeGNvqgRv7E2V4I29qRK8qxflRu3tn3tsnqf09t3\/W+3K9u6tV\/eO1ure\/uWOOirdmNV78OLFG\/eSa+YFU72XVQ==",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -44,18 +44,6 @@
          "draworder":"topdown",
          "name":"objects",
          "objects":[
-                {
-                 "gid":8794,
-                 "height":40,
-                 "id":1825,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":16,
-                 "y":424
-                }, 
                 {
                  "gid":247,
                  "height":8,
@@ -177,6 +165,14 @@
                  "height":16,
                  "id":1872,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -201,6 +197,14 @@
                  "height":16,
                  "id":1928,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -233,6 +237,14 @@
                  "height":16,
                  "id":1932,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -265,6 +277,14 @@
                  "height":16,
                  "id":1936,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -297,6 +317,14 @@
                  "height":16,
                  "id":1940,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -329,6 +357,14 @@
                  "height":16,
                  "id":1944,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -361,6 +397,14 @@
                  "height":16,
                  "id":1948,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.75}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -387,6 +431,18 @@
                  "width":16,
                  "x":168,
                  "y":328
+                }, 
+                {
+                 "gid":9140,
+                 "height":40,
+                 "id":1950,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":8,
+                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -737,7 +793,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1950,
+ "nextobjectid":1951,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -881,19 +937,27 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/breakable.json"
+        }, 
+        {
+         "firstgid":9112,
+         "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
+        }, 
+        {
+         "firstgid":9136,
+         "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
+        }, 
+        {
+         "firstgid":9140,
+         "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,
  "type":"map",

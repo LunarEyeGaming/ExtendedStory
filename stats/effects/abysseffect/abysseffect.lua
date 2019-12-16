@@ -5,30 +5,17 @@ function init()
 
   script.setUpdateDelta(5)
 
-  self.tickTime = 0.75
-  self.tickTimer = self.tickTime
-  self.damage = 16
-
-  status.applySelfDamageRequest({
-      damageType = "IgnoresDef",
-      damage = 4,
-      damageSourceKind = "abyss",
-      sourceEntityId = entity.id()
-    })
+  self.tickTime = config.getParameter("tickTime")
+  self.maxHealthChange = config.getParameter("maxHealthChange")
+  self.tickTimer = config.getParameter("initialTickTime", self.tickTime)
   healingMultiplier = config.getParameter("healingMultiplier", 0)
 end
 
 function update(dt)
-  self.tickTimer = self.tickTimer - dt
-  if self.tickTimer <= 0 then
+  self.tickTimer = math.max(0, self.tickTimer - dt)
+  if self.tickTimer == 0 then
     self.tickTimer = self.tickTime
-    self.damage = self.damage
-    status.applySelfDamageRequest({
-        damageType = "IgnoresDef",
-        damage = self.damage,
-        damageSourceKind = "abyss",
-        sourceEntityId = entity.id()
-      })
+    
   end
   oldHealthAmount = currentHealthAmount or status.resource("health")
   currentHealthAmount = status.resource("health")

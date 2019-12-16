@@ -3,7 +3,8 @@
   "blockingStat" : "abysseffectImmunity",
 
   "effectConfig" : {
-	"healingMultiplier" : 0.5
+	"tickTime" : 2,
+    "maxHealthChange" : -5
   },
   "defaultDuration" : 5.0,
 
@@ -13,6 +14,6 @@
 
   "animationConfig" : "abysseffect.animation",
 
-  "label" : "Fading - You are fading from reality",
+  "label" : "Dark Sap - The darkness is leaching away at your max health",
   "icon" : "/interface/statuses/chaoticvoid.png"
 }

@@ -59,12 +59,12 @@
       "concurrentHostileActions" : [
         {
           "name" : "action-projectile",
-		  "cooldown" : 0.5,
+		  "cooldown" : 1.0,
           "parameters" : {
             "projectileCount" : 1,
             "projectileType" : "evileyetrailrotten_es",
             "projectileParameters" : {
-              "power" : 30
+              "power" : 15
             },
             "aimDirection" : [0, 0],
             "inaccuracy" : 0,
@@ -113,8 +113,8 @@
       "groundFriction" : 10,
 
       "airFriction" : 0,
-      "airForce" : 15,
-      "flySpeed" : 35
+      "airForce" : 250,
+      "flySpeed" : 15
     },
 
     "bodyMaterialKind" : "organic",
