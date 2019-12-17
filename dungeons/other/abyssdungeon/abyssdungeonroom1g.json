@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2aENACAMRcHOwv6jIWADFsCQVAA98ZKfutPtEdFVttHqxM7OXqcT+9zs22\/s7Ozs7Ozs7Ozs7PeZ2NnZ2dnz7b\/Fzs5ep+x\/nt5qAdGAOXU=",
+         "data":"eJzt2TENACAMRcFqwSHoRgQGWEg6AL3hJT\/dbu6MiKmy9VYndnb2Op3Yx2bffmNnZ2dnZ2dnZ2dnv8\/Ezs7Ozp5v\/y12dvY6Zf\/z9FYLmI0FvA==",
          "encoding":"base64",
          "height":32,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1KERADEMA8HUkv6LSwnfwIPEzNbejJjJEq+l5M7OGTs7e85u7BNiZ2ev3XSMnZ29dtMxdnb22k3Hprok6bW\/fzh17OzsOVN2H2NwAs4=",
+         "data":"eJzt1bERgDAMBEHX4g5pjQrJPQSgTPq9mc+UbKS1lNy1c8bOzp6zL\/YJsbOz1246xs7OXrvpGDs7e+2mY1NdkvS3O2hnb79g6tjZ0+3K6gGrWaSl",
          "encoding":"base64",
          "height":32,
          "name":"front",
@@ -69,173 +69,85 @@
                  "y":184
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1831,
+                 "gid":8826,
+                 "height":40,
+                 "id":1840,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":160,
+                 "width":48,
+                 "x":440,
                  "y":200
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1832,
+                 "gid":8826,
+                 "height":40,
+                 "id":1841,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":120,
+                 "width":48,
+                 "x":8,
                  "y":200
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1833,
+                 "gid":8837,
+                 "height":16,
+                 "id":1842,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":80,
-                 "y":200
+                 "width":8,
+                 "x":384,
+                 "y":160
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1834,
+                 "gid":8837,
+                 "height":16,
+                 "id":1843,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":200,
-                 "y":200
+                 "width":8,
+                 "x":304,
+                 "y":160
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1835,
+                 "gid":8837,
+                 "height":16,
+                 "id":1844,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":240,
-                 "y":200
+                 "width":8,
+                 "x":224,
+                 "y":160
                 }, 
                 {
-                 "gid":7705,
-                 "height":8,
-                 "id":1836,
+                 "gid":8837,
+                 "height":16,
+                 "id":1845,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":280,
-                 "y":200
+                 "width":8,
+                 "x":144,
+                 "y":160
                 }, 
                 {
-                 "gid":7705,
+                 "gid":8840,
                  "height":8,
-                 "id":1837,
+                 "id":1846,
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":320,
-                 "y":200
-                }, 
-                {
-                 "gid":7705,
-                 "height":8,
-                 "id":1838,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":360,
-                 "y":200
-                }, 
-                {
-                 "gid":7705,
-                 "height":8,
-                 "id":1839,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 1.0, \"fireTimeVariance\" : 0.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
+                     "parameters":"{ \"fireTime\" : 1.0 }"
                     },
                  "propertytypes":
                     {
@@ -249,27 +161,83 @@
                  "y":200
                 }, 
                 {
-                 "gid":8953,
-                 "height":40,
-                 "id":1840,
+                 "gid":8840,
+                 "height":8,
+                 "id":1847,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"fireTime\" : 1.0 }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":48,
-                 "x":440,
+                 "width":16,
+                 "x":320,
                  "y":200
                 }, 
                 {
-                 "gid":8953,
-                 "height":40,
-                 "id":1841,
+                 "gid":8840,
+                 "height":8,
+                 "id":1849,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"fireTime\" : 1.0 }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":48,
-                 "x":8,
+                 "width":16,
+                 "x":240,
+                 "y":200
+                }, 
+                {
+                 "gid":8840,
+                 "height":8,
+                 "id":1850,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"fireTime\" : 1.0 }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":200
+                }, 
+                {
+                 "gid":8840,
+                 "height":8,
+                 "id":1851,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"fireTime\" : 1.0 }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":80,
                  "y":200
                 }],
          "opacity":1,
@@ -341,7 +309,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1842,
+ "nextobjectid":1852,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -485,22 +453,18 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8953,
+         "firstgid":8826,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,

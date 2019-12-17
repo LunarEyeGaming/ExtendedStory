@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztmkEOwjAMBPOXPp6cufIW\/oJyiISKg2xw6qyzI+0NrB2lpIFSCtmB26HPs3zG8v6WaP7tSl\/60jcOqVN16FWBfBFmr9gJ3Ve6\/3rNvgquL8bsFTvR12\/2ip0y+rZzxb3IyeqLfp60sJtvw+IcDfcrjNkrdqKv32zPTqP7qfV3ABTfUehrnx3NLNfR7Gi4X2HMXrGTZW+YFW9f6\/fBDL7RTvSd57u68wzfKxl5aZ9XoflWwe\/b9XUG1VfjmsG3ofHM5Nuoh3xtZ\/Vt7LS+neqwvtJzXstz3yh2WN936Pvba1CI9r36cx\/t64Vm\/xz9d\/UMgq8n9I1upKefNSxIvg+Q9L4W5wy+FmfNmRs59M0d+uYO2YMXI3fJkA==",
+         "data":"eJztmkEOwjAMBPOXPp6ceQA\/4S8oh0ioOMgGp846O9LewNpRShoopZAduB36PMtnLO9viebfrvSlL33jkDpVh14VyBdh9oqd0H2l+6\/X7Kvg+mLMXrETff1mr9gpo287V9yLnKy+6OdJC7v5NizO0XC\/wpi9Yif6+s327DS6n1p\/B0DxHYW+9tnRzHIdzY6G+xXG7BU7WfaGWfH2tX4fzOAb7UTfeb6rO8\/wvZKRl\/Z5FZpvFfy+XV9nUH01rhl8GxrPTL6NesjXdlbfxk7r26kO6ys957U8941ih\/V9h76\/vQaFaN+rP\/fRvl5o9s\/Rf1fPIPh6Qt\/oRnr6WcOC5PsASe9rcc7ga3HWnLmRQ9\/coW\/ukD14AY+4yow=",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -379,6 +379,114 @@
                  "width":8,
                  "x":112,
                  "y":80
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1921,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":224,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1922,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1923,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":256,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1924,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":288,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1925,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":160,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1926,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":128,
+                 "y":328
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1927,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":168,
+                 "y":216
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1928,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":80,
+                 "y":168
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1929,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":168,
+                 "y":104
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -449,7 +557,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1921,
+ "nextobjectid":1930,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -612,7 +720,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":9147,
+         "firstgid":9150,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
         }],
  "tilewidth":8,

@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztlDESg0AMA\/kLj88j8i\/qVCkJN458J\/t2Z1whhLbhOGAHXmfvw7f34dv7Rnyrgm8sUwV8Y5kq4BvLVAHfWKYK+MYyVcA3lqnCbr4j4Lt6US745n7vSsqOkun77XtPutX\/Z3z38F15+M71HeXXv\/l6eJ61aWW34yZ8dd2Om\/DVdTtuwlfX7bgJX1234yZ8dd2Om\/DVdTtuwlfX7bgJX1234yZ8dd2Om\/DVdTtuquJ7d\/++j+988MW3ky\/05APJrwh4",
+         "data":"eJztmTESwjAMBP2XPJ4+T+BRqWlIRQIeIcsneXfmKsRx24QircEKPLbawbd28K2dHt+s4Gu7yQK+tpss4Gu7yQK+tpss4Gu7yQK+tpssrObbA76zF40F37G\/dwy67WWk7\/7Oc4vJ3j4T6Xv2RfnO\/j9a1Xdm8I317eXbs\/n48fmoTTO7FTfh69etuAlfv27FTfj6dStuwtevW3ETvn7dipvw9etW3ISvX7fiJnz9uhU34evXrbgJX79uxU1ZfK\/ew1y9i2k3d2ey+N7l3+\/jGw++tX2hJi+4KQi6",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -239,6 +239,102 @@
                  "width":48,
                  "x":416,
                  "y":200
+                }, 
+                {
+                 "gid":9149,
+                 "height":16,
+                 "id":1878,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":400
+                }, 
+                {
+                 "gid":9149,
+                 "height":16,
+                 "id":1879,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":336
+                }, 
+                {
+                 "gid":9149,
+                 "height":16,
+                 "id":1880,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":192,
+                 "y":272
+                }, 
+                {
+                 "gid":9148,
+                 "height":16,
+                 "id":1881,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":56,
+                 "y":400
+                }, 
+                {
+                 "gid":9148,
+                 "height":16,
+                 "id":1882,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":56,
+                 "y":336
+                }, 
+                {
+                 "gid":9148,
+                 "height":16,
+                 "id":1883,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":56,
+                 "y":272
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1884,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":216,
+                 "y":144
+                }, 
+                {
+                 "gid":9147,
+                 "height":16,
+                 "id":1885,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":344,
+                 "y":144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -529,7 +625,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1878,
+ "nextobjectid":1886,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -692,7 +788,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":9147,
+         "firstgid":9154,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
         }],
  "tilewidth":8,

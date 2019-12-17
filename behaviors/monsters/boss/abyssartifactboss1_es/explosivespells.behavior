@@ -14,99 +14,116 @@
   "parameters": {
   },
   "root": {
-    "title": "sequence",
+    "title": "parallel",
     "type": "composite",
-    "name": "sequence",
-    "parameters": {},
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": 1}
+    },
     "children": [
-	  {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "pupilOpen"}
-        }
-      },
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "windup"},
-		  "type": {"value": "eye"}
-		}
-	  },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1.0}
-        }
-      },
-	  {
-	    "title": "repeater",
-		"type": "decorator",
-		"name": "repeater",
-		"parameters": {
-		  "maxLoops": {"value": 5}
-		},
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-            {
-              "title": "entityDirection",
-              "type": "action",
-              "name": "entityDirection",
-              "parameters": {
-                "target": {"key": "target"}
-              },
-              "output": {
-                "vector": "aimVector"
-              }
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "pupilOpen"}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "windup"},
+              "type": {"value": "eye"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": 3}
             },
-			{
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"key": "aimVector"},
-    	        "offset": {"value": [2, 0]},
-    	        "projectileConfig": {"value": {}},
-    	        "projectileType": {"value": "abyssbossspellexplosive_es"},
-                "scalePower": {"value": true}
-    	      }
-    	    },
-    	    {
-    	      "title": "timer",
-    	      "type": "action",
-    	      "name": "timer",
-    	      "parameters": {
-    	        "time": {"value": 2.0}
-    	      }
-    	    }
-		  ]
-		}
-	  },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "entityDirection",
+                  "type": "action",
+                  "name": "entityDirection",
+                  "parameters": {
+                    "target": {"key": "target"}
+                  },
+                  "output": {
+                    "vector": "aimVector"
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [2, 0]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "abyssbossspellexplosive_es"},
+                    "scalePower": {"value": true}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.3}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "winddown"},
+              "type": {"value": "eye"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.0}
+            }
+          }
+        ]
+      },
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "winddown"},
-		  "type": {"value": "eye"}
-		}
-	  },
-	  {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1.0}
-        }
+        "title": "abyssartifactboss1_es-look",
+        "type": "module",
+        "name": "abyssartifactboss1_es-look",
+        "parameters": { }
       }
     ]
   }

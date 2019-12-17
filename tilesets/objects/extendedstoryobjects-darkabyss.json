@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":11,
+ "tilecount":18,
  "tileheight":40,
  "tileproperties":
     {
@@ -34,6 +34,55 @@
          "imagePositionX":"-20",
          "imagePositionY":"0",
          "object":"abyssartifactaltar",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysstorch_es",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysstorch_es",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysstorch_es",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssvortextrap_es",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssvortextrap_es",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"abyssvortextrap_es",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"abyssvortextrap_es",
          "tilesetDirection":"right"
         },
      "2":
@@ -122,6 +171,55 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "11":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "12":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "13":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "14":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "15":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "17":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "imagePositionX":"string",
@@ -201,6 +299,48 @@
          "image":"..\/images\/objects\/abyssartifactaltar.png",
          "imageheight":40,
          "imagewidth":32
+        },
+     "11":
+        {
+         "image":"..\/images\/objects\/abysstorch.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "12":
+        {
+         "image":"..\/images\/objects\/abysstorchleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "13":
+        {
+         "image":"..\/images\/objects\/abysstorchright.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "14":
+        {
+         "image":"..\/images\/objects\/abyssvortextrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "15":
+        {
+         "image":"..\/images\/objects\/abyssvortextrapceiling.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "16":
+        {
+         "image":"..\/images\/objects\/abyssvortextrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "17":
+        {
+         "image":"..\/images\/objects\/abyssvortextrapright.png",
+         "imageheight":16,
+         "imagewidth":8
         },
      "2":
         {

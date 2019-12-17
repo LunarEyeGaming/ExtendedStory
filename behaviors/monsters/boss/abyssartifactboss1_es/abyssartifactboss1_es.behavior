@@ -172,7 +172,7 @@
 								  "name": "sequence",
 								  "parameters": {},
 								  "children": [
-									{
+									/*{
         							  "title": "abyssartifactboss1_es-minions",
         							  "type": "module",
         							  "name": "abyssartifactboss1_es-minions",
@@ -183,13 +183,21 @@
         							  "type": "module",
         							  "name": "abyssartifactboss1_es-vortex",
         							  "parameters": { }
-        							},
+        							},*/
 									{
-        							  "title": "abyssartifactboss1_es-explosivespells",
+        							  "title": "abyssartifactboss1_es-attack",
         							  "type": "module",
-        							  "name": "abyssartifactboss1_es-explosivespells",
+        							  "name": "abyssartifactboss1_es-attack",
         							  "parameters": { }
-        							}
+        							},
+                                    {
+                                      "title": "abyssartifactboss1_es-teleport",
+                                      "type": "module",
+                                      "name": "abyssartifactboss1_es-teleport",
+                                      "parameters": { 
+                                        "teleportDistance": {"value": 20}
+                                      }
+                                    }
 								  ]
 								}
 						      }

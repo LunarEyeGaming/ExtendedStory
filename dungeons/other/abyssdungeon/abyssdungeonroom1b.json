@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1rENgDAMRNHMwv4Vk9HSsQGKgzk5vv8ld5HCkxJgDHLuOnwGO3bsPjNj7xB27NjX1uwYduyV7OfLZFXVHvn\/yNxjZU12znZFSrviDkdS2hXn+OvzKPfK2LPaeVJW7Twpc7bTP3V9h8y4ut6j1e\/73WCwY4\/Yuw527Nh9hrx7AKAQErA=",
+         "data":"eJzt1kEOgCAMBVHO4v1XnoytO29gaKU\/pZ1JuiPBl4A6BnVuXn0GO3bsfWbFXiHs2LH71pwYduyZ7PfH7Cqr3fL\/sXMPz5qIovfNbI9OaVfcYUtKu+IO\/32e0\/bLdp6UZTtP6rq6Kaaq75AVV9W75P2+PwUGO3aLvepgx469z1DvXlW4DEQ=",
          "encoding":"base64",
          "height":37,
          "name":"front",
@@ -67,66 +67,6 @@
                  "width":8,
                  "x":8,
                  "y":184
-                }, 
-                {
-                 "gid":7709,
-                 "height":8,
-                 "id":1837,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 3.0, \"fireTimeVariance\" : 3.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":256,
-                 "y":64
-                }, 
-                {
-                 "gid":7709,
-                 "height":8,
-                 "id":1838,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 3.0, \"fireTimeVariance\" : 3.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":368,
-                 "y":64
-                }, 
-                {
-                 "gid":7709,
-                 "height":8,
-                 "id":1839,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"fireTime\" : 3.0, \"fireTimeVariance\" : 3.0, \"inaccuracy\" : 0.0, \"projectile\" : \"abyssvortex2\", \"projectileConfig\" : {\"speed\" : 25} }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":184,
-                 "y":64
                 }, 
                 {
                  "height":8,
@@ -328,6 +268,42 @@
                  "width":48,
                  "x":8,
                  "y":200
+                }, 
+                {
+                 "gid":8968,
+                 "height":16,
+                 "id":1852,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":360,
+                 "y":136
+                }, 
+                {
+                 "gid":8968,
+                 "height":16,
+                 "id":1853,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":272,
+                 "y":88
+                }, 
+                {
+                 "gid":8968,
+                 "height":16,
+                 "id":1854,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":184,
+                 "y":120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -398,7 +374,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1852,
+ "nextobjectid":1855,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
