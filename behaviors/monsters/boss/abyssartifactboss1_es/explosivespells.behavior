@@ -90,6 +90,14 @@
                   }
                 },
                 {
+                  "title": "playSound",
+                  "type": "action",
+                  "name": "playSound",
+                  "parameters": {
+                    "sound": {"value": "fire1"}
+                  }
+                },
+                {
                   "title": "timer",
                   "type": "action",
                   "name": "timer",

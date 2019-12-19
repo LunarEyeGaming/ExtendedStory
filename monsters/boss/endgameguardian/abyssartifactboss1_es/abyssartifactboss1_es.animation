@@ -5,10 +5,23 @@
         "priority" : 3,
         "default" : "idle",
         "states" : {
+          "invisible" : {},
+          "appear" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
           "idle" : {
             "frames" : 4,
             "cycle" : 1,
             "mode" : "loop"
+          },
+          "disappear" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "invisible"
           }
         }
       },
@@ -16,6 +29,13 @@
         "priority" : 3,
         "default" : "idle",
         "states" : {
+          "invisible" : {},
+          "appear" : {
+            "frames" : 7,
+            "cycle" : 0.35,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
           "idle" : {},
           "windup" : {
             "frames" : 2,
@@ -35,10 +55,11 @@
             "cycle" : 0.7,
             "mode" : "end"
           },
-          "miniontele" : {
-            "frames" : 6,
-            "cycle" : 0.6,
-            "mode" : "end"
+          "disappear" : {
+            "frames" : 7,
+            "cycle" : 0.35,
+            "mode" : "transition",
+            "transition" : "invisible"
           }
         }
       },
@@ -90,9 +111,14 @@
                 "image" : "<partImage>:vortextele.<frame>"
               }
             },
-            "miniontele" : {
+            "appear" : {
               "properties" : {
-                "image" : "<partImage>:miniontele.<frame>"
+                "image" : "<partImage>:appear.<frame>"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
               }
             }
           }
@@ -103,7 +129,6 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, 0.0],
-          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
@@ -111,6 +136,16 @@
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "appear" : {
+              "properties" : {
+                "image" : "<partImage>:appear.<frame>"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
               }
             }
           }
@@ -154,7 +189,8 @@
     "turnHostile" : [  ],
     "deathPuff" : [ ],
     "pupilOpen" : [ "/sfx/npc/monsters/anglure_windup.ogg" ],
-    "anomalywindup" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
+    "vortexWindup" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
+    "fire1" : [ "/sfx/melee/charge_full_swing1.ogg" ],
 	"beamwindup" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup.ogg"],
 	"beamfire" : ["/sfx/npc/boss/abyssartifactboss_abyssbeam2.ogg"],
 	"beamwindup2" : ["/sfx/npc/boss/abyssartifactboss_abyssbeamwindup2.ogg"],

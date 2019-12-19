@@ -200,7 +200,13 @@
                                     }
 								  ]
 								}
-						      }
+						      },
+                              {
+                                "title": "controlDown",
+                                "type": "action",
+                                "name": "controlDown",
+                                "parameters": {}
+                              }
 							]
                           }
 						]
@@ -276,41 +282,6 @@
                       "type": {"value": "None"}
                     }
                   },
-                  {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "normal"},
-                      "type": {"value": "shell"}
-                    }
-                  },
-                  {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "idle"},
-                      "type": {"value": "eyepupil"}
-                    }
-                  },
-                  {
-                    "title": "resetTransformationGroup",
-                    "type": "action",
-                    "name": "resetTransformationGroup",
-                    "parameters": {
-                      "transformationGroup": {"value": "eyepupil"}
-                    }
-                  },
-                  {
-                    "title": "setParticleEmitterActive",
-                    "type": "action",
-                    "name": "setParticleEmitterActive",
-                    "parameters": {
-                      "active": {"value": false},
-					  "emitter": {"value": "idle"}
-                    }
-                  },
 				  {
         			"title": "removeEphemeralEffect",
         			"type": "action",
@@ -318,15 +289,6 @@
         			"parameters": { 
 					  "name": {"value": "abyssalgazerattackimmunity"}
 					}
-        		  },
-        		  {
-        		    "title": "setParticleEmitterActive",
-        		    "type": "action",
-        		    "name": "setParticleEmitterActive",
-        		    "parameters": {
-        		      "active": {"value": false},
-        		      "emitter": {"value": "starattack"}
-        		    }
         		  },
 				  {
                     "title": "battleMusic",
@@ -343,15 +305,6 @@
                     "parameters": {
                       "percentage": {"value": 1},
                       "resource": {"value": "health"}
-                    }
-                  },
-                  {
-                    "title": "setGlobalTag",
-                    "type": "action",
-                    "name": "setGlobalTag",
-                    "parameters": {
-                      "tag": {"value": "1"},
-                      "type": {"value": "eyeState"}
                     }
                   },
                   {

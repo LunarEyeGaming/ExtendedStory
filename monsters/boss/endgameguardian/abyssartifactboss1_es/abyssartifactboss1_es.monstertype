@@ -63,15 +63,10 @@
       "collisionPoly" : [ [6, 3], [6, -3], [3, -6], [-3, -6], [-6, -3], [-6, 3], [-3, 6], [3, 6] ],
 
       "mass" : 4.0,
-      "walkSpeed" : 5,
-      "runSpeed" : 13,
+
       "flySpeed" : 11,
-      "airFriction" : 0.5,
+      "airFriction" : 4,
       "airForce" : 800.0,
-      "airJumpProfile" : {
-        "jumpControlForce" : 0,
-        "jumpInitialPercentage" : 0
-      },
       "physicsEffectCategories" : ["boss"]
     },
 

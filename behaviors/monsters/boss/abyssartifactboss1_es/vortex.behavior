@@ -58,7 +58,7 @@
             "type": "action",
             "name": "playSound",
             "parameters": {
-              "sound": {"value": "anomalywindup"}
+              "sound": {"value": "vortexWindup"}
             }
           },
           {
@@ -152,6 +152,14 @@
                     "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "projectile", "type": "abyssbossspell_es", "inheritDamageFactor": 1, "fuzzAngle": 15}]}},
                     "projectileType": {"value": "orbitalup"},
                     "scalePower": {"value": true}
+                  }
+                },
+                {
+                  "title": "playSound",
+                  "type": "action",
+                  "name": "playSound",
+                  "parameters": {
+                    "sound": {"value": "fire1"}
                   }
                 },
                 {
