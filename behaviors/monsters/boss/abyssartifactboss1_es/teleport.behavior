@@ -24,41 +24,58 @@
     "parameters": {},
     "children": [
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "disappear"},
-		  "type": {"value": "eye"}
-		}
-	  },
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "disappear"},
+          "type": {"value": "eye"}
+        }
+      },
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "disappear"},
-		  "type": {"value": "eyetentacles"}
-		}
-	  },
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "disappear"},
+          "type": {"value": "eyetentacles"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.45}
+          "time": {"value": 0.8}
         }
       },
       {
-        "title": "random",
-        "type": "action",
-        "name": "random",
+        "title": "abyssartifactboss1_es-teleporting",
+        "type": "module",
+        "name": "abyssartifactboss1_es-teleporting",
         "parameters": {
-          "max": {"key": "<maxAngle>"},
-          "min": {"key": "<minAngle>"}
+          "minAngle": {"key": "<minAngle>"},
+          "maxAngle": {"key": "<maxAngle>"},
+          "teleportDistance": {"key": "<teleportDistance>"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "entityDirection",
+        "type": "action",
+        "name": "entityDirection",
+        "parameters": {
+          "target": {"key": "target"}
         },
         "output": {
-          "number": "angle"
+          "vector": "aimVector"
         }
       },
       {
@@ -66,139 +83,73 @@
         "type": "action",
         "name": "vecMultiply",
         "parameters": {
-          "number": {"key": "<teleportDistance>"},
-          "first": {"value": [1, 0]}
+          "first": {"key": "aimVector"},
+          "second": {"value": ["facingDirection", 1]}
         },
         "output": {
-          "vector": "toTeleport"
+          "vector": "facingVector"
         }
       },
       {
-        "title": "vecRotate",
+        "title": "vecAngle",
         "type": "action",
-        "name": "vecRotate",
+        "name": "vecAngle",
         "parameters": {
-          "angle": {"key": "angle"},
-          "vector": {"key": "toTeleport"}
+          "vector": {"key": "facingVector"}
         },
         "output": {
-          "vector": "teleportOffset"
+          "angle": "targetAngle"
         }
       },
       {
-        "title": "entityPosition",
+        "title": "resetTransformationGroup",
         "type": "action",
-        "name": "entityPosition",
+        "name": "resetTransformationGroup",
         "parameters": {
-		  "entity": {"key": "target"}
-		},
-		"output": {
-		  "position": "targetPos"
-		}
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "offset": {"key": "teleportOffset"},
-          "position": {"key": "targetPos"}
-        },
-        "output": {
-          "position": "teleportPos"
+          "transformationGroup": {"value": "body"}
         }
       },
       {
-        "title": "setPosition",
+        "title": "rotateTransformationGroup",
         "type": "action",
-        "name": "setPosition",
+        "name": "rotateTransformationGroup",
         "parameters": {
-          "position": {"key": "teleportPos"}
+          "transformationGroup": {"value": "body"},
+          "angle": {"key": "targetAngle"}
         }
       },
       {
-          "title": "entityDirection",
-          "type": "action",
-          "name": "entityDirection",
-          "parameters": {
-            "target": {"key": "target"}
-          },
-          "output": {
-            "vector": "aimVector"
-          }
-        },
-        {
-          "title": "vecMultiply",
-          "type": "action",
-          "name": "vecMultiply",
-          "parameters": {
-            "first": {"key": "aimVector"},
-            "second": {"value": ["facingDirection", 1]}
-          },
-          "output": {
-            "vector": "facingVector"
-          }
-        },
-        {
-          "title": "vecAngle",
-          "type": "action",
-          "name": "vecAngle",
-          "parameters": {
-            "vector": {"key": "facingVector"}
-          },
-          "output": {
-            "angle": "targetAngle"
-          }
-        },
-        {
-          "title": "resetTransformationGroup",
-          "type": "action",
-          "name": "resetTransformationGroup",
-          "parameters": {
-            "transformationGroup": {"value": "body"}
-          }
-        },
-        {
-          "title": "rotateTransformationGroup",
-          "type": "action",
-          "name": "rotateTransformationGroup",
-          "parameters": {
-            "transformationGroup": {"value": "body"},
-            "angle": {"key": "targetAngle"}
-          }
-        },
-        {
-          "title": "faceEntity",
-          "type": "action",
-          "name": "faceEntity",
-          "parameters": {
-            "entity": {"key": "target"}
-          }
-        },
+        "title": "faceEntity",
+        "type": "action",
+        "name": "faceEntity",
+        "parameters": {
+          "entity": {"key": "target"}
+        }
+      },
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "appear"},
-		  "type": {"value": "eye"}
-		}
-	  },
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "appear"},
+          "type": {"value": "eye"}
+        }
+      },
       {
-	    "title": "setAnimationState",
-		"type": "action",
-		"name": "setAnimationState",
-		"parameters": {
-		  "state": {"value": "appear"},
-		  "type": {"value": "eyetentacles"}
-		}
-	  },
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "appear"},
+          "type": {"value": "eyetentacles"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.35}
+          "time": {"value": 0.7}
         }
       }
     ]

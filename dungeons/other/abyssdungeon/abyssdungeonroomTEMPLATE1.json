@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzzEBADAMwKBqmX9pPSphQsKBAHZmlqx7He7u7h3u7u4d7u7uHe7u7h3u7u4d7u7uHe7u9TstH9xEODE=",
+         "data":"eJztz0EBADAIACGzrOF6G8Igx4MA7MwsWf91uLu7d7i7u3e4u7t3uLu7d7i7u3e4u7t3uLvX77Qco1EEeA==",
          "encoding":"base64",
          "height":32,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1KERwDAQA8GvJf0XZ\/TYDQQYJPMz1oLjWqKuqlZs68mJnZ09pxP79P\/+9eHs7Ozs7OzTu9nZ2dnZv7NLUkJvf3hr7OzsOU1\/q2bbxX\/gag==",
+         "data":"eJzt1LENwDAMA0HNkg29vGovkMJFAgHmFd\/zGnZVtWJbT07s7Ow5ndin\/\/evD2dnZ2dnZ5\/ezc7Ozs7+nV2SEnr7w1tjZ2fPafpbNdsGPed7Kw==",
          "encoding":"base64",
          "height":32,
          "name":"front",
@@ -69,7 +69,7 @@
                  "y":184
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1831,
                  "name":"",
@@ -81,7 +81,7 @@
                  "y":200
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1832,
                  "name":"",
@@ -305,22 +305,18 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8953,
+         "firstgid":8826,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,

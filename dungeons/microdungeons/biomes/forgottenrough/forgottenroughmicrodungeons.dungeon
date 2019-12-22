@@ -5,7 +5,7 @@
     "rules" : [
     ],
 
-    "anchor" : [ "forgotten1", "forgotten2" ],
+    "anchor" : [ "rottedgraveyard", "rottedhive", "rottemple1", "rottedtomb", "rottedpit", "rottedwell" ],
 
     "gravity" : 80,
     "maxRadius" : 1000000,
@@ -15,18 +15,46 @@
 
   "parts" : [
     {
-      "name" : "forgotten1",
+      "name" : "rottedgraveyard",
       "rules" : [
         [ "maxSpawnCount", [1] ]
       ],
-      "def" : [ "tmx", "forgotten1.json" ]
+      "def" : [ "tmx", "rottedgraveyard.json" ]
     },
     {
-      "name" : "forgotten2",
+      "name" : "rottedhive",
       "rules" : [
         [ "maxSpawnCount", [1] ]
       ],
-      "def" : [ "tmx", "forgotten2.json" ]
+      "def" : [ "tmx", "rottedhive.json" ]
+    },
+	{
+      "name" : "rottemple1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "rottemple1.json" ]
+    },
+	{
+      "name" : "rottedtomb",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "rottedtomb.json" ]
+    },
+	{
+      "name" : "rottedpit",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "rottedpit.json" ]
+    },
+	{
+      "name" : "rottedwell",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "rottedwell.json" ]
     }
   ]
 }

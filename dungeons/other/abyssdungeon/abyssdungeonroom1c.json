@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzzEBADAMwKBqmX9pPSphQsKBAHZmlqx7He7u7h3u7u4d7u7uHe7u7h3u7u4d7u7uHe7u9TstH9xEODE=",
+         "data":"eJztz0EBADAIACGzrOF6G8Igx4MA7MwsWf91uLu7d7i7u3e4u7t3uLu7d7i7u3e4u7t3uLvX77Qco1EEeA==",
          "encoding":"base64",
          "height":32,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1aERwDAMBEHX4v5RKksJ4Z6AREz6vZlnIou0lpK7d87Y2dlz9sU+IXZ29tpNx9jZ2Ws3HWNnZ6\/ddGyqS5L+dgXt7O0XTB07e7pdWT2l9Oyf",
+         "data":"eJzt1bERgDAMBEHX4g5pjQrJPQSgTPq9mc+UbKS1lNy1c8bOzp6zL\/YJsbOz1246xs7OXrvpGDs7e+2mY1NdkvS3O2hnb79g6tjZ0+3K6gGrWaSl",
          "encoding":"base64",
          "height":32,
          "name":"front",
@@ -145,7 +145,7 @@
                  "y":160
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1835,
                  "name":"",
@@ -157,7 +157,7 @@
                  "y":200
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1836,
                  "name":"",
@@ -169,7 +169,7 @@
                  "y":200
                 }, 
                 {
-                 "gid":8965,
+                 "gid":8838,
                  "height":16,
                  "id":1837,
                  "name":"",
@@ -181,7 +181,7 @@
                  "y":152
                 }, 
                 {
-                 "gid":8966,
+                 "gid":8839,
                  "height":16,
                  "id":1838,
                  "name":"",
@@ -405,22 +405,18 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8953,
+         "firstgid":8826,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,

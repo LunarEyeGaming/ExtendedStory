@@ -1,12 +1,12 @@
-require "/scripts/extendedstorymisc.lua"
+require "/scripts/extendedstoryutil.lua"
 
---Makes the destroyer spawn
+-- Makes the destroyer spawn
 
 local oldUpdate = update
 
 function update(dt)
   oldUpdate(dt)
-  chancesList = {
+  chancesList = { -- A list of maximum numbers in the order of the tier. Think of it as "1 in x chance".
     2000,
 	300,
 	200,
@@ -20,7 +20,7 @@ function update(dt)
   }
   threatLevel = world.threatLevel()
   if status.resourceMax("health") >= 160 then
-    if world.timeOfDay() <= 0.1 and world.timeOfDay() >= 0 then  -- If the world is experiencing sunrise
+    if 0 <= world.timeOfDay() and world.timeOfDay() <= 0.1 then  -- Checks if the world is in sunrise
 	  worldTimeRange = true
 	else
 	  worldTimeRange = false

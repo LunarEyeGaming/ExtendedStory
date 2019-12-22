@@ -12,6 +12,7 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
+    "projectileOffset" : [0, 0]
   },
   "root": {
     "title": "parallel",
@@ -143,12 +144,35 @@
                   }
                 },
                 {
+                  "title": "vecAngle",
+                  "type": "action",
+                  "name": "vecAngle",
+                  "parameters": {
+                    "vector": {"key": "aimVector"}
+                  },
+                  "output": {
+                    "angle": "targetAngle"
+                  }
+                },
+                {
+                  "title": "vecRotate",
+                  "type": "action",
+                  "name": "vecRotate",
+                  "parameters": {
+                    "vector": {"key": "<projectileOffset>"},
+                    "angle": {"key": "targetAngle"}
+                  },
+                  "output": {
+                    "vector": "projectileOffsetTranslated"
+                  }
+                },
+                {
                   "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
-                    "offset": {"value": [2, 0]},
+                    "offset": {"key": "projectileOffsetTranslated"},
                     "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "projectile", "type": "abyssbossspell_es", "inheritDamageFactor": 1, "fuzzAngle": 15}]}},
                     "projectileType": {"value": "orbitalup"},
                     "scalePower": {"value": true}

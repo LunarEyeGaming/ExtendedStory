@@ -21,6 +21,7 @@
       "chance" : 0
     },
 
+    //---------------HALLS
     {
       "name" : "hall1",
       "rules" : [
@@ -94,6 +95,7 @@
       "chance" : 2
     },
 
+    //---------------JUNCTIONS
     {
       "name" : "junction1",
       "rules" : [
@@ -131,6 +133,7 @@
       "chance" : 2
     },
 
+    //---------------CORNERS
     {
       "name" : "corner1a",
       "rules" : [
@@ -260,12 +263,21 @@
       "chance" : 1
     },
 
+    //---------------END CAPS
     {
       "name" : "endtop",
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
       "def" : [ "tmx", "abyssdungeonendcaptop.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "endtop2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "abyssdungeonendcaptop2.json" ],
       "chance" : 0
     },
     {
@@ -277,6 +289,14 @@
       "chance" : 0
     },
     {
+      "name" : "endbot2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "abyssdungeonendcapbot2.json" ],
+      "chance" : 0
+    },
+    {
       "name" : "endleft",
       "rules" : [
         [ "ignorePartMaximumRule" ]
@@ -285,11 +305,27 @@
       "chance" : 0
     },
     {
+      "name" : "endleft2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "abyssdungeonendcapleft2.json" ],
+      "chance" : 0
+    },
+    {
       "name" : "endright",
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
       "def" : [ "tmx", "abyssdungeonendcapright.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "endright2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "abyssdungeonendcapright2.json" ],
       "chance" : 0
     }
   ]

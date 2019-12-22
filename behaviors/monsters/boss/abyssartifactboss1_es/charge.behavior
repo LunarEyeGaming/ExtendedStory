@@ -152,6 +152,47 @@
         }
       },
       {
+        "title": "unsetFlag",
+        "type": "action",
+        "name": "unsetFlag",
+        "parameters": {
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
+        "title": "removeEphemeralEffect",
+        "type": "action",
+        "name": "removeEphemeralEffect",
+        "parameters": {
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": true}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "charge"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "afterimage"},
+          "active": {"value": true}
+        }
+      },
+      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -186,11 +227,28 @@
         ]
       },
       {
-        "title": "setVelocity",
+        "title": "setFlag",
         "type": "action",
-        "name": "setVelocity",
+        "name": "setFlag",
         "parameters": {
-          "velocity": {"value": [0, 0]}
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": false}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "afterimage"},
+          "active": {"value": false}
         }
       }
     ]

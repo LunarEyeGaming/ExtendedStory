@@ -1,4 +1,4 @@
-require "/scripts/extendedstorymisc.lua"
+require "/scripts/extendedstoryutil.lua"
 
 function init()
   --Defining parameters setBonuses, chestSlotCheck, pantsSlotCheck, setBonusStats, and bonusStatsAdded

@@ -1,4 +1,4 @@
-require "/scripts/extendedstorymisc.lua"
+require "/scripts/extendedstoryutil.lua"
 
 function init()
   script.setUpdateDelta(1)

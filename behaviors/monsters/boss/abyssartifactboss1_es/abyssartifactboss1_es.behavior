@@ -28,6 +28,14 @@
         }
       },
       {
+        "title": "setFlag",
+        "type": "action",
+        "name": "setFlag",
+        "parameters": {
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
@@ -50,7 +58,7 @@
             "name": "monster-targeting",
             "parameters": {
               "targetQueryRange": {"value": 80},
-              "keepTargetInRange": {"value": 100},
+              "keepTargetInRange": {"value": 1000},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
@@ -96,20 +104,12 @@
                     "name": "sequence",
                     "parameters": {},
                     "children": [
-					  /*{
-					    "title" : "abyssartifactboss-intro",
+					  {
+					    "title" : "abyssartifactboss1_es-intro",
 						"type" : "module",
-						"name" : "abyssartifactboss-intro",
+						"name" : "abyssartifactboss1_es-intro",
 						"parameters" : {}
-					  },*/
-                      {
-                        "title": "timer",
-                        "type": "action",
-                        "name": "timer",
-                        "parameters": {
-                          "time": {"value": 2.0}
-                        }
-                      },
+					  },
 					  {
                         "title": "battleMusic",
                         "type": "action",
@@ -158,6 +158,29 @@
                                   "resource": {"value": "health"}
                                 }
                               },
+                              {
+                                "title": "succeeder",
+                                "type": "decorator",
+                                "name": "succeeder",
+                                "parameters": {},
+                                "child": {
+                                  "title": "optional",
+                                  "type": "decorator",
+                                  "name": "optional",
+                                  "parameters": {
+                                    "shouldRun": {"key": "invulnerable"}
+                                  },
+                                  "child": {
+                                    "title": "addEphemeralEffect",
+                                    "type": "action",
+                                    "name": "addEphemeralEffect",
+                                    "parameters": {
+                                      "duration": {"value": 0.1},
+                                      "name": {"value": "invulnerable"}
+                                    }
+                                  }
+                                }
+                              },
 							  {
 								"title": "repeater",
 								"type": "decorator",
@@ -172,18 +195,6 @@
 								  "name": "sequence",
 								  "parameters": {},
 								  "children": [
-									/*{
-        							  "title": "abyssartifactboss1_es-minions",
-        							  "type": "module",
-        							  "name": "abyssartifactboss1_es-minions",
-        							  "parameters": { }
-        							},
-									{
-        							  "title": "abyssartifactboss1_es-vortex",
-        							  "type": "module",
-        							  "name": "abyssartifactboss1_es-vortex",
-        							  "parameters": { }
-        							},*/
 									{
         							  "title": "abyssartifactboss1_es-attack",
         							  "type": "module",
@@ -275,21 +286,31 @@
                     }
                   },
                   {
-                    "title": "setDamageBar",
+                    "title": "setAnimationState",
                     "type": "action",
-                    "name": "setDamageBar",
+                    "name": "setAnimationState",
                     "parameters": {
-                      "type": {"value": "None"}
+                      "state": {"value": "invisible"},
+                      "type": {"value": "eye"}
                     }
                   },
-				  {
-        			"title": "removeEphemeralEffect",
-        			"type": "action",
-        			"name": "removeEphemeralEffect",
-        			"parameters": { 
-					  "name": {"value": "abyssalgazerattackimmunity"}
-					}
-        		  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "invisible"},
+                      "type": {"value": "eyetentacles"}
+                    }
+                  },
+                  {
+                    "title": "resetTransformationGroup",
+                    "type": "action",
+                    "name": "resetTransformationGroup",
+                    "parameters": {
+                      "transformationGroup": {"value": "body"}
+                    }
+                  },
 				  {
                     "title": "battleMusic",
                     "type": "action",

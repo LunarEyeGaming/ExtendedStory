@@ -4,27 +4,27 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzTENACAMAMF6wQhuMVcRJIQBBe3ADT\/8dBkR+Wfzdn6N2vh8Pp\/P5\/P5fD6f3+M\/X12rvwEmbmWO",
+         "data":"eJztzTERACAQA8F4wQhuMYcIGigw8BRscTNJtTPJ\/K9+9mh1bZfNZrPZbDabzWaz2bl+Zc\/sBVz0SwY=",
          "encoding":"base64",
          "height":32,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":32,
+         "width":31,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt07EJACAMRcHs4vD2TihOIEgigvfgt7kqEVr1dnd8\/s7Pis\/n8\/n87Nt8foY\/Cnf6f5Xjv+X\/2gSPilUm",
+         "data":"eJxjYBjZYLky\/fCo3aN2E1JDDhi1e9TuUbtH7R61e+TYTSswaveo3ehgE40wuXmMVnjU7oG3e6QBACyhTVo=",
          "encoding":"base64",
          "height":32,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":32,
+         "width":31,
          "x":0,
          "y":0
         }, 
@@ -91,8 +91,8 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":184,
-                 "y":136
+                 "x":128,
+                 "y":152
                 }, 
                 {
                  "height":8,
@@ -146,7 +146,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":176,
+                 "x":168,
                  "y":200
                 }, 
                 {
@@ -194,7 +194,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":192,
+                 "x":184,
                  "y":200
                 }, 
                 {
@@ -455,5 +455,5 @@
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":32
+ "width":31
 }

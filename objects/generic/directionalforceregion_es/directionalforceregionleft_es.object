@@ -1,0 +1,44 @@
+{
+  "objectName" : "directionalforceregionleft_es",
+  "objectType" : "physics",
+  "colonyTags" : ["wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "...",
+  "shortdescription" : "Directional Force Region (Left)",
+  "race" : "generic",
+
+  "category" : "wire",
+  "price" : 100,
+
+  "inventoryIcon" : "jumppadicon.png",
+  "orientations" : [
+    {
+      "image" : "arrowleft.png",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/forcepad/forcepad.lua" ],
+  "scriptDelta" : 0,
+
+  "animation" : "/objects/wired/forcepad/forcepad.animation",
+
+  "animationParts" : {
+    "forcepad" : "directionalforceregion.png"
+  },
+  "animationPosition" : [-8, -8],
+
+  "inputNodes" : [ [-1, 0] ],
+  "physicsForces" : {
+    "jumpForce" : {
+      "type" : "DirectionalForceRegion",
+      "rectRegion" : [-2, 0, 2, 4],
+      "xTargetVelocity" : -60,
+      "controlForce" : 1600
+    }
+  }
+}

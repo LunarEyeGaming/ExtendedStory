@@ -4,27 +4,27 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzTENACAMAMF6wQhuMVcRJIQBBe3ADT\/8dBkR+Wfzdn6N2vh8Pp\/P5\/P5fD6f3+M\/X12rvwEmbmWO",
+         "data":"eJztzUEJACAUBcHXxSK2tdwPIYhgAz04h4W9TSWpv+q79aMlt2Kz2Ww2m81ms9ls9rEf9cyeHjhSxg==",
          "encoding":"base64",
          "height":32,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":32,
+         "width":31,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJztzrENADAIA0HvkuHpM2HEBKSABIl\/yfVZIs\/W2+HjR35W+Pj4+Pj4P\/ysj\/iz\/K263fiVw+\/lT+0A0etVJg==",
+         "data":"eJztzcEJACAMBMH0YvH+rdASFCHxkVm438FE9G6OurHZp89LbDabzWZXxGavyNmNnTX2f7tbGx46TVo=",
          "encoding":"base64",
          "height":32,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":32,
+         "width":31,
          "x":0,
          "y":0
         }, 
@@ -53,7 +53,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":240,
+                 "x":232,
                  "y":184
                 }, 
                 {
@@ -72,7 +72,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":88,
+                 "x":144,
                  "y":88
                 }, 
                 {
@@ -91,7 +91,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":96,
+                 "x":88,
                  "y":152
                 }, 
                 {
@@ -103,7 +103,7 @@
                  "type":"",
                  "visible":true,
                  "width":48,
-                 "x":192,
+                 "x":184,
                  "y":200
                 }, 
                 {
@@ -115,7 +115,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":160,
+                 "x":152,
                  "y":200
                 }, 
                 {
@@ -127,7 +127,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":136,
+                 "x":128,
                  "y":200
                 }, 
                 {
@@ -139,7 +139,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":192,
+                 "x":184,
                  "y":200
                 }, 
                 {
@@ -151,7 +151,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":120,
+                 "x":112,
                  "y":200
                 }, 
                 {
@@ -163,7 +163,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":72,
+                 "x":64,
                  "y":200
                 }, 
                 {
@@ -175,7 +175,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":152,
+                 "x":144,
                  "y":200
                 }, 
                 {
@@ -187,7 +187,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":112,
+                 "x":104,
                  "y":200
                 }, 
                 {
@@ -199,7 +199,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":64,
+                 "x":56,
                  "y":200
                 }, 
                 {
@@ -211,7 +211,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":96,
+                 "x":88,
                  "y":200
                 }],
          "opacity":1,
@@ -448,5 +448,5 @@
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":32
+ "width":31
 }

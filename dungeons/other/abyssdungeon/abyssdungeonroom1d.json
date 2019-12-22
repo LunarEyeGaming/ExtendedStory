@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2bEJwDAMRUHN4v1Hc5Fs4BEMJjE2\/4pXqBFcJ1Cvqq7YnpYTOzt7Trvt72TeuY+dnZ09IXZ29pzY2dnXOulmYWdnZ\/\/LfmPs7Ow5ff3P010NUYE4WQ==",
+         "data":"eJzt2bEJwDAMRUHNkg2duT2ERzCYxNj8K16hRnCdQL2qumJrT07s7Ow57ba\/k3nnPnZ2dvaE2NnZc2JnZ1\/rpJuFnZ2d\/S\/7jbGzs+f09T9PdzUAGI4EoA==",
          "encoding":"base64",
          "height":32,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztl1EKgDAMQ3eW3f\/L+3gHvYH4IchWtXTdVkwC+RCy6KNjakoUsraMY7KTnew41rBbz8gWzeiz3nPPtVvk3ce5k5173pbRdq+p9iJYyo3o68n+lLvP8i03um8Ee9Qc2clO9m\/ua13UM0ybs7LvxZrzuuXd5d1n5fKU9zNEYNIq+vdfTyHPHZk98p6X\/g08Lc1pVl8pqeuvJjvZ0dkpLB23+yXF",
+         "data":"eJztl1EKgDAMQ3eW3dAdzft4F\/FDkFm1dN1WTAL5ELLoo2NqShSyloxjspOd7DjWsFvPyBbN6LPes+S7W+Tdx7mTnXveltF2b+nuVbCUG9HXk\/0pd53lW2503wj2qDmyk53s39znuqhnmDZnZS\/VmuO65d3l3Wfl8pT3M0Rg0ir6919PIc8dmT3ynpf+DTwtzWlWXy2p668mO9nR2Sks7UstXMA=",
          "encoding":"base64",
          "height":32,
          "name":"front",
@@ -69,7 +69,7 @@
                  "y":184
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1837,
                  "name":"",
@@ -81,7 +81,7 @@
                  "y":200
                 }, 
                 {
-                 "gid":8953,
+                 "gid":8826,
                  "height":40,
                  "id":1838,
                  "name":"",
@@ -93,7 +93,7 @@
                  "y":200
                 }, 
                 {
-                 "gid":8964,
+                 "gid":8837,
                  "height":16,
                  "id":1839,
                  "name":"",
@@ -105,7 +105,7 @@
                  "y":80
                 }, 
                 {
-                 "gid":8964,
+                 "gid":8837,
                  "height":16,
                  "id":1840,
                  "name":"",
@@ -117,7 +117,7 @@
                  "y":184
                 }, 
                 {
-                 "gid":8964,
+                 "gid":8837,
                  "height":16,
                  "id":1841,
                  "name":"",
@@ -129,7 +129,7 @@
                  "y":80
                 }, 
                 {
-                 "gid":8964,
+                 "gid":8837,
                  "height":16,
                  "id":1843,
                  "name":"",
@@ -141,7 +141,7 @@
                  "y":184
                 }, 
                 {
-                 "gid":8969,
+                 "gid":8842,
                  "height":16,
                  "id":1844,
                  "name":"",
@@ -153,7 +153,7 @@
                  "y":192
                 }, 
                 {
-                 "gid":8969,
+                 "gid":8842,
                  "height":16,
                  "id":1845,
                  "name":"",
@@ -165,7 +165,7 @@
                  "y":88
                 }, 
                 {
-                 "gid":8969,
+                 "gid":8842,
                  "height":16,
                  "id":1846,
                  "name":"",
@@ -389,22 +389,18 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8953,
+         "firstgid":8826,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,

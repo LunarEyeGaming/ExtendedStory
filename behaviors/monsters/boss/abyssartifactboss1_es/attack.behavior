@@ -23,7 +23,9 @@
         "title": "abyssartifactboss1_es-explosivespells",
         "type": "module",
         "name": "abyssartifactboss1_es-explosivespells",
-        "parameters": {}
+        "parameters": {
+          "projectileOffset": {"value": [2, 0]}
+        }
       },
       {
         "title": "abyssartifactboss1_es-charge",
@@ -35,6 +37,14 @@
         "title": "abyssartifactboss1_es-vortex",
         "type": "module",
         "name": "abyssartifactboss1_es-vortex",
+        "parameters": {
+          "projectileOffset": {"value": [2, 0]}
+        }
+      },
+      {
+        "title": "abyssartifactboss1_es-bite",
+        "type": "module",
+        "name": "abyssartifactboss1_es-bite",
         "parameters": {}
       }
     ]

@@ -4,27 +4,27 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCnAV+fAAE=",
+         "data":"eJzt2bENAkEQBMHL4TMgNwIgfwcTB+vF0mtUSWOf2VrdOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUXo\/dA4BJded0EIBS3TkdBKBUd04HASjVndNBAEp153QQgFLdOR0EoFR3TgcBKNWd00EASnXndBCAUt05HQSgVHdOBwEo1Z3TQQBKded0EIBS3TkdBKBUd04HASjVndNBAEp153QQgFLdOR0EoFR3TgcBKE316\/llOgjANpMdvM5nOgjARtMddA8CsNm\/7sHr5lsAMGmyg\/4HAdhuqoO\/GgBMqjungwCU6s7pIAClunM6CECp7pwOAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwxxu15qxj",
          "encoding":"base64",
          "height":150,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":150,
+         "width":450,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJztwzENAAAIA7D594gXFOyEq02aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCf0YMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzQIcmoF\/",
+         "data":"eJzt3DEOwjAQRcGchRvCfbkLLUIkOE7s3bAz0q+93eu8LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEut9yDwBGiu6cDgIQKbpzOghApLN69XibDgJwFS1ta2nf53QQgCtYa89W41q39YYOApDBqA7+ekMHAchgqz3fuqaDAPyTnvbsaeDaGzoIQAY6CEBlve1pbeCMWwCgV6b2ZLoFgBoytSfTLQDUkKk9mW4BoIZM7cl0CwDMpoMAVKaDAFSmgwBUpoMAVKaDAMyWqT2ZbgGghrX2RDRJBwGYbW8Hz2yUf7YBiHa0g0d6pYMARNNBRniamV1kLS2KHACMFN05HQQgUnTndBCASNGd00EAIkV3TgcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjxAtnYqzE=",
          "encoding":"base64",
          "height":150,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":150,
+         "width":450,
          "x":0,
          "y":0
         }, 
@@ -53,7 +53,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":592,
+                 "x":2592,
                  "y":600
                 }, 
                 {
@@ -74,8 +74,41 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":592,
-                 "y":464
+                 "x":2104,
+                 "y":544
+                }, 
+                {
+                 "gid":8830,
+                 "height":40,
+                 "id":1860,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":2392,
+                 "y":560
+                }, 
+                {
+                 "height":600,
+                 "id":1861,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"music\" : [\"\/music\/thehive-by-kevinmacleod.ogg\"], \"uniqueId\" : \"bossmusic\" }",
+                     "stagehand":"bossmusic"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2400,
+                 "x":0,
+                 "y":0
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -146,7 +179,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1860,
+ "nextobjectid":1862,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -290,30 +323,26 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
-        }, 
-        {
-         "firstgid":8920,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/rail.json"
         }, 
         {
-         "firstgid":8924,
+         "firstgid":8797,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/railpoint.json"
         }, 
         {
-         "firstgid":8929,
+         "firstgid":8802,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8953,
+         "firstgid":8826,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
         }, 
         {
-         "firstgid":8957,
+         "firstgid":8830,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":150
+ "width":450
 }

@@ -1,5 +1,5 @@
 require "/scripts/stagehandutil.lua"
-require "/scripts/extendedstorymisc.lua"
+require "/scripts/extendedstoryutil.lua"
 
 function init()
   self.players = {}

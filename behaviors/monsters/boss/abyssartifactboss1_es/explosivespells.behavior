@@ -12,6 +12,8 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
+    "projectileOffset" : [0, 0],
+    "projectilePower" : 5
   },
   "root": {
     "title": "parallel",
@@ -78,12 +80,35 @@
                   }
                 },
                 {
+                  "title": "vecAngle",
+                  "type": "action",
+                  "name": "vecAngle",
+                  "parameters": {
+                    "vector": {"key": "aimVector"}
+                  },
+                  "output": {
+                    "angle": "targetAngle"
+                  }
+                },
+                {
+                  "title": "vecRotate",
+                  "type": "action",
+                  "name": "vecRotate",
+                  "parameters": {
+                    "vector": {"value": "<projectileOffset>"},
+                    "angle": {"key": "targetAngle"}
+                  },
+                  "output": {
+                    "vector": "projectileOffsetTranslated"
+                  }
+                },
+                {
                   "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
-                    "offset": {"value": [2, 0]},
+                    "offset": {"key": "projectileOffsetTranslated"},
                     "projectileConfig": {"value": {}},
                     "projectileType": {"value": "abyssbossspellexplosive_es"},
                     "scalePower": {"value": true}
