@@ -1,0 +1,39 @@
+{
+  "projectileName" : "gravwarpmine_es",
+  "physics" : "hover",
+  "bounces" : -1,
+  "movementSettings" : {
+    "bounceFactor" : 1.0
+  },
+  "image" : "gravwarpmine.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 8,
+  "power" : 1,
+  "speed" : 50,
+  "timeToLive" : 15,
+  
+  "actionOnCollide" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
+	}
+  ],
+  
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
+	},
+    {
+	  "action" : "projectile",
+	  "type" : "gravwarpsingularitysmall_es",
+      "inheritDamageFactor" : 1
+	}
+  ],
+  "supportsProcessing" : true,
+  "lightColor" : [80, 190, 60],
+  "fullbright" : true,
+  "damageKind" : "plasma",
+  
+  "scripts" : [ "/projectiles/guns/grenades/proximitymines/proximitymine.lua" ]
+}

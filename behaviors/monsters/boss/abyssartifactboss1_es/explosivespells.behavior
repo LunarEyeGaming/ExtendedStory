@@ -109,7 +109,7 @@
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
                     "offset": {"key": "projectileOffsetTranslated"},
-                    "projectileConfig": {"value": {}},
+                    "projectileConfig": {"value": {"power": 15}},
                     "projectileType": {"value": "abyssbossspellexplosive_es"},
                     "scalePower": {"value": true}
                   }

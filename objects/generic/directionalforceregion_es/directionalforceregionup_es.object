@@ -1,0 +1,44 @@
+{
+  "objectName" : "directionalforceregionup_es",
+  "objectType" : "physics",
+  "colonyTags" : ["wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "...",
+  "shortdescription" : "Directional Force Region (Up)",
+  "race" : "generic",
+
+  "category" : "wire",
+  "price" : 100,
+
+  "inventoryIcon" : "jumppadicon.png",
+  "orientations" : [
+    {
+      "image" : "arrowup.png",
+      "imagePosition" : [-8, -8],
+
+      "spaceScan" : 0.1
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/forcepad/forcepad.lua" ],
+  "scriptDelta" : 0,
+
+  "animation" : "/objects/wired/forcepad/forcepad.animation",
+
+  "animationParts" : {
+    "forcepad" : "directionalforceregion.png"
+  },
+  "animationPosition" : [-8, -8],
+
+  "inputNodes" : [ [-1, 0] ],
+  "physicsForces" : {
+    "jumpForce" : {
+      "type" : "DirectionalForceRegion",
+      "rectRegion" : [-1, -1, 1, 1],
+      "yTargetVelocity" : 60,
+      "controlForce" : 1600,
+      "categoryBlacklist" : ["projectile", "boss"]
+    }
+  }
+}

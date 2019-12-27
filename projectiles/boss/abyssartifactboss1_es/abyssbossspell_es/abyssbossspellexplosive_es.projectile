@@ -6,6 +6,7 @@
   "flippable" : true,
   "fullbright" : true,
   "bounces" : 0,
+  "damageKind" : "abyss",
   "damageKindImage" : "icon.png",
   "physics" : "laser",
   "movementSettings" : {
@@ -24,7 +25,7 @@
         {
           "action" : "projectile",
           "type" : "abyssbosscloud_es",
-          "inheritDamageFactor" : 1,
+          "inheritDamageFactor" : 0.2,
           "fuzzAngle" : 180
         }
       ]

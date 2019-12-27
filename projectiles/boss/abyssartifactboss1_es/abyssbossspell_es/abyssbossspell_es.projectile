@@ -6,6 +6,7 @@
   "flippable" : true,
   "fullbright" : true,
   "bounces" : 0,
+  "damageKind" : "abyss",
   "damageKindImage" : "icon.png",
   "physics" : "laser",
   "movementSettings" : {
@@ -19,5 +20,6 @@
   "damagePoly" : [ [-1, 0], [2, -6], [8, -9], [14, -6], [17, 0], [14, 6], [8, 9], [2, 6] ],
 
   "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
-  "scriptDelta" : 1
+  "scriptDelta" : 1,
+  "statusEffects" : [ "abysseffect" ]
 }

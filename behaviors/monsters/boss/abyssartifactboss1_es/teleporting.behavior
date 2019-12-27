@@ -11,6 +11,7 @@
     "/scripts/actions/time.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/sensor.lua",
+    "/scripts/actions/sensor_es.lua",
     "/scripts/actions/boss/abyssartifactboss1_es.lua"
   ],
   "parameters": {
@@ -38,14 +39,14 @@
           "name": "sequence",
           "parameters": {},
           "children": [
-            /*{
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
                 "time": {"value": 0.01}
               }
-            },*/
+            },
             {
               "title": "random",
               "type": "action",
@@ -111,29 +112,44 @@
               "name": "inverter",
               "parameters": {},
               "child": {
-                "title": "sequence",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "pointTileCollision",
-                    "type": "action",
-                    "name": "pointTileCollision",
-                    "parameters": {
-                      "position": {"key": "teleportPos"}
-                    }
-                  },
-                  {
-                    "title": "lineTileCollision",
-                    "type": "action",
-                    "name": "lineTileCollision",
-                    "parameters": {
-                      "position": {"key": "targetPos"},
-                      "offset": {"key": "teleportOffset"}
-                    }
-                  }
-                ]
+                "title": "pointTileCollision",
+                "type": "action",
+                "name": "pointTileCollision",
+                "parameters": {
+                  "position": {"key": "teleportPos"}
+                }
+              }
+            },
+            {
+              "title": "inverter",
+              "type": "decorator",
+              "name": "inverter",
+              "parameters": {},
+              "child": {
+                "title": "isMaterial",
+                "type": "action",
+                "name": "isMaterial",
+                "parameters": {
+                  "material": {"value": "darkobsidianbrick"},
+                  "position": {"key": "teleportPos"},
+                  "layer": {"value": "background"}
+                }
+              }
+            },
+            {
+              "title": "inverter",
+              "type": "decorator",
+              "name": "inverter",
+              "parameters": {},
+              "child": {
+                "title": "lineTileCollision",
+                "type": "action",
+                "name": "lineTileCollision",
+                "parameters": {
+                  "collisionType": {"value": ["Null", "Block", "Dynamic"]},
+                  "position": {"key": "targetPos"},
+                  "offset": {"key": "teleportOffset"}
+                }
               }
             },
             {

@@ -3,8 +3,9 @@
   "blockingStat" : "abysseffectImmunity",
 
   "effectConfig" : {
-	"tickTime" : 2,
-    "maxHealthChange" : -5
+	"tickTime" : 1,
+    "tickDamage" : 20,
+    "directives" : "multiply=34153bc0"
   },
   "defaultDuration" : 5.0,
 
@@ -14,6 +15,6 @@
 
   "animationConfig" : "abysseffect.animation",
 
-  "label" : "Dark Sap - The darkness is leaching away at your max health",
-  "icon" : "/interface/statuses/chaoticvoid.png"
+  "label" : "Dark Sap - The darkness is leaching away at your health",
+  "icon" : "/interface/statuses/darksap.png"
 }

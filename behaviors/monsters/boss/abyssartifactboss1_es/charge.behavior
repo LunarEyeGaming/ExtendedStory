@@ -152,22 +152,6 @@
         }
       },
       {
-        "title": "unsetFlag",
-        "type": "action",
-        "name": "unsetFlag",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
-      {
-        "title": "removeEphemeralEffect",
-        "type": "action",
-        "name": "removeEphemeralEffect",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
-      {
         "title": "setDamageOnTouch",
         "type": "action",
         "name": "setDamageOnTouch",
@@ -225,14 +209,6 @@
             }
           }
         ]
-      },
-      {
-        "title": "setFlag",
-        "type": "action",
-        "name": "setFlag",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
       },
       {
         "title": "setDamageOnTouch",

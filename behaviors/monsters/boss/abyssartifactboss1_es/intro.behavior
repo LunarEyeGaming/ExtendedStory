@@ -21,6 +21,15 @@
     "parameters": {},
     "children": [
       {
+        "title": "addEphemeralEffect",
+        "type": "action",
+        "name": "addEphemeralEffect",
+        "parameters": {
+          "duration": {"value": 7.2},
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",

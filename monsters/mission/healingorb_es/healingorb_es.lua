@@ -76,6 +76,10 @@ function update(dt)
   end
 end
 
+function die()
+  status.setResourcePercentage("health", 1.0)
+end
+
 function despawn()
   monster.setDropPool(nil)
   monster.setDeathParticleBurst(nil)

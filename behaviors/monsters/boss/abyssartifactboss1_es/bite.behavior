@@ -15,7 +15,7 @@
   "parameters": {
     "lungeSpeed": 25,
     "windupTime": 2.5,
-    "chargeTime": 1.0,
+    "waitTime": 1.0,
     "minAngle": 0,
     "maxAngle": 6.3,
     "teleportDistance": 8
@@ -42,92 +42,100 @@
             "parameters": {}
           },
           {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": "<windupTime>"}
-            }
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": "<windupTime>"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "disappearfast"},
+                  "type": {"value": "eye"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "disappearfast"},
+                  "type": {"value": "eyetentacles"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.45}
+                }
+              },
+              {
+                "title": "abyssartifactboss1_es-teleporting",
+                "type": "module",
+                "name": "abyssartifactboss1_es-teleporting",
+                "parameters": {
+                  "minAngle": {"key": "<minAngle>"},
+                  "maxAngle": {"key": "<maxAngle>"},
+                  "teleportDistance": {"key": "<teleportDistance>"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "bitetele"},
+                  "type": {"value": "eye"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "appearfast"},
+                  "type": {"value": "eyetentacles"}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "biteWindup"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 0.55}
+                }
+              },
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "bite"}
+                }
+              }
+            ]
           }
         ]
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "disappearfast"},
-          "type": {"value": "eye"}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "disappearfast"},
-          "type": {"value": "eyetentacles"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.45}
-        }
-      },
-      {
-        "title": "abyssartifactboss1_es-teleporting",
-        "type": "module",
-        "name": "abyssartifactboss1_es-teleporting",
-        "parameters": {
-          "minAngle": {"key": "<minAngle>"},
-          "maxAngle": {"key": "<maxAngle>"},
-          "teleportDistance": {"key": "<teleportDistance>"}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "bitetele"},
-          "type": {"value": "eye"}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "appearfast"},
-          "type": {"value": "eyetentacles"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "biteWindup"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.55}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "bite"}
-        }
       },
       {
         "title": "entityDirection",
@@ -184,65 +192,6 @@
         }
       },
       {
-        "title": "entityDirection",
-        "type": "action",
-        "name": "entityDirection",
-        "parameters": {
-          "target": {"key": "target"}
-        },
-        "output": {
-          "vector": "aimVector"
-        }
-      },
-      {
-        "title": "vecMultiply",
-        "type": "action",
-        "name": "vecMultiply",
-        "parameters": {
-          "first": {"key": "aimVector"},
-          "second": {"value": ["facingDirection", 1]}
-        },
-        "output": {
-          "vector": "facingVector"
-        }
-      },
-      {
-        "title": "vecAngle",
-        "type": "action",
-        "name": "vecAngle",
-        "parameters": {
-          "vector": {"key": "facingVector"}
-        },
-        "output": {
-          "angle": "targetAngle"
-        }
-      },
-      {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-          "transformationGroup": {"value": "body"}
-        }
-      },
-      {
-        "title": "rotateTransformationGroup",
-        "type": "action",
-        "name": "rotateTransformationGroup",
-        "parameters": {
-          "transformationGroup": {"value": "body"},
-          "angle": {"key": "targetAngle"}
-        }
-      },
-      {
-        "title": "faceEntity",
-        "type": "action",
-        "name": "faceEntity",
-        "parameters": {
-          "entity": {"key": "target"}
-        }
-      },
-      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -256,7 +205,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 1.0}
+          "time": {"key": "<waitTime>"}
         }
       }
     ]

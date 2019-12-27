@@ -12,7 +12,9 @@
     "/scripts/actions/animator.lua",
     "/scripts/actions/projectiles.lua"
   ],
-  "parameters": {},
+  "parameters": {
+    "mode": 1
+  },
   "root": {
     "title": "Reset",
     "type": "composite",
@@ -57,7 +59,7 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 80},
+              "targetQueryRange": {"value": 10},
               "keepTargetInRange": {"value": 1000},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
@@ -104,13 +106,15 @@
                     "name": "sequence",
                     "parameters": {},
                     "children": [
-					  {
-					    "title" : "abyssartifactboss1_es-intro",
-						"type" : "module",
-						"name" : "abyssartifactboss1_es-intro",
-						"parameters" : {}
-					  },
-					  {
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 1}
+                        }
+                      },
+                      {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -119,12 +123,41 @@
                         }
                       },
                       {
-                        "title": "timer",
-                        "type": "action",
-                        "name": "timer",
-                        "parameters": {
-                          "time": {"value": 0.8}
-                        }
+                        "title": "selector",
+                        "type": "composite",
+                        "name": "selector",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "sequence",
+                            "type": "composite",
+                            "name": "sequence",
+                            "parameters": {},
+                            "children": [
+                              {
+                                "title": "greaterThan",
+                                "type": "action",
+                                "name": "greaterThan",
+                                "parameters": {
+                                  "first": {"key": "<mode>"},
+                                  "second": {"value": 1}
+                                }
+                              },
+                              {
+                                "title" : "abyssartifactboss1_es-intro2",
+                                "type" : "module",
+                                "name" : "abyssartifactboss1_es-intro2",
+                                "parameters" : {}
+                              }
+                            ]
+                          },
+                          {
+                            "title" : "abyssartifactboss1_es-intro",
+                            "type" : "module",
+                            "name" : "abyssartifactboss1_es-intro",
+                            "parameters" : {}
+                          }
+                        ]
                       },
                       {
                         "title": "setAggressive",
@@ -140,16 +173,16 @@
                         "name": "dynamic",
                         "parameters": {},
                         "children": [
-						  {
+                          {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-							  "fail": {"value": 1},
+                              "fail": {"value": 1},
                               "success": {"value": -1}
-							},
-							"children": [
-							  {
+                            },
+                            "children": [
+                              {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -159,68 +192,175 @@
                                 }
                               },
                               {
-                                "title": "succeeder",
-                                "type": "decorator",
-                                "name": "succeeder",
-                                "parameters": {},
-                                "child": {
-                                  "title": "optional",
-                                  "type": "decorator",
-                                  "name": "optional",
-                                  "parameters": {
-                                    "shouldRun": {"key": "invulnerable"}
-                                  },
-                                  "child": {
-                                    "title": "addEphemeralEffect",
-                                    "type": "action",
-                                    "name": "addEphemeralEffect",
-                                    "parameters": {
-                                      "duration": {"value": 0.1},
-                                      "name": {"value": "invulnerable"}
-                                    }
-                                  }
+                                "title": "addEphemeralEffect",
+                                "type": "action",
+                                "name": "addEphemeralEffect",
+                                "parameters": {
+                                  "duration": {"value": 0.1},
+                                  "name": {"value": "invulnerable"}
                                 }
                               },
-							  {
-								"title": "repeater",
-								"type": "decorator",
-								"name": "repeater",
-								"parameters": {
-								  "maxLoops": {"value": -1},
-							      "untilSuccess": {"value": false}
-								},
-								"child": {
-								  "title": "sequence",
-								  "type": "composite",
-								  "name": "sequence",
-								  "parameters": {},
-								  "children": [
-									{
-        							  "title": "abyssartifactboss1_es-attack",
-        							  "type": "module",
-        							  "name": "abyssartifactboss1_es-attack",
-        							  "parameters": { }
-        							},
-                                    {
-                                      "title": "abyssartifactboss1_es-teleport",
-                                      "type": "module",
-                                      "name": "abyssartifactboss1_es-teleport",
-                                      "parameters": { 
-                                        "teleportDistance": {"value": 20}
+                              {
+                                "title": "selector",
+                                "type": "composite",
+                                "name": "selector",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "greaterThan",
+                                        "type": "action",
+                                        "name": "greaterThan",
+                                        "parameters": {
+                                          "first": {"key": "<mode>"},
+                                          "second": {"value": 2}
+                                        }
+                                      },
+                                      {
+                                        "title": "repeater",
+                                        "type": "decorator",
+                                        "name": "repeater",
+                                        "parameters": {
+                                          "maxLoops": {"value": -1},
+                                          "untilSuccess": {"value": false}
+                                        },
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "abyssartifactboss1_es-attack3",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-attack3",
+                                              "parameters": { }
+                                            },
+                                            {
+                                              "title": "abyssartifactboss1_es-teleport",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-teleport",
+                                              "parameters": { 
+                                                "teleportDistance": {"value": 20}
+                                              }
+                                            }
+                                          ]
+                                        }
                                       }
-                                    }
-								  ]
-								}
-						      },
+                                    ]
+                                  },
+                                  {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "greaterThan",
+                                        "type": "action",
+                                        "name": "greaterThan",
+                                        "parameters": {
+                                          "first": {"key": "<mode>"},
+                                          "second": {"value": 1}
+                                        }
+                                      },
+                                      {
+                                        "title": "repeater",
+                                        "type": "decorator",
+                                        "name": "repeater",
+                                        "parameters": {
+                                          "maxLoops": {"value": -1},
+                                          "untilSuccess": {"value": false}
+                                        },
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "abyssartifactboss1_es-attack2",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-attack2",
+                                              "parameters": { }
+                                            },
+                                            {
+                                              "title": "abyssartifactboss1_es-teleport",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-teleport",
+                                              "parameters": { 
+                                                "teleportDistance": {"value": 20}
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "greaterThan",
+                                        "type": "action",
+                                        "name": "greaterThan",
+                                        "parameters": {
+                                          "first": {"key": "<mode>"},
+                                          "second": {"value": 0}
+                                        }
+                                      },
+                                      {
+                                        "title": "repeater",
+                                        "type": "decorator",
+                                        "name": "repeater",
+                                        "parameters": {
+                                          "maxLoops": {"value": -1},
+                                          "untilSuccess": {"value": false}
+                                        },
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "abyssartifactboss1_es-attack",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-attack",
+                                              "parameters": { }
+                                            },
+                                            {
+                                              "title": "abyssartifactboss1_es-teleport",
+                                              "type": "module",
+                                              "name": "abyssartifactboss1_es-teleport",
+                                              "parameters": { 
+                                                "teleportDistance": {"value": 20}
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
                               {
                                 "title": "controlDown",
                                 "type": "action",
                                 "name": "controlDown",
                                 "parameters": {}
                               }
-							]
+                            ]
                           }
-						]
+                        ]
                       }
                     ]
                   }
@@ -255,12 +395,12 @@
                       "enable": {"value": false}
                     }
                   },
-				  {
-        		    "title": "abyssartifactboss-dying",
-        		    "type": "module",
-        		    "name": "abyssartifactboss-dying",
-        		    "parameters": { }
-        		  },
+                  {
+                    "title": "abyssartifactboss-dying",
+                    "type": "module",
+                    "name": "abyssartifactboss-dying",
+                    "parameters": { }
+                  },
                   {
                     "title": "setDying",
                     "type": "action",
@@ -311,7 +451,7 @@
                       "transformationGroup": {"value": "body"}
                     }
                   },
-				  {
+                  {
                     "title": "battleMusic",
                     "type": "action",
                     "name": "battleMusic",

@@ -28,7 +28,7 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/gravwarp_fire.ogg"], "altFire" : ["/sfx/gun/magnetargun_fire.ogg"]
+      "fire" : ["/sfx/gun/gravwarp_fire.ogg"], "altFire" : ["/sfx/gun/gravwarp_altfire.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
@@ -56,7 +56,7 @@
     "fireType" : "auto",
 
     "projectileType" : "gravwarpshot_es",
-    "projectileParameters" : {},
+    "projectileParameters" : { },
 
     "stances" : {
       "idle" : {
@@ -91,21 +91,21 @@
     }
   },
 
-  "altAbilityType" : "explosiveshot",
   "altAbility" : {
-    "name" : "Singularity",
-	"elementalConfig" : {
-	  "physical" : {
-	    "projectileType" : "gravwarpshotalt"
-	  }
-	},
-	"projectileParameters" : {"periodicActions" : []},
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.5,
+    "baseDps" : 6.5,
     "energyUsage" : 50,
-	"fireTime" : 3.0,
-    "baseDps" : 2,
-	"projectileCount" : 1,
-	"inaccuracy" : 0,
-    "fireType" : "auto"
+    "projectileCount" : 1,
+    "inaccuracy" : 0.05,
+    "fireType" : "auto",
+    "hidePrimaryMuzzleFlash" : true,
+    "useParticleEmitter" : false,
+
+    "projectileType" : "gravwarpmine_es",
+    "projectileParameters" : { }
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

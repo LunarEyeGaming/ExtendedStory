@@ -1,0 +1,28 @@
+{
+  "isMaterial": {
+    "type": "action",
+    "name": "isMaterial",
+    "title": "isMaterial",
+    "properties": {
+      "position": {"type": "position", "key": "self"},
+      "layer": {"type": "string", "value": "foreground"},
+      "material": {"type": "string", "value": "dirt"}
+    },
+    "category": "sensor_es",
+    "script": "/scripts/actions/sensor_es.lua"
+  },
+  "getMaterial": {
+    "type": "action",
+    "name": "isMaterial",
+    "title": "isMaterial",
+    "properties": {
+      "position": {"type": "position", "key": "self"},
+      "layer": {"type": "string", "value": "foreground"}
+    },
+    "category": "sensor_es",
+    "script": "/scripts/actions/sensor_es.lua",
+    "output": {
+      "material": {"type": "string", "key": null}
+    }
+  }
+}

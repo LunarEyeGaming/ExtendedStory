@@ -2,7 +2,10 @@
   "name" : "healimpaired_es",
   "blockingStat" : "healimpairedStatusImmunity",
   "effectConfig" : {
-    "blockedStatusEffects" : [ "bandageheal", "medkitheal", "nanowrapheal", "salveheal", "bottledwaterheal", "ancientheal", "ancientheal2" ]
+    "blockedStatusEffects" : [ 
+      "bandageheal", "medkitheal", "nanowrapheal", "salveheal", "bottledwaterheal", "ancientheal", "ancientheal2",
+      "wellfed"
+    ]
   },
   "defaultDuration" : 9999,
 

@@ -15,10 +15,9 @@
   "orientations" : [
     {
       "image" : "arrowleft.png",
-      "imagePosition" : [-8, 0],
+      "imagePosition" : [-8, -8],
 
-      "spaceScan" : 0.1,
-      "anchors" : [ "background" ]
+      "spaceScan" : 0.1
     }
   ],
 
@@ -36,9 +35,10 @@
   "physicsForces" : {
     "jumpForce" : {
       "type" : "DirectionalForceRegion",
-      "rectRegion" : [-2, 0, 2, 4],
+      "rectRegion" : [-1, -1, 1, 1],
       "xTargetVelocity" : -60,
-      "controlForce" : 1600
+      "controlForce" : 1600,
+      "categoryBlacklist" : ["projectile", "boss"]
     }
   }
 }
