@@ -1,7 +1,7 @@
 {
   "type" : "abysseye",
   "shortdescription" : "Abyss Eye",
-  "description" : "A mysterious eye that chases after anything in sight.",
+  "description" : "An eye created by a powerful creature.",
 
   "categories" : [ "abysseye" ],
   "parts" : [ "body" ],
@@ -17,8 +17,6 @@
 
     "behavior" : "monster",
     "deathBehavior" : "monster-death",
-
-    "facingMode" : "transformation",
 
     "seeThroughLiquid" : false,
     "behaviorConfig" : {
@@ -59,13 +57,10 @@
 
       "approachActions" : [
         {
-          "name" : "approach-fall",
+          "name" : "approach-fly",
           "parameters" : {
             "flyState" : "idle",
-            "idleState" : "",
-            "friction" : 15,
-            "dampenDistance" : 20,
-            "dampenMultiplier" : 2
+            "idleState" : "idle"
           }
         }
       ],
@@ -79,58 +74,14 @@
 			"maximumRange" : 60,
 			"minimumRange" : 20,
 			"windupStopForce" : 20,
-			"windupState" : "windup",
+			"windupState" : "windup1",
 			"windupTime" : 1.0,
-			"projectileType" : "abyssvortex", // Base attack
+			"projectileType" : "abyssvortex",
 			"projectileParameters" : {"speed" : 50, "power" : 25},
 			"fireOffset" : [0, 0],
 			"onGround" : false,
-			"fireState" : "",
+			"fireState" : "idle",
 			"fireSound" : "fire",
-			"winddownStopForce" : 0,
-			"winddownState" : "idle",
-			"winddownTime" : 1.0
-		  }
-		},
-		{
-		  "name" : "action-fire",
-		  "cooldown" : 6,
-		  "parameters" : {
-		    "requireLineOfSight" : true,
-			"maximumRange" : 20,
-			"minimumRange" : 0,
-			"windupStopForce" : 20,
-			"aimAtTarget" : false,
-			"windupState" : "windup4",
-			"windupTime" : 2.0, // Creates a disadvantage for the player
-			"projectileType" : "antimovementzonewindup",
-			"projectileParameters" : {"speed" : 0},
-			"fireOffset" : [0, 0],
-			"onGround" : false,
-			"fireState" : "",
-			"fireSound" : "fire",
-			"winddownStopForce" : 0,
-			"winddownState" : "",
-			"winddownTime" : 1.0
-		  }
-		},
-		{
-		  "name" : "action-fire",
-		  "cooldown" : 12,
-		  "parameters" : {
-		    "requireLineOfSight" : true,
-			"maximumRange" : 10,
-			"minimumRange" : 0,
-			"windupStopForce" : 20,
-			"windupState" : "windup2",
-			"windupTime" : 0.4,
-			"projectileType" : "abyssspit", // Melee attack
-			"projectileParameters" : {"speed" : 0, "onlyHitTerrain" : true, "timeToLive" : 0},
-			"fireOffset" : [0, 0],
-			"onGround" : false,
-			"projectileCount" : 6,
-			"fireState" : "",
-			"fireSound" : "fire2",
 			"winddownStopForce" : 0,
 			"winddownState" : "idle",
 			"winddownTime" : 1.0
@@ -171,8 +122,8 @@
       "groundFriction" : 10,
 
       "airFriction" : 0,
-      "airForce" : 15,
-      "flySpeed" : 35
+      "airForce" : 100,
+      "flySpeed" : 15
     },
 
     "bodyMaterialKind" : "organic",

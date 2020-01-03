@@ -7,16 +7,16 @@
         "states" : {
 		  "invisible" : {},
           "idle" : {
-            "frames" : 4,
-            "cycle" : 0.4,
+            "frames" : 1,
+            "cycle" : 1,
             "mode" : "loop",
             "properties" : {
-			  "particleEmittersOff" : [ "windup", "windup2", "windup3" ]
+			  "particleEmittersOff" : [ "windup2" ]
 			}
 		  },
           "open" : {
-            "frames" : 7,
-            "cycle" : 0.3,
+            "frames" : 6,
+            "cycle" : 0.6,
             "mode" : "transition",
 			"transition" : "idle",
             "properties" : {
@@ -25,46 +25,35 @@
             }
           },
           "close" : {
-            "frames" : 8,
-            "cycle" : 0.3,
+            "frames" : 7,
+            "cycle" : 0.7,
+            "mode" : "end",
             "properties" : {
               "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg",
 			  "particleEmittersOff" : [ "flames" ]
             }
           },
-		  "windup" : {
-            "frames" : 4,
-            "cycle" : 0.4,
-            "mode" : "loop",
+		  "windup1" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "charged",
 		    "properties" : {
-              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup.ogg",
-			  "particleEmittersOn" : [ "windup" ]
+              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup.ogg"
 			}
 		  },
+		  "charged" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "loop"
+		  },
 		  "windup2" : {
-            "frames" : 4,
-            "cycle" : 0.4,
-            "mode" : "loop",
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "end",
 		    "properties" : {
               "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup2.ogg",
 			  "particleEmittersOn" : [ "windup2" ]
-			}
-		  },
-		  "windup3" : {
-            "frames" : 4,
-            "cycle" : 0.4,
-            "mode" : "loop",
-		    "properties" : {
-              "immediateSound" : "/sfx/npc/darkabyss/abysseye_windup3.ogg",
-			  "particleEmittersOn" : [ "windup3" ]
-			}
-		  },
-		  "windup4" : {
-            "frames" : 4,
-            "cycle" : 0.4,
-            "mode" : "loop",
-		    "properties" : {
-              "immediateSound" : "/sfx/npc/boss/guardian_delayedshot_charge1.ogg"
 			}
 		  }
         }
@@ -108,31 +97,26 @@
                 "image" : "<partImage>:close.<frame>"
               }
             },
-			"windup" : {
+			"windup1" : {
               "properties" : {
-                "image" : "<partImage>:idle.<frame>"
+                "image" : "<partImage>:windup1.<frame>"
+              }
+            },
+            "charged" : {
+              "properties" : {
+                "image" : "<partImage>:charged.<frame>"
               }
             },
 			"windup2" : {
               "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-			"windup3" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-			"windup4" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
+                "image" : "<partImage>:windup2.<frame>"
               }
             }
           },
           "damage" : {
             "stunned" : {
               "properties" : {
-                "image" : "<partImage>:idle"
+                "image" : "<partImage>:idle.<frame>"
               }
             }
           }
@@ -162,7 +146,23 @@
     "deathPoof" : {
       "burstCount" : 20,
       "particles" : [
-        { "particle" : "shadowsmoke" }
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+            "position" : [0, 0],
+			"initialVelocity" : [0, 0],
+			"finalVelocity" : [0, 0],
+            "layer" : "front",
+            "timeToLive" : 0.5,
+            "destructionTime" : 0.2,
+            "destructionAction" : "fade",
+            "fullbright" : true,
+		    "variance" : {
+			  "initialVelocity" : [10, 10]
+		    }
+          }
+        }
       ]
     },
 	"flames" : {
@@ -173,30 +173,6 @@
 		{
 		  "particle" : "shadowsmoke"
 		}
-      ]
-    },
-	"windup" : {
-      "active" : false,
-      "emissionRate" : 100.0,
-      "offsetRegion" : [-3, -3, 3, 3],
-      "particles" : [
-		{
-          "particle" : {
-            "type" : "textured",
-            "image" : "/celestial/stars/backgrounds/star11px.png",
-            "position" : [0, 0],
-			"initialVelocity" : [0, 0],
-			"finalVelocity" : [0, 0],
-            "layer" : "front",
-            "timeToLive" : 1.0,
-            "destructionTime" : 0.5,
-            "destructionAction" : "shrink",
-            "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [-2, -2]
-		    }
-          }
-        }
       ]
     },
 	"windup2" : {

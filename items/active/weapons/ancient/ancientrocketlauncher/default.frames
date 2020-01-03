@@ -1,10 +1,11 @@
 {
   "frameGrid" : {
-    "size" : [40, 20],
-    "dimensions" : [5, 1],
+    "size" : [36, 12],
+    "dimensions" : [4, 2],
 
     "names" : [
-      [ "idle", "fire.1", "fire.2", "fire.3" ]
+      [ "idle" ],
+      [ "trigger.1", "trigger.2", "trigger.3", "trigger.4" ]
     ]
   }  
 }

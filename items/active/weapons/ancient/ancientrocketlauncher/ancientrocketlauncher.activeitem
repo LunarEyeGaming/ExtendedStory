@@ -1,143 +1,34 @@
 {
   "itemName" : "ancientrocketlauncher",
+  "price": 1500,
   "level" : 10,
-  "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Not your typical rocket launcher.",
+  "description" : "Fires globes that can be signalled to launch at high speeds.",
   "shortdescription" : "^magenta;^reset;",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "base",
   "category" : "Ancient Cannon",
   "twoHanded" : true,
-  
-  "critChance" : 15,
-  "critBonus" : 15,
-  
-  "itemTags" : ["weapon","ranged","rocketlauncher"],
+  "itemTags" : ["weapon"],
 
-  "inventoryIcon" : [
-    { "image" : "ancientrocketlauncher.png:idle" }
-  ],
-
+  "inventoryIcon" : "ancientrocketlauncher.png:idle",
   "animation" : "ancientrocketlauncher.animation",
   "animationParts" : {
-    "butt" : "",
     "middle" : "ancientrocketlauncher.png",
-    "middleFullbright" : "ancientrocketlauncherunlit.png",
-    "barrel" : "",
-    "muzzleFlash" : ""
+    "middleFullbright" : "ancientrocketlauncherunlit.png"
   },
-  "animationCustom" : {
-    "lights" : { "glow" : {
-      "active" : true,
-      "position" : [0.75, 0.5],
-      "color" : [101, 52, 120]
-    }},
-    "sounds" : {
-      "fire" : [ "/sfx/gun/ancientcannon_fire.ogg" ],
-	  "altFire" : [ "/sfx/gun/ancientcannon_altfire.ogg" ]
-    }
+  "animationCustom" : { },
+  "animationStates" : {
+    "gun" : "trigger"
   },
-  "baseOffset" : [1.1, 0.0],
-  "muzzleOffset" : [1.1, 0],
+  "scripts" : ["ancientrocketlauncher.lua"],
+  "fireOffset" : [3.25, 0.625],
+  "fireTime" : 1.5,
+  "inaccuracy" : 0.02,
 
-  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
-
-  "elementalType" : "physical",
-
-  "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
-
-    "fireTime" : 1.5,
-    "baseDps" : 5.0,
-    "energyUsage" : 75,
-    "inaccuracy" : 0.008,
-    "fireType" : "auto",
-
-    "projectileType" : "ancientrocket",
-    "projectileParameters" : {
-      "knockback" : 40,
-      "speed" : 75
-    },
-    "projectileCount" : 1,
-
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "weaponOffset" : [-0.2, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
-      },
-      "cooldown" : {
-        "duration" : 0.4,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "weaponOffset" : [-0.2, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false
-      }
-    }
+  "projectileType" : "ancientrocketinactive_es",
+  "projectileParameters" : {
+    "power" : 16
   },
-
-  "altAbilityType" : "explosiveshot",
-  "altAbility" : {
-    "elementalConfig" : {
-      "physical" : { "name" : "Ancient Vortex", "projectileType" : "ancientvortexprepare", "projectileParameters" : {"speed" : 80}}
-	  },
-
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "weaponOffset" : [-0.2, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
-      },
-      "cooldown" : {
-        "duration" : 0.4,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "weaponOffset" : [-0.2, 0],
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false
-      }
-    },
-	"fireTime" : 10.0
-  },
-
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "energyUsage" : 65
 }

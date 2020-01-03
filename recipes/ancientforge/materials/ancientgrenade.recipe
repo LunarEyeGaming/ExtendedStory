@@ -1,8 +1,8 @@
 {
   "input" : [
-	{ "item" : "essence", "count" : 1 },
-	{ "item" : "ancientfragment", "count" : 1 }
+	{ "item" : "ancientcore", "count" : 1 },
+	{ "item" : "essence", "count" : 50 }
   ],
-  "output" : { "item" : "ancientgrenade", "count" : 1 },
+  "output" : { "item" : "ancientgrenade", "count" : 20 },
   "groups" : [ "ancientforge", "materials", "all" ]
 }

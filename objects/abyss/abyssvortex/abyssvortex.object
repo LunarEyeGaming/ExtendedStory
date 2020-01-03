@@ -7,7 +7,7 @@
   "description" : "Creates a vortex that sucks in anything nearby.",
   "shortdescription" : "Abyss Vortex",
   "race" : "generic",
-  "health" : 50,
+  "health" : 1,
 
   "category" : "wire",
   "price" : 100,
@@ -30,6 +30,12 @@
 
   "scripts" : [ "/objects/abyss/abyssvortex/forcepad.lua" ],
   "scriptDelta" : 1,
+  
+  "rotationPeriod" : -4,
+  "openTime" : 0.5,
+  "activateThreshold" : 0.4,
+  
+  "projectileOffset" : [0.5, 0.5],
 
   "animation" : "/objects/abyss/abyssvortex/abyssvortex.animation",
 
@@ -38,7 +44,7 @@
 	"fg" : "vortexactivaterlit.png",
 	"bg" : "vortexactivater.png"
   },
-  "animationPosition" : [-8, -8],
+  "animationPosition" : [4, 4],
   "smashOnBreak" : true,
   "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
   "smashParticles" : [ { "count" : 10, "particle" : "potshard" } ],
@@ -50,7 +56,8 @@
       "outerRadius" : 16,
       "innerRadius" : 0,
       "targetRadialVelocity" : -70,
-      "controlForce" : 1000
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["player", "monster", "npc", "vehicle", "itemdrop"]
     }
   }
 }

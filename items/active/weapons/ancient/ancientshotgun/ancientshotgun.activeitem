@@ -32,7 +32,7 @@
     },
     "lights" : {
       "muzzleFlash" : {
-        "color" : [150, 0, 0]
+        "color" : [150, 0, 150]
       }
     }
   },
@@ -105,7 +105,8 @@
 	"projectileCount" : 1,
 	"inaccuracy" : 0.03,
 	"baseDamage" : 8,
-	"baseDps" : 5
+	"baseDps" : 5,
+    "useParticleEmitter" : false
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

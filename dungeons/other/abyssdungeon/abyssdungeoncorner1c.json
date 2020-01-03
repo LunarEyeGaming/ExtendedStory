@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztl8ENgzAMRbMLw8MOnaUjdIcqh15KiCCxY8d5T\/INvv5TIIGUYAX27f6803me3J\/Hmt6u+OKLrx2anfCVy\/bYCV+5bI+d8JXL9tgJX7lsj53wlcv22Cmi76cwUtkasL5zZHvshK9ctsdO+Mple+yEr1y2x074ymVrdap9L\/ZmWzB6fUcPvvjii+9oft2OykTyzewVr4i+mWM7r\/MKvv\/rGtm39N5G9b3ah6P6rrQ\/XzHy\/O35f5Ik2vfGHfBtu2YW8G27JhL42vbRPt+8+Wozq2\/rc1DyfU06rfuzdW98dX0jzeq+EJMvvylPVQ==",
+         "data":"eJztl8ENgzAMRbMLw8Mc3aMjdIcqh15KiCCxY8d5T\/INvv5TIIGUYAX27f6803me3J\/Hmt6u+OKLrx2anfCVy\/bYCV+5bI+d8JXL9tgJX7lsj53wlcv22Cmi76cwUtkasL5zZHvshK9ctsdO+Mple+yEr1y2x074ymVrdap9L\/ZmWzB6fUcPvvjii+9oft2OykTyzewVr4i+mWM7r\/MKvv\/rGtm39N5G9b3ah6P6rrQ\/XzHy\/O35f5Ik2vfGHfBtu2YW8G27JhL42vbRPt+8+Wozq2\/rc1DyfU06rfuzdW98dX0jzeq+EJMvPNFTGw==",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -174,6 +174,58 @@
                  "width":48,
                  "x":416,
                  "y":424
+                }, 
+                {
+                 "gid":9145,
+                 "height":24,
+                 "id":1859,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":232,
+                 "y":384
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":1861,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-1, -1], [45, 46] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":424
+                }, 
+                {
+                 "gid":7955,
+                 "height":16,
+                 "id":1862,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"interval\" : 132}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":416
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -185,7 +237,47 @@
          "color":"#ffff00",
          "draworder":"topdown",
          "name":"wiring - lights & guns",
-         "objects":[],
+         "objects":[
+                {
+                 "height":0,
+                 "id":1863,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }, 
+                {
+                 "height":0,
+                 "id":1864,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":176,
+                         "y":-40
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -244,7 +336,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1859,
+ "nextobjectid":1865,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -407,7 +499,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":9147,
+         "firstgid":9154,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
         }],
  "tilewidth":8,

@@ -1,6 +1,5 @@
 {
   "name" : "antimatterfreeze",
-  "blockingStat" : "specialStatusImmunity",
   "effectConfig" : {},
   "defaultDuration" : 3.0,
 
@@ -10,11 +9,6 @@
 
   "animationConfig" : "antimatterfreeze.animation",
 
-  "label" : "Freeze frame - Cannot move until ability ends",
-  "icon" : "/interface/statuses/timefreeze.png",
-
-  "sounds" : {
-    "timefreeze_start" : [ "/sfx/statuseffects/timefreeze_start.ogg" ],
-    "timefreeze_loop" : [ "/sfx/statuseffects/timefreeze_loop.ogg" ]
-  }
+  "label" : "Immobile",
+  "icon" : "/interface/statuses/stop.png"
 }

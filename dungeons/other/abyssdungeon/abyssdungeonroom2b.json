@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2bENACAMA8HMwobszRDsgBAR8hXf+2qvqlrSQXO8rdvLzs7Ozs7Ozs7Ozs7O3mt\/vb8zdnb2nNjZ2XNiZ2fPiZ2dPSd2dvac2NnZc2JnT7f\/9OXd3M7Ozs7Ozs7Ozs7Ozs7OnmLXf23uIt9r",
+         "data":"eJzt2bENwCAMRUFmyYbJ3AyRDVIg5C\/iK14LPglEwRxjTGmh+6ot7WVnZ2dnZ2dnZ2dnZ2fP2qvnT5a2Px+xs\/\/Rnoydnb1P7OyV9uS7zs7uvrOvrJE4vzv2ZGd33\/vEzs7eJ3b27vaT\/vJ2zs7Ozs7Ozs7Ozs7Ozs7O3sWu83oBv9Pfvw==",
          "encoding":"base64",
          "height":63,
          "name":"back",
@@ -371,6 +371,38 @@
                  "width":8,
                  "x":240,
                  "y":112
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":1866,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-23, -49], [26, 0] ], \"detectDuration\" : 1, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":232,
+                 "y":64
+                }, 
+                {
+                 "gid":7961,
+                 "height":16,
+                 "id":1867,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":232,
+                 "y":80
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -542,6 +574,106 @@
                  "width":0,
                  "x":384,
                  "y":248
+                }, 
+                {
+                 "height":0,
+                 "id":1868,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":8
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":240,
+                 "y":56
+                }, 
+                {
+                 "height":0,
+                 "id":1869,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":240,
+                 "y":72
+                }, 
+                {
+                 "height":0,
+                 "id":1870,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-184,
+                         "y":192
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":240,
+                 "y":72
+                }, 
+                {
+                 "height":0,
+                 "id":1871,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":200,
+                         "y":192
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":240,
+                 "y":72
+                }, 
+                {
+                 "height":0,
+                 "id":1872,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":56,
+                         "y":352
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":240,
+                 "y":72
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -601,7 +733,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1866,
+ "nextobjectid":1873,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -760,7 +892,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":8840,
+         "firstgid":8844,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/breakable.json"
         }],
  "tilewidth":8,

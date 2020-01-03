@@ -1,0 +1,33 @@
+{
+  "projectileName" : "abyssspellparticle_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "physics" : "default",
+  "animationCycle" : 1,
+  "animationLoops" : true,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "bounces" : -1,
+  "onlyHitTerrain" : true,
+  "actionOnReap" : [
+    {
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0],
+        "finalVelocity" : [0, 0],
+	    "approach" : [0, 0],
+        "size" : 1,
+        "layer" : "front",
+        "fullbright" : true,
+        "timeToLive" : 0.5,
+	    "fade" : 1,
+	    "destructionAction" : "fade",
+	    "destructionTime" : 0.5
+      }
+    }
+  ]
+}

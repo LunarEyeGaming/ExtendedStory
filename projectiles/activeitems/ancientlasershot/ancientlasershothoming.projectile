@@ -8,6 +8,28 @@
   "frameNumber" : 2,
   "power" : 50,
   "fullbright" : true,
+  "periodicActions" : [
+    {
+	  "time" : 0.03,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+		"type" : "textured",
+		"image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+		"position" : [0, 0],
+		"fullbright" : true,
+		"layer" : "middle",
+		"destructionAction" : "fade",
+		"timeToLive" : 0,
+		"size" : 0.5,
+		"destructionTime" : 0.5,
+        "variance" : {
+          "size" : 0.1,
+          "initialVelocity" : [1, 1]
+        }
+	  }
+	}
+  ],
   "actionOnReap" : [
     {
 	  "action" : "config",
@@ -16,8 +38,11 @@
   ],
   "emitters" : [ ],
   "damageKind" : "plasmabullet",
-  "scripts" : [ "ancientlasershothoming.lua" ],
-  "scriptDelta" : 1,
-  "baseHomingControlForce" : 3,
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0,
   "lightColor" : [83, 28, 97]
 }

@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2LERgCAQBVF6sf8CtCaLMDFiBgaBw7vPBhsZPVFg7k4p3STfeawNL168ePHixYu3tetN2ZsbFb01o6K3ZlTxXkf5\/1T0tnp28\/bk0Vv7nhW9luHFi\/c\/7+g+FtE7Yo\/u\/WpX8u60vvk6l\/yRvT3Po3lH34ei1+ru3ZO111t4tcOr3Syvpz3Yyjtj3u7dO3ve7t1bM6p4LeftHr2tnt28ERr9nqPFfUM7vNrh1W61Nz\/TVp9xK70ts2olr4fwaodXu929pNkDtr5kvw==",
+         "data":"eJzt2WEOgyAMBWDu4v0PIGfyEPu1xBgoIG0pz0fysmRxk89iJduVUroY+JyHb+ill1566aVXy5vphfPmSlC9Z8GI6JWMiF7JiOKt3auj2cV7d5fG\/X3pGESvdB128X51PVuEXnrpXed9u2\/e2Ttj3907akfy7lrfr+03avvFntGqM70xvFbr2Ts9XqTQix16Y8SqH2p5tXvw\/xn4fH373NPwavze3uPNxzqvZLSsb2tY1tfLW4qHV2t\/Ndt7vLw959McLa9Xf47k7f0Mwnq29kaJ1L9QvbX7i1566dWbl1V\/ls6z0jtSo5n6jn6Pp7c1v9acI3u91nMEb+TQix16saP9\/xMTMz92MNpi",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -211,6 +211,38 @@
                  "width":8,
                  "x":280,
                  "y":416
+                }, 
+                {
+                 "gid":7961,
+                 "height":16,
+                 "id":1879,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":416
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":1880,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-1, -1], [45, 46] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -222,7 +254,227 @@
          "color":"#ffff00",
          "draworder":"topdown",
          "name":"wiring - lights & guns",
-         "objects":[],
+         "objects":[
+                {
+                 "height":0,
+                 "id":1881,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }, 
+                {
+                 "height":0,
+                 "id":1882,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-104
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1883,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":160,
+                         "y":-24
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1884,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":352,
+                         "y":-40
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1885,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":280,
+                         "y":-72
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1886,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":240,
+                         "y":-112
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1887,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":128,
+                         "y":-208
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1888,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-304
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
+                }, 
+                {
+                 "height":0,
+                 "id":1889,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":216,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }, 
+                {
+                 "height":0,
+                 "id":1890,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":128,
+                         "y":-192
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }, 
+                {
+                 "height":0,
+                 "id":1891,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-288
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -281,7 +533,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1879,
+ "nextobjectid":1892,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

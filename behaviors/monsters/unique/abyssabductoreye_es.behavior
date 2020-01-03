@@ -1,0 +1,372 @@
+{
+  "name": "abyssabductoreye_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua",
+	"/scripts/actions/monster.lua",
+	"/scripts/actions/movement.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 50},
+              "keepTargetInRange": {"value": 100},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 1}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 5}
+                        }
+                      },
+                      {
+                        "title": "setAnimationState",
+                        "type": "action",
+                        "name": "setAnimationState",
+                        "parameters": {
+                          "state": {"value": "open"},
+                          "type": {"value": "body"}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 2}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+    		                  "title": "spawnProjectile",
+    		                  "type": "action",
+    		                  "name": "spawnProjectile",
+    		                  "parameters": {
+    		                    "aimVector": {"value": [0, 0]},
+    		                    "offset": {"value": [0, 0]},
+    		                    "projectileConfig": {"value": {}},
+    		                    "projectileType": {"value": "abyssspellparticleemitter_es"}
+    		                  }
+    		                },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "windupSpell"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 6}
+                              }
+                            },
+                            {
+                              "title": "burstParticleEmitter",
+                              "type": "action",
+                              "name": "burstParticleEmitter",
+                              "parameters": {
+                                "emitter": {"value": "cast"}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "castSpell"}
+                              }
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "playersInWorld",
+                                  "type": "action",
+                                  "name": "playersInWorld",
+                                  "parameters": {},
+                                  "output": {
+                                    "list": "players"
+                                  }
+                                },
+                                {
+                                  "title": "each",
+                                  "type": "decorator",
+                                  "name": "each",
+                                  "parameters": {
+                                    "list": {"key": "players"},
+                                    "type": {"value": "entity"}
+                                  },
+                                  "child": {
+                                    "title": "succeeder",
+                                    "type": "decorator",
+                                    "name": "succeeder",
+                                    "parameters": {},
+                                    "child": {
+                                      "title": "sendEntityMessage",
+                                      "type": "action",
+                                      "name": "sendEntityMessage",
+                                      "parameters": {
+                                        "arguments": {"value": ["antimatterfreeze", 15]},
+                                        "entity": {"key": "eachItem"},
+                                        "message": {"value": "applyStatusEffect"}
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "title": "each",
+                                  "type": "decorator",
+                                  "name": "each",
+                                  "parameters": {
+                                    "list": {"key": "players"},
+                                    "type": {"value": "entity"}
+                                  },
+                                  "child": {
+                                    "title": "succeeder",
+                                    "type": "decorator",
+                                    "name": "succeeder",
+                                    "parameters": {},
+                                    "child": {
+                                      "title": "sendEntityMessage",
+                                      "type": "action",
+                                      "name": "sendEntityMessage",
+                                      "parameters": {
+                                        "arguments": {"value": ["abyssfading_es"]},
+                                        "entity": {"key": "eachItem"},
+                                        "message": {"value": "applyStatusEffect"}
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 5}
+                              }
+                            },
+                            {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "close"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 5}
+                              }
+                            },
+                            {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "playersInWorld",
+                                  "type": "action",
+                                  "name": "playersInWorld",
+                                  "parameters": {},
+                                  "output": {
+                                    "list": "players"
+                                  }
+                                },
+                                {
+                                  "title": "each",
+                                  "type": "decorator",
+                                  "name": "each",
+                                  "parameters": {
+                                    "list": {"key": "players"},
+                                    "type": {"value": "entity"}
+                                  },
+                                  "child": {
+                                    "title": "succeeder",
+                                    "type": "decorator",
+                                    "name": "succeeder",
+                                    "parameters": {},
+                                    "child": {
+                                      "title": "sendEntityMessage",
+                                      "type": "action",
+                                      "name": "sendEntityMessage",
+                                      "parameters": {
+                                        "arguments": {"value": ["InstanceWorld:abyssartifactdungeonboss"]},
+                                        "entity": {"key": "eachItem"},
+                                        "message": {"value": "warp"}
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "repeater",
+                              "type": "decorator",
+                              "name": "repeater",
+                              "parameters": {},
+                              "child": {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 1}
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "close"},
+                      "type": {"value": "body"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

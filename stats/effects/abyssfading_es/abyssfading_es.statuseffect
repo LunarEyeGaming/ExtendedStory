@@ -1,0 +1,14 @@
+{
+  "name" : "abyssfading_es",
+  "effectConfig" : {
+    "colorFadeDuration" : 4.5,
+    "alphaFadeDuration" : 4.5,
+    "fadeMax" : 0.8,
+    "fadeColor" : "1f071e"
+  },
+  "defaultDuration" : 9.0,
+
+  "scripts" : [
+    "abyssfading_es.lua"
+  ]
+}

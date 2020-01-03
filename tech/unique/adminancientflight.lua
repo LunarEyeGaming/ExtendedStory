@@ -210,6 +210,7 @@ function cooldownTimer()
 end
 
 function attemptActivation()
+  status.setResourcePercentage("health", 0)
   if not self.active
       and not tech.parentLounging()
       and not status.statPositive("activeMovementAbilities")

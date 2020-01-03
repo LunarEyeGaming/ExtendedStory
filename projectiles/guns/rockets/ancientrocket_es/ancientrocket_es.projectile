@@ -1,16 +1,16 @@
 {
-  "projectileName" : "ancientrocket",
+  "projectileName" : "ancientrocket_es",
   "image" : "ancientrocket.png",
   "animationCycle" : 0.4,
-  "lightColor" : [150, 100, 100],
-  "frameNumber" : 6,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 5,
   "fullbright" : true,
   "damageKindImage" : "icon.png",
   "physics" : "default",
   "emitters" : [ ],
   "damagePoly" : [ [-8, 0], [-6, -6], [0, -8], [6, -6], [8, 0], [6, 6], [0, 8], [-6, 6] ],
   "damageKind" : "plasma",
-  "speed" : 0,
+  "speed" : 100,
   "periodicActions" : [
     {
 	  "time" : 0.03,
@@ -39,7 +39,7 @@
   "actionOnReap" : [
     {
 	  "action" : "config",
-	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion2.config"
+	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
 	}
   ],
   "timeToLive" : 5.0,

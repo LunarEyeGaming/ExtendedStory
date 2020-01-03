@@ -45,6 +45,11 @@
 		  { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] }
         ]
       }
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 150]
+      }
     }
   },
   "animationScripts" : ["/items/active/effects/chain.lua"],

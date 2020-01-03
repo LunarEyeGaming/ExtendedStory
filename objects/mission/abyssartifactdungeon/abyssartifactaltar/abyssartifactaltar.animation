@@ -40,7 +40,7 @@
     "glow" : {
       "active" : true,
       "position" : [0.0, 1.0],
-      "color" : [50, 50, 50],
+      "color" : [70, 77, 102],
       "pointLight" : true
     }
   },
@@ -55,7 +55,7 @@
           "particle" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [50, 50, 50, 230],
+            "color" : [70, 77, 102, 230],
             "fade" : 0.9,
             "position" : [0.0, 0.0],
             "offsetRegion" : [0, 0, 0, 0],
@@ -65,7 +65,7 @@
             "destructionTime" : 0.1,
             "approach" : [0, 10],
             "timeToLive" : 0.35,
-            "light" : [20, 20, 20],
+            "light" : [35, 19, 46],
             "variance" : {
               "initialVelocity" : [0, 1.0]
             }

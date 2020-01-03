@@ -445,16 +445,48 @@
                  "y":424
                 }, 
                 {
-                 "gid":9151,
+                 "gid":7961,
                  "height":16,
-                 "id":1951,
+                 "id":1954,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":416
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":1955,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-1, -1], [45, 46] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":424
+                }, 
+                {
+                 "gid":9152,
+                 "height":16,
+                 "id":1956,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":64,
-                 "y":408
+                 "x":56,
+                 "y":384
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -746,6 +778,46 @@
                  "width":0,
                  "x":176,
                  "y":320
+                }, 
+                {
+                 "height":0,
+                 "id":1957,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":416
+                }, 
+                {
+                 "height":0,
+                 "id":1958,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":408
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -805,7 +877,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1952,
+ "nextobjectid":1959,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

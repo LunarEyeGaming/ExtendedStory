@@ -290,8 +290,8 @@
     "value" : {
       "caveLiquid" : [ "water" ],
       "caveLiquidChanceRange" : [20, 100],
-      "blockSelector" : [ "remixedMildSurface" ],
-      "fgCaveSelector" : [ "surfaceCaves" ],
+      "blockSelector" : [ "remixedIslandTowersSurface" ],
+      "fgCaveSelector" : [ "sparseCaves" ],
       "bgCaveSelector" : [ "empty" ],
       "biome" : [
         [0, [ "darkabyss" ]]

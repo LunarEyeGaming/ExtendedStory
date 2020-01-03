@@ -17,7 +17,7 @@ function update(dt)
     self.tickTimer = self.tickTime
     status.applySelfDamageRequest({
         damageType = "IgnoresDef",
-        damage = math.ceil(status.resourceMax("health") * self.tickDamagePercentage),
+        damage = math.floor(status.resourceMax("health") * self.tickDamagePercentage),
         damageSourceKind = "default",
         sourceEntityId = entity.id()
       })

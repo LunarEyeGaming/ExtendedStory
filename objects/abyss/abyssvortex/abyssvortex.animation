@@ -4,31 +4,15 @@
       "padState" : {
         "default" : "closed",
         "states" : {
-		  "closed" : {},
-          "open" : {
-            "frames" : 9,
-            "cycle" : 0.3,
-            "mode" : "transition",
-            "transition" : "openloop",
-			"properties" : {
-			  "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg"
-			}
-          },
-          "openloop" : {
-            "frames" : 2,
-            "cycle" : 0.1,
-            "mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
-			}
-          },
-          "close" : {
-            "frames" : 9,
-            "cycle" : 0.3,
-            "mode" : "transition",
-            "transition" : "closed",
-			"properties" : {
+		  "closed" : {
+            "properties" : {
 			  "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+			}
+          },
+          "opened" : {
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg",
+              "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
 			}
           }
         }
@@ -38,46 +22,33 @@
     "parts" : {
       "forcepad" : {
         "properties" : {
-		  "centered" : false,
+		  "centered" : true,
 		  "zLevel" : 2,
 		  "fullbright" : true,
-		  "offset" : [-6.625, -6.625]
-        },
-
-        "partStates" : {
-          "padState" : {
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open.<frame>"
-              }
-            },
-            "openloop" : {
-              "properties" : {
-                "image" : "<partImage>:openloop.<frame>"
-              }
-            },
-            "close" : {
-              "properties" : {
-                "image" : "<partImage>:close.<frame>"
-              }
-            }
-          }
+		  "offset" : [0, 0],
+          "transformationGroups" : ["vortex"],
+          "image" : "<partImage>"
         }
       },
 	  "fg" : {
 	    "properties" : {
-		  "centered" : false,
+		  "centered" : true,
 		  "zLevel" : 1,
 		  "image" : "<partImage>"
 		}
 	  },
 	  "bg" : {
 	    "properties" : {
-		  "centered" : false,
+		  "centered" : true,
 		  "image" : "<partImage>",
 		  "fullbright" : true
 		}
 	  }
+    }
+  },
+  "transformationGroups" : {
+    "vortex" : {
+      "interpolated" : true
     }
   }
 }

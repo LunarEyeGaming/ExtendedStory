@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzzERACEQwMDzgpE3jStEoOEbiswWqTN7ZuYo317teNvxtuNtx9uOtx1vO952vO142\/G2423H2463He\/z\/\/c4Xl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5e3h9eNbsNaQPE",
+         "data":"eJztzzERACEQwMDzgpG3jSdEoOEbiswWqTN7ZuYo317teNvxtuNtx9uOtx1vO952vO142\/G2423H2463He\/z\/\/c4Xl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5e3h9eNburDCiE",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztmbENgDAQA7ML+zdIjMMuVFSACMEh\/+YsuYtOPqpElEL+kGXyLr7exde7+HoXX+\/i6118vYvv\/ZkswbftTJbg23bGKfiOXtQ3+I5e1Ddnvms5dk7aGt\/a75Kh+OKLb1t6siNuwlfHjrgJXx074iZ8deyIm\/DVsZWbWt4hZ2+qLL6Ke9sVe3TwxdfdNwM74iZ8deyIm\/DVsSNuwlfHjrgJXx1buan2X0y5OLc3i+\/bO+NTxpfBF18nX+KZDbaF+58=",
+         "data":"eJztmbENwzAQA7VL9m\/SZZjs4ipVZODzpqx\/5giwE4g7u5HhMcg\/5PXwLr7exde7EV+nZ8H79S6+3sXXu\/h6N+LbNfjmznQJvrkzTsF3N9Ha4LubaG1mvu\/x3WfTRnyjz6VD8cUX31xWbldkwle3XZEJX912RSZ8ddsVmfDVbSuZMt8hs2+qLr6Ke9vZ9u7gi6+7b4ftikz46rYrMuGr267IhK9uuyITvrptJVP0X8w4OfdpF9+rd8ZfN+4Mvvg6+RLPHN1aEH4=",
          "encoding":"base64",
          "height":60,
          "name":"front",
@@ -463,6 +463,38 @@
                  "width":8,
                  "x":384,
                  "y":176
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":1911,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-1, -46], [45, 0] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":64
+                }, 
+                {
+                 "gid":7961,
+                 "height":16,
+                 "id":1912,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -474,7 +506,207 @@
          "color":"#ffff00",
          "draworder":"topdown",
          "name":"wiring - lights & guns",
-         "objects":[],
+         "objects":[
+                {
+                 "height":0,
+                 "id":1913,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":72
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":56
+                }, 
+                {
+                 "height":0,
+                 "id":1914,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":16,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1915,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":96,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1916,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":176,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1917,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":248,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1918,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":320,
+                         "y":32
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1919,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":16,
+                         "y":144
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1920,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":112,
+                         "y":144
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1921,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":16,
+                         "y":256
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }, 
+                {
+                 "height":0,
+                 "id":1922,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":112,
+                         "y":256
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":64,
+                 "y":136
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -533,7 +765,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1910,
+ "nextobjectid":1923,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -692,11 +924,11 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":9126,
+         "firstgid":9130,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":9150,
+         "firstgid":9154,
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstoryliquids.json"
         }],
  "tilewidth":8,

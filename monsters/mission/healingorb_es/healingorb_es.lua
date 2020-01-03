@@ -12,6 +12,7 @@ function init()
   end
   self.activated = false
   self.deactivated = true
+  hasDespawned = false
 
   message.setHandler("despawn", despawn)
   if not self.inverted then
@@ -20,11 +21,11 @@ function init()
 end
 
 function shouldDie()
-  return not status.resourcePositive("health")
+  return hasDespawned
 end
 
 function update(dt)
-  animator.setGlobalTag("healthStage", math.ceil(status.resourcePercentage("health") * 4))
+  animator.setGlobalTag("healthStage", math.max(1, math.ceil(status.resourcePercentage("health") * 4)))
   if self.inverted then
     if status.resourcePercentage("health") <= 0.02 then
       if not self.activated then
@@ -81,6 +82,7 @@ function die()
 end
 
 function despawn()
+  hasDespawned = true
   monster.setDropPool(nil)
   monster.setDeathParticleBurst(nil)
   monster.setDeathSound(nil)

@@ -1,0 +1,133 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "invisible",
+        "states" : {
+		  "invisible" : {},
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+		  },
+          "open" : {
+            "frames" : 7,
+            "cycle" : 0.3,
+            "mode" : "transition",
+			"transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_portal_open.ogg"
+            }
+          },
+          "close" : {
+            "frames" : 8,
+            "cycle" : 0.3,
+            "properties" : {
+              "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+            }
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 10,
+          "transformationGroups" : [ "body" ],
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true },
+    "facing" : { "interpolated" : false },
+    "orbiter1" : { "interpolated" : true },
+    "orbiter2" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "burstCount" : 20,
+      "particles" : []
+    },
+    "cast" : {
+      "burstCount" : 1,
+      "particles" : [
+        {
+		  "particle" : {
+		    "type" : "textured",
+		    "image" : "/flares/spellflare.png",
+		    "position" : [0, 0],
+		    "fullbright" : true,
+		    "timeToLive" : 0.5,
+		    "fade" : 1,
+		    "destructionTime" : 1,
+	        "destructionAction" : "fade",
+		    "size" : 6,
+			"layer" : "front"
+		  }
+		}
+      ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ ],
+    "windupSpell" : [ "/sfx/npc/mission/abyssabductoreye_windupspell.ogg" ],
+    "castSpell" : [ "/sfx/npc/mission/abyssabductoreye_castspell.ogg" ]
+  }
+}

@@ -66,11 +66,14 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
+        "grit" : {
+          "baseValue" : 1.0
+        },
         "knockbackStunTime" : {
-          "baseValue" : 0.25
+          "baseValue" : 0.0
         },
         "knockbackThreshold" : {
-          "baseValue" : 9
+          "baseValue" : 9999
         },
         "maxHealth" : {
           "baseValue" : 48

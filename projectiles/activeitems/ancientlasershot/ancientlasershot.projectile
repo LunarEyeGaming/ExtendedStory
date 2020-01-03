@@ -23,7 +23,11 @@
 		"destructionAction" : "fade",
 		"timeToLive" : 0,
 		"size" : 0.5,
-		"destructionTime" : 0.5
+		"destructionTime" : 0.5,
+        "variance" : {
+          "size" : 0.1,
+          "initialVelocity" : [1, 1]
+        }
 	  }
 	}
   ],
