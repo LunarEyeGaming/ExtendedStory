@@ -1,6 +1,6 @@
 {
   "metadata" : {
-    "name" : "abyssartifactdungeon",
+    "name" : "abyssartifactdungeon2",
     "species" : "generic",
     "rules" : [
     ],
@@ -17,7 +17,7 @@
       "rules" : [
         [ "doNotCombineWith", [ "entrance" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonentrance.json" ],
+      "def" : [ "tmx", "abyssdungeon2entrance.json" ],
       "chance" : 1000
     },
 

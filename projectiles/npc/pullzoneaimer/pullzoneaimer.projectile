@@ -1,0 +1,31 @@
+{
+  "projectileName" : "pullzoneaimer",
+  "image" : "pullzoneaimer.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 8,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "actionOnReap" : [
+  ],
+  "damagePoly" : [ [0, 0] ],
+  "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
+  "piercing" : false,
+  "statusEffects" : [],
+
+  "speed" : 0,
+  "timeToLive" : 0.0,
+
+  "explosionAction" : {
+    "action" : "actions",
+    "list" : [
+    ]
+  },
+  "scripts" : [ "pullzoneaimer.lua" ],
+  "scriptDelta" : 1,
+
+  "periodicActions" : [
+  ]
+}

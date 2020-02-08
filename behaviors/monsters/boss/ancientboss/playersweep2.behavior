@@ -134,7 +134,7 @@
 		    "parameters": {
 		      "position": {"key": "sweepEndPos"},
 		      "flightSpeed": {"value": 25},
-		      "projectileInterval": {"value": 0.15},
+		      "projectileInterval": {"value": 0.1},
 		      "projectileType": {"value": "ancientboss_plasmashot"},
 		      "projectileOffset": {"value": [0, 4]},
 		      "projectileConfig": {"value": {"power": 7}},
@@ -151,6 +151,14 @@
         "name": "setVelocity",
         "parameters": {
           "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
         }
       }
     ]

@@ -73,7 +73,7 @@
     		      "parameters": {
     		        "aimVector": {"value": [0, 0]},
     		        "offset": {"value": ["explodeX", "explodeY"]},
-    		        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}, {"action": "loop", "count": 3, "body": [{"action": "item", "name": "ancientfragment", "count": 1}]}]}},
+    		        "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}, {"action": "loop", "count": 3, "body": [{"action": "item", "name": "ancientfragment", "count": 1}]}]}},
     		        "projectileType": {"value": "orbitalup"}
     		      }
     		    },
@@ -401,7 +401,7 @@
     		  "parameters": {
     		    "aimVector": {"value": [0, 0]},
     		    "offset": {"value": ["explodeX", "explodeY"]},
-    		    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}]}},
+    		    "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"}]}},
     		    "projectileType": {"value": "orbitalup"}
     		  }
     	    }

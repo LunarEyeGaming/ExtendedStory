@@ -54,13 +54,12 @@
 
       "approachActions" : [
         {
-          "name" : "approach-fall",
+          "name" : "approach-burn",
           "parameters" : {
-            "flyState" : "fly",
+            "burnState" : "fly",
             "idleState" : "idle",
-            "friction" : 15,
-            "dampenDistance" : 20,
-            "dampenMultiplier" : 2
+            "burnTime" : 0.5,
+            "rotateGroup" : "body"
           }
         }
       ],

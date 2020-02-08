@@ -165,37 +165,9 @@
                                       "parameters": {}
                                     },
                                     {
-                                      "title": "repeater",
-                                      "type": "decorator",
-                                      "name": "repeater",
-                                      "parameters": {
-                                        "maxLoops": {"value": 2}
-                                      },
-                                      "child": {
-                                        "title": "sequence",
-                                        "type": "composite",
-                                        "name": "sequence",
-                                        "parameters": {},
-                                        "children": [
-                                          {
-                                            "title": "ancientboss-playersweep",
-                                            "type": "module",
-                                            "name": "ancientboss-playersweep",
-                                            "parameters": {}
-                                          },
-                                          {
-                                            "title": "ancientboss-playersweep2",
-                                            "type": "module",
-                                            "name": "ancientboss-playersweep2",
-                                            "parameters": {}
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "title": "ancientboss-playersweep",
+                                      "title": "ancientboss-playersweepattack",
                                       "type": "module",
-                                      "name": "ancientboss-playersweep",
+                                      "name": "ancientboss-playersweepattack",
                                       "parameters": {}
                                     },
                                     {
@@ -242,12 +214,6 @@
                                   "parameters": {},
                                   "children": [
                                     {
-                                      "title": "ancientboss-minionattack",
-                                      "type": "module",
-                                      "name": "ancientboss-minionattack",
-                                      "parameters": {}
-                                    },
-                                    {
                                       "title": "ancientboss-uppersweep",
                                       "type": "module",
                                       "name": "ancientboss-uppersweep",
@@ -266,43 +232,9 @@
                                       "parameters": {}
                                     },
                                     {
-                                      "title": "repeater",
-                                      "type": "decorator",
-                                      "name": "repeater",
-                                      "parameters": {
-                                        "maxLoops": {"value": 2}
-                                      },
-                                      "child": {
-                                        "title": "sequence",
-                                        "type": "composite",
-                                        "name": "sequence",
-                                        "parameters": {},
-                                        "children": [
-                                          {
-                                            "title": "ancientboss-playersweep",
-                                            "type": "module",
-                                            "name": "ancientboss-playersweep",
-                                            "parameters": {}
-                                          },
-                                          {
-                                            "title": "ancientboss-playersweep2",
-                                            "type": "module",
-                                            "name": "ancientboss-playersweep2",
-                                            "parameters": {}
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "title": "ancientboss-playersweep",
+                                      "title": "ancientboss-playersweepattack",
                                       "type": "module",
-                                      "name": "ancientboss-playersweep",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "ancientboss-minionattack2",
-                                      "type": "module",
-                                      "name": "ancientboss-minionattack2",
+                                      "name": "ancientboss-playersweepattack",
                                       "parameters": {}
                                     },
                                     {
@@ -388,37 +320,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "repeater",
-                                          "type": "decorator",
-                                          "name": "repeater",
-                                          "parameters": {
-                                            "maxLoops": {"value": 2}
-                                          },
-                                          "child": {
-                                            "title": "sequence",
-                                            "type": "composite",
-                                            "name": "sequence",
-                                            "parameters": {},
-                                            "children": [
-                                              {
-                                                "title": "ancientboss-playersweep",
-                                                "type": "module",
-                                                "name": "ancientboss-playersweep",
-                                                "parameters": {}
-                                              },
-                                              {
-                                                "title": "ancientboss-playersweep2",
-                                                "type": "module",
-                                                "name": "ancientboss-playersweep2",
-                                                "parameters": {}
-                                              }
-                                            ]
-                                          }
-                                        },
-                                        {
-                                          "title": "ancientboss-playersweep",
+                                          "title": "ancientboss-playersweepattack",
                                           "type": "module",
-                                          "name": "ancientboss-playersweep",
+                                          "name": "ancientboss-playersweepattack",
                                           "parameters": {}
                                         },
                                         {
@@ -437,12 +341,6 @@
                                           "title": "ancientboss-lowerram",
                                           "type": "module",
                                           "name": "ancientboss-lowerram",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-minionattack2",
-                                          "type": "module",
-                                          "name": "ancientboss-minionattack2",
                                           "parameters": {}
                                         }
                                       ]
@@ -589,12 +487,6 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-minionattack",
-                                          "type": "module",
-                                          "name": "ancientboss-minionattack",
-                                          "parameters": {}
-                                        },
-                                        {
                                           "title": "ancientboss-lowerram",
                                           "type": "module",
                                           "name": "ancientboss-lowerram",
@@ -613,18 +505,6 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-plasmachaos",
-                                          "type": "module",
-                                          "name": "ancientboss-plasmachaos",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-minionattack2",
-                                          "type": "module",
-                                          "name": "ancientboss-minionattack2",
-                                          "parameters": {}
-                                        },
-                                        {
                                           "title": "ancientboss-slam",
                                           "type": "module",
                                           "name": "ancientboss-slam",
@@ -637,37 +517,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "repeater",
-                                          "type": "decorator",
-                                          "name": "repeater",
-                                          "parameters": {
-                                            "maxLoops": {"value": 2}
-                                          },
-                                          "child": {
-                                            "title": "sequence",
-                                            "type": "composite",
-                                            "name": "sequence",
-                                            "parameters": {},
-                                            "children": [
-                                              {
-                                                "title": "ancientboss-playersweep",
-                                                "type": "module",
-                                                "name": "ancientboss-playersweep",
-                                                "parameters": {}
-                                              },
-                                              {
-                                                "title": "ancientboss-playersweep2",
-                                                "type": "module",
-                                                "name": "ancientboss-playersweep2",
-                                                "parameters": {}
-                                              }
-                                            ]
-                                          }
-                                        },
-                                        {
-                                          "title": "ancientboss-playersweep",
+                                          "title": "ancientboss-playersweepattack",
                                           "type": "module",
-                                          "name": "ancientboss-playersweep",
+                                          "name": "ancientboss-playersweepattack",
                                           "parameters": {}
                                         },
                                         {

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstorytiles",
  "spacing":0,
- "tilecount":24,
+ "tilecount":25,
  "tileheight":8,
  "tileproperties":
     {
@@ -91,6 +91,10 @@
      "23":
         {
          "material":"permafrostbrick_es"
+        },
+     "24":
+        {
+         "material":"abysscloud_es"
         },
      "3":
         {
@@ -200,6 +204,10 @@
          "material":"string"
         },
      "23":
+        {
+         "material":"string"
+        },
+     "24":
         {
          "material":"string"
         },
@@ -333,6 +341,12 @@
      "23":
         {
          "image":"..\/images\/tiles\/permafrostbrick_es.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "24":
+        {
+         "image":"..\/images\/tiles\/abysscloud.png",
          "imageheight":8,
          "imagewidth":8
         },

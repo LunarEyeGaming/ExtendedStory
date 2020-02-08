@@ -1,0 +1,13 @@
+{
+  "type" : "abyssdungeoncloudbuilder_es",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/abyssdungeoncloudbuilder_es/abyssdungeoncloudbuilder_es.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-1, -1, 1, 1],
+
+  "dungeonType" : "abyssdungeoncloud_es",
+  "dungeonOffset" : [0, 0],
+  "dungeonDensity" : 0.1
+}

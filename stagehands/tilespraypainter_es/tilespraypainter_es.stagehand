@@ -1,0 +1,21 @@
+{
+  "type" : "tilespraypainter_es",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/tilespraypainter_es/tilespraypainter_es.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-1, -1, 1, 1],
+
+  "seed" : null,
+  "minRadius" : 1,
+  "maxRadius" : 1,
+  "brushTile" : "dirt",
+  "brushClusterDensity" : 0.1,
+  "restrictToBorders" : false,
+  // Use restrictToBorders or trimEdges
+  "trimEdges" : [],
+
+  "overrideWhitelist" : [],
+  "overrideBlacklist" : []
+}

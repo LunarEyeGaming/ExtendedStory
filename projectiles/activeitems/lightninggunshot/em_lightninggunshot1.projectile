@@ -46,7 +46,7 @@
   "lightColor" : [59, 217, 215],
   "damageKind" : "plasmabullet",
   "zigZagTime" : 0.1,
-  "zigZagAngle" : 20,
+  "zigZagAngle" : 0.25,
   "scripts" : [ "zigzagprojectile.lua" ],
   "scriptDelta" : 1
 }

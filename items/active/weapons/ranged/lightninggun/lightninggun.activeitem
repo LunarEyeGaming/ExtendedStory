@@ -52,7 +52,7 @@
         "cooldown" : 0.15,
         "projectileType" : "lightningthrower",
         "projectileCount" : 10,
-        "spreadAngle" : 10,
+        "spreadAngle" : 3,
         "projectileParameters" : {"speed" : 60},
         "inaccuracy" : 0,
         "baseDamage" : 9,
@@ -112,7 +112,7 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
+      "electric" : { "name" : "Lightning Bolt", "projectileType" : "em_lightninggunshot1", "projectileCount" : 1, "projectileParameters" : {}}
     },
     "energyUsage" : 75,
 	"baseDps" : 5,

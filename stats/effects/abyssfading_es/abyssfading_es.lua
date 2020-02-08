@@ -15,7 +15,7 @@ function update(dt)
   else
     local alphaDuration = self.alphaFadeDuration
     local alphaElapsed = self.elapsed - self.colorFadeDuration
-    local alpha = math.max(math.floor((self.alphaFadeDuration - alphaElapsed / alphaDuration) * 255), 0)
+    local alpha = math.max(math.floor(((alphaDuration - alphaElapsed) / alphaDuration) * 255), 0)
     effect.setParentDirectives(string.format("?multiply=ffffff%02x?fade=%s=%.2f", alpha, self.fadeColor, self.fadeMax))
   end
 

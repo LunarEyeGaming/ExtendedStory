@@ -337,6 +337,117 @@
         { "particle" : "dust4" }
       ]
     },
+    "playersweeptelegraph" : {
+      "active" : false,
+      "burstCount" : 35,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientenergy.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 0.5,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [20, 0]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientenergy.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 1.0,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [10, 1]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientenergy.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 2.0,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientenergy.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 0.5,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [0, 20]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientenergy.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [0, 10],
+            "fade" : 0.3,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.3,
+            "size" : 1.0,
+            "timeToLive" : 0.5,
+            "fullbright" : true,
+            "layer" : "front",
+            "collidesForeground" : false,
+            "variance" : {
+              "initialVelocity" : [1, 10]
+            }
+          }
+        }
+      ]
+    },
     "deathPoof" : {
       "particles" : [
         {
@@ -542,6 +653,10 @@
 	},
 	"windup4" : {
 	  "pool" : [ "/sfx/melee/charge_combo2.ogg" ],
+	  "rangeMultiplier" : 3
+	},
+	"windup5" : {
+	  "pool" : [ "/sfx/melee/charge_up15.ogg" ],
 	  "rangeMultiplier" : 3
 	},
 	"fire1" : {

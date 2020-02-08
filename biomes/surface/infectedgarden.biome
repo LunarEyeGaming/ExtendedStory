@@ -1,22 +1,23 @@
 {
   "name" : "infectedgarden",
-  "friendlyName" : "Halloween",
+  "friendlyName" : "Haunted",
   //Replaced infected garden with Halloween biome
 
   "spawnProfile" : {
     "groups" : [
       {
-        "select" : 9,
+        "select" : 11,
         "pool" : [
           [ 1.0, "batong" ],
-          [ 1.0, "apexlostsoul" ],
-          [ 1.0, "avianlostsoul" ],
-          [ 1.0, "floranlostsoul" ],
-          [ 1.0, "humanlostsoul" ],
-          [ 1.0, "hylotllostsoul" ],
-          [ 1.0, "hoppingpumpkin" ],
-          [ 1.0, "hoppingpumpkin2" ],
-		  [ 1.0, "annihilatordrone" ]
+          [ 1.0, "hoppingpumpkin2_es" ],
+		  [ 1.0, "hoppingpumpkin_es" ],
+		  [ 1.0, "ghost_es" ],
+		  [ 1.0, "ghostpumpkin_es" ],
+		  [ 1.0, "crow_es" ],
+		  [ 1.0, "smallghost_es" ],
+		  [ 1.0, "ghosthand_es" ],
+		  [ 1.0, "alphaghost_es" ],
+		  [ 1.0, "giantpumpkin_es" ]
         ]
       },
       {
@@ -26,18 +27,6 @@
           [ 0.3, "fawnfly" ],
           [ 0.3, "mudstag" ]
         ]
-      },
-      {
-        "select" : 2,
-        "pool" : "nightTerrors"
-      },
-      {
-        "select" : 1,
-        "pool" : "generatedGround"
-      },
-      {
-        "select" : 1,
-        "pool" : "generatedFlying"
       },
       {
         "select" : 2,
@@ -81,7 +70,7 @@
   ],
 
   "mainBlock" : "halloweendirt",
-  "subBlocks" : [ "halloweencobblestone", "blackblock" ],
+  "subBlocks" : [ "halloweencobblestone" ],
   "ores" : "surface",
 
   "parallax" : "/parallax/surface/infectedgarden.parallax",
@@ -97,10 +86,10 @@
 
   "musicTrack" : {
     "day" : {
-      "tracks" : [ "/music/forsaken-grotto.ogg", "/music/drosera.ogg", "/music/tentacle-exploration1.ogg", "/music/lava-exploration2.ogg" ]
+      "tracks" : [ "/music/echoesoftime-by-kevinmacleod.ogg", "/music/forsaken-grotto.ogg" ]
     },
     "night" : {
-      "tracks" : [ "/music/silence.ogg", "/music/temple-of-kluex.ogg" ]
+      "tracks" : [ "/music/eveningofchaos-by-kevinmacleod.ogg" ]
     }
   },
 
