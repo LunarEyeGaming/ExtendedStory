@@ -59,7 +59,7 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 10},
+              "targetQueryRange": {"value": 20},
               "keepTargetInRange": {"value": 1000},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
