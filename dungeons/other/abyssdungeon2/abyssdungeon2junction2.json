@@ -1,30 +1,30 @@
 { "backgroundcolor":"#000000",
- "height":36,
+ "height":72,
  "infinite":false,
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzjENADAMA7BgKcxhLogRqLSr2uPDvztJ83TqLx8fHx8fHx8fHx8fHx8fHx+f3Q+zC0Evau4=",
+         "data":"eJzt0FEJgFAQAMHLYkwzvxBmEIRbZD42wM6ZmSNFuq\/dtv\/58OHDpxofPnz48GnGhw8fPnya8eHDp\/dViw8fPnz4NOPDhw8fPs348OHDh08zPnz48OHTjA8fPnz4NOPDhw8fPs34vPP5qr9+8eFTiA8fPnz4NOPDhw8fPs348OHDh4+03wP5bZvT",
          "encoding":"base64",
-         "height":36,
+         "height":72,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":36,
+         "width":72,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt17kNADAMAzHPkjE9fRZIkcoPQALqr1UEP\/L0Ts\/uHgAAAGpM+4N6dvXwdgEG45wB",
+         "data":"eJzt2bENhEAMAEFqoUyqJ0RPsAkc\/KEZybGtTb0s8D+29Xe+tu8qfZo+TZ+mT9On6dP0afo0fZo+TZ+mT9On6dP0afq0r\/Y577lrRnvqbn300WeeuwEAAAAAAOBNs\/7Z\/E\/10Wf+PqPuHe3pfVfp0\/Rp+jR9mj5Nn6ZP06fp0\/Rp+jR9mj5Nn6ZP06fpA4cdpdeGEA==",
          "encoding":"base64",
-         "height":36,
+         "height":72,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":36,
+         "width":72,
          "x":0,
          "y":0
         }, 
@@ -45,64 +45,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "height":16,
-                 "id":1836,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":256,
-                 "x":16,
-                 "y":248
-                }, 
-                {
-                 "height":16,
-                 "id":1837,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":256,
-                 "x":16,
-                 "y":24
-                }, 
-                {
-                 "height":96,
-                 "id":1840,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":264,
-                 "y":40
-                }, 
-                {
-                 "height":96,
+                 "height":152,
                  "id":1841,
                  "name":"",
                  "properties":
@@ -116,9 +59,180 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
+                 "width":16,
+                 "x":392,
+                 "y":408
+                }, 
+                {
+                 "height":152,
+                 "id":1845,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":168,
+                 "y":408
+                }, 
+                {
+                 "height":152,
+                 "id":1850,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":168,
+                 "y":16
+                }, 
+                {
+                 "height":152,
+                 "id":1851,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":392,
+                 "y":16
+                }, 
+                {
+                 "height":16,
+                 "id":1852,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":168,
                  "x":16,
-                 "y":40
+                 "y":392
+                }, 
+                {
+                 "height":16,
+                 "id":1853,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":168,
+                 "x":16,
+                 "y":168
+                }, 
+                {
+                 "height":16,
+                 "id":1854,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":168,
+                 "x":392,
+                 "y":168
+                }, 
+                {
+                 "height":16,
+                 "id":1855,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":168,
+                 "x":392,
+                 "y":392
+                }, 
+                {
+                 "height":8,
+                 "id":1861,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":104,
+                 "x":184,
+                 "y":104
+                }, 
+                {
+                 "height":8,
+                 "id":1862,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":88,
+                 "x":304,
+                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -174,40 +288,52 @@
          "name":"anchors etc",
          "objects":[
                 {
-                 "gid":238,
+                 "gid":250,
                  "height":8,
-                 "id":1304,
+                 "id":1844,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":144,
-                 "y":160
+                 "x":160,
+                 "y":568
+                }, 
+                {
+                 "gid":250,
+                 "height":8,
+                 "id":1846,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":160,
+                 "y":16
                 }, 
                 {
                  "gid":247,
                  "height":8,
-                 "id":1838,
+                 "id":1859,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
                  "x":8,
-                 "y":24
+                 "y":168
                 }, 
                 {
                  "gid":247,
                  "height":8,
-                 "id":1839,
+                 "id":1860,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":272,
-                 "y":24
+                 "x":560,
+                 "y":168
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -225,7 +351,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1842,
+ "nextobjectid":1863,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -386,5 +512,5 @@
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":36
+ "width":72
 }

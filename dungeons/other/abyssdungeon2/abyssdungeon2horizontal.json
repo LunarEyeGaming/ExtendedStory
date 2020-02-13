@@ -4,27 +4,27 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztzjENADAMA7BgKcxhLogRqLSr2uPDvztJ83TqLx8fHx8fHx8fHx8fHx8fHx+f3Q+zC0Evau4=",
+         "data":"eJzt0DENACAQBLDTgkw0vwhWdhJyQ4ca6CQZeLQXNz9+\/Pjx08mPHz9+\/HTy48ePHz+d\/Pjx48dPJz9+\/Pjx08mPHz9+Wn4AfjuPg9hb",
          "encoding":"base64",
          "height":36,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":36,
+         "width":72,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt17kNADAMAzHPkjE9fRZIkcoPQALqr1UEP\/L0Ts\/uHgAAAGpM+4N6dvXwdgEG45wB",
+         "data":"eJzt2cEJACAMBMHUYplWn69vhSTIDFwD+70IeLeXndNHH33q+gAAAAAAAMBPuv+4adNHH33q+sCNBODES5A=",
          "encoding":"base64",
          "height":36,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":36,
+         "width":72,
          "x":0,
          "y":0
         }, 
@@ -59,7 +59,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":256,
+                 "width":544,
                  "x":16,
                  "y":248
                 }, 
@@ -78,47 +78,33 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":256,
+                 "width":544,
                  "x":16,
                  "y":24
                 }, 
                 {
-                 "height":96,
-                 "id":1840,
+                 "gid":247,
+                 "height":8,
+                 "id":1838,
                  "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":264,
-                 "y":40
+                 "x":8,
+                 "y":24
                 }, 
                 {
-                 "height":96,
-                 "id":1841,
+                 "gid":247,
+                 "height":8,
+                 "id":1839,
                  "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":16,
-                 "y":40
+                 "x":560,
+                 "y":24
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -172,43 +158,7 @@
         {
          "draworder":"topdown",
          "name":"anchors etc",
-         "objects":[
-                {
-                 "gid":238,
-                 "height":8,
-                 "id":1304,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":144,
-                 "y":160
-                }, 
-                {
-                 "gid":247,
-                 "height":8,
-                 "id":1838,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":8,
-                 "y":24
-                }, 
-                {
-                 "gid":247,
-                 "height":8,
-                 "id":1839,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":272,
-                 "y":24
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -225,7 +175,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1842,
+ "nextobjectid":1840,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -386,5 +336,5 @@
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":36
+ "width":72
 }

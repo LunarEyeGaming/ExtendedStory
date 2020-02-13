@@ -10,6 +10,12 @@ function LightningSlam:init()
   self.cooldownTimer = self.cooldownTime
 end
 
+function LightningSlam:aimVector(inaccuracy)
+  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + sb.nrand(inaccuracy, 0))
+  aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+  return aimVector
+end
+
 function LightningSlam:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
@@ -58,7 +64,7 @@ function LightningSlam:flip()
 
     if self.jumpTimer > 0 then
       self.jumpTimer = self.jumpTimer - self.dt
-      mcontroller.setVelocity({self.jumpVelocity[1] * self.weapon.aimDirection, self.jumpVelocity[2]})
+      mcontroller.setVelocity(vec2.mul(vec2.norm(self:aimVector(self.jumpInaccuracy or 0)), self.jumpSpeed))
     end
 
     local damageArea = partDamageArea("swoosh")

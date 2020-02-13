@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt17kNADAMAzHPkjE9fRZIkcoPQALqr1UEP\/L0Ts\/uHgAAAGpM+4N6dvXwdgEG45wB",
+         "data":"eJztzrENACAIRUFmcUynt9ZYUGGI95JfUXARyjTHvtf\/eHp5quPh4eHh4eHh4eHh4fnVc96rx9Pbo3sLbx2cAQ==",
          "encoding":"base64",
          "height":36,
          "name":"front",
@@ -59,50 +59,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":256,
+                 "width":248,
                  "x":16,
                  "y":248
                 }, 
                 {
-                 "height":16,
-                 "id":1837,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":256,
-                 "x":16,
-                 "y":24
-                }, 
-                {
-                 "height":96,
-                 "id":1840,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":264,
-                 "y":40
-                }, 
-                {
-                 "height":96,
+                 "height":232,
                  "id":1841,
                  "name":"",
                  "properties":
@@ -116,9 +78,47 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
+                 "width":16,
+                 "x":248,
+                 "y":16
+                }, 
+                {
+                 "height":24,
+                 "id":1842,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":24,
+                 "y":16
+                }, 
+                {
+                 "height":16,
+                 "id":1843,
+                 "name":"",
+                 "properties":
+                    {
+                     "stagehand":"abyssdungeoncloudbuilder_es"
+                    },
+                 "propertytypes":
+                    {
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
                  "width":8,
                  "x":16,
-                 "y":40
+                 "y":24
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -174,21 +174,9 @@
          "name":"anchors etc",
          "objects":[
                 {
-                 "gid":238,
-                 "height":8,
-                 "id":1304,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":144,
-                 "y":160
-                }, 
-                {
                  "gid":247,
                  "height":8,
-                 "id":1838,
+                 "id":1839,
                  "name":"",
                  "rotation":0,
                  "type":"",
@@ -198,16 +186,16 @@
                  "y":24
                 }, 
                 {
-                 "gid":247,
+                 "gid":250,
                  "height":8,
-                 "id":1839,
+                 "id":1844,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":272,
-                 "y":24
+                 "x":16,
+                 "y":16
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -225,7 +213,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1842,
+ "nextobjectid":1845,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

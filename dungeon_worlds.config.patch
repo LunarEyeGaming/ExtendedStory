@@ -183,6 +183,21 @@
   },
   {
     "op" : "add",
+    "path" : "/abyssartifactdungeon2",
+    "value" : {
+      "primaryDungeon" : "abyssartifactdungeon2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "",
+      "biome": "darkabyssdimension",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/supervoidbossarena",
     "value" : {
       "primaryDungeon" : "supervoidbossarena",

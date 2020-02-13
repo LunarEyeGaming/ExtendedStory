@@ -10,8 +10,8 @@
 			"cycle" : 0.25,
 			"mode" : "loop",
 			"properties" : {
-			  "lightsOn" : [ "passive1", "passive2", "passive3" ],
-			  "lightsOff" : [ "aggro1", "aggro2", "aggro3" ],
+			  "lightsOn" : [ "passive" ],
+			  "lightsOff" : [ "aggro" ],
 			  "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
 			}
           },
@@ -20,8 +20,8 @@
 			"cycle" : 0.25,
 			"mode" : "loop",
 			"properties" : {
-			  "lightsOff" : [ "passive1", "passive2", "passive3" ],
-			  "lightsOn" : [ "aggro1", "aggro2", "aggro3" ],
+			  "lightsOff" : [ "passive" ],
+			  "lightsOn" : [ "aggro" ],
 			  "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
 			}
           },
@@ -267,34 +267,12 @@
   },
   
   "lights" : {
-  
-    "passive1" : {
-      "active" : true,
-      "position" : [0, 1],
-      "color" : [74, 74, 181]
-    },
-    "passive2" : {
-      "active" : true,
-      "position" : [0, -1],
-      "color" : [74, 74, 181]
-    },
-    "passive3" : {
+    "passive" : {
       "active" : true,
       "position" : [1, 0],
-      "color" : [128, 128, 128]
+      "color" : [74, 74, 181]
     },
-	
-	"aggro1" : {
-      "active" : true,
-      "position" : [0, 1],
-      "color" : [128, 0, 0]
-    },
-    "aggro2" : {
-      "active" : true,
-      "position" : [0, -1],
-      "color" : [128, 0, 0]
-    },
-    "aggro3" : {
+    "aggro" : {
       "active" : true,
       "position" : [1, 0],
       "color" : [181, 0, 0]

@@ -23,75 +23,49 @@
 
     //---------------HALLS
     {
-      "name" : "hall1",
+      "name" : "hall",
+      "rules" : [
+        //[ "maxSpawnCount", [3] ]
+      ],
+      "def" : [ "tmx", "abyssdungeon2horizontal.json" ],
+      "chance" : 500
+    },
+    
+    //---------------PIT FALLS
+    {
+      "name" : "pit1",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall1" ] ]
+        [ "doNotConnectToPart", [ "pit1" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom1a.json" ],
+      "def" : [ "tmx", "abyssdungeon2vertical1.json" ],
       "chance" : 500
     },
     {
-      "name" : "hall2",
+      "name" : "pit2",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall2" ] ]
+        [ "doNotConnectToPart", [ "pit2" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom1b.json" ],
+      "def" : [ "tmx", "abyssdungeon2vertical2.json" ],
       "chance" : 500
     },
     {
-      "name" : "hall3",
+      "name" : "pit3",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall3" ] ]
+        [ "doNotConnectToPart", [ "pit3" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom1c.json" ],
+      "def" : [ "tmx", "abyssdungeon2vertical3.json" ],
       "chance" : 500
     },
     {
-      "name" : "hall4",
+      "name" : "pit4",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall4" ] ]
+        [ "doNotConnectToPart", [ "pit4" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom1d.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "hall5",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall5" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeonroom1e.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "hall6",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall6" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeonroom1f.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "hall7",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall7" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeonroom1g.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "hall8",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "hall8" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeonroom1h.json" ],
+      "def" : [ "tmx", "abyssdungeon2vertical4.json" ],
       "chance" : 500
     },
 
@@ -102,7 +76,7 @@
         //[ "maxSpawnCount", [3] ],
         [ "doNotConnectToPart", [ "junction1" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom2a.json" ],
+      "def" : [ "tmx", "abyssdungeon2junction1.json" ],
       "chance" : 450
     },
     {
@@ -111,7 +85,7 @@
         //[ "maxSpawnCount", [3] ],
         [ "doNotConnectToPart", [ "junction2" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom2b.json" ],
+      "def" : [ "tmx", "abyssdungeon2junction2.json" ],
       "chance" : 450
     },
     {
@@ -120,7 +94,7 @@
         //[ "maxSpawnCount", [3] ],
         [ "doNotConnectToPart", [ "junction3" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom2c.json" ],
+      "def" : [ "tmx", "abyssdungeon2junction3.json" ],
       "chance" : 450
     },
     {
@@ -129,137 +103,41 @@
         //[ "maxSpawnCount", [3] ],
         [ "doNotConnectToPart", [ "junction4" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonroom2d.json" ],
+      "def" : [ "tmx", "abyssdungeon2junction4.json" ],
       "chance" : 450
     },
 
     //---------------CORNERS
     {
-      "name" : "corner1a",
+      "name" : "cornerTL",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncorner1a.json" ],
+      "def" : [ "tmx", "abyssdungeon2cornerTL.json" ],
       "chance" : 400
     },
     {
-      "name" : "corner1b",
+      "name" : "cornerTR",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncorner1b.json" ],
+      "def" : [ "tmx", "abyssdungeon2cornerTR.json" ],
       "chance" : 400
     },
     {
-      "name" : "corner1c",
+      "name" : "cornerBL",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncorner1c.json" ],
+      "def" : [ "tmx", "abyssdungeon2cornerBL.json" ],
       "chance" : 400
     },
     {
-      "name" : "corner1d",
+      "name" : "cornerBR",
       "rules" : [
         //[ "maxSpawnCount", [3] ]
       ],
-      "def" : [ "tmx", "abyssdungeoncorner1d.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner2a",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner2a.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner2b",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner2b.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner2c",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner2c.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner2d",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner2d.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner3a",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner3a.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner3b",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner3b.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner3c",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner3c.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner3d",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner3d.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner4a",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner4a.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner4b",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner4b.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner4c",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner4c.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "corner4d",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeoncorner4d.json" ],
+      "def" : [ "tmx", "abyssdungeon2cornerBR.json" ],
       "chance" : 400
     },
 
@@ -269,68 +147,36 @@
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
-      "def" : [ "tmx", "abyssdungeonendcaptop.json" ],
+      "def" : [ "tmx", "abyssdungeon2endcaptop.json" ],
       "chance" : 25
-    },
-    {
-      "name" : "endtop2",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeonendcaptop2.json" ],
-      "chance" : 0
     },
     {
       "name" : "endbot",
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
-      "def" : [ "tmx", "abyssdungeonendcapbot.json" ],
+      "def" : [ "tmx", "abyssdungeon2endcapbot.json" ],
       "chance" : 25
-    },
-    {
-      "name" : "endbot2",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeonendcapbot2.json" ],
-      "chance" : 0
     },
     {
       "name" : "endleft",
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
-      "def" : [ "tmx", "abyssdungeonendcapleft.json" ],
+      "def" : [ "tmx", "abyssdungeon2endcapleft.json" ],
       "chance" : 25
-    },
-    {
-      "name" : "endleft2",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeonendcapleft2.json" ],
-      "chance" : 0
     },
     {
       "name" : "endright",
       "rules" : [
         [ "ignorePartMaximumRule" ]
       ],
-      "def" : [ "tmx", "abyssdungeonendcapright.json" ],
+      "def" : [ "tmx", "abyssdungeon2endcapright.json" ],
       "chance" : 25
-    },
-    {
-      "name" : "endright2",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeonendcapright2.json" ],
-      "chance" : 0
-    },
+    }
 
     //---------------BOSS ROOMS
-    {
+    /*{
       "name" : "bossleft",
       "rules" : [
         [ "ignorePartMaximumRule" ],
@@ -347,6 +193,6 @@
       ],
       "def" : [ "tmx", "abyssdungeonbossroomright.json" ],
       "chance" : 100
-    }
+    }*/
   ]
 }

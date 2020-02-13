@@ -92,8 +92,9 @@
     "rotations" : 3,
     "rotationTime" : 0.2,
 
-    "jumpVelocity" : [40, 60],
+    "jumpSpeed" : 50,
     "jumpDuration" : 0.2,
+    "jumpInaccuracy" : 0.01,
 	
 	"slamFreezeTime" : 0.25,
 	"slamSpeed" : 100,
