@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "abyssdungeoncloud2_es",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "cloud1", "cloud2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "cloud1",
+      "rules" : [ 
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cloud1.json" ],
+      "chance" : 1000
+    },
+    {
+      "name" : "cloud2",
+      "rules" : [ 
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "cloud2.json" ],
+      "chance" : 1000
+    }
+  ]
+}

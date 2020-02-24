@@ -11,7 +11,9 @@ function LightningSlam:init()
 end
 
 function LightningSlam:aimVector(inaccuracy)
-  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + sb.nrand(inaccuracy, 0))
+  local aimAngle = vec2.angle(activeItem.ownerAimPosition())
+  sb.logInfo("%s", aimAngle)
+  local aimVector = vec2.rotate({1, 0}, aimAngle + sb.nrand(inaccuracy, 0))
   aimVector[1] = aimVector[1] * mcontroller.facingDirection()
   return aimVector
 end

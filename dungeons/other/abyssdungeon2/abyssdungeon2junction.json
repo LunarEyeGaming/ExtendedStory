@@ -1,30 +1,30 @@
 { "backgroundcolor":"#000000",
- "height":72,
+ "height":36,
  "infinite":false,
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt0FEJgFAQAMHLYkwzvxBmEIRbZD42wM6ZmSNFuq\/dtv\/58OHDpxofPnz48GnGhw8fPnya8eHDp\/dViw8fPnz4NOPDhw8fPs348OHDh08zPnz48OHTjA8fPnz4NOPDhw8fPs34vPP5qr9+8eFTiA8fPnz4NOPDhw8fPs348OHDh4+03wP5bZvT",
+         "data":"eJztzjENADAMA7BgKcxhLogRqLSr2uPDvztJ83TqLx8fHx8fHx8fHx8fHx8fHx+f3Q+zC0Evau4=",
          "encoding":"base64",
-         "height":72,
+         "height":36,
          "name":"back",
          "opacity":0.5,
          "type":"tilelayer",
          "visible":true,
-         "width":72,
+         "width":36,
          "x":0,
          "y":0
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt2bENhEAMAEFqoUyqJ0RPsAkc\/KEZybGtTb0s8D+29Xe+tu8qfZo+TZ+mT9On6dP0afo0fZo+TZ+mT9On6dP0afq0r\/Y577lrRnvqbn300WeeuwEAAAAAAOBNs\/7Z\/E\/10Wf+PqPuHe3pfVfp0\/Rp+jR9mj5Nn6ZP06fp0\/Rp+jR9mj5Nn6ZP06fpA4cdpdeGEA==",
+         "data":"eJzt17EJADAIRUFnccxMnzpgkcpEuINf+1ojuLHy3Ot7emb1AAAA0OO3f1DPrB5qG1DlJwE=",
          "encoding":"base64",
-         "height":72,
+         "height":36,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
-         "width":72,
+         "width":36,
          "x":0,
          "y":0
         }, 
@@ -45,7 +45,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "height":152,
+                 "height":8,
                  "id":1841,
                  "name":"",
                  "properties":
@@ -60,11 +60,11 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":392,
-                 "y":408
+                 "x":248,
+                 "y":264
                 }, 
                 {
-                 "height":152,
+                 "height":8,
                  "id":1845,
                  "name":"",
                  "properties":
@@ -79,11 +79,11 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":168,
-                 "y":408
+                 "x":24,
+                 "y":264
                 }, 
                 {
-                 "height":152,
+                 "height":8,
                  "id":1850,
                  "name":"",
                  "properties":
@@ -98,11 +98,11 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":168,
+                 "x":24,
                  "y":16
                 }, 
                 {
-                 "height":152,
+                 "height":8,
                  "id":1851,
                  "name":"",
                  "properties":
@@ -117,7 +117,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":392,
+                 "x":248,
                  "y":16
                 }, 
                 {
@@ -135,9 +135,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":168,
+                 "width":24,
                  "x":16,
-                 "y":392
+                 "y":248
                 }, 
                 {
                  "height":16,
@@ -154,9 +154,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":168,
+                 "width":24,
                  "x":16,
-                 "y":168
+                 "y":24
                 }, 
                 {
                  "height":16,
@@ -173,9 +173,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":168,
-                 "x":392,
-                 "y":168
+                 "width":24,
+                 "x":248,
+                 "y":24
                 }, 
                 {
                  "height":16,
@@ -192,85 +192,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":168,
-                 "x":392,
-                 "y":392
-                }, 
-                {
-                 "height":8,
-                 "id":1861,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":88,
-                 "x":304,
-                 "y":168
-                }, 
-                {
-                 "height":8,
-                 "id":1862,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":88,
-                 "x":184,
-                 "y":480
-                }, 
-                {
-                 "height":8,
-                 "id":1863,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":328,
-                 "y":416
-                }, 
-                {
-                 "height":8,
-                 "id":1864,
-                 "name":"",
-                 "properties":
-                    {
-                     "stagehand":"abyssdungeoncloudbuilder_es"
-                    },
-                 "propertytypes":
-                    {
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":88,
-                 "x":184,
-                 "y":48
+                 "width":24,
+                 "x":248,
+                 "y":248
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -334,8 +258,8 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":160,
-                 "y":568
+                 "x":16,
+                 "y":280
                 }, 
                 {
                  "gid":250,
@@ -346,7 +270,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":160,
+                 "x":16,
                  "y":16
                 }, 
                 {
@@ -359,7 +283,7 @@
                  "visible":true,
                  "width":8,
                  "x":8,
-                 "y":168
+                 "y":24
                 }, 
                 {
                  "gid":247,
@@ -370,8 +294,8 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":560,
-                 "y":168
+                 "x":272,
+                 "y":24
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -389,7 +313,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1865,
+ "nextobjectid":1861,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -550,5 +474,5 @@
  "tilewidth":8,
  "type":"map",
  "version":1,
- "width":72
+ "width":36
 }

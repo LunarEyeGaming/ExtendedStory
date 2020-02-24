@@ -7,7 +7,7 @@
   "pointLight" : false,
   "damagePoly" : [ [16, 16], [16, -16], [-16, -16], [-16, 16] ],
   "renderLayer" : "Monster+50",
-  "fullbright" : true,
+  "flippable" : true,
   "actionOnReap" : [
     {
 	  "action" : "loop",

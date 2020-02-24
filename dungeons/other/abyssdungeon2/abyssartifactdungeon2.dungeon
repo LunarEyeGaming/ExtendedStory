@@ -7,7 +7,7 @@
     "anchor" : [ "entrance" ],
     "gravity" : 80,
     "maxRadius" : 1000000,
-    "maxParts" : 30,
+    "maxParts" : 50,
     "protected" : true
   },
 
@@ -71,39 +71,12 @@
 
     //---------------JUNCTIONS
     {
-      "name" : "junction1",
+      "name" : "junction",
       "rules" : [
         //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction1" ] ]
+        [ "doNotConnectToPart", [ "junction" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeon2junction1.json" ],
-      "chance" : 450
-    },
-    {
-      "name" : "junction2",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction2" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2junction2.json" ],
-      "chance" : 450
-    },
-    {
-      "name" : "junction3",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction3" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2junction3.json" ],
-      "chance" : 450
-    },
-    {
-      "name" : "junction4",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction4" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2junction4.json" ],
+      "def" : [ "tmx", "abyssdungeon2junction.json" ],
       "chance" : 450
     },
 
