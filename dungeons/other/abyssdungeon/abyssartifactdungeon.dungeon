@@ -15,7 +15,8 @@
     {
       "name" : "entrance",
       "rules" : [
-        [ "doNotCombineWith", [ "entrance" ] ]
+        [ "doNotCombineWith", [ "entrance" ] ],
+        [ "doNotConnectToPart", [ "bossleft", "bossright" ] ] 
       ],
       "def" : [ "tmx", "abyssdungeonentrance.json" ],
       "chance" : 1000

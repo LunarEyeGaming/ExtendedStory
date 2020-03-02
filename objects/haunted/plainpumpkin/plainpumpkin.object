@@ -1,0 +1,44 @@
+{
+  "objectName" : "plainpumpkin",
+  "colonyTags" : ["evil"],
+  "rarity" : "Common",
+  "printable" : false,
+  "category" : "decorative",
+  "price" : 50,
+  "description" : "A perfectly normal pumpkin.",
+  "shortdescription" : "Pumpkin",
+  "race" : "generic",
+
+  "apexDescription" : "A plain old pumpkin. Nothing wrong here.",
+  "avianDescription" : "What large pumpkin! I'd eat it if it weren't so tough.",
+  "floranDescription" : "Floran wants to sstab this pumpkin.",
+  "glitchDescription" : "Intrigued. Pumpkins are very uncommon throughout the universe.",
+  "humanDescription" : "I should carve a Jack'O Lantern with this!",
+  "hylotlDescription" : "I wonder how these would do on an ocean planet?",
+  "novakidDescription" : "I bet this would make a great pu'kin pie!",
+
+  "inventoryIcon" : "plainpumpkinicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "plainpumpkin.png:default",
+      "imagePosition" : [-4, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/haunted/plainpumpkin/plainpumpkin.animation",
+  "animationParts" : {
+    "pod" : "plainpumpkin.png"
+  },
+  "animationPosition" : [-4, 0],
+
+  "inputNodes" : [ ],
+  "outputNodes" : [ ],
+
+  "smashOnBreak" : false
+}

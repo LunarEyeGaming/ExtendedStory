@@ -65,7 +65,11 @@
             "mode" : "transition",
             "transition" : "idle"
           },
-          "idle" : {},
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
           "windup" : {
             "frames" : 2,
             "cycle" : 0.2,
@@ -141,7 +145,7 @@
 			},
 		    "idle" : {
 			  "properties" : {
-			    "image" : "<partImage>:idle"
+			    "image" : "<partImage>:idle.<frame>"
 			  }
 			},
             "windup" : {

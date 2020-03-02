@@ -17,7 +17,8 @@
 		  [ 1.0, "smallghost_es" ],
 		  [ 1.0, "ghosthand_es" ],
 		  [ 1.0, "alphaghost_es" ],
-		  [ 1.0, "giantpumpkin_es" ]
+		  [ 1.0, "giantpumpkin_es" ],
+		  [ 1.0, "ghostskull_es" ]
         ]
       },
       {
@@ -254,6 +255,96 @@
       // CROPS
 
       {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
+        "mode" : "floor",
+        "priority" : 1.0,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:surfaceCrops",
+
+        "type" : "object",
+        "objectSets" : [
+          {
+            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
+            "parameters" : {
+            }
+          }
+        ]
+      },
+	  {
         "mode" : "floor",
         "priority" : 1.0,
         "variants" : 1,
