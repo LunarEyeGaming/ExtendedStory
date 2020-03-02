@@ -1,0 +1,11 @@
+[
+  // Example of how to add "Umbrium Shard", "Cryonium Ore" and "Radyite Ore" to the list ot items you can study at "Mine" related stations.
+  // Please, feel free to add the rest of your relevant ores in the same way.
+	{ "op": "add", "path": "/mine/T3/abyssshard", "value": true},
+  { "op": "add", "path": "/mine/T3/cryoniumore", "value": true},
+  { "op": "add", "path": "/mine/T3/radyiteore", "value": true},
+  
+  // Example of how to add "Ancient Fragment" to the list ot items you can study at "Hunt" related stations.
+  // Please, feel free to add the rest of your relevant monster drops in the same way.
+	{ "op": "add", "path": "/hunt/T3/ancientfragment", "value": true}
+]
