@@ -236,6 +236,14 @@
       "directives" : "fade=ffffff;0.5"
     }
   },
+  
+  "lights" : {
+    "idle" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [99, 18, 0]
+    }
+  },
 
   "particleEmitters" : {
     "deathPoof" : {

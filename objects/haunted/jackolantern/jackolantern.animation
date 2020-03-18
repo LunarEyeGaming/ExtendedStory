@@ -1,48 +1,22 @@
 {
   "animatedParts" : {
-    "stateTypes" : {
-      "podState" : {
-        "default" : "active",
-        "states" : {
-
-          "active" : {
-            "frames" : 1,
-            "mode" : "loop",
-            "cycle" : 0.3
-          },
-          "expire" : {
-            "frames" : 8,
-            "cycle" : 0.9
-          }
-        }
-      }
-    },
-
     "parts" : {
-      "pod" : {
+      "fg" : {
         "properties" : {
-          "centered" : false
-        },
+          "centered" : false,
+          "image" : "<partImage>",
+          "zLevel" : 1,
+          "fullbright" : true
+        }
+      },
 
-        "partStates" : {
-          "podState" : {
-            "active" : {
-              "properties" : {
-                "image" : "<partImage>:active.<frame>"
-              }
-            },
-            "expire" : {
-              "properties" : {
-                "image" : "<partImage>:expire.<frame>"
-              }
-            }
-          }
+      "bg" : {
+        "properties" : {
+          "centered" : false,
+          "image" : "<partImage>",
+          "zLevel" : 0
         }
       }
     }
-  },
-
-  "sounds" : {
-    "use" : [ "/sfx/objects/bardoor_open.ogg" ]
   }
 }

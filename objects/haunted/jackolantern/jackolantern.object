@@ -8,7 +8,7 @@
   "description" : "A pumpkin with a spooky glowing face.",
   "shortdescription" : "Jack O' Lantern",
   "race" : "generic",
-  "lightColor" : [235, 126, 2],
+  "lightColor" : [99, 18, 0],
 
   "apexDescription" : "I don't like the way this pumpkin is looking at me.",
   "avianDescription" : "This pumpkin gives me the willies!",
@@ -34,7 +34,8 @@
 
   "animation" : "/objects/haunted/jackolantern/jackolantern.animation",
   "animationParts" : {
-    "pod" : "jackolantern.png"
+    "bg" : "jackolantern.png",
+    "fg" : "jackolanternunlit.png"
   },
   "animationPosition" : [-4, 0],
 

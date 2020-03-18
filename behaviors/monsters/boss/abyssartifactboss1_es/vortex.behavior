@@ -91,12 +91,35 @@
             }
           },
           {
+            "title": "vecAngle",
+            "type": "action",
+            "name": "vecAngle",
+            "parameters": {
+              "vector": {"key": "aimVector"}
+            },
+            "output": {
+              "angle": "targetAngle"
+            }
+          },
+          {
+            "title": "vecRotate",
+            "type": "action",
+            "name": "vecRotate",
+            "parameters": {
+              "vector": {"key": "<projectileOffset>"},
+              "angle": {"key": "targetAngle"}
+            },
+            "output": {
+              "vector": "projectileOffsetTranslated"
+            }
+          },
+          {
     	    "title": "spawnProjectile",
     	    "type": "action",
     	    "name": "spawnProjectile",
     	    "parameters": {
     	      "aimVector": {"key": "aimVector"},
-        	  "offset": {"value": [2, 0]},
+        	  "offset": {"key": "projectileOffsetTranslated"},
     	      "projectileConfig": {"value": {"speed": 50, "power": 30}},
     	      "projectileType": {"value": "abyssvortex"},
               "scalePower": {"value": true}

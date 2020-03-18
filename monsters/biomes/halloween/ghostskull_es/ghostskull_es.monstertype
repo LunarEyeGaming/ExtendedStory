@@ -1,14 +1,14 @@
 {
-  "type" : "chargedwisper",
-  "shortdescription" : "Charged Wisper",
-  "description" : "A Wisper that is electrically charged.",
+  "type" : "ghostskull_es",
+  "shortdescription" : "Haunted Skull",
+  "description" : "A skull of the dead being possesed by a ghost.",
 
-  "categories" : [ "chargedwisper" ],
+  "categories" : [ "ghostskull_es" ],
   "parts" : [ "body" ],
 
-  "animation" : "chargedwisper.animation",
+  "animation" : "ghostskull_es.animation",
 
-  "dropPools" : [ { "default" : "chargedwisperTreasure", "bow" : "chargedwisperHunting" } ],
+  "dropPools" : [ { "default" : "money" } ],
 
   "baseParameters" : {
     "scripts" : [
@@ -22,10 +22,10 @@
     "behaviorConfig" : {
       "damageOnTouch" : true,
 
-      "targetQueryRange" : 35,
+      "targetQueryRange" : 30,
       "targetOnDamage" : true,
       "keepTargetInSight" : false,
-      "keepTargetInRange" : 50,
+      "keepTargetInRange" : 9999,
       "targetOutOfSightTime" : 5.0,
 
       "hurtTime" : 0.25,
@@ -38,44 +38,15 @@
 
       "fleeActions" : [ ],
 
-      "hostileActions" : [
-        {
-          "name" : "action-fire",
-          "cooldown" : 5.0,
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 20,
-            "minimumRange" : 4,
-            "onGround" : false,
-            "windupStopForce" : 50,
-            "windupTime" : 0.8,
-
-            "projectileType" : "railgunlightning",
-            "projectileParameters" : {
-              "speed" : 40
-            },
-            "fireOffset" : [0.0, 0.0],
-            "aimAtTarget" : true,
-            "projectileCount" : 5,
-            "projectileInterval" : 0.1,
-            "inaccuracy" : 0.0,
-            "fireState" : "fire",
-            "fireDelay" : 0.1,
-            "fireSound" : "fire",
-
-            "winddownState" : "",
-            "winddownTime" : 0.5
-          }
-        }
-      ],
+      "hostileActions" : [],
 
       "periodicActions" : [ ],
 
       "approachActions" : [
         {
-          "name" : "approach-fly",
+          "name" : "approach-swarm",
           "parameters" : {
-            "usePathfinding" : false,
+            "usePathfinding" : true,
             "excludeLiquidIds" : [1]
           }
         }
@@ -95,11 +66,7 @@
         }
       ],
 
-      "wanderActions" : [
-        {
-          "name" : "emerge-fly"
-        }
-      ],
+      "wanderActions" : [],
 
       "concurrentActions" : [ ],
 
@@ -108,7 +75,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.25, 0.75], [0.625, 0.375], [0.625, -0.375], [0.25, -0.75], [-0.25, -0.75], [-0.625, -0.375], [-0.625, 0.375], [-0.25, 0.75] ],
-      "damage" : 9,
+      "damage" : 20,
 
       "teamType" : "enemy",
       "damageSourceKind" : "slash",
@@ -120,7 +87,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionEnabled" : false,
+      "collisionEnabled" : true,
       "collisionPoly" : [ [0.25, 0.75], [0.625, 0.375], [0.625, -0.375], [0.25, -0.75], [-0.25, -0.75], [-0.625, -0.375], [-0.625, 0.375], [-0.25, 0.75] ],
 
       "mass" : 1.0,
@@ -133,7 +100,7 @@
       "flySpeed" : 8
     },
 
-    "bodyMaterialKind" : "organic",
+    "bodyMaterialKind" : "stone",
 
     "knockoutTime" : 0.3,
     "knockoutAnimationStates" : {
@@ -144,7 +111,7 @@
 
     "statusSettings" : {
       "statusProperties" : {
-        "targetMaterialKind" : "organic"
+        "targetMaterialKind" : "stone"
       },
 
       "appliesEnvironmentStatusEffects" : false,
@@ -164,7 +131,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 30
+          "baseValue" : 50
         },
         "protection" : {
           "baseValue" : 0.0
@@ -179,25 +146,25 @@
           "baseValue" : 0.0
         },
         "fireResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : -0.5
         },
         "fireStatusImmunity" : {
           "baseValue" : 0.0
         },
         "iceResistance" : {
-          "baseValue" : 0.0
-        },
-        "iceStatusImmunity" : {
-          "baseValue" : 0.0
-        },
-        "electricResistance" : {
           "baseValue" : 0.5
         },
-        "electricStatusImmunity" : {
+        "iceStatusImmunity" : {
           "baseValue" : 1.0
         },
+        "electricResistance" : {
+          "baseValue" : 0.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
         "poisonResistance" : {
-          "baseValue" : -0.5
+          "baseValue" : 0.0
         },
         "poisonStatusImmunity" : {
           "baseValue" : 0.0
@@ -222,6 +189,6 @@
     "capturable" : true,
     "captureHealthFraction" : 0.5,
     "nametagColor" : [64, 200, 255],
-    "captureCollectables" : { "monsters" : "wisper" }
+    "captureCollectables" : {}
   }
 }
