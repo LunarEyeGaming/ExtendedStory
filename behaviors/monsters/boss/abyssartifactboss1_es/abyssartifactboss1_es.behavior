@@ -469,6 +469,14 @@
                     }
                   },
                   {
+                    "title": "setPosition",
+                    "type": "action",
+                    "name": "setPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"}
+                    }
+                  },
+                  {
                     "title": "runner",
                     "type": "action",
                     "name": "runner",

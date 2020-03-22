@@ -48,7 +48,7 @@ function ChargeFire:charge()
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = math.max(self.chargeTimer - self.dt, 0)
 	
-    if self.chargeTimer == 0 and status.overConsumeResource("energy", self.energyCost) then
+    if self.chargeTimer == 0 and status.overConsumeResource("energy", self.energyUsage * self.fireTime) then
       self:setState(self.fire)
     end
 

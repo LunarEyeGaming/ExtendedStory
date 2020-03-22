@@ -1,0 +1,26 @@
+{
+  "controlPupilBrightness": {
+    "type": "action",
+    "name": "controlPupilBrightness",
+    "title": "controlPupilBrightness",
+    "properties": {
+      "targetEntity": {"type": "entity", "value": null},
+      "targetDistances": {"type": "list", "value": null}
+    },
+    "category": "abyssaloverseerstalker",
+    "script": "/scripts/actions/unique/abyssaloverseerstalker_es.lua",
+    "output": {}
+  },
+  "lightTooBright": {
+    "type": "action",
+    "name": "lightTooBright",
+    "title": "lightTooBright",
+    "properties": {
+      "position": {"type": "position", "key": "self"},
+      "threshold": {"type": "number", "value": null}
+    },
+    "category": "abyssaloverseerstalker",
+    "script": "/scripts/actions/unique/abyssaloverseerstalker_es.lua",
+    "output": {}
+  }
+}

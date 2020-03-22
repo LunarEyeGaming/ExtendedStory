@@ -1,0 +1,15 @@
+{
+  "name" : "abyssstoned_es",
+  "effectConfig" : {},
+  "defaultDuration" : 2.5,
+
+  "scripts" : [
+    "abyssstoned_es.lua"
+  ],
+
+  "animationConfig" : "abyssstoned_es.animation",
+
+  "sounds" : {
+    "stoned" : [ "/sfx/objects/rock_crumble1.ogg" ]
+  }
+}

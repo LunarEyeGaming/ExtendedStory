@@ -35,15 +35,15 @@
     "name" : "NAN",
     "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
     "class" : "ChargeFire",
-	"baseDamage" : 4,
+	"baseDamage" : 3,
 	"chargeTime" : 1.5,
-	"energyCost" : 50,
+	"energyUsage" : 75,
 	"cooldownTime" : 0.25,
     "beamLength" : 100,
+
 	//Display only
-	"baseDps" : 7,
+	"baseDps" : 5.25,
 	"fireTime" : 1.75,
-	"energyUsage" : 50,
     "stances" : {
       "idle" : {
         "armRotation" : 0,

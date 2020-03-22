@@ -1,0 +1,66 @@
+{
+  "muteSfx" : true,
+  "muteMusic" : true,
+  "skippable" : false,
+  "panels" : [
+    {
+	  "startTime" : 0,
+	  "endTime" : 13,
+      "drawables" : [
+        {
+          "image" : "/cinematics/black.png"
+        }
+      ],
+      "keyframes" : [
+		{
+          "timecode" : 0,
+          "zoom" : 200,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 5,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 13,
+          "zoom" : 200,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+      "startTime" : 7.0,
+      "endTime" : 13.0,
+      "drawables" : [ ],
+      "animationFrames" : 2,
+      "text" : "If you see this message, then you are in admin mode. Get out cheater!\njk. You will have to wait a few seconds because this cinematic is unskippable.",
+      "textPosition" : {
+        "position" : [34, 21],
+        "vAnchor" : "top",
+        "wrapWidth" : 218
+      },
+      "keyframes" : [
+        {
+          "timecode" : 0.0,
+          "alpha" : 1.0,
+          "zoom" : 1.0,
+          "position" : [366.5, 100],
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 0.3,
+          "textPercentage" : 0
+        },
+        {
+          "timecode" : 2.5,
+          "textPercentage" : 1
+        }
+      ]
+    }
+  ],
+  "audio" : [ ]
+}

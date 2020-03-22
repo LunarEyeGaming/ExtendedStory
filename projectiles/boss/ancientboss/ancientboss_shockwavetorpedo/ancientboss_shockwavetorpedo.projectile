@@ -1,0 +1,64 @@
+{
+  "projectileName" : "ancientboss_shockwavetorpedo",
+  "image" : "ancientboss_shockwavetorpedo.png",
+  "animationCycle" : 0.2,
+  "lightColor" : [150, 100, 100],
+  "frameNumber" : 2,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "boomerang",
+  "emitters" : [],
+  "periodicActions" : [
+    {
+      "time" : 0.05,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "ancientboss_shockwavespawner",
+      "inheritDamageFactor" : 0.3,
+      "direction" : [-1, 0]
+    },
+    {
+      "action" : "projectile",
+      "type" : "ancientboss_shockwavespawner",
+      "inheritDamageFactor" : 0.3,
+      "direction" : [1, 0]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
+    },
+    {
+      "action" : "loop",
+      "count" : 30,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "animation" : "/animations/shards/ancientshard.animation",
+            "initialVelocity" : [0.0, 60.0],
+            "finalVelocity" : [0.0, -60.0],
+            "approach" : [0.3, 120],
+            "timeToLive" : 0.5,
+            "layer" : "middle",
+            "collidesForeground" : false,
+            "position" : [0, 0.0],
+            "variance" : {
+              "initialVelocity" : [10, 20]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma",
+
+  "speed" : 50
+}

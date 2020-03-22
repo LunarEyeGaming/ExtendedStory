@@ -119,6 +119,25 @@
                  "width":8,
                  "x":16,
                  "y":40
+                }, 
+                {
+                 "height":8,
+                 "id":1842,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"abyssaloverseerstalker_es"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":144,
+                 "y":184
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -225,7 +244,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1842,
+ "nextobjectid":1843,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

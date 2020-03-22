@@ -1,0 +1,81 @@
+{
+  "name": "abyssaloverseerstalker_es-flytotarget",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {
+    "speed": 1,
+    "controlForce": 300
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "entityDirection",
+        "type": "action",
+        "name": "entityDirection",
+        "parameters": {
+          "target": {"key": "target"}
+        },
+        "output": {
+          "vector": "aimVector"
+        }
+      },
+      {
+        "title": "vecAngle",
+        "type": "action",
+        "name": "vecAngle",
+        "parameters": {
+          "vector": {"key": "aimVector"}
+         },
+        "output": {
+          "angle": "aimAngle"
+        }
+      },
+      {
+        "title": "vecMultiply",
+        "type": "action",
+        "name": "vecMultiply",
+        "parameters": {
+          "number": {"key": "<speed>"},
+          "first": {"value": [1, 0]}
+        },
+        "output": {
+          "vector": "toSpeed"
+        }
+      },
+      {
+        "title": "vecRotate",
+        "type": "action",
+        "name": "vecRotate",
+        "parameters": {
+          "angle": {"key": "aimAngle"},
+          "vector": {"key": "toSpeed"}
+        },
+        "output": {
+          "vector": "velocity"
+        }
+      },
+      {
+        "title": "controlApproachVelocity",
+        "type": "action",
+        "name": "controlApproachVelocity",
+        "parameters": {
+          "force": {"key": "<controlForce>"},
+          "velocity": {"key": "velocity"}
+        }
+      }
+    ]
+  }
+}

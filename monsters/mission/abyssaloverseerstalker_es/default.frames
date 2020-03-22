@@ -1,0 +1,20 @@
+{
+  "frameGrid" : {
+    "size" : [64, 64],
+    "dimensions" : [6, 3],
+    "names" : [
+      [ "orb", "fadein.1", "fadein.2", "fadein.3", "fadein.4", "fadein.5" ],
+	  [ "idle.4", "idle.3", "idle.2", "idle.1", "idle.0" ],
+      [ "petrify.1", "petrify.2" ]
+    ]
+  },
+  "aliases" : {
+    "fadeout.1" : "fadein.5",
+	"fadeout.2" : "fadein.4",
+	"fadeout.3" : "fadein.3",
+	"fadeout.4" : "fadein.2",
+	"fadeout.5" : "fadein.1",
+
+    "petrifyend.1" : "petrify.1"
+  }
+}
