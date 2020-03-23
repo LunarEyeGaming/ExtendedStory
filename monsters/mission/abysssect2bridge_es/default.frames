@@ -1,0 +1,17 @@
+{
+  "frameGrid" : {
+    "size" : [64, 64],
+    "dimensions" : [5, 1],
+    "names" : [
+      [ "invisible", "fadein.1", "fadein.2", "fadein.3", "fadein.4" ]
+    ]
+  },
+  "aliases" : {
+    "idle" : "fadein.4",
+    
+    "fadeout.1" : "fadein.4",
+	"fadeout.2" : "fadein.3",
+	"fadeout.3" : "fadein.2",
+	"fadeout.4" : "fadein.1"
+  }
+}

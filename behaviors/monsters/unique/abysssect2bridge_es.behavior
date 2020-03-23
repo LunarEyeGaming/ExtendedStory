@@ -1,5 +1,5 @@
 {
-  "name": "abyssabductoreye_es",
+  "name": "abysssect2bridge_es",
   "description": "",
   "scripts": [
     "/scripts/actions/entity.lua",
@@ -58,7 +58,7 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 50},
+              "targetQueryRange": {"value": 20},
               "keepTargetInRange": {"value": 100},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
@@ -108,7 +108,7 @@
                         "type": "action",
                         "name": "timer",
                         "parameters": {
-                          "time": {"value": 5}
+                          "time": {"value": 1}
                         }
                       },
                       {
@@ -116,7 +116,7 @@
                         "type": "action",
                         "name": "setAnimationState",
                         "parameters": {
-                          "state": {"value": "open"},
+                          "state": {"value": "fadein"},
                           "type": {"value": "body"}
                         }
                       },
@@ -143,22 +143,12 @@
                           "parameters": {},
                           "children": [
                             {
-    		                  "title": "spawnProjectile",
-    		                  "type": "action",
-    		                  "name": "spawnProjectile",
-    		                  "parameters": {
-    		                    "aimVector": {"value": [0, 0]},
-    		                    "offset": {"value": [0, 0]},
-    		                    "projectileConfig": {"value": {}},
-    		                    "projectileType": {"value": "abyssspellparticleemitter_es"}
-    		                  }
-    		                },
-                            {
-                              "title": "playSound",
+                              "title": "setAnimationState",
                               "type": "action",
-                              "name": "playSound",
+                              "name": "setAnimationState",
                               "parameters": {
-                                "sound": {"value": "windupSpell"}
+                                "state": {"value": "fadeout"},
+                                "type": {"value": "body"}
                               }
                             },
                             {
@@ -166,23 +156,41 @@
                               "type": "action",
                               "name": "timer",
                               "parameters": {
-                                "time": {"value": 6}
+                                "time": {"value": 1}
                               }
                             },
                             {
-                              "title": "burstParticleEmitter",
+                              "title": "setParticleEmitterActive",
                               "type": "action",
-                              "name": "burstParticleEmitter",
+                              "name": "setParticleEmitterActive",
                               "parameters": {
-                                "emitter": {"value": "cast"}
+                                "emitter": {"value": "enterTheMind"},
+                                "active": {"value": true}
                               }
                             },
                             {
-                              "title": "playSound",
+                              "title": "timer",
                               "type": "action",
-                              "name": "playSound",
+                              "name": "timer",
                               "parameters": {
-                                "sound": {"value": "castSpell"}
+                                "time": {"value": 1.5}
+                              }
+                            },
+                            {
+                              "title": "setParticleEmitterActive",
+                              "type": "action",
+                              "name": "setParticleEmitterActive",
+                              "parameters": {
+                                "emitter": {"value": "enterTheMind"},
+                                "active": {"value": false}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 1.0}
                               }
                             },
                             {
@@ -221,11 +229,19 @@
                                       "type": "action",
                                       "name": "sendEntityMessage",
                                       "parameters": {
-                                        "arguments": {"value": ["antimatterfreeze", 15]},
+                                        "arguments": {"value": ["/cinematics/slowfade2.cinematic"]},
                                         "entity": {"key": "eachItem"},
-                                        "message": {"value": "applyStatusEffect"}
+                                        "message": {"value": "playCinematic"}
                                       }
                                     }
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 5.0}
                                   }
                                 },
                                 {
@@ -246,65 +262,7 @@
                                       "type": "action",
                                       "name": "sendEntityMessage",
                                       "parameters": {
-                                        "arguments": {"value": ["abyssfading_es"]},
-                                        "entity": {"key": "eachItem"},
-                                        "message": {"value": "applyStatusEffect"}
-                                      }
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "title": "timer",
-                              "type": "action",
-                              "name": "timer",
-                              "parameters": {
-                                "time": {"value": 5}
-                              }
-                            },
-                            {
-                              "title": "setAnimationState",
-                              "type": "action",
-                              "name": "setAnimationState",
-                              "parameters": {
-                                "state": {"value": "close"},
-                                "type": {"value": "body"}
-                              }
-                            },
-                            {
-                              "title": "timer",
-                              "type": "action",
-                              "name": "timer",
-                              "parameters": {
-                                "time": {"value": 5}
-                              }
-                            },
-                            {
-                              "title": "sequence",
-                              "type": "composite",
-                              "name": "sequence",
-                              "parameters": {},
-                              "children": [
-                                {
-                                  "title": "each",
-                                  "type": "decorator",
-                                  "name": "each",
-                                  "parameters": {
-                                    "list": {"key": "players"},
-                                    "type": {"value": "entity"}
-                                  },
-                                  "child": {
-                                    "title": "succeeder",
-                                    "type": "decorator",
-                                    "name": "succeeder",
-                                    "parameters": {},
-                                    "child": {
-                                      "title": "sendEntityMessage",
-                                      "type": "action",
-                                      "name": "sendEntityMessage",
-                                      "parameters": {
-                                        "arguments": {"value": ["InstanceWorld:abyssartifactdungeonboss"]},
+                                        "arguments": {"value": ["InstanceWorld:abyssartifactdungeon2"]},
                                         "entity": {"key": "eachItem"},
                                         "message": {"value": "warp"}
                                       }
@@ -345,7 +303,7 @@
                     "type": "action",
                     "name": "setAnimationState",
                     "parameters": {
-                      "state": {"value": "close"},
+                      "state": {"value": "fadeout"},
                       "type": {"value": "body"}
                     }
                   }

@@ -8,8 +8,8 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":18,
- "tileheight":40,
+ "tilecount":19,
+ "tileheight":64,
  "tileproperties":
     {
      "0":
@@ -83,6 +83,13 @@
          "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"abyssvortextrap_es",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysssavepoint_es",
          "tilesetDirection":"right"
         },
      "2":
@@ -220,6 +227,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "18":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "imagePositionX":"string",
@@ -342,6 +356,12 @@
          "imageheight":16,
          "imagewidth":8
         },
+     "18":
+        {
+         "image":"..\/images\/objects\/abysssavepoint.png",
+         "imageheight":40,
+         "imagewidth":48
+        },
      "2":
         {
          "image":"..\/images\/objects\/abyssswarmurnlarge2.png",
@@ -375,14 +395,14 @@
      "7":
         {
          "image":"..\/images\/objects\/abyssportal.png",
-         "imageheight":33,
-         "imagewidth":32
+         "imageheight":64,
+         "imagewidth":48
         },
      "8":
         {
          "image":"..\/images\/objects\/abyssportal.png",
-         "imageheight":33,
-         "imagewidth":32
+         "imageheight":64,
+         "imagewidth":48
         },
      "9":
         {

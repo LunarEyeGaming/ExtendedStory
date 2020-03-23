@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt17kNADAMAzHPkjE9fRZIkcoPQALqr1UEP\/L0Ts\/uHgAAAGpM+4N6dvXwdgEG45wB",
+         "data":"eJzt17ENACAMA8HMwphMzwIUdHHQnZTeZb6KF3v1nj2z9wAAwI8S\/uGkHz2hH1KaprO10nrQnll7uDtqicap",
          "encoding":"base64",
          "height":36,
          "name":"front",
@@ -137,7 +137,27 @@
                  "visible":true,
                  "width":8,
                  "x":144,
-                 "y":184
+                 "y":112
+                }, 
+                {
+                 "gid":8845,
+                 "height":40,
+                 "id":1844,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"savepoint\"}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":128,
+                 "y":200
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -244,7 +264,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1843,
+ "nextobjectid":1846,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

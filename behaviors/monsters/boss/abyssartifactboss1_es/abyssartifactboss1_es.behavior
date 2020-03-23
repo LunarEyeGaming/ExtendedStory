@@ -160,6 +160,17 @@
                         ]
                       },
                       {
+                        "title": "spawnProjectile",
+                        "type": "action",
+                        "name": "spawnProjectile",
+                        "parameters": {
+                          "aimVector": {"value": [-1, 0]},
+                          "offset": {"value": [-32, 0]},
+                          "projectileConfig": {"value": {"power": 0}},
+                          "projectileType": {"value": "abyssalhaze_es"}
+                        }
+                      },
+                      {
                         "title": "setAggressive",
                         "type": "action",
                         "name": "setAggressive",
@@ -474,6 +485,22 @@
                     "name": "setPosition",
                     "parameters": {
                       "position": {"key": "spawn"}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "faceDirection",
+                    "type": "action",
+                    "name": "faceDirection",
+                    "parameters": {
+                      "direction": {"value": 1}
                     }
                   },
                   {

@@ -21,6 +21,17 @@
     "parameters": {},
     "children": [
       {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [0, 0]},
+          "offset": {"value": [-32, 0]},
+          "projectileConfig": {"value": {"power": 0, "timeToLive": 1.0}},
+          "projectileType": {"value": "abyssalhaze_es"}
+        }
+      },
+      {
         "title": "addEphemeralEffect",
         "type": "action",
         "name": "addEphemeralEffect",
