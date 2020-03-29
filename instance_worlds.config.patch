@@ -806,6 +806,39 @@
   },
   {
     "op" : "add",
+    "path" : "/abyssartifactdungeonintervene",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "beamUpRule" : "AnywhereWithWarning",
+      "dungeonWorld" : "abyssartifactdungeonintervene",
+      "disableDeathDrops" : true,
+
+      "skyParameters" : {
+        "spaceLevel" : 3000,
+        "ambientLightLevel" : [ 212, 200, 121 ],
+        "skyType" : "atmospheric",
+        "horizonImages" : [ ],
+        "dayLength" : 10000,
+        "surfaceLevel" : 1200,
+        "seed" : -5288806180628666923,
+        "skyColoring" : {
+          "mainColor" : [200, 200, 255],
+
+          "morningColors" : [ [184, 163, 83], [242, 241, 157] ],
+          "dayColors" : [ [184, 163, 83], [242, 241, 157] ],
+          "eveningColors" : [ [184, 163, 83], [242, 241, 157] ],
+          "nightColors" : [ [184, 163, 83], [242, 241, 157] ],
+
+          "morningLightColor" : [184, 163, 83],
+          "dayLightColor" : [184, 163, 83],
+          "eveningLightColor" : [184, 163, 83],
+          "nightLightColor" : [184, 163, 83]
+        }
+      }
+    }
+  },
+  {
+    "op" : "add",
     "path" : "/supervoidbossarena",
     "value" : {
       "type" : "FloatingDungeon",

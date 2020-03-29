@@ -34,13 +34,16 @@
             "transition" : "idle"
           },
           "fire5" : {
-            "frames" : 6,
-            "cycle" : 0.33,
+            "frames" : 3,
+            "cycle" : 0.1,
             "mode" : "transition",
-            "transition" : "idle", 
-			"frameProperties" : {
-			  "immediateSound" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_shotgun1.ogg"]
-			}
+            "transition" : "idle"
+          },
+          "fire6" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
@@ -54,7 +57,7 @@
             }
           },
           "extend" : {
-            "frames" : 4,
+            "frames" : 3,
             "cycle" : 0.15,
             "mode" : "transition",
             "transition" : "active",
@@ -65,8 +68,8 @@
             }
           },
           "active" : {
-            "frames" : 8,
-            "cycle" : 0.4,
+            "frames" : 3,
+            "cycle" : 0.1,
             "mode" : "loop",
             "properties" : {
               "lightsOn" : ["glow"],
@@ -75,7 +78,7 @@
             }
           },
           "retract" : {
-            "frames" : 4,
+            "frames" : 3,
             "cycle" : 0.15,
             "mode" : "transition",
             "transition" : "inactive",
@@ -179,41 +182,44 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "/items/active/weapons/melee/broadsword/swoosh2/energyswoosh.png:<frame>?replace;d29ce7=ff9d8d;a451c4=ea6a56;a355c0=ea6a56",
-                "offset" : [5.0, 1.0],
-                "damageArea" : [[-4, 1], [2.5, 1], [2.5, -2], [-4, -2]]
-              }
-            },
-            "fire2" : {
-              "properties" : {
-                "image" : "/items/active/weapons/melee/broadsword/swoosh/energyswoosh.png:<frame>?replace;d29ce7=ff9d8d;a451c4=ea6a56;a355c0=ea6a56?flipy",
-                "offset" : [0, -2.5],
-                "damageArea" : [[-5, -2], [-2.5, -3], [1, -3], [4, -1.75], [5, 0.25], [5, 2.25], [4, 3.25], [0, 2.5]], 
-				"transformationGroups" : ["swoosh"]
-              }
-            },
-			"fire3" : {
-              "properties" : {
-                "image" : "/items/active/weapons/melee/broadsword/swoosh/energyswoosh.png:<frame>?replace;d29ce7=ff9d8d;a451c4=ea6a56;a355c0=ea6a56",
+                "image" : "/items/active/weapons/melee/broadsword/swoosh/redenergyswoosh.png:<frame>",
                 "offset" : [0, 2.5],
                 "damageArea" : [[-5, 2], [-2.5, 3], [1, 3], [4, 1.75], [5.25, -0.25], [5.25, -2.25], [3.75, -3.25], [0.25, -2.75]]
               }
             },
-            "fire4" : {
+            "fire2" : {
               "properties" : {
-                "image" : "/items/active/weapons/melee/broadsword/swoosh3/energyswoosh.png:<frame>?replace;d29ce7=ff9d8d;a451c4=ea6a56;a355c0=ea6a56",
-                "offset" : [3.5, 0],
-                "damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]],
-				"fullbright" : true, 
-				"transformationGroups" : ["swoosh"]
+                "image" : "redspinswoosh.png:<frame>",
+                "offset" : [0, 0.75],
+                "damageArea" : [ [-1.5, 0.875], [2.75, 0.875], [4.125, 0.5], [5.0, 0], [5.0, -0.5], [4.625, -0.875], [3.5, -1.375], [-1.5, -1.375] ]
+              }
+            },
+            "fire3" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh/redenergyswoosh.png:<frame>?flipy",
+                "offset" : [0, -2.5],
+                "damageArea" : [[-5, -2], [-2.5, -3], [1, -3], [4, -1.75], [5, 0.25], [5, 2.25], [4, 3.25], [0, 2.5]]
+              }
+            },
+			"fire4" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh/redenergyswoosh.png:<frame>",
+                "offset" : [0, 2.5],
+                "damageArea" : [[-5, 2], [-2.5, 3], [1, 3], [4, 1.75], [5.25, -0.25], [5.25, -2.25], [3.75, -3.25], [0.25, -2.75]]
               }
             },
             "fire5" : {
               "properties" : {
-                "image" : "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion.png:<frame>?replace;3bd9d7=ea6a56;8ce9f4=ff9d8d",
-                "offset" : [2.5, 2.5],
-				"damageArea" : [[-4.0, 0], [-2.5, -2.5], [0, -4.0], [2.5, -2.5], [4.0, 0], [2.5, 2.5], [0, 4.0], [-2.5, 2.5]], 
-				"transformationGroups" : ["swoosh"]
+                "image" : "/items/active/weapons/melee/broadsword/swoosh2/redenergyswoosh.png:<frame>",
+                "offset" : [5.0, 1.0],
+                "damageArea" : [[-4, 1], [2.5, 1], [2.5, -2], [-4, -2]]
+              }
+            },
+            "fire6" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh3/redenergyswoosh.png:<frame>",
+                "offset" : [3.5, 0],
+				"damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]]
               }
             }
           }

@@ -34,10 +34,10 @@
           "primaryRegion" : ["undergroundabyssfog", "ancientmess"],
           "secondaryRegions" : []
         },
-		"core" : {
-		  "primaryRegion" : ["coredarkabyss"],
-		  "secondaryRegion" : []
-		}
+        "core" : {
+          "primaryRegion" : ["coredarkabyss"],
+          "secondaryRegion" : []
+        }
       }
     }
   },
@@ -112,10 +112,10 @@
           "primaryRegion" : ["undergroundeternalfrost", "ancientmess"],
           "secondaryRegions" : []
         },
-		"core" : {
-		  "primaryRegion" : ["corepermafrost"],
-		  "secondaryRegion" : []
-		}
+        "core" : {
+          "primaryRegion" : ["corepermafrost"],
+          "secondaryRegion" : []
+        }
       }
     }
   },
@@ -228,10 +228,10 @@
           "primaryRegion" : ["undergroundforgotten"],
           "secondaryRegions" : []
         },
-		"core" : {
-		  "primaryRegion" : ["coreforgotten"],
-		  "secondaryRegion" : []
-		}
+        "core" : {
+          "primaryRegion" : ["coreforgotten"],
+          "secondaryRegion" : []
+        }
       }
     }
   },
@@ -262,10 +262,10 @@
           "primaryRegion" : ["undergroundsupervoid"],
           "secondaryRegions" : []
         },
-		"core" : {
-		  "primaryRegion" : ["supervoidcore"],
-		  "secondaryRegion" : []
-		}
+        "core" : {
+          "primaryRegion" : ["supervoidcore"],
+          "secondaryRegion" : []
+        }
       }
     }
   },
@@ -444,7 +444,7 @@
     "path" : "/regionTypes/coreforgotten",
     "value" : {
       "caveLiquid" : ["rottenwater"],
-	  "oceanLiquid" : ["rottenwater"],
+      "oceanLiquid" : ["rottenwater"],
       "fgCaveSelector" : [ "coreCaves" ],
       "bgCaveSelector" : [ "coreBackgroundCaves" ],
       "oceanLevelOffset" : -20,
@@ -584,7 +584,7 @@
     "path" : "/regionTypes/coredarkabyss",
     "value" : {
       "caveLiquid" : ["liquidfabric"],
-	  "oceanLiquid" : ["liquidfog"],
+      "oceanLiquid" : ["abyss"],
       "fgCaveSelector" : [ "coreCaves" ],
       "bgCaveSelector" : [ "coreBackgroundCaves" ],
       "oceanLevelOffset" : -20,
@@ -599,7 +599,7 @@
     "path" : "/regionTypes/corepermafrost",
     "value" : {
       "caveLiquid" : ["liquidnitrogenexpansionmod"],
-	  "oceanLiquid" : ["liquidnitrogenexpansionmod"],
+      "oceanLiquid" : ["liquidnitrogenexpansionmod"],
       "fgCaveSelector" : [ "coreCaves" ],
       "bgCaveSelector" : [ "coreBackgroundCaves" ],
       "oceanLevelOffset" : -20,
@@ -614,7 +614,7 @@
     "path" : "/regionTypes/supervoidcore",
     "value" : {
       "caveLiquid" : ["supervoid"],
-	  "oceanLiquid" : ["supervoid"],
+      "oceanLiquid" : ["supervoid"],
       "fgCaveSelector" : [ "coreCaves" ],
       "bgCaveSelector" : [ "coreBackgroundCaves" ],
       "oceanLevelOffset" : -20,

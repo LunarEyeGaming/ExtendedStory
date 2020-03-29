@@ -1619,7 +1619,28 @@
                  "type":"",
                  "visible":true,
                  "width":96,
-                 "x":232,
+                 "x":208,
+                 "y":0
+                }, 
+                {
+                 "height":1200,
+                 "id":3119,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":96,
+                 "x":8312,
                  "y":0
                 }],
          "opacity":1,
@@ -4406,7 +4427,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":3118,
+ "nextobjectid":3120,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -4571,10 +4592,6 @@
         {
          "firstgid":8850,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-other.json"
-        }, 
-        {
-         "firstgid":8895,
-         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }],
  "tilewidth":8,
  "type":"map",

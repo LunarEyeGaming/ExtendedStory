@@ -128,7 +128,7 @@ function LightningSlam:spawnProjectiles()
   local impact, impactHeight = self:impactPosition()
 
   if impact then
-    world.spawnProjectile("lightningboltexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
+    world.spawnProjectile("electricplasmaexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
     self.weapon.weaponOffset = {0, impactHeight + self.impactWeaponOffset}
     local directions = {1}
     if self.bothDirections then directions[2] = -1 end

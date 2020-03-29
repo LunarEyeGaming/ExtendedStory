@@ -1,0 +1,25 @@
+{
+  "materialId" : 2027,
+  "materialName" : "effulgentstone_es",
+  "particleColor" : [62, 126, 133, 255],
+  "itemDrop" : "effulgentstonematerial_es",
+  "description" : "This material has an ore that glows brightly!",
+  "shortdescription" : "Effulgent Stone Ore",
+  "glitchDescription" : "Disturbed. This glowing stone is blindingly bright!",
+  "floranDescription" : "Floran feelss energetic near bright sstone.",
+  "novakidDescription" : "This stone's really bright!",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "effulgentstone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 20,
+    "radiantLight" : [114, 135, 150]
+  }
+}

@@ -19,7 +19,7 @@
     "path" : "/isolatedvault2",
     "value" : {
       "primaryDungeon" : "isolatedvault2",
-      "threatLevel" : 10,
+      "threatLevel" : 8,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
@@ -193,6 +193,21 @@
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "",
       "biome": "darkabyssdimension2",
+      "environmentStatusEffects" : ["dontstarve"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/abyssartifactdungeonintervene",
+    "value" : {
+      "primaryDungeon" : "abyssartifactdungeonintervene",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "musicTrack" : "/music/mira.ogg",
+      "biome": "darkabyssintervention",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },

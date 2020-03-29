@@ -1,0 +1,36 @@
+{
+  "projectileName" : "abyssalhaze2_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1.0,
+  "timeToLive" : 49,
+  "fullbright" : true,
+  "animationLoops" : false,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 5,
+  "orientationLocked" : true,
+  "piercing" : true,
+  "flippable" : true,
+
+  "damagePoly" : [ [128, -400], [128, 400], [-128, 400], [-128, -400] ],
+  "damageKind" : "nodamage",
+  "damageRepeatTimeout" : 0.01,
+  "statusEffects" : ["abyssalhazepoison_es"],
+
+  "periodicActions" : [
+	{
+	  "time" : 0.01,
+	  "action" : "loop",
+      "count" : 3,
+      "body" : [
+        {
+          "action" : "particle",
+	      "specification" : "abyssalhaze_es"
+        }
+      ]
+	}
+  ],
+
+  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
+  "scriptDelta" : 1
+}

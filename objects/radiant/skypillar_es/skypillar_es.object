@@ -1,0 +1,41 @@
+{
+  "objectName" : "skypillar_es",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Common",
+  "description" : "A tall pillar made of sky stone.",
+  "shortdescription" : "Sky Stone Pillar",
+  "race" : "generic",
+
+  "apexDescription" : "This ancient pillar has symbols at the bases that seem to represent something.",
+  "avianDescription" : "This statue represents an ancient god. I wonder what blessings it gave its people.",
+  "floranDescription" : "Tall ssstone pillar.",
+  "glitchDescription" : "Curious. Who built this tall pillar of stone?",
+  "humanDescription" : "This tall pillar has distinct markings. What do they represent?",
+  "hylotlDescription" : "A bluish pillar with strange markings, built by a race of unknown origin.",
+  "novakidDescription" : "That's an int'restin' pillar right there.",
+
+  "category" : "decorative",
+  "printable" : false,
+
+  "inventoryIcon" : "skypillar.png",
+
+  "orientations" : [
+    {
+      "image" : "skypillar.png",
+      "flipImages" : true,
+      "imagePosition" : [-20, 0],
+      "spaceScan" : 0.1,
+      "direction" : "left",
+      "lightPosition" : [0, 2]
+    },
+    {
+      "image" : "skypillar.png",
+      "imagePosition" : [-20, 0],
+      "spaceScan" : 0.1,
+      "direction" : "right",
+      "lightPosition" : [0, 2]
+    }
+  ],
+  
+  "health" : 25
+}

@@ -38,7 +38,8 @@
 
       "mass" : 1.0,
       "walkSpeed" : 4,
-      "runSpeed" : 12
+      "runSpeed" : 12,
+      "physicsEffectCategories" : ["stationarymonster"]
     },
 
     "bodyMaterialKind" : "stone",

@@ -1,0 +1,24 @@
+{
+  "materialId" : 2026,
+  "materialName" : "skystone_es",
+  "particleColor" : [62, 126, 133, 255],
+  "itemDrop" : "skystonematerial_es",
+  "description" : "This stone is colored like the blue sky on Earth.",
+  "shortdescription" : "Sky Stone",
+  "glitchDescription" : "Surprised. This sky blue material is nearly unbreakable!",
+  "floranDescription" : "Unbreakable ssstone. Floran can't punch it.",
+  "novakidDescription" : "Darn. This is nearly impossible to break.",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "health" : 34,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "skystone.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 20
+  }
+}

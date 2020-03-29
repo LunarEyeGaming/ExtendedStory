@@ -12,7 +12,7 @@
   "piercing" : true,
   "flippable" : true,
 
-  "damagePoly" : [ [256, -400], [256, 400], [-256, 400], [-256, -400] ],
+  "damagePoly" : [ [128, -400], [128, 400], [-128, 400], [-128, -400] ],
   "damageKind" : "nodamage",
   "damageRepeatTimeout" : 0.01,
   "statusEffects" : ["abyssalhazepoison_es"],

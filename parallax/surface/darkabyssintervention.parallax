@@ -1,0 +1,24 @@
+{
+  "verticalOrigin" : 0,
+  
+  "layers" : [
+    {
+      "kind" : "radiancebiome/islands1",
+      "nohueshift" : true,
+      "parallax" : 5,
+      "offset" : [0, 180]
+    },
+    {
+      "kind" : "radiancebiome/islands2",
+      "nohueshift" : true,
+      "parallax" : 8,
+      "offset" : [0, 180]
+    },
+    {
+      "kind" : "radiancebiome/islands3",
+      "nohueshift" : true,
+      "parallax" : 12,
+      "offset" : [0, 180]
+    }
+  ]
+}

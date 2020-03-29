@@ -3,19 +3,19 @@
     "op": "add",
     "path": "/abyssdepths",
     "value": [
-      [5.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 1 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "abyssore", 1 ] ] ]
+      [5.5, [ [ "coal", 0.9 ], [ "copper", 0 ], [ "darkmatterore", 0.5 ], [ "silver", 0 ], [ "gold", 0.75 ], [ "diamond", 0.2 ], [ "corefragment", 0 ], [ "iron", 0 ], [ "tungsten", 0 ], [ "titanium", 0 ], [ "durasteel", 0 ], [ "aegisalt", 0.4 ], [ "ferozium", 0.4 ], [ "violium", 0.4 ], [ "solarium", 0.8 ], [ "abyssore", 1 ] ] ]
     ]
   },
   {
     "op": "add",
     "path": "/abysscore",
     "value": [
-      [0.5, [ [ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 1],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.1] ] ],
-      [1.5, [ [ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 0.8],[ "tungsten", 1],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.2] ] ],
-      [2.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 0],[ "tungsten", 0.8],[ "titanium", 1],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.3] ] ],
-      [3.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0.8],[ "durasteel", 1],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.4] ] ],
-      [4.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0.8],[ "aegisalt", 1],[ "ferozium", 1],[ "violium", 1],[ "solarium", 0],[ "abyssore", 0.5] ] ],
-      [5.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 1],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0.4],[ "ferozium", 0.4],[ "violium", 0.4],[ "solarium", 0.8],[ "abyssore", 1] ] ]
+      [0.5, [ [ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 1],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.1] ] ],
+      [1.5, [ [ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 0.8],[ "tungsten", 1],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.2] ] ],
+      [2.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 0],[ "tungsten", 0.8],[ "titanium", 1],[ "durasteel", 0],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.3] ] ],
+      [3.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0.8],[ "durasteel", 1],[ "aegisalt", 0],[ "ferozium", 0],[ "violium", 0],[ "solarium", 0],[ "abyssore", 0.4] ] ],
+      [4.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0.8],[ "aegisalt", 1],[ "ferozium", 1],[ "violium", 1],[ "solarium", 0],[ "abyssore", 0.5] ] ],
+      [5.5, [[ "coal", 0.9],[ "copper", 0],[ "darkmatterore", 0],[ "silver", 0],[ "gold", 0.75],[ "diamond", 0.2],[ "corefragment", 0],[ "iron", 0],[ "tungsten", 0],[ "titanium", 0],[ "durasteel", 0],[ "aegisalt", 0.4],[ "ferozium", 0.4],[ "violium", 0.4],[ "solarium", 0.8],[ "abyssore", 1] ] ]
     ]
   },
   
