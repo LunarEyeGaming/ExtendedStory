@@ -1,0 +1,212 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "segment" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 4,
+            "cycle" : 1,
+            "mode" : "loop"
+          }
+        }
+      },
+      "cover" : {
+        "priority" : 1,
+        "default" : "visible",
+        "states" : {
+          "visible" : {},
+          "invisible" : {}
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "segment1" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 20.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment2" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 10.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment3" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment4" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, -10.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment5" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, -20.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "cover" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [3.9375, 0.3125],
+          "transformationGroups" : [ "body", "cover" ]
+        },
+        "partStates" : {
+          "cover" : {
+            "visible" : {
+			  "properties" : {
+			    "image" : "<partImage>"
+			  }
+			}
+          }
+        }
+      },
+      "coverfullbright" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "anchorPart" : "cover"
+        },
+        "partStates" : {
+          "cover" : {
+            "visible" : {
+			  "properties" : {
+			    "image" : "<partImage>"
+			  }
+			}
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true},
+	"cover" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+	"idle" : {
+	  "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	},
+	"afterimage" : {
+	  "active" : false,
+      "emissionRate" : 100.0,
+      "transformationGroups" : ["body"],
+      "particles" : [
+		{
+		  "particle" : "abyssartifactbossafterimage"
+		}
+      ]
+	},
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [ ],
+    "deathPuff" : [ ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

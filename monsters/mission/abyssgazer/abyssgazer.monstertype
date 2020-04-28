@@ -30,6 +30,7 @@
       "keepTargetInSight" : true,
       "keepTargetInRange" : 200,
       "targetOutOfSightTime" : 5.0,
+      "targetNotificationRange" : 0,
 
       "foundTargetActions" : [
         {
@@ -90,12 +91,6 @@
 
       "concurrentActions" : [
         {
-          "name" : "idle-crawl",
-          "parameters" : {
-            "stopForce" : 500
-          }
-        },
-        {
           "name" : "action-globaltag",
           "parameters" : {
             "tagName" : "aggro",
@@ -105,12 +100,6 @@
       ],
 
       "concurrentHostileActions" : [
-        {
-          "name" : "idle-crawl",
-          "parameters" : {
-            "stopForce" : 500
-          }
-        },
         {
           "name" : "action-globaltag",
           "parameters" : {

@@ -1,0 +1,15 @@
+{
+  "setOpenSegment": {
+    "type": "action",
+    "name": "setOpenSegment",
+    "title": "setOpenSegment",
+    "properties": {
+      "segmentNumber": {"type": "number", "value": null},
+      "segmentCount": {"type": "number", "value": 5},
+      "segmentSize": {"type": "number", "value": 10}
+    },
+    "category": "abyssartifactboss2",
+    "script": "/scripts/actions/boss/abyssartifactboss2_es.lua",
+    "output": {}
+  }
+}

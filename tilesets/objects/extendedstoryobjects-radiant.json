@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-radiant",
  "spacing":0,
- "tilecount":1,
+ "tilecount":2,
  "tileheight":128,
  "tileproperties":
     {
@@ -18,11 +18,25 @@
          "imagePositionY":"0",
          "object":"skypillar_es",
          "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"lightmirroraltar_es",
+         "tilesetDirection":"right"
         }
     },
  "tilepropertytypes":
     {
      "0":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "1":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -37,6 +51,12 @@
          "image":"..\/images\/objects\/skypillar.png",
          "imageheight":128,
          "imagewidth":40
+        },
+     "1":
+        {
+         "image":"..\/images\/objects\/lightmirroraltar.png",
+         "imageheight":24,
+         "imagewidth":32
         }
     },
  "tilewidth":40,

@@ -1,0 +1,101 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "mirror" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "glow" : {
+            "frames" : 4,
+            "cycle" : 2,
+            "mode" : "end"
+          },
+          "disappear" : {
+            "frames" : 6,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "invisible"
+          },
+          "invisible" : {}
+        }
+      }
+    },
+    "parts" : {
+      "altar" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "image" : "<partImage>"
+        }
+      },
+      "mirror" : {
+        "properties" : {
+          "zLevel" : 2,
+          "offset" : [0, 3.5],
+          "centered" : true,
+          "transformationGroups" : ["mirror"]
+        },
+        "partStates" : {
+          "mirror" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "glow" : {
+              "properties" : {
+                "image" : "<partImage>:glow.<frame>"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "mirrorfullbright" : {
+        "properties" : {
+          "zLevel" : 3,
+          "anchorPart" : "mirror",
+          "centered" : true,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "mirror" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "glow" : {
+              "properties" : {
+                "image" : "<partImage>:glow.<frame>"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "transformationGroups" : {
+    "mirror" : {
+      "interpolated" : true
+    }
+  },
+
+  "lights" : {},
+
+  "particleEmitters" : {},
+  
+  "sounds" : {
+    "preDisappear" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ]
+  }
+}

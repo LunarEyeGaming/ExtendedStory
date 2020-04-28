@@ -67,7 +67,7 @@
             "name": "monster-targeting",
             "parameters": {
               "targetQueryRange": {"value": 50},
-              "keepTargetInRange": {"value": 100},
+              "keepTargetInRange": {"value": 99999},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
               "targetOnDamage": {"value": true},

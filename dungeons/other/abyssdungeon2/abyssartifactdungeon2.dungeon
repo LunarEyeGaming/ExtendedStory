@@ -146,16 +146,16 @@
       ],
       "def" : [ "tmx", "abyssdungeon2endcapright.json" ],
       "chance" : 25
-    }
+    },
 
     //---------------BOSS ROOMS
-    /*{
+    {
       "name" : "bossleft",
       "rules" : [
         [ "ignorePartMaximumRule" ],
         [ "doNotCombineWith", [ "bossleft", "bossright" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonbossroomleft.json" ],
+      "def" : [ "tmx", "abyssdungeon2exitleft.json" ],
       "chance" : 100
     },
     {
@@ -164,8 +164,8 @@
         [ "ignorePartMaximumRule" ],
         [ "doNotCombineWith", [ "bossleft", "bossright" ] ]
       ],
-      "def" : [ "tmx", "abyssdungeonbossroomright.json" ],
+      "def" : [ "tmx", "abyssdungeon2exitright.json" ],
       "chance" : 100
-    }*/
+    }
   ]
 }
