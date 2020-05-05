@@ -1,0 +1,39 @@
+{
+  "projectileName" : "nyctosshellshardburst_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "timeToLive" : 0,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "speed" : 0,
+  "animationLoops" : false,
+  "bounces" : -1,
+  "power" : 2,
+  "onlyHitTerrain" : true,
+  "damageKind" : "plasma",
+  "physics" : "illusion",
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "nyctosshellshard1_es"
+        },
+        {
+          "action" : "particle",
+          "specification" : "nyctosshellshard2_es"
+        },
+        {
+          "action" : "particle",
+          "specification" : "nyctosshellshard3_es"
+        },
+        {
+          "action" : "particle",
+          "specification" : "nyctosshellshard4_es"
+        }
+      ]
+    }
+  ]
+}

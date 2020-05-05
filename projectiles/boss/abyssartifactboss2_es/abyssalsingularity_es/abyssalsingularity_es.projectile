@@ -1,7 +1,7 @@
 {
   "projectileName" : "abyssalsingularity_es",
-  "image" : "abyssalsingularity.png",
-  "timeToLive" : 9,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "timeToLive" : 3,
   "animationCycle" : 1,
   "frameNumber" : 1,
   "fullbright" : true,
@@ -14,25 +14,15 @@
   "damageKind" : "plasma",
   "physics" : "illusion",
 
-  "boundBox" : [-80, -40, 0, 40],
+  "boundBox" : [-40, -40, 40, 40],
   "physicsForces" : {
-    "directionalPull" : {
-	  "type" : "DirectionalForceRegion",
-      "rectRegion" : [-80, -40, 0, 40],
-	  "xTargetVelocity" : 20,
-      "controlForce" : 100,
-      "categoryWhitelist" : ["player"]
-    },
     "killerVacuum" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 40,
+      "outerRadius" : 30,
       "innerRadius" : 4,
       "targetRadialVelocity" : -70,
       "controlForce" : 500,
       "categoryWhitelist" : ["player"]
     }
-  },
-  
-  "scripts" : [ "/scripts/projectiles/rotatingprojectile.lua" ],
-  "rotateRate" : -0.2
+  }
 }

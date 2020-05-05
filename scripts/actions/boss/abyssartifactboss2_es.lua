@@ -1,4 +1,5 @@
 require "/scripts/pathutil.lua"
+require "/scripts/vec2.lua"
 
 -- Function: setOpenSegment: Sets segmentNumber to open and sets every segment from one to segmentCount EXCEPT segmentNumber to closed. It also translates the "cover" transformationGroup to the appropriate segment.
 -- precondition: all segments have a margin of segmentSize in between each other, the median segment(s) must be the closest to the center
@@ -19,6 +20,8 @@ function setOpenSegment(args, board)
   
   animator.resetTransformationGroup("cover")
   animator.translateTransformationGroup("cover", {0, coverVerticalOffset})
+  animator.playSound("switchSegment")
+  world.spawnProjectile("nyctosshellshardburst_es", vec2.add(vec2.add(mcontroller.position(), {0, coverVerticalOffset}), {-3.9375, 0.3125}))
 
   return true
 end

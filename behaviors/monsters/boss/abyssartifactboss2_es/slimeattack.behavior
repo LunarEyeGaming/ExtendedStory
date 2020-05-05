@@ -1,0 +1,307 @@
+{
+  "name": "abyssartifactboss2_es-slimeattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/abyssartifactboss2_es.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "randomize",
+    "type": "composite",
+    "name": "randomize",
+    "parameters": {},
+    "children": [
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "setOpenSegment",
+            "type": "action",
+            "name": "setOpenSegment",
+            "parameters": {
+              "segmentNumber": {"value": 1}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "visible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "invisible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "burstParticleEmitter",
+            "type": "action",
+            "name": "burstParticleEmitter",
+            "parameters": {
+              "emitter": {"value": "shellburst"}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "shellBurst"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "spawnProjectile",
+            "type": "action",
+            "name": "spawnProjectile",
+            "parameters": {
+              "aimVector": {"value": [-1, 0]},
+              "offset": {"value": [-3.9375, 20.3125]},
+              "projectileConfig": {"value": {"power": 15}},
+              "projectileType": {"value": "abyssslimelarge_es"},
+              "scalePower": {"value": true}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "fireSlime"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          }
+        ]
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "setOpenSegment",
+            "type": "action",
+            "name": "setOpenSegment",
+            "parameters": {
+              "segmentNumber": {"value": 2}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "visible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "invisible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "burstParticleEmitter",
+            "type": "action",
+            "name": "burstParticleEmitter",
+            "parameters": {
+              "emitter": {"value": "shellburst"}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "shellBurst"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "spawnProjectile",
+            "type": "action",
+            "name": "spawnProjectile",
+            "parameters": {
+              "aimVector": {"value": [-1, 0]},
+              "offset": {"value": [-3.9375, 10.3125]},
+              "projectileConfig": {"value": {"power": 15}},
+              "projectileType": {"value": "abyssslimelarge_es"},
+              "scalePower": {"value": true}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "fireSlime"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          }
+        ]
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "setOpenSegment",
+            "type": "action",
+            "name": "setOpenSegment",
+            "parameters": {
+              "segmentNumber": {"value": 3}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "visible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "invisible"},
+              "type": {"value": "cover"}
+            }
+          },
+          {
+            "title": "burstParticleEmitter",
+            "type": "action",
+            "name": "burstParticleEmitter",
+            "parameters": {
+              "emitter": {"value": "shellburst"}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "shellBurst"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "spawnProjectile",
+            "type": "action",
+            "name": "spawnProjectile",
+            "parameters": {
+              "aimVector": {"value": [-1, 0]},
+              "offset": {"value": [-3.9375, 0.3125]},
+              "projectileConfig": {"value": {"power": 15}},
+              "projectileType": {"value": "abyssslimelarge_es"},
+              "scalePower": {"value": true}
+            }
+          },
+          {
+            "title": "playSound",
+            "type": "action",
+            "name": "playSound",
+            "parameters": {
+              "sound": {"value": "fireSlime"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

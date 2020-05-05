@@ -38,7 +38,6 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, 20.0],
-		  "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
@@ -56,7 +55,6 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, 10.0],
-		  "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
@@ -74,7 +72,6 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, 0.0],
-		  "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
@@ -92,7 +89,6 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, -10.0],
-		  "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
@@ -108,6 +104,95 @@
       "segment5" : {
         "properties" : {
           "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, -20.0],
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment1fullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 20.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment2fullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 10.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment3fullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment4fullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, -10.0],
+		  "fullbright" : true,
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "segment" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:<shellState>.<frame>"
+			  }
+			}
+          }
+        }
+      },
+      "segment5fullbright" : {
+        "properties" : {
+          "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, -20.0],
 		  "fullbright" : true,
@@ -144,7 +229,8 @@
         "properties" : {
           "zLevel" : 2,
           "centered" : true,
-          "anchorPart" : "cover"
+          "anchorPart" : "cover",
+          "fullbright" : true
         },
         "partStates" : {
           "cover" : {
@@ -180,13 +266,31 @@
 		}
       ]
 	},
-	"afterimage" : {
+	"shellburst" : {
 	  "active" : false,
-      "emissionRate" : 100.0,
-      "transformationGroups" : ["body"],
+      "burstCount" : 20,
+      "transformationGroups" : ["body", "cover"],
       "particles" : [
 		{
-		  "particle" : "abyssartifactbossafterimage"
+		  "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [12, 0],
+            "finalVelocity" : [10, 0],
+	        "approach" : [4, 4],
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.4,
+	        "fade" : 1,
+            "fullbright" : true,
+	        "destructionAction" : "fade",
+	        "destructionTime" : 0.0,
+            "variance" : {
+              "position" : [0.5, 0.5],
+              "initialVelocity" : [2, 2]
+            }
+          }
 		}
       ]
 	},
@@ -199,7 +303,27 @@
 
   "sounds" : {
     "turnHostile" : [ ],
-    "deathPuff" : [ ]
+    "deathPuff" : [ ],
+    "fireVolley" : {
+      "pool" : [ "/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fireSlime" : {
+      "pool" : [ "/sfx/projectiles/goo_spit1.ogg", "/sfx/projectiles/goo_spit2.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "vortexWindup" : {
+      "pool" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "switchSegment" : {
+      "pool" : [ "/sfx/projectiles/bonerain_full.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "shellBurst" : {
+      "pool" : [ "/sfx/melee/blunt_kill_organic1.ogg" ],
+      "rangeMultiplier" : 1.0
+    }
   },
 
   "effects" : {

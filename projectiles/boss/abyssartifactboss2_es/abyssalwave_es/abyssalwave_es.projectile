@@ -1,7 +1,7 @@
 {
-  "projectileName" : "abyssalcharge_es",
-  "image" : "abyssalcharge.png",
-  "physics" : "highgravgrenade",
+  "projectileName" : "abyssalwave_es",
+  "image" : "abyssalwave.png",
+  "physics" : "laser",
   "movementSettings" : {
     "collisionEnabled" : false
   },
@@ -17,7 +17,7 @@
       "rotate" : true,
       "specification" : {
         "type" : "textured",
-        "image" : "/projectiles/boss/abyssartifactboss2_es/abyssalcharge_es/trail.png",
+        "image" : "/projectiles/boss/abyssartifactboss2_es/abyssalwave_es/trail.png",
         "position" : [0, 0],
         "layer" : "back",
         "timeToLive" : 0.0,
@@ -31,5 +31,5 @@
   "power" : 0,
   "speed" : 150,
   "damageKind" : "abyss",
-  "damagePoly" : [ [17, 0], [7, 8.5], [-17, 0], [7, -8.5] ]
+  "damagePoly" : [ [8, 0], [-8, 37], [-5, 0], [-8, -37] ]
 }

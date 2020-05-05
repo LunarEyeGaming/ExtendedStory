@@ -1,0 +1,24 @@
+{
+  "kind" : "nyctosshellshard4_es",
+  "definition" : {
+    "type" : "textured",
+    "image" : "/particles/shards/nyctosshellshard_es/shard4.png",
+    "initialVelocity" : [-5, 0.0],
+    "finalVelocity" : [0.0, -60.0],
+    "approach" : [0.3, 60],
+    "timeToLive" : 0.25,
+    "fade" : 1,
+    "destructionAction" : "fade",
+    "destructionTime" : 0.5,
+    "angularVelocity" : 180,
+    "layer" : "middle",
+    "collidesForeground" : true,
+    "variance" : {
+      "position" : [1, 2],
+      "initialVelocity" : [3, 8],
+      "finalVelocity" : [0, 20],
+      "rotation" : 180,
+      "angularVelocity" : 90
+    }
+  }
+}

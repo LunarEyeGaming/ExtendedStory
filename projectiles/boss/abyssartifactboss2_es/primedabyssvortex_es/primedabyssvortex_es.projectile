@@ -1,0 +1,26 @@
+{
+  "projectileName" : "primedabyssvortex_es",
+  "physics" : "hover",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "bounces" : 0,
+  "timeToLive" : 1,
+  "image" : "primedabyssvortex.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 1,
+  "animationCycle" : 0.4,
+  "lightColor" : [35, 35, 35],
+  "frameNumber" : 4,
+  "power" : 50,
+  "onlyHitTerrain" : true,
+  "damageKind" : "abyss",
+  "fullbright" : true,
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/boss/abyssartifactboss2_es/abyssalsingularity_es/spawn.config"
+    }
+  ]
+}

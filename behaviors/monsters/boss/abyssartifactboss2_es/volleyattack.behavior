@@ -29,11 +29,53 @@
         }
       },
       {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "visible"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 2.0}
+          "time": {"value": 1.5}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "shellburst"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "shellBurst"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
         }
       },
       {
@@ -41,7 +83,7 @@
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 5}
+          "maxLoops": {"value": 3}
         },
         "child": {
           "title": "sequence",
@@ -54,7 +96,7 @@
               "type": "decorator",
               "name": "repeater",
               "parameters": {
-                "maxLoops": {"value": 5}
+                "maxLoops": {"value": 7}
               },
               "child": {
                 "title": "sequence",
@@ -68,8 +110,8 @@
                     "name": "spawnProjectile",
                     "parameters": {
                       "aimVector": {"value": [-1, 0]},
-                      "offset": {"value": [3.9375, 20.3125]},
-                      "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "abyssbossspellgrav_es", "inheritDamageFactor": 1, "fuzzAngle": 15}]}},
+                      "offset": {"value": [-3.9375, 20.3125]},
+                      "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/abyssalcharge_es/spawn.config"}]}},
                       "projectileType": {"value": "orbitalup"},
                       "scalePower": {"value": true}
                     }
@@ -78,11 +120,19 @@
               }
             },
             {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "fireVolley"}
+              }
+            },
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-                "time": {"value": 2.0}
+                "time": {"value": 1.3}
               }
             }
           ]
