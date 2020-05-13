@@ -8,13 +8,10 @@
   ],
   "parameters": {},
   "root": {
-    "title": "repeater",
+    "title": "failer",
     "type": "decorator",
-    "name": "repeater",
-    "parameters": {
-      "maxLoops": {"value": -1},
-      "untilSuccess": {"value": false}
-    },
+    "name": "failer",
+    "parameters": {},
     "child": {
       "title": "sequence",
       "type": "composite",

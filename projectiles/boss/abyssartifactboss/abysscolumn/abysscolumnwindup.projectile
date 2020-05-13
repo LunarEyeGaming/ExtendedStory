@@ -7,6 +7,7 @@
   "physics" : "laser",
   "power" : 0,
   "piercing" : true,
+  "onlyHitTerrain" : true,
   "animationLoops" : false,
   "speed" : 0,
   "movementSettings" : {
@@ -21,12 +22,13 @@
 	  "options" : [ "/sfx/melee/astraltear2.ogg" ]
 	}
   ],
-  "timeToLive" : 2.0,
+  "timeToLive" : 0.9,
   "fullbright" : true,
   "actionOnReap" : [
     {
 	  "action" : "projectile",
-	  "type" : "abysscolumn"
+	  "type" : "abysscolumn",
+      "inheritDamageFactor" : 1
 	}
   ]
 }

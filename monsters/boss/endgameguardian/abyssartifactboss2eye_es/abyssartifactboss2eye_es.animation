@@ -1,0 +1,159 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "eye" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 6,
+            "cycle" : 0.75,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 4,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "eye" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : [ "body" ],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle.<frame>"
+			  }
+			}
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : {"interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+	"teleport" : {
+	  "active" : false,
+      "burstCount" : 20,
+      "transformationGroups" : ["body"],
+      "particles" : [
+		{
+		  "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+	        "approach" : [20, 20],
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.4,
+	        "fade" : 1,
+            "fullbright" : true,
+	        "destructionAction" : "fade",
+	        "destructionTime" : 0.0,
+            "variance" : {
+              "position" : [0.5, 0.5],
+              "initialVelocity" : [10, 10]
+            }
+          }
+		}
+      ]
+	},
+    "rest" : {
+      "active" : false,
+      "burstCount" : 10,
+      "transformationGroups" : ["body"],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [6, 0],
+            "finalVelocity" : [0, 0],
+	        "approach" : [12, 12],
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.4,
+	        "fade" : 1,
+            "fullbright" : true,
+	        "destructionAction" : "fade",
+	        "destructionTime" : 0.0,
+            "variance" : {
+              "initialVelocity" : [2, 2]
+            }
+          }
+        }
+      ]
+    },
+	"idle" : {
+	  "active" : false,
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+		{
+		  "particle" : "shadowsmoke"
+		}
+      ]
+	},
+    "destroy" : {
+      "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
+      "burstCount" : 15,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [ ],
+    "deathPuff" : [ ],
+    "fire1" : {
+      "pool" : [ "/sfx/npc/darkabyss/abysseye_fire.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fire2" : {
+      "pool" : [ "/sfx/npc/darkabyss/abysseye_fire.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fire3" : {
+      "pool" : [ "/sfx/npc/boss/abyssartifactboss2eye_fire3.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fire4" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_death.ogg" ],
+      "rangeMultiplier" : 3
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

@@ -1,10 +1,7 @@
 {
-  "projectileName" : "abyssalwave_es",
-  "image" : "abyssalwave.png",
-  "physics" : "laser",
-  "movementSettings" : {
-    "collisionEnabled" : false
-  },
+  "projectileName" : "nyctosexplosivechargesplit_es",
+  "image" : "nyctosexplosivecharge.png",
+  "physics" : "highgravgrenade",
   "animationCycle" : 1,
   "frameNumber" : 1,
   "lightColor" : [51, 41, 71],
@@ -17,7 +14,7 @@
       "rotate" : true,
       "specification" : {
         "type" : "textured",
-        "image" : "/projectiles/boss/abyssartifactboss2_es/abyssalwave_es/trail.png",
+        "image" : "/projectiles/boss/abyssartifactboss2eye_es/nyctosexplosivecharge_es/trail.png",
         "position" : [0, 0],
         "layer" : "back",
         "timeToLive" : 0.0,
@@ -27,10 +24,15 @@
       }
     }
   ],
-  "actionOnReap" : [],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/abyssexplosion_es/abyssexplosion_es.config"
+    }
+  ],
   "power" : 0,
-  "speed" : 150,
+  "speed" : 75,
   "damageKind" : "abyss",
-  "piercing" : true,
-  "damagePoly" : [ [8, 0], [-8, 37], [-5, 0], [-8, -37] ]
+  "damagePoly" : [ [6.5, 0], [0.5, 2], [-6.5, 0], [0.5, -2] ],
+  "onlyHitTerrain" : true
 }

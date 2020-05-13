@@ -1,0 +1,34 @@
+{
+  "projectileName" : "nyctosexplosivechargedetonate_es",
+  "image" : "nyctosexplosivechargedetonate.png",
+  "physics" : "laser",
+  "bounces" : -1,
+  "animationCycle" : 1,
+  "timeToLive" : 0.5,
+  "frameNumber" : 1,
+  "lightColor" : [51, 41, 71],
+  "fullbright" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "nyctosexplosivechargesplit_es",
+      "inheritDamageFactor" : 1,
+      "angle" : 75
+    },
+    {
+      "action" : "projectile",
+      "type" : "nyctosexplosivechargesplit_es",
+      "inheritDamageFactor" : 1,
+      "angle" : 105
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/abyssexplosion_es/abyssexplosion_es.config"
+    }
+  ],
+  "power" : 0,
+  "speed" : 0,
+  "damageKind" : "abyss",
+  "onlyHitTerrain" : true
+}

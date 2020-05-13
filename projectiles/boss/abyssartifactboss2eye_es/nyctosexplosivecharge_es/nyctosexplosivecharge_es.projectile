@@ -1,0 +1,43 @@
+{
+  "projectileName" : "nyctosexplosivecharge_es",
+  "image" : "nyctosexplosivecharge.png",
+  "physics" : "laser",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "lightColor" : [51, 41, 71],
+  "fullbright" : true,
+  "periodicActions" : [
+    {
+      "time" : 0.02,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/abyssartifactboss2eye_es/nyctosexplosivecharge_es/trail.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.15,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "nyctosexplosivechargedetonate_es",
+      "inheritDamageFactor" : 1
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/nyctosplasmadisintegrate_es/nyctosplasmadisintegrate_es.config"
+    }
+  ],
+  "power" : 0,
+  "speed" : 150,
+  "damageKind" : "abyss",
+  "damagePoly" : [ [6.5, 0], [0.5, 2], [-6.5, 0], [0.5, -2] ],
+  "onlyHitTerrain" : true
+}

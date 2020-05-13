@@ -35,10 +35,16 @@
         },
         "children": [
           {
-            "title": "abyssartifactboss1_es-look",
-            "type": "module",
-            "name": "abyssartifactboss1_es-look",
-            "parameters": {}
+            "title": "failer",
+            "type": "decorator",
+            "name": "failer",
+            "parameters": {},
+            "child": {
+              "title": "abyssartifactboss1_es-look",
+              "type": "module",
+              "name": "abyssartifactboss1_es-look",
+              "parameters": { }
+            }
           },
           {
             "title": "timer",

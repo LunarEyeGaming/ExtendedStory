@@ -1,5 +1,5 @@
 {
-  "name": "abyssartifactboss2_es",
+  "name": "abyssartifactboss2eye_es",
   "description": "",
   "scripts": [
     "/scripts/actions/entity.lua",
@@ -12,10 +12,7 @@
     "/scripts/actions/animator.lua",
     "/scripts/actions/projectiles.lua"
   ],
-  "parameters": {
-    "chaseVelocity": [-10, 0],
-    "chaseDirection": -1
-  },
+  "parameters": {},
   "root": {
     "title": "Reset",
     "type": "composite",
@@ -31,11 +28,11 @@
         }
       },
       {
-        "title": "setFlag",
+        "title": "setDamageOnTouch",
         "type": "action",
-        "name": "setFlag",
+        "name": "setDamageOnTouch",
         "parameters": {
-          "name": {"value": "invulnerable"}
+          "touchDamage": {"value": true}
         }
       },
       {
@@ -47,11 +44,11 @@
         }
       },
       {
-        "title": "setDamageOnTouch",
+        "title": "setVelocity",
         "type": "action",
-        "name": "setDamageOnTouch",
+        "name": "setVelocity",
         "parameters": {
-          "touchDamage": {"value": true}
+          "velocity": {"value": [-20, 0]}
         }
       },
       {
@@ -68,7 +65,7 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 20},
+              "targetQueryRange": {"value": 100},
               "keepTargetInRange": {"value": 1000},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
@@ -124,14 +121,6 @@
                         }
                       },
                       {
-                        "title": "battleMusic",
-                        "type": "action",
-                        "name": "battleMusic",
-                        "parameters": {
-                          "enable": {"value": true}
-                        }
-                      },
-                      {
                         "title": "setAggressive",
                         "type": "action",
                         "name": "setAggressive",
@@ -155,34 +144,12 @@
                             },
                             "children": [
                               {
-                                "title": "abyssartifactboss2_es-shouldstop",
-                                "type": "module",
-                                "name": "abyssartifactboss2_es-shouldstop",
-                                "parameters": {}
-                              },
-                              {
-                                "title": "addEphemeralEffect",
+                                "title": "resourcePercentage",
                                 "type": "action",
-                                "name": "addEphemeralEffect",
+                                "name": "resourcePercentage",
                                 "parameters": {
-                                  "duration": {"value": 0.1},
-                                  "name": {"value": "invulnerable"}
-                                }
-                              },
-                              {
-                                "title": "setVelocity",
-                                "type": "action",
-                                "name": "setVelocity",
-                                "parameters": {
-                                  "velocity": {"key": "<chaseVelocity>"}
-                                }
-                              },
-                              {
-                                "title": "faceDirection",
-                                "type": "action",
-                                "name": "faceDirection",
-                                "parameters": {
-                                  "direction": {"key": "<chaseDirection>"}
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
                                 }
                               },
                               {
@@ -200,51 +167,83 @@
 								  "parameters": {},
 								  "children": [
 									{
-                                      "title": "abyssartifactboss2_es-volleyattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-volleyattack",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-slimeattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-slimeattack",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-vortexattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-vortexattack",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-volleyattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-volleyattack",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-waveattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-waveattack",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-slimeattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-slimeattack",
-                                      "parameters": {}
+                                      "title": "repeater",
+                                      "type": "decorator",
+                                      "name": "repeater",
+                                      "parameters": {
+                                        "maxLoops": {"value": 5}
+                                      },
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
+                                        "parameters": {},
+                                        "children": [
+                                          {
+                                            "title": "randomize",
+                                            "type": "composite",
+                                            "name": "randomize",
+                                            "parameters": {},
+                                            "children": [
+                                              {
+                                                "title": "cooldown",
+                                                "type": "decorator",
+                                                "name": "cooldown",
+                                                "parameters": {
+                                                  "cooldown": {"value": 5}
+                                                },
+                                                "child": {
+                                                  "title": "abyssartifactboss2eye_es-columnattack",
+                                                  "type": "module",
+                                                  "name": "abyssartifactboss2eye_es-columnattack",
+                                                  "parameters": {}
+                                                }
+                                              },
+                                              {
+                                                "title": "cooldown",
+                                                "type": "decorator",
+                                                "name": "cooldown",
+                                                "parameters": {
+                                                  "cooldown": {"value": 1}
+                                                },
+                                                "child": {
+                                                  "title": "abyssartifactboss2eye_es-explosivechargeattack",
+                                                  "type": "module",
+                                                  "name": "abyssartifactboss2eye_es-explosivechargeattack",
+                                                  "parameters": {}
+                                                }
+                                              },
+                                              {
+                                                "title": "cooldown",
+                                                "type": "decorator",
+                                                "name": "cooldown",
+                                                "parameters": {
+                                                  "cooldown": {"value": 1}
+                                                },
+                                                "child": {
+                                                  "title": "abyssartifactboss2eye_es-closingrayattack",
+                                                  "type": "module",
+                                                  "name": "abyssartifactboss2eye_es-closingrayattack",
+                                                  "parameters": {}
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "title": "abyssartifactboss2eye_es-teleport",
+                                            "type": "module",
+                                            "name": "abyssartifactboss2eye_es-teleport",
+                                            "parameters": {
+                                              "teleportDistance": {"value": 10}
+                                            }
+                                          }
+                                        ]
+                                      }
                                     }
 								  ]
 								}
 						      }
                             ]
-                          },
-                          {
-                            "title": "abyssartifactboss2_es-spawneye",
-                            "type": "module",
-                            "name": "abyssartifactboss2_es-spawneye",
-                            "parameters": {}
                           }
                         ]
                       }
@@ -274,12 +273,10 @@
                     }
                   },
                   {
-                    "title": "battleMusic",
-                    "type": "action",
-                    "name": "battleMusic",
-                    "parameters": {
-                      "enable": {"value": false}
-                    }
+                    "title": "abyssartifactboss-dying",
+                    "type": "module",
+                    "name": "abyssartifactboss-dying",
+                    "parameters": { }
                   },
                   {
                     "title": "setDying",
@@ -306,11 +303,11 @@
                     }
                   },
                   {
-                    "title": "battleMusic",
+                    "title": "resetTransformationGroup",
                     "type": "action",
-                    "name": "battleMusic",
+                    "name": "resetTransformationGroup",
                     "parameters": {
-                      "enable": {"value": false}
+                      "transformationGroup": {"value": "body"}
                     }
                   },
                   {

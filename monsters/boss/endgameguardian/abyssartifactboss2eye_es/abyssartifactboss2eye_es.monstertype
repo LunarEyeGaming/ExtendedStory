@@ -1,10 +1,10 @@
 {
-  "type" : "abyssartifactboss2_es",
+  "type" : "abyssartifactboss2eye_es",
   "shortdescription" : "Nyctos",
-  "categories" : [ "abyssartifactboss2_es" ],
-  "parts" : [ "body", "cover" ],
+  "categories" : [ "abyssartifactboss2eye_es" ],
+  "parts" : [ "body" ],
 
-  "animation" : "abyssartifactboss2_es.animation",
+  "animation" : "abyssartifactboss2eye_es.animation",
   "dropPools" : [
     {
       "default" : "empty"
@@ -18,7 +18,7 @@
     "initialScriptDelta" : 1,
     "behaviorUpdateDelta" : 1,
 
-    "behavior" : "abyssartifactboss2_es",
+    "behavior" : "abyssartifactboss2eye_es",
 
     "behaviorConfig" : { },
 
@@ -39,16 +39,7 @@
       }
     },
 
-    "damageParts" : {
-      "segment3" : {
-        "damage" : 20,
-        "knockback" : 50,
-
-        "teamType" : "enemy",
-        "damageSourceKind" : "slash",
-        "statusEffects" : [ ]
-      }
-    },
+    "damageParts" : {},
 
     "damageSources" : {
       
@@ -67,7 +58,7 @@
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [1, 0], [0, 0] ],
+      "collisionPoly" : [ [-1.125, 0], [-0.75, -0.75], [0, -1.125], [0.75, -0.75], [1.125, 0], [0.75, 0.75], [0, 1.125], [-0.75, 0.75] ],
 
       "mass" : 4.0,
 
@@ -78,9 +69,8 @@
     },
 
     "touchDamage" : {
-      "poly" : [ [5, 25], [5, -25], [-5, -25], [-5, 25] ],
-      "damage" : 20,
-      "knockback" : 50,
+      "poly" : [ [-1.125, 0], [-0.75, -0.75], [0, -1.125], [0.75, -0.75], [1.125, 0], [0.75, 0.75], [0, 1.125], [-0.75, 0.75] ],
+      "damage" : 10,
 
       "teamType" : "enemy",
       "damageSourceKind" : "slash",

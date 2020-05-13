@@ -1,0 +1,127 @@
+{
+  "name": "abyssartifactboss2eye_es-columnattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "target"}
+        },
+        "output": {
+          "position": "targetPos"
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "position": {"key": "targetPos"},
+          "offset": {"value": [0, 6]}
+        },
+        "output": {
+          "position": "attackPos"
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "attackPos"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+		"title": "resetTransformationGroup",
+		"type": "action",
+		"name": "resetTransformationGroup",
+		"parameters": {
+		  "transformationGroup": {"value": "body"}
+		}
+	  },
+	  {
+	    "title": "vecAngle",
+	    "type": "action",
+	    "name": "vecAngle",
+	    "parameters": {
+	      "vector": {"value": [0, -5]}
+	    },
+	    "output": {
+	      "angle": "targetAngle"
+	    }
+	  },
+	  {
+	    "title": "rotateTransformationGroup",
+	    "type": "action",
+	    "name": "rotateTransformationGroup",
+	    "parameters": {
+	      "transformationGroup": {"value": "body"},
+	      "angle": {"key": "targetAngle"}
+	    }
+	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "fire2"}
+        }
+      },
+      {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [0, -1]},
+          "offset": {"value": [0, 0]},
+          "projectileConfig": {"value": {"power": 15}},
+          "projectileType": {"value": "abyssalchargecolumns_es"},
+          "scalePower": {"value": true}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.5}
+        }
+      }
+    ]
+  }
+}

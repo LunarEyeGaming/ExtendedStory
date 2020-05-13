@@ -1,0 +1,69 @@
+{
+  "name": "abyssartifactboss2_es-shouldstop",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/abyssartifactboss2_es.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      // Algorithm: try to do the first three nodes. If that doesn't work, this entire sequence still succeeds, but it skips the last node.
+      // Algorithm success status logic: first three fail || last node succeeds
+      {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "stop"}
+		},
+		"output": {
+		  "entity": "stopEntity"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "stopEntity"}
+		},
+		"output": {
+		  "position": "stopPos"
+		}
+	  },
+      {
+        "title": "distance",
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "to": {"key": "stopPos"}
+        },
+        "output": {
+          "magnitude": "toStopPosDist"
+        }
+      },
+      {
+        "title": "greaterThan",
+        "type": "action",
+        "name": "greaterThan",
+        "parameters": {
+          "first": {"key": "toStopPosDist"},
+          "second": {"value": 5}
+        }
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "abyssartifactboss1_es-explosivespells",
+  "name": "abyssartifactboss2eye_es-explosivechargeattack",
   "description": "",
   "scripts": [
     "/scripts/actions/movement.lua",
@@ -31,28 +31,11 @@
         "parameters": {},
         "children": [
           {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "pupilOpen"}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "windup"},
-              "type": {"value": "eye"}
-            }
-          },
-          {
             "title": "timer",
             "type": "action",
             "name": "timer",
             "parameters": {
-              "time": {"value": 0.5}
+              "time": {"value": 1.2}
             }
           },
           {
@@ -60,7 +43,7 @@
             "type": "decorator",
             "name": "repeater",
             "parameters": {
-              "maxLoops": {"value": 3}
+              "maxLoops": {"value": 1}
             },
             "child": {
               "title": "sequence",
@@ -77,6 +60,17 @@
                   },
                   "output": {
                     "vector": "aimVector"
+                  }
+                },
+                {
+                  "title": "distance",
+                  "type": "action",
+                  "name": "distance",
+                  "parameters": {
+                    "to": {"key": "groundPosition"}
+                  },
+                  "output": {
+                    "vector": "toGround"
                   }
                 },
                 {
@@ -107,10 +101,10 @@
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
-                    "aimVector": {"key": "aimVector"},
+                    "aimVector": {"key": "toGround"},
                     "offset": {"key": "projectileOffsetTranslated"},
                     "projectileConfig": {"value": {"power": 15}},
-                    "projectileType": {"value": "abyssbossspellexplosive_es"},
+                    "projectileType": {"value": "nyctosexplosivecharge_es"},
                     "scalePower": {"value": true}
                   }
                 },
@@ -134,15 +128,6 @@
             }
           },
           {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "winddown"},
-              "type": {"value": "eye"}
-            }
-          },
-          {
             "title": "timer",
             "type": "action",
             "name": "timer",
@@ -158,10 +143,45 @@
         "name": "failer",
         "parameters": {},
         "child": {
-          "title": "abyssartifactboss1_es-look",
-          "type": "module",
-          "name": "abyssartifactboss1_es-look",
-          "parameters": { }
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "entityPosition",
+              "type": "action",
+              "name": "entityPosition",
+              "parameters": {
+                "entity": {"key": "target"}
+              },
+              "output": {
+                "position": "targetPos"
+              }
+            },
+            {
+              "title": "groundPosition",
+              "type": "action",
+              "name": "groundPosition",
+              "parameters": {
+                "avoidLiquid": {"value": true},
+                "maxHeight": {"value": 0},
+                "minHeight": {"value": -30},
+                "position": {"key": "targetPos"}
+              },
+              "output": {
+                "position": "groundPosition"
+              }
+            },
+            {
+              "title": "abyssartifactboss2eye_es-look",
+              "type": "module",
+              "name": "abyssartifactboss2eye_es-look",
+              "parameters": {
+                "position": {"key": "groundPosition"}
+              }
+            }
+          ]
         }
       }
     ]

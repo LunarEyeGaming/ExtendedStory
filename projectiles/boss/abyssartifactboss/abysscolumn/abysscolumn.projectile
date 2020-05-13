@@ -1,79 +1,59 @@
 {
   "projectileName" : "abysscolumn",
   "image" : "abysscolumn.png",
-  "animationCycle" : 1,
-  "frameNumber" : 1,
+  "animationCycle" : 0.1,
+  "frameNumber" : 2,
   "damageKindImage" : "icon.png",
   "physics" : "laser",
   "power" : 200,
   "piercing" : true,
   "damageKind" : "abyss",
   "speed" : 0,
-  "statusEffects" : [ "abysseffect", "blinded_es" ],
+  "statusEffects" : [ "abysseffect" ],
   "damagePoly" : [ [10.5, 1024], [10.5, 0], [-10.5, 0], [-10.5, 1024] ],
   "movementSettings" : {
     "collisionEnabled" : false
   },
   "bounces" : -1,
-  "timeToLive" : 3,
+  "timeToLive" : 2,
   "fullbright" : true,
   "periodicActions" : [
     {
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/shadowsmoke/shadowsmoke.animation",
-		"fullbright" : true,
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 1],
-		"position" : [0, 64],
-		"timeToLive" : 3,
-		"variance" : {
-		  "position" : [1, 64],
-		  "initialVelocity" : [2, 0]
-		}
-	  }
-	},
-	{
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/shadowsmoke/shadowsmoke.animation",
-		"fullbright" : true,
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 1],
-		"position" : [0, 64],
-		"timeToLive" : 3,
-		"variance" : {
-		  "position" : [1, 64],
-		  "initialVelocity" : [2, 0]
-		}
-	  }
-	},
-	{
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/shadowsmoke/shadowsmoke.animation",
-		"fullbright" : true,
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 1],
-		"position" : [0, 64],
-		"timeToLive" : 3,
-		"variance" : {
-		  "position" : [1, 64],
-		  "initialVelocity" : [2, 0]
-		}
-	  }
-	},
+      "time" : 0.01,
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+        {
+	      "time" : 0.01,
+	      "action" : "particle",
+	      "specification" : {
+	        "type" : "animated",
+	    	"animation" : "/animations/abysssmoke_es/abysssmoke_es.animation",
+	    	"fullbright" : true,
+	    	"initialVelocity" : [0, 50],
+	    	"finalVelocity" : [0, -20],
+            "approach" : [0, 55],
+	    	"position" : [0, 0],
+	    	"timeToLive" : 1,
+	    	"variance" : {
+              "position" : [1, 0],
+	    	  "initialVelocity" : [2, 10]
+	    	}
+	      }
+	    }
+      ]
+    },
 	{
 	  "time" : 0,
 	  "repeat" : false,
 	  "action" : "sound",
 	  "options" : [ "/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg" ]
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "sound",
+	  "options" : [ "/sfx/npc/monsters/crabcano_fire2.ogg" ]
 	}
   ],
   "actionOnReap" : [

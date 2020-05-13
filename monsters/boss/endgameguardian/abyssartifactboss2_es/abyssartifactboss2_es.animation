@@ -72,7 +72,8 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, 0.0],
-          "transformationGroups" : [ "body" ]
+          "transformationGroups" : [ "body" ],
+          "damageArea" : [ [5, 25], [5, -25], [-5, -25], [-5, 25] ]
         },
         "partStates" : {
           "segment" : {
@@ -275,10 +276,10 @@
 		  "particle" : {
             "type" : "animated",
             "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
-            "position" : [0, 0],
-            "initialVelocity" : [12, 0],
+            "position" : [3.9375, 0],
+            "initialVelocity" : [18, 0],
             "finalVelocity" : [10, 0],
-	        "approach" : [4, 4],
+	        "approach" : [16, 16],
             "size" : 1,
             "layer" : "front",
             "timeToLive" : 0.4,
@@ -310,7 +311,7 @@
     },
     "fireSlime" : {
       "pool" : [ "/sfx/projectiles/goo_spit1.ogg", "/sfx/projectiles/goo_spit2.ogg" ],
-      "rangeMultiplier" : 3
+      "rangeMultiplier" : 1
     },
     "vortexWindup" : {
       "pool" : [ "/sfx/projectiles/blackhole_destroy.ogg" ],
@@ -318,7 +319,7 @@
     },
     "switchSegment" : {
       "pool" : [ "/sfx/projectiles/bonerain_full.ogg" ],
-      "rangeMultiplier" : 3
+      "rangeMultiplier" : 1
     },
     "shellBurst" : {
       "pool" : [ "/sfx/melee/blunt_kill_organic1.ogg" ],
