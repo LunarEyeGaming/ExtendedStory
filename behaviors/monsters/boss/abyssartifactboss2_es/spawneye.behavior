@@ -142,6 +142,15 @@
               "parameters": {
                 "time": {"value": 0.01}
               }
+            },
+            {
+              "title": "addEphemeralEffect",
+              "type": "action",
+              "name": "addEphemeralEffect",
+              "parameters": {
+                "duration": {"value": 0.1},
+                "name": {"value": "invulnerable"}
+              }
             }
           ]
         }

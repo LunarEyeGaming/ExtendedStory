@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstorytiles",
  "spacing":0,
- "tilecount":29,
+ "tilecount":31,
  "tileheight":8,
  "tileproperties":
     {
@@ -112,9 +112,17 @@
         {
          "material":"effulgentstone_es"
         },
+     "29":
+        {
+         "material":"abysstumors_es"
+        },
      "3":
         {
          "material":"supervoidblock"
+        },
+     "30":
+        {
+         "material":"abyssplatform_es"
         },
      "4":
         {
@@ -243,7 +251,15 @@
         {
          "material":"string"
         },
+     "29":
+        {
+         "material":"string"
+        },
      "3":
+        {
+         "material":"string"
+        },
+     "30":
         {
          "material":"string"
         },
@@ -406,9 +422,21 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "29":
+        {
+         "image":"..\/images\/tiles\/abysstumors.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
      "3":
         {
          "image":"..\/images\/tiles\/supervoidblock.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "30":
+        {
+         "image":"..\/images\/tiles\/abyssplatform.png",
          "imageheight":8,
          "imagewidth":8
         },

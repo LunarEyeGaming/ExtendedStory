@@ -1,0 +1,23 @@
+{
+  "materialId" : 2030,
+  "materialName" : "abyssplatform_es",
+  "collisionKind" : "platform",
+  "itemDrop" : "abyssplatform_es",
+  "shortdescription" : "the heavy is dead",
+  "description" : "Poo",
+  "glitchDescription" : "Shut",
+  "floranDescription" : "Sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+  "novakidDescription" : "Succ",
+  "footstepSound" : "/sfx/blocks/footstep_stone3.ogg",
+  "category" : "Supports",
+
+  "renderTemplate" : "/tiles/platformtemplate.config",
+  "renderParameters" : {
+    "texture" : "abyssplatform.png",
+    "variants" : 1,
+    "lightTransparent" : true,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

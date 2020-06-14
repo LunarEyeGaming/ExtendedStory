@@ -1,0 +1,86 @@
+{
+  "globalTagDefaults" : {
+    "paletteSwaps" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "staff" : {
+        "default" : "idle",
+        "states" : {
+		  "idle" : {},
+          "trigger" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "transition",
+			"transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "middle" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0], // x offset is set dynamically
+          "transformationGroups" : ["weapon"]
+        },
+        "partStates" : {
+          "staff" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle<paletteSwaps>"
+              }
+            },
+			"trigger" : {
+              "properties" : {
+                "image" : "<partImage>:trigger.<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      },
+      "middleFullbright" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.0, 0.0],
+          "zLevel" : 1,
+          "transformationGroups" : ["weapon"],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "staff" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle<paletteSwaps>"
+              }
+            },
+			"trigger" : {
+              "properties" : {
+                "image" : "<partImage>:trigger.<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "rotationGroups" : {
+    "weapon" : {
+      "angularVelocity" : 0
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "adjust" : [ "/sfx/gun/ancientcannon_fire.ogg" ],
+    "trigger" : [ "/sfx/objects/ancientenergy_chord.ogg" ],
+    "error" : [ "/sfx/interface/clickon_error.ogg" ]
+  }
+}

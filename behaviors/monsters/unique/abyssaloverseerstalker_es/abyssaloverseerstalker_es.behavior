@@ -10,8 +10,8 @@
     "/scripts/actions/position.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
-	"/scripts/actions/monster.lua",
-	"/scripts/actions/movement.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
     "/scripts/actions/unique/abyssaloverseerstalker_es.lua"
   ],
   "parameters": {
@@ -120,7 +120,7 @@
                           "type": {"value": "body"}
                         }
                       },
-	                  {
+                      {
                         "title": "setParticleEmitterActive",
                         "type": "action",
                         "name": "setParticleEmitterActive",
@@ -129,7 +129,7 @@
                           "active": {"value": true}
                         }
                       },
-	                  {
+                      {
                         "title": "burstParticleEmitter",
                         "type": "action",
                         "name": "burstParticleEmitter",
@@ -145,7 +145,7 @@
                           "time": {"value": 10}
                         }
                       },
-	                  {
+                      {
                         "title": "burstParticleEmitter",
                         "type": "action",
                         "name": "burstParticleEmitter",
@@ -193,7 +193,7 @@
                           ]
                         }
                       },
-	                  {
+                      {
                         "title": "setParticleEmitterActive",
                         "type": "action",
                         "name": "setParticleEmitterActive",

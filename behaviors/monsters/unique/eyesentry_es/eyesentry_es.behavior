@@ -1,0 +1,335 @@
+{
+  "name": "eyesentry_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
+  ],
+  "parameters": {
+    "wanderInterval": 3,
+    "minWanderAngle": 0,
+    "maxWanderAngle": 3.14,
+    "resetAngle": -12,
+    "windupTime": 3,
+    "projectileType": "invisibleprojectile",
+    "rotationCenter": [0.0, 0.0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "setNumber",
+        "type": "action",
+        "name": "setNumber",
+        "parameters": {
+          "number": {"value": 0}
+        },
+        "output": {
+          "number": "startAngle"
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 50},
+              "keepTargetInRange": {"value": 100},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 0.1},
+              "targetOnNotification": {"value": false}
+            }
+          },
+          {
+            "title": "idle-crawl",
+            "type": "module",
+            "name": "idle-crawl",
+            "parameters": {}
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 1}
+                        },
+                        "children": [
+                          {
+                            "title": "animate",
+                            "type": "action",
+                            "name": "animate",
+                            "parameters": {
+                              "state": {"value": "aggrotele"},
+                              "type": {"value": "eye"},
+                              "fallback": {"value": "aggroend"}
+                            }
+                          },
+                          {
+                            "title": "timer",
+                            "type": "action",
+                            "name": "timer",
+                            "parameters": {
+                              "time": {"key": "<windupTime>"}
+                            }
+                          },
+                          {
+                            "title": "eyesentry_es-look",
+                            "type": "module",
+                            "name": "eyesentry_es-look",
+                            "parameters": {
+                              "rotationCenter": {"key": "<rotationCenter>"}
+                            }
+                          },
+                          {
+                            "title": "failer",
+                            "type": "decorator",
+                            "name": "failer",
+                            "parameters": {},
+                            "child": {
+                              "title": "setNumber",
+                              "type": "action",
+                              "name": "setNumber",
+                              "parameters": {
+                                "number": {"key": "<resetAngle>"}
+                              },
+                              "output": {
+                                "number": "startAngle"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "spawnProjectile",
+                        "type": "action",
+                        "name": "spawnProjectile",
+                        "parameters": {
+                          "aimVector": {"value": [0, 0]},
+                          "offset": {"value": [0, 0]},
+                          "projectileConfig": {"value": {}},
+                          "projectileType": {"key": "<projectileType>"},
+                          "scalePower": {"value": true}
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "random",
+                    "type": "action",
+                    "name": "random",
+                    "parameters": {
+                      "min": {"key": "<minWanderAngle>"},
+                      "max": {"key": "<maxWanderAngle>"}
+                    },
+                    "output": {
+                      "number": "endAngle"
+                    }
+                  },
+                  {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": 1}
+                    },
+                    "children": [
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"key": "<wanderInterval>"}
+                        },
+                        "output": {
+                          "ratio": "progressArg"
+                        }
+                      },
+                      {
+                        "title": "failer",
+                        "type": "decorator",
+                        "name": "failer",
+                        "parameters": {},
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "ease",
+                              "type": "action",
+                              "name": "ease",
+                              "parameters": {
+                                "func": {"value": "sin"},
+                                "ratio": {"key": "progressArg"}
+                              },
+                              "output": {
+                                "ratio": "progress"
+                              }
+                            },
+                            {
+                              "title": "lerp",
+                              "type": "action",
+                              "name": "lerp",
+                              "parameters": {
+                                "min": {"key": "startAngle"},
+                                "max": {"key": "endAngle"},
+                                "ratio": {"key": "progress"}
+                              },
+                              "output": {
+                                "number": "angle"
+                              }
+                            },
+                            {
+                              "title": "resetTransformationGroup",
+                              "type": "action",
+                              "name": "resetTransformationGroup",
+                              "parameters": {
+                                "transformationGroup": {"value": "eye"}
+                              }
+                            },
+                            {
+                              "title": "rotateTransformationGroup",
+                              "type": "action",
+                              "name": "rotateTransformationGroup",
+                              "parameters": {
+                                "transformationGroup": {"value": "eye"},
+                                "angle": {"key": "angle"},
+                                "rotationCenter": {"key": "<rotationCenter>"}
+                              }
+                            },
+                            {
+                              "title": "rotateTransformationGroup",
+                              "type": "action",
+                              "name": "rotateTransformationGroup",
+                              "parameters": {
+                                "transformationGroup": {"value": "eye"},
+                                "angle": {"key": "heading"},
+                                "rotationCenter": {"key": "<rotationCenter>"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "setNumber",
+                    "type": "action",
+                    "name": "setNumber",
+                    "parameters": {
+                      "number": {"key": "endAngle"}
+                    },
+                    "output": {
+                      "number": "startAngle"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "itemName" : "lightmirrormover_es",
+  "price": 1500,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "giuwcm(*&$#*C<M*T# RRREEEEEEEEEEEEEE",
+  "shortdescription" : "p h i s h",
+  "tooltipKind" : "base",
+  "category" : "ur mom",
+  "twoHanded" : true,
+  "itemTags" : ["weapon"],
+
+  "inventoryIcon" : "lightmirrormover.png:idle",
+  "animation" : "lightmirrormover_es.animation",
+  "animationParts" : {
+    "middle" : "lightmirrormover.png",
+    "middleFullbright" : "lightmirrormoverunlit.png"
+  },
+  "animationCustom" : { },
+  "animationStates" : {
+    "staff" : "trigger"
+  },
+  "scripts" : ["lightmirrormover_es.lua"],
+  
+  "adjustmentCooldown" : 1.5,
+  "fireCooldown" : 3,
+  
+  "fireEnergyCost" : 200,
+  
+  "messengerUid" : "mirror",
+  "adjustMessage" : "adjust",
+  "fireMessage" : "fire",
+  
+  "focusOffset" : [0, 1],
+  
+  "idleAngle" : -45,
+  "castingAngle" : 0,
+
+  "returnDelay" : 0.5,
+  "returnTime" : 0.5
+}

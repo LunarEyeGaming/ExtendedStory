@@ -10,8 +10,8 @@
     "/scripts/actions/position.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
-	"/scripts/actions/monster.lua",
-	"/scripts/actions/movement.lua"
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua"
   ],
   "parameters": {},
   "root": {
@@ -143,16 +143,16 @@
                           "parameters": {},
                           "children": [
                             {
-    		                  "title": "spawnProjectile",
-    		                  "type": "action",
-    		                  "name": "spawnProjectile",
-    		                  "parameters": {
-    		                    "aimVector": {"value": [0, 0]},
-    		                    "offset": {"value": [0, 0]},
-    		                    "projectileConfig": {"value": {}},
-    		                    "projectileType": {"value": "abyssspellparticleemitter_es"}
-    		                  }
-    		                },
+                              "title": "spawnProjectile",
+                              "type": "action",
+                              "name": "spawnProjectile",
+                              "parameters": {
+                                "aimVector": {"value": [0, 0]},
+                                "offset": {"value": [0, 0]},
+                                "projectileConfig": {"value": {}},
+                                "projectileType": {"value": "abyssspellparticleemitter_es"}
+                              }
+                            },
                             {
                               "title": "playSound",
                               "type": "action",

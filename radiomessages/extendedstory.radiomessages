@@ -95,6 +95,22 @@
     "type" : "mission",
 	"text" : "All basics for the Ancient Sphere have been covered. Please exit through the ^orange;conveniently-placed teleporter^reset; at the end."
   },
+  // ------- DARK ABYSS DIMENSION MESSAGES -------
+  "abyssdungeon-techdisabled" : {
+    "type" : "mission",
+    "text" : "There is an anomalous field surrounding this place that is interfering with your tech in such a way that attempting to operate it will be lethal. Because of that, your tech has been disabled."
+  },
+  
+  "abyssdungeon-dangerouslifeforms" : {
+    "type" : "mission",
+    "text" : "The results from attempting to analyze the lifeforms of this place have been corrupted beyond readability. No advice can be given; pray that you do not encounter what is causing these interferences."
+  },
+  
+  "abyssdungeon-evacuate" : {
+    "type" : "mission",
+    "text" : "DANGER! ANOMALOUS LIFEFORM DETECTED! ABANDON MISSION AT ALL COSTS!"
+  },
+  
   // ------- OTHER MESSAGES -------
   "limbodoor" : {
     "type" : "mission",

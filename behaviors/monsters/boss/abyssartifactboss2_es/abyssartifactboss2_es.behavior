@@ -43,7 +43,7 @@
         "type": "action",
         "name": "faceDirection",
         "parameters": {
-          "direction": {"value": -1}
+          "direction": {"key": "<chaseDirection>"}
         }
       },
       {
@@ -98,15 +98,6 @@
                     "name": "entityExists",
                     "parameters": {
                       "entity": {"key": "target"}
-                    }
-                  },
-                  {
-                    "title": "resourcePercentage",
-                    "type": "action",
-                    "name": "resourcePercentage",
-                    "parameters": {
-                      "percentage": {"value": 0},
-                      "resource": {"value": "health"}
                     }
                   },
                   {
@@ -343,7 +334,7 @@
                     "type": "action",
                     "name": "faceDirection",
                     "parameters": {
-                      "direction": {"value": 1}
+                      "direction": {"key": "<chaseDirection>"}
                     }
                   },
                   {

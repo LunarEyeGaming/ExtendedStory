@@ -14,7 +14,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
@@ -31,23 +31,23 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
         "parameters": {
-		  "direction": {"value": 1}
-		}
+          "direction": {"value": 1}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -56,22 +56,22 @@
           "type": {"value": "eye3"}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 1.5}
-		}
+          "time": {"value": 1.5}
+        }
       },
-	  {
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 10},
-		  "untilSuccess": {"value": false}
-		},
+          "maxLoops": {"value": 10},
+          "untilSuccess": {"value": false}
+        },
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -87,62 +87,62 @@
                 "offset": {"value": [-5, -2]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {
-				  "timeToLive": 0,
-				  "damageType": "NoDamage",
+                  "timeToLive": 0,
+                  "damageType": "NoDamage",
                   "speed": 0,
                   "power": 30,
-				  "actionOnReap": [
-				    {
-					  "action": "loop",
-					  "count": 10,
-					  "body": [
-					    {
-						  "action": "projectile",
-						  "type": "ruinseedenergy_es",
+                  "actionOnReap": [
+                    {
+                      "action": "loop",
+                      "count": 10,
+                      "body": [
+                        {
+                          "action": "projectile",
+                          "type": "ruinseedenergy_es",
                           "inheritDamageFactor": 1,
-						  "fuzzAngle": 180
-						}
-					  ]
-					},
-					{
-					  "action": "sound",
-					  "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
-					}
-				  ]
-				}},
+                          "fuzzAngle": 180
+                        }
+                      ]
+                    },
+                    {
+                      "action": "sound",
+                      "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
+                    }
+                  ]
+                }},
                 "projectileType": {"value": "orbitalup"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
             },
-	        {
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-		        "time": {"value": 1.0}
-		      }
+                "time": {"value": 1.0}
+              }
             }
           ]
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye3"}
-		}
+        }
       }
     ]
   }

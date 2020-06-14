@@ -131,15 +131,15 @@
             "projectileCount" : 1,
             "projectileType" : "ancientexplosion",
             "projectileParameters" : {
-			  "periodicActions" : [
-			    {
-				  "time" : 0,
-				  "repeat" : false,
-				  "action" : "sound",
-				  "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
-				}
-			  ]
-			},
+              "periodicActions" : [
+                {
+                  "time" : 0,
+                  "repeat" : false,
+                  "action" : "sound",
+                  "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+                }
+              ]
+            },
             "aimDirection" : [1, 0],
             "inaccuracy" : 0,
             "fireOffset" : [0, 0]

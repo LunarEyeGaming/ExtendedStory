@@ -1,0 +1,237 @@
+{
+  "name": "disappearingabyssgazer2_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
+  ],
+  "parameters": {
+    "saccadeInterval": 0.3,
+    "saccadeMaxAngle": 0.1,
+    "disappearRange": 20,
+    "rotateCenter": [0, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 250},
+              "keepTargetInRange": {"value": 250},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 9999},
+              "targetOnNotification": {"value": false}
+            }
+          },
+          {
+            "title": "idle-crawl",
+            "type": "module",
+            "name": "idle-crawl",
+            "parameters": {}
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {},
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"key": "<saccadeInterval>"}
+                              }
+                            },
+                            {
+                              "title": "succeeder",
+                              "type": "decorator",
+                              "name": "succeeder",
+                              "parameters": {},
+                              "child": {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "multiply",
+                                    "type": "action",
+                                    "name": "multiply",
+                                    "parameters": {
+                                      "factor": {"key": "<saccadeMaxAngle>"},
+                                      "number": {"value": -1}
+                                    },
+                                    "output": {
+                                      "result": "saccadeMinAngle"
+                                    }
+                                  },
+                                  {
+                                    "title": "random",
+                                    "type": "action",
+                                    "name": "random",
+                                    "parameters": {
+                                      "min": {"key": "saccadeMinAngle"},
+                                      "max": {"key": "<saccadeMaxAngle>"}
+                                    },
+                                    "output": {
+                                      "number": "saccadeAngle"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "title": "entityPosition",
+                              "type": "action",
+                              "name": "entityPosition",
+                              "parameters": {
+                                "entity": {"key": "target"}
+                              },
+                              "output": {
+                                "position": "targetPos"
+                              }
+                            },
+                            {
+                              "title": "inRange",
+                              "type": "action",
+                              "name": "inRange",
+                              "parameters": {
+                                "target": {"key": "targetPos"},
+                                "range": {"key": "<disappearRange>"}
+                              }
+                            },
+                            {
+                              "title": "setResourcePercentage",
+                              "type": "action",
+                              "name": "setResourcePercentage",
+                              "parameters": {
+                                "percentage": {"value": 0},
+                                "resource": {"value": "health"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "succeeder",
+                      "type": "decorator",
+                      "name": "succeeder",
+                      "parameters": {},
+                      "child": {
+                        "title": "eyesentry_es-look",
+                        "type": "module",
+                        "name": "eyesentry_es-look",
+                        "parameters": {
+                          "angleOffset": {"key": "saccadeAngle"},
+                          "shouldFaceEntity": {"value": false}
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

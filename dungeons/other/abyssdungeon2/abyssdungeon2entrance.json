@@ -138,26 +138,6 @@
                  "width":8,
                  "x":144,
                  "y":112
-                }, 
-                {
-                 "gid":8845,
-                 "height":40,
-                 "id":1844,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{\"uniqueId\" : \"savepoint\"}"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":128,
-                 "y":200
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -222,7 +202,7 @@
                  "visible":true,
                  "width":8,
                  "x":144,
-                 "y":160
+                 "y":200
                 }, 
                 {
                  "gid":247,
@@ -419,7 +399,7 @@
          "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
         }, 
         {
-         "firstgid":8827,
+         "firstgid":8831,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }],
  "tilewidth":8,
