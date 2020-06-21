@@ -6,10 +6,10 @@
       ],
       "pool" : [
         {"weight" : 0.5, "pool" : "weapon"},
-		{"weight" : 0.1, "pool" : "uniqueWeapon"},
-		{"weight" : 0.2, "item" : ["money", 500]},
-		{"weight" : 0.3, "item" : ["manipulatormodule", 7]},
-		{"weight" : 0.15, "item" : ["bronzebar", 15]}
+        {"weight" : 0.1, "pool" : "uniqueWeapon"},
+        {"weight" : 0.2, "item" : ["money", 500]},
+        {"weight" : 0.3, "item" : ["manipulatormodule", 7]},
+        {"weight" : 0.15, "item" : ["bronzebar", 15]}
       ],
       "poolRounds" : 3,
       "allowDuplication" : false
@@ -32,9 +32,9 @@
       ],
       "pool" : [
         {"weight" : 0.5, "pool" : "weapon"},
-		{"weight" : 0.1, "pool" : "uniqueWeapon"},
-		{"weight" : 0.2, "item" : ["money", 600]},
-		{"weight" : 0.3, "item" : ["manipulatormodule", 10]}
+        {"weight" : 0.1, "pool" : "uniqueWeapon"},
+        {"weight" : 0.2, "item" : ["money", 600]},
+        {"weight" : 0.3, "item" : ["manipulatormodule", 10]}
       ],
       "poolRounds" : 3,
       "allowDuplication" : false

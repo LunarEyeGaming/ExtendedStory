@@ -44,30 +44,30 @@
           },
           "charge" : {
             "frames" : 4,
-			"cycle" : 0.25,
+            "cycle" : 0.25,
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_charge.ogg",
               "immediateSoundRangeMultiplier" : 5.0
             }
           },
-		  "laserfire" : {
-		    "frames" : 2,
-			"cycle" : 0.25,
-			"mode" : "loop",
+          "laserfire" : {
+            "frames" : 2,
+            "cycle" : 0.25,
+            "mode" : "loop",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
               "immediateSoundRangeMultiplier" : 5.0,
-			  "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
+              "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
               "persistentSoundRangeMultiplier" : 5.0,
               "persistentSoundStopTime" : 0.15
             }
-		  },
-		  "laserwinddown" : {
-		    "frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "transition",
-			"transition" : "idle"
-		  }
+          },
+          "laserwinddown" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
         }
       },
 
@@ -127,7 +127,7 @@
             "frames" : 3,
             "cycle" : 0.25,
             "mode" : "transition",
-			"transition" : "plasmaslash"
+            "transition" : "plasmaslash"
           },
           "plasmaslash" : {
             "frames" : 1
@@ -136,7 +136,7 @@
             "frames" : 5,
             "cycle" : 0.75,
             "mode" : "transition",
-			"transition" : "idle"
+            "transition" : "idle"
           }
         }
       },
@@ -269,11 +269,11 @@
           "sound" : {}
         }
       },
-	  
-	  "bodyunlit" : {
+      
+      "bodyunlit" : {
         "properties" : {
           "zLevel" : 3,
-		  "fullbright" : true,
+          "fullbright" : true,
           "centered" : true,
           "transformationGroups" : [ "body" ]
         },
@@ -669,10 +669,10 @@
       "pool" : [ "/sfx/npc/boss/spiderboss_attack1.ogg", "/sfx/npc/boss/spiderboss_attack2.ogg" ],
       "rangeMultiplier" : 1.5
     },
-	"plasmaslash" : {
-	  "pool" : [ "/sfx/npc/boss/toxinia_plasmaslash.ogg" ],
-	  "rangeMultiplier" : 1.5
-	},
+    "plasmaslash" : {
+      "pool" : [ "/sfx/npc/boss/toxinia_plasmaslash.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
     "sweep" : {
       "pool" : [ "/sfx/projectiles/spit1.ogg", "/sfx/projectiles/spit2.ogg" ],
       "rangeMultiplier" : 1.5

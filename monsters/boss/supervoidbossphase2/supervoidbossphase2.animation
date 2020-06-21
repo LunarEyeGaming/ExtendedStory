@@ -7,8 +7,8 @@
         "states" : {
           "idle" : {
             "frames" : 4,
-			"cycle" : 0.4,
-			"mode" : "loop"
+            "cycle" : 0.4,
+            "mode" : "loop"
           }
         }
       },
@@ -49,43 +49,43 @@
           }
         }
       },
-	  "beamwindup" : {
-	    "default" : "off",
-		"states" : {
-		  "off" : {},
-		  "windup" : {
-		    "frames" : 6,
-			"cycle" : 0.3,
-			"mode" : "end",
+      "beamwindup" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "windup" : {
+            "frames" : 6,
+            "cycle" : 0.3,
+            "mode" : "end",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/supervoidboss_beam_charge.ogg",
               "immediateSoundRangeMultiplier" : 5.0
             }
-		  },
-		  "winddown" : {
-		    "frames" : 6,
-			"cycle" : 0.3,
-			"mode" : "transition",
-			"transition" : "off"
-		  }
-		}
-	  },
-	  "stage3orbs" : {
-	    "default" : "off",
-		"states" : {
-		  "off" : {},
-		  "on" : {
-		    "frames" : 1
-		  }
-		}
-	  },
-	  "vacuum" : {
+          },
+          "winddown" : {
+            "frames" : 6,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      },
+      "stage3orbs" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "on" : {
+            "frames" : 1
+          }
+        }
+      },
+      "vacuum" : {
         "priority" : 1,
         "default" : "off",
         "states" : {
           "off" : {},
-		  "windup" : {
-		    "frames" : 7,
+          "windup" : {
+            "frames" : 7,
             "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "idle",
@@ -93,18 +93,18 @@
               "immediateSound" : "/sfx/npc/boss/tentacleboss_portal_open.ogg",
               "immediateSoundRangeMultiplier" : 5.0
             }
-		  },
-		  "idle" : {
-		    "frames" : 2,
+          },
+          "idle" : {
+            "frames" : 2,
             "cycle" : 0.1,
             "mode" : "loop",
             "properties" : {
               "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
               "persistentSoundRangeMultiplier" : 5.0
             }
-		  },
-		  "winddown" : {
-		   "frames" : 7,
+          },
+          "winddown" : {
+           "frames" : 7,
             "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "off",
@@ -112,7 +112,7 @@
               "immediateSound" : "/sfx/npc/boss/tentacleboss_portal_close.ogg",
               "immediateSoundRangeMultiplier" : 5.0
             }
-		  }
+          }
         }
       },
       "damage" : {
@@ -127,16 +127,16 @@
           }
         }
       },
-	  "backgroundlarge" : {
-	    "default" : "idle",
-		"states" : {
-		  "idle" : {
-		    "frames" : 40,
-			"cycle" : 4.0,
-			"mode" : "loop"
-		  }
-		}
-	  }
+      "backgroundlarge" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 40,
+            "cycle" : 4.0,
+            "mode" : "loop"
+          }
+        }
+      }
     },
 
     "parts" : {
@@ -146,27 +146,27 @@
           "offset" : [0, 0],
           "transformationGroups" : [ "eye" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true,
-		  "image" : "<partImage>"
+          "fullbright" : true,
+          "image" : "<partImage>"
         }
       },
-	  "background" : {
+      "background" : {
         "properties" : {
           "zLevel" : 0,
           "offset" : [0, 0],
           "transformationGroups" : [ "eye" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true,
-		  "image" : "<partImage>"
+          "fullbright" : true,
+          "image" : "<partImage>"
         }
       },
-	  "eyeoverlay" : {
+      "eyeoverlay" : {
         "properties" : {
           "zLevel" : 2,
           "offset" : [0, 0],
           "transformationGroups" : [ "eye" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
         "partStates" : {
           "eye" : {
@@ -178,13 +178,13 @@
           }
         }
       },
-	  "eyeoverlaylaser" : {
+      "eyeoverlaylaser" : {
         "properties" : {
           "zLevel" : 3,
           "offset" : [0, 0],
           "transformationGroups" : [ "eye" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
         "partStates" : {
           "beamwindup" : {
@@ -193,7 +193,7 @@
                 "image" : "<partImage>:windup.<frame>"
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
               }
@@ -201,21 +201,21 @@
           }
         }
       },
-	  "vacuum" : {
+      "vacuum" : {
         "properties" : {
           "zLevel" : 3,
           "centered" : true,
           "offset" : [0.0, 0.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "eye" ]
         },
         "partStates" : {
           "vacuum" : {
-		    "windup" : {
-			  "properties" : {
-			    "image" : "<partImage>:activate.<frame>"
-			  }
-			},
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:activate.<frame>"
+              }
+            },
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
@@ -234,7 +234,7 @@
           "zLevel" : 4,
           "offset" : [0, 0],
           "fullbright" : true,
-		  "transformationGroups" : [ "beam" ]
+          "transformationGroups" : [ "beam" ]
         },
         "partStates" : {
           "beam" : {
@@ -257,119 +257,119 @@
           }
         }
       },
-	  "stage3orb1" : {
+      "stage3orb1" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [0, 28],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       },
-	  "stage3orb2" : {
+      "stage3orb2" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [22, 16],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       },
-	  "stage3orb3" : {
+      "stage3orb3" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [22, -16],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       },
-	  "stage3orb4" : {
+      "stage3orb4" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [-22, -16],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       },
-	  "stage3orb5" : {
+      "stage3orb5" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [-22, 16],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       },
-	  "stage3orb6" : {
+      "stage3orb6" : {
         "properties" : {
           "zLevel" : 15,
           "offset" : [0, -28],
           "transformationGroups" : [ "stage3orbs" ],
           "rotationCenter" : [0, 0],
-		  "fullbright" : true
+          "fullbright" : true
         },
-		"partStates" : {
-		  "stage3orbs" : {
-		    "on" : {
-			  "properties" : {
-			    "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
-				"damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "stage3orbs" : {
+            "on" : {
+              "properties" : {
+                "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb.png",
+                "damageArea" : [ [0.59375, 1.1875], [1.1875, 0.59375], [1.1875, -0.59375], [0.59375, -1.1875], [-0.59375, -1.1875], [-1.1875, -0.59375], [-1.1875, 0.59375], [-0.59375, 1.1875] ]
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -380,8 +380,8 @@
   "transformationGroups" : {
 
     "eye" : { "interpolated" : true },
-	"beam" : { "interpolated" : true },
-	"stage3orbs" : { "interpolated" : true }
+    "beam" : { "interpolated" : true },
+    "stage3orbs" : { "interpolated" : true }
   },
 
   "particleEmitters" : {
@@ -396,34 +396,34 @@
       "particles" : [
       ]
     },
-	"idle" : {
-	  "emissionRate" : 2,
-	  "offsetRegion" : [20, 20, -20, -20],
-	  "particles" : [
-	    {
+    "idle" : {
+      "emissionRate" : 2,
+      "offsetRegion" : [20, 20, -20, -20],
+      "particles" : [
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/monsters/boss/supervoidbossphase2/supervoidstar.png",
             "position" : [0, 0],
-			"initialVelocity" : [0, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 5.0,
             "destructionTime" : 3.0,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [1, 1]
-		    }
+            "variance" : {
+              "initialVelocity" : [1, 1]
+            }
           }
         },
-		{
+        {
           "particle" : {
             "type" : "streak",
             "size" : 1.0,
             "color" : [0, 0, 0, 150],
             "fade" : 0.9,
-			"rotation" : 90,
+            "rotation" : 90,
             "position" : [0.0, 0.0],
             "initialVelocity" : [0.0, -3.0],
             "finalVelocity" : [0, 0.0],
@@ -436,118 +436,118 @@
             }
           }
         }
-	  ]
-	},
-	"idlephase3" : {
-	  "emissionRate" : 30,
-	  "offsetRegion" : [20, 20, -20, -20],
-	  "particles" : [
-	    {
+      ]
+    },
+    "idlephase3" : {
+      "emissionRate" : 30,
+      "offsetRegion" : [20, 20, -20, -20],
+      "particles" : [
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/monsters/boss/supervoidbossphase2/supervoidstar.png",
             "position" : [0, 0],
-			"initialVelocity" : [0, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 5.0,
             "destructionTime" : 3.0,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [1, 1]
-		    }
+            "variance" : {
+              "initialVelocity" : [1, 1]
+            }
           }
         },
-		{
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb3.png",
             "position" : [0, 0],
-			"initialVelocity" : [0, 5],
-			"finalVelocity" : [0, 5],
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, 5],
             "layer" : "front",
             "timeToLive" : 2.0,
             "destructionTime" : 1.0,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [0, 5],
-			  "finalVelocity" : [0, 5]
-		    }
+            "variance" : {
+              "initialVelocity" : [0, 5],
+              "finalVelocity" : [0, 5]
+            }
           }
         }
-	  ]
-	},
-	"dying" : {
-	  "emissionRate" : 60,
-	  "offsetRegion" : [20, 20, -20, -20],
-	  "particles" : [
-		{
+      ]
+    },
+    "dying" : {
+      "emissionRate" : 60,
+      "offsetRegion" : [20, 20, -20, -20],
+      "particles" : [
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb3.png",
             "position" : [0, 0],
-			"initialVelocity" : [0, 5],
-			"finalVelocity" : [0, 5],
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0, 5],
             "layer" : "front",
             "timeToLive" : 2.0,
             "destructionTime" : 1.0,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [0, 5],
-			  "finalVelocity" : [0, 5]
-		    }
+            "variance" : {
+              "initialVelocity" : [0, 5],
+              "finalVelocity" : [0, 5]
+            }
           }
         }
-	  ]
-	},
-	"dying2" : {
-	  "emissionRate" : 60,
-	  "particles" : [
-		{
+      ]
+    },
+    "dying2" : {
+      "emissionRate" : 60,
+      "particles" : [
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb2.png:0",
             "position" : [0, 0],
-			"initialVelocity" : [0, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 2.0,
             "destructionTime" : 0.5,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [20, 20]
-		    }
+            "variance" : {
+              "initialVelocity" : [20, 20]
+            }
           }
         }
-	  ]
-	},
-	"dying3" : {
-	  "emissionRate" : 60,
-	  "particles" : [
-		{
+      ]
+    },
+    "dying3" : {
+      "emissionRate" : 60,
+      "particles" : [
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/projectiles/boss/supervoidbossphase2/supervoidreplicatingorb/supervoidreplicatingorb3.png",
             "position" : [0, 0],
-			"initialVelocity" : [0, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 2.0,
             "destructionTime" : 0.5,
             "destructionAction" : "shrink",
             "fullbright" : true,
-		    "variance" : {
-			  "initialVelocity" : [20, 20],
-			  "finalVelocity" : [0, 0]
-		    }
+            "variance" : {
+              "initialVelocity" : [20, 20],
+              "finalVelocity" : [0, 0]
+            }
           }
         }
-	  ]
-	},
+      ]
+    },
     "beamtelegraph" : {
       "offsetRegion" : [-25, -28.5625, 25, -28.5625],
       "emissionRate" : 30,
@@ -591,226 +591,226 @@
         { "count" : 3, "particle" : "dust4" }
       ]
     },
-	"vacuumleft" : {
-	  "offsetRegion" : [-63, 18, 0, -18],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+    "vacuumleft" : {
+      "offsetRegion" : [-63, 18, 0, -18],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [20, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [20, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 0]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 0]
+            }
           }
         }
-	  ]
-	},
-	"vacuumupleft" : {
-	  "offsetRegion" : [-63, 63, 0, 0],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumupleft" : {
+      "offsetRegion" : [-63, 63, 0, 0],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [20, -20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [20, -20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 10]
+            }
           }
         }
-	  ]
-	},
-	"vacuumup" : {
-	  "offsetRegion" : [-18, 0, 18, 63],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumup" : {
+      "offsetRegion" : [-18, 0, 18, 63],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [0, -20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, -20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [0, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [0, 10]
+            }
           }
         }
-	  ]
-	},
-	"vacuumupright" : {
-	  "offsetRegion" : [63, 63, 0, 0],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumupright" : {
+      "offsetRegion" : [63, 63, 0, 0],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [-20, -20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [-20, -20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 10]
+            }
           }
         }
-	  ]
-	},
-	"vacuumright" : {
-	  "offsetRegion" : [63, 18, 0, -18],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumright" : {
+      "offsetRegion" : [63, 18, 0, -18],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [-20, 0],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [-20, 0],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 0]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 0]
+            }
           }
         }
-	  ]
-	},
-	"vacuumdownright" : {
-	  "offsetRegion" : [63, -63, 0, 0],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumdownright" : {
+      "offsetRegion" : [63, -63, 0, 0],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [-20, 20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [-20, 20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 10]
+            }
           }
         }
-	  ]
-	},
-	"vacuumdown" : {
-	  "offsetRegion" : [-18, -63, 18, 0],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumdown" : {
+      "offsetRegion" : [-18, -63, 18, 0],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [0, 20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 10]
+            }
           }
         }
-	  ]
-	},
-	"vacuumdownleft" : {
-	  "offsetRegion" : [-63, -63, 0, 0],
-	  "emissionRate" : 200,
-	  "particles" : [
-	    {
+      ]
+    },
+    "vacuumdownleft" : {
+      "offsetRegion" : [-63, -63, 0, 0],
+      "emissionRate" : 200,
+      "particles" : [
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
             "position" : [0, 0],
-			"initialVelocity" : [20, 20],
-			"finalVelocity" : [0, 0],
+            "initialVelocity" : [20, 20],
+            "finalVelocity" : [0, 0],
             "layer" : "front",
             "timeToLive" : 1.5,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
-		    "variance" : {
-			  "initialVelocity" : [10, 10]
-		    }
+            "variance" : {
+              "initialVelocity" : [10, 10]
+            }
           }
         }
-	  ]
-	},
-	"flash" : {
-	  "emissionRate" : 300,
-	  "particles" : [
-	    {
-		  "particle" : {
-		    "type" : "textured",
-		    "image" : "/flares/phoenixflare.png",
-		    "position" : [0, 0],
-		    "fullbright" : true,
-		    "timeToLive" : 1.8,
-		    "fade" : 1,
-		    "destructionTime" : 0.5,
-		    "size" : 6,
-			"layer" : "front"
-		  }
-		},
-		{
-		  "particle" : {
-		    "type" : "textured",
-		    "image" : "/flares/phoenixflare.png",
-		    "position" : [0, 0],
-		    "fullbright" : true,
-		    "timeToLive" : 1.8,
-		    "fade" : 1,
-		    "destructionTime" : 0.5,
-		    "size" : 6,
-			"layer" : "front"
-		  }
-		},
-		{
-		  "particle" : {
-		    "type" : "textured",
-		    "image" : "/flares/phoenixflare.png",
-		    "position" : [0, 0],
-		    "fullbright" : true,
-		    "timeToLive" : 1.8,
-		    "fade" : 1,
-		    "destructionTime" : 0.5,
-		    "size" : 6,
-			"layer" : "front"
-		  }
-		}
-	  ]
-	}
+      ]
+    },
+    "flash" : {
+      "emissionRate" : 300,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "textured",
+            "image" : "/flares/phoenixflare.png",
+            "position" : [0, 0],
+            "fullbright" : true,
+            "timeToLive" : 1.8,
+            "fade" : 1,
+            "destructionTime" : 0.5,
+            "size" : 6,
+            "layer" : "front"
+          }
+        },
+        {
+          "particle" : {
+            "type" : "textured",
+            "image" : "/flares/phoenixflare.png",
+            "position" : [0, 0],
+            "fullbright" : true,
+            "timeToLive" : 1.8,
+            "fade" : 1,
+            "destructionTime" : 0.5,
+            "size" : 6,
+            "layer" : "front"
+          }
+        },
+        {
+          "particle" : {
+            "type" : "textured",
+            "image" : "/flares/phoenixflare.png",
+            "position" : [0, 0],
+            "fullbright" : true,
+            "timeToLive" : 1.8,
+            "fade" : 1,
+            "destructionTime" : 0.5,
+            "size" : 6,
+            "layer" : "front"
+          }
+        }
+      ]
+    }
   },
 
   "lights" : {

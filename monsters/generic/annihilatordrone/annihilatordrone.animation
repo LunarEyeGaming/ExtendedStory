@@ -7,82 +7,82 @@
         "states" : {
           "idle" : {
             "frames" : 2,
-			"cycle" : 0.25,
-			"mode" : "loop",
-			"properties" : {
-			  "lightsOn" : [ "passive" ],
-			  "lightsOff" : [ "aggro" ],
-			  "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
-			}
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "lightsOn" : [ "passive" ],
+              "lightsOff" : [ "aggro" ],
+              "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
+            }
           },
           "fly" : {
             "frames" : 2,
-			"cycle" : 0.25,
-			"mode" : "loop",
-			"properties" : {
-			  "lightsOff" : [ "passive" ],
-			  "lightsOn" : [ "aggro" ],
-			  "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
-			}
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "lightsOff" : [ "passive" ],
+              "lightsOn" : [ "aggro" ],
+              "persistentSound" : "/sfx/tech/mech_jetpack_loop1.ogg"
+            }
           },
           "aggro" : {
             "frames" : 7,
             "cycle" : 0.7,
-			"mode" : "transition",
-			"transition" : "fly",
-			"properties" : {
-			  "immediateSound" : "/sfx/npc/boss/robotboss_turnhostile.ogg"
-			}
+            "mode" : "transition",
+            "transition" : "fly",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/robotboss_turnhostile.ogg"
+            }
           },
           "windup" : {
             "frames" : 2,
             "cycle" : 0.2,
-			"mode" : "transition",
-			"transition" : "fire",
-			"properties" : {
-			  "immediateSound" : "/sfx/tech/mech_jetpack_thrust3.ogg"
-			}
+            "mode" : "transition",
+            "transition" : "fire",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/mech_jetpack_thrust3.ogg"
+            }
           },
           "windup2" : {
             "frames" : 6,
             "cycle" : 0.6,
-			"mode" : "transition",
-			"transition" : "fire2",
-			"frameProperties" : {
-			  "immediateSound" : [ "/sfx/tech/mech_jetpack_thrust3.ogg", "", "", "/sfx/tech/mech_activate3.ogg" ]
-			}
+            "mode" : "transition",
+            "transition" : "fire2",
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/tech/mech_jetpack_thrust3.ogg", "", "", "/sfx/tech/mech_activate3.ogg" ]
+            }
           },
           "winddown" : {
             "frames" : 2,
             "cycle" : 0.2,
-			"mode" : "transition",
-			"transition" : "fly",
-			"frameProperties" : {
-			  "immediateSound" : [ "/sfx/tech/mech_jetpack_thrust3.ogg" ]
-			}
+            "mode" : "transition",
+            "transition" : "fly",
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/tech/mech_jetpack_thrust3.ogg" ]
+            }
           },
           "winddown2" : {
             "frames" : 6,
             "cycle" : 0.6,
-			"mode" : "transition",
-			"transition" : "fly",
-			"frameProperties" : {
-			  "immediateSound" : [ "", "", "", "", "/sfx/tech/mech_jetpack_thrust3.ogg" ]
-			}
+            "mode" : "transition",
+            "transition" : "fly",
+            "frameProperties" : {
+              "immediateSound" : [ "", "", "", "", "/sfx/tech/mech_jetpack_thrust3.ogg" ]
+            }
           },
-		  "fire" : {},
-		  "fire2" : {
-		    "frames" : 3,
-			"cycle" : 0.3,
-			"mode" : "transition",
-			"transition" : "firecooldown"
-		  },
-		  "firecooldown" : {
-		    "frames" : 1,
-			"cycle" : 0.7,
-			"mode" : "transition",
-			"transition" : "fire2"
-		  }
+          "fire" : {},
+          "fire2" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "firecooldown"
+          },
+          "firecooldown" : {
+            "frames" : 1,
+            "cycle" : 0.7,
+            "mode" : "transition",
+            "transition" : "fire2"
+          }
         }
       },
       "damage" : {
@@ -142,26 +142,26 @@
                 "image" : "<partImage>:aggro.<frame>"
               }
             },
-			"windup" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			},
-			"windup2" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup2.<frame>"
-			  }
-			},
-			"winddown" : {
-			  "properties" : {
-			    "image" : "<partImage>:winddown.<frame>"
-			  }
-			},
-			"winddown2" : {
-			  "properties" : {
-			    "image" : "<partImage>:winddown2.<frame>"
-			  }
-			},
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup2.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            },
+            "winddown2" : {
+              "properties" : {
+                "image" : "<partImage>:winddown2.<frame>"
+              }
+            },
             "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire"
@@ -187,12 +187,12 @@
           }
         }
       },
-	  "bodyfullbright" : {
+      "bodyfullbright" : {
         "properties" : {
           "transformationGroups" : [ "body" ],
           "offset" : [0.0, 0],
-		  "zLevel" : 2,
-		  "fullbright" : true
+          "zLevel" : 2,
+          "fullbright" : true
         },
         "partStates" : {
           "body" : {
@@ -211,26 +211,26 @@
                 "image" : "<partImage>:aggro.<frame>"
               }
             },
-			"windup" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			},
-			"windup2" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup2.<frame>"
-			  }
-			},
-			"winddown" : {
-			  "properties" : {
-			    "image" : "<partImage>:winddown.<frame>"
-			  }
-			},
-			"winddown2" : {
-			  "properties" : {
-			    "image" : "<partImage>:winddown2.<frame>"
-			  }
-			},
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup2.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            },
+            "winddown2" : {
+              "properties" : {
+                "image" : "<partImage>:winddown2.<frame>"
+              }
+            },
             "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire"
@@ -335,8 +335,8 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-	"fire" : ["/sfx/gun/plasma_sniper1.ogg"],
-	"fire2" : ["/sfx/gun/rocket2.ogg"],
-	"fire3" : ["/sfx/gun/mech_energyrifle_fire1.ogg"]
+    "fire" : ["/sfx/gun/plasma_sniper1.ogg"],
+    "fire2" : ["/sfx/gun/rocket2.ogg"],
+    "fire3" : ["/sfx/gun/mech_energyrifle_fire1.ogg"]
   }
 }

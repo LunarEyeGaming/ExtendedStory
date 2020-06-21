@@ -4,16 +4,16 @@
       "padState" : {
         "default" : "closed",
         "states" : {
-		  "closed" : {
+          "closed" : {
             "properties" : {
-			  "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
-			}
+              "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+            }
           },
           "opened" : {
-			"properties" : {
-			  "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg",
+            "properties" : {
+              "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg",
               "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
-			}
+            }
           }
         }
       }
@@ -22,28 +22,28 @@
     "parts" : {
       "forcepad" : {
         "properties" : {
-		  "centered" : true,
-		  "zLevel" : 2,
-		  "fullbright" : true,
-		  "offset" : [0, 0],
+          "centered" : true,
+          "zLevel" : 2,
+          "fullbright" : true,
+          "offset" : [0, 0],
           "transformationGroups" : ["vortex"],
           "image" : "<partImage>"
         }
       },
-	  "fg" : {
-	    "properties" : {
-		  "centered" : true,
-		  "zLevel" : 1,
-		  "image" : "<partImage>"
-		}
-	  },
-	  "bg" : {
-	    "properties" : {
-		  "centered" : true,
-		  "image" : "<partImage>",
-		  "fullbright" : true
-		}
-	  }
+      "fg" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "image" : "<partImage>"
+        }
+      },
+      "bg" : {
+        "properties" : {
+          "centered" : true,
+          "image" : "<partImage>",
+          "fullbright" : true
+        }
+      }
     }
   },
   "transformationGroups" : {

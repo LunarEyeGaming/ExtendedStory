@@ -8,49 +8,68 @@
   "tooltipKind" : "gun",
   "category" : "Chain Gun",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "itemTags" : ["weapon","ranged","chaingun"],
   "level" : 3,
   
   "critChance" : 4,
   "critBonus" : 7,
 
-  "inventoryIcon" : "tungstenchaingun.png:idle",
+  "inventoryIcon" : "tungstenchaingunicon.png",
 
-  "animation" : "/items/active/weapons/ranged/chaingun/tungstenchaingun/tungstenchaingun.animation",
+  "animation" : "/items/active/weapons/ranged/chaingun/chaingun.animation",
   "animationParts" : {
-    "butt" : "",
-    "middle" : "tungstenchaingun.png",
-	"middleFullbright" : "tungstenchaingununlit.png",
-    "barrel" : "",
-    "muzzleFlash" : ""
+    "body" : "body.png",
+    "barrel" : "barrel.png",
+    "magazine" : "magazine.png",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
   },
   "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "magazine" : {
+          "states" : {"reload" : {"cycle" : 0.1}}
+        }
+      },
+      "parts" : {
+        "body" : {"properties" : {"offset" : [-0.25, -0.5]}},
+        "barrel" : {"properties" : {"offset" : [1.8125, -0.625]}},
+        "magazine" : {"properties" : {"offset" : [-0.4375, -0.875]}}
+      }
+    },
     "sounds" : {
-      "fire" : ["/sfx/gun/ar4.ogg", "/sfx/gun/ar5.ogg", "/sfx/gun/ar6.ogg"],
-	  "altFire" : ["/sfx/gun/grenade1.ogg"]
+      "fire" : ["/sfx/gun/ar4.ogg"],
+      "altFire" : ["/sfx/gun/grenade1.ogg"]
     }
   },
 
-  "baseOffset" : [0.6, -0.7],
-  "muzzleOffset" : [2.5, 0.25],
+  "baseOffset" : [0, 0],
+  "muzzleOffset" : [3, -0.5],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
+    "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
+    "class" : "ChainGunFire",
 
-    "fireTime" : 0.05,
+    "windupTime" : 2.0,
+    "startFireTime" : 0.5,
+    "endFireTime" : 0.1,
+    
+    "whirMinPitch" : 1.0,
+    "whirMaxPitch" : 2.0,
+    
+    "spinFrameCount" : 2,
+    
     "baseDps" : 12.0,
-    "energyUsage" : 30,
+    "energyUsage" : 20,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
     "fireType" : "auto",
 
-    "projectileType" : "bullet-1",
+    "projectileType" : "tungstenchaingunshot_es",
     "projectileParameters" : {
       "knockback" : 2
     },
@@ -70,10 +89,7 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        "allowFlip" : false
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -86,29 +102,6 @@
       }
     }
   },
-  "altAbilityType" : "explosiveshot",
-  "altAbility" : {
-	"fireTime" : 0.25,
-	"baseDps" : 12,
-	"cooldownTime" : 0.25,
-	"inaccuracy" : 0.01,
-	"energyUsage" : 40,
-	"projectileType" : "explosivebullet",
-	"projectileParameters" : {
-	  "periodicActions" : [], 
-	  "speed" : 50,
-	  "timeToLive" : 10.0,
-	  "knockback" : 70,
-	  "bounces" : 0,
-	  "power" : 10,
-	  "actionOnReap" : [
-	    {
-		  "action" : "config",
-		  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
-		}
-	  ]
-	}
-  },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildchaingun.lua"
 }

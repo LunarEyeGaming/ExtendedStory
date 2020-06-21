@@ -24,7 +24,7 @@
       "spaceScan" : 0.1,
       "anchors" : [ "background" ],
 
-      "metaBoundBox" : [-10, -10, 10, 10]
+      "metaBoundBox" : [-25, -25, 25, 25]
     }
   ],
 
@@ -53,7 +53,7 @@
   "physicsForces" : {
     "jumpForce" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 16,
+      "outerRadius" : 25,
       "innerRadius" : 0,
       "targetRadialVelocity" : -70,
       "controlForce" : 1000,

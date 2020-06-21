@@ -1,0 +1,122 @@
+{
+  "objectName" : "abysspulsatingorb_es",
+  "colonyTags" : ["light"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "category" : "light",
+  "price" : 0,
+
+  "description" : "A dark, pulsating orb with veins attached to it.",
+  "shortdescription" : "Abyssal Pulsating Orb",
+  "race" : "generic",
+
+  "apexDescription" : "Why is this orb here? What is the point of supplying blood to the thing?",
+  "avianDescription" : "The orb appears to be pumping some kind of alien blood.",
+  "floranDescription" : "Floran likesss pulsating orb.",
+  "glitchDescription" : "Disgusted. This giant orb appears to be alive.",
+  "humanDescription" : "I don't like how it's beating. It's as if it's alive.",
+  "hylotlDescription" : "Perhaps this orb is connected to some kind of heart.",
+  "novakidDescription" : "It's beatin' for whatever reason. I ain't likin' it.",
+
+  "inventoryIcon" : "abysspulsatingorbicon.png",
+  "orientations" : [
+    {
+      "image" : "abysspulsatingorb.png:idle",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-16, 0],
+      "animationParts" : {
+        "bg" : "abysspulsatingorb.png",
+        "fg" : "abysspulsatingorblit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "abysspulsatingorb.png:idle",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "abysspulsatingorb.png",
+        "fg" : "abysspulsatingorblit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "abysspulsatingorbleft.png:idle",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -16],
+      "animationParts" : {
+        "bg" : "abysspulsatingorbleft.png",
+        "fg" : "abysspulsatingorbleftlit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "abysspulsatingorbright.png:idle",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -16],
+      "animationParts" : {
+        "bg" : "abysspulsatingorbright.png",
+        "fg" : "abysspulsatingorbrightlit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "abysspulsatingorbceiling.png:idle",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-16, 0],
+      "animationParts" : {
+        "bg" : "abysspulsatingorbceiling.png",
+        "fg" : "abysspulsatingorbceilinglit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "abysspulsatingorbceiling.png:idle",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "abysspulsatingorbceiling.png",
+        "fg" : "abysspulsatingorbceilinglit.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "animation" : "abysspulsatingorb_es.animation",
+  "animationParts" : {
+    "bg" : "abysspulsatingorb.png",
+    "fg" : "abysspulsatingorblit.png"
+  },
+  "animationCustom" : {},
+
+  "scripts" : [ "/objects/abyss/abysspulsatingorb_es/abysspulsatingorb.lua" ],
+  
+  "pulseInDelay" : 2.0,
+  "pulseOutDelay" : 0.4
+}

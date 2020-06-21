@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":20,
+ "tilecount":25,
  "tileheight":64,
  "tileproperties":
     {
@@ -104,6 +104,41 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"abyssswarmurnlarge2_es",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssblooddripper_es",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysspulsatingorb_es",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysspulsatingorb_es",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abysspulsatingorb_es",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abysspulsatingorb_es",
          "tilesetDirection":"right"
         },
      "3":
@@ -255,6 +290,41 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "20":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "21":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "imagePositionX":"string",
@@ -386,6 +456,36 @@
         {
          "image":"..\/images\/objects\/abyssswarmurnlarge2.png",
          "imageheight":24,
+         "imagewidth":16
+        },
+     "20":
+        {
+         "image":"..\/images\/objects\/abyssblooddripper.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "21":
+        {
+         "image":"..\/images\/objects\/abysspulsatingorb.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "22":
+        {
+         "image":"..\/images\/objects\/abysspulsatingorbceiling.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "23":
+        {
+         "image":"..\/images\/objects\/abysspulsatingorbleft.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "24":
+        {
+         "image":"..\/images\/objects\/abysspulsatingorbright.png",
+         "imageheight":32,
          "imagewidth":16
         },
      "3":

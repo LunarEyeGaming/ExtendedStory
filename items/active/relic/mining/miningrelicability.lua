@@ -18,12 +18,12 @@ function MiningRelicAbility:init()
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
-	if self.firingMode == "beam" or self.firingMode == "beam2" then
+    if self.firingMode == "beam" or self.firingMode == "beam2" then
       self.weapon:setDamage()
       activeItem.setScriptedAnimationParameter("chains", {})
       animator.setParticleEmitterActive("beamCollision", false)
       animator.stopAllSounds("fireLoop")
-	end
+    end
   end
   usingItem = false
 end
@@ -33,10 +33,10 @@ function MiningRelicAbility:update(dt, fireMode, shiftHeld)
   burnOutProgress = self.burnOutTimer / self.burnOutTime
   if self.burnedOutTimer == 0 then
     animator.setGlobalTag("burnOutLevel", math.floor(burnOutProgress * self.burnOutStages))
-	animator.setParticleEmitterActive("burnedOut", false)
+    animator.setParticleEmitterActive("burnedOut", false)
   else
     animator.setGlobalTag("burnOutLevel", math.floor((self.burnedOutTimer / self.burnOutCooldown) * self.burnOutStages))
-	animator.setParticleEmitterActive("burnedOut", true)
+    animator.setParticleEmitterActive("burnedOut", true)
   end
   if not usingItem then
     self.burnOutTimer = math.max(0, self.burnOutTimer - self.dt * self.burnOutRecharge)
@@ -55,7 +55,7 @@ function MiningRelicAbility:update(dt, fireMode, shiftHeld)
     and self.burnedOutTimer == 0
     and not self.weapon.currentAbility
     and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
-	
+    
     self:setState(self.charge)
   end
 end
@@ -65,19 +65,19 @@ function MiningRelicAbility:charge()
   usingItem = true
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = math.max(0, self.chargeTimer - self.dt)
-	if self.chargeTimer == 0 then
-	  if self.firingMode == "drill" then
-	    self:setState(self.drillFire)
-	  elseif self.firingMode == "proj" then
-	    self:setState(self.projFire)
-	  elseif self.firingMode == "beam" then
-	    self:setState(self.beamFire)
-	  elseif self.firingMode == "beam2" then
-	    self:setState(self.beamFireAimable)
-	  else
-	    sb.logWarn("Firing mode '%s' is invalid", self.firingMode)
-	  end
-	end
+    if self.chargeTimer == 0 then
+      if self.firingMode == "drill" then
+        self:setState(self.drillFire)
+      elseif self.firingMode == "proj" then
+        self:setState(self.projFire)
+      elseif self.firingMode == "beam" then
+        self:setState(self.beamFire)
+      elseif self.firingMode == "beam2" then
+        self:setState(self.beamFireAimable)
+      else
+        sb.logWarn("Firing mode '%s' is invalid", self.firingMode)
+      end
+    end
 
     coroutine.yield()
   end
@@ -90,12 +90,12 @@ function MiningRelicAbility:drillFire()
   self.tileDamageTimer = 0
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.dt)
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnOutTimer = 0
-	  self.burnedOutTimer = self.burnOutCooldown
+    if self.burnOutTimer == self.burnOutTime then
+      self.burnOutTimer = 0
+      self.burnedOutTimer = self.burnOutCooldown
       animator.playSound("burnout")
-	  break
-	end
+      break
+    end
     self.weapon:updateAim()
 
     local damageArea = partDamageArea("drillenergy")
@@ -119,23 +119,23 @@ function MiningRelicAbility:projFire()
       self:setState(self.winddown)
       return
     end
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnOutTimer = 0
-	  self.burnedOutTimer = self.burnOutCooldown
+    if self.burnOutTimer == self.burnOutTime then
+      self.burnOutTimer = 0
+      self.burnedOutTimer = self.burnOutCooldown
       animator.playSound("burnout")
-	  break
-	end
-	if self.fireTimer == 0 then
+      break
+    end
+    if self.fireTimer == 0 then
       self:fireProjectiles()
       animator.playSound("fire")
-	  self.fireTimer = self.fireTime or 0
+      self.fireTimer = self.fireTime or 0
       self.weapon:setStance(self.stances.fire)
       self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.fireTime)
     end
     if self.stances.fire.duration then
       util.wait(self.stances.fire.duration)
     end
-	coroutine.yield()
+    coroutine.yield()
   end
   self:setState(self.winddown)
 end
@@ -147,12 +147,12 @@ function MiningRelicAbility:beamFire()
   local wasColliding = false
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.dt)
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnOutTimer = 0
-	  self.burnedOutTimer = self.burnOutCooldown
+    if self.burnOutTimer == self.burnOutTime then
+      self.burnOutTimer = 0
+      self.burnedOutTimer = self.burnOutCooldown
       animator.playSound("burnout")
-	  break
-	end
+      break
+    end
     local beamStart = self:firePosition()
     local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), self.beamLength))
     local beamLength = self.beamLength
@@ -170,8 +170,8 @@ function MiningRelicAbility:beamFire()
       if self.impactSoundTimer == 0 then
         animator.setSoundPosition("beamImpact", {beamLength, 0})
         animator.playSound("beamImpact")
-	    world.damageTileArea(collidePoint, self.tileDamageRadius, "foreground", self:firePosition(), "blockish", self.tileDamage, 99)
-	    world.damageTileArea(collidePoint, self.tileDamageRadius, "background", self:firePosition(), "blockish", self.tileDamage, 99)
+        world.damageTileArea(collidePoint, self.tileDamageRadius, "foreground", self:firePosition(), "blockish", self.tileDamage, 99)
+        world.damageTileArea(collidePoint, self.tileDamageRadius, "background", self:firePosition(), "blockish", self.tileDamage, 99)
         self.impactSoundTimer = self.fireTime
       end
     else
@@ -199,23 +199,23 @@ function MiningRelicAbility:beamFireAimable()
   local wasColliding = false
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.burnOutTimer = math.min(self.burnOutTime, self.burnOutTimer + self.dt)
-	if self.burnOutTimer == self.burnOutTime then
-	  self.burnOutTimer = 0
-	  self.burnedOutTimer = self.burnOutCooldown
+    if self.burnOutTimer == self.burnOutTime then
+      self.burnOutTimer = 0
+      self.burnedOutTimer = self.burnOutCooldown
       animator.playSound("burnout")
-	  break
-	end
+      break
+    end
     local beamStart = self:firePosition()
     local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), math.min(self.beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition()))))
     local beamLength = self.beamLength
 
     local collidePoint = world.lineCollision(beamStart, beamEnd)
-	if self.beamLength >= world.magnitude(beamStart, activeItem.ownerAimPosition()) then
-	  defaultBeamEnd = activeItem.ownerAimPosition()
-	else
-	  defaultBeamEnd = beamEnd
-	end
-	local tileDamagePoint = collidePoint or defaultBeamEnd
+    if self.beamLength >= world.magnitude(beamStart, activeItem.ownerAimPosition()) then
+      defaultBeamEnd = activeItem.ownerAimPosition()
+    else
+      defaultBeamEnd = beamEnd
+    end
+    local tileDamagePoint = collidePoint or defaultBeamEnd
     if collidePoint then
       beamEnd = collidePoint
 
@@ -233,11 +233,11 @@ function MiningRelicAbility:beamFireAimable()
     else
       animator.setParticleEmitterActive("beamCollision", false)
     end
-	if self.tileDamageTimer == 0 then
-	  world.damageTileArea(tileDamagePoint, self.tileDamageRadius, "foreground", self:firePosition(), "blockish", self.tileDamage, 99)
-	  world.damageTileArea(tileDamagePoint, self.tileDamageRadius, "background", self:firePosition(), "blockish", self.tileDamage, 99)
-	  self.tileDamageTimer = self.fireTime
-	end
+    if self.tileDamageTimer == 0 then
+      world.damageTileArea(tileDamagePoint, self.tileDamageRadius, "foreground", self:firePosition(), "blockish", self.tileDamage, 99)
+      world.damageTileArea(tileDamagePoint, self.tileDamageRadius, "background", self:firePosition(), "blockish", self.tileDamage, 99)
+      self.tileDamageTimer = self.fireTime
+    end
 
     self.weapon:setDamage(self.damageConfig, {self.weapon.muzzleOffset, {self.weapon.muzzleOffset[1] + math.min(beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition())), self.weapon.muzzleOffset[2]}}, self.fireTime)
 

@@ -436,7 +436,7 @@
                  "properties":
                     {
                      "monster":"ancientboss2",
-                     "parameters":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"ancientavatarstatue\"}"
+                     "parameters":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"ancientboss2\"}"
                     },
                  "propertytypes":
                     {
@@ -757,7 +757,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"bossIds\" : [ \"ancientavatarstatue\", \"ancientavatarair\" ], \"open\" : true }",
+                     "parameters":"{ \"bossIds\" : [ \"ancientboss2\"], \"open\" : true }",
                      "stagehand":"bossdooropener"
                     },
                  "propertytypes":
@@ -2846,27 +2846,6 @@
                  "y":2472
                 }, 
                 {
-                 "height":32,
-                 "id":1449,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"bossIds\" : [ \"ancientspawngate\" ], \"open\" : true }",
-                     "stagehand":"bossdooropener"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":4200,
-                 "y":2448
-                }, 
-                {
                  "gid":6581,
                  "height":16,
                  "id":1450,
@@ -2908,7 +2887,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"bossIds\" : [ \"ancientspawngate\" ], \"open\" : true }",
+                     "parameters":"{ \"bossIds\" : [ \"ancientboss2\" ], \"open\" : true }",
                      "stagehand":"bossdooropener"
                     },
                  "propertytypes":
@@ -3526,6 +3505,27 @@
                  "width":32,
                  "x":1904,
                  "y":2576
+                }, 
+                {
+                 "height":32,
+                 "id":1553,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"bossIds\" : [ \"ancientboss2\"], \"open\" : true }",
+                     "stagehand":"bossdooropener"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4200,
+                 "y":2448
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4668,7 +4668,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1553,
+ "nextobjectid":1554,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
