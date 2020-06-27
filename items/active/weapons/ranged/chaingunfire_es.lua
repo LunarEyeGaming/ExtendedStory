@@ -66,20 +66,19 @@ function ChainGunFire:windup()
 end
 
 function ChainGunFire:firing()
-  while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
+  while self.fireMode == (self.activatingFireMode or self.abilitySlot)
+    and not world.lineTileCollision(mcontroller.position(), self:firePosition())
+    and not status.resourceLocked("energy") do
     self:updateSpin()
     self.progressTimer = math.max(0, self.progressTimer - self.dt)
     local progress = 1 - self.progressTimer / self.windupTime
     self.fireTime = interp.linear(progress, self.startFireTime, self.endFireTime)
     animator.setSoundPitch("whir", interp.linear(progress, self.whirMinPitch, self.whirMaxPitch))
     
-    if self.cooldownTimer == 0
-      and status.overConsumeResource("energy", self:energyPerShot())
-      and not status.resourceLocked("energy")
-      and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
-
+    if self.cooldownTimer == 0 and status.overConsumeResource("energy", self:energyPerShot()) then
       self:fire()
     end
+    mcontroller.controlModifiers({runningSuppressed=true})
     
     coroutine.yield()
   end
@@ -116,7 +115,9 @@ function ChainGunFire:fire()
   self:muzzleFlash()
 
   if self.stances.fire.duration then
-    util.wait(self.stances.fire.duration)
+    util.wait(self.stances.fire.duration, function()
+      mcontroller.controlModifiers({runningSuppressed=true})
+    end)
   end
 
   self.cooldownTimer = self.fireTime
@@ -134,6 +135,7 @@ function ChainGunFire:cooldown()
     self.weapon.relativeArmRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.armRotation, self.stances.idle.armRotation))
 
     progress = math.min(1.0, progress + (self.dt / self.stances.cooldown.duration))
+    mcontroller.controlModifiers({runningSuppressed=true})
   end)
   
   self.weapon:setStance(self.stances.idle)

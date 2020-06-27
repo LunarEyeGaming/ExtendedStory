@@ -46,6 +46,30 @@
       }
     }
   },
+  
+  "particleEmitters" : {
+    "wind" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-11, -11, 10, 10],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [0.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [10, 10],
+            "timeToLive" : 1.0
+          }
+        }
+      ]
+    }
+  },
+  
   "transformationGroups" : {
     "vortex" : {
       "interpolated" : true

@@ -1,0 +1,16 @@
+{
+  "globalTagDefaults" : {
+    "directives" : ""
+  },
+  "animatedParts" : {
+    "parts" : {
+      "surface" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1,
+          "image" : "<partImage>?scale;<directives>"
+        }
+      }
+    }
+  }
+}

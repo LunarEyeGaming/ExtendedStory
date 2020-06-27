@@ -1,0 +1,52 @@
+{
+  "objectName" : "darkwatersurface_es",
+  "colonyTags" : ["light"],
+  "printable" : false,
+  "scannable" : false,
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 0,
+
+  "description" : "Place to add a surface to a liquid.",
+  "shortdescription" : "Dark Water Surface",
+  "race" : "generic",
+
+  "inventoryIcon" : "darkwatersurfaceicon.png",
+  "orientations" : [
+    {
+      "image" : "darkwatersurface.png",
+      "imagePosition" : [-4, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-4, 0],
+      "renderLayer" : "ForegroundEntity",
+      "animationParts" : {
+        "surface" : "darkwatersurface.png"
+      }
+    },
+    {
+      "image" : "darkwatersurface.png",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "renderLayer" : "ForegroundEntity",
+      "animationParts" : {
+        "surface" : "darkwatersurface.png"
+      }
+    }
+  ],
+
+  "animation" : "/objects/generic/expandablesurface_es/expandablesurface.animation",
+  "animationParts" : {
+    "surface" : "darkwatersurface.png"
+  },
+
+  "animationCustom" : {},
+
+  "scripts" : [ "/objects/generic/expandablesurface_es/expandablesurface.lua" ],
+
+  "scale" : 1,
+  "scaleMode" : "horizontal"
+}

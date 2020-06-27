@@ -7,40 +7,39 @@
   "timeToLive" : 10,
   "actionOnReap" : [
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
-	}
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    }
   ],
   "periodicActions" : [
     {
-	  "time" : 0.01,
-	  "action" : "loop",
-	  "count" : 20,
-	  "body" : [
-	    {
-		  "action" : "particle",
-	      "specification" : {
-	        "type" : "ember",
-		    "color" : [218, 83, 2, 100],
-		    "position" : [0, 0],
-		    "initialVelocity" : [0, 0],
-		    "finalVelocity" : [0, 0],
-		    "timeToLive" : 0.0,
-		    "size" : 2,
-		    "light" : [61, 13, 0],
-			"fullbright" : true,
-		    "destructionAction" : "fade",
-		    "destructionTime" : 0.5,
-			"layer" : "middle",
-		    "variance" : {
-		      "size" : 0.5,
-		      "position" : [0.5, 0.5],
-		      "initialVelocity" : [5, 5]
-		    }
-	      }
-		}
-	  ]
-	}
+      "time" : 0.01,
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "animated",
+            "animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "approach" : [5, 5],
+            "size" : 1.0,
+            "timeToLive" : 0.6,
+            "fullbright" : true,
+            "layer" : "middle",
+            "light" : [80, 15, 15],
+            "collidesForeground" : false,
+            "variance" : {
+              "position" : [0.5, 0.5],
+              "initialVelocity" : [5, 5]
+            }
+          }
+        }
+      ]
+    }
   ],
   "animationLoops" : false,
   "flippable" : true,

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":25,
+ "tilecount":32,
  "tileheight":64,
  "tileproperties":
     {
@@ -141,11 +141,60 @@
          "object":"abysspulsatingorb_es",
          "tilesetDirection":"right"
         },
+     "25":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysscheckpointminor_es",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"darkwatersurface_es",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"abysschest_es",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysswallbutton_es",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"radiantcannon_es",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"abyssswarmurnmedium1_es",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"radiantcannon_es",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"abysseyedecor_es",
          "tilesetDirection":"right"
         },
      "4":
@@ -325,7 +374,56 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "25":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "26":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "27":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "28":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "30":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "31":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -488,11 +586,53 @@
          "imageheight":32,
          "imagewidth":16
         },
+     "25":
+        {
+         "image":"..\/images\/objects\/abysscheckpointminor.png",
+         "imageheight":8,
+         "imagewidth":32
+        },
+     "26":
+        {
+         "image":"..\/images\/objects\/darkwatersurface.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "27":
+        {
+         "image":"..\/images\/objects\/abysschest.png",
+         "imageheight":16,
+         "imagewidth":24
+        },
+     "28":
+        {
+         "image":"..\/images\/objects\/abysswallbutton.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
+     "29":
+        {
+         "image":"..\/images\/objects\/radiantcannon.png",
+         "imageheight":24,
+         "imagewidth":49
+        },
      "3":
         {
          "image":"..\/images\/objects\/abyssswarmurnmedium1.png",
          "imageheight":16,
          "imagewidth":8
+        },
+     "30":
+        {
+         "image":"..\/images\/objects\/radiantcannonleft.png",
+         "imageheight":24,
+         "imagewidth":49
+        },
+     "31":
+        {
+         "image":"..\/images\/objects\/abysseyedecor.png",
+         "imageheight":16,
+         "imagewidth":16
         },
      "4":
         {
@@ -531,6 +671,6 @@
          "imagewidth":24
         }
     },
- "tilewidth":48,
+ "tilewidth":49,
  "type":"tileset"
 }

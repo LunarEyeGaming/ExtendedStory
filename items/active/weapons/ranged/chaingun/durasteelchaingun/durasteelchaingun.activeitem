@@ -33,8 +33,8 @@
       },
       "parts" : {
         "body" : {"properties" : {"offset" : [0, -0.625]}},
-        "barrel" : {"properties" : {"offset" : [2.5625, -0.625]}},
-        "magazine" : {"properties" : {"offset" : [0.4375, -1.0]}}
+        "barrel" : {"properties" : {"offset" : [2.5625, 0]}},
+        "magazine" : {"properties" : {"offset" : [0.4375, -0.375]}}
       }
     },
     "sounds" : {
@@ -54,9 +54,9 @@
     "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
     "class" : "ChainGunFire",
 
-    "windupTime" : 1.0,
+    "windupTime" : 1.5,
     "startFireTime" : 0.3,
-    "endFireTime" : 0.05,
+    "endFireTime" : 0.06,
     
     "whirMinPitch" : 1.0,
     "whirMaxPitch" : 2.0,
@@ -64,7 +64,7 @@
     "spinFrameCount" : 2,
 
     "baseDps" : 30.0,
-    "energyUsage" : 40,
+    "energyUsage" : 30,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -81,7 +81,8 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+        "frontArmFrame" : "swimIdle.2"
       },
       "fire" : {
         "duration" : 0,
@@ -90,7 +91,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -99,7 +101,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       }
     }
   },
@@ -119,7 +122,7 @@
     "spinFrameCount" : 2,
 
     "baseDps" : 30.0,
-    "energyUsage" : 70,
+    "energyUsage" : 50,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -136,7 +139,8 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+        "frontArmFrame" : "swimIdle.2"
       },
       "fire" : {
         "duration" : 0,
@@ -145,7 +149,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -154,7 +159,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       }
     }
   },

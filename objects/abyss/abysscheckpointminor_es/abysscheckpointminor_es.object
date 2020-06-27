@@ -1,0 +1,42 @@
+{
+  "objectName" : "abysscheckpointminor_es",
+  "colonyTags" : ["misc"],
+  "objectType" : "teleporter",
+  "rarity" : "Legendary",
+  "description" : "A checkpoint for when you fall into a hazard.",
+  "shortdescription" : "Abyss Checkpoint (Minor)",
+  "price" : 3000,
+  "printable" : false,
+
+  "apexDescription" : "<todo>.",
+  "avianDescription" : "<todo>.",
+  "floranDescription" : "Floran will appear back here if Floran fallsss into hazard.",
+  "glitchDescription" : "<todo>.",
+  "humanDescription" : "<todo>.",
+  "hylotlDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
+
+  "category" : "teleporter",
+  "lightColor" : [51, 41, 71],
+  "lightPosition" : [0, 1],
+
+  "inventoryIcon" : "abysscheckpointminoricon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "abysscheckpointminor.png:<color>", "fullbright" : true }, { "image" : "abysscheckpointminorlit.png:<color>" } ],
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [0, 0], [1, 0] ]
+    }
+  ],
+
+  "health" : 10,
+  "rooting" : true,
+
+  "teleporterFootPosition" : [0, 1]
+}

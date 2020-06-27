@@ -28,21 +28,31 @@
     }
   ],
 
-  "scripts" : [ "/objects/abyss/abyssvortex/forcepad.lua" ],
+  "scripts" : [ "/objects/abyss/abyssvortex/abyssvortex.lua" ],
   "scriptDelta" : 1,
   
   "rotationPeriod" : -4,
   "openTime" : 0.5,
   "activateThreshold" : 0.4,
   
-  "projectileOffset" : [0.5, 0.5],
+  "damageSources" : [
+    {
+      "poly" : [ [-1.5, 0], [-1, -1], [0, -1.5], [1, -1], [1.5, 0], [1, 1], [0, 1.5], [-1, 1] ],
+      "damage" : 100.0,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "abyss",
+
+      "damageRepeatTimeout" : 0.1
+    }
+  ],
 
   "animation" : "/objects/abyss/abyssvortex/abyssvortex.animation",
 
   "animationParts" : {
     "forcepad" : "vortex.png",
-	"fg" : "vortexactivaterlit.png",
-	"bg" : "vortexactivater.png"
+    "fg" : "vortexactivater.png",
+    "bg" : "vortexactivater.png"
   },
   "animationPosition" : [4, 4],
   "smashOnBreak" : true,

@@ -5,7 +5,7 @@
   "effectConfig" : {
 	"tickTime" : 1,
     "tickDamage" : 20,
-    "directives" : "multiply=34153bc0"
+    "directives" : "fade=34153b=0.75"
   },
   "defaultDuration" : 5.0,
 
@@ -15,6 +15,6 @@
 
   "animationConfig" : "abysseffect.animation",
 
-  "label" : "Dark Sap - The darkness is leaching away at your health",
+  "label" : "Dark Sap - Stay away from the darkness.",
   "icon" : "/interface/statuses/darksap.png"
 }

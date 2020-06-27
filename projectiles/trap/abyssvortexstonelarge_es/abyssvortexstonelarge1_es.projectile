@@ -1,0 +1,29 @@
+{
+  "projectileName" : "abyssvortexstonelarge1_es",
+  "image" : "abyssvortexstonelarge1.png",
+  "physics" : "flame",
+  "movementSettings" : {
+    "gravityMultiplier" : -0.05
+  },
+  "frameNumber" : 1,
+  "animationCycle" : 1,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "speed" : 0,
+  "timeToLive" : 20,
+  "orientationLocked" : true,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/traps/ancientbouldersmash/ancientbouldersmash.config"
+    }
+  ],
+  "physicsCollisions" : {
+    "stone" : {
+      "collision" : [ [1, 1], [1, -1], [-1, -1], [-1, 1] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop"]
+    }
+  }
+}

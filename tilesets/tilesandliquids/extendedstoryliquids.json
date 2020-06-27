@@ -8,28 +8,80 @@
  "margin":0,
  "name":"extendedstoryliquids",
  "spacing":0,
- "tilecount":4,
+ "tilecount":16,
  "tileheight":8,
  "tileproperties":
     {
      "0":
         {
+         "liquid":"abyss"
+        },
+     "1":
+        {
+         "liquid":"superheatedlava"
+        },
+     "10":
+        {
          "liquid":"abyss",
          "source":"true"
         },
-     "1":
+     "11":
+        {
+         "liquid":"liquidfabric",
+         "source":"true"
+        },
+     "12":
+        {
+         "liquid":"liquidnitrogenexpansionmod",
+         "source":"true"
+        },
+     "13":
+        {
+         "liquid":"rottenwater",
+         "source":"true"
+        },
+     "14":
         {
          "liquid":"superheatedlava",
          "source":"true"
         },
-     "2":
+     "15":
         {
          "liquid":"supervoid",
          "source":"true"
         },
+     "2":
+        {
+         "liquid":"supervoid"
+        },
      "3":
         {
-         "liquid":"liquidnitrogenexpansionmod",
+         "liquid":"liquidnitrogenexpansionmod"
+        },
+     "4":
+        {
+         "liquid":"abyss2_es"
+        },
+     "5":
+        {
+         "liquid":"abyss2harmless_es"
+        },
+     "6":
+        {
+         "liquid":"liquidfabric"
+        },
+     "7":
+        {
+         "liquid":"rottenwater"
+        },
+     "8":
+        {
+         "liquid":"abyss2harmless_es",
+         "source":"true"
+        },
+     "9":
+        {
+         "liquid":"abyss2_es",
          "source":"true"
         }
     },
@@ -37,20 +89,72 @@
     {
      "0":
         {
+         "liquid":"string"
+        },
+     "1":
+        {
+         "liquid":"string"
+        },
+     "10":
+        {
          "liquid":"string",
          "source":"string"
         },
-     "1":
+     "11":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "12":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "13":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "14":
+        {
+         "liquid":"string",
+         "source":"string"
+        },
+     "15":
         {
          "liquid":"string",
          "source":"string"
         },
      "2":
         {
+         "liquid":"string"
+        },
+     "3":
+        {
+         "liquid":"string"
+        },
+     "4":
+        {
+         "liquid":"string"
+        },
+     "5":
+        {
+         "liquid":"string"
+        },
+     "6":
+        {
+         "liquid":"string"
+        },
+     "7":
+        {
+         "liquid":"string"
+        },
+     "8":
+        {
          "liquid":"string",
          "source":"string"
         },
-     "3":
+     "9":
         {
          "liquid":"string",
          "source":"string"
@@ -70,6 +174,42 @@
          "imageheight":8,
          "imagewidth":8
         },
+     "10":
+        {
+         "image":"..\/images\/tiles\/liquidabysssource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "11":
+        {
+         "image":"..\/images\/tiles\/liquidfabricsource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "12":
+        {
+         "image":"..\/images\/tiles\/liquidnitrogensource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "13":
+        {
+         "image":"..\/images\/tiles\/rottenwatersource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "14":
+        {
+         "image":"..\/images\/tiles\/superheatedlavasource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "15":
+        {
+         "image":"..\/images\/tiles\/supervoidliquidsource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
      "2":
         {
          "image":"..\/images\/tiles\/supervoidliquid.png",
@@ -79,6 +219,42 @@
      "3":
         {
          "image":"..\/images\/tiles\/liquidnitrogen.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "4":
+        {
+         "image":"..\/images\/tiles\/liquidabyss2.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "5":
+        {
+         "image":"..\/images\/tiles\/liquidabyss2harmless.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "6":
+        {
+         "image":"..\/images\/tiles\/liquidfabric.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "7":
+        {
+         "image":"..\/images\/tiles\/rottenwater.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "8":
+        {
+         "image":"..\/images\/tiles\/liquidabyss2harmlesssource.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "9":
+        {
+         "image":"..\/images\/tiles\/liquidabyss2source.png",
          "imageheight":8,
          "imagewidth":8
         }

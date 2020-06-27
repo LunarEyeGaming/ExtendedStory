@@ -67,6 +67,7 @@
           "centered" : true,
           "image" : "<partImage>:<barrelFrame>",
           "offset" : [0, 0],
+          "anchorPart" : "body",
           "transformationGroups" : ["weapon"]
         }
       },
@@ -75,6 +76,7 @@
         "properties" : {
           "centered" : true,
           "offset" : [0, 0],
+          "anchorPart" : "body",
           "zLevel" : 1,
           "transformationGroups" : ["weapon"]
         },

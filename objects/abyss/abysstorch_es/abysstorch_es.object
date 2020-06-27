@@ -32,13 +32,13 @@
   "orientations" : [
     {
       "image" : "abysstorch.png:<color>.<frame>",
-      "imagePosition" : [1, 0],
+      "imagePosition" : [0, 0],
 
       "animationParts" : {
         "bg" : "abysstorch.png",
         "fg" : "abysstorchlit.png"
       },
-      "animationPosition" : [1, 0],
+      "animationPosition" : [0, 0],
 
       "spaces" : [ [0, 0], [0, 1] ],
       "fgAnchors" : [ [0, -1] ],
@@ -80,13 +80,13 @@
 
     {
       "image" : "abysstorch.png:<color>.<frame>",
-      "imagePosition" : [1, 0],
+      "imagePosition" : [0, 0],
 
       "animationParts" : {
         "bg" : "abysstorch.png",
         "fg" : "abysstorchlit.png"
       },
-      "animationPosition" : [1, 0],
+      "animationPosition" : [0, 0],
 
       "spaces" : [ [0, 0], [0, 1] ],
       "bgAnchors" : [ [0, 0] ],

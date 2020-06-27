@@ -31,9 +31,9 @@
         }
       },
       "parts" : {
-        "body" : {"properties" : {"offset" : [-0.1875, -0.5]}},
-        "barrel" : {"properties" : {"offset" : [2.1875, -0.75]}},
-        "magazine" : {"properties" : {"offset" : [-0.625, -1.0625]}}
+        "body" : {"properties" : {"offset" : [-0.1875, -0.375]}},
+        "barrel" : {"properties" : {"offset" : [2.375, -0.25]}},
+        "magazine" : {"properties" : {"offset" : [-0.4375, -0.5625]}}
       }
     },
     "sounds" : {
@@ -42,7 +42,7 @@
   },
 
   "baseOffset" : [0, 0],
-  "muzzleOffset" : [3.5, -0.625],
+  "muzzleOffset" : [3.5, -0.5],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
@@ -62,7 +62,7 @@
     "spinFrameCount" : 2,
 
     "baseDps" : 17.0,
-    "energyUsage" : 30,
+    "energyUsage" : 23,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -79,7 +79,8 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+        "frontArmFrame" : "swimIdle.2"
       },
       "fire" : {
         "duration" : 0,
@@ -88,7 +89,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -97,7 +99,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       }
     }
   },

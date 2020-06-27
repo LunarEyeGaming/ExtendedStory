@@ -414,7 +414,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-    	"skyColoring" : {
+        "skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 24, 55], [255, 140, 49] ],
@@ -426,7 +426,7 @@
           "dayLightColor" : [200, 200, 200],
           "eveningLightColor" : [160, 120, 180],
           "nightLightColor" : [40, 20, 60]
-    	}
+        }
       }
     }
   },
@@ -483,7 +483,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-    	"skyColoring" : {
+        "skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 0, 0], [0, 0, 0] ],
@@ -495,7 +495,7 @@
           "dayLightColor" : [0, 0, 0],
           "eveningLightColor" : [0, 0, 0],
           "nightLightColor" : [0, 0, 0]
-    	}
+        }
       }
     }
   },
@@ -552,7 +552,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-    	"skyColoring" : {
+        "skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 0, 0], [0, 0, 0] ],
@@ -564,7 +564,7 @@
           "dayLightColor" : [0, 0, 0],
           "eveningLightColor" : [0, 0, 0],
           "nightLightColor" : [0, 0, 0]
-    	}
+        }
       }
     }
   },
@@ -651,6 +651,32 @@
       "skyParameters" : {
         "spaceLevel" : 3000,
         "ambientLightLevel" : [ 24, 28, 24 ],
+        "satellites" : [ {
+          "pos" : [ 0.310561, 0.35497 ],
+          "layers" : [ {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/liquids/water.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+          } ]
+        } ],
+        "planet" : {
+          "pos" : [ 1.2, 1.05 ],
+          "layers" : [ {
+            "scale" : 0.3,
+            "image" : "/celestial/darkabyssdimensionvortex/vortex.png"
+          } ]
+        },
         "skyType" : "barren",
         "horizonImages" : [ ],
         "dayLength" : 1153.36,

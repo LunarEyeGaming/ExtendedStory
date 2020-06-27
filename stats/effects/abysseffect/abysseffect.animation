@@ -1,15 +1,15 @@
 {
   "animatedParts" : {
     "parts" : {
-	  "eye" : {
-	    "properties" : {
-		  "centered" : true,
-		  "zLevel" : 9001,
-		  "fullbright" : true,
-		  "offset" : [0, 4.0],
+      "eye" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 9001,
+          "fullbright" : true,
+          "offset" : [0, 4.0],
           "image" : "eye.png"
-		}
-	  }
+        }
+      }
     }
   },
   "particleEmitters" : {
@@ -31,7 +31,6 @@
     }
   },
   "sounds" : {
-    "sap" : [ "/sfx/statuseffects/abysseffect_sap.ogg" ],
-    "expired" : [ "/sfx/objects/pot_break_small1.ogg", "/sfx/objects/pot_break_small2.ogg", "/sfx/objects/pot_break_small3.ogg" ]
+    "sap" : [ "/sfx/statuseffects/abysseffect_sap.ogg" ]
   }
 }

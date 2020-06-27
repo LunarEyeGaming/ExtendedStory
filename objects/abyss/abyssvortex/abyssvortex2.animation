@@ -1,0 +1,82 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "padState" : {
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "properties" : {
+              "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+            }
+          },
+          "opened" : {
+            "properties" : {
+              "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg",
+              "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "forcepad" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "fullbright" : true,
+          "offset" : [0, 0],
+          "transformationGroups" : ["vortex"],
+          "image" : "<partImage>"
+        }
+      },
+      "fg" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "image" : "<partImage>"
+        }
+      },
+      "bg" : {
+        "properties" : {
+          "centered" : true,
+          "image" : "<partImage>",
+          "fullbright" : true
+        }
+      }
+    }
+  },
+  
+  "particleEmitters" : {
+    "wind" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-69, -7, -69, 6],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [69.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 1.0,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [-3.0, 1.0]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "transformationGroups" : {
+    "vortex" : {
+      "interpolated" : true
+    }
+  }
+}

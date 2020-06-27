@@ -32,8 +32,8 @@
       },
       "parts" : {
         "body" : {"properties" : {"offset" : [-0.25, -0.5]}},
-        "barrel" : {"properties" : {"offset" : [1.8125, -0.625]}},
-        "magazine" : {"properties" : {"offset" : [-0.4375, -0.875]}}
+        "barrel" : {"properties" : {"offset" : [2.0625, -0.125]}},
+        "magazine" : {"properties" : {"offset" : [-0.1875, -0.375]}}
       }
     },
     "sounds" : {
@@ -62,8 +62,8 @@
     
     "spinFrameCount" : 2,
     
-    "baseDps" : 12.0,
-    "energyUsage" : 20,
+    "baseDps" : 14.0,
+    "energyUsage" : 15,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -80,7 +80,8 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+        "frontArmFrame" : "swimIdle.2"
       },
       "fire" : {
         "duration" : 0,
@@ -89,7 +90,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -98,7 +100,8 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
       }
     }
   },

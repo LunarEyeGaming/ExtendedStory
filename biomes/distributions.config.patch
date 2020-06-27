@@ -1,0 +1,20 @@
+[
+  {
+    "op": "add",
+    "path": "/fgTrap_es",
+    "value": {
+      "type": "random",
+      
+      "blockProbability": 0.015
+    }
+  },
+  {
+    "op": "add",
+    "path": "/bgTrap_es",
+    "value": {
+      "type": "random",
+
+      "blockProbability": 0.0005
+    }
+  }
+]

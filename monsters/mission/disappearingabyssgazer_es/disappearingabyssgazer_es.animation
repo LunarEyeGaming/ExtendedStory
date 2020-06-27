@@ -16,7 +16,7 @@
           "idle" : {},
           "disappear" : {
             "frames" : 3,
-            "cycle" : 0.3,
+            "cycle" : 0.1,
             "mode" : "transition",
             "transition" : "invisible"
           },
@@ -59,33 +59,12 @@
           }
         }
       },
-      "bodyfullbright" : {
-        "properties" : {
-          "zLevel" : 1,
-          "anchorPart" : "body",
-          "fullbright" : true
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "disappear" : {
-              "properties" : {
-                "image" : "<partImage>:disappear.<frame>"
-              }
-            }
-          }
-        }
-      },
       "eye" : {
         "properties" : {
           "zLevel" : 2,
           "transformationGroups" : [ "eye" ],
           "offset" : [0.0, 0.0],
-          "fullbright" : true
+          "fullbright" : false
         },
         "partStates" : {
           "eye" : {

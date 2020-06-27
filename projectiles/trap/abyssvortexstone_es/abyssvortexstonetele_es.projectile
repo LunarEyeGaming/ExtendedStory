@@ -1,0 +1,63 @@
+{
+  "projectileName" : "abyssvortexstonetele_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+      "action" : "particle",
+      "specification" : {
+        "type" : "ember",
+        "color" : [43, 49, 55],
+        "fullbright" : true,
+        "layer" : "middle",
+        "size" : 2,
+
+        "initialVelocity" : [0, 2],
+        "position" : [0, -0.5],
+
+        "timeToLive" : 0,
+        "fade" : 1,
+        "destructionAction" : "fade",
+        "destructionTime" : 0.5,
+        
+        "variance" : {
+          "initialVelocity" : [0, 1],
+          "size" : 0.5,
+          "position" : [0.5, 0]
+        }
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "abyssvortexstone_es",
+      "inheritDamageFactor" : 1,
+      "fuzzAngle" : 180
+    },
+    {
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "blackstoneshard"
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/objects/rock_crumble1.ogg" ]
+    }
+  ],
+
+  "speed" : 0,
+  "timeToLive" : 0.75
+}

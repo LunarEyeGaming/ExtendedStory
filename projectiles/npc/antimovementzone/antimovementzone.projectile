@@ -13,7 +13,7 @@
   "power" : 0,
   "damageKind" : "nodamage",
   "periodicActions" : [
-	{
+    {
       "time" : 0.01,
       "repeat" : true,
       "action" : "particle",
@@ -26,12 +26,12 @@
         "destructionTime" : 0.0,
         "destructionAction" : "fade",
         "fullbright" : true,
-		"variance" : {
-		  "position" : [20, 20]
-		}
+        "variance" : {
+          "position" : [20, 20]
+        }
       }
     },
-	{
+    {
       "time" : 0.3,
       "repeat" : true,
       "action" : "particle",
@@ -46,7 +46,7 @@
         "fullbright" : true
       }
     },
-	{
+    {
       "time" : 0,
       "repeat" : false,
       "action" : "particle",
@@ -67,10 +67,10 @@
   "boundBox" : [-20, -20, 20, 20],
   "physicsForces" : {
     "antimovement" : {
-	  "type" : "DirectionalForceRegion",
+      "type" : "DirectionalForceRegion",
       "rectRegion" : [-20, -20, 20, 20],
       "yTargetVelocity" : 0,
-	  "xTargetVelocity" : 0,
+      "xTargetVelocity" : 0,
       "controlForce" : 1000,
       "categoryWhitelist" : ["player"]
     }

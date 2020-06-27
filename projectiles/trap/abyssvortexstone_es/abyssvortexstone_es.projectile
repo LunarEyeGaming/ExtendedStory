@@ -1,0 +1,33 @@
+{
+  "projectileName" : "abyssvortexstone_es",
+  "image" : "abyssvortexstone.png",
+  "physics" : "flame",
+  "movementSettings" : {
+    "gravityMultiplier" : -1.0
+  },
+  "frameNumber" : 1,
+  "animationCycle" : 1,
+  "power" : 2,
+  "speed" : 0,
+  "timeToLive" : 2.0,
+  "orientationLocked" : true,
+  "damagePoly" : [ [4, 4], [4, -4], [-4, -4], [-4, 4] ],
+  "piercing" : true,
+  "damageKind" : "hammer",
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "blackstoneshard"
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/melee/blunt_kill_stone1.ogg", "/sfx/melee/blunt_kill_stone2.ogg", "/sfx/melee/blunt_kill_stone3.ogg" ]
+    }
+  ]
+}

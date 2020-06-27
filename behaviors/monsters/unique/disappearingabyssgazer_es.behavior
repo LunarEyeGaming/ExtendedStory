@@ -12,7 +12,8 @@
     "/scripts/actions/status.lua",
     "/scripts/actions/monster.lua",
     "/scripts/actions/movement.lua",
-    "/scripts/actions/math.lua"
+    "/scripts/actions/math.lua",
+    "/scripts/actions/unique/abyssaloverseerstalker_es.lua"
   ],
   "parameters": {
     "saccadeInterval": 0.3,
@@ -223,12 +224,11 @@
                               }
                             },
                             {
-                              "title": "inRange",
+                              "title": "lightTooBright",
                               "type": "action",
-                              "name": "inRange",
+                              "name": "lightTooBright",
                               "parameters": {
-                                "target": {"key": "targetPos"},
-                                "range": {"key": "<disappearRange>"}
+                                "threshold": {"value": 0.02}
                               }
                             },
                             {

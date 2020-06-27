@@ -9,9 +9,9 @@
         "select" : 4,
         "pool" : [ 
           [ 1.0, "ancientturret_es" ],
-		  [ 1.0, "ancienttrifangle_es" ],
-		  [ 1.0, "ancienttwigun_es" ],
-		  [ 1.0, "ancienttrailer_es" ]
+          [ 1.0, "ancienttrifangle_es" ],
+          [ 1.0, "ancienttwigun_es" ],
+          [ 1.0, "ancienttrailer_es" ]
         ]
       }
     ]
@@ -103,7 +103,7 @@
         "mode" : "background",
         "priority" : 1.0,
         "variants" : 1,
-        "distribution" : "/biomes/distributions.config:undergroundFossils",
+        "distribution" : "/biomes/distributions.config:bgTrap_es",
 
         "type" : "object",
         "objectSets" : [
@@ -117,7 +117,7 @@
         "mode" : "ceiling",
         "priority" : 1.0,
         "variants" : 1,
-        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+        "distribution" : "/biomes/distributions.config:fgTrap_es",
 
         "type" : "object",
         "objectSets" : [
@@ -131,7 +131,7 @@
         "mode" : "ceiling",
         "priority" : 1.0,
         "variants" : 1,
-        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+        "distribution" : "/biomes/distributions.config:fgTrap_es",
 
         "type" : "object",
         "objectSets" : [
@@ -145,7 +145,7 @@
         "mode" : "ceiling",
         "priority" : 1.0,
         "variants" : 1,
-        "distribution" : "/biomes/distributions.config:undergroundOreRocks",
+        "distribution" : "/biomes/distributions.config:fgTrap_es",
 
         "type" : "object",
         "objectSets" : [
