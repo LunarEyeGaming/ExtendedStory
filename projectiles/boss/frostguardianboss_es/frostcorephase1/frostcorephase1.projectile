@@ -17,53 +17,53 @@
     {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargetinghoming",
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1
+      "type" : "fg_icicletargeting",
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1
     },
-	{
+    {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargetinghoming",
-	  "offset" : [2, 0],
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1,
-	  "config" : {
-	    "timeToLive" : 1.25
-	  }
+      "type" : "fg_icicletargeting",
+      "offset" : [5, 0],
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "timeToLive" : 1.25
+      }
     },
-	{
+    {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargetinghoming",
-	  "offset" : [-2, 0],
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1,
-	  "config" : {
-	    "timeToLive" : 1.25
-	  }
+      "type" : "fg_icicletargeting",
+      "offset" : [-5, 0],
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "timeToLive" : 1.25
+      }
     },
-	{
+    {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargetinghoming",
-	  "offset" : [4, 0],
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1,
-	  "config" : {
-	    "timeToLive" : 1.5
-	  }
+      "type" : "fg_icicletargeting",
+      "offset" : [10, 0],
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "timeToLive" : 1.5
+      }
     },
-	{
+    {
       "time" : 1.5,
       "action" : "projectile",
-      "type" : "fg_icicletargetinghoming",
-	  "offset" : [-4, 0],
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1,
-	  "config" : {
-	    "timeToLive" : 1.5
-	  }
+      "type" : "fg_icicletargeting",
+      "offset" : [-10, 0],
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1,
+      "config" : {
+        "timeToLive" : 1.5
+      }
     },
     {
       "time" : 0,
@@ -71,21 +71,21 @@
       "action" : "sound",
       "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
     },
-	{
-	  "time" : 0.0,
-	  "repeat" : false,
-	  "action" : "particle",
-	  "rotate" : true,
-	  "specification" : {
-	    "type" : "textured",
-		"image" : "/projectiles/boss/frostguardianboss_es/frostcorephase1/frostcorephase1.png?setcolor=ffffff",
-		"position" : [0, 0],
-		"fullbright" : true,
-		"layer" : "middle",
-		"destructionAction" : "fade",
-		"timeToLive" : 0,
-		"destructionTime" : 0.25
-	  }
-	}
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/frostguardianboss_es/frostcorephase1/frostcorephase1.png?setcolor=ffffff",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "middle",
+        "destructionAction" : "fade",
+        "timeToLive" : 0,
+        "destructionTime" : 0.25
+      }
+    }
   ]
 }

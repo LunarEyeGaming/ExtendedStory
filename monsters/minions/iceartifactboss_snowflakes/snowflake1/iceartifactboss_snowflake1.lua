@@ -30,20 +30,22 @@ function update(dt)
 
     if self.targetPosition ~= nil then
       local toPosition = vec2.norm(world.distance(self.targetPosition, mcontroller.position()))
+      monster.setAggressive(true)
       mcontroller.controlFly(toPosition)
-	  self.concurrentCooldown = math.max(0, self.concurrentCooldown - dt)
+      self.concurrentCooldown = math.max(0, self.concurrentCooldown - dt)
       rangedAttack.aim({0,0}, world.distance(self.targetPosition, mcontroller.position()))
       rangedAttack.fireContinuous()
-	  if self.concurrentCooldown == 0 then
-	    projDamage = self.projectileDamage * monster.level()
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {1, 0}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {-1, 0}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, 1}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, -1}, false, {power = projDamage})
-		self.concurrentCooldown = self.defaultConcurrentCooldown
-	  end
+      if self.concurrentCooldown == 0 then
+        projDamage = self.projectileDamage * monster.level()
+        world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {1, 0}, false, {power = projDamage})
+        world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {-1, 0}, false, {power = projDamage})
+        world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, 1}, false, {power = projDamage})
+        world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, -1}, false, {power = projDamage})
+        self.concurrentCooldown = self.defaultConcurrentCooldown
+      end
     else
       rangedAttack.stopFiring()
+      monster.setAggressive(false)
     end
   else
     status.addEphemeralEffect("invulnerable")
@@ -57,12 +59,12 @@ function entityCheck()
   else
     validEntities = 0
     localEntities = world.entityQuery(mcontroller.position(), 200)
-	for _, entity in pairs(localEntities) do
-	  if world.monsterType(entity) == self.monsterDetect then
-	    validEntities = validEntities + 1
-	  end
-	end
-	return validEntities > 0
+    for _, entity in pairs(localEntities) do
+      if world.monsterType(entity) == self.monsterDetect then
+        validEntities = validEntities + 1
+      end
+    end
+    return validEntities > 0
   end
 end
 

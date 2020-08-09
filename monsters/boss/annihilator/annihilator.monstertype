@@ -32,7 +32,7 @@
       "plasmaAttackY" : 15,
       "plasmaMinY" : 0
     },
-	"renderLayer" : "Projectile-20",
+    "renderLayer" : "Projectile-20",
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
@@ -58,7 +58,7 @@
         "controlForce" : 150,
         "categoryWhitelist" : [ "player" ]
       },
-	  "up" : {
+      "up" : {
         "type" : "DirectionalForceRegion",
         "rectRegion" : [-48, -40, 48, 40],
         "yTargetVelocity" : 100,
@@ -73,8 +73,8 @@
         "categoryWhitelist" : [ "player" ]
       }
     },
-	"damageParts" : {
-	  "beam1" : {
+    "damageParts" : {
+      "beam1" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -84,7 +84,7 @@
 
         "damageTeam" : 0
       },
-	  "beam2" : {
+      "beam2" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -94,7 +94,7 @@
 
         "damageTeam" : 0
       },
-	  "beam3" : {
+      "beam3" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -104,7 +104,7 @@
 
         "damageTeam" : 0
       },
-	  "beam4" : {
+      "beam4" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -114,7 +114,7 @@
 
         "damageTeam" : 0
       }
-	},
+    },
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -184,18 +184,6 @@
         "poisonStatusImmunity" : {
           "baseValue" : 1.0
         },
-        "specialStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "healingStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "stunImmunity" : {
-          "baseValue" : 1.0
-        },
-        "powerMultiplier" : {
-          "baseValue" : 1.0
-        },
         "abysseffectImmunity" : {
           "baseValue" : 1.0
         },
@@ -210,6 +198,18 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
         }
       },
 

@@ -1,0 +1,126 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "eye" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "properties" : {
+              "lightsOff" : [ "glow", "eyelight" ]
+            }
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "active"
+          },
+          "active" : {
+            "frames" : 5,
+            "cycle" : 2.0,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+              "lightsOn" : [ "glow", "eyelight" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "eye" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0],
+          "fullbright" : true,
+          "transformationGroups" : [ "eye" ]
+        },
+
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:activate.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "eyelit" : {
+        "properties" : {
+          "centered" : true,
+          "anchorPart" : "eye",
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:activate.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "eyelid" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0],
+          "zLevel" : 2,
+          "image" : "<partImage>"
+        }
+      }
+    }
+  },
+  
+  "transformationGroups" : {
+    "eye" : {
+      "interpolated" : true
+    }
+  },
+
+  "lights" : {
+    "glow" : {
+      "transformationGroups" : [ "eye" ],
+      "position" : [1.625, 0],
+      "color" : [35, 19, 46]
+    },
+    "eyelight" : {
+      "transformationGroups" : [ "eye" ],
+      "position" : [1.625, 0],
+      "color" : [70, 77, 102],
+      "pointLight" : true,
+      "pointAngle" : 0,
+      "pointBeam" : 1
+    }
+  },
+
+  "sounds" : {
+    "activate" : {
+      "pool" : [ "/sfx/objects/staticeyesentry_pulse.ogg" ],
+      "rangeMultiplier" : 1
+    }
+  }
+}

@@ -20,16 +20,16 @@
   "animationParts" : {
     "gun" : "lightninggunnew.png",
     "gunfullbright" : "lightninggunnewunlit.png",
-	"beamorigin" : ""
+    "beamorigin" : ""
   },
   "animationCustom" : {
     "sounds" : {
-	  "altFire" : ["/sfx/gun/shockblast.ogg"],
-	  "fireStart" : [ "/sfx/objects/crystaltrap_on2.ogg" ],
+      "altFire" : ["/sfx/gun/shockblast.ogg"],
+      "fireStart" : [ "/sfx/objects/crystaltrap_on2.ogg" ],
       "fireLoop" : [ "/sfx/gun/lightninggunnew_beamfire.ogg" ],
       "fireEnd" : [ "/sfx/objects/crystaltrap_off.ogg" ],
       "beamImpact" : [ "/sfx/gun/lightningcoil1.ogg", "/sfx/gun/lightningcoil2.ogg", "/sfx/gun/lightningcoil3.ogg" ]
-	}
+    }
   },
   "muzzleOffset" : [3.25, 0.5],
   "animationScripts" : ["/items/active/effects/lightning.lua"],
@@ -74,16 +74,16 @@
         "projectileCount" : 5,
         "spreadAngle" : 5,
         "projectileParameters" : {
-		  "speed" : 100,
-		  "bounces" : 1,
-		  "timeToLive" : 2,
-		  "actionOnReap" : [
-		    {
-			  "action" : "config",
-			  "file" : "/projectiles/boss/ancientavatar/lightningboltexplosion/lightningboltexplosion2.config"
-			}
-		  ]
-		},
+          "speed" : 100,
+          "bounces" : 1,
+          "timeToLive" : 2,
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/boss/ancientavatar/lightningboltexplosion/lightningboltexplosion2.config"
+            }
+          ]
+        },
         "inaccuracy" : 0.1,
         "baseDamage" : 27,
         "fireSound" : "fire3"
@@ -130,10 +130,10 @@
   "altAbility" : {
     "scripts" : ["/items/active/weapons/ranged/abilities/teslastream_es/teslastream_es.lua"],
     "class" : "TeslaStream",
-	"name" : "Lightning Stream",
+    "name" : "Lightning Stream",
 
     "fireTime" : 0.01,
-    "baseDps" : 30,
+    "baseDps" : 20,
     "energyUsage" : 60,
 
     "damageConfig" : {
@@ -143,14 +143,14 @@
     },
 
     "beamLength" : 50,
-	"inaccuracy" : 0.0,
-	"connectRadius" : 10,
-	"arcCooldownTime" : 0.1,
-	"maxConnections" : 12,
-	"arcDamageFactor" : 10,
-	
-	"lightningStartColor" : [225, 225, 255, 220],
-	"lightningEndColor" : [115, 115, 255, 0],
+    "inaccuracy" : 0.0,
+    "connectRadius" : 25,
+    "arcCooldownTime" : 0.1,
+    "maxConnections" : 12,
+    "arcDamageFactor" : 10,
+    
+    "lightningStartColor" : [225, 225, 255, 220],
+    "lightningEndColor" : [115, 115, 255, 0],
 
     "lightningConfig" : {
       "displacement" : 1.0,
@@ -158,16 +158,16 @@
       "forks" : 2,
       "forkAngleRange" : 0.45,
       "width" : 1.5,
-	  "color" : [225, 225, 255, 220]
+      "color" : [225, 225, 255, 220]
     },
 
-	"miniLightningConfig" : {
+    "miniLightningConfig" : {
       "displacement" : 0.5,
       "minDisplacement" : 0.05,
       "forks" : 1,
       "forkAngleRange" : 0.2,
       "width" : 1,
-	  "color" : [225, 225, 255, 200]
+      "color" : [225, 225, 255, 200]
     },
 
     "stances" : {
@@ -180,7 +180,7 @@
         "allowFlip" : true,
 
         "animationStates" : {
-		  "firing" : "off"
+          "firing" : "off"
         }
       },
       "fire" : {
@@ -192,7 +192,7 @@
         "allowFlip" : true,
 
         "animationStates" : {
-		  "firing" : "fullcharge"
+          "firing" : "fullcharge"
         }
       },
       "winddown" : {
@@ -205,7 +205,7 @@
         "allowFlip" : true,
 
         "animationStates" : {
-		  "firing" : "off"
+          "firing" : "off"
         }
       }
     }

@@ -72,20 +72,20 @@
           }
         ]
       },
-	  {
-	    "title": "repeater",
-		"type": "decorator",
-		"name": "repeater",
-		"parameters": {
-		  "maxLoops": {"value": 15}
-		},
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 15}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
               "title": "random",
               "type": "action",
               "name": "random",
@@ -97,7 +97,7 @@
                 "number": "explodeX"
               }
             },
-		    {
+            {
               "title": "random",
               "type": "action",
               "name": "random",
@@ -109,42 +109,42 @@
                 "number": "explodeY"
               }
             },
-		    {
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, 0]},
-    	        "offset": {"value": ["explodeX", "explodeY"]},
-    	        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}},
-    	        "projectileType": {"value": "orbitalup"}
-    	      }
-    	    },
-			{
-			  "title": "timer",
-			  "type": "action",
-			  "name": "timer",
-			  "parameters": {
-			    "time": {"value": 0.2}
-			  }
-			}
-		  ]
-		}
-	  },
-	  {
-	    "title": "repeater",
-		"type": "decorator",
-		"name": "repeater",
-		"parameters": {
-		  "maxLoops": {"value": 15}
-		},
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, 0]},
+                "offset": {"value": ["explodeX", "explodeY"]},
+                "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}},
+                "projectileType": {"value": "orbitalup"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.2}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": 15}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
               "title": "random",
               "type": "action",
               "name": "random",
@@ -156,7 +156,7 @@
                 "number": "explodeX"
               }
             },
-		    {
+            {
               "title": "random",
               "type": "action",
               "name": "random",
@@ -168,20 +168,20 @@
                 "number": "explodeY"
               }
             },
-		    {
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, 0]},
-    	        "offset": {"value": ["explodeX", "explodeY"]},
-    	        "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}},
-    	        "projectileType": {"value": "orbitalup"}
-    	      }
-    	    }
-		  ]
-		}
-	  },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, 0]},
+                "offset": {"value": ["explodeX", "explodeY"]},
+                "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}},
+                "projectileType": {"value": "orbitalup"}
+              }
+            }
+          ]
+        }
+      },
       {
         "title": "setGlobalTag",
         "type": "action",
@@ -191,7 +191,7 @@
           "type": {"value": "phase"}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",

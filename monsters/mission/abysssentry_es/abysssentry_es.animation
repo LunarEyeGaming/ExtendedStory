@@ -1,0 +1,171 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "eye" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "aggrotele" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "aggro",
+            "properties" : {
+              "lightsOn" : ["eyelight"]
+            }
+          },
+          "aggro" : {},
+          "aggroend" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+              "lightsOff" : ["eyelight"]
+            }
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "transformationGroups" : [ "body" ],
+          "offset" : [0.0, 0],
+          "image" : "<partImage>"
+        }
+      },
+
+      "eye" : {
+        "properties" : {
+          "zLevel" : 0,
+          "transformationGroups" : [ "eye" ],
+          "offset" : [0.0, 0.0]
+        },
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            
+            "aggrotele" : {
+              "properties" : {
+                "image" : "<partImage>:aggrotele.<frame>"
+              }
+            },
+            
+            "aggro" : {
+              "properties" : {
+                "image" : "<partImage>:aggro"
+              }
+            },
+            
+            "aggroend" : {
+              "properties" : {
+                "image" : "<partImage>:aggroend.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "eyefullbright" : {
+        "properties" : {
+          "zLevel" : 0,
+          "transformationGroups" : [ "eye" ],
+          "offset" : [0.0, 0.0],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            
+            "aggrotele" : {
+              "properties" : {
+                "image" : "<partImage>:aggrotele.<frame>"
+              }
+            },
+            
+            "aggro" : {
+              "properties" : {
+                "image" : "<partImage>:aggro"
+              }
+            },
+            
+            "aggroend" : {
+              "properties" : {
+                "image" : "<partImage>:aggroend.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {},
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true },
+    "eye" : { "interpolated" : true }
+  },
+  
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "transformationGroups" : [ "eye" ],
+      "position" : [1.625, 0],
+      "color" : [35, 19, 46]
+    },
+    "eyelight" : {
+      "active" : false,
+      "transformationGroups" : [ "eye" ],
+      "position" : [1.625, 0],
+      "color" : [70, 77, 102],
+      "pointLight" : true,
+      "pointAngle" : 0,
+      "pointBeam" : 1
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "burstCount" : 1,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "deathPuff" : [ ],
+    "aggro" : [],
+    "fire" : []
+  }
+}

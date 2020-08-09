@@ -31,46 +31,46 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
+      {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
         "parameters": {
-		  "direction": {"value": 1}
-		}
+          "direction": {"value": 1}
+        }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-		  "sound": {"value": "roar"}
-		}
+          "sound": {"value": "roar"}
+        }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 3.0}
-		}
+          "time": {"value": 3.0}
+        }
       },
-	  {
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 25},
-		  "untilSuccess": {"value": false}
-		},
+          "maxLoops": {"value": 25},
+          "untilSuccess": {"value": false}
+        },
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -86,73 +86,73 @@
                 "offset": {"value": [0, 0]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {
-				  "timeToLive": 0,
-				  "damageType": "NoDamage",
-				  "actionOnReap": [
-				    {
-					  "action": "projectile",
-					  "type": "invisibleprojectile",
-					  "offsetRange": [-50, -10, 50, 10],
-					  "config": {
-					    "timeToLive": 0,
-						"damageType": "NoDamage",
-						"actionOnReap": [
-						  {
+                  "timeToLive": 0,
+                  "damageType": "NoDamage",
+                  "actionOnReap": [
+                    {
+                      "action": "projectile",
+                      "type": "invisibleprojectile",
+                      "offsetRange": [-50, -10, 50, 10],
+                      "config": {
+                        "timeToLive": 0,
+                        "damageType": "NoDamage",
+                        "actionOnReap": [
+                          {
                             "action": "option",
                             "options": [
                               {
-						        "action": "spawnmonster",
-							    "type": "tentaclegnat",
-							    "level": 5
-						      },
+                                "action": "spawnmonster",
+                                "type": "tentaclegnat",
+                                "level": 5
+                              },
                               {
-						        "action": "spawnmonster",
-							    "type": "tentaclebomb",
-							    "level": 5
-						      },
+                                "action": "spawnmonster",
+                                "type": "tentaclebomb",
+                                "level": 5
+                              },
                               {
-						        "action": "spawnmonster",
-							    "type": "tentacleghost",
-							    "level": 5
-						      }
+                                "action": "spawnmonster",
+                                "type": "tentacleghost",
+                                "level": 5
+                              }
                             ]
                           },
-						  {
-						    "action": "loop",
-							"count": 20,
-							"body": [
-							  {
-							    "action": "particle",
-								"specification": "tentaclegooshard"
-							  },
-							  {
-							    "action": "particle",
-								"specification": "tentacleshard"
-							  }
-							]
-						  },
-						  {
-						    "action": "sound",
-							"options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
-						  }
-						]
-					  }
-					}
-				  ]
-				}},
+                          {
+                            "action": "loop",
+                            "count": 20,
+                            "body": [
+                              {
+                                "action": "particle",
+                                "specification": "tentaclegooshard"
+                              },
+                              {
+                                "action": "particle",
+                                "specification": "tentacleshard"
+                              }
+                            ]
+                          },
+                          {
+                            "action": "sound",
+                            "options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }},
                 "projectileType": {"value": "invisibleprojectile"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
             },
-	        {
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-		        "time": {"value": 0.1}
-		      }
+                "time": {"value": 0.1}
+              }
             }
           ]
         }

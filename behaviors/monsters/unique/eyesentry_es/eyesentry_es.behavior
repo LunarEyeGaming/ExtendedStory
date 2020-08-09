@@ -19,9 +19,13 @@
     "minWanderAngle": 0,
     "maxWanderAngle": 3.14,
     "resetAngle": -12,
-    "windupTime": 3,
+    "windupTime": 1,
+    "cooldownTime": 0,
+    "projectileOffset": [0, 0],
+    "projectileConfig": {},
     "projectileType": "invisibleprojectile",
-    "rotationCenter": [0.0, 0.0]
+    "rotationCenter": [0.0, 0.0],
+    "shouldFaceEntity": false
   },
   "root": {
     "title": "sequence",
@@ -78,12 +82,12 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 50},
-              "keepTargetInRange": {"value": 100},
+              "targetQueryRange": {"value": 25},
+              "keepTargetInRange": {"value": 25},
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
               "targetOnDamage": {"value": true},
-              "targetOutOfSightTime": {"value": 0.1},
+              "targetOutOfSightTime": {"value": 1.0},
               "targetOnNotification": {"value": false}
             }
           },
@@ -117,6 +121,16 @@
                     }
                   },
                   {
+                    "title": "animate",
+                    "type": "action",
+                    "name": "animate",
+                    "parameters": {
+                      "state": {"value": "aggrotele"},
+                      "type": {"value": "eye"},
+                      "fallback": {"value": "aggroend"}
+                    }
+                  },
+                  {
                     "title": "sequence",
                     "type": "composite",
                     "name": "sequence",
@@ -140,16 +154,6 @@
                         },
                         "children": [
                           {
-                            "title": "animate",
-                            "type": "action",
-                            "name": "animate",
-                            "parameters": {
-                              "state": {"value": "aggrotele"},
-                              "type": {"value": "eye"},
-                              "fallback": {"value": "aggroend"}
-                            }
-                          },
-                          {
                             "title": "timer",
                             "type": "action",
                             "name": "timer",
@@ -162,7 +166,8 @@
                             "type": "module",
                             "name": "eyesentry_es-look",
                             "parameters": {
-                              "rotationCenter": {"key": "<rotationCenter>"}
+                              "rotationCenter": {"key": "<rotationCenter>"},
+                              "shouldFaceEntity": {"key": "<shouldFaceEntity>"}
                             }
                           },
                           {
@@ -185,15 +190,54 @@
                         ]
                       },
                       {
+                        "title": "vecAngle",
+                        "type": "action",
+                        "name": "vecAngle",
+                        "parameters": {
+                          "vector": {"key": "aimVector"}
+                        },
+                        "output": {
+                          "angle": "aimAngle"
+                        }
+                      },
+                      {
+                        "title": "vecRotate",
+                        "type": "action",
+                        "name": "vecRotate",
+                        "parameters": {
+                          "vector": {"key": "<projectileOffset>"},
+                          "angle": {"key": "aimAngle"}
+                        },
+                        "output": {
+                          "vector": "rotatedProjOffset"
+                        }
+                      },
+                      {
                         "title": "spawnProjectile",
                         "type": "action",
                         "name": "spawnProjectile",
                         "parameters": {
-                          "aimVector": {"value": [0, 0]},
-                          "offset": {"value": [0, 0]},
-                          "projectileConfig": {"value": {}},
+                          "aimVector": {"key": "aimVector"},
+                          "offset": {"key": "rotatedProjOffset"},
+                          "projectileConfig": {"key": "<projectileConfig>"},
                           "projectileType": {"key": "<projectileType>"},
                           "scalePower": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "playSound",
+                        "type": "action",
+                        "name": "playSound",
+                        "parameters": {
+                          "sound": {"value": "fire"}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"key": "<cooldownTime>"}
                         }
                       }
                     ]

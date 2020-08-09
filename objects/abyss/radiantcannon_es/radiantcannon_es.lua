@@ -19,7 +19,7 @@ end
 function update(dt)
   items = world.containerItems(entity.id())
   acceptedItems = getMatchingItems(items, self.ammunition)
-  if not storage.isLoaded and next(acceptedItems) then
+  if not (storage.isLoaded or animator.animationState("cannon") == "loading") and next(acceptedItems) then
     loadCannon()
     deleteItems(acceptedItems)
   else

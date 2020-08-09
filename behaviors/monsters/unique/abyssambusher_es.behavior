@@ -1,0 +1,380 @@
+{
+  "name": "abyssambusher_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua"
+  ],
+  "parameters": {
+    "ascendSpeed": 50
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setNumber",
+        "type": "action",
+        "name": "setNumber",
+        "parameters": {
+          "number": {"value": 0}
+        },
+        "output": {
+          "number": "heading"
+        }
+      },
+      {
+        "title": "setFlag",
+        "type": "action",
+        "name": "setFlag",
+        "parameters": {
+          "name": {"value": "vulnerable"}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 50},
+              "keepTargetInRange": {"value": 100},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 5}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "selector",
+                    "type": "composite",
+                    "name": "selector",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "hasFlag",
+                        "type": "action",
+                        "name": "hasFlag",
+                        "parameters": {
+                          "name": {"key": "vulnerable"}
+                        }
+                      },
+                      {
+                        "title": "addEphemeralEffect",
+                        "type": "action",
+                        "name": "addEphemeralEffect",
+                        "parameters": {
+                          "duration": {"value": 1},
+                          "name": {"value": "invulnerable"}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "setDamageOnTouch",
+                              "type": "action",
+                              "name": "setDamageOnTouch",
+                              "parameters": {
+                                "touchDamage": {"value": true}
+                              }
+                            },
+                            {
+                              "title": "removeEphemeralEffect",
+                              "type": "action",
+                              "name": "removeEphemeralEffect",
+                              "parameters": {
+                                "name": {"value": "invulnerable"}
+                              }
+                            },
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": -1},
+                                "success": {"value": -1}
+                              },
+                              "children": [
+                                {
+                                  "title": "controlFlag",
+                                  "type": "action",
+                                  "name": "controlFlag",
+                                  "parameters": {
+                                    "bool": {"value": true}
+                                  },
+                                  "output" : {
+                                    "bool" : "vulnerable"
+                                  }
+                                },
+                                {
+                                  "title": "controlParameters",
+                                  "type": "action",
+                                  "name": "controlParameters",
+                                  "parameters": {
+                                    "parameters": {"value": {"gravityEnabled": true}}
+                                  }
+                                },
+                                {
+                                  "title": "dynamic",
+                                  "type": "composite",
+                                  "name": "dynamic",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "onGround",
+                                      "type": "action",
+                                      "name": "onGround",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "runner",
+                                      "type": "action",
+                                      "name": "runner",
+                                      "parameters": {}
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "setDamageOnTouch",
+                              "type": "action",
+                              "name": "setDamageOnTouch",
+                              "parameters": {
+                                "touchDamage": {"value": false}
+                              }
+                            },
+                            {
+                              "title": "controlParameters",
+                              "type": "action",
+                              "name": "controlParameters",
+                              "parameters": {
+                                "parameters": {"value": {"gravityEnabled": false}}
+                              }
+                            },
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": -1},
+                                "success": {"value": 1}
+                              },
+                              "children": [
+                                {
+                                  "title": "failer",
+                                  "type": "decorator",
+                                  "name": "failer",
+                                  "parameters": {},
+                                  "child": {
+                                    "title": "controlFlag",
+                                    "type": "action",
+                                    "name": "controlFlag",
+                                    "parameters": {
+                                      "bool": {"value": true}
+                                    },
+                                    "output" : {
+                                      "bool" : "vulnerable"
+                                    }
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "removeEphemeralEffect",
+                                      "type": "action",
+                                      "name": "removeEphemeralEffect",
+                                      "parameters": {
+                                        "name": {"value": "invulnerable"}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.33}
+                                      }
+                                    },
+                                    {
+                                      "title": "flyToPosition",
+                                      "type": "action",
+                                      "name": "flyToPosition",
+                                      "parameters": {
+                                        "position": {"key": "spawn"},
+                                        "speed": {"key": "<ascendSpeed>"},
+                                        "tolerance": {"value": 1}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "setVelocity",
+                              "type": "action",
+                              "name": "setVelocity",
+                              "parameters": {
+                                "velocity": {"value": [0, 0]}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 2}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "speed": {"key": "<ascendSpeed>"},
+                      "tolerance": {"value": 1}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "sleep"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.5}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -6,70 +6,70 @@
         "default" : "idlephase1",
         "states" : {
           "idlephase1" : {},
-		  "phase1crack" : {
-		    "frames" : 2,
-			"cycle" : 2,
-			"mode" : "transition",
-			"transition" : "idle"
-		  },
-		  "idle" : {
-		    "frames" : 8,
-			"cycle" : 1,
-			"mode" : "loop"
-		  },
-		  "dying" : {
-		    "frames" : 9,
-			"cycle" : 1.35,
-			"mode" : "transition",
-			"transition" : "dying2"
-		  },
-		  "dying2" : {},
-		  "dying3" : {}
+          "phase1crack" : {
+            "frames" : 2,
+            "cycle" : 2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "idle" : {
+            "frames" : 8,
+            "cycle" : 1,
+            "mode" : "loop"
+          },
+          "dying" : {
+            "frames" : 9,
+            "cycle" : 1.35,
+            "mode" : "transition",
+            "transition" : "dying2"
+          },
+          "dying2" : {},
+          "dying3" : {}
         }
       },
-	  "glow" : {
-	    "priority" : 2,
-		"default" : "off",
-		"states" : {
-		  "off" : {},
-		  "windup1" : {
-		    "frames" : 5,
-			"cycle" : 1.0,
-			"mode" : "transition",
-			"transition" : "off",
+      "glow" : {
+        "priority" : 2,
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "windup1" : {
+            "frames" : 5,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/kluexboss_phase1.ogg"
             }
-		  },
-		  "windup1fast" : {
-		    "frames" : 5,
-			"cycle" : 0.5,
-			"mode" : "transition",
-			"transition" : "off",
+          },
+          "windup1fast" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/kluexboss_phase1.ogg"
             }
-		  },
-		  "windup2" : {
-		    "frames" : 5,
-			"cycle" : 1.0,
-			"mode" : "transition",
-			"transition" : "off",
+          },
+          "windup2" : {
+            "frames" : 5,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/kluexboss_phase1.ogg"
             }
-		  },
-		  "windup2fast" : {
-		    "frames" : 5,
-			"cycle" : 0.5,
-			"mode" : "transition",
-			"transition" : "off",
+          },
+          "windup2fast" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/kluexboss_phase1.ogg"
             }
-		  }
-		}
-	  },
+          }
+        }
+      },
       "beam" : {
         "default" : "off",
         "states" : {
@@ -80,7 +80,7 @@
             "frames" : 1,
             "cycle" : 0.5,
             "mode" : "transition",
-			"transition" : "firing",
+            "transition" : "firing",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg",
               "immediateSoundRangeMultiplier" : 2.0
@@ -90,7 +90,7 @@
             "frames" : 6,
             "cycle" : 0.15,
             "mode" : "transition",
-			"transition" : "fire"
+            "transition" : "fire"
           },
           "fire" : {
             "frames" : 2,
@@ -101,16 +101,16 @@
               "persistentSoundRangeMultiplier" : 2.0
             }
           },
-		  "winddown" : {
-		    "frames" : 6,
-			"cycle" : 0.15,
-			"mode" : "transition",
-			"transition" : "off",
+          "winddown" : {
+            "frames" : 6,
+            "cycle" : 0.15,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
               "immediateSoundRangeMultiplier" : 2.0
             }
-		  }
+          }
         }
       },
       "damage" : {
@@ -132,21 +132,21 @@
       "body" : {
         "properties" : {
           "zLevel" : 2,
-		  "transformationGroups" : ["body"]
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
           "body" : {
-		    "idlephase1" : {
-			  "properties" : {
-			    "image" : "<partImage>:idlephase1"
-			  }
-			},
-			"phase1crack" : {
-			  "properties" : {
-			    "image" : "<partImage>:phase1crack.<frame>"
-			  }
-			},
+            "idlephase1" : {
+              "properties" : {
+                "image" : "<partImage>:idlephase1"
+              }
+            },
+            "phase1crack" : {
+              "properties" : {
+                "image" : "<partImage>:phase1crack.<frame>"
+              }
+            },
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle<phase>.<frame>"
@@ -170,26 +170,26 @@
           }
         }
       },
-	  
-	  "bodyfullbright" : {
+      
+      "bodyfullbright" : {
         "properties" : {
           "zLevel" : 3,
-		  "fullbright" : true,
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
           "body" : {
-		    "idlephase1" : {
-			  "properties" : {
-			    "image" : "<partImage>:idlephase1"
-			  }
-			},
-			"phase1crack" : {
-			  "properties" : {
-			    "image" : "<partImage>:phase1crack.<frame>"
-			  }
-			},
+            "idlephase1" : {
+              "properties" : {
+                "image" : "<partImage>:idlephase1"
+              }
+            },
+            "phase1crack" : {
+              "properties" : {
+                "image" : "<partImage>:phase1crack.<frame>"
+              }
+            },
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle<phase>.<frame>"
@@ -213,13 +213,13 @@
           }
         }
       },
-	  
-	  "glow1" : {
+      
+      "glow1" : {
         "properties" : {
           "zLevel" : 4,
-		  "fullbright" : true,
-		  "transformationGroups" : ["body"],
-		  "offset" : [0.0, 3.625]
+          "fullbright" : true,
+          "transformationGroups" : ["body"],
+          "offset" : [0.0, 3.625]
         },
 
         "partStates" : {
@@ -230,27 +230,27 @@
               }
             }
           },
-		  "glow" : {
-		    "windup1" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			},
-			"windup1fast" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			}
-		  }
+          "glow" : {
+            "windup1" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "windup1fast" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            }
+          }
         }
       },
-	  
-	  "glow2" : {
+      
+      "glow2" : {
         "properties" : {
           "zLevel" : 4,
-		  "fullbright" : true,
-		  "transformationGroups" : ["body"],
-		  "offset" : [0.0, 7.375]
+          "fullbright" : true,
+          "transformationGroups" : ["body"],
+          "offset" : [0.0, 7.375]
         },
 
         "partStates" : {
@@ -261,18 +261,18 @@
               }
             }
           },
-		  "glow" : {
-		    "windup2" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			},
-			"windup2fast" : {
-			  "properties" : {
-			    "image" : "<partImage>:windup.<frame>"
-			  }
-			}
-		  }
+          "glow" : {
+            "windup2" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "windup2fast" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            }
+          }
         }
       },
       "beam" : {
@@ -322,35 +322,35 @@
     "beam" : {
       "interpolated" : true
     },
-	"particle" : {
-	  "interpolated" : true
-	}
+    "particle" : {
+      "interpolated" : true
+    }
   },
 
   "particleEmitters" : {
     "shellcrack" : {
       "emissionRate" : 1,
-	  "burstCount" : 3,
+      "burstCount" : 3,
       "offsetRegion" : [-12.25, -12.25, 12.25, 12.25],
       "particles" : [
         {"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
         {"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
         {"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"},
-		{"particle" : "iceshard"}
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"},
+        {"particle" : "iceshard"}
       ]
     },
     "shellbreak" : {
@@ -358,15 +358,15 @@
       "offsetRegion" : [-12.25, -12.25, 12.25, 12.25],
       "particles" : [
         {"particle" : "iceartifactboss_brokenshell1"},
-		{"particle" : "iceartifactboss_brokenshell2"},
-		{"particle" : "iceartifactboss_brokenshell3"},
-		{"particle" : "iceartifactboss_brokenshell4"}
+        {"particle" : "iceartifactboss_brokenshell2"},
+        {"particle" : "iceartifactboss_brokenshell3"},
+        {"particle" : "iceartifactboss_brokenshell4"}
       ]
     },
     "coreburst" : {
       "burstCount" : 1,
       "particles" : [
-	    {
+        {
           "particle" : {
             "type" : "animated",
             "animation" : "/animations/monsterrelease/monsterrelease.animation?replace;feffff=d2bfff;ff7059=845ce0;be1b00=6842c2",
@@ -376,7 +376,7 @@
             "position" : [0, -4],
             "initialVelocity" : [0, 0],
             "finalVelocity" : [0, 0],
-			"fullbright" : true,
+            "fullbright" : true,
             "approach" : [1, 1],
             "timeToLive" : 1.0,
             "layer" : "middle"
@@ -386,9 +386,9 @@
     },
     "shrinkingring" : {
       "burstCount" : 1,
-	  "transformationGroups" : ["particle"],
+      "transformationGroups" : ["particle"],
       "particles" : [
-	    {
+        {
           "particle" : {
             "type" : "textured",
             "image" : "/particles/images/iceartifactring.png",
@@ -398,16 +398,16 @@
             "position" : [0, -4],
             "initialVelocity" : [0, 0],
             "finalVelocity" : [0, 0],
-			"fullbright" : true,
+            "fullbright" : true,
             "approach" : [1, 1],
             "timeToLive" : 0,
             "layer" : "middle",
-			"destructionAction" : "shrink"
+            "destructionAction" : "shrink"
           }
         }
       ]
     },
-	"glowparticles" : {
+    "glowparticles" : {
       "offsetRegion" : [-12.25, -12.25, 12.25, 12.25],
       "emissionRate" : 30,
       "particles" : [
@@ -424,7 +424,7 @@
         }
       ]
     },
-	"parasitedeath" : {
+    "parasitedeath" : {
       "burstCount" : 1,
       "particles" : [
         {
@@ -477,17 +477,17 @@
       "pool" : [ "/sfx/melee/charge_combo2.ogg" ],
       "rangeMultiplier" : 1.5
     },
-	"bullethellfire" : {
-	  "pool" : [ "/sfx/gun/flamethrower_stop.ogg" ],
-	  "rangeMultiplier" : 1.5
-	},
-	"dying" : {
-	  "pool" : [ "/sfx/tech/mech_explosion_windup.ogg" ],
-	  "rangeMultiplier" : 1.5
-	},
-	"parasitedeath" : {
-	  "pool" : [ "/sfx/npc/quadruped/teethyhead_attack1.ogg" ],
-	  "rangeMultiplier" : 1.5
-	}
+    "bullethellfire" : {
+      "pool" : [ "/sfx/gun/flamethrower_stop.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "dying" : {
+      "pool" : [ "/sfx/tech/mech_explosion_windup.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "parasitedeath" : {
+      "pool" : [ "/sfx/npc/quadruped/teethyhead_attack1.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
   }
 }

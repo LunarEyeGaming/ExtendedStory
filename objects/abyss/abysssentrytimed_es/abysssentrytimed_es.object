@@ -1,0 +1,170 @@
+{
+  "objectName" : "abysssentrytimed_es",
+  "colonyTags" : ["light"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "category" : "light",
+  "price" : 0,
+
+  "description" : "An eye that should be avoided during the times that it is blind.",
+  "shortdescription" : "Elder Ocular Sentry",
+  "race" : "generic",
+
+  "apexDescription" : "Avoiding being seen by this eye will prevent any perilous situations from occurring.",
+  "avianDescription" : "This eye in particular seems to be dying. I should still avoid being caught by it.",
+  "floranDescription" : "Floran musst avoid being sseen by giant old eye.",
+  "glitchDescription" : "Analyzing. The peril level will increase if I get caught by this eye.",
+  "humanDescription" : "This eye seems crippled. I should run past it while it's blind.",
+  "hylotlDescription" : "It's best to move past it while it is blind.",
+  "novakidDescription" : "Gotta sneak past it while it can't see.",
+
+  "inventoryIcon" : "abysssentrytimedicon.png",
+  "orientations" : [
+    {
+      "image" : "preview.png",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [0, 8],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelid.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      
+      "eyeAngle" : 90,
+      "eyeOffset" : [0, -1],
+  
+      "detectionArea" : [-5, 0, 5, 20]
+    },
+    {
+      "image" : "preview.png",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [16, 8],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelid.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      
+      "eyeAngle" : 90,
+      "eyeOffset" : [0, -1],
+  
+      "detectionArea" : [-3, 0, 7, 20]
+    },
+    {
+      "image" : "previewleft.png",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      
+      "animationPosition" : [8, 0],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelidleft.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ],
+      
+      "eyeAngle" : 0,
+      "eyeOffset" : [-1, 0],
+  
+      "detectionArea" : [0, -5, 20, 5]
+    },
+    {
+      "image" : "previewright.png",
+      "imagePosition" : [0, -16],
+      "direction" : "right",
+      
+      "animationPosition" : [8, 0],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelidright.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ],
+      
+      "eyeAngle" : 180,
+      "eyeOffset" : [1, 0],
+  
+      "detectionArea" : [-20, -5, 0, 5]
+    },
+    {
+      "image" : "previewceiling.png",
+      "imagePosition" : [-16, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [0, 8],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelidceiling.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      
+      "eyeAngle" : 270,
+      "eyeOffset" : [0, 1],
+  
+      "detectionArea" : [-5, -20, 5, 0]
+    },
+    {
+      "image" : "previewceiling.png",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [16, 8],
+      "animationParts" : {
+        "eye" : "eye.png",
+        "eyelit" : "eyelit.png",
+        "eyelid" : "eyelidceiling.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ],
+      
+      "eyeAngle" : 270,
+      "eyeOffset" : [0, 1],
+  
+      "detectionArea" : [-3, -20, 7, 0]
+    }
+  ],
+
+  "animation" : "abysssentrytimed_es.animation",
+  "animationParts" : {
+    "eye" : "eye.png",
+    "eyelit" : "eyelit.png",
+    "eyelid" : "eyelid.png"
+  },
+  "animationCustom" : {},
+
+  "scripts" : [ "/objects/abyss/abysssentrytimed_es/abysssentrytimed.lua" ],
+  "scriptDelta" : 15,
+
+  "inputNodes" : [ [0, 1] ],
+  "outputNodes" : [ [0, 0] ],
+  
+  "eyeAngle" : 0,
+  "offsetAngle" : 0,
+  "eyeOffset" : [0, 0],
+
+  "activateCooldown" : 1.5,
+  "activeTime" : 2.0,
+  
+  "detectionArea" : [-10, -10, 10, 10],
+  "detectThroughCollisions" : false
+}

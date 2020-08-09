@@ -1,0 +1,32 @@
+{
+  "projectileName" : "ancientsentryarrow_es",
+  "physics" : "hover",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 15,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [83, 28, 97],
+  "image" : "ancientsentryarrow.png",
+  "animationCycle" : 0.75,
+  "frameNumber" : 2,
+  "power" : 20,
+  "onlyHitTerrain" : true,
+  "fullbright" : true,
+  "damageKind" : "plasma",
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/chargedancientarrowexplosion_es/chargedancientarrowexplosion_es.config"
+    }
+  ],
+
+  "scripts" : [ "ancientsentryarrow.lua" ],
+  "scriptDelta" : 10,
+
+  "fireRadius" : 20,
+  "fireTime" : 1.0,
+  "orbiterCount" : 4,
+  "orbiterProjectile" : "ancienttargetarroworbiting_es",
+  "orbiterProjectileConfig" : {}
+}

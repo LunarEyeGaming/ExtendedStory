@@ -4,6 +4,12 @@
   "bounces" : 0,
   "periodicActions" : [
     {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "config",
+      "file" : "/projectiles/activeitems/ancientarrow/fire.config"
+    },
+    {
       "action" : "particle",
       "specification" : "energyblade",
       "time" : 0.05,
@@ -14,21 +20,12 @@
       "specification" : "energyblade2",
       "time" : 0.07,
       "repeat" : true
-    },
-    {
-      "action" : "particle",
-      "specification" : "ancientarrowtrail",
-      "rotate" : true,
-      "time" : 0.032,
-      "repeat" : true
     }
   ],
   "actionOnReap" : [
     {
       "action" : "sound",
-      "options" : [
-        "/sfx/gun/impact_plasma.ogg"
-      ]
+      "options" : [ "/sfx/gun/impact_plasma.ogg" ]
     },
     {
       "action" : "loop",
@@ -49,10 +46,8 @@
       ]
     }
   ],
-  "scripts" : [ "ancientarrow.lua" ],
-  "scriptDelta" : 1,
   "image" : "ancientarrow.png",
-  "animationCycle" : 0.1,
+  "animationCycle" : 0.5,
   "frameNumber" : 2,
   "lightColor" : [130, 70, 160],
   "fullbright" : true,
@@ -62,6 +57,5 @@
   "power" : 20,
   "knockback" : 10,
   "knockbackDirectional" : true,
-  "damageKind" : "bow",
-  "baseHomingControlForce" : 3
+  "damageKind" : "bow"
 }

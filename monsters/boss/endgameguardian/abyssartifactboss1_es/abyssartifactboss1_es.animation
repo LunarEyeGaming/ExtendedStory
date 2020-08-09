@@ -213,25 +213,6 @@
         }
       },
       
-      "vortex" : {
-        "properties" : {
-          "zLevel" : -1,
-          "centered" : true,
-          "offset" : [0, 0.0],
-          "fullbright" : true,
-          "image" : "<partImage>"
-        },
-        "partStates" : {
-          "eye" : {
-            "invisible" : {
-              "properties" : {
-                "image" : ""
-              }
-            }
-          }
-        }
-      },
-      
       "eyetentacles" : {
         "properties" : {
           "zLevel" : 1,

@@ -142,7 +142,7 @@
                                 "name": "sequence",
                                 "parameters": {},
                                 "children": [
-								  {
+                                  {
                                     "title": "iceartifactbossnew_es-snowflakecontrol",
                                     "type": "module",
                                     "name": "iceartifactbossnew_es-snowflakecontrol",
@@ -338,42 +338,42 @@
                                           "name": "iceartifactbossnew_es-corefrenzy",
                                           "parameters": { }
                                         },
-										{
+                                        {
                                           "title": "iceartifactbossnew_es-adds",
                                           "type": "module",
                                           "name": "iceartifactbossnew_es-adds",
                                           "parameters": { }
                                         },
-										{
+                                        {
                                           "title": "iceartifactbossnew_es-corefrenzy2",
                                           "type": "module",
                                           "name": "iceartifactbossnew_es-corefrenzy2",
                                           "parameters": { }
                                         },
-										{
-										  "title": "setAnimationState",
-										  "type": "action",
-										  "name": "setAnimationState",
-										  "parameters": {
-										    "state": {"value": "off"},
-											"type": {"value": "beam"}
-										  }
-										},
-										{
-										  "title": "resetTransformationGroup",
-										  "type": "action",
-										  "name": "resetTransformationGroup",
-										  "parameters": {
-										    "transformationGroup": {"value": "beam"}
-										  }
-										},
-										{
+                                        {
+                                          "title": "setAnimationState",
+                                          "type": "action",
+                                          "name": "setAnimationState",
+                                          "parameters": {
+                                            "state": {"value": "off"},
+                                            "type": {"value": "beam"}
+                                          }
+                                        },
+                                        {
+                                          "title": "resetTransformationGroup",
+                                          "type": "action",
+                                          "name": "resetTransformationGroup",
+                                          "parameters": {
+                                            "transformationGroup": {"value": "beam"}
+                                          }
+                                        },
+                                        {
                                           "title": "iceartifactbossnew_es-slam2",
                                           "type": "module",
                                           "name": "iceartifactbossnew_es-slam2",
                                           "parameters": { }
                                         },
-										{
+                                        {
                                           "title": "iceartifactbossnew_es-corefrenzy3",
                                           "type": "module",
                                           "name": "iceartifactbossnew_es-corefrenzy3",

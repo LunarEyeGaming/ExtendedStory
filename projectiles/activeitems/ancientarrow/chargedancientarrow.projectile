@@ -1,87 +1,53 @@
 {
   "projectileName" : "chargedancientarrow",
   "physics" : "laser",
-  "bounces" : -1,
-  "actionOnCollide" : [
-    {
-      "action" : "sound",
-      "options" : [
-        "/sfx/gun/impact_plasma.ogg"
-      ]
-    },
-    {
-      "action" : "loop",
-      "count" : 2,
-      "body" : [
-        {
-          "action" : "particle",
-          "specification" : "energyblade",
-          "time" : 0.1,
-          "repeat" : true
-        },
-        {
-          "action" : "particle",
-          "specification" : "energyblade2",
-          "time" : 0.1,
-          "repeat" : true
-        }
-      ]
-    }
-  ],
+  "bounces" : 0,
   "periodicActions" : [
     {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "config",
+      "file" : "/projectiles/activeitems/ancientarrow/fire.config"
+    },
+    {
       "action" : "particle",
-      "specification" : "energyblade",
+      "specification" : "ancientenergy1",
       "time" : 0.05,
       "repeat" : true
     },
     {
       "action" : "particle",
-      "specification" : "energyblade2",
-      "time" : 0.07,
+      "specification" : "ancientenergy2",
+      "time" : 0.05,
       "repeat" : true
     },
     {
       "action" : "particle",
-      "specification" : "ancientarrowtrail",
-      "rotate" : true,
-      "time" : 0.032,
+      "specification" : "ancientenergy3",
+      "time" : 0.05,
       "repeat" : true
     }
   ],
   "actionOnReap" : [
     {
-      "action" : "loop",
-      "count" : 5,
-      "body" : [
-        {
-          "action" : "particle",
-          "specification" : "energyblade",
-          "time" : 0.1,
-          "repeat" : true
-        },
-        {
-          "action" : "particle",
-          "specification" : "energyblade2",
-          "time" : 0.1,
-          "repeat" : true
-        }
-      ]
+      "action" : "config",
+      "file" : "/projectiles/explosions/chargedancientarrowexplosion_es/chargedancientarrowexplosion_es.config"
     }
   ],
-  "scripts" : [ "ancientarrow.lua" ],
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
   "scriptDelta" : 1,
-  "image" : "ancientarrow.png",
-  "animationCycle" : 0.1,
+  "image" : "chargedancientarrow.png",
+  "animationCycle" : 0.5,
   "frameNumber" : 2,
   "lightColor" : [130, 70, 160],
   "fullbright" : true,
-  "emitters" : ["energyweapon"],
   "timeToLive" : 10,
   "damagePoly" : [ [-10, 0], [2, 4], [10, 0], [2, -4] ],
   "power" : 20,
   "knockback" : 10,
   "knockbackDirectional" : true,
   "damageKind" : "bow",
-  "baseHomingControlForce" : 3
+  "homingDistance" : 20,
+  "rotationRate" : 2,
+  "trackingLimit" : 3
 }

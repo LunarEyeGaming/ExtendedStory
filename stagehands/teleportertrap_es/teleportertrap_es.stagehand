@@ -1,0 +1,12 @@
+{
+  "type" : "teleportertrap_es",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/teleportertrap_es/teleportertrap_es.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-5, -5, 5, 5],
+  
+  "teleportCinematic" : "/cinematics/fade1s.cinematic",
+  "resetObjectUid" : null
+}

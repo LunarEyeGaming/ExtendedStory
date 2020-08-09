@@ -14,14 +14,14 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 5},
-		  "untilSuccess": {"value": false}
-		},
+          "maxLoops": {"value": 5},
+          "untilSuccess": {"value": false}
+        },
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -37,58 +37,58 @@
                 "offset": {"value": [0, 0]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {
-				  "timeToLive": 0,
-				  "damageType": "NoDamage",
-				  "actionOnReap": [
-				    {
-					  "action": "projectile",
-					  "type": "invisibleprojectile",
-					  "offsetRange": [-3, -3, 3, 3],
-					  "config": {
-					    "timeToLive": 0,
-						"damageType": "NoDamage",
-						"actionOnReap": [
-						  {
-						    "action": "spawnmonster",
-							"type": "tentaclespawner_es",
-							"level": 5
-						  },
-						  {
-						    "action": "loop",
-							"count": 20,
-							"body": [
-							  {
-							    "action": "particle",
-								"specification": "tentaclegooshard"
-							  },
-							  {
-							    "action": "particle",
-								"specification": "tentacleshard"
-							  }
-							]
-						  },
-						  {
-						    "action": "sound",
-							"options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
-						  }
-						]
-					  }
-					}
-				  ]
-				}},
+                  "timeToLive": 0,
+                  "damageType": "NoDamage",
+                  "actionOnReap": [
+                    {
+                      "action": "projectile",
+                      "type": "invisibleprojectile",
+                      "offsetRange": [-3, -3, 3, 3],
+                      "config": {
+                        "timeToLive": 0,
+                        "damageType": "NoDamage",
+                        "actionOnReap": [
+                          {
+                            "action": "spawnmonster",
+                            "type": "tentaclespawner_es",
+                            "level": 5
+                          },
+                          {
+                            "action": "loop",
+                            "count": 20,
+                            "body": [
+                              {
+                                "action": "particle",
+                                "specification": "tentaclegooshard"
+                              },
+                              {
+                                "action": "particle",
+                                "specification": "tentacleshard"
+                              }
+                            ]
+                          },
+                          {
+                            "action": "sound",
+                            "options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }},
                 "projectileType": {"value": "invisibleprojectile"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
             },
-	        {
+            {
               "title": "timer",
               "type": "action",
               "name": "timer",
               "parameters": {
-		        "time": {"value": 1.0}
-		      }
+                "time": {"value": 1.0}
+              }
             }
           ]
         }

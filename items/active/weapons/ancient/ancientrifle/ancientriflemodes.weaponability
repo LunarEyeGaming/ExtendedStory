@@ -6,19 +6,37 @@
           "default" : "1",
           "states" : {
             "1" : {
-              "frames" : 4,
-			  "cycle" : 0.4,
-			  "mode" : "loop"
+              "frames" : 2,
+              "cycle" : 0.2,
+              "mode" : "transition",
+              "transition" : "idle1"
+            },
+            "idle1" : {
+              "frames" : 8,
+              "cycle" : 0.5,
+              "mode" : "loop"
             },
             "2" : {
-              "frames" : 4,
-			  "cycle" : 0.4,
-			  "mode" : "loop"
+              "frames" : 2,
+              "cycle" : 0.2,
+              "mode" : "transition",
+              "transition" : "idle2"
+            },
+            "idle2" : {
+              "frames" : 8,
+              "cycle" : 0.5,
+              "mode" : "loop"
             },
             "3" : {
-              "frames" : 4,
-			  "cycle" : 0.4,
-			  "mode" : "loop"
+              "frames" : 2,
+              "cycle" : 0.2,
+              "mode" : "transition",
+              "transition" : "idle3"
+            },
+            "idle3" : {
+              "frames" : 8,
+              "cycle" : 0.5,
+              "mode" : "loop"
             }
           }
         }
@@ -34,15 +52,30 @@
             "ammoType" : {
               "1" : {
                 "properties" : {
+                  "image" : "<partImage>:autoForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle1" : {
+                "properties" : {
                   "image" : "<partImage>:auto.<frame><paletteSwaps>"
                 }
               },
               "2" : {
                 "properties" : {
+                  "image" : "<partImage>:burstForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle2" : {
+                "properties" : {
                   "image" : "<partImage>:burst.<frame><paletteSwaps>"
                 }
               },
               "3" : {
+                "properties" : {
+                  "image" : "<partImage>:grenadeForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle3" : {
                 "properties" : {
                   "image" : "<partImage>:grenade.<frame><paletteSwaps>"
                 }
@@ -50,7 +83,7 @@
             }
           }
         },
-		"middleFullbright" : {
+        "middleFullbright" : {
           "properties" : {
             "image" : null
           },
@@ -59,15 +92,30 @@
             "ammoType" : {
               "1" : {
                 "properties" : {
+                  "image" : "<partImage>:autoForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle1" : {
+                "properties" : {
                   "image" : "<partImage>:auto.<frame><paletteSwaps>"
                 }
               },
               "2" : {
                 "properties" : {
+                  "image" : "<partImage>:burstForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle2" : {
+                "properties" : {
                   "image" : "<partImage>:burst.<frame><paletteSwaps>"
                 }
               },
               "3" : {
+                "properties" : {
+                  "image" : "<partImage>:grenadeForm.<frame><paletteSwaps>"
+                }
+              },
+              "idle3" : {
                 "properties" : {
                   "image" : "<partImage>:grenade.<frame><paletteSwaps>"
                 }
@@ -95,25 +143,25 @@
       {
         "projectileType" : "ancientlasershot",
         "energyUsage" : 50,
-		"fireTime" : 0.1,
-		"fireType" : "auto",
-		"baseDps" : 10
+        "fireTime" : 0.1,
+        "fireType" : "auto",
+        "baseDps" : 10
       },
       {
         "projectileType" : "ancientlasershot",
         "energyUsage" : 50,
-		"fireType" : "burst",
-		"burstCount" : 3,
-		"burstTime" : 0.08,
-		"fireTime" : 0.2,
-		"baseDps" : 10
+        "fireType" : "burst",
+        "burstCount" : 3,
+        "burstTime" : 0.08,
+        "fireTime" : 0.2,
+        "baseDps" : 10
       },
       {
         "projectileType" : "ancientgrenade",
         "energyUsage" : 65,
-		"fireTime" : 4.0,
-		"fireType" : "auto",
-		"baseDps" : 5
+        "fireTime" : 4.0,
+        "fireType" : "auto",
+        "baseDps" : 5
       }
     ],
 

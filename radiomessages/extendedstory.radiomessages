@@ -112,9 +112,14 @@
     "text" : "The results from attempting to analyze the lifeforms of this place have been corrupted beyond readability. No advice can be given; pray that you do not encounter what is causing these interferences."
   },
   
-  "abyssdungeon-harmfulabyss" : {
+  "abyssdungeon-harmlessabyss" : {
     "type" : "mission",
-    "text" : "Lighting analysis shows that the liquid here lacks a reflection. I would advise that you avoid this liquid to prevent any harmful effects that may arise from this potentially concentrated form of dark water."
+    "text" : "Analysis shows that the bottom of these pools of less concentrated abyss have portals whose destination are to a location nearby. Perhaps this location is the teleporter-like platform."
+  },
+  
+  "abyssdungeon-blackwalls" : {
+    "type" : "mission",
+    "text" : "Some of the walls here are pitch black. Scans show that these walls emit a force that repels any projectiles, such as grappling hooks."
   },
   
   "abyssdungeon-warptobossmessage" : {

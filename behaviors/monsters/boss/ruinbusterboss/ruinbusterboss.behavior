@@ -112,7 +112,7 @@
                           "type": {"value": "Special"}
                         }
                       },
-					  {
+                      {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -142,16 +142,16 @@
                         "name": "dynamic",
                         "parameters": {},
                         "children": [
-						  {
+                          {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-							  "fail": {"value": 1},
+                              "fail": {"value": 1},
                               "success": {"value": -1}
-							},
-							"children": [
-							  {
+                            },
+                            "children": [
+                              {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -160,59 +160,59 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-							  {
-								"title": "repeater",
-								"type": "decorator",
-								"name": "repeater",
-								"parameters": {
-								  "maxLoops": {"value": -1},
-							      "untilSuccess": {"value": false}
-								},
-								"child": {
-								  "title": "sequence",
-								  "type": "composite",
-								  "name": "sequence",
-								  "parameters": {},
-								  "children": [
-									{
-        							  "title": "ruinbusterboss-rocketattack",
-        							  "type": "module",
-        							  "name": "ruinbusterboss-rocketattack",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "ruinbusterboss-lasereyes",
-        							  "type": "module",
-        							  "name": "ruinbusterboss-lasereyes",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "ruinbusterboss-ramattack",
-        							  "type": "module",
-        							  "name": "ruinbusterboss-ramattack",
-        							  "parameters": {}
-        							},
-									{
-        							  "title": "ruinbusterboss-mininglaser",
-        							  "type": "module",
-        							  "name": "ruinbusterboss-mininglaser",
-        							  "parameters": {}
-        							}
-								  ]
-								}
-						      }
-							]
+                              {
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "ruinbusterboss-rocketattack",
+                                      "type": "module",
+                                      "name": "ruinbusterboss-rocketattack",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ruinbusterboss-lasereyes",
+                                      "type": "module",
+                                      "name": "ruinbusterboss-lasereyes",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ruinbusterboss-ramattack",
+                                      "type": "module",
+                                      "name": "ruinbusterboss-ramattack",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ruinbusterboss-mininglaser",
+                                      "type": "module",
+                                      "name": "ruinbusterboss-mininglaser",
+                                      "parameters": {}
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           },
-						  {
+                          {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-							  "fail": {"value": 1},
+                              "fail": {"value": 1},
                               "success": {"value": -1}
-							},
-							"children": [
-							  {
+                            },
+                            "children": [
+                              {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -221,85 +221,85 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-							  {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-                    	    	    "title": "ruinbusterboss-transition",
-                    	    	    "type": "module",
-                    	    	    "name": "ruinbusterboss-transition",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-                        		    "title": "repeater",
-                        		    "type": "decorator",
-                        		    "name": "repeater",
-                    	    	    "parameters": {
-                    	    	      "maxLoops": {"value": -1},
-                    	    	      "untilSuccess": {"value": false}
-                    	    	    },
-                    	    	    "child": {
-                    	    	      "title": "sequence",
-                    	    	      "type": "composite",
-                    	    	      "name": "sequence",
-                    	    	      "parameters": {},
-                    	    	      "children": [
-                    	    	        {
-	        							  "title": "ruinbusterboss-mininglaser",
-	        							  "type": "module",
-	        							  "name": "ruinbusterboss-mininglaser",
-	        							  "parameters": {}
-	        							},
-										{
-	        							  "title": "ruinbusterboss-minionattack",
-	        							  "type": "module",
-	        							  "name": "ruinbusterboss-minionattack",
-	        							  "parameters": {}
-	        							},
-										{
-	        							  "title": "ruinbusterboss-ramattack",
-	        							  "type": "module",
-										  "name": "ruinbusterboss-ramattack",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-lasereyes",
-										  "type": "module",
-										  "name": "ruinbusterboss-lasereyes",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-rocketattacknohoming",
-										  "type": "module",
-										  "name": "ruinbusterboss-rocketattacknohoming",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-overloaders",
-										  "type": "module",
-        								  "name": "ruinbusterboss-overloaders",
-        								  "parameters": {}
-        								}
-                    	    	      ]
-                    	    	    }
-                    	    	  }
-								]
-							  }
-							]
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "ruinbusterboss-transition",
+                                    "type": "module",
+                                    "name": "ruinbusterboss-transition",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "ruinbusterboss-mininglaser",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-mininglaser",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-minionattack",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-minionattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-ramattack",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-ramattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-lasereyes",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-lasereyes",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-rocketattacknohoming",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-rocketattacknohoming",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-overloaders",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-overloaders",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           },
-						  {
+                          {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-							  "fail": {"value": 1},
+                              "fail": {"value": 1},
                               "success": {"value": -1}
-							},
-							"children": [
-							  {
+                            },
+                            "children": [
+                              {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -308,82 +308,82 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-							  {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-                    	    	    "title": "ruinbusterboss-transition",
-                    	    	    "type": "module",
-                    	    	    "name": "ruinbusterboss-transition",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-                        		    "title": "repeater",
-                        		    "type": "decorator",
-                        		    "name": "repeater",
-                    	    	    "parameters": {
-                    	    	      "maxLoops": {"value": -1},
-                    	    	      "untilSuccess": {"value": false}
-                    	    	    },
-                    	    	    "child": {
-                    	    	      "title": "sequence",
-                    	    	      "type": "composite",
-                    	    	      "name": "sequence",
-                    	    	      "parameters": {},
-                    	    	      "children": [
-                    	    	        {
-	        							  "title": "ruinbusterboss-empblast",
-	        							  "type": "module",
-	        							  "name": "ruinbusterboss-empblast",
-	        							  "parameters": {}
-	        							},
-										{
-	        							  "title": "ruinbusterboss-minionattack2",
-	        							  "type": "module",
-	        							  "name": "ruinbusterboss-minionattack2",
-	        							  "parameters": {}
-	        							},
-										{
-	        							  "title": "ruinbusterboss-rocketattack2",
-	        							  "type": "module",
-										  "name": "ruinbusterboss-rocketattack2",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-lasereyes",
-										  "type": "module",
-										  "name": "ruinbusterboss-lasereyes",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-ramattack",
-										  "type": "module",
-										  "name": "ruinbusterboss-ramattack",
-										  "parameters": {}
-										},
-										{
-										  "title": "ruinbusterboss-overloaders",
-										  "type": "module",
-        								  "name": "ruinbusterboss-overloaders",
-        								  "parameters": {}
-        								},
-										{
-										  "title": "ruinbusterboss-carpetbomb",
-										  "type": "module",
-        								  "name": "ruinbusterboss-carpetbomb",
-        								  "parameters": {}
-        								}
-                    	    	      ]
-                    	    	    }
-                    	    	  }
-								]
-							  }
-							]
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "ruinbusterboss-transition",
+                                    "type": "module",
+                                    "name": "ruinbusterboss-transition",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "ruinbusterboss-empblast",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-empblast",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-minionattack2",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-minionattack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-rocketattack2",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-rocketattack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-lasereyes",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-lasereyes",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-ramattack",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-ramattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-overloaders",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-overloaders",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-carpetbomb",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-carpetbomb",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           }
-						]
+                        ]
                       }
                     ]
                   }
@@ -418,12 +418,12 @@
                       "enable": {"value": false}
                     }
                   },
-				  {
-        		    "title": "ruinbusterboss-dying",
-        		    "type": "module",
-        		    "name": "ruinbusterboss-dying",
-        		    "parameters": { }
-        		  },
+                  {
+                    "title": "ruinbusterboss-dying",
+                    "type": "module",
+                    "name": "ruinbusterboss-dying",
+                    "parameters": { }
+                  },
                   {
                     "title": "setDying",
                     "type": "action",
@@ -456,7 +456,7 @@
                       "type": {"value": "None"}
                     }
                   },
-				  {
+                  {
                     "title": "battleMusic",
                     "type": "action",
                     "name": "battleMusic",
@@ -473,17 +473,17 @@
                       "resource": {"value": "health"}
                     }
                   },
-				  {
-        		    "title": "flyToPosition",
-        		    "type": "action",
-        		    "name": "flyToPosition",
-        		    "parameters": {
-        		      "position": {"key": "spawn"},
-					  "speed" : {"value" : 50},
-        		      "tolerance": {"value": 1}
-        		    }
-        		  },
-				  {
+                  {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "speed" : {"value" : 50},
+                      "tolerance": {"value": 1}
+                    }
+                  },
+                  {
                     "title": "resetTransformationGroup",
                     "type": "action",
                     "name": "resetTransformationGroup",
@@ -491,14 +491,14 @@
                       "transformationGroup": {"value": "body"}
                     }
                   },
-				  {
-        		    "title": "setVelocity",
-        		    "type": "action",
-        		    "name": "setVelocity",
-        		    "parameters": {
-        		      "velocity": {"value": [0, 0]}
-        		    }
-        		  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
                   {
                     "title": "runner",
                     "type": "action",

@@ -33,7 +33,7 @@
       "fleeActions" : [ ],
 
       "hostileActions" : [ 
-	    {
+        {
           "name" : "action-charge",
           "cooldown" : 0.4,
           "parameters" : {
@@ -45,7 +45,7 @@
             "onGround" : false,
             "wallCollide" : true,
             "aimAtTarget" : true,
-			"rotateToTarget" : true,
+            "rotateToTarget" : true,
             "inaccuracy" : 0.0,
             "airDirection" : [1, 0],
             "chargeState" : "",
@@ -59,7 +59,7 @@
             "winddownState" : ""
           }
         },
-		{
+        {
           "name" : "action-fire",
           "cooldown" : 2,
           "parameters" : {
@@ -75,7 +75,7 @@
             "projectileType" : "poisonplasmarocket",
             "projectileParameters" : {
               "speed" : 50,
-              "power" : 25
+              "power" : 15
             },
             "fireOffset" : [0, 0],
             "onGround" : false,
@@ -89,7 +89,7 @@
             "winddownTime" : 0.2
           }
         }
-	  ],
+      ],
 
       "periodicActions" : [ ],
 
@@ -97,7 +97,7 @@
         {
           "name" : "approach-fly"
         }
-	  ],
+      ],
 
       "followActions" : [
         {
@@ -115,14 +115,14 @@
       "concurrentActions" : [ ],
 
       "concurrentHostileActions" : [ ],
-	  "deathActions" : [ ]
+      "deathActions" : [ ]
     },
 
     "damageBar" : "Special",
 
     "touchDamage" : {
       "poly" : [ [1.3, 3.125],  [3.125, 1.3], [3.125, -1.3], [1.3, -3.125], [-1.3, -3.125], [-3.125, -1.3], [-3.125, 1.3], [-1.3, 3.125] ],
-      "damage" : 25,
+      "damage" : 15,
 
       "teamType" : "enemy",
       "damageSourceKind" : "lash",

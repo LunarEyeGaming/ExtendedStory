@@ -1,0 +1,22 @@
+{
+  "projectileName" : "abyssacidblob_es",
+  "physics" : "grenade",
+  "bounces" : -1,
+  "timeToLive" : 5,
+  "image" : "abyssacidblob.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "damageKind" : "abyss",
+  "statusEffects" : [
+    "abysseffect"
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/acidspitexplosion/acidspitexplosion.config"
+    }
+  ]
+}

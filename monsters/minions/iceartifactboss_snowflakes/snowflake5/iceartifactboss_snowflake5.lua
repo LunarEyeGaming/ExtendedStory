@@ -30,11 +30,13 @@ function update(dt)
 
     if self.targetPosition ~= nil then
       local toPosition = vec2.norm(world.distance(self.targetPosition, mcontroller.position()))
+      monster.setAggressive(true)
       mcontroller.controlFly(toPosition)
       rangedAttack.aim({0,0}, world.distance(self.targetPosition, mcontroller.position()))
       rangedAttack.fireContinuous()
     else
       rangedAttack.stopFiring()
+      monster.setAggressive(false)
     end
   else
     status.addEphemeralEffect("invulnerable")

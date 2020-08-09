@@ -96,7 +96,7 @@
                           "type": {"value": "Special"}
                         }
                       },
-					  {
+                      {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -112,88 +112,88 @@
                           "time": {"value": 0.8}
                         }
                       },
-					  {
-            					    "title": "spawnProjectile",
-            					    "type": "action",
-            					    "name": "spawnProjectile",
-            					    "parameters": {
-            					      "aimVector": {"value": [1, 0]},
-            					      "angle": {"value": 0},
-            					      "offset": {"value": [0, 0]},
-            					      "position": {"key": "self"},
-            					      "projectileType": {"value": "invisibleprojectile"},
-									  "projectileConfig": {
-									    "value": {
-									      "power": 0,
-										  "piercing": true,
-										  "damageTeam": {"type": "enemy"},
-										  "timeToLive": 0,
-										  "actionOnReap": [
-										    {
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [30, 30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
-											{
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [30, -30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
-											{
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [-30, 30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
-                                            {
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [-30, -30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											}
-										  ]
-									    }
-									  }
-            						}
-            					  },
+                      {
+                        "title": "spawnProjectile",
+                        "type": "action",
+                        "name": "spawnProjectile",
+                        "parameters": {
+                          "aimVector": {"value": [1, 0]},
+                          "angle": {"value": 0},
+                          "offset": {"value": [0, 0]},
+                          "position": {"key": "self"},
+                          "projectileType": {"value": "invisibleprojectile"},
+                          "projectileConfig": {
+                            "value": {
+                              "power": 0,
+                              "piercing": true,
+                              "damageTeam": {"type": "enemy"},
+                              "timeToLive": 0,
+                              "actionOnReap": [
+                                {
+                                  "action": "projectile",
+                                  "type": "invisibleprojectile",
+                                  "offset": [30, 30],
+                                  "config": {
+                                    "timeToLive": 0,
+                                    "actionOnReap": [
+                                      {
+                                        "action": "spawnmonster",
+                                        "type": "shieldcore_es",
+                                        "level": 6
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "action": "projectile",
+                                  "type": "invisibleprojectile",
+                                  "offset": [30, -30],
+                                  "config": {
+                                    "timeToLive": 0,
+                                    "actionOnReap": [
+                                      {
+                                        "action": "spawnmonster",
+                                        "type": "shieldcore_es",
+                                        "level": 6
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "action": "projectile",
+                                  "type": "invisibleprojectile",
+                                  "offset": [-30, 30],
+                                  "config": {
+                                    "timeToLive": 0,
+                                    "actionOnReap": [
+                                      {
+                                        "action": "spawnmonster",
+                                        "type": "shieldcore_es",
+                                        "level": 6
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "action": "projectile",
+                                  "type": "invisibleprojectile",
+                                  "offset": [-30, -30],
+                                  "config": {
+                                    "timeToLive": 0,
+                                    "actionOnReap": [
+                                      {
+                                        "action": "spawnmonster",
+                                        "type": "shieldcore_es",
+                                        "level": 6
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
                       {
                         "title": "setAggressive",
                         "type": "action",
@@ -221,491 +221,491 @@
                               "type": "composite",
                               "name": "dynamic",
                               "parameters": {
-							    "fail": {"value": 1},
+                                "fail": {"value": 1},
                                 "success": {"value": -1}
-							  },
-							  "children": [
-							    {
-								  "title": "repeater",
-								  "type": "decorator",
-								  "name": "repeater",
-								  "parameters": {
-								    "maxLoops": {"value": -1},
-									"untilSuccess": {"value": false}
-								  },
-								  "child": {
-								    "title": "sequence",
-									"type": "composite",
-									"name": "sequence",
-									"parameters": {},
-									"children": [
-									  {
-        							    "title": "addEphemeralEffect",
-        							    "type": "action",
-        							    "name": "addEphemeralEffect",
-        							    "parameters": {
-        							      "name": {"value": "invulnerable"}
-        							    }
-        							  },
-									  {
-									    "title": "timer",
-									    "type": "action",
-									    "name": "timer",
-									    "parameters": {
-									      "time": {"value": 0.25}
-									    }
-									  },
-									  {
-            						    "title": "spawnProjectile",
-            						    "type": "action",
-            						    "name": "spawnProjectile",
-            						    "parameters": {
-            						      "aimVector": {"value": [1, 0]},
-            						      "angle": {"value": 0},
-            						      "offset": {"value": [0, 0]},
-            						      "position": {"key": "self"},
-            						      "projectileType": {"value": "invisibleprojectile"},
-										  "projectileConfig": {
-										    "value": {
-										      "power": 0,
-											  "piercing": true,
-											  "damageTeam": {"type": "enemy"},
-											  "timeToLive": 0,
-											  "actionOnReap": [
-											    {
-											      "action": "projectile",
-												  "type": "railgunlightning",
-												  "offsetRange": [-40, 35, 40, 35],
-												  "direction" : [0, -1],
-												  "config": {
-												    "speed": 100,
-												    "damageKind": "megadamageelectric",
-												    "power": 100,
-													"periodicActions": [
-													  {
-													    "time": 0,
-														"repeat": false,
-													    "action": "sound",
-													    "options": ["/sfx/gun/elemental_lance.ogg"]
-													  }
-													]
-												  }
-											    }
-											  ]
-										    }
-										  }
-            						    }
-            						  },
-								{
-		                      "title": "inverter",
-                              "type": "decorator",
-                              "name": "inverter",
-                              "parameters": {},
-                              "child": {
-                                "title": "findMonster",
-                                "type": "action",
-                                "name": "findMonster",
-                                "parameters": {
-                                  "orderBy": {"value": "nearest"},
-                                  "position": {"key": "self"},
-                                  "range": {"value": 100},
-                                  "type": {"value": "shieldcore_es"}
-                                }
-                              }
-	                        },
-							{
-							  "title": "setAnimationState",
-							  "type": "action",
-							  "name": "setAnimationState",
-							  "parameters": {
-							    "state": {"value": "invisible"},
-                                "type": {"value": "shell"}
-							  }
-							},
-							{
-							  "title": "spawnProjectile",
-							  "type": "action",
-							  "name": "spawnProjectile",
-							  "parameters": {
-							    "aimVector": {"value": [1, 0]},
-								"angle": {"value": 0},
-								"offset": {"value": [0, 0]},
-								"position": {"key": "self"},
-								"projectileType": {"value": "invisibleprojectile"},
-								"projectileConfig": {
-								  "value": {
-								    "power": 0,
-									"piercing": true,
-									"damageType": "nodamage",
-									"timeToLive": 0,
-									"actionOnReap": [
-									  {
-									    "action": "loop",
-										"count": 20,
-										"body": [
-										  {
-										    "action": "option",
-											"options": [
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard1.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  },
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard2.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  },
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard3.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  },
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard4.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  },
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard5.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  },
-											  {
-											    "action": "particle",
-												"specification": {
-												  "type": "textured",
-												  "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard6.png",
-												  "position": [0, 0],
-												  "layer": "front",
-												  "timeToLive": 0.0,
-												  "destructionTime": 0.2,
-												  "finalVelocity": [0, 0],
-												  "destructionAction": "shrink",
-            									  "variance": {
-            									    "position": [3.0, 3.0],
-            									    "initialVelocity": [5, 5]
-												  }
-												}
-											  }
-											]
-										  }
-										]
-									  },
-									  {
-									    "action": "sound",
-										"options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
-									  },
-									  {
-									    "action": "sound",
-										"options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
-									  },
-									  {
-									    "action": "sound",
-										"options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
-									  }
-									]
-								  }
-								}
-							  }
-							},
-							{
-        					  "title": "removeEphemeralEffect",
-        					  "type": "action",
-        					  "name": "removeEphemeralEffect",
-        					  "parameters": {
-        					    "name": {"value": "invulnerable"}
-        					  }
-        					},
-                            {
-                              "title": "repeater",
-                              "type": "decorator",
-                              "name": "repeater",
-                              "parameters": {
-							    "maxLoops": {"value": 1},
-								"untilSuccess": {"value": false}
-							  },
-							  "child": {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-            					    "title": "spawnProjectile",
-            					    "type": "action",
-            					    "name": "spawnProjectile",
-            					    "parameters": {
-            					      "aimVector": {"value": [1, 0]},
-            					      "angle": {"value": 0},
-            					      "offset": {"value": [0, 0]},
-            					      "position": {"key": "self"},
-            					      "projectileType": {"value": "invisibleprojectile"},
-									  "projectileConfig": {
-									    "value": {
-									      "power": 0,
-										  "piercing": true,
-										  "damageTeam": {"type": "enemy"},
-										  "timeToLive": 10,
-										  "periodicActions": [
-										    {
-											  "time": 0.25,
-											  "action": "loop",
-											  "count": 20,
-											  "body": [
-										        {
-										          "action": "projectile",
-											      "type": "lightning",
-											      "fuzzAngle": 180,
-											      "config": {
-											        "speed": 40,
-											        "damageKind": "megadamageelectric",
-											        "power": 100,
-													"timeToLive": 2.0
-											      }
-										        }
-											  ]
-											},
-											{
-											  "time": 0.25,
-											  "action": "sound",
-											  "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
-											}
-										  ]
-									    }
-									  }
-            						}
-            					  },
-								  {
-								    "title": "succeeder",
-									"type": "decorator",
-									"name": "succeeder",
-									"parameters": {},
-									"child": {
-								      "title": "sequence",
-									  "type": "composite",
-									  "name": "sequence",
-									  "parameters": {},
-									  "children": [
-									    {
-                                	      "title": "inverter",
-                                	      "type": "decorator",
-                                	      "name": "inverter",
-                                	      "parameters": {},
-                                	      "child": {
-                                	        "title": "resourcePercentage",
-                                	        "type": "action",
-                                	        "name": "resourcePercentage",
-                                	        "parameters": {
-                                	          "percentage": {"value": 0.5},
-                                	          "resource": {"value": "health"}
-                                	        }
-                                	      }
-                                	    },
-									    {
-            						      "title": "spawnProjectile",
-            						      "type": "action",
-            						      "name": "spawnProjectile",
-            						      "parameters": {
-            						        "aimVector": {"value": [1, 0]},
-            						        "angle": {"value": 0},
-            						        "offset": {"value": [0, 0]},
-            						        "position": {"key": "self"},
-            						        "projectileType": {"value": "invisibleprojectile"},
-									  	    "projectileConfig": {
-									  	      "value": {
-									  	        "power": 0,
-									  		    "piercing": true,
-									  		    "damageTeam": {"type": "enemy"},
-									  		    "timeToLive": 10,
-									  		    "periodicActions": [
-									  		      {
-									  			    "time": 0.5,
-									  			    "action": "projectile",
-									  			    "type": "homingelectricball",
-													"config": {
-													  "damageKind": "megadamageelectric"
-													}
-									  			  },
-									  			  {
-									  			    "time": 0.5,
-									  			    "action": "sound",
-									  			    "options": ["/sfx/npc/boss/ancient_explosion.ogg"]
-									  			  }
-									  		    ]
-									  	      }
-									  	    }
-            						  	  }
-            						    }
-									  ]
-								    }
-								  }
-								]
-							  }
-                            },
-								  {
-								    "title": "timer",
-									"type": "action",
-									"name": "timer",
-									"parameters": {
-									  "time": {"value": 10}
-									}
-								  },
-							{
-							  "title": "setAnimationState",
-							  "type": "action",
-							  "name": "setAnimationState",
-							  "parameters": {
-							    "state": {"value": "reappear"},
-                                "type": {"value": "shell"}
-							  }
-							},
-							{
-            					    "title": "spawnProjectile",
-            					    "type": "action",
-            					    "name": "spawnProjectile",
-            					    "parameters": {
-            					      "aimVector": {"value": [1, 0]},
-            					      "angle": {"value": 0},
-            					      "offset": {"value": [0, 0]},
-            					      "position": {"key": "self"},
-            					      "projectileType": {"value": "invisibleprojectile"},
-									  "projectileConfig": {
-									    "value": {
-									      "power": 0,
-										  "piercing": true,
-										  "damageTeam": {"type": "enemy"},
-										  "timeToLive": 0,
-										  "actionOnReap": [
-										    {
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [30, 30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
-											{
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [30, -30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
-											{
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [-30, 30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											},
+                              },
+                              "children": [
+                                {
+                                  "title": "repeater",
+                                  "type": "decorator",
+                                  "name": "repeater",
+                                  "parameters": {
+                                    "maxLoops": {"value": -1},
+                                    "untilSuccess": {"value": false}
+                                  },
+                                  "child": {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "addEphemeralEffect",
+                                        "type": "action",
+                                        "name": "addEphemeralEffect",
+                                        "parameters": {
+                                          "name": {"value": "invulnerable"}
+                                        }
+                                      },
+                                      {
+                                        "title": "timer",
+                                        "type": "action",
+                                        "name": "timer",
+                                        "parameters": {
+                                          "time": {"value": 0.25}
+                                        }
+                                      },
+                                      {
+                                        "title": "spawnProjectile",
+                                        "type": "action",
+                                        "name": "spawnProjectile",
+                                        "parameters": {
+                                          "aimVector": {"value": [1, 0]},
+                                          "angle": {"value": 0},
+                                          "offset": {"value": [0, 0]},
+                                          "position": {"key": "self"},
+                                          "projectileType": {"value": "invisibleprojectile"},
+                                          "projectileConfig": {
+                                            "value": {
+                                              "power": 0,
+                                              "piercing": true,
+                                              "damageTeam": {"type": "enemy"},
+                                              "timeToLive": 0,
+                                              "actionOnReap": [
+                                                {
+                                                  "action": "projectile",
+                                                  "type": "railgunlightning",
+                                                  "offsetRange": [-40, 35, 40, 35],
+                                                  "direction" : [0, -1],
+                                                  "config": {
+                                                    "speed": 100,
+                                                    "damageKind": "megadamageelectric",
+                                                    "power": 100,
+                                                    "periodicActions": [
+                                                      {
+                                                        "time": 0,
+                                                        "repeat": false,
+                                                        "action": "sound",
+                                                        "options": ["/sfx/gun/elemental_lance.ogg"]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "inverter",
+                                        "type": "decorator",
+                                        "name": "inverter",
+                                        "parameters": {},
+                                        "child": {
+                                          "title": "findMonster",
+                                          "type": "action",
+                                          "name": "findMonster",
+                                          "parameters": {
+                                            "orderBy": {"value": "nearest"},
+                                            "position": {"key": "self"},
+                                            "range": {"value": 100},
+                                            "type": {"value": "shieldcore_es"}
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "setAnimationState",
+                                        "type": "action",
+                                        "name": "setAnimationState",
+                                        "parameters": {
+                                          "state": {"value": "invisible"},
+                                          "type": {"value": "shell"}
+                                        }
+                                      },
+                                      {
+                                        "title": "spawnProjectile",
+                                        "type": "action",
+                                        "name": "spawnProjectile",
+                                        "parameters": {
+                                          "aimVector": {"value": [1, 0]},
+                                          "angle": {"value": 0},
+                                          "offset": {"value": [0, 0]},
+                                          "position": {"key": "self"},
+                                          "projectileType": {"value": "invisibleprojectile"},
+                                          "projectileConfig": {
+                                            "value": {
+                                              "power": 0,
+                                              "piercing": true,
+                                              "damageType": "nodamage",
+                                              "timeToLive": 0,
+                                              "actionOnReap": [
+                                                {
+                                                  "action": "loop",
+                                                  "count": 20,
+                                                  "body": [
+                                                    {
+                                                      "action": "option",
+                                                      "options": [
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard1.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard2.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard3.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard4.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard5.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "action": "particle",
+                                                          "specification": {
+                                                            "type": "textured",
+                                                            "image": "/monsters/boss/endgameguardian/electriccoreboss/shellshard6.png",
+                                                            "position": [0, 0],
+                                                            "layer": "front",
+                                                            "timeToLive": 0.0,
+                                                            "destructionTime": 0.2,
+                                                            "finalVelocity": [0, 0],
+                                                            "destructionAction": "shrink",
+                                                            "variance": {
+                                                              "position": [3.0, 3.0],
+                                                              "initialVelocity": [5, 5]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "action": "sound",
+                                                  "options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
+                                                },
+                                                {
+                                                  "action": "sound",
+                                                  "options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
+                                                },
+                                                {
+                                                  "action": "sound",
+                                                  "options": ["/sfx/projectiles/throwingboulder_impact1.ogg"]
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "title": "removeEphemeralEffect",
+                                        "type": "action",
+                                        "name": "removeEphemeralEffect",
+                                        "parameters": {
+                                          "name": {"value": "invulnerable"}
+                                        }
+                                      },
+                                      {
+                                        "title": "repeater",
+                                        "type": "decorator",
+                                        "name": "repeater",
+                                        "parameters": {
+                                          "maxLoops": {"value": 1},
+                                          "untilSuccess": {"value": false}
+                                        },
+                                        "child": {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
                                             {
-											  "action": "projectile",
-											  "type": "invisibleprojectile",
-											  "offset": [-30, -30],
-											  "config": {
-											    "timeToLive": 0,
-												"actionOnReap": [
-												  {
-												    "action": "spawnmonster",
-													"type": "shieldcore_es",
-													"level": 6
-												  }
-												]
-											  }
-											}
-										  ]
-									    }
-									  }
-            						}
-            					  }
-									]
-								  }
-								}
-							  ]
+                                              "title": "spawnProjectile",
+                                              "type": "action",
+                                              "name": "spawnProjectile",
+                                              "parameters": {
+                                                "aimVector": {"value": [1, 0]},
+                                                "angle": {"value": 0},
+                                                "offset": {"value": [0, 0]},
+                                                "position": {"key": "self"},
+                                                "projectileType": {"value": "invisibleprojectile"},
+                                                "projectileConfig": {
+                                                  "value": {
+                                                    "power": 0,
+                                                    "piercing": true,
+                                                    "damageTeam": {"type": "enemy"},
+                                                    "timeToLive": 10,
+                                                    "periodicActions": [
+                                                      {
+                                                        "time": 0.25,
+                                                        "action": "loop",
+                                                        "count": 20,
+                                                        "body": [
+                                                          {
+                                                            "action": "projectile",
+                                                            "type": "lightning",
+                                                            "fuzzAngle": 180,
+                                                            "config": {
+                                                              "speed": 40,
+                                                              "damageKind": "megadamageelectric",
+                                                              "power": 100,
+                                                              "timeToLive": 2.0
+                                                            }
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "time": 0.25,
+                                                        "action": "sound",
+                                                        "options": ["/sfx/gun/pulsecannon_blast1.ogg"]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "title": "succeeder",
+                                              "type": "decorator",
+                                              "name": "succeeder",
+                                              "parameters": {},
+                                              "child": {
+                                                "title": "sequence",
+                                                "type": "composite",
+                                                "name": "sequence",
+                                                "parameters": {},
+                                                "children": [
+                                                  {
+                                                    "title": "inverter",
+                                                    "type": "decorator",
+                                                    "name": "inverter",
+                                                    "parameters": {},
+                                                    "child": {
+                                                      "title": "resourcePercentage",
+                                                      "type": "action",
+                                                      "name": "resourcePercentage",
+                                                      "parameters": {
+                                                        "percentage": {"value": 0.5},
+                                                        "resource": {"value": "health"}
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "title": "spawnProjectile",
+                                                    "type": "action",
+                                                    "name": "spawnProjectile",
+                                                    "parameters": {
+                                                      "aimVector": {"value": [1, 0]},
+                                                      "angle": {"value": 0},
+                                                      "offset": {"value": [0, 0]},
+                                                      "position": {"key": "self"},
+                                                      "projectileType": {"value": "invisibleprojectile"},
+                                                        "projectileConfig": {
+                                                          "value": {
+                                                            "power": 0,
+                                                            "piercing": true,
+                                                            "damageTeam": {"type": "enemy"},
+                                                            "timeToLive": 10,
+                                                            "periodicActions": [
+                                                              {
+                                                                "time": 0.5,
+                                                                "action": "projectile",
+                                                                "type": "homingelectricball",
+                                                              "config": {
+                                                                "damageKind": "megadamageelectric"
+                                                              }
+                                                              },
+                                                              {
+                                                                "time": 0.5,
+                                                                "action": "sound",
+                                                                "options": ["/sfx/npc/boss/ancient_explosion.ogg"]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "title": "timer",
+                                        "type": "action",
+                                        "name": "timer",
+                                        "parameters": {
+                                          "time": {"value": 10}
+                                        }
+                                      },
+                                      {
+                                        "title": "setAnimationState",
+                                        "type": "action",
+                                        "name": "setAnimationState",
+                                        "parameters": {
+                                          "state": {"value": "reappear"},
+                                          "type": {"value": "shell"}
+                                        }
+                                      },
+                                      {
+                                        "title": "spawnProjectile",
+                                        "type": "action",
+                                        "name": "spawnProjectile",
+                                        "parameters": {
+                                          "aimVector": {"value": [1, 0]},
+                                          "angle": {"value": 0},
+                                          "offset": {"value": [0, 0]},
+                                          "position": {"key": "self"},
+                                          "projectileType": {"value": "invisibleprojectile"},
+                                          "projectileConfig": {
+                                            "value": {
+                                              "power": 0,
+                                              "piercing": true,
+                                              "damageTeam": {"type": "enemy"},
+                                              "timeToLive": 0,
+                                              "actionOnReap": [
+                                                {
+                                                  "action": "projectile",
+                                                  "type": "invisibleprojectile",
+                                                  "offset": [30, 30],
+                                                  "config": {
+                                                    "timeToLive": 0,
+                                                    "actionOnReap": [
+                                                      {
+                                                        "action": "spawnmonster",
+                                                        "type": "shieldcore_es",
+                                                        "level": 6
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                {
+                                                  "action": "projectile",
+                                                  "type": "invisibleprojectile",
+                                                  "offset": [30, -30],
+                                                  "config": {
+                                                    "timeToLive": 0,
+                                                    "actionOnReap": [
+                                                      {
+                                                        "action": "spawnmonster",
+                                                        "type": "shieldcore_es",
+                                                        "level": 6
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                {
+                                                  "action": "projectile",
+                                                  "type": "invisibleprojectile",
+                                                  "offset": [-30, 30],
+                                                  "config": {
+                                                    "timeToLive": 0,
+                                                    "actionOnReap": [
+                                                      {
+                                                        "action": "spawnmonster",
+                                                        "type": "shieldcore_es",
+                                                        "level": 6
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                {
+                                                  "action": "projectile",
+                                                  "type": "invisibleprojectile",
+                                                  "offset": [-30, -30],
+                                                  "config": {
+                                                    "timeToLive": 0,
+                                                    "actionOnReap": [
+                                                      {
+                                                        "action": "spawnmonster",
+                                                        "type": "shieldcore_es",
+                                                        "level": 6
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           ]
                         }

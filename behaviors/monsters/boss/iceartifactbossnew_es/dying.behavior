@@ -38,13 +38,13 @@
           "type": {"value": "beam"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-		  "sound": {"value": "dying"}
-		}
+          "sound": {"value": "dying"}
+        }
       },
       {
         "title": "resetTransformationGroup",
@@ -62,7 +62,7 @@
           "time": {"value": 1.35}
         }
       },
-	  {
+      {
         "title": "burstParticleEmitter",
         "type": "action",
         "name": "burstParticleEmitter",
@@ -78,7 +78,7 @@
           "time": {"value": 0.3}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -87,13 +87,13 @@
           "type": {"value": "body"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-		  "sound": {"value": "parasitedeath"}
-		}
+          "sound": {"value": "parasitedeath"}
+        }
       },
       {
         "title": "timer",

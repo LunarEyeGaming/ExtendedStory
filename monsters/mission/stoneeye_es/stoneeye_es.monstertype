@@ -17,7 +17,9 @@
 
     "behavior" : "eyesentry_es",
 
-    "behaviorConfig" : {},
+    "behaviorConfig" : {
+      "projectileConfig" : {"onlyHitTerrain" : true}
+    },
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",

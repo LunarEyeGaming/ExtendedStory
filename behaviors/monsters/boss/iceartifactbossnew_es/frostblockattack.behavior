@@ -15,9 +15,9 @@
   ],
   "parameters": {
     "leftfistId": 0,
-	"rightfistId": 0,
-	"target": 123,
-	"sourceId": 123
+    "rightfistId": 0,
+    "target": 123,
+    "sourceId": 123
   },
   "root": {
     "title": "sequence",
@@ -25,7 +25,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -42,7 +42,7 @@
           "time": {"value": 1.0}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -54,7 +54,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -66,7 +66,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -78,7 +78,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -90,7 +90,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -102,7 +102,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -114,7 +114,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -126,7 +126,7 @@
           "scalePower": {"value": true}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -138,29 +138,29 @@
           "scalePower": {"value": true}
         }
       },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "frostblock1"}
-		},
-		"output": {
-		  "entity": "frost_block1"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "frostblock2"}
-		},
-		"output": {
-		  "entity": "frost_block2"
-		}
-	  },
-	  {
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "frostblock1"}
+        },
+        "output": {
+          "entity": "frost_block1"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "frostblock2"}
+        },
+        "output": {
+          "entity": "frost_block2"
+        }
+      },
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -169,7 +169,7 @@
           "message": {"value": "activate"}
         }
       },
-	  {
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -178,99 +178,99 @@
           "message": {"value": "activate"}
         }
       },
-	  {
+      {
         "title": "translateTransformationGroup",
         "type": "action",
         "name": "translateTransformationGroup",
         "parameters": {
           "transformationGroup": {"value": "particle"},
-		  "offset": {"value": [0, -18]}
+          "offset": {"value": [0, -18]}
         }
       },
-	  {
-		"title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-			"title": "timer",
-			"type": "action",
-			"name": "timer",
-			"parameters": {
-			  "time": {"value": 20}
-			}
-		  },
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-        	      "title": "burstParticleEmitter",
-        	      "type": "action",
-        	      "name": "burstParticleEmitter",
-        	      "parameters": {
-        	        "emitter": {"value": "shrinkingring"}
-        	      }
-        	    },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.4}
-				  }
-				},
-	    	    {
-        	      "title": "spawnProjectile",
-        	      "type": "action",
-        	      "name": "spawnProjectile",
-        	      "parameters": {
-        	        "aimVector": {"value": [1, 0]},
-        	        "offset": {"value": [0, -22]},
-        	        "projectileConfig": {"value": {"speed": 100, "bounces": 0, "power" : 40}},
-        	        "projectileType": {"value": "spikeballice_es"},
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 20}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "burstParticleEmitter",
+                  "type": "action",
+                  "name": "burstParticleEmitter",
+                  "parameters": {
+                    "emitter": {"value": "shrinkingring"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.4}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, -22]},
+                    "projectileConfig": {"value": {"speed": 100, "bounces": 0, "power" : 40}},
+                    "projectileType": {"value": "spikeballice_es"},
                     "scalePower": {"value": true}
-        	      }
-        	    },
-	    	    {
-        	      "title": "spawnProjectile",
-        	      "type": "action",
-        	      "name": "spawnProjectile",
-        	      "parameters": {
-        	        "aimVector": {"value": [-1, 0]},
-        	        "offset": {"value": [0, -22]},
-        	        "projectileConfig": {"value": {"speed": 100, "bounces": 0, "power" : 40}},
-        	        "projectileType": {"value": "spikeballice_es"},
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [-1, 0]},
+                    "offset": {"value": [0, -22]},
+                    "projectileConfig": {"value": {"speed": 100, "bounces": 0, "power" : 40}},
+                    "projectileType": {"value": "spikeballice_es"},
                     "scalePower": {"value": true}
-        	      }
-        	    },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 1}
-				  }
-				}
-			  ]
-			}
-		  }
-		]
-	  },
-	  {
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 1}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
         "title": "resetTransformationGroup",
         "type": "action",
         "name": "resetTransformationGroup",
@@ -278,7 +278,7 @@
           "transformationGroup": {"value": "particle"}
         }
       },
-	  {
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -287,7 +287,7 @@
           "message": {"value": "deactivate"}
         }
       },
-	  {
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -296,14 +296,14 @@
           "message": {"value": "deactivate"}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 2.0}
-		}
-	  }
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      }
     ]
   }
 }

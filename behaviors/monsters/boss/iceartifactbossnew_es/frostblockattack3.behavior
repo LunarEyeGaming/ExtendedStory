@@ -18,7 +18,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -35,15 +35,15 @@
           "time": {"value": 0.75}
         }
       },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "spawn"},
-		  "speed": {"value": 50}
-		}
-	  },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "speed": {"value": 50}
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",
@@ -52,7 +52,7 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
@@ -60,15 +60,15 @@
           "time": {"value": 0.35}
         }
       },
-	  {
-		"title": "burstParticleEmitter",
-		"type": "action",
-		"name": "burstParticleEmitter",
-		"parameters": {
-		  "emitter": {"value": "coreburst"}
-		}
-	  },
-	  {
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "coreburst"}
+        }
+      },
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
@@ -76,7 +76,7 @@
           "time": {"value": 0.4}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -85,10 +85,10 @@
           "offset": {"value": [53, 0]},
           "projectileConfig": {"value": {}},
           "projectileType": {"value": "frostblockshooting_windup"},
-		  "position": {"key": "spawn"}
+          "position": {"key": "spawn"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -97,7 +97,7 @@
           "offset": {"value": [-53, 0]},
           "projectileConfig": {"value": {}},
           "projectileType": {"value": "frostblockshooting_windup2"},
-		  "position": {"key": "spawn"}
+          "position": {"key": "spawn"}
         }
       },
       {
@@ -115,96 +115,96 @@
         "parameters": {
           "maxLoops": {"value": 5}
         },
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [-1, 0]},
-    	        "offset": {"value": [53, 19]},
-    	        "projectileConfig": {
-				  "value": {
-				    "timeToLive": 2.65
-				  }
-				},
-    	        "projectileType": {"value": "frostblockshooting_es"},
-				"position": {"key": "spawn"}
-    	      }
-    	    },
-			{
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [1, 0]},
-    	        "offset": {"value": [-53, -19]},
-    	        "projectileConfig": {
-				  "value": {
-				    "timeToLive": 2.65
-				  }
-				},
-    	        "projectileType": {"value": "frostblockshooting_es"},
-				"position": {"key": "spawn"}
-    	      }
-    	    },
-    	    {
-    	      "title": "timer",
-    	      "type": "action",
-    	      "name": "timer",
-    	      "parameters": {
-    	        "time": {"value": 2.65}
-    	      }
-    	    },
-			{
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, -1]},
-    	        "offset": {"value": [-53, 19]},
-    	        "projectileConfig": {
-				  "value": {
-				    "timeToLive": 0.95
-				  }
-				},
-    	        "projectileType": {"value": "frostblockshooting_es"},
-				"position": {"key": "spawn"}
-    	      }
-    	    },
-			{
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, 1]},
-    	        "offset": {"value": [53, -19]},
-    	        "projectileConfig": {
-				  "value": {
-				    "timeToLive": 0.95
-				  }
-				},
-    	        "projectileType": {"value": "frostblockshooting_es"},
-				"position": {"key": "spawn"}
-    	      }
-    	    },
-    	    {
-    	      "title": "timer",
-    	      "type": "action",
-    	      "name": "timer",
-    	      "parameters": {
-    	        "time": {"value": 0.95}
-    	      }
-    	    }
-		  ]
-		}
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [-1, 0]},
+                "offset": {"value": [53, 19]},
+                "projectileConfig": {
+                  "value": {
+                    "timeToLive": 2.65
+                  }
+                },
+                "projectileType": {"value": "frostblockshooting_es"},
+                "position": {"key": "spawn"}
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [1, 0]},
+                "offset": {"value": [-53, -19]},
+                "projectileConfig": {
+                  "value": {
+                    "timeToLive": 2.65
+                  }
+                },
+                "projectileType": {"value": "frostblockshooting_es"},
+                "position": {"key": "spawn"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 2.65}
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, -1]},
+                "offset": {"value": [-53, 19]},
+                "projectileConfig": {
+                  "value": {
+                    "timeToLive": 0.95
+                  }
+                },
+                "projectileType": {"value": "frostblockshooting_es"},
+                "position": {"key": "spawn"}
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, 1]},
+                "offset": {"value": [53, -19]},
+                "projectileConfig": {
+                  "value": {
+                    "timeToLive": 0.95
+                  }
+                },
+                "projectileType": {"value": "frostblockshooting_es"},
+                "position": {"key": "spawn"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.95}
+              }
+            }
+          ]
+        }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -213,10 +213,10 @@
           "offset": {"value": [53, 19]},
           "projectileConfig": {"value": {"timeToLive": 0}},
           "projectileType": {"value": "frostblockidle_es"},
-		  "position": {"key": "spawn"}
+          "position": {"key": "spawn"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -225,17 +225,17 @@
           "offset": {"value": [-53, -19]},
           "projectileConfig": {"value": {"timeToLive": 0}},
           "projectileType": {"value": "frostblockidle_es"},
-		  "position": {"key": "spawn"}
+          "position": {"key": "spawn"}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 2.0}
-		}
-	  }
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      }
     ]
   }
 }

@@ -2462,7 +2462,7 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1576,
+                 "x":1568,
                  "y":1856
                 }, 
                 {
@@ -3699,7 +3699,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"fireTime\" : 2, \"projectile\" : \"frostburnfireballsmall_es\", \"projectileConfig\" : { \"speed\" : 50 } }"
+                     "parameters":"{ \"fireTime\" : 2, \"projectile\" : \"frostburnfireballsmall_es\", \"projectileConfig\" : { \"speed\" : 50, \"power\" : 20 } }"
                     },
                  "propertytypes":
                     {

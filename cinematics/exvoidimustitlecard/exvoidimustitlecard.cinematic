@@ -10,7 +10,7 @@
         }
       ],
       "keyframes" : [
-		{
+        {
           "timecode" : 0,
           "zoom" : 200,
           "alpha" : 0,
@@ -36,16 +36,16 @@
         }
       ]
     },
-	{
-	  "startTime" : 1.5,
-	  "endTime" : 7,
+    {
+      "startTime" : 1.5,
+      "endTime" : 7,
       "drawables" : [
         {
           "image" : "/cinematics/exvoidimustitlecard/part1.png"
         }
       ],
       "keyframes" : [
-		{
+        {
           "timecode" : 0,
           "zoom" : 1,
           "alpha" : 0,
@@ -71,16 +71,16 @@
         }
       ]
     },
-	{
-	  "startTime" : 3,
-	  "endTime" : 7,
+    {
+      "startTime" : 3,
+      "endTime" : 7,
       "drawables" : [
         {
           "image" : "/cinematics/exvoidimustitlecard/part2.png"
         }
       ],
       "keyframes" : [
-		{
+        {
           "timecode" : 0,
           "zoom" : 1,
           "alpha" : 0,
@@ -107,10 +107,5 @@
       ]
     }
   ],
-  "audio" : [
-    {
-      "timecode" : 8.5,
-      "resource" : "/music/silence.ogg"
-    }
-  ]
+  "audio" : [ ]
 }

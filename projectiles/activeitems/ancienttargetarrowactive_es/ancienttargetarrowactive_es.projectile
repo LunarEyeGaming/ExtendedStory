@@ -1,0 +1,50 @@
+{
+  "projectileName" : "ancienttargetarrowactive_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasma_sniper4.ogg" ]
+    },
+    {
+      "action" : "particle",
+      "time" : 0.01,
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/ancienttargetarrowactive_es/ancienttargetarrowactive.png",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "shrink",
+        "fullbright" : true
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/chargedancientarrowexplosion_es/chargedancientarrowexplosion_es.config"
+    }
+  ],
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 1,
+  "image" : "ancienttargetarrowactive.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "lightColor" : [130, 70, 160],
+  "fullbright" : true,
+  "timeToLive" : 10,
+  "damagePoly" : [ [0, 3], [1.5, 1.5], [3, 0], [1.5, -1.5], [0, -3], [-1.5, -1.5], [-3, 0], [-1.5, 1.5] ],
+  "power" : 20,
+  "knockback" : 10,
+  "knockbackDirectional" : true,
+  "damageKind" : "bow",
+  "homingDistance" : 20,
+  "rotationRate" : 4,
+  "trackingLimit" : 6.3
+}

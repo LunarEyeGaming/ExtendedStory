@@ -1,0 +1,117 @@
+{
+  "objectName" : "abyssswarmeyeegg_es",
+  "colonyTags" : ["dark"],
+  "rarity" : "Common",
+
+  "category" : "breakable",
+  "price" : 65,
+  "printable" : false,
+  "description" : "An orb that has a vague hint of danger.",
+  "shortdescription" : "Fertile Orb",
+  "race" : "generic",
+
+  "apexDescription" : "I should tread carefully around these orbs.",
+  "avianDescription" : "These orbs make me feel uneasy when I get close to them. I should avoid them.",
+  "floranDescription" : "Orb with eyesss. Floran musst avoid.",
+  "glitchDescription" : "Uneasy. This orb...I should stay away from it.",
+  "humanDescription" : "I don't feel comfortable near these orbs.",
+  "hylotlDescription" : "These orbs emit an unnamed aura of fear. Avoiding them would be ideal.",
+  "novakidDescription" : "I shouldn't touch this.",
+  
+  "lightColor" : [35, 19, 46],
+
+  "inventoryIcon" : "abyssswarmeyeegg.png:0",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeegg.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeegglit.png:<frame>" } ],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [-16, 0],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeegg.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeegglit.png:<frame>" } ],
+
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    },
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeeggleft.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeeggleftlit.png:<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, -16],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeeggright.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeeggrightlit.png:<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, -16],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeeggceiling.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeeggceilinglit.png:<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "imagePosition" : [-16, 0],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "abyssswarmeyeeggceiling.png:<frame>", "fullbright" : true }, { "image" : "abyssswarmeyeeggceilinglit.png:<frame>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [0, 0],
+      "frames" : 9,
+      "animationCycle" : 0.9,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "imagePosition" : [-16, 0],
+
+  "smashable" : true,
+  "smashSounds" : [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ],
+  "smashParticles" : [ { "count" : 5, "particle" : "tentacleshard" }, { "count" : 8, "particle" : "shadowsmoke" } ],
+
+  "scripts" : ["/objects/spawner/monsterspawner.lua"],
+  "spawner" : {
+    "monsterTypes" : ["abyssswarmeye2_es"], //type of monster to spawn (random from list)
+    "monsterParams" : { //additional parameters of spawned monster
+      "aggressive" : true
+    },
+    "position" : [0, 1], //relative position to spawn at
+    "positionVariance" : [2, 1], //[x,y] size of randomized spawn area, centered on position
+    "stock" : 6, //total number of spawns, -1 for infinite
+    "trigger" : "break",
+    "outOfSight" : false
+  }
+}

@@ -4,13 +4,13 @@
   "bounces" : 0,
   "timeToLive" : 5,
   "image" : "radiantcannonshot.png",
-  "damageKindImage" : "icon.png",
   "speed" : 100,
   "animationCycle" : 1,
   "lightColor" : [134, 110, 15],
   "frameNumber" : 1,
-  "power" : 50,
+  "power" : 4950,
   "damageKind" : "plasma",
+  "damageType" : "IgnoresDef",
   "fullbright" : true,
   
   "actionOnReap" : [

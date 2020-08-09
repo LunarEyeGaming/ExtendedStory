@@ -15,14 +15,14 @@
   "lightColor" : [27, 27, 27],
   "damageKind" : "abyss",
   "statusEffects" : [
-    "abysseffect"
+    {"effect" : "abysseffect", "duration" : 12}
   ],
   "hydrophobic" : false,
   "orientationLocked" : true,
   "actionOnReap" : [
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/abyssbubbleexplosion_es/abyssbubbleexplosion_es.config"
-	}
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/abyssbubbleexplosion_es/abyssbubbleexplosion_es.config"
+    }
   ]
 }

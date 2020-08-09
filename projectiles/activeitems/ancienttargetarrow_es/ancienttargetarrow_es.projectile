@@ -1,0 +1,56 @@
+{
+  "projectileName" : "ancienttargetarrow_es",
+  "physics" : "hover",
+  "bounces" : -1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [130, 70, 160],
+  "fullbright" : true,
+  "image" : "ancienttargetarrow.png",
+  "animationCycle" : 0.2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "config",
+      "file" : "/projectiles/activeitems/ancientarrow/fire.config"
+    }
+  ],
+  "foundTargetAction" : {},
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/impact_plasma.ogg" ]
+    },
+    {
+      "action" : "loop",
+      "count" : 2,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "ancientenergy1"
+        },
+        {
+          "action" : "particle",
+          "specification" : "ancientenergy2"
+        },
+        {
+          "action" : "particle",
+          "specification" : "ancientenergy3"
+        }
+      ]
+    }
+  ],
+  "power" : 50,
+  "speed" : 35,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "onlyHitTerrain" : true,
+
+  "scripts" : [ "ancienttargetarrow.lua" ],
+  "targetRadius" : 10,
+  "firedProjectile" : "ancienttargetarrowactive_es",
+  "firedProjectileConfig" : {}
+}

@@ -15,7 +15,7 @@
   "critBonus" : 5,
 
   "inventoryIcon" : [
-    { "image" : "ancientrifle.png:auto.1" }
+    { "image" : "ancientrifleicon.png" }
   ],
 
   "animation" : "ancientrifle.animation",
@@ -38,7 +38,7 @@
   },
 
   "baseOffset" : [1.0, 0.5],
-  "muzzleOffset" : [1.75, 0],
+  "muzzleOffset" : [2.5625, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 

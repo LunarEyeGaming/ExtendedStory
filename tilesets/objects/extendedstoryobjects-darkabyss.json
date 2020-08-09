@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":32,
+ "tilecount":42,
  "tileheight":64,
  "tileproperties":
     {
@@ -197,11 +197,81 @@
          "object":"abysseyedecor_es",
          "tilesetDirection":"right"
         },
+     "32":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abyssswarmeyeegg_es",
+         "tilesetDirection":"right"
+        },
+     "33":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abyssswarmeyeegg_es",
+         "tilesetDirection":"right"
+        },
+     "34":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abyssswarmeyeegg_es",
+         "tilesetDirection":"right"
+        },
+     "35":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abyssswarmeyeegg_es",
+         "tilesetDirection":"right"
+        },
+     "36":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
+     "37":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
+     "38":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
+     "39":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
      "4":
         {
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"abyssswarmurnmedium2_es",
+         "tilesetDirection":"right"
+        },
+     "40":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
+     "41":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-16",
+         "object":"abysssentrytimed_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -430,7 +500,77 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "32":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "33":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "34":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "35":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "36":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "37":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "38":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "39":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "40":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "41":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -634,11 +774,71 @@
          "imageheight":16,
          "imagewidth":16
         },
+     "32":
+        {
+         "image":"..\/images\/objects\/abyssswarmeyeegg.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "33":
+        {
+         "image":"..\/images\/objects\/abyssswarmeyeeggceiling.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "34":
+        {
+         "image":"..\/images\/objects\/abyssswarmeyeeggleft.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "35":
+        {
+         "image":"..\/images\/objects\/abyssswarmeyeeggright.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "36":
+        {
+         "image":"..\/images\/objects\/abysssentrytimed.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "37":
+        {
+         "image":"..\/images\/objects\/abysssentrytimedceiling.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "38":
+        {
+         "image":"..\/images\/objects\/abysssentrytimedceilingflipped.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
+     "39":
+        {
+         "image":"..\/images\/objects\/abysssentrytimedflipped.png",
+         "imageheight":16,
+         "imagewidth":32
+        },
      "4":
         {
          "image":"..\/images\/objects\/abyssswarmurnmedium2.png",
          "imageheight":16,
          "imagewidth":8
+        },
+     "40":
+        {
+         "image":"..\/images\/objects\/abysssentrytimedleft.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "41":
+        {
+         "image":"..\/images\/objects\/abysssentrytimedright.png",
+         "imageheight":32,
+         "imagewidth":16
         },
      "5":
         {

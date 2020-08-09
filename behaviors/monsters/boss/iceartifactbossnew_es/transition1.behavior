@@ -27,7 +27,7 @@
           "time": {"value": 0.75}
         }
       },
-	  {
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -36,7 +36,7 @@
           "message": {"value": "deactivate"}
         }
       },
-	  {
+      {
         "title": "sendEntityMessage",
         "type": "action",
         "name": "sendEntityMessage",
@@ -54,13 +54,13 @@
           "emitter": {"value": "glowparticles"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-		  "sound": {"value": "windup1"}
-		}
+          "sound": {"value": "windup1"}
+        }
       },
       {
         "title": "parallel",
@@ -90,7 +90,7 @@
           }
         ]
       },
-	  {
+      {
         "title": "setVelocity",
         "type": "action",
         "name": "setVelocity",
@@ -98,7 +98,7 @@
           "velocity": {"value": [0, -50]}
         }
       },
-	  {
+      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -107,7 +107,7 @@
           "success": {"value": -1}
         },
         "children": [
-		  {
+          {
             "title": "controlParameters",
             "type": "action",
             "name": "controlParameters",
@@ -135,7 +135,7 @@
               }
             ]
           }
-		]
+        ]
       },
       {
         "title": "setParticleEmitterActive",
@@ -146,22 +146,22 @@
           "emitter": {"value": "glowparticles"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-		  "sound": {"value": "slam"}
-		}
+          "sound": {"value": "slam"}
+        }
       },
-	  {
-		"title": "burstParticleEmitter",
-		"type": "action",
-		"name": "burstParticleEmitter",
-		"parameters": {
-		  "emitter": {"value": "slam"}
-		}
-	  },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "slam"}
+        }
+      },
       {
         "title": "setGlobalTag",
         "type": "action",
@@ -171,15 +171,15 @@
           "type": {"value": "phase"}
         }
       },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "spawn"},
-		  "speed": {"value": 50}
-		}
-	  },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "speed": {"value": 50}
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",

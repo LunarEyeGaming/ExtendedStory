@@ -62,9 +62,9 @@
           "cooldown" : 1.0,
           "parameters" : {
             "minimumRange" : 0,
-            "maximumRange" : 1000,
+            "maximumRange" : 0,
             "onGround" : false,
-            "windupTime" : 0.05,
+            "windupTime" : 0,
             "windupStopForce" : 500,
             "windupState" : "",
             "requireLineOfSight" : false

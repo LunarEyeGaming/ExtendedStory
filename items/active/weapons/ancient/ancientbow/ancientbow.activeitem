@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "tooltipKind" : "bow",
   "category" : "Ancient Bow",
-  "description" : "Best bow of all time.\n^green;Shoots heat-seeking arrows.",
+  "description" : "An antique yet powerful bow used to hunt monsters.",
   "shortdescription" : "^magenta;^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "ranged", "bow"],
@@ -47,7 +47,8 @@
     "projectileType" : "ancientarrow",
     "powerProjectileType" : "chargedancientarrow",
     "projectileParameters" : {
-      "power" : 20.5
+      "power" : 20.5,
+      "speed" : 90
     }
   },
 
@@ -56,8 +57,12 @@
     "name" : "Chaos Arrow",
     "energyPerShot" : 100,
     "drawSpeedMultiplier" : "constant",
-    "projectileType" : "chaosancientarrow",
-    "powerProjectileType" : "explosiveancientarrow"
+    "projectileType" : "ancienttargetarrow_es",
+    "powerProjectileType" : "ancientsentryarrowtele_es",
+    "projectileParameters" : {
+      "power" : 20.5,
+      "speed" : 50
+    }
   },
 
   "builder" : "/items/buildscripts/buildbow.lua"

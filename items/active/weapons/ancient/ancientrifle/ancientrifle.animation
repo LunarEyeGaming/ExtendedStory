@@ -35,15 +35,15 @@
           "offset" : [0, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         }
-	  },
+      },
       "middleFullbright" : {
         "properties" : {
-		  "zLevel" : 1,
+          "zLevel" : 1,
           "centered" : true,
           "image" : "<partImage><paletteSwaps>",
           "offset" : [1, 0.5], // x offset is set dynamically
           "transformationGroups" : ["weapon"],
-		  "fullbright" : true
+          "fullbright" : true
         }
       },
       "barrel" : {

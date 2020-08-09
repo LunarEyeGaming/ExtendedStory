@@ -1,7 +1,7 @@
 {
   "type" : "abyssabductoreye_es",
   "shortdescription" : "Abductor",
-  "description" : "Help me. I've been trapped...for years. Endless agony travels throughout my body. I'm nothing to anyone else. Free me from this curse. I have no voice to cry suffering.",
+  "description" : "nil",
   "categories" : [ "abyssabductoreye_es" ],
   "parts" : [ "body" ],
 
@@ -95,6 +95,12 @@
         "poisonStatusImmunity" : {
           "baseValue" : 1.0
         },
+        "abysseffectImmunity" : {
+          "baseValue" : 1.0
+        },
+        "ionizedImmunity" : {
+          "baseValue" : 1.0
+        },
         "specialStatusImmunity" : {
           "baseValue" : 1.0
         },
@@ -105,12 +111,6 @@
           "baseValue" : 1.0
         },
         "powerMultiplier" : {
-          "baseValue" : 1.0
-        },
-        "abysseffectImmunity" : {
-          "baseValue" : 1.0
-        },
-        "ionizedImmunity" : {
           "baseValue" : 1.0
         },
         "invulnerable" : {
