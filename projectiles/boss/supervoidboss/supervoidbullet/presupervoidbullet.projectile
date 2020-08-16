@@ -15,7 +15,8 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "supervoidbullet"
+      "type" : "supervoidbullet",
+      "inheritDamageFactor" : 1
     }
   ],
   "damageKind" : "plasma"

@@ -1,9 +1,7 @@
 {
   "type" : "abyssabductoreye_es",
-  "shortdescription" : "Abductor",
-  "description" : "nil",
   "categories" : [ "abyssabductoreye_es" ],
-  "parts" : [ "body" ],
+  "parts" : [ "body", "portal" ],
 
   "animation" : "abyssabductoreye_es.animation",
   "dropPools" : ["empty"],
@@ -18,6 +16,16 @@
     "behavior" : "abyssabductoreye_es",
 
     "behaviorConfig" : { },
+
+    "forceRegions" : {
+      "vacuum" : {
+        "type" : "DirectionalForceRegion",
+        "rectRegion" : [-5, -12, 5, 0],
+        "yTargetVelocity" : 20,
+        "controlForce" : 400,
+        "categoryWhitelist" : [ "player" ]
+      }
+    },
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
@@ -75,7 +83,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2000
+          "baseValue" : 1
         },
         "protection" : {
           "baseValue" : 0

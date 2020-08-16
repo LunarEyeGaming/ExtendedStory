@@ -8,8 +8,8 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":42,
- "tileheight":64,
+ "tilecount":43,
+ "tileheight":256,
  "tileproperties":
     {
      "0":
@@ -272,6 +272,13 @@
          "imagePositionX":"0",
          "imagePositionY":"-16",
          "object":"abysssentrytimed_es",
+         "tilesetDirection":"right"
+        },
+     "42":
+        {
+         "imagePositionX":"-128",
+         "imagePositionY":"-128",
+         "object":"giantabyssvortex_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -577,6 +584,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "42":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "imagePositionX":"string",
@@ -840,6 +854,12 @@
          "imageheight":32,
          "imagewidth":16
         },
+     "42":
+        {
+         "image":"..\/images\/objects\/giantabyssvortex.png",
+         "imageheight":256,
+         "imagewidth":256
+        },
      "5":
         {
          "image":"..\/images\/objects\/abyssswarmurnsmall1.png",
@@ -871,6 +891,6 @@
          "imagewidth":24
         }
     },
- "tilewidth":49,
+ "tilewidth":256,
  "type":"tileset"
 }

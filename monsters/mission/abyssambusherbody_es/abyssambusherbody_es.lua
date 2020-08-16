@@ -1,12 +1,11 @@
 function init()
-  monster.setDeathParticleBurst("deathPoof")
-  self.monsterDetect = ""
+  self.tetheredMonster = config.getParameter("tetheredMonster")
+  self.tetheredOffset = config.getParameter("tetheredOffset")
+  self.tetheredParameters = copy(config.getParameter("tetheredParameters"))
+  self.tetheredParameters.behaviorConfig = {masterId = entity.id()}
+  self.tetheredParameters.level = monster.level()
 
-  self.masterId = config.getParameter("masterId")
-  self.minionIndex = config.getParameter("minionIndex")
-  self.defaultConcurrentCooldown = 1.5
-  self.concurrentCooldown = self.defaultConcurrentCooldown
-  self.projectileDamage = 40
+  monster.setDeathParticleBurst("deathPoof")
   if config.getParameter("uniqueId") then
     monster.setUniqueId(config.getParameter("uniqueId"))
   end
@@ -14,10 +13,11 @@ function init()
   if animator.hasSound("deathPuff") then
     monster.setDeathSound("deathPuff")
   end
+  
+
+  storage.tetheredId = world.spawnMonster(self.tetheredMonster, vec2.add(mcontroller.position(), self.tetheredOffset), self.tetheredParameters)
 
   message.setHandler("despawn", despawn)
-
-  rangedAttack.loadConfig()
 end
 
 function shouldDie()
@@ -25,44 +25,8 @@ function shouldDie()
 end
 
 function update(dt)
-  if not entityCheck() then
-    util.trackTarget(80.0, 30.0)
-
-    if self.targetPosition ~= nil then
-      local toPosition = vec2.norm(world.distance(self.targetPosition, mcontroller.position()))
-      mcontroller.controlFly(toPosition)
-	  self.concurrentCooldown = math.max(0, self.concurrentCooldown - dt)
-      rangedAttack.aim({0,0}, world.distance(self.targetPosition, mcontroller.position()))
-      rangedAttack.fireContinuous()
-	  if self.concurrentCooldown == 0 then
-	    projDamage = self.projectileDamage * monster.level()
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {1, 0}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {-1, 0}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, 1}, false, {power = projDamage})
-	    world.spawnProjectile("fg_icicle", mcontroller.position(), entity.id(), {0, -1}, false, {power = projDamage})
-		self.concurrentCooldown = self.defaultConcurrentCooldown
-	  end
-    else
-      rangedAttack.stopFiring()
-    end
-  else
-    status.addEphemeralEffect("invulnerable")
-  end
-
-end
-
-function entityCheck()
-  if self.monsterDetect == "" then
-    return false
-  else
-    validEntities = 0
-    localEntities = world.entityQuery(mcontroller.position(), 200)
-	for _, entity in pairs(localEntities) do
-	  if world.monsterType(entity) == self.monsterDetect then
-	    validEntities = validEntities + 1
-	  end
-	end
-	return validEntities > 0
+  if not world.entityExists(storage.tetheredId) then
+    status.setResourcePercentage("health", 0)
   end
 end
 

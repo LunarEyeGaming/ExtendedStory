@@ -20,6 +20,16 @@
       "damageOnTouch" : true,
 
       "targetOnDamage" : false,
+      
+      "damageTakenActions" : [
+        {
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "idle2"
+          }
+        }
+      ],
 
       "deathActions" : [
         {

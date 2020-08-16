@@ -11,9 +11,17 @@
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
     "/scripts/actions/monster.lua",
-    "/scripts/actions/movement.lua"
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
   ],
   "parameters": {
+    "masterId": null,
+  
+    "windupTime": 0.3,
+    "ascendDelay": 0.33,
+    "cooldownTime": 2,
+    "tetherOffset": [0, 2],
+
     "ascendSpeed": 50
   },
   "root": {
@@ -76,8 +84,78 @@
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
               "targetOnDamage": {"value": true},
-              "targetOutOfSightTime": {"value": 5}
+              "targetOutOfSightTime": {"value": 2}
             }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "entityPosition",
+                "type": "action",
+                "name": "entityPosition",
+                "parameters": {
+                  "entity": {"key": "<masterId>"}
+                },
+                "output": {
+                  "position": "beamEnd"
+                }
+              },
+              {
+                "title": "distance",
+                "type": "action",
+                "name": "distance",
+                "parameters": {
+                  "from": {"key": "self"},
+                  "to": {"key": "beamEnd"}
+                },
+                "output": {
+                  "magnitude": "beamLength",
+                  "vector": "beamVector"
+                }
+              },
+              {
+                "title": "vecAngle",
+                "type": "action",
+                "name": "vecAngle",
+                "parameters": {
+                  "vector": {"key": "beamVector"}
+                },
+                "output": {
+                  "angle": "beamAngle"
+                }
+              },
+              {
+                "title": "resetTransformationGroup",
+                "type": "action",
+                "name": "resetTransformationGroup",
+                "parameters": {
+                  "transformationGroup": {"value": "tether"}
+                }
+              },
+              {
+                "title": "scaleTransformationGroup",
+                "type": "action",
+                "name": "scaleTransformationGroup",
+                "parameters": {
+                  "scale": {"value": ["beamLength", 1]},
+                  "transformationGroup": {"value": "tether"}
+                }
+              },
+              {
+                "title": "rotateTransformationGroup",
+                "type": "action",
+                "name": "rotateTransformationGroup",
+                "parameters": {
+                  "angle": {"key": "beamAngle"},
+                  "transformationGroup": {"value": "tether"},
+                  "rotationCenter": {"key": "<tetherOffset>"}
+                }
+              }
+            ]
           },
           {
             "title": "dynamic",
@@ -156,6 +234,23 @@
                           "parameters": {},
                           "children": [
                             {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "tele"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"key": "<windupTime>"}
+                              }
+                            },
+                            {
                               "title": "setDamageOnTouch",
                               "type": "action",
                               "name": "setDamageOnTouch",
@@ -222,6 +317,23 @@
                               ]
                             },
                             {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "bite"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "bite"}
+                              }
+                            },
+                            {
                               "title": "setDamageOnTouch",
                               "type": "action",
                               "name": "setDamageOnTouch",
@@ -282,7 +394,7 @@
                                       "type": "action",
                                       "name": "timer",
                                       "parameters": {
-                                        "time": {"value": 0.33}
+                                        "time": {"key": "<ascendDelay>"}
                                       }
                                     },
                                     {
@@ -300,6 +412,15 @@
                               ]
                             },
                             {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "reset2"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
                               "title": "setVelocity",
                               "type": "action",
                               "name": "setVelocity",
@@ -312,7 +433,7 @@
                               "type": "action",
                               "name": "timer",
                               "parameters": {
-                                "time": {"value": 2}
+                                "time": {"key": "<cooldownTime>"}
                               }
                             }
                           ]
@@ -339,6 +460,15 @@
                     }
                   },
                   {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "reset2"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
                     "title": "setVelocity",
                     "type": "action",
                     "name": "setVelocity",
@@ -347,20 +477,11 @@
                     }
                   },
                   {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "sleep"},
-                      "type": {"value": "body"}
-                    }
-                  },
-                  {
                     "title": "timer",
                     "type": "action",
                     "name": "timer",
                     "parameters": {
-                      "time": {"value": 0.5}
+                      "time": {"value": 9999}
                     }
                   }
                 ]

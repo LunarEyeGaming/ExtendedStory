@@ -9,10 +9,7 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
-    "leftEyeOffset": [-2.5, 1],
-    "rightEyeOffset": [2.5, 1],
-    "progress": 0,
-    "maxAngle": 6.28
+    "progress": 0
   },
   "root": {
     "title": "sequence",
@@ -34,14 +31,14 @@
           "name": "sequence",
           "parameters": {},
           "children": [
-		    {
+            {
               "title": "rotateTransformationGroup",
               "type": "action",
               "name": "rotateTransformationGroup",
               "parameters": {
-			    "angle": {"key": "progress"},
-				"transformationGroup": {"value": "gun"}
-			  }
+                "angle": {"key": "progress"},
+                "transformationGroup": {"value": "gun"}
+              }
             },
             {
               "title": "timer",

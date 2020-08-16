@@ -18,7 +18,8 @@
     "behavior" : "eyesentry_es",
 
     "behaviorConfig" : {
-      "projectileConfig" : {"onlyHitTerrain" : true}
+      "projectileConfig" : {"onlyHitTerrain" : true},
+      "wakeTime" : 0.0
     },
 
     "knockoutTime" : 0,

@@ -5,49 +5,37 @@
         "priority" : 0,
         "default" : "idle",
         "states" : {
-          "wake" : {
-            "frames" : 6,
-            "cycle" : 0.5,
-            "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/kluextotem_wake2.ogg"
-            }
-          },
-          "sleep" : {
-            "frames" : 6,
-            "cycle" : 0.5,
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/kluextotem_sleep.ogg"
-            }
-          },
           "idle" : {
-            "frames" : 8,
-            "cycle" : 1.0,
-            "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/monsters/kluexsentry_fly_loop.ogg"
-            }
-          },
-          "fire" : {
-            "frames" : 8,
-            "cycle" : 0.7,
+            "frames" : 1,
+            "cycle" : 5,
             "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/kluexsentry_windup2.ogg",
-              "persistentSound" : "/sfx/npc/monsters/kluexsentry_fly_loop.ogg"
-            }
+            "transition" : "search"
           },
-          "slam" : {
-            "frames" : 10,
-            "cycle" : 1.0,
+          "search" : {
+            "frames" : 8,
+            "cycle" : 1.6,
             "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "immediateSound" : "/sfx/melee/charge_combo7.ogg",
-              "persistentSound" : "/sfx/npc/monsters/kluexsentry_fly_loop.ogg"
-            }
+            "transition" : "idle"
+          },
+          "tele" : {
+            "frames" : 4,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "attack"
+          },
+          "attack" : {},
+          "bite" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "reset1"
+          },
+          "reset1" : {},
+          "reset2" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
@@ -69,16 +57,113 @@
       "body" : {
         "properties" : {
           "transformationGroups" : [ "body" ],
-          "offset" : [0, 0.0],
+          "offset" : [0, 0],
+          "zLevel" : 0
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "search" : {
+              "properties" : {
+                "image" : "<partImage>:search.<frame>"
+              }
+            },
+            "tele" : {
+              "properties" : {
+                "image" : "<partImage>:tele.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:attack"
+              }
+            },
+            "bite" : {
+              "properties" : {
+                "image" : "<partImage>:bite"
+              }
+            },
+            "reset1" : {
+              "properties" : {
+                "image" : "<partImage>:reset1"
+              }
+            },
+            "reset2" : {
+              "properties" : {
+                "image" : "<partImage>:reset2.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+          "anchorPart" : "body",
+          "offset" : [0, 0],
           "zLevel" : 1,
-          "image" : "<partImage>"
+          "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "search" : {
+              "properties" : {
+                "image" : "<partImage>:search.<frame>"
+              }
+            },
+            "tele" : {
+              "properties" : {
+                "image" : "<partImage>:tele.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:attack"
+              }
+            },
+            "bite" : {
+              "properties" : {
+                "image" : "<partImage>:bite"
+              }
+            },
+            "reset1" : {
+              "properties" : {
+                "image" : "<partImage>:reset1"
+              }
+            },
+            "reset2" : {
+              "properties" : {
+                "image" : "<partImage>:reset2.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "tether" : {
+        "properties" : {
+          "transformationGroups" : [ "tether" ],
+          "offset" : [0.0, 2.0],
+          "beamSource" : [0.0, 0.0],
+          "beamEnd" : [1.0, 0.0],
+          "centered" : false,
+          "zLevel" : 2,
+          "fullbright" : true
         }
       }
     }
   },
 
   "transformationGroups" : {
-    "body" : { "interpolated" : true }
+    "body" : { "interpolated" : true },
+    "tether" : { "interpolated" : true }
   },
 
   "effects" : {
@@ -114,6 +199,7 @@
   },
 
   "sounds" : {
+    "bite" : ["/sfx/npc/monsters/monster_bite1.ogg", "/sfx/npc/monsters/monster_bite2.ogg"],
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
   }

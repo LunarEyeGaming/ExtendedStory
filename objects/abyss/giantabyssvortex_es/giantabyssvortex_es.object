@@ -1,0 +1,58 @@
+{
+  "objectName" : "giantabyssvortex_es",
+  "colonyTags" : ["tentacle"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 600,
+  "scannable" : false,
+  "printable" : false,
+
+  "description" : "A segment of the giant abyss vortex.",
+  "shortdescription" : "Giant Abyss Vortex",
+  "race" : "generic",
+
+  "inventoryIcon" : "giantabyssvortex.png",
+  "orientations" : [
+    {
+      "image" : "giantabyssvortex.png",
+      "imagePosition" : [-128, -128],
+      "fullbright" : true,
+
+      "direction" : "left",
+      "flipImages" : true,
+      "renderLayer" : "BackgroundTile-20"
+    },
+    {
+      "image" : "giantabyssvortex.png",
+      "imagePosition" : [-128, -128],
+      "fullbright" : true,
+
+      "direction" : "right",
+      "renderLayer" : "BackgroundTile-20"
+    }
+  ],
+  "particleEmitter" : {
+    "emissionRate" : 4,
+    "emissionVariance" : 0.0,
+    "pixelOrigin" : [0, 0],
+
+    "particle" : {
+      "type" : "textured",
+      "image" : "/particles/images/giantportalwind.png",
+      "size" : 1.0,
+      "color" : [142, 108, 175, 255],
+      "destructionAction" : "fade",
+      "destructionTime" : 0.5,
+      "initialVelocity" : [-60, 0],
+      "timeToLive" : 1.5,
+      "fullbright" : true,
+      "layer" : "front",
+      "position" : [60, 0],
+      "collidesForeground" : false
+    },
+    "particleVariance" : {
+      "initialVelocity" : [5.0, 0.0],
+      "position" : [20, 8]
+    }
+  }
+}

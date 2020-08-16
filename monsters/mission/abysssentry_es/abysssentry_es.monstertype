@@ -18,6 +18,7 @@
     "behavior" : "eyesentry_es",
 
     "behaviorConfig" : {
+      "wakeTime" : 0.3,
       "windupTime" : 2,
       "cooldownTime" : 6,
       "projectileType" : "nyctosenergyshard2_es",

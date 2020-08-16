@@ -60,6 +60,10 @@
   },
 
   "particleEmitters" : {
+    "windup" : {
+      "transformationGroups" : [ "eye" ],
+      "particles" : [ ]
+    },
     "deathPoof" : {
       "burstCount" : 1,
       "particles" : []
@@ -69,6 +73,7 @@
   "sounds" : {
     "deathPuff" : [ ],
     "aggro" : [],
+    "windup" : [],
     "fire" : []
   }
 }

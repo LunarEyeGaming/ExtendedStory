@@ -11,9 +11,12 @@
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
     "/scripts/actions/monster.lua",
-    "/scripts/actions/movement.lua"
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
   ],
-  "parameters": {},
+  "parameters": {
+    "openingPortalTime": 0.5
+  },
   "root": {
     "title": "sequence",
     "type": "composite",
@@ -42,6 +45,15 @@
         "name": "faceDirection",
         "parameters": {
           "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "scaleTransformationGroup",
+        "type": "action",
+        "name": "scaleTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "scalePortal"},
+          "scale": {"value": [0, 0]}
         }
       },
       {
@@ -96,11 +108,71 @@
                     "parameters": {},
                     "children": [
                       {
-                        "title": "setAggressive",
+                        "title": "loadUniqueEntity",
                         "type": "action",
-                        "name": "setAggressive",
+                        "name": "loadUniqueEntity",
                         "parameters": {
-                          "aggressive": {"value": true}
+                          "uniqueId": {"value": "detect"}
+                        },
+                        "output": {
+                          "entity": "abductionId"
+                        }
+                      },
+                      {
+                        "title": "entityPosition",
+                        "type": "action",
+                        "name": "entityPosition",
+                        "parameters": {
+                          "entity": {"key": "abductionId"}
+                        },
+                        "output": {
+                          "position": "abductionPosition"
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1},
+                          "untilSuccess": {"value": true}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.01}
+                              }
+                            },
+                            {
+                              "title": "entityPosition",
+                              "type": "action",
+                              "name": "entityPosition",
+                              "parameters": {
+                                "entity": {"key": "target"}
+                              },
+                              "output": {
+                                "position": "targetPos"
+                              }
+                            },
+                            {
+                              "title": "inRange",
+                              "type": "action",
+                              "name": "inRange",
+                              "parameters": {
+                                "position": {"key": "abductionPosition"},
+                                "range": {"value": 2},
+                                "target": {"key": "targetPos"}
+                              }
+                            }
+                          ]
                         }
                       },
                       {
@@ -116,7 +188,7 @@
                         "type": "action",
                         "name": "setAnimationState",
                         "parameters": {
-                          "state": {"value": "open"},
+                          "state": {"value": "appear"},
                           "type": {"value": "body"}
                         }
                       },
@@ -125,210 +197,467 @@
                         "type": "action",
                         "name": "timer",
                         "parameters": {
-                          "time": {"value": 2}
+                          "time": {"value": 3.6}
                         }
                       },
                       {
-                        "title": "repeater",
-                        "type": "decorator",
-                        "name": "repeater",
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
                         "parameters": {
-                          "maxLoops": {"value": -1},
-                          "untilSuccess": {"value": false}
+                          "fail": {"value": -1},
+                          "success": {"value": 1}
                         },
-                        "child": {
-                          "title": "sequence",
-                          "type": "composite",
-                          "name": "sequence",
-                          "parameters": {},
-                          "children": [
-                            {
-                              "title": "spawnProjectile",
-                              "type": "action",
-                              "name": "spawnProjectile",
-                              "parameters": {
-                                "aimVector": {"value": [0, 0]},
-                                "offset": {"value": [0, 0]},
-                                "projectileConfig": {"value": {}},
-                                "projectileType": {"value": "abyssspellparticleemitter_es"}
-                              }
-                            },
-                            {
-                              "title": "playSound",
-                              "type": "action",
-                              "name": "playSound",
-                              "parameters": {
-                                "sound": {"value": "windupSpell"}
-                              }
-                            },
-                            {
-                              "title": "timer",
-                              "type": "action",
-                              "name": "timer",
-                              "parameters": {
-                                "time": {"value": 6}
-                              }
-                            },
-                            {
-                              "title": "burstParticleEmitter",
-                              "type": "action",
-                              "name": "burstParticleEmitter",
-                              "parameters": {
-                                "emitter": {"value": "cast"}
-                              }
-                            },
-                            {
-                              "title": "playSound",
-                              "type": "action",
-                              "name": "playSound",
-                              "parameters": {
-                                "sound": {"value": "castSpell"}
-                              }
-                            },
-                            {
+                        "children": [
+                          {
+                            "title": "failer",
+                            "type": "decorator",
+                            "name": "failer",
+                            "parameters": {},
+                            "child": {
                               "title": "sequence",
                               "type": "composite",
                               "name": "sequence",
                               "parameters": {},
                               "children": [
                                 {
-                                  "title": "queryEntity",
+                                  "title": "rotateTransformationGroup",
                                   "type": "action",
-                                  "name": "queryEntity",
+                                  "name": "rotateTransformationGroup",
                                   "parameters": {
-                                    "entityTypes": {"value": ["player"]},
-                                    "range": {"value": 20}
-                                  },
-                                  "output": {
-                                    "list": "players"
-                                  }
-                                },
-                                {
-                                  "title": "each",
-                                  "type": "decorator",
-                                  "name": "each",
-                                  "parameters": {
-                                    "list": {"key": "players"},
-                                    "type": {"value": "entity"}
-                                  },
-                                  "child": {
-                                    "title": "succeeder",
-                                    "type": "decorator",
-                                    "name": "succeeder",
-                                    "parameters": {},
-                                    "child": {
-                                      "title": "sendEntityMessage",
-                                      "type": "action",
-                                      "name": "sendEntityMessage",
-                                      "parameters": {
-                                        "arguments": {"value": ["antimatterfreeze", 15]},
-                                        "entity": {"key": "eachItem"},
-                                        "message": {"value": "applyStatusEffect"}
-                                      }
-                                    }
-                                  }
-                                },
-                                {
-                                  "title": "each",
-                                  "type": "decorator",
-                                  "name": "each",
-                                  "parameters": {
-                                    "list": {"key": "players"},
-                                    "type": {"value": "entity"}
-                                  },
-                                  "child": {
-                                    "title": "succeeder",
-                                    "type": "decorator",
-                                    "name": "succeeder",
-                                    "parameters": {},
-                                    "child": {
-                                      "title": "sendEntityMessage",
-                                      "type": "action",
-                                      "name": "sendEntityMessage",
-                                      "parameters": {
-                                        "arguments": {"value": ["abyssfading_es"]},
-                                        "entity": {"key": "eachItem"},
-                                        "message": {"value": "applyStatusEffect"}
-                                      }
-                                    }
+                                    "transformationGroup": {"value": "rotatePortal"},
+                                    "angle": {"value": -0.03}
                                   }
                                 }
                               ]
-                            },
-                            {
-                              "title": "timer",
-                              "type": "action",
-                              "name": "timer",
-                              "parameters": {
-                                "time": {"value": 5}
-                              }
-                            },
-                            {
-                              "title": "setAnimationState",
-                              "type": "action",
-                              "name": "setAnimationState",
-                              "parameters": {
-                                "state": {"value": "close"},
-                                "type": {"value": "body"}
-                              }
-                            },
-                            {
-                              "title": "timer",
-                              "type": "action",
-                              "name": "timer",
-                              "parameters": {
-                                "time": {"value": 5}
-                              }
-                            },
-                            {
-                              "title": "sequence",
-                              "type": "composite",
-                              "name": "sequence",
-                              "parameters": {},
-                              "children": [
-                                {
-                                  "title": "each",
-                                  "type": "decorator",
-                                  "name": "each",
-                                  "parameters": {
-                                    "list": {"key": "players"},
-                                    "type": {"value": "entity"}
+                            }
+                          },
+                          {
+                            "title": "sequence",
+                            "type": "composite",
+                            "name": "sequence",
+                            "parameters": {},
+                            "children": [
+                              {
+                                "title": "setAnimationState",
+                                "type": "action",
+                                "name": "setAnimationState",
+                                "parameters": {
+                                  "state": {"value": "open"},
+                                  "type": {"value": "body"}
+                                }
+                              },
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "openPortal"}
+                                }
+                              },
+                              {
+                                "title": "parallel",
+                                "type": "composite",
+                                "name": "parallel",
+                                "parameters": {
+                                  "fail": {"value": -1},
+                                  "success": {"value": 1}
+                                },
+                                "children": [
+                                  {
+                                    "title": "timer",
+                                    "type": "action",
+                                    "name": "timer",
+                                    "parameters": {
+                                      "time": {"value": "<openingPortalTime>"}
+                                    },
+                                    "output": {
+                                      "ratio": "openingProgress"
+                                    }
                                   },
-                                  "child": {
-                                    "title": "succeeder",
+                                  {
+                                    "title": "failer",
                                     "type": "decorator",
-                                    "name": "succeeder",
+                                    "name": "failer",
                                     "parameters": {},
                                     "child": {
-                                      "title": "sendEntityMessage",
-                                      "type": "action",
-                                      "name": "sendEntityMessage",
-                                      "parameters": {
-                                        "arguments": {"value": ["InstanceWorld:abyssartifactdungeonboss"]},
-                                        "entity": {"key": "eachItem"},
-                                        "message": {"value": "warp"}
-                                      }
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "resetTransformationGroup",
+                                          "type": "action",
+                                          "name": "resetTransformationGroup",
+                                          "parameters": {
+                                            "transformationGroup": {"value": "scalePortal"}
+                                          }
+                                        },
+                                        {
+                                          "title": "scaleTransformationGroup",
+                                          "type": "action",
+                                          "name": "scaleTransformationGroup",
+                                          "parameters": {
+                                            "transformationGroup": {"value": "scalePortal"},
+                                            "scale": {"value": ["openingProgress", "openingProgress"]}
+                                          }
+                                        }
+                                      ]
                                     }
                                   }
+                                ]
+                              },
+                              {
+                                "title": "setAnimationState",
+                                "type": "action",
+                                "name": "setAnimationState",
+                                "parameters": {
+                                  "state": {"value": "appear"},
+                                  "type": {"value": "destination"}
                                 }
-                              ]
-                            },
-                            {
-                              "title": "repeater",
-                              "type": "decorator",
-                              "name": "repeater",
-                              "parameters": {},
-                              "child": {
+                              },
+                              {
                                 "title": "timer",
                                 "type": "action",
                                 "name": "timer",
                                 "parameters": {
-                                  "time": {"value": 1}
+                                  "time": {"value": 0.7}
                                 }
+                              },
+                              {
+                                "title": "parallel",
+                                "type": "composite",
+                                "name": "parallel",
+                                "parameters": {
+                                  "fail": {"value": -1},
+                                  "success": {"value": 1}
+                                },
+                                "children": [
+                                  {
+                                    "title": "failer",
+                                    "type": "decorator",
+                                    "name": "failer",
+                                    "parameters": {},
+                                    "child": {
+                                      "title": "setForceRegionActive",
+                                      "type": "action",
+                                      "name": "setForceRegionActive",
+                                      "parameters": {
+                                        "name": {"value": "vacuum"}
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "title": "emitParticles",
+                                    "type": "action",
+                                    "name": "emitParticles",
+                                    "parameters": {
+                                      "emitter": {"value": "wind"}
+                                    }
+                                  },
+                                  {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "entityPosition",
+                                        "type": "action",
+                                        "name": "entityPosition",
+                                        "parameters": {
+                                          "entity": {"key": "target"}
+                                        },
+                                        "output": {
+                                          "position": "targetPos"
+                                        }
+                                      },
+                                      {
+                                        "title": "inRange",
+                                        "type": "action",
+                                        "name": "inRange",
+                                        "parameters": {
+                                          "position": {"key": "self"},
+                                          "range": {"value": 2},
+                                          "target": {"key": "targetPos"}
+                                        }
+                                      },
+                                      {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
+                                        "parameters": {},
+                                        "children": [
+                                          {
+                                            "title": "queryEntity",
+                                            "type": "action",
+                                            "name": "queryEntity",
+                                            "parameters": {
+                                              "entityTypes": {"value": ["player"]},
+                                              "range": {"value": 7}
+                                            },
+                                            "output": {
+                                              "list": "players"
+                                            }
+                                          },
+                                          {
+                                            "title": "each",
+                                            "type": "decorator",
+                                            "name": "each",
+                                            "parameters": {
+                                              "list": {"key": "players"},
+                                              "type": {"value": "entity"}
+                                            },
+                                            "child": {
+                                              "title": "sequence",
+                                              "type": "composite",
+                                              "name": "sequence",
+                                              "parameters": {},
+                                              "children": [
+                                                {
+                                                  "title": "succeeder",
+                                                  "type": "decorator",
+                                                  "name": "succeeder",
+                                                  "parameters": {},
+                                                  "child": {
+                                                    "title": "sendEntityMessage",
+                                                    "type": "action",
+                                                    "name": "sendEntityMessage",
+                                                    "parameters": {
+                                                      "arguments": {"value": ["antimatterfreeze", 15]},
+                                                      "entity": {"key": "eachItem"},
+                                                      "message": {"value": "applyStatusEffect"}
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "title": "succeeder",
+                                                  "type": "decorator",
+                                                  "name": "succeeder",
+                                                  "parameters": {},
+                                                  "child": {
+                                                    "title": "sendEntityMessage",
+                                                    "type": "action",
+                                                    "name": "sendEntityMessage",
+                                                    "parameters": {
+                                                      "arguments": {"value": ["abyssfading_es"]},
+                                                      "entity": {"key": "eachItem"},
+                                                      "message": {"value": "applyStatusEffect"}
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.8}
+                                }
+                              },
+                              {
+                                "title": "setAnimationState",
+                                "type": "action",
+                                "name": "setAnimationState",
+                                "parameters": {
+                                  "state": {"value": "disappear"},
+                                  "type": {"value": "destination"}
+                                }
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.4}
+                                }
+                              },
+                              {
+                                "title": "playSound",
+                                "type": "action",
+                                "name": "playSound",
+                                "parameters": {
+                                  "sound": {"value": "closePortal"}
+                                }
+                              },
+                              {
+                                "title": "parallel",
+                                "type": "composite",
+                                "name": "parallel",
+                                "parameters": {
+                                  "fail": {"value": -1},
+                                  "success": {"value": 1}
+                                },
+                                "children": [
+                                  {
+                                    "title": "timer",
+                                    "type": "action",
+                                    "name": "timer",
+                                    "parameters": {
+                                      "time": {"value": "<openingPortalTime>"}
+                                    },
+                                    "output": {
+                                      "ratio": "openingProgress"
+                                    }
+                                  },
+                                  {
+                                    "title": "failer",
+                                    "type": "decorator",
+                                    "name": "failer",
+                                    "parameters": {},
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "sub",
+                                          "type": "action",
+                                          "name": "sub",
+                                          "parameters": {
+                                            "first": {"value": 1},
+                                            "second": {"key": "openingProgress"}
+                                          },
+                                          "output": {
+                                            "result": "closingProgress"
+                                          }
+                                        },
+                                        {
+                                          "title": "resetTransformationGroup",
+                                          "type": "action",
+                                          "name": "resetTransformationGroup",
+                                          "parameters": {
+                                            "transformationGroup": {"value": "scalePortal"}
+                                          }
+                                        },
+                                        {
+                                          "title": "scaleTransformationGroup",
+                                          "type": "action",
+                                          "name": "scaleTransformationGroup",
+                                          "parameters": {
+                                            "transformationGroup": {"value": "scalePortal"},
+                                            "scale": {"value": ["closingProgress", "closingProgress"]}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "setAnimationState",
+                                "type": "action",
+                                "name": "setAnimationState",
+                                "parameters": {
+                                  "state": {"value": "close"},
+                                  "type": {"value": "body"}
+                                }
+                              },
+                              {
+                                "title": "timer",
+                                "type": "action",
+                                "name": "timer",
+                                "parameters": {
+                                  "time": {"value": 0.5}
+                                }
+                              },
+                              {
+                                "title": "setAnimationState",
+                                "type": "action",
+                                "name": "setAnimationState",
+                                "parameters": {
+                                  "state": {"value": "disappear"},
+                                  "type": {"value": "body"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "playersInWorld",
+                                    "type": "action",
+                                    "name": "playersInWorld",
+                                    "parameters": {},
+                                    "output": {
+                                      "list": "players"
+                                    }
+                                  },
+                                  {
+                                    "title": "each",
+                                    "type": "decorator",
+                                    "name": "each",
+                                    "parameters": {
+                                      "list": {"key": "players"},
+                                      "type": {"value": "entity"}
+                                    },
+                                    "child": {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sendEntityMessage",
+                                        "type": "action",
+                                        "name": "sendEntityMessage",
+                                        "parameters": {
+                                          "arguments": {"value": ["/cinematics/slowfade2.cinematic"]},
+                                          "entity": {"key": "eachItem"},
+                                          "message": {"value": "playCinematic"}
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "title": "timer",
+                                    "type": "action",
+                                    "name": "timer",
+                                    "parameters": {
+                                      "time": {"value": 1.0}
+                                    }
+                                  },
+                                  {
+                                    "title": "each",
+                                    "type": "decorator",
+                                    "name": "each",
+                                    "parameters": {
+                                      "list": {"key": "players"},
+                                      "type": {"value": "entity"}
+                                    },
+                                    "child": {
+                                      "title": "succeeder",
+                                      "type": "decorator",
+                                      "name": "succeeder",
+                                      "parameters": {},
+                                      "child": {
+                                        "title": "sendEntityMessage",
+                                        "type": "action",
+                                        "name": "sendEntityMessage",
+                                        "parameters": {
+                                          "arguments": {"value": ["InstanceWorld:abyssartifactdungeonboss"]},
+                                          "entity": {"key": "eachItem"},
+                                          "message": {"value": "warp"}
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
                               }
-                            }
-                          ]
-                        }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   }
@@ -345,7 +674,7 @@
                     "type": "action",
                     "name": "setAnimationState",
                     "parameters": {
-                      "state": {"value": "close"},
+                      "state": {"value": "invisible"},
                       "type": {"value": "body"}
                     }
                   }

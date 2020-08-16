@@ -12,16 +12,13 @@ function update(dt)
   if self.elapsed < self.colorFadeDuration then
     local fade = (self.elapsed / self.colorFadeDuration) * self.fadeMax
     effect.setParentDirectives(string.format("fade=%s=%.2f", self.fadeColor, fade))
-  else
+  elseif self.elapsed <= self.alphaFadeDuration + self.colorFadeDuration then
     local alphaDuration = self.alphaFadeDuration
     local alphaElapsed = self.elapsed - self.colorFadeDuration
     local alpha = math.max(math.floor(((alphaDuration - alphaElapsed) / alphaDuration) * 255), 0)
     effect.setParentDirectives(string.format("?multiply=ffffff%02x?fade=%s=%.2f", alpha, self.fadeColor, self.fadeMax))
-  end
-
-  if self.elapsed > self.alphaFadeDuration + self.colorFadeDuration then
-    status.addEphemeralEffect("fakeplayerdeath_es")
-    effect.expire()
+  else
+    effect.setParentDirectives("?multiply=ffffff00")
   end
 end
 

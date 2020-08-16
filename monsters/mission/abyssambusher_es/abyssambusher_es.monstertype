@@ -1,7 +1,7 @@
 {
   "type" : "abyssambusher_es",
-  "shortdescription" : "<todo>",
-  "description" : "<todo>.",
+  "shortdescription" : "Hanging Snatcher",
+  "description" : "A strange creature attached to the ceiling. It kills its prey by dropping down and violently biting down on it.",
 
   "categories" : [ "abyssambusher_es" ],
   "parts" : [ "body" ],
@@ -14,6 +14,26 @@
     "scripts" : [
       "/monsters/monster.lua"
     ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
+
+    "animationScripts" : [
+      "/items/active/effects/chain.lua"
+    ],
+
+    "chains" : [
+      {
+        "segmentImage" : "/monsters/mission/abyssambusher_es/tether.png",
+        "segmentSize" : 1,
+        "sourcePart" : "tether",
+        "endPart" : "tether",
+        "waveform" : {
+          "movement" : 5.0,
+          "amplitude" : 0.125,
+          "frequency" : 2.0
+        }
+      }
+    ],
 
     "behavior" : "abyssambusher_es",
 
@@ -21,12 +41,12 @@
     },
 
     "touchDamage" : {
-      "poly" : [ [2, 2], [2, -2], [-2, -2], [-2, 2] ],
-      "damage" : 10,
+      "poly" : [ [-1.25, -0.5], [0, 3], [1.25, -0.5] ],
+      "damage" : 20,
 
       "teamType" : "enemy",
-      "damageSourceKind" : "hammer",
-      "knockback" : 20,
+      "damageSourceKind" : "bite",
+      "knockback" : 0,
       "statusEffects" : [ ]
     },
 
@@ -35,7 +55,7 @@
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [2, 2], [2, -2], [-2, -2], [-2, 2] ],
+      "collisionPoly" : [ [-1.25, -0.5], [0, 2], [1.25, -0.5], [0, -2] ],
 
       "mass" : 1.0,
       "walkSpeed" : 4,

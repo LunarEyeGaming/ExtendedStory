@@ -20,79 +20,79 @@
     "name": "randomize",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "sequence",
         "type": "composite",
         "name": "sequence",
         "parameters": {},
-		"children": [
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "left"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 1}
-    	    }
-    	  },
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "idle"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 0.5}
-    	    }
-    	  },
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "fire"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-		  {
-    	    "title": "spawnProjectile",
-    	    "type": "action",
-    	    "name": "spawnProjectile",
-    	    "parameters": {
-    	      "aimVector": {"value": [-1, 0]},
-    	      "offset": {"value": [0, 0]},
-    	      "position": {"key": "self"},
-    	      "projectileConfig": {"value": {}},
-    	      "projectileType": {"value": "singularityshot_annihilator"},
-    	      "scalePower": {"value": true},
-    	      "sourceEntity": {"key": "self"},
-    	      "trackSource": {"value": false}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 1.5}
-    	    }
-    	  },
-		  {
+        "children": [
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "left"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "idle"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "fire"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "spawnProjectile",
+            "type": "action",
+            "name": "spawnProjectile",
+            "parameters": {
+              "aimVector": {"value": [-1, 0]},
+              "offset": {"value": [0, 0]},
+              "position": {"key": "self"},
+              "projectileConfig": {"value": {}},
+              "projectileType": {"value": "singularityshot_annihilator"},
+              "scalePower": {"value": true},
+              "sourceEntity": {"key": "self"},
+              "trackSource": {"value": false}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.5}
+            }
+          },
+          {
             "title": "parallel",
             "type": "composite",
             "name": "parallel",
@@ -144,47 +144,47 @@
                       "parameters": {},
                       "children": [
                         {
-    	                  "title": "random",
-    	                  "type": "action",
-    	                  "name": "random",
-    	                  "parameters": {
-    	                    "max": {"value": 48},
-    	                    "min": {"value": -48}
-    	                  },
-    	                  "output": {
-    	                    "number": "starX"
-    	                  }
-    	                },
-			            {
-    		              "title": "spawnProjectile",
-    		              "type": "action",
-    		              "name": "spawnProjectile",
-    		              "parameters": {
-    		                "aimVector": {"value": [0, -1]},
-    		                "offset": {"value": ["starX", 39]},
-    		                "projectileConfig": {"value": {}},
-    		                "projectileType": {"value": "annihilatorstar"}
-    		              }
-    		            },
-			            {
-    		              "title": "spawnProjectile",
-    		              "type": "action",
-    		              "name": "spawnProjectile",
-    		              "parameters": {
-    		                "aimVector": {"value": [0, 1]},
-    		                "offset": {"value": ["starX", -39]},
-    		                "projectileConfig": {"value": {}},
-    		                "projectileType": {"value": "annihilatorstar"}
-    		              }
-    		            },
-				        {
-				          "title": "timer",
-				          "type": "action",
-				          "name": "timer",
-				          "parameters": {
-				            "time": {"value": 0.2}
-				          }
-				        }
+                          "title": "random",
+                          "type": "action",
+                          "name": "random",
+                          "parameters": {
+                            "max": {"value": 48},
+                            "min": {"value": -48}
+                          },
+                          "output": {
+                            "number": "starX"
+                          }
+                        },
+                        {
+                          "title": "spawnProjectile",
+                          "type": "action",
+                          "name": "spawnProjectile",
+                          "parameters": {
+                            "aimVector": {"value": [0, -1]},
+                            "offset": {"value": ["starX", 39]},
+                            "projectileConfig": {"value": {}},
+                            "projectileType": {"value": "annihilatorstar"}
+                          }
+                        },
+                        {
+                          "title": "spawnProjectile",
+                          "type": "action",
+                          "name": "spawnProjectile",
+                          "parameters": {
+                            "aimVector": {"value": [0, 1]},
+                            "offset": {"value": ["starX", -39]},
+                            "projectileConfig": {"value": {}},
+                            "projectileType": {"value": "annihilatorstar"}
+                          }
+                        },
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"value": 0.2}
+                          }
+                        }
                       ]
                     }
                   }
@@ -192,81 +192,81 @@
               }
             ]
           }
-		]
+        ]
       },
-	  {
+      {
         "title": "sequence",
         "type": "composite",
         "name": "sequence",
         "parameters": {},
-		"children": [
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "right"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 1}
-    	    }
-    	  },
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "idle"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 0.5}
-    	    }
-    	  },
-		  {
-    	    "title": "setAnimationState",
-    	    "type": "action",
-    	    "name": "setAnimationState",
-    	    "parameters": {
-    	      "state": {"value": "fire"},
-    	      "type": {"value": "form2"}
-    	    }
-    	  },
-		  {
-    	    "title": "spawnProjectile",
-    	    "type": "action",
-    	    "name": "spawnProjectile",
-    	    "parameters": {
-    	      "aimVector": {"value": [1, 0]},
-    	      "offset": {"value": [0, 0]},
-    	      "position": {"key": "self"},
-    	      "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "singularity_annihilator2", "direction": [1, 0]}]}},
-    	      "projectileType": {"value": "singularityshot_annihilator"},
-    	      "scalePower": {"value": true},
-    	      "sourceEntity": {"key": "self"},
-    	      "trackSource": {"value": false}
-    	    }
-    	  },
-    	  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"value": 1.5}
-    	    }
-    	  },
-		  {
+        "children": [
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "right"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "idle"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.5}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "fire"},
+              "type": {"value": "form2"}
+            }
+          },
+          {
+            "title": "spawnProjectile",
+            "type": "action",
+            "name": "spawnProjectile",
+            "parameters": {
+              "aimVector": {"value": [1, 0]},
+              "offset": {"value": [0, 0]},
+              "position": {"key": "self"},
+              "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "singularity_annihilator2", "direction": [1, 0]}]}},
+              "projectileType": {"value": "singularityshot_annihilator"},
+              "scalePower": {"value": true},
+              "sourceEntity": {"key": "self"},
+              "trackSource": {"value": false}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.5}
+            }
+          },
+          {
             "title": "parallel",
             "type": "composite",
             "name": "parallel",
@@ -318,47 +318,47 @@
                       "parameters": {},
                       "children": [
                         {
-    	                  "title": "random",
-    	                  "type": "action",
-    	                  "name": "random",
-    	                  "parameters": {
-    	                    "max": {"value": 48},
-    	                    "min": {"value": -48}
-    	                  },
-    	                  "output": {
-    	                    "number": "starX"
-    	                  }
-    	                },
-			            {
-    		              "title": "spawnProjectile",
-    		              "type": "action",
-    		              "name": "spawnProjectile",
-    		              "parameters": {
-    		                "aimVector": {"value": [0, -1]},
-    		                "offset": {"value": ["starX", 39]},
-    		                "projectileConfig": {"value": {}},
-    		                "projectileType": {"value": "annihilatorstar"}
-    		              }
-    		            },
-			            {
-    		              "title": "spawnProjectile",
-    		              "type": "action",
-    		              "name": "spawnProjectile",
-    		              "parameters": {
-    		                "aimVector": {"value": [0, 1]},
-    		                "offset": {"value": ["starX", -39]},
-    		                "projectileConfig": {"value": {}},
-    		                "projectileType": {"value": "annihilatorstar"}
-    		              }
-    		            },
-				        {
-				          "title": "timer",
-				          "type": "action",
-				          "name": "timer",
-				          "parameters": {
-				            "time": {"value": 0.2}
-				          }
-				        }
+                          "title": "random",
+                          "type": "action",
+                          "name": "random",
+                          "parameters": {
+                            "max": {"value": 48},
+                            "min": {"value": -48}
+                          },
+                          "output": {
+                            "number": "starX"
+                          }
+                        },
+                        {
+                          "title": "spawnProjectile",
+                          "type": "action",
+                          "name": "spawnProjectile",
+                          "parameters": {
+                            "aimVector": {"value": [0, -1]},
+                            "offset": {"value": ["starX", 39]},
+                            "projectileConfig": {"value": {}},
+                            "projectileType": {"value": "annihilatorstar"}
+                          }
+                        },
+                        {
+                          "title": "spawnProjectile",
+                          "type": "action",
+                          "name": "spawnProjectile",
+                          "parameters": {
+                            "aimVector": {"value": [0, 1]},
+                            "offset": {"value": ["starX", -39]},
+                            "projectileConfig": {"value": {}},
+                            "projectileType": {"value": "annihilatorstar"}
+                          }
+                        },
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"value": 0.2}
+                          }
+                        }
                       ]
                     }
                   }
@@ -366,7 +366,7 @@
               }
             ]
           }
-		]
+        ]
       }
     ]
   }

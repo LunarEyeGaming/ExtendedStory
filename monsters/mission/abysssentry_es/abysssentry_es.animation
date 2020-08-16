@@ -157,6 +157,33 @@
   },
 
   "particleEmitters" : {
+    "windup" : {
+      "emissionRate" : 30,
+      "offsetRegion" : [1.0, -1, 1.375, 1],
+      "transformationGroups" : [ "eye" ],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [30, 30],
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.4,
+            "fade" : 1,
+            "fullbright" : true,
+            "destructionAction" : "fade",
+            "destructionTime" : 0.0,
+            "variance" : {
+              "initialVelocity" : [2, 2]
+            }
+          }
+        }
+      ]
+    },
     "deathPoof" : {
       "burstCount" : 1,
       "particles" : []
@@ -166,6 +193,7 @@
   "sounds" : {
     "deathPuff" : [ ],
     "aggro" : [],
-    "fire" : []
+    "windup" : [ "/sfx/npc/mission/abysssentry_windup.ogg" ],
+    "fire" : [ "/sfx/npc/boss/crystalboss_death.ogg" ]
   }
 }

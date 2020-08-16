@@ -30,13 +30,13 @@
       "physicsEffectCategories" : ["boss"]
     },
 
-    "targetRadius" : 30.0,
-    "targetSearchTime" : 0.5,
-    "targetHoldTime" : 5.0,
+    "damageBar" : "None",
+    
+    "tetheredMonster" : "abyssambusher_es",
+    "tetheredOffset" : [0, -3],
+    "tetheredParameters" : {},
 
-    "blockedSensors" : [ [1.5, -1.1], [1.5, -0.5], [1.5, 0.5], [1.5, 1.1] ],
-
-    "knockoutTime" : 0.5,
+    "knockoutTime" : 0.0,
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
 
@@ -81,6 +81,9 @@
           "baseValue" : 0.0
         },
         "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "invulnerable" : {
           "baseValue" : 1.0
         }
       },

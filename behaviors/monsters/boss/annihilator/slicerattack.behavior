@@ -20,7 +20,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -37,7 +37,7 @@
           "time": {"value": 0.25}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -54,7 +54,7 @@
           "time": {"value": 1.6}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -71,7 +71,7 @@
           "time": {"value": 1.6}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -118,76 +118,76 @@
           "touchDamage": {"value": true}
         }
       },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-    	    "title": "repeater",
-    	    "type": "decorator",
-    	    "name": "repeater",
-    	    "parameters": {
-    	      "maxLoops": {"value": -1},
-    	      "untilSuccess": {"value": false}
-    	    },
-    	    "child": {
-    	      "title": "sequence",
-    	      "type": "composite",
-    	      "name": "sequence",
-    	      "parameters": {},
-    	      "children": [
-			    {
-    	          "title": "rotateTransformationGroup",
-    	          "type": "action",
-    	          "name": "rotateTransformationGroup",
-    	          "parameters": {
-				    "angle": {"value": 1},
-					"transformationGroup": {"value": "gun"}
-				  }
-    	        },
-    	        {
-    	          "title": "timer",
-    	          "type": "action",
-    	          "name": "timer",
-    	          "parameters": {
-    	            "time": {"value": 0.01}
-    	          }
-    	        }
-    	      ]
-    	    }
-    	  },
-		  {
-    	    "title": "repeater",
-    	    "type": "decorator",
-    	    "name": "repeater",
-    	    "parameters": {
-    	      "maxLoops": {"value": 5},
-    	      "untilSuccess": {"value": false}
-    	    },
-    	    "child": {
-    	      "title": "sequence",
-    	      "type": "composite",
-    	      "name": "sequence",
-    	      "parameters": {},
-    	      "children": [
-    	        {
-    	          "title": "entityDirection",
-    	          "type": "action",
-    	          "name": "entityDirection",
-    	          "parameters": {
-    	            "entity": {"key": "self"},
-    	            "offset": {"value": [0, 0]},
-    	            "target": {"key": "target"}
-    	          },
-    	          "output": {
-    	            "vector": "aimVector"
-    	          }
-    	        },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "rotateTransformationGroup",
+                  "type": "action",
+                  "name": "rotateTransformationGroup",
+                  "parameters": {
+                    "angle": {"value": 1},
+                    "transformationGroup": {"value": "gun"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.01}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": 5},
+              "untilSuccess": {"value": false}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "entityDirection",
+                  "type": "action",
+                  "name": "entityDirection",
+                  "parameters": {
+                    "entity": {"key": "self"},
+                    "offset": {"value": [0, 0]},
+                    "target": {"key": "target"}
+                  },
+                  "output": {
+                    "vector": "aimVector"
+                  }
+                },
                 {
                   "title": "vecAngle",
                   "type": "action",
@@ -199,91 +199,91 @@
                     "angle": "targetAngleBase"
                   }
                 },
-		        {
-    	          "title": "vecRotate",
-    	          "type": "action",
-    	          "name": "vecRotate",
-    	          "parameters": {
-    	            "angle": {"key": "targetAngleBase"},
-    	            "vector": {"key": "<chargeVelocity>"}
-    	          },
-    	          "output": {
-    	            "vector": "chargeSpeed"
-    	          }
-    	        },
-		        {
-		          "title": "parallel",
-		      	  "type": "composite",
-		      	  "name": "parallel",
-		      	  "parameters": {
-		      	    "fail": {"value": -1},
-		      	    "success": {"value": 1}
-		      	  },
-		      	  "children": [
-		      	    {
-		      	      "title": "repeater",
-		      		  "type": "decorator",
-		      		  "name": "repeater",
-		      		  "parameters": {
-		      		    "maxLoops": {"value": -1}
-		      		  },
-		      		  "child": {
-		      		    "title": "sequence",
-		      		    "type": "composite",
-		      		    "name": "sequence",
-		      		    "parameters": {},
-		      		    "children": [
-		      		      {
-		      			    "title": "setVelocity",
-		      			    "type": "action",
-		      			    "name": "setVelocity",
-		      			    "parameters": {
-		      			      "velocity": {"key": "chargeSpeed"}
-		      			    }
-		      			  },
-		      			  {
-		      			    "title": "timer",
-		      			    "type": "action",
-		      			    "name": "timer",
-		      			    "parameters": {
-		      			      "time": {"value": 0.01}
-		      			    }
-		      			  }
-		      		    ]
-		      		  }
-		      	    },
-		      	    {
-		      	      "title": "timer",
-		      		  "type": "action",
-		      		  "name": "timer",
-		      		  "parameters": {
-		      		    "time": {"value": 1.0}
-		      		  }
-		      	    }
-		      	  ]
-		        },
-				{
-		      	  "title": "setVelocity",
-		      	  "type": "action",
-		      	  "name": "setVelocity",
-		      	  "parameters": {
-		      	    "velocity": {"value": [0, 0]}
-		      	  }
-		      	},
-		      	{
-		      	  "title": "timer",
-		      	  "type": "action",
-		      	  "name": "timer",
-		      	  "parameters": {
-		      	    "time": {"value": 1.0}
-		      	  }
-		      	}
-    	      ]
-    	    }
-    	  }
-		]
-	  },
-	  {
+                {
+                  "title": "vecRotate",
+                  "type": "action",
+                  "name": "vecRotate",
+                  "parameters": {
+                    "angle": {"key": "targetAngleBase"},
+                    "vector": {"key": "<chargeVelocity>"}
+                  },
+                  "output": {
+                    "vector": "chargeSpeed"
+                  }
+                },
+                {
+                  "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": 1}
+                    },
+                    "children": [
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "setVelocity",
+                              "type": "action",
+                              "name": "setVelocity",
+                              "parameters": {
+                                "velocity": {"key": "chargeSpeed"}
+                              }
+                            },
+                            {
+                              "title": "timer",
+                              "type": "action",
+                              "name": "timer",
+                              "parameters": {
+                                "time": {"value": 0.01}
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 1.0}
+                        }
+                      }
+                    ]
+                },
+                {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 1.0}
+                    }
+                  }
+              ]
+            }
+          }
+        ]
+      },
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -330,7 +330,7 @@
           }
         ]
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -347,13 +347,13 @@
           "time": {"value": 1.6}
         }
       },
-	  {
-    	"title": "resetTransformationGroup",
-    	"type": "action",
-    	"name": "resetTransformationGroup",
-    	"parameters": {
-		  "transformationGroup": {"value": "gun"}
-		}
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "gun"}
+        }
       }
     ]
   }

@@ -21,7 +21,7 @@
   "animationParts" : {
     "beamorigin" : "suprememuzzle.png",
     "gun" : "ioncannonsupreme.png",
-	"gunfullbright" : "ioncannonsupremefullbright.png"
+    "gunfullbright" : "ioncannonsupremefullbright.png"
   },
   "animationCustom" : {
     "sounds" : {
@@ -29,9 +29,9 @@
       "fireLoop" : [ "/sfx/gun/supremeionbeam_loop.ogg" ],
       "fireEnd" : [ "/sfx/gun/supremeionbeam_stop.ogg" ],
       "beamImpact" : [ "/sfx/gun/supremeionbeam_impact.ogg" ],
-	  "altFire" : [ "/sfx/gun/supremeioncannon_altfire.ogg" ]
+      "altFire" : [ "/sfx/gun/supremeioncannon_altfire.ogg" ]
     },
-	"particleEmitters" : {
+    "particleEmitters" : {
       "altMuzzleFlash" : {
         "active" : false,
         "transformationGroups" : ["muzzle"],
@@ -112,7 +112,7 @@
 
         "animationStates" : {
           "gun" : "fire",
-		  "beamorigin" : "fire"
+          "beamorigin" : "fire"
         }
       },
       "cooldown" : {
@@ -126,17 +126,17 @@
 
         "animationStates" : {
           "gun" : "cooldown",
-		  "beamorigin" : "off"
+          "beamorigin" : "off"
         }
       }
     }
   },
 
-  "altAbilityType" : "explosiveshot",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
       "ion" : { "name" : "Vaporizer", "projectileType" : "vaporizerexpansionmod"}
-	  },
+    },
 
     "stances" : {
       "idle" : {
@@ -168,7 +168,7 @@
         "allowFlip" : false
       }
     },
-	"fireTime" : 5,
+    "fireTime" : 5,
     "baseDps" : 5.0,
     "energyUsage" : 75,
     "inaccuracy" : 0,

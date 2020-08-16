@@ -20,6 +20,7 @@
     "maxWanderAngle": 3.14,
     "resetAngle": -12,
     "windupTime": 1,
+    "wakeTime": 1,
     "cooldownTime": 0,
     "projectileOffset": [0, 0],
     "projectileConfig": {},
@@ -145,6 +146,22 @@
                         }
                       },
                       {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"key": "<wakeTime>"}
+                        }
+                      },
+                      {
+                        "title": "playSound",
+                        "type": "action",
+                        "name": "playSound",
+                        "parameters": {
+                          "sound": {"value": "windup"}
+                        }
+                      },
+                      {
                         "title": "parallel",
                         "type": "composite",
                         "name": "parallel",
@@ -159,6 +176,14 @@
                             "name": "timer",
                             "parameters": {
                               "time": {"key": "<windupTime>"}
+                            }
+                          },
+                          {
+                            "title": "emitParticles",
+                            "type": "action",
+                            "name": "emitParticles",
+                            "parameters": {
+                              "emitter": {"value": "windup"}
                             }
                           },
                           {
