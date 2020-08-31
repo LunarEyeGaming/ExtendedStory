@@ -45,6 +45,12 @@
 
         "teamType" : "enemy",
         "damageSourceKind" : "bite"
+      },
+      "chargedamage" : {
+        "damage" : 20,
+
+        "teamType" : "enemy",
+        "damageSourceKind" : "slash"
       }
     },
 

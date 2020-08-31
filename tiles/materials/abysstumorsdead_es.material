@@ -1,0 +1,24 @@
+{
+  "materialId" : 2031,
+  "materialName" : "abysstumorsdead_es",
+  "particleColor" : [28, 15, 27, 255],
+  "itemDrop" : "abysstumorsdeadmaterial_es",
+  "description" : "<todo>.",
+  "shortdescription" : "Abyss Cloud",
+  "glitchDescription" : "<todo>.",
+  "floranDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
+  "footstepSound" : "/sfx/blocks/footstep_brains.ogg",
+  "health" : 18,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/classicmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "abysstumorsdead.png",
+    "variants" : 6,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 0
+  }
+}

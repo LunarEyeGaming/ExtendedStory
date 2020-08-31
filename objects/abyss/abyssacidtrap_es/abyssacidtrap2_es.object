@@ -1,0 +1,175 @@
+{
+  "objectName" : "abyssacidtrap2_es",
+  "colonyTags" : ["odd","evil"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "description" : "<todo>.",
+  "shortdescription" : "Acid Trap",
+  "race" : "generic",
+
+  "apexDescription" : "<todo>.",
+  "avianDescription" : "<todo>.",
+  "floranDescription" : "<todo>.",
+  "glitchDescription" : "<todo>.",
+  "humanDescription" : "<todo>.",
+  "hylotlDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
+
+  "category" : "trap",
+  "price" : 0,
+
+  "inventoryIcon" : "abyssacidtrapicon.png",
+  "orientations" : [
+    {
+      "image" : "abyssacidtrap.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "abyssacidtrap.png",
+        "fg" : "abyssacidtrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [0, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "abyssacidtrap.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "abyssacidtrap.png",
+        "fg" : "abyssacidtrap.png"
+      },
+
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [1, 0.7],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "abyssacidtrapleft.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "abyssacidtrapleft.png",
+        "fg" : "abyssacidtrapleft.png"
+      },
+
+      "projectileDirection" : [1, 0],
+      "projectilePosition" : [0.7, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "left" ]
+    },
+    {
+      "image" : "abyssacidtrapright.png:<color>.<frame>",
+      "imagePosition" : [0, -8],
+      "direction" : "right",
+      
+      "animationPosition" : [0, -8],
+      "animationParts" : {
+        "bg" : "abyssacidtrapright.png",
+        "fg" : "abyssacidtrapright.png"
+      },
+
+      "projectileDirection" : [-1, 0],
+      "projectilePosition" : [0.3, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "right" ]
+    },
+    {
+      "image" : "abyssacidtrapceiling.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "bg" : "abyssacidtrapceiling.png",
+        "fg" : "abyssacidtrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [0, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    },
+    {
+      "image" : "abyssacidtrapceiling.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      
+      "animationPosition" : [0, 0],
+      "animationParts" : {
+        "bg" : "abyssacidtrapceiling.png",
+        "fg" : "abyssacidtrapceiling.png"
+      },
+
+      "projectileDirection" : [0, -1],
+      "projectilePosition" : [1, 0.3],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ "/sfx/projectiles/goo_spit1.ogg", "/sfx/projectiles/goo_spit2.ogg" ],
+      "on" : [ ],
+      "off" : [ ]
+    }
+  },
+
+  "soundEffect" : "", // this is a thing that also works
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 0.16, // rate of fire
+  "fireTimeVariance" : 0.0, // variation in rate of fire
+  "projectile" : "orbitalup", // name of projectile (required)
+  "projectileConfig" : { // extra configuration overrides for projectile
+    "damageTeam" : { "type" : "environment" },
+    "power" : 20,
+    "speed" : 0,
+    "onlyHitTerrain" : true,
+    "timeToLive" : 0,
+    "actionOnReap" : [
+      {
+        "action" : "projectile",
+        "type" : "abyssacidblob_es",
+        "inheritDamageFactor" : 1,
+        "fuzzAngle" : 45,
+        "config" : {
+          "bounces" : 0
+        }
+      }
+    ]
+  },
+  
+  "health" : 5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ],
+  "smashParticles" : [ { "count" : 5, "particle" : "tentacleshard" } ]
+}

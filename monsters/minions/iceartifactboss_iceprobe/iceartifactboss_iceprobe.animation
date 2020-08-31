@@ -7,8 +7,22 @@
         "states" : {
           "idle" : {
             "frames" : 4,
-			"cycle" : 0.4,
-			"mode" : "loop"
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
+          "windup" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "end",
+            "properties" : {
+              "immediateSound" : "/sfx/melee/charge_up15.ogg"
+            }
+          },
+          "winddown" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
@@ -39,6 +53,16 @@
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
             }
           },
           "damage" : {
@@ -61,6 +85,16 @@
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
               }
             }
           },

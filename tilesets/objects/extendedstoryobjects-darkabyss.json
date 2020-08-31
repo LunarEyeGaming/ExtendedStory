@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":43,
+ "tilecount":51,
  "tileheight":256,
  "tileproperties":
     {
@@ -281,11 +281,67 @@
          "object":"giantabyssvortex_es",
          "tilesetDirection":"right"
         },
+     "43":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysstumordoor_es",
+         "tilesetDirection":"right"
+        },
+     "44":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysstumordoordead_es",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysstumorverticaldoor_es",
+         "tilesetDirection":"right"
+        },
+     "46":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abysstumorverticaldoordead_es",
+         "tilesetDirection":"right"
+        },
+     "47":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssacidtrap_es",
+         "tilesetDirection":"right"
+        },
+     "48":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abyssacidtrap_es",
+         "tilesetDirection":"right"
+        },
+     "49":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"abyssacidtrap_es",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"abyssswarmurnsmall1_es",
+         "tilesetDirection":"right"
+        },
+     "50":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"-8",
+         "object":"abyssacidtrap_es",
          "tilesetDirection":"right"
         },
      "6":
@@ -591,7 +647,63 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "43":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "44":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "45":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "46":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "47":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "48":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "49":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "50":
         {
          "imagePositionX":"string",
          "imagePositionY":"string",
@@ -860,10 +972,58 @@
          "imageheight":256,
          "imagewidth":256
         },
+     "43":
+        {
+         "image":"..\/images\/objects\/abysstumordoor.png",
+         "imageheight":40,
+         "imagewidth":40
+        },
+     "44":
+        {
+         "image":"..\/images\/objects\/abysstumordoordead.png",
+         "imageheight":40,
+         "imagewidth":40
+        },
+     "45":
+        {
+         "image":"..\/images\/objects\/abysstumorverticaldoor.png",
+         "imageheight":8,
+         "imagewidth":40
+        },
+     "46":
+        {
+         "image":"..\/images\/objects\/abysstumorverticaldoordead.png",
+         "imageheight":8,
+         "imagewidth":40
+        },
+     "47":
+        {
+         "image":"..\/images\/objects\/abyssacidtrap.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "48":
+        {
+         "image":"..\/images\/objects\/abyssacidtrapceiling.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "49":
+        {
+         "image":"..\/images\/objects\/abyssacidtrapleft.png",
+         "imageheight":16,
+         "imagewidth":8
+        },
      "5":
         {
          "image":"..\/images\/objects\/abyssswarmurnsmall1.png",
          "imageheight":8,
+         "imagewidth":8
+        },
+     "50":
+        {
+         "image":"..\/images\/objects\/abyssacidtrapright.png",
+         "imageheight":16,
          "imagewidth":8
         },
      "6":

@@ -16,18 +16,19 @@
   ],
   "actionOnReap" : [
     {
-	  "action" : "loop",
-	  "count" : 10,
-	  "body" : [
-	    {
-		  "action" : "particle",
-	      "specification" : "iceshard"
-		}
-	  ]
-	},
-	{
-	  "action" : "sound",
-	  "options" : [ "/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg", "/sfx/projectiles/ice_break5.ogg", "/sfx/projectiles/ice_break6.ogg", "/sfx/projectiles/ice_break7.ogg", "/sfx/projectiles/ice_break8.ogg", "/sfx/projectiles/ice_break9.ogg", "/sfx/projectiles/ice_break10.ogg" ]
-	}
-  ]
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "iceshard"
+        }
+      ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg", "/sfx/projectiles/ice_break5.ogg", "/sfx/projectiles/ice_break6.ogg", "/sfx/projectiles/ice_break7.ogg", "/sfx/projectiles/ice_break8.ogg", "/sfx/projectiles/ice_break9.ogg", "/sfx/projectiles/ice_break10.ogg" ]
+    }
+  ],
+  "scripts" : [ "/projectiles/killable.lua" ]
 }

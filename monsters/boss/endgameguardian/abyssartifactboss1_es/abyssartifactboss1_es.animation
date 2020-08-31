@@ -115,6 +115,13 @@
           }
         }
       },
+      "chargedamage" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "on" : {}
+        }
+      },
       "damage" : {
         "priority" : 4,
         "default" : "none",
@@ -255,6 +262,18 @@
             "intro" : {
               "properties" : {
                 "image" : "<partImage>:intro.<frame>"
+              }
+            }
+          }
+        }
+      },
+      
+      "chargedamage" : {
+        "partStates" : {
+          "chargedamage" : {
+            "on" : {
+              "properties" : {
+                "damageArea" : [ [4.4375, 2.21875], [4.4375, -2.21875], [2.21875, -4.4375], [-2.21875, -4.4375], [-4.4375, -2.21875], [-4.4375, 2.21875], [-2.21875, 4.4375], [2.21875, 4.4375] ]
               }
             }
           }

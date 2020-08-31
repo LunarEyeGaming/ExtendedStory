@@ -107,11 +107,6 @@
     "text" : "Apologies for the inconvenience. I advise that you use other forms of mobility to avoid situations where you are forced to forfeit the mission temporarily."
   },
   
-  "abyssdungeon-dangerouslifeforms" : {
-    "type" : "mission",
-    "text" : "The results from attempting to analyze the lifeforms of this place have been corrupted beyond readability. No advice can be given; pray that you do not encounter what is causing these interferences."
-  },
-  
   "abyssdungeon-harmlessabyss" : {
     "type" : "mission",
     "text" : "Analysis shows that the bottom of these pools of less concentrated abyss have portals whose destination are to a location nearby. Perhaps this location is the teleporter-like platform."
@@ -122,14 +117,24 @@
     "text" : "Some of the walls here are pitch black. Scans show that these walls emit a force that repels any projectiles, such as grappling hooks."
   },
   
+  "abyssdungeon-radiantcannon" : {
+    "type" : "mission",
+    "text" : "This cannon requires a type of ammunition that is not found in the ammunition database. I advise that you look through this temple to find it."
+  },
+  
+  "abyssdungeon-watchermessage" : {
+    "type" : "mission",
+    "text" : "I am picking up unknown signatures that appear to be coming from a massive creature. I advise that you avoid it at all costs."
+  },
+  
   "abyssdungeon-warptobossmessage" : {
     "type" : "mission",
-    "text" : "It appears you have been ^red;*bzzzzzzzt*^reset; to an area very far away from the ^red;*bzzzzzzzzzzzzzzzzzzzt*^reset;. It appears something is interfering with ^red;*bzzzzzzzzzt*^reset;."
+    "text" : "It appears you have been ^red;*bzzzzzzzt*^reset; to an area very far away from the ^red;*bzzzzzzzzzzzzzzzzzzzt*^reset;. Something is interfering with ^red;*bzzzzzzzzzt*^reset;."
   },
   
   "abyssdungeon-techreenabled" : {
     "type" : "mission",
-    "text" : "The anomalous field that surrounded the ^red;*inaudible*^reset;. You are now safe to ^red;*bzzzzzzt*^reset; tech. I advise you ^red;*bzzzzzzzzzzzzzzzt*^reset; ^orange;[Connection Lost]^reset;"
+    "text" : "The anomalous field that surrounded the ^red;*inaudible*^reset;... You are now safe to ^red;*bzzzzzzt*^reset; tech. I advise you ^red;*bzzzzzzzzzzzzzzzt*^reset; ^orange;[Connection Lost]^reset;"
   },
   
   // ------- OTHER MESSAGES -------

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstorytiles",
  "spacing":0,
- "tilecount":31,
+ "tilecount":32,
  "tileheight":8,
  "tileproperties":
     {
@@ -123,6 +123,10 @@
      "30":
         {
          "material":"abyssplatform_es"
+        },
+     "31":
+        {
+         "material":"abysstumorsdead_es"
         },
      "4":
         {
@@ -260,6 +264,10 @@
          "material":"string"
         },
      "30":
+        {
+         "material":"string"
+        },
+     "31":
         {
          "material":"string"
         },
@@ -437,6 +445,12 @@
      "30":
         {
          "image":"..\/images\/tiles\/abyssplatform.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "31":
+        {
+         "image":"..\/images\/tiles\/abysstumorsdead.png",
          "imageheight":8,
          "imagewidth":8
         },

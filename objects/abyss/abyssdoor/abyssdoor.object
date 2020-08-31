@@ -6,17 +6,17 @@
 
   "category" : "door",
   "price" : 0,
-  "description" : "A door with an unblinking eye in the center.",
+  "description" : "An ordinary Abyss Stone door.",
   "shortdescription" : "Abyss Door",
   "race" : "generic",
 
-  "apexDescription" : "A creepy eye...that I want to stare at.",
-  "avianDescription" : "I feel the urge to stare at the eye.",
-  "floranDescription" : "Floran wantsss eyes to gaze at it.",
-  "glitchDescription" : "Manipulated. I want to stare at the eye for eternity.",
-  "humanDescription" : "A door with an eye. I want to stare at it until my eyes bleed.",
-  "hylotlDescription" : "A door that my three eyes cannot keep off of.",
-  "novakidDescription" : "I wanna stare at it forever.",
+  "apexDescription" : "This door seems to have survived the test of time, but not without wearing away.",
+  "avianDescription" : "An ancient door made of dark stone.",
+  "floranDescription" : "Giant black ssstone door.",
+  "glitchDescription" : "Intrigued. I wonder how the mechanisms that open the door work.",
+  "humanDescription" : "It's a normal door carved from abyss stone.",
+  "hylotlDescription" : "A large cluster of abyss stone slabs made into a simple door.",
+  "novakidDescription" : "A big ol' stone door.",
 
   "inventoryIcon" : "abyssdooricon.png",
   "orientations" : [
@@ -46,11 +46,11 @@
   "animationCustom" : {
     "sounds" : {
       "open" : {
-        "pool" : [ "/sfx/objects/airlock_open.ogg" ],
+        "pool" : [ "/sfx/objects/stonedoor_open_fast.ogg" ],
         "rangeMultiplier" : 0.5
       },
       "close" : {
-        "pool" : [ "/sfx/objects/airlock_close.ogg" ],
+        "pool" : [ "/sfx/objects/stonedoor_close_fast.ogg" ],
         "rangeMultiplier" : 0.5
       }
     }

@@ -1,0 +1,69 @@
+{
+  "objectName" : "abysstumorverticaldoor_es",
+  "colonyTags" : ["evil","door"],
+  "printable" : false,
+  "rarity" : "Uncommon",
+
+  "category" : "door",
+  "price" : 150,
+  "description" : "A single sharp appendage that seals vertical corridors.",
+  "shortdescription" : "Abyssal Spike Trapdoor",
+  "race" : "generic",
+
+  "apexDescription" : "A spear-like appendage that makes a vertical door.",
+  "avianDescription" : "An organic trapdoor with a sharp tip at the end.",
+  "floranDescription" : "Floran can use trapdoor as ssspear.",
+  "glitchDescription" : "Cautious. I should avoid being caught in this vertical spike door.",
+  "humanDescription" : "Better not stand in front of that trapdoor.",
+  "hylotlDescription" : "A trapdoor made entirely of purple tumors, bearing a sharp point at the end.",
+  "novakidDescription" : "Ain't a good thing to get impaled by that trapdoor.",
+
+  "inventoryIcon" : "abysstumorverticaldooricon.png",
+
+  "scripts" : [ "/objects/wired/door/door.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/wired/door/door.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "open" : {
+        "pool" : [ "/sfx/objects/fleshdoor_open.ogg" ],
+        "rangeMultiplier" : 0.5
+      },
+      "close" : {
+        "pool" : [ "/sfx/objects/fleshdoor_close.ogg" ],
+        "rangeMultiplier" : 0.5
+      }
+    }
+  },
+  "animationParts" : {
+    "door" : "abysstumorverticaldoor.png"
+  },
+  
+  "orientations" : [
+    {
+      "image" : "abysstumorverticaldoor.png:default",
+      "imagePosition" : [-16, 0],
+      "renderLayer" : "Object+5",
+      "animationPosition" : [-16, 0],
+      "flipImages" : true,
+      "direction" : "left",
+
+      "spaces" : [[-2,0],[-1,0],[0,0],[1,0],[2,0]],
+      "anchors" : [ "left", "right" ]
+    },
+    {
+      "image" : "abysstumorverticaldoor.png:default",
+      "imagePosition" : [-16, 0],
+      "renderLayer" : "Object+5",
+      "animationPosition" : [-16, 0],
+      "direction" : "right",
+
+      "spaces" : [[-2,0],[-1,0],[0,0],[1,0],[2,0]],
+      "anchors" : [ "left", "right" ]
+    }
+  ],
+
+  "inputNodes" : [ [-2, 0] ],
+  "outputNodes" : [ [2, 0] ]
+}

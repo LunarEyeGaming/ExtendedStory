@@ -52,21 +52,21 @@
             "windupStopForce" : 0,
             "faceTarget" : false,
             "rotateToTarget" : true,
-            "windupState" : "",
+            "windupState" : "windup",
             "windupTime" : 0.5,
 
-            "projectileType" : "frostburnfireballsmallhoming_es",
+            "projectileType" : "frostburnfireballsmall_es",
             "projectileParameters" : {
               "speed" : 40,
               "power" : 10
             },
-            "fireOffset" : [0, 0],
+            "fireOffset" : [0.5, 0],
             "onGround" : false,
             "fireState" : "",
             "fireSound" : "fire",
 
             "winddownStopForce" : 0,
-            "winddownState" : "",
+            "winddownState" : "winddown",
             "winddownTime" : 0.2
           }
         },
@@ -152,7 +152,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 150
+          "baseValue" : 115
         },
         "protection" : {
           "baseValue" : 0.0

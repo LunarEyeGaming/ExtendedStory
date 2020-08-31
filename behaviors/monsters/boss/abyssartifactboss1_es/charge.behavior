@@ -158,11 +158,12 @@
         }
       },
       {
-        "title": "setDamageOnTouch",
+        "title": "setAnimationState",
         "type": "action",
-        "name": "setDamageOnTouch",
+        "name": "setAnimationState",
         "parameters": {
-          "touchDamage": {"value": true}
+          "state": {"value": "on"},
+          "type": {"value": "chargedamage"}
         }
       },
       {
@@ -173,7 +174,7 @@
           "sound": {"value": "charge"}
         }
       },
-	  {
+      {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",
@@ -217,14 +218,15 @@
         ]
       },
       {
-        "title": "setDamageOnTouch",
+        "title": "setAnimationState",
         "type": "action",
-        "name": "setDamageOnTouch",
+        "name": "setAnimationState",
         "parameters": {
-          "touchDamage": {"value": false}
+          "state": {"value": "off"},
+          "type": {"value": "chargedamage"}
         }
       },
-	  {
+      {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",

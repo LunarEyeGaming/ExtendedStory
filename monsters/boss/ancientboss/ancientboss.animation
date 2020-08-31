@@ -90,38 +90,38 @@
           }
         }
       },
-	  "shield" : {
-	    "priority" : 0,
-		"default" : "inactive",
-		"states" : {
-		  "inactive" : {},
-		  "appear" : {
-		    "frames" : 10,
-			"cycle" : 1,
-			"mode" : "transition",
-			"transition" : "idle",
+      "shield" : {
+        "priority" : 0,
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {},
+          "appear" : {
+            "frames" : 10,
+            "cycle" : 1,
+            "mode" : "transition",
+            "transition" : "idle",
             "properties" : {
               "immediateSound" : "/sfx/npc/darkabyss/antimovementzone_windup.ogg",
               "immediateSoundRangeMultiplier" : 3
             }
-		  },
-		  "idle" : {
-		    "frames" : 5,
-			"cycle" : 0.5,
-			"mode" : "loop"
-		  },
-		  "disappear" : {
-		    "frames" : 10,
-			"cycle" : 1,
-			"mode" : "transition",
-			"transition" : "inactive",
+          },
+          "idle" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          },
+          "disappear" : {
+            "frames" : 10,
+            "cycle" : 1,
+            "mode" : "transition",
+            "transition" : "inactive",
             "properties" : {
               "immediateSound" : "/sfx/gun/ancientchaingun_beamstop.ogg",
               "immediateSoundRangeMultiplier" : 3
             }
-		  }
-		}
-	  }
+          }
+        }
+      }
     },
 
     "parts" : {
@@ -129,7 +129,7 @@
         "properties" : {
           "rotationGroup" : "all",
           "zLevel" : 2,
-		  "transformationGroups" : ["body"]
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -147,13 +147,13 @@
           }
         }
       },
-	  
-	  "ufolit" : {
+      
+      "ufolit" : {
         "properties" : {
           "rotationGroup" : "all",
           "zLevel" : 3,
-		  "fullbright" : true,
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -190,11 +190,11 @@
           }
         }
       },
-	  "shield" : {
+      "shield" : {
         "properties" : {
           "rotationGroup" : "all",
           "zLevel" : 4,
-		  "fullbright" : true
+          "fullbright" : true
         },
 
         "partStates" : {
@@ -209,7 +209,7 @@
                 "image" : "<partImage>:idle<invisible>.<frame>"
               }
             },
-			"disappear" : {
+            "disappear" : {
               "properties" : {
                 "image" : "<partImage>:disappear.<frame>"
               }
@@ -221,11 +221,11 @@
   },
   "transformationGroups" : {
     "facing" : { "interpolated" : false },
-	"body" : { "interpolated" : true }
+    "body" : { "interpolated" : true }
   },
   "globalTagDefaults" : {
     "phase" : "phase1",
-	"invisible" : ""
+    "invisible" : ""
   },
 
   "rotationGroups" : {
@@ -256,7 +256,7 @@
             "animation" : "/animations/ancientteleport/ancientteleport.animation",
             "timeToLive" : 1.0,
             "layer" : "front",
-			"fullbright" : true
+            "fullbright" : true
           }
         }
       ]
@@ -294,16 +294,16 @@
       ]
     },
     "idle" : {
-	  "active" : true,
+      "active" : true,
       "emissionRate" : 100.0,
       "particles" : [
         { 
-		  "particle" : {
+          "particle" : {
             "type" : "textured",
             "image" : "/monsters/boss/ancientboss/ufo/ufo.png:phase1.1?setcolor=892a9c?multiply=ffffff10",
             "size" : 1,
             "fade" : 1,
-			"destructionAction" : "fade",
+            "destructionAction" : "fade",
             "destructionTime" : 0.5,
             "position" : [0, 0],
             "initialVelocity" : [0, 0],
@@ -312,7 +312,7 @@
             "timeToLive" : 0,
             "layer" : "back"
           } 
-		}
+        }
       ]
     },
     "landing" : {
@@ -643,39 +643,39 @@
       "pool" : [ "/sfx/melee/charge_up5.ogg" ],
       "rangeMultiplier" : 3
     },
-	"windup2" : {
-	  "pool" : [ "/sfx/melee/charge_up10.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"windup3" : {
-	  "pool" : [ "/sfx/npc/boss/annihilator_death.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"windup4" : {
-	  "pool" : [ "/sfx/melee/charge_combo2.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"windup5" : {
-	  "pool" : [ "/sfx/melee/charge_up15.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"fire1" : {
+    "windup2" : {
+      "pool" : [ "/sfx/melee/charge_up11.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "windup3" : {
+      "pool" : [ "/sfx/npc/boss/annihilator_death.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "windup4" : {
+      "pool" : [ "/sfx/melee/charge_combo2.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "windup5" : {
+      "pool" : [ "/sfx/melee/charge_up15.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fire1" : {
       "pool" : [ "/sfx/npc/boss/guardian_stab.ogg" ],
       "rangeMultiplier" : 3
     },
-	"fire2" : {
+    "fire2" : {
       "pool" : [ "/sfx/gun/pulsecannon_blast1.ogg" ],
       "rangeMultiplier" : 3
     },
-	"fire3" : {
+    "fire3" : {
       "pool" : [ "/sfx/gun/plasma_sniper5.ogg" ],
       "rangeMultiplier" : 3
     },
-	"minionspawn1" : {
+    "minionspawn1" : {
       "pool" : [ "/sfx/gun/plasma_sniper4.ogg" ],
       "rangeMultiplier" : 3
     },
-	"minionspawn2" : {
+    "minionspawn2" : {
       "pool" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
       "rangeMultiplier" : 3
     },

@@ -38,5 +38,29 @@
   "inputNodes" : [ [0, 0] ],
 
   "soundEffect" : "/sfx/weather/sandstorm.ogg",
-  "soundEffectRangeMultiplier" : 5
+  "soundEffectRangeMultiplier" : 5,
+
+  "particleEmitter" : {
+    "emissionRate" : 200,
+    "emissionVariance" : 0.0,
+    "pixelOrigin" : [0, 0],
+
+    "particle" : {
+      "type" : "streak",
+      "size" : 1.0,
+      "color" : [220, 220, 220, 200],
+      "fade" : 0.9,
+      "position" : [0.0, 0.0],
+      "initialVelocity" : [-69.0, 0.0],
+      "finalVelocity" : [0, 0.0],
+      "destructionTime" : 0.0,
+      "approach" : [0, 10],
+      "timeToLive" : 1.0,
+      "length" : 10.0
+    },
+    "particleVariance" : {
+      "initialVelocity" : [-3.0, 1.0],
+      "position" : [10, 10]
+    }
+  }
 }
