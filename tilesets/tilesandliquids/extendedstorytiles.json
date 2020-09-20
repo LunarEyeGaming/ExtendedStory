@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstorytiles",
  "spacing":0,
- "tilecount":32,
+ "tilecount":33,
  "tileheight":8,
  "tileproperties":
     {
@@ -127,6 +127,10 @@
      "31":
         {
          "material":"abysstumorsdead_es"
+        },
+     "32":
+        {
+         "material":"skybrick2_es"
         },
      "4":
         {
@@ -268,6 +272,10 @@
          "material":"string"
         },
      "31":
+        {
+         "material":"string"
+        },
+     "32":
         {
          "material":"string"
         },
@@ -451,6 +459,12 @@
      "31":
         {
          "image":"..\/images\/tiles\/abysstumorsdead.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "32":
+        {
+         "image":"..\/images\/tiles\/skybrick2.png",
          "imageheight":8,
          "imagewidth":8
         },

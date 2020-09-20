@@ -33,7 +33,7 @@
       "fleeActions" : [ ],
 
       "hostileActions" : [
-		{
+        {
           "name" : "action-fire",
           "cooldown" : 2,
           "parameters" : {
@@ -48,18 +48,18 @@
 
             "projectileType" : "invisibleprojectile",
             "projectileParameters" : {
-			  "damageType" : "NoDamage",
-			  "timeToLive" : 5,
-			  "piercing" : true,
-			  "power" : 0,
-			  "damageTeam" : {"type" : "enemy"},
+              "damageType" : "NoDamage",
+              "timeToLive" : 5,
+              "piercing" : true,
+              "power" : 0,
+              "damageTeam" : {"type" : "enemy"},
               "periodicActions" : [
-			    {
-				  "time" : 0.01,
-				  "action" : "projectile",
-				  "type" : "mazeminiboss2laser"
-				}
-			  ]
+                {
+                  "time" : 0.01,
+                  "action" : "projectile",
+                  "type" : "mazeminiboss2laser"
+                }
+              ]
             },
             "fireOffset" : [0, 0],
             "onGround" : false,
@@ -73,7 +73,7 @@
             "winddownTime" : 7.0
           }
         },
-		{
+        {
           "name" : "action-fire",
           "cooldown" : 2,
           "parameters" : {
@@ -103,7 +103,7 @@
             "winddownTime" : 0.2
           }
         }
-	  ],
+      ],
 
       "periodicActions" : [ ],
 
@@ -125,7 +125,7 @@
       "concurrentActions" : [ ],
 
       "concurrentHostileActions" : [ ],
-	  "deathActions" : [ ]
+      "deathActions" : [ ]
     },
 
     "damageBar" : "Special",
@@ -155,7 +155,8 @@
 
       "airFriction" : 4,
       "airForce" : 40,
-      "flySpeed" : 3
+      "flySpeed" : 3,
+      "physicsEffectCategories" : ["stationarymonster"]
     },
 
     "bodyMaterialKind" : "organic",

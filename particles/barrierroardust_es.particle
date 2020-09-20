@@ -4,7 +4,7 @@
     "type" : "animated",
     "animation" : "/animations/dust2/dust2.animation",
     "position" : [0, 0],
-    "initialVelocity" : [-20, 0],
+    "initialVelocity" : [20, 0],
     "finalVelocity" : [0, 8],
     "approach" : [28, 14],
     "destructionAction" : "shrink",

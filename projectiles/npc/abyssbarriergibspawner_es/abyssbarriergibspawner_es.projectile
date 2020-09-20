@@ -1,0 +1,82 @@
+{
+  "projectileName" : "abyssbarriergibspawner_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "loop",
+      "count" : 3,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib1_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib2_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib3_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 20,
+              "config" : {
+                "speed" : 45
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 20,
+              "config" : {
+                "speed" : 40
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [0, -1, 1.5, 1],
+              "fuzzAngle" : 20,
+              "config" : {
+                "speed" : 35
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

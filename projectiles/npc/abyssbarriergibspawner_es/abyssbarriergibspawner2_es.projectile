@@ -1,0 +1,124 @@
+{
+  "projectileName" : "abyssbarriergibspawner2_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 1,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "loop",
+      "count" : 10,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib1_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib2_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib3_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 10
+            }
+          ]
+        },
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib1_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "angleAdjust" : 180,
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib2_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "angleAdjust" : 180,
+              "fuzzAngle" : 10
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssbarriergib3_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "angleAdjust" : 180,
+              "fuzzAngle" : 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "loop",
+      "count" : 40,
+      "body" : [
+        {
+          "action" : "option",
+          "options" : [
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 180,
+              "config" : {
+                "speed" : 45
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 180,
+              "config" : {
+                "speed" : 40
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "abyssblooddrip2_es",
+              "offsetRange" : [-2, -3.5, 2, 3.5],
+              "fuzzAngle" : 180,
+              "config" : {
+                "speed" : 35
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "barrierroaremitter_es",
+      "offset" : [-10, 0],
+      "direction" : [-1, 0]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/npc/mission/barrier_roar.ogg" ]
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

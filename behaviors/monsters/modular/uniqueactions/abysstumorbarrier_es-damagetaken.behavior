@@ -1,0 +1,40 @@
+{
+  "name": "abysstumorbarrier_es-damagetaken",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": { },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "projectile",
+        "type": "module",
+        "name": "action-projectile",
+        "parameters": {
+          "projectileCount": {"value": 1},
+          "projectileType": {"value": "abyssbarriergibspawner_es"},
+          "projectileParameters": {"value": {}},
+          "aimDirection": {"value": [1, 0]},
+          "inaccuracy": {"value": 0},
+          "fireOffset": {"value": [1.5, 0]}
+        }
+      },
+      {
+        "title": "animate",
+        "type": "module",
+        "name": "action-animate",
+        "parameters": {
+          "stateType": {"value": "body"},
+          "state": {"value": "idle2"}
+        }
+      }
+    ]
+  }
+}

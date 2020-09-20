@@ -4,168 +4,20 @@
     "species" : "generic",
     "rules" : [
     ],
-    "anchor" : [ "entrance" ],
+    "anchor" : [ "abyssartifactdungeon2" ],
     "gravity" : 80,
     "maxRadius" : 1000000,
-    "maxParts" : 50,
+    "maxParts" : 100,
     "protected" : true
   },
 
   "parts" : [
     {
-      "name" : "entrance",
+      "name" : "abyssartifactdungeon2",
       "rules" : [
-        [ "doNotCombineWith", [ "entrance" ] ]
+        [ "maxSpawnCount", [1] ]
       ],
-      "def" : [ "tmx", "abyssdungeon2entrance.json" ],
-      "chance" : 1000
-    },
-
-    //---------------HALLS
-    {
-      "name" : "hall",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2horizontal.json" ],
-      "chance" : 500
-    },
-    
-    //---------------PIT FALLS
-    {
-      "name" : "pit1",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "pit1" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2vertical1.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "pit2",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "pit2" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2vertical2.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "pit3",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "pit3" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2vertical3.json" ],
-      "chance" : 500
-    },
-    {
-      "name" : "pit4",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "pit4" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2vertical4.json" ],
-      "chance" : 500
-    },
-
-    //---------------JUNCTIONS
-    {
-      "name" : "junction",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ],
-        [ "doNotConnectToPart", [ "junction" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2junction.json" ],
-      "chance" : 450
-    },
-
-    //---------------CORNERS
-    {
-      "name" : "cornerTL",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2cornerTL.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "cornerTR",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2cornerTR.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "cornerBL",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2cornerBL.json" ],
-      "chance" : 400
-    },
-    {
-      "name" : "cornerBR",
-      "rules" : [
-        //[ "maxSpawnCount", [3] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2cornerBR.json" ],
-      "chance" : 400
-    },
-
-    //---------------END CAPS
-    {
-      "name" : "endtop",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2endcaptop.json" ],
-      "chance" : 25
-    },
-    {
-      "name" : "endbot",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2endcapbot.json" ],
-      "chance" : 25
-    },
-    {
-      "name" : "endleft",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2endcapleft.json" ],
-      "chance" : 25
-    },
-    {
-      "name" : "endright",
-      "rules" : [
-        [ "ignorePartMaximumRule" ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2endcapright.json" ],
-      "chance" : 25
-    },
-
-    //---------------BOSS ROOMS
-    {
-      "name" : "bossleft",
-      "rules" : [
-        [ "ignorePartMaximumRule" ],
-        [ "doNotCombineWith", [ "bossleft", "bossright" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2exitleft.json" ],
-      "chance" : 100
-    },
-    {
-      "name" : "bossright",
-      "rules" : [
-        [ "ignorePartMaximumRule" ],
-        [ "doNotCombineWith", [ "bossleft", "bossright" ] ]
-      ],
-      "def" : [ "tmx", "abyssdungeon2exitright.json" ],
-      "chance" : 100
+      "def" : [ "tmx", "abyssdungeon2.json" ]
     }
   ]
 }

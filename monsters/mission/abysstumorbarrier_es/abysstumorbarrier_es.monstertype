@@ -23,11 +23,8 @@
       
       "damageTakenActions" : [
         {
-          "name" : "action-animate",
-          "parameters" : {
-            "stateType" : "body",
-            "state" : "idle2"
-          }
+          "name" : "abysstumorbarrier_es-damagetaken",
+          "parameters" : {}
         }
       ],
 
@@ -36,11 +33,11 @@
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
-            "projectileType" : "barrierroaremitter_es",
+            "projectileType" : "abyssbarriergibspawner2_es",
             "projectileParameters" : {},
-            "aimDirection" : [-1, 0],
+            "aimDirection" : [1, 0],
             "inaccuracy" : 0,
-            "fireOffset" : [-10, 0]
+            "fireOffset" : [0, 0]
           }
         }
       ]
@@ -84,7 +81,7 @@
 
     "damageBar" : "None",
 
-    "knockoutTime" : 1.0,
+    "knockoutTime" : 0,
     "knockoutAnimationStates" : {
       "damage" : "stunned"
     },
