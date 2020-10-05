@@ -17,12 +17,12 @@
   "animationParts" : {
     "handle" : "",
     "blade" : "destroyerspear.png",
-	"bladeFullbright" : "destroyerspearunlit.png"
+    "bladeFullbright" : "destroyerspearunlit.png"
   },
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/melee/destroyerspear_fire.ogg" ],
-	  "physicalStart" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
+      "physicalStart" : [ "/sfx/melee/swing_spear_fire1.ogg", "/sfx/melee/swing_spear_fire2.ogg", "/sfx/melee/swing_spear_fire3.ogg" ],
       "physicalBlast" : [ "/sfx/melee/rocketspear_loop_fire.ogg" ],
       "physicalEnd" : [ "/sfx/melee/rocketspear_stop_fire.ogg" ]
     }
@@ -38,10 +38,10 @@
   "primaryAbility" : {
     "fireTime" : 0.5,
     "baseDps" : 20,
-	"windupAnimationState" : "windup",
-	"fireAnimationState" : "fire",
-	"cooldownAnimationState" : "cooldown",
-	"altCooldownAnimationState" : "cooldown2",
+    "windupAnimationState" : "windup",
+    "fireAnimationState" : "fire",
+    "cooldownAnimationState" : "cooldown",
+    "altCooldownAnimationState" : "cooldown2",
     "holdDamageMultiplier" : 0.3,
     "holdDamageConfig" : {
       "timeoutGroup" : "hold",
@@ -64,15 +64,15 @@
   "altAbilityType" : "rocketspear",
   "altAbility" : {
     "elementalConfig" : {
-	  "physical" : {
-	    "projectileType" : "destroyershot"
-	  }
-	},
-	"projectileParameters" : {
-	  "speed" : 35,
-	  "power" : 400
-	},
-	"baseDps" : 20
+      "physical" : {
+        "projectileType" : "destroyershot"
+      }
+    },
+    "projectileParameters" : {
+      "speed" : 35,
+      "power" : 400
+    },
+    "baseDps" : 20
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

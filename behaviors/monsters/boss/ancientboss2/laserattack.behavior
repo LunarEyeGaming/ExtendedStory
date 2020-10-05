@@ -29,7 +29,7 @@
           "type": {"value": "body"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -45,12 +45,12 @@
           "time": {"value": 0.6}
         }
       },
-	  {
-	    "title": "ancientboss2-laserbeams",
-		"type": "module",
-		"name": "ancientboss2-laserbeams",
-		"parameters": {}
-	  },
+      {
+        "title": "ancientboss2-laserbeams",
+        "type": "module",
+        "name": "ancientboss2-laserbeams",
+        "parameters": {}
+      },
       {
         "title": "timer",
         "type": "action",
@@ -59,7 +59,7 @@
           "time": {"value": 0.5}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -68,7 +68,7 @@
           "type": {"value": "body"}
         }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -76,14 +76,14 @@
           "sound": {"value": "winddown3"}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 2.0}
-		}
-	  }
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      }
     ]
   }
 }

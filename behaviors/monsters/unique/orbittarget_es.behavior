@@ -1,0 +1,114 @@
+{
+  "name": "orbittarget_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
+  ],
+  "parameters": {
+    "orbitPeriod": 1,
+    "orbitVector": [1, 0]
+  },
+  "root": {
+    "title": "parallel",
+    "type": "composite",
+    "name": "parallel",
+    "parameters": {
+      "fail": {"value": -1},
+      "success": {"value": -1}
+    },
+    "children": [
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"key": "<orbitPeriod>"}
+        },
+        "output": {
+          "ratio": "orbitProgress"
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "entityPosition",
+            "type": "action",
+            "name": "entityPosition",
+            "parameters": {
+              "entity": {"key": "target"}
+            },
+            "output": {
+              "position": "targetPos"
+            }
+          },
+          {
+            "title": "lerp",
+            "type": "action",
+            "name": "lerp",
+            "parameters": {
+              "min": {"value": 0},
+              "max": {"value": 6.29},
+              "ratio": {"key": "orbitProgress"}
+            },
+            "output": {
+              "number": "orbitAngle"
+            }
+          },
+          {
+            "title": "vecRotate",
+            "type": "action",
+            "name": "vecRotate",
+            "parameters": {
+              "angle": {"key": "orbitAngle"},
+              "vector": {"key": "<orbitVector>"}
+            },
+            "output": {
+              "vector": "orbitOffset"
+            }
+          },
+          {
+            "title": "offsetPosition",
+            "type": "action",
+            "name": "offsetPosition",
+            "parameters": {
+              "offset": {"key": "orbitOffset"},
+              "position": {"key": "targetPos"}
+            },
+            "output": {
+              "position": "orbitPosition"
+            }
+          },
+          {
+            "title": "distance",
+            "type": "action",
+            "name": "distance",
+            "parameters": {
+              "to": {"key": "orbitPosition"}
+            },
+            "output": {
+              "vector": "toOrbitPos"
+            }
+          },
+          {
+            "title": "controlFly",
+            "type": "action",
+            "name": "controlFly",
+            "parameters": {
+              "vector": {"key": "toOrbitPos"}
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

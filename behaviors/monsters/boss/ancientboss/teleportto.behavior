@@ -12,8 +12,8 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
-    "teleportPosition": [101, 101],
-	"teleportDelay": 1
+    "teleportPosition": null,
+    "teleportDelay": 1
   },
   "root": {
     "title": "sequence",
@@ -21,7 +21,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "burstParticleEmitter",
         "type": "action",
         "name": "burstParticleEmitter",
@@ -29,13 +29,13 @@
           "emitter": {"value": "teleport"}
         }
       },
-	  {
-    	"title": "playSound",
-    	"type": "action",
-    	"name": "playSound",
-    	"parameters": {
-    	  "sound": {"value": "teleportOut"}
-    	}
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "teleportOut"}
+        }
       },
       {
         "title": "timer",
@@ -54,16 +54,16 @@
           "type": {"value": "invisible"}
         }
       },
-	  {
-    	"title": "setAnimationState",
-    	"type": "action",
-    	"name": "setAnimationState",
-    	"parameters": {
-    	  "state": {"value": "invisible"},
-    	  "type": {"value": "movement"}
-    	}
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "movement"}
+        }
       },
-	  {
+      {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",
@@ -72,7 +72,7 @@
           "active": {"value": false}
         }
       },
-	  {
+      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -81,41 +81,41 @@
           "success": {"value": 2}
         },
         "children": [
-		  {
-    	    "title": "timer",
-    	    "type": "action",
-    	    "name": "timer",
-    	    "parameters": {
-    	      "time": {"key": "<teleportDelay>"}
-    	    }
-    	  },
-		  {
-		    "title": "addEphemeralEffect",
-		    "type": "action",
-		    "name": "addEphemeralEffect",
-		    "parameters": {
-		      "name": {"value": "invulnerable"}
-		    }
-		  }
-		]
-	  },
-	  {
-	    "title": "removeEphemeralEffect",
-	    "type": "action",
-	    "name": "removeEphemeralEffect",
-	    "parameters": {
-	      "name": {"value": "invulnerable"}
-	    }
-	  },
-	  {
-	    "title": "setPosition",
-		"type": "action",
-		"name": "setPosition",
-		"parameters": {
-		  "position": {"key": "<teleportPosition>"}
-		}
-	  },
-	  {
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"key": "<teleportDelay>"}
+            }
+          },
+          {
+            "title": "addEphemeralEffect",
+            "type": "action",
+            "name": "addEphemeralEffect",
+            "parameters": {
+              "name": {"value": "invulnerable"}
+            }
+          }
+        ]
+      },
+      {
+        "title": "removeEphemeralEffect",
+        "type": "action",
+        "name": "removeEphemeralEffect",
+        "parameters": {
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "<teleportPosition>"}
+        }
+      },
+      {
         "title": "burstParticleEmitter",
         "type": "action",
         "name": "burstParticleEmitter",
@@ -123,13 +123,13 @@
           "emitter": {"value": "teleport"}
         }
       },
-	  {
-    	"title": "playSound",
-    	"type": "action",
-    	"name": "playSound",
-    	"parameters": {
-    	  "sound": {"value": "teleportIn"}
-    	}
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "teleportIn"}
+        }
       },
       {
         "title": "timer",
@@ -148,16 +148,16 @@
           "type": {"value": "invisible"}
         }
       },
-	  {
-    	"title": "setAnimationState",
-    	"type": "action",
-    	"name": "setAnimationState",
-    	"parameters": {
-    	  "state": {"value": "visible"},
-    	  "type": {"value": "movement"}
-    	}
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "visible"},
+          "type": {"value": "movement"}
+        }
       },
-	  {
+      {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",

@@ -1,0 +1,232 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 2,
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "pregrab" : {},
+          "grab" : {
+            "frames" : 2,
+            "cycle" : 0.2
+          },
+          "grabend" : {},
+          "predmg" : {
+            "frames" : 2,
+            "cycle" : 0.05,
+            "mode" : "loop"
+          },
+          "dmg" : {
+            "frames" : 4,
+            "cycle" : 0.4
+          },
+          "release" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "offset" : [0.0, 0]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "pregrab" : {
+              "properties" : {
+                "image" : "<partImage>:pregrab"
+              }
+            },
+            "grab" : {
+              "properties" : {
+                "image" : "<partImage>:grab.<frame>"
+              }
+            },
+            "grabend" : {
+              "properties" : {
+                "image" : "<partImage>:grabend"
+              }
+            },
+            "predmg" : {
+              "properties" : {
+                "image" : "<partImage>:predmg.<frame>"
+              }
+            },
+            "dmg" : {
+              "properties" : {
+                "image" : "<partImage>:dmg.<frame>"
+              }
+            },
+            "release" : {
+              "properties" : {
+                "image" : "<partImage>:release"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+          "zLevel" : 2,
+          "offset" : [0.0, 0],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "pregrab" : {
+              "properties" : {
+                "image" : "<partImage>:pregrab"
+              }
+            },
+            "grab" : {
+              "properties" : {
+                "image" : "<partImage>:grab.<frame>"
+              }
+            },
+            "grabend" : {
+              "properties" : {
+                "image" : "<partImage>:grabend"
+              }
+            },
+            "predmg" : {
+              "properties" : {
+                "image" : "<partImage>:predmg.<frame>"
+              }
+            },
+            "dmg" : {
+              "properties" : {
+                "image" : "<partImage>:dmg.<frame>"
+              }
+            },
+            "release" : {
+              "properties" : {
+                "image" : "<partImage>:release"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+      "grabbers" : {
+        "properties" : {
+          "zLevel" : 2,
+          "offset" : [0.0, 0]
+        },
+        "partStates" : {
+          "body" : {
+            "pregrab" : {
+              "properties" : {
+                "image" : "<partImage>:pregrab"
+              }
+            },
+            "grab" : {
+              "properties" : {
+                "image" : "<partImage>:grab.<frame>"
+              }
+            },
+            "grabend" : {
+              "properties" : {
+                "image" : "<partImage>:grabend"
+              }
+            },
+            "predmg" : {
+              "properties" : {
+                "image" : "<partImage>:predmg.<frame>"
+              }
+            },
+            "dmg" : {
+              "properties" : {
+                "image" : "<partImage>:dmg.<frame>"
+              }
+            },
+            "release" : {
+              "properties" : {
+                "image" : "<partImage>:release"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {},
+
+  "transformationGroups" : {},
+  
+  "lights" : {
+    "glow" : {
+      "active" : false,
+      "position" : [1.625, 0],
+      "color" : [35, 19, 46]
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "burstCount" : 1,
+      "particles" : []
+    }
+  },
+
+  "sounds" : {
+    "deathPuff" : [ ],
+    "aggro" : []
+  }
+}

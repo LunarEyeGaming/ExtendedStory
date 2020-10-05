@@ -1,0 +1,662 @@
+{
+  "name": "ravenousstalker_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/entity.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua"
+  ],
+  "parameters": {
+    "attackRange": 18,
+    "grabRange": 3,
+    "lungeSpeed": 90,
+    "orbitVector": [18, 0]
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "setNumber",
+        "type": "action",
+        "name": "setNumber",
+        "parameters": {
+          "number": {"value": 0}
+        },
+        "output": {
+          "number": "drawableProgress"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          // Clear and add drawables
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 50},
+              "keepTargetInRange": {"value": 99999},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 5}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1}
+                        },
+                        "child": {
+                          "title": "sequence",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": -1},
+                                "success": {"value": 1}
+                              },
+                              "children": [
+                                {
+                                  "title": "failer",
+                                  "type": "decorator",
+                                  "name": "failer",
+                                  "parameters": {},
+                                  "child": {
+                                    "title": "sequence",
+                                    "type": "composite",
+                                    "name": "sequence",
+                                    "parameters": {},
+                                    "children": [
+                                      {
+                                        "title": "entityDirection",
+                                        "type": "action",
+                                        "name": "entityDirection",
+                                        "parameters": {
+                                          "target": {"key": "target"}
+                                        },
+                                        "output": {
+                                          "vector": "targetVector"
+                                        }
+                                      },
+                                      {
+                                        "title": "controlFly",
+                                        "type": "action",
+                                        "name": "controlFly",
+                                        "parameters": {
+                                          "vector": {"key": "targetVector"}
+                                        }
+                                      },
+                                      {
+                                        "title": "timer",
+                                        "type": "action",
+                                        "name": "timer",
+                                        "parameters": {
+                                          "time": {"value": 0.01}
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "entityPosition",
+                                      "type": "action",
+                                      "name": "entityPosition",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      },
+                                      "output": {
+                                        "position": "targetPos"
+                                      }
+                                    },
+                                    {
+                                      "title": "inRange",
+                                      "type": "action",
+                                      "name": "inRange",
+                                      "parameters": {
+                                        "target": {"key": "targetPos"},
+                                        "range": {"key": "<attackRange>"}
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "entityDirection",
+                              "type": "action",
+                              "name": "entityDirection",
+                              "parameters": {
+                                "target": {"key": "target"}
+                              },
+                              "output": {
+                                "vector": "aimVector"
+                              }
+                            },
+                            {
+                              "title": "vecAngle",
+                              "type": "action",
+                              "name": "vecAngle",
+                              "parameters": {
+                                "vector": {"key": "aimVector"}
+                               },
+                              "output": {
+                                "angle": "lungeAngle"
+                              }
+                            },
+                            {
+                              "title": "vecMultiply",
+                              "type": "action",
+                              "name": "vecMultiply",
+                              "parameters": {
+                                "number": {"key": "<lungeSpeed>"},
+                                "first": {"value": [1, 0]}
+                              },
+                              "output": {
+                                "vector": "toLunge"
+                              }
+                            },
+                            {
+                              "title": "vecRotate",
+                              "type": "action",
+                              "name": "vecRotate",
+                              "parameters": {
+                                "angle": {"key": "lungeAngle"},
+                                "vector": {"key": "toLunge"}
+                              },
+                              "output": {
+                                "vector": "lungeVelocity"
+                              }
+                            },
+                            {
+                              "title": "setVelocity",
+                              "type": "action",
+                              "name": "setVelocity",
+                              "parameters": {
+                                "velocity": {"key": "lungeVelocity"}
+                              }
+                            },
+                            {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "pregrab"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fails": {"value": -1},
+                                "success": {"value": 1}
+                              },
+                              "children": [
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "entityPosition",
+                                      "type": "action",
+                                      "name": "entityPosition",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      },
+                                      "output": {
+                                        "position": "targetPos"
+                                      }
+                                    },
+                                    {
+                                      "title": "inRange",
+                                      "type": "action",
+                                      "name": "inRange",
+                                      "parameters": {
+                                        "target": {"key": "targetPos"},
+                                        "range": {"key": "<grabRange>"}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.2}
+                                  },
+                                  "output": {
+                                    "ratio": "drawableProgress"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "selector",
+                              "type": "composite",
+                              "name": "selector",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "entityPosition",
+                                      "type": "action",
+                                      "name": "entityPosition",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      },
+                                      "output": {
+                                        "position": "targetPos"
+                                      }
+                                    },
+                                    {
+                                      "title": "inRange",
+                                      "type": "action",
+                                      "name": "inRange",
+                                      "parameters": {
+                                        "target": {"key": "targetPos"},
+                                        "range": {"key": "<grabRange>"}
+                                      }
+                                    },
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "grab"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "setVelocity",
+                                      "type": "action",
+                                      "name": "setVelocity",
+                                      "parameters": {
+                                        "velocity": {"value": [0, 0]}
+                                      }
+                                    },
+                                    {
+                                      "title": "selector",
+                                      "type": "composite",
+                                      "name": "selector",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "sequence",
+                                          "type": "composite",
+                                          "name": "sequence",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "greaterThan",
+                                              "type": "action",
+                                              "name": "greaterThan",
+                                              "parameters": {
+                                                "first": {"key": "facingDirection"},
+                                                "second": {"value": 0}
+                                              }
+                                            },
+                                            {
+                                              "title": "sendEntityMessage",
+                                              "type": "action",
+                                              "name": "sendEntityMessage",
+                                              "parameters": {
+                                                "arguments": {"value": ["grabbed_es"]},
+                                                "entity": {"key": "target"},
+                                                "message": {"value": "applyStatusEffect"}
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "title": "sendEntityMessage",
+                                          "type": "action",
+                                          "name": "sendEntityMessage",
+                                          "parameters": {
+                                            "arguments": {"value": ["grabbed2_es"]},
+                                            "entity": {"key": "target"},
+                                            "message": {"value": "applyStatusEffect"}
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.2}
+                                      },
+                                      "output": {
+                                        "ratio": "drawableProgress"
+                                      }
+                                    },
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "grabend"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.3}
+                                      }
+                                    },
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "predmg"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "parallel",
+                                      "type": "composite",
+                                      "name": "parallel",
+                                      "parameters": {
+                                        "fails": {"value": -1},
+                                        "success": {"value": 1}
+                                      },
+                                      "children": [
+                                        {
+                                          "title": "failer",
+                                          "type": "decorator",
+                                          "name": "failer",
+                                          "parameters": {},
+                                          "child": {
+                                            "title": "timer",
+                                            "type": "action",
+                                            "name": "timer",
+                                            "parameters": {
+                                              "time": {"value": 0.05}
+                                            },
+                                            "output": {
+                                              "ratio": "drawableProgress"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "title": "timer",
+                                          "type": "action",
+                                          "name": "timer",
+                                          "parameters": {
+                                            "time": {"value": 1.5}
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "dmg"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "entityPosition",
+                                      "type": "action",
+                                      "name": "entityPosition",
+                                      "parameters": {
+                                        "entity": {"key": "target"}
+                                      },
+                                      "output": {
+                                        "position": "targetPos"
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnProjectile",
+                                      "type": "action",
+                                      "name": "spawnProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [1, 0]},
+                                        "offset": {"value": [0, 0]},
+                                        "projectileConfig": {"value": {"power": 50}},
+                                        "projectileType": {"value": "ravenousstalkerdamage_es"},
+                                        "position": {"key": "targetPos"},
+                                        "scalePower": {"value": true}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.3}
+                                      },
+                                      "output": {
+                                        "ratio": "drawableProgress"
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 1.3}
+                                      }
+                                    },
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "release"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "sendEntityMessage",
+                                      "type": "action",
+                                      "name": "sendEntityMessage",
+                                      "parameters": {
+                                        "arguments": {"value": ["grabbedend_es"]},
+                                        "entity": {"key": "target"},
+                                        "message": {"value": "applyStatusEffect"}
+                                      }
+                                    },
+                                    {
+                                      "title": "orbittarget_es",
+                                      "type": "module",
+                                      "name": "orbittarget_es",
+                                      "parameters": {
+                                        "orbitPeriod": {"value": 5},
+                                        "orbitVector": {"key": "<orbitVector>"}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "setAnimationState",
+                                      "type": "action",
+                                      "name": "setAnimationState",
+                                      "parameters": {
+                                        "state": {"value": "release"},
+                                        "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "parallel",
+                                      "type": "composite",
+                                      "name": "parallel",
+                                      "parameters": {
+                                        "fail": {"value": -1},
+                                        "success": {"value": -1}
+                                      },
+                                      "children": [
+                                        {
+                                          "title": "controlApproachVelocity",
+                                          "type": "action",
+                                          "name": "controlApproachVelocity",
+                                          "parameters": {
+                                            "force": {"value": 720},
+                                            "velocity": {"value": [0, 0]}
+                                          }
+                                        },
+                                        {
+                                          "title": "timer",
+                                          "type": "action",
+                                          "name": "timer",
+                                          "parameters": {
+                                            "time": {"value": 0.5}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "title": "orbittarget_es",
+                              "type": "module",
+                              "name": "orbittarget_es",
+                              "parameters": {
+                                "orbitPeriod": {"value": 5},
+                                "orbitVector": {"key": "<orbitVector>"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.01}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

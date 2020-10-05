@@ -1,0 +1,43 @@
+Parameters:
+
+
+Behavior Root Node
+  Parallel(Runs at all times)
+    Clear drawables
+    Add drawable(state progress, state name, drawable attributes, render layer, all state attributes(frames))
+    Monster targeting
+      Infinite Repeater
+        Sequence
+          Parallel(1 fail, all successes)
+            approach-fly
+            Invert in range(~25)
+          Lunge
+          To Animation State(Lunge, Body)
+          Set drawable state(lunge), outputs progress(0) and state name
+          Parallel(all fails, 1 success)
+            Timer(0.2), outputs progress
+            In range(~5)
+          Successful sequence
+            In range(~5)
+            Set animation state(grab, body)
+            Set drawable state(grab)
+            Grab status effect to target
+            Timer(0.2), outputs progress
+            Set drawable state(grab end)
+            Timer(0.3)
+            Set drawable state(pressure)
+            Parallel(all fails, 1 success)
+              Timer(1.5)
+              // While waiting
+              Timer(0.05), outputs progress
+            Set drawable state(impale)
+            Activate contact damage
+            Timer(0.01)
+            Deactivate contact damage
+            Timer(0.3), outputs progress
+            Timer(1.3)
+            Disable grab status effect
+            Orbits the player for 5 seconds
+          Orbits the player for 5 seconds
+            
+      Chill in the darkness

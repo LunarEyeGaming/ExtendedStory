@@ -20,15 +20,15 @@
     "parameters": {},
     "children": [
       {
-    	"title": "spawnProjectile",
-    	"type": "action",
-    	"name": "spawnProjectile",
-    	"parameters": {
-    	  "aimVector": {"value": [0, 0]},
-    	  "offset": {"value": [0, 0]},
-    	  "projectileConfig": {"value": {}},
-    	  "projectileType": {"value": "orbitalup"}
-    	}
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [0, 0]},
+          "offset": {"value": [0, 0]},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "orbitalup"}
+        }
       }
     ]
   }

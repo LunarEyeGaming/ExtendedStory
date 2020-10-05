@@ -45,7 +45,7 @@
           "time": {"value": 0.75}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -56,7 +56,7 @@
           "projectileType": {"value": "frostblockidle_es"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -67,7 +67,7 @@
           "projectileType": {"value": "frostblockidle_es"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -78,7 +78,7 @@
           "projectileType": {"value": "frostblockidle_es"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -89,7 +89,7 @@
           "projectileType": {"value": "fg_iceplatform_es"}
         }
       },
-	  {
+      {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -100,23 +100,23 @@
           "projectileType": {"value": "fg_iceplatform_es"}
         }
       },
-	  {
+      {
         "title": "addEphemeralEffect",
         "type": "action",
         "name": "addEphemeralEffect",
         "parameters": {
           "name": {"value": "invulnerable"},
-		  "duration": {"value": 1.5}
+          "duration": {"value": 1.5}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 1.5}
-		}
-	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      },
       {
         "title": "repeater",
         "type": "decorator",
@@ -124,254 +124,254 @@
         "parameters": {
           "maxLoops": {"value": 10}
         },
-		"child": {
-		  "title": "randomize",
-		  "type": "composite",
-		  "name": "randomize",
-		  "parameters": {},
-		  "children": [
-		    {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 8]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "frostblockidle2_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 0]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, -8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, -4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-			    {
-    		      "title": "addEphemeralEffect",
-    		      "type": "action",
-    		      "name": "addEphemeralEffect",
-    		      "parameters": {
-    		        "name": {"value": "invulnerable"},
-			  	  "duration": {"value": 2}
-    		      }
-    		    },
-			    {
-			      "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 2}
-				  }
-			    }
-			  ]
-			},
-			{
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 0]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "frostblockidle2_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, -8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, -4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-			    {
-    		      "title": "addEphemeralEffect",
-    		      "type": "action",
-    		      "name": "addEphemeralEffect",
-    		      "parameters": {
-    		        "name": {"value": "invulnerable"},
-			  	  "duration": {"value": 2}
-    		      }
-    		    },
-			    {
-			      "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 2}
-				  }
-			    }
-			  ]
-			},
-			{
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 8]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, 0]},
-    		        "projectileConfig": {"value": {"timeToLive": 0.5}},
-    		        "projectileType": {"value": "frostblockattack1_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [-15, -8]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "frostblockidle2_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, -4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-				{
-    		      "title": "spawnProjectile",
-    		      "type": "action",
-    		      "name": "spawnProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 4]},
-    		        "projectileConfig": {"value": {}},
-    		        "projectileType": {"value": "fg_iceplatformloop_es"}
-    		      }
-    		    },
-			    {
-    		      "title": "addEphemeralEffect",
-    		      "type": "action",
-    		      "name": "addEphemeralEffect",
-    		      "parameters": {
-    		        "name": {"value": "invulnerable"},
-			  	  "duration": {"value": 2}
-    		      }
-    		    },
-			    {
-			      "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 2}
-				  }
-			    }
-			  ]
-			}
-		  ]
-		}
+        "child": {
+          "title": "randomize",
+          "type": "composite",
+          "name": "randomize",
+          "parameters": {},
+          "children": [
+            {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 8]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "frostblockidle2_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 0]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, -8]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, -4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, 4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "addEphemeralEffect",
+                  "type": "action",
+                  "name": "addEphemeralEffect",
+                  "parameters": {
+                    "name": {"value": "invulnerable"},
+                    "duration": {"value": 2}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 2}
+                  }
+                }
+              ]
+            },
+            {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 8]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 0]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "frostblockidle2_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, -8]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, -4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, 4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "addEphemeralEffect",
+                  "type": "action",
+                  "name": "addEphemeralEffect",
+                  "parameters": {
+                    "name": {"value": "invulnerable"},
+                    "duration": {"value": 2}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 2}
+                  }
+                }
+              ]
+            },
+            {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 8]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, 0]},
+                    "projectileConfig": {"value": {"timeToLive": 0.5}},
+                    "projectileType": {"value": "frostblockattack1_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [-15, -8]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "frostblockidle2_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, -4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"value": [1, 0]},
+                    "offset": {"value": [0, 4]},
+                    "projectileConfig": {"value": {}},
+                    "projectileType": {"value": "fg_iceplatformloop_es"}
+                  }
+                },
+                {
+                  "title": "addEphemeralEffect",
+                  "type": "action",
+                  "name": "addEphemeralEffect",
+                  "parameters": {
+                    "name": {"value": "invulnerable"},
+                    "duration": {"value": 2}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 2}
+                  }
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "title": "playSound",
@@ -381,7 +381,7 @@
           "sound": {"value": "frostblockwinddown"}
         }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -390,14 +390,14 @@
           "type": {"value": "body"}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 2.0}
-		}
-	  }
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 2.0}
+        }
+      }
     ]
   }
 }

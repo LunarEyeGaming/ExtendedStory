@@ -178,6 +178,15 @@
                                     }
                                   ]
                                 }
+                              },
+                              {
+                                "title": "setGlobalTag",
+                                "type": "action",
+                                "name": "setGlobalTag",
+                                "parameters": {
+                                  "tag": {"value": "phase1"},
+                                  "type": {"value": "phase"}
+                                }
                               }
                             ]
                           },
@@ -706,12 +715,12 @@
                     }
                   },
                   {
-                    "title": "flyToPosition",
+                    "title": "setGlobalTag",
                     "type": "action",
-                    "name": "flyToPosition",
+                    "name": "setGlobalTag",
                     "parameters": {
-                      "position": {"key": "spawn"},
-                      "tolerance": {"value": 1}
+                      "tag": {"value": "phase1"},
+                      "type": {"value": "phase"}
                     }
                   },
                   {
@@ -720,6 +729,14 @@
                     "name": "setVelocity",
                     "parameters": {
                       "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "ancientboss-teleportto",
+                    "type": "module",
+                    "name": "ancientboss-teleportto",
+                    "parameters": {
+                      "teleportPosition": {"key": "spawn"}
                     }
                   },
                   {

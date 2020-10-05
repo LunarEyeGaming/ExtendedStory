@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [29, 34],
+    "dimensions" : [4, 4],
+    "names" : [
+      [ "pregrab", "grab.1", "grab.2" ],
+      [ "predmg.1", "predmg.2" ],
+      [ "dmg.1", "dmg.2", "dmg.3", "dmg.4" ],
+      [ "release" ]
+    ]
+  },
+  "aliases" : {
+    "grabend" : "predmg.1"
+  }
+}

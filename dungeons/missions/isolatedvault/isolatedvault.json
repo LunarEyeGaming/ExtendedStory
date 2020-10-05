@@ -3526,6 +3526,27 @@
                  "width":32,
                  "x":4200,
                  "y":2448
+                }, 
+                {
+                 "height":48,
+                 "id":1554,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":1880,
+                 "y":2528
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4668,7 +4689,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1554,
+ "nextobjectid":1555,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

@@ -1,9 +1,9 @@
 {
-  "name" : "grabbed_es",
+  "name" : "grabbed2_es",
   "blockingStat" : "grabbedImmunity",
   "effectConfig" : {
-    "grabOffset" : [1.375, 0.125],
-    "grabDirection" : -1
+    "grabOffset" : [-1.375, 0.125],
+    "grabDirection" : 1
   },
   "defaultDuration" : 1,
 
