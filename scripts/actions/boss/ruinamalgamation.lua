@@ -5,14 +5,8 @@
 
 function raBlinkEs(args, board)
   local variants = math.random(0, 4)
-  if variants == 1 and animator.animationState("eye1") == "idle" then
-	animator.setAnimationState("eye1", "blink")
-  elseif variants == 2 and animator.animationState("eye2") == "idle" then
-	animator.setAnimationState("eye2", "blink")
-  elseif variants == 3 and animator.animationState("eye3") == "idle" then
-	animator.setAnimationState("eye3", "blink")
-  elseif variants == 4 and animator.animationState("eye4") == "idle" then
-	animator.setAnimationState("eye4", "blink")
+  if variants ~= 0 and animator.animationState("eye"..variants) == "idle" then
+    animator.setAnimationState("eye"..variants, "blink")
   end
   
   return true

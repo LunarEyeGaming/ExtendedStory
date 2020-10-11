@@ -2,23 +2,41 @@
   "name": "ravenousstalker_es",
   "description": "",
   "scripts": [
-    "/scripts/actions/entity.lua",
     "/scripts/behavior.lua",
-    "/scripts/actions/world.lua",
     "/scripts/actions/animator.lua",
-    "/scripts/actions/time.lua",
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
     "/scripts/actions/position.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
-    "/scripts/actions/monster.lua",
-    "/scripts/actions/movement.lua",
-    "/scripts/actions/math.lua"
+    "/scripts/actions/time.lua",
+    "/scripts/actions/util_es.lua",
+    "/scripts/actions/world.lua"
   ],
   "parameters": {
     "attackRange": 18,
     "grabRange": 3,
     "lungeSpeed": 90,
-    "orbitVector": [18, 0]
+    "orbitVector": [18, 0],
+    "animatedDrawableAttributes": {
+      "drawable": {
+        "image": "/monsters/mission/ravenousstalker_es/grabbers.png",
+        "offset": [0.0625, -0.25],
+        "centered": true
+      },
+      "stateFrames": {
+        "idle": 1,
+        "pregrab": 1,
+        "grab": 2,
+        "grabend": 1,
+        "predmg": 2,
+        "dmg": 4,
+        "release": 1
+      },
+      "renderLayer": "Player+20"
+    }
   },
   "root": {
     "title": "sequence",
@@ -43,14 +61,32 @@
         }
       },
       {
-        "title": "setNumber",
+        "title": "setJsonObjectKey",
         "type": "action",
-        "name": "setNumber",
+        "name": "setJsonObjectKey",
         "parameters": {
-          "number": {"value": 0}
+          "key": {"value": "state"},
+          "string": {"value": ""}
         },
         "output": {
-          "number": "drawableProgress"
+          "object": "animatedDrawableVars"
+        }
+      },
+      {
+        "title": "ravenousstalker_es-controldrawablestate",
+        "type": "module",
+        "name": "ravenousstalker_es-controldrawablestate",
+        "parameters": {
+          "inputState": {"value": "idle"}
+        }
+      },
+      {
+        "title": "setAnimationParameter",
+        "type": "action",
+        "name": "setAnimationParameter",
+        "parameters": {
+          "key": {"value": "animatedDrawableAttributes"},
+          "value": {"key": "<animatedDrawableAttributes>"}
         }
       },
       {
@@ -62,7 +98,62 @@
           "success": {"value": -1}
         },
         "children": [
-          // Clear and add drawables
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "setJsonObjectKey",
+                "type": "action",
+                "name": "setJsonObjectKey",
+                "parameters": {
+                  "object": {"key": "animatedDrawableVars"},
+                  "key": {"value": "state"},
+                  "string": {"key": "drawableState"}
+                },
+                "output": {
+                  "object": "animatedDrawableVars"
+                }
+              },
+              {
+                "title": "setJsonObjectKey",
+                "type": "action",
+                "name": "setJsonObjectKey",
+                "parameters": {
+                  "object": {"key": "animatedDrawableVars"},
+                  "key": {"value": "progress"},
+                  "number": {"key": "drawableProgress"}
+                },
+                "output": {
+                  "object": "animatedDrawableVars"
+                }
+              },
+              {
+                "title": "setJsonObjectKey",
+                "type": "action",
+                "name": "setJsonObjectKey",
+                "parameters": {
+                  "object": {"key": "animatedDrawableVars"},
+                  "key": {"value": "direction"},
+                  "number": {"key": "facingDirection"}
+                },
+                "output": {
+                  "object": "animatedDrawableVars"
+                }
+              },
+              {
+                "title": "setAnimationParameter",
+                "type": "action",
+                "name": "setAnimationParameter",
+                "parameters": {
+                  "key": {"value": "animatedDrawableVars"},
+                  "value": {"key": "animatedDrawableVars"}
+                }
+              }
+            ]
+          },
           {
             "title": "monster-targeting",
             "type": "module",
@@ -270,6 +361,14 @@
                               }
                             },
                             {
+                              "title": "ravenousstalker_es-controldrawablestate",
+                              "type": "module",
+                              "name": "ravenousstalker_es-controldrawablestate",
+                              "parameters": {
+                                "inputState": {"value": "pregrab"}
+                              }
+                            },
+                            {
                               "title": "parallel",
                               "type": "composite",
                               "name": "parallel",
@@ -361,6 +460,14 @@
                                       }
                                     },
                                     {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "grab"}
+                                      }
+                                    },
+                                    {
                                       "title": "setVelocity",
                                       "type": "action",
                                       "name": "setVelocity",
@@ -434,6 +541,14 @@
                                       }
                                     },
                                     {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "grabend"}
+                                      }
+                                    },
+                                    {
                                       "title": "timer",
                                       "type": "action",
                                       "name": "timer",
@@ -448,6 +563,14 @@
                                       "parameters": {
                                         "state": {"value": "predmg"},
                                         "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "predmg"}
                                       }
                                     },
                                     {
@@ -469,7 +592,7 @@
                                             "type": "action",
                                             "name": "timer",
                                             "parameters": {
-                                              "time": {"value": 0.05}
+                                              "time": {"value": 0.1}
                                             },
                                             "output": {
                                               "ratio": "drawableProgress"
@@ -493,6 +616,14 @@
                                       "parameters": {
                                         "state": {"value": "dmg"},
                                         "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "dmg"}
                                       }
                                     },
                                     {
@@ -548,6 +679,14 @@
                                       }
                                     },
                                     {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "release"}
+                                      }
+                                    },
+                                    {
                                       "title": "sendEntityMessage",
                                       "type": "action",
                                       "name": "sendEntityMessage",
@@ -555,6 +694,22 @@
                                         "arguments": {"value": ["grabbedend_es"]},
                                         "entity": {"key": "target"},
                                         "message": {"value": "applyStatusEffect"}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.1}
+                                      }
+                                    },
+                                    {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "idle"}
                                       }
                                     },
                                     {
@@ -581,6 +736,30 @@
                                       "parameters": {
                                         "state": {"value": "release"},
                                         "type": {"value": "body"}
+                                      }
+                                    },
+                                    {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "release"}
+                                      }
+                                    },
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.1}
+                                      }
+                                    },
+                                    {
+                                      "title": "ravenousstalker_es-controldrawablestate",
+                                      "type": "module",
+                                      "name": "ravenousstalker_es-controldrawablestate",
+                                      "parameters": {
+                                        "inputState": {"value": "idle"}
                                       }
                                     },
                                     {

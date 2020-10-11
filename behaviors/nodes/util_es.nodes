@@ -1,0 +1,60 @@
+{
+  "setAnimationParameter": {
+    "type": "action",
+    "name": "setAnimationParameter",
+    "title": "setAnimationParameter",
+    "properties": {
+      "key": {"type": "string", "value": null},
+      "value": {"type": "json", "value": {}}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua"
+  },
+  
+  "setJsonObjectKey": {
+    "type": "action",
+    "name": "setJsonObjectKey",
+    "title": "setJsonObjectKey",
+    "properties": {
+      "object": {"type": "json", "value": {}},
+      "key": {"type": "string", "value": null},
+      "bool": {"type": "bool", "value": null},
+      "entity": {"type": "entity", "value": null},
+      "number": {"type": "number", "value": null},
+      "position": {"type": "position", "value": null},
+      "vec2": {"type": "vec2", "value": null},
+      "string": {"type": "string", "value": null}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "object": {"type": "json", "key": null}
+    }
+  },
+  
+  "getJsonObjectKey": {
+    "type": "action",
+    "name": "getJsonObjectKey",
+    "title": "getJsonObjectKey",
+    "properties": {
+      "key": {"type": "string", "value": null},
+      "value": {"type": "json", "value": {}}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua"
+  },
+  
+  "setString": {
+    "type": "action",
+    "name": "setString",
+    "title": "setString",
+    "properties": {
+      "string": {"type": "string", "value": null}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "stringVal": {"type": "string", "key": null}
+    }
+  }
+}

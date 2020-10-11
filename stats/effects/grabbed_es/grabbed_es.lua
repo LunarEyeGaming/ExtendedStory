@@ -17,7 +17,7 @@ end
 
 function update(dt)
   currentDuration = effect.duration()
-  if currentDuration < initialDuration and currentDuration > 0 then
+  if currentDuration <= initialDuration and currentDuration > 0 then
     if not target or not world.entityExists(target) then
       effect.expire()
       return

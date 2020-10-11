@@ -13,8 +13,8 @@
   },
   "getMaterial": {
     "type": "action",
-    "name": "isMaterial",
-    "title": "isMaterial",
+    "name": "getMaterial",
+    "title": "getMaterial",
     "properties": {
       "position": {"type": "position", "key": "self"},
       "layer": {"type": "string", "value": "foreground"}

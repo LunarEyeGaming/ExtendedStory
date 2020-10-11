@@ -148,53 +148,6 @@
             }
           }
         }
-      },
-      "grabbers" : {
-        "properties" : {
-          "zLevel" : 2,
-          "offset" : [0.0, 0]
-        },
-        "partStates" : {
-          "body" : {
-            "pregrab" : {
-              "properties" : {
-                "image" : "<partImage>:pregrab"
-              }
-            },
-            "grab" : {
-              "properties" : {
-                "image" : "<partImage>:grab.<frame>"
-              }
-            },
-            "grabend" : {
-              "properties" : {
-                "image" : "<partImage>:grabend"
-              }
-            },
-            "predmg" : {
-              "properties" : {
-                "image" : "<partImage>:predmg.<frame>"
-              }
-            },
-            "dmg" : {
-              "properties" : {
-                "image" : "<partImage>:dmg.<frame>"
-              }
-            },
-            "release" : {
-              "properties" : {
-                "image" : "<partImage>:release"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            }
-          }
-        }
       }
     }
   },

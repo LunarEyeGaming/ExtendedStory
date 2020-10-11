@@ -30,7 +30,7 @@ function update(dt)
     local rotationAngle = vec2.angle(world.distance(world.entityPosition(self.target), mcontroller.position()))
     animator.rotateTransformationGroup("body", rotationAngle)
   end
-  if self.target then
+  if self.target and world.entityExists(self.target) then
     if world.magnitude(world.entityPosition(self.target), mcontroller.position()) < self.disappearRadius then
       status.setResourcePercentage("health", 0.0)
     end
