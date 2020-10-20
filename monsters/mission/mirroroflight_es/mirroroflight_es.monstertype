@@ -11,18 +11,30 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/mission/mirroroflight_es/mirroroflight_es.lua",
-      "/scripts/util.lua",
-      "/scripts/vec2.lua",
-      "/scripts/interp.lua"
+      "/monsters/mission/mirroroflight_es/mirroroflight_es.lua"
     ],
     "initialScriptDelta" : 1,
 
     "metaBoundBox" : [-2.5, -2.5, 2.5, 2.5],
     "scale" : 1.0,
     
+    "startingDirection" : [1, 0],
+
+    "teleportDelay" : 0.45,
+    "reappearDelay" : 0.1,
+
     "adjustTime" : 0.5,
+    "adjustProgressOffset" : 0.5,
+
     "fireOffset" : [0, 0],
+    "fireCooldown" : 2.0,
+    "fireCooldown2" : 0.5,
+
+    "projectileType" : "lightmirrorshot_es",
+    "projectileConfig" : {
+      "power" : 20,
+      "damageTeam" : {"type" : "friendly"}
+    },
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -34,10 +46,6 @@
       "airForce" : 35.0,
       "physicsEffectCategories" : ["boss"]
     },
-
-    "targetRadius" : 30.0,
-    "targetSearchTime" : 0.5,
-    "targetHoldTime" : 5.0,
 
     "blockedSensors" : [ [1.5, -1.1], [1.5, -0.5], [1.5, 0.5], [1.5, 1.1] ],
 
@@ -117,9 +125,6 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
-        },
-        "invulnerable" : {
-          "baseValue" : 1.0
         }
       },
 
@@ -138,20 +143,6 @@
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
-
-    "projectileType" : "fg_iciclehoming",
-    "projectileConfig" : {
-      "speed" : 45,
-      "power" : 20,
-      "periodicActions" : [
-        {
-          "time" : 0,
-          "repeat" : false,
-          "action" : "sound",
-          "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
-        }
-      ]
-    },
 
     "attackTime" : 1,
     "fireInterval" : 0.3,

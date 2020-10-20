@@ -95,59 +95,6 @@
             }
           }
         }
-      },
-      "bodyfullbright" : {
-        "properties" : {
-          "zLevel" : 2,
-          "offset" : [0.0, 0],
-          "fullbright" : true
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "pregrab" : {
-              "properties" : {
-                "image" : "<partImage>:pregrab"
-              }
-            },
-            "grab" : {
-              "properties" : {
-                "image" : "<partImage>:grab.<frame>"
-              }
-            },
-            "grabend" : {
-              "properties" : {
-                "image" : "<partImage>:grabend"
-              }
-            },
-            "predmg" : {
-              "properties" : {
-                "image" : "<partImage>:predmg.<frame>"
-              }
-            },
-            "dmg" : {
-              "properties" : {
-                "image" : "<partImage>:dmg.<frame>"
-              }
-            },
-            "release" : {
-              "properties" : {
-                "image" : "<partImage>:release"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            }
-          }
-        }
       }
     }
   },
@@ -180,6 +127,7 @@
 
   "sounds" : {
     "deathPuff" : [ ],
-    "aggro" : []
+    "aggro" : [],
+    "grab" : [ "/sfx/npc/monsters/monster_bite2.ogg" ]
   }
 }

@@ -15,7 +15,7 @@ function init()
   self.fireEnergyCost = config.getParameter("fireEnergyCost", 0)
   
   self.messengerUid = config.getParameter("messengerUid")
-  self.positionRPC = world.findUniqueEntity(self.messengerUid)
+  self.positionRPCPromise = world.findUniqueEntity(self.messengerUid)
   storage.messengerId = nil
   self.adjustMessage = config.getParameter("adjustMessage")
   self.fireMessage = config.getParameter("fireMessage")
@@ -41,11 +41,11 @@ function activate(fireMode, shiftHeld)
 end
 
 function update(dt, fireMode, shiftHeld)
-  if self.positionRPC and self.positionRPC:finished() then
-    if self.positionRPC:succeeded() then
-      self.messengerPosition = self.positionRPC:result()
+  if self.positionRPCPromise and self.positionRPCPromise:finished() then
+    if self.positionRPCPromise:succeeded() then
+      self.messengerPosition = self.positionRPCPromise:result()
     end
-    self.positionRPC = nil
+    self.positionRPCPromise = nil
   end
 
   if self.messengerPosition then
@@ -116,7 +116,7 @@ function fireMirror()
     for stateType, state in pairs(self.animationStates) do
       animator.setAnimationState(stateType, state)
     end
-  world.sendEntityMessage(storage.messengerId, self.fireMessage)
+  world.sendEntityMessage(storage.messengerId, self.fireMessage, activeItem.ownerAimPosition())
 end
 
 function updateAim()

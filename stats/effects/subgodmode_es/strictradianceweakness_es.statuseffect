@@ -1,0 +1,12 @@
+{
+  "name" : "strictradianceweakness_es",
+  "comment" : "Makes the parent entity completely immune to all elements that exist, except for radiance.",
+  "effectConfig" : {
+    "elementBlacklist" : ["radiance_es"]
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "subgodmode_es.lua"
+  ]
+}

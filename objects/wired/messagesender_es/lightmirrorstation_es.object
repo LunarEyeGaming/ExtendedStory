@@ -1,0 +1,36 @@
+{
+  "objectName" : "lightmirrorstation_es",
+  "colonyTags" : ["wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "category" : "wire",
+  "price" : 0,
+  "health" : 0.1,
+  "description" : "...",
+  "shortdescription" : "Light Mirror Station",
+  "race" : "generic",
+
+  "smashOnBreak" : true,
+
+  "inventoryIcon" : "lightmirrorstation.png",
+  "orientations" : [
+    {
+      "image" : "lightmirrorstation.png",
+      "imagePosition" : [-8, -8],
+      "spaceScan" : 0.1,
+      "direction" : "right"
+    }
+  ],
+  
+  "scripts" : [ "/objects/wired/messagesender_es/lightmirrorstation_es.lua" ],
+  "scriptDelta" : 1,
+
+  "animation" : "messagesender_es.animation",
+  "animationPosition" : [-8, -8],
+
+  "inputNodes" : [ [-1, 0] ],
+  
+  "recipientUId" : "mirror",
+  "messageType" : "teleport",
+  "messageArgs" : []
+}

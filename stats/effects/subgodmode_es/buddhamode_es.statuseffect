@@ -1,0 +1,10 @@
+{
+  "name" : "buddhamode_es",
+  "comment" : "Makes the parent entity completely immune to all elements that exist.",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "subgodmode_es.lua"
+  ]
+}

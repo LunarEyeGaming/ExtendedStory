@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-other",
  "spacing":0,
- "tilecount":45,
+ "tilecount":47,
  "tileheight":82,
  "tileproperties":
     {
@@ -290,6 +290,20 @@
          "imagePositionX":"-8",
          "imagePositionY":"-8",
          "object":"directionalforceregionup_es",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"messagesender_es",
+         "tilesetDirection":"right"
+        },
+     "46":
+        {
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"lightmirrorstation_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -610,6 +624,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "45":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "46":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "imagePositionX":"string",
@@ -885,6 +913,18 @@
      "44":
         {
          "image":"..\/images\/objects\/directionalforceregionup.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "45":
+        {
+         "image":"..\/images\/objects\/messagesender.png",
+         "imageheight":16,
+         "imagewidth":16
+        },
+     "46":
+        {
+         "image":"..\/images\/objects\/lightmirrorstation.png",
          "imageheight":16,
          "imagewidth":16
         },

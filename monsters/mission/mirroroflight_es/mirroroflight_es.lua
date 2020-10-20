@@ -1,4 +1,10 @@
+require "/scripts/status.lua"
+require "/scripts/util.lua"
+require "/scripts/vec2.lua"
+require "/scripts/interp.lua"
+
 function init()
+  status.addEphemeralEffect("buddhamode_es", math.huge)
   script.setUpdateDelta(config.getParameter("initialScriptDelta", 5))
   monster.setDeathParticleBurst("deathPoof")
 
@@ -13,23 +19,49 @@ function init()
   message.setHandler("adjust", function(_, _, aimPosition)
     local aimVector = world.distance(aimPosition, mcontroller.position())
     animator.playSound("adjust")
-    self.startAngle = self.currentAngle
-    self.endAngle = interp.angleDiff(self.startAngle, vec2.angle(aimVector)) + self.startAngle
-    self.adjustTimer = 0
+    beginAdjust(aimVector)
   end)
   
-  message.setHandler("fire", fire)
+  message.setHandler("teleport", function(_, _, nextPosition)
+    animator.setAnimationState("movement", "disappear")
+    setStage(1, self.teleportDelay)
+    self.nextPosition = nextPosition
+  end)
   
+  self.damageListener = damageListener("damageTaken", fire)
+  
+  self.startingDirection = config.getParameter("startingDirection", {1, 0})
+
+  self.teleportDelay = config.getParameter("teleportDelay", 0)
+  self.reappearDelay = config.getParameter("reappearDelay", 0)
+
   self.adjustTime = config.getParameter("adjustTime", 0)
-  self.firePosition = vec2.add(mcontroller.position(), config.getParameter("fireOffset", {0, 0}))
   self.adjustProgressOffset = config.getParameter("adjustProgressOffset", 0.5) -- A number from 0 up to 1
+
+  self.fireOffset = config.getParameter("fireOffset", {0, 0})
+  self.fireCooldown = config.getParameter("fireCooldown", 0.0)
+  self.fireCooldown2 = config.getParameter("fireCooldown2", 0.0)
   
+  self.projectileType = config.getParameter("projectileType")
+  self.projectileConfig = config.getParameter("projectileConfig", {})
+  if self.projectileConfig.power then
+    self.projectileConfig.power = root.evalFunction("monsterLevelPowerMultiplier", monster.level()) * self.projectileConfig.power
+  end
+  
+  self.nextPosition = nil
   self.isAdjusting = false
   self.adjustTimer = self.adjustTime
   
   self.startAngle = 0
   self.endAngle = 0
   self.currentAngle = 0
+  
+  self.stage = 0
+  self.timer = 0.0
+  
+  self.fireTimer = 0.0
+  
+  beginAdjust(self.startingDirection)
 end
 
 function shouldDie()
@@ -37,15 +69,72 @@ function shouldDie()
 end
 
 function update(dt)
+  if self.stage == 0 then
+    idle(dt)
+  elseif self.stage == 1 then
+    teleport(dt)
+  elseif self.stage == 2 then -- Make it wait a bit before setting the animation state.
+    reappear(dt)
+  end
+end
+
+function idle(dt)
+  self.damageListener:update()
+  self.fireTimer = math.max(0, self.fireTimer - dt)
+
   self.currentAngle = util.wrapAngle(self.currentAngle)
   self.isAdjusting = self.adjustTimer < self.adjustTime
+
   if self.isAdjusting then
     self.adjustTimer = math.min(self.adjustTime, self.adjustTimer + dt)
 
     local progress = (self.adjustTimer / self.adjustTime) * (1 - self.adjustProgressOffset) + self.adjustProgressOffset
     self.currentAngle = interp.sin(progress, self.startAngle, self.endAngle)
   end
+
   updateMirrorAngle()
+end
+
+function teleport(dt)
+  if self.timer == 0 then
+    mcontroller.setPosition(self.nextPosition)
+    setStage(2, self.reappearDelay)
+    return
+  end
+  self.timer = math.max(0, self.timer - dt)
+end
+
+function reappear(dt)
+  if self.timer == 0 then
+    animator.setAnimationState("movement", "appear")
+    setStage(0, 0.0)
+    return
+  end
+  self.timer = math.max(0, self.timer - dt)
+end
+
+function setStage(newStage, newTimer)
+  self.stage = newStage
+  self.timer = newTimer
+end
+
+function fire()
+  if self.fireTimer == 0 then
+    if not self.isAdjusting then
+      local firePosition = vec2.add(mcontroller.position(), self.fireOffset)
+
+      world.spawnProjectile(self.projectileType, firePosition, entity.id(), vec2.rotate({1, 0}, self.currentAngle), false, self.projectileConfig)
+      animator.playSound("fire")
+      self.fireTimer = self.fireCooldown
+    else
+      animator.playSound("error")
+      self.fireTimer = self.fireCooldown2
+    end
+  end
+end
+
+function die()
+  status.setResourcePercentage("health", 1.0)
 end
 
 function updateMirrorAngle()
@@ -63,15 +152,8 @@ function getAbsoluteAngleAndDirection(angle)
   return absoluteAngle, direction
 end
 
-function fire()
-  if not self.isAdjusting then
-    animator.playSound("fire")
-    world.spawnProjectile("abyssshotboss", self.firePosition, entity.id(), vec2.rotate({1, 0}, self.currentAngle))
-  else
-    animator.playSound("error")
-  end
-end
-
-function die()
-  status.setResourcePercentage("health", 1.0)
+function beginAdjust(direction)
+  self.startAngle = self.currentAngle
+  self.endAngle = interp.angleDiff(self.startAngle, vec2.angle(direction)) + self.startAngle
+  self.adjustTimer = 0.0
 end

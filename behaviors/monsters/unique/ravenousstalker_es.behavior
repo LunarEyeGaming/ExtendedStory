@@ -61,6 +61,15 @@
         }
       },
       {
+        "title": "addEphemeralEffect",
+        "type": "action",
+        "name": "addEphemeralEffect",
+        "parameters": {
+          "name": {"value": "strictradianceweakness_es"},
+          "duration": {"value": 4294967296}
+        }
+      },
+      {
         "title": "setJsonObjectKey",
         "type": "action",
         "name": "setJsonObjectKey",
@@ -164,7 +173,7 @@
               "keepTargetInSight": {"value": true},
               "queryTargets": {"value": true},
               "targetOnDamage": {"value": true},
-              "targetOutOfSightTime": {"value": 5}
+              "targetOutOfSightTime": {"value": 9999}
             }
           },
           {
@@ -188,6 +197,15 @@
                     "name": "entityExists",
                     "parameters": {
                       "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
                     }
                   },
                   {
@@ -369,6 +387,14 @@
                               }
                             },
                             {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "grab"}
+                              }
+                            },
+                            {
                               "title": "parallel",
                               "type": "composite",
                               "name": "parallel",
@@ -448,6 +474,26 @@
                                       "parameters": {
                                         "target": {"key": "targetPos"},
                                         "range": {"key": "<grabRange>"}
+                                      }
+                                    },
+                                    {
+                                      "title": "setPosition",
+                                      "type": "action",
+                                      "name": "setPosition",
+                                      "parameters": {
+                                        "position": {"key": "targetPos"}
+                                      }
+                                    },
+                                    {
+                                      "title": "spawnProjectile",
+                                      "type": "action",
+                                      "name": "spawnProjectile",
+                                      "parameters": {
+                                        "aimVector": {"value": [1, 0]},
+                                        "offset": {"value": [0, 0]},
+                                        "projectileConfig": {"value": {"power": 0}},
+                                        "projectileType": {"value": "ravenousstalkergrabsuccess_es"},
+                                        "position": {"key": "targetPos"}
                                       }
                                     },
                                     {
@@ -811,17 +857,108 @@
                 ]
               },
               {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "parallel",
+                    "type": "composite",
+                    "name": "parallel",
+                    "parameters": {
+                      "fail": {"value": -1},
+                      "success": {"value": -1}
+                    },
+                    "children": [
+                      {
+                        "title": "controlParameters",
+                        "type": "action",
+                        "name": "controlParameters",
+                        "parameters": {
+                          "parameters": {"value": {"gravityEnabled": true}}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 1}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
                 "title": "sequence",
                 "type": "composite",
                 "name": "sequence",
                 "parameters": {},
                 "children": [
                   {
-                    "title": "timer",
+                    "title": "setPosition",
                     "type": "action",
-                    "name": "timer",
+                    "name": "setPosition",
                     "parameters": {
-                      "time": {"value": 0.01}
+                      "position": {"key": "spawn"}
+                    }
+                  },
+                  {
+                    "title": "setVelocity",
+                    "type": "action",
+                    "name": "setVelocity",
+                    "parameters": {
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "faceDirection",
+                    "type": "action",
+                    "name": "faceDirection",
+                    "parameters": {
+                      "direction": {"value": 1}
+                    }
+                  },
+                  {
+                    "title": "ravenousstalker_es-controldrawablestate",
+                    "type": "module",
+                    "name": "ravenousstalker_es-controldrawablestate",
+                    "parameters": {
+                      "inputState": {"value": "idle"}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "body"}
                     }
                   }
                 ]

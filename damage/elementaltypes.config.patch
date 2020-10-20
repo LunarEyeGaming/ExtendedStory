@@ -138,5 +138,19 @@
         "kill": "damagenumber"
       }
     }
+  },
+  {
+    "op": "add",
+    "path": "/radiance_es",
+    "value": {
+      "resistanceStat": "radianceResistance",
+      "damageNumberParticles": {
+        "hit": "radiancedamagenumber_es",
+        "stronghit": "radiancedamagenumberstrong_es",
+        "weakhit": "radiancedamagenumberweak_es",
+        "shieldhit": "radiancedamagenumber_es",
+        "kill": "radiancedamagenumber_es"
+      }
+    }
   }
 ]

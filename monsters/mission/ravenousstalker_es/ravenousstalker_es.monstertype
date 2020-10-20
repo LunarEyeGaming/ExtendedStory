@@ -35,7 +35,7 @@
     "damageBar" : "None",
 
     "movementSettings" : {
-      "collisionPoly" : [ [0.4375, 1.625], [0.9375, 1.125], [0.9375, -1.125], [0.4375, -1.625], [-0.4375, -1.625], [-0.9375, -1.125], [-0.9375, 1.125], [-0.4375, 1.625] ],
+      "collisionPoly" : [ [1.875, 3.75], [1.875, -3.75], [-1.875, -3.75], [-1.875, 3.75] ],
 
       "gravityEnabled" : false,
       "collisionEnabled" : false,
@@ -118,9 +118,6 @@
           "baseValue" : 1.0
         },
         "ionizedImmunity" : {
-          "baseValue" : 1.0
-        },
-        "invulnerable" : {
           "baseValue" : 1.0
         }
       },

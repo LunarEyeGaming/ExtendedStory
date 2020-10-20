@@ -7,48 +7,81 @@
 
         "states" : {
           "idle" : {
-		    "frames" : 4,
-			"cycle" : 0.4,
-			"mode" : "loop"
-		  }
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
+          "disappear" : {
+            "frames" : 8,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "invisible"
+          },
+          "invisible" : {},
+          "appear" : {
+            "frames" : 8,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
         }
       },
-	  "sfx" : {
-	    "priority" : 0,
-		"default" : "idle",
-		
-		"states" : {
-		  "idle" : {}
-		}
-	  }
+      "sfx" : {
+        "priority" : 0,
+        "default" : "idle",
+        
+        "states" : {
+          "idle" : {}
+        }
+      }
     },
 
     "parts" : {
       "body" : {
-	    "properties" : {
+        "properties" : {
           "transformationGroups" : ["body"]
-		},
+        },
         "partStates" : {
           "movement" : {
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "appear" : {
+              "properties" : {
+                "image" : "<partImage>:appear.<frame>"
+              }
             }
           }
         }
       },
-	  "bodyfullbright" : {
-	    "properties" : {
+      "bodyfullbright" : {
+        "properties" : {
           "anchorPart" : "body",
-		  "fullbright" : true,
-		  "zLevel" : 20
-		},
+          "fullbright" : true,
+          "zLevel" : 20
+        },
         "partStates" : {
           "movement" : {
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "appear" : {
+              "properties" : {
+                "image" : "<partImage>:appear.<frame>"
               }
             }
           }
@@ -84,7 +117,7 @@
       "rangeMultiplier" : 3
     },
     "fire" : {
-      "pool" : [ "/sfx/gun/mech_energyrifle_fire1.ogg" ],
+      "pool" : [ "/sfx/melee/sword_parry.ogg" ],
       "rangeMultiplier" : 3
     },
     "error" : {
