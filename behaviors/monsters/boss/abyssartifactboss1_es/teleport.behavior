@@ -136,6 +136,14 @@
             }
           },
           {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.1}
+            }
+          },
+          {
             "title": "setAnimationState",
             "type": "action",
             "name": "setAnimationState",

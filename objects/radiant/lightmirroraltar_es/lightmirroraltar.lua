@@ -12,6 +12,8 @@ function init()
   
   self.startShakingMagnitude = config.getParameter("startShakingMagnitude")
   self.endShakingMagnitude = config.getParameter("endShakingMagnitude")
+  
+  self.openDoorRadius = config.getParameter("openDoorRadius")
 
   storage.stage = 0
   storage.timer = 0
@@ -62,6 +64,7 @@ function stageTwo(dt)
     for _,playerId in pairs(world.players()) do
       world.sendEntityMessage(playerId, "playCinematic", self.cinematic)
     end
+    openDoors()
     endStage(0)
     return
   end
@@ -82,4 +85,13 @@ end
 function updateTransformationGroup(group, newOffset)
   animator.resetTransformationGroup(group)
   animator.translateTransformationGroup(group, newOffset)
+end
+
+function openDoors()
+  local closedDoors = world.entityQuery(entity.position(), self.openDoorRadius, { includedTypes = {"object"}, callScript = "hasCapability", callScriptArgs = { "closedDoor" } })
+  local lockedDoors = world.entityQuery(entity.position(), self.openDoorRadius, { includedTypes = {"object"}, callScript = "hasCapability", callScriptArgs = { "lockedDoor" } })
+  closedDoors = util.mergeLists(closedDoors, lockedDoors)
+  for _, doorId in pairs(closedDoors) do
+    world.callScriptedEntity(doorId, "openDoor")
+  end
 end

@@ -7135,6 +7135,27 @@
                  "width":16,
                  "x":8488,
                  "y":904
+                }, 
+                {
+                 "height":104,
+                 "id":4409,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"resetObjectUid\" : \"cpm3\" }",
+                     "stagehand":"teleportertrap_es"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":160,
+                 "x":1256,
+                 "y":2016
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -13217,7 +13238,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":4409,
+ "nextobjectid":4410,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

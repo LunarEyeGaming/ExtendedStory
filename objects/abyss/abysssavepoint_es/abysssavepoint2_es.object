@@ -1,10 +1,10 @@
 {
-  "objectName" : "abysssavepoint_es",
+  "objectName" : "abysssavepoint2_es",
   "colonyTags" : ["misc"],
   "objectType" : "teleporter",
   "rarity" : "Legendary",
-  "description" : "A teleporter to Nadir, the other side of the vortex near the Temple of Nyctos.",
-  "shortdescription" : "Teleporter to Nadir",
+  "description" : "A teleporter to ???.",
+  "shortdescription" : "Teleporter to ???",
   "price" : 3000,
   "printable" : false,
 
@@ -23,10 +23,10 @@
   "interactAction" : "OpenTeleportDialog",
   "interactData" : "/interface/warping/abysssavepoint.config",
 
-  "inventoryIcon" : "abysssavepointicon.png",
+  "inventoryIcon" : "abysssavepoint2icon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "abysssavepoint.png:<color>", "fullbright" : true }, { "image" : "abysssavepointlit.png:<color>" } ],
+      "imageLayers" : [ { "image" : "abysssavepoint2.png:<color>", "fullbright" : true }, { "image" : "abysssavepointlit.png:<color>" } ],
       "imagePosition" : [-16, 0],
       "frames" : 1,
       "animationCycle" : 0.5,

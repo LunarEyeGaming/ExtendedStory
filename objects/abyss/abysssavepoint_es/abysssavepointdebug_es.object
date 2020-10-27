@@ -1,27 +1,19 @@
 {
-  "objectName" : "abysssavepoint_es",
+  "objectName" : "abysssavepointdebug_es",
   "colonyTags" : ["misc"],
   "objectType" : "teleporter",
   "rarity" : "Legendary",
-  "description" : "A teleporter to Nadir, the other side of the vortex near the Temple of Nyctos.",
-  "shortdescription" : "Teleporter to Nadir",
+  "description" : "Quickly teleport to whatever location in the mission you want.",
+  "shortdescription" : "D.A.D. Save Point (Debug)",
   "price" : 3000,
   "printable" : false,
-
-  "apexDescription" : "<todo>.",
-  "avianDescription" : "<todo>.",
-  "floranDescription" : "<todo>.",
-  "glitchDescription" : "<todo>.",
-  "humanDescription" : "<todo>.",
-  "hylotlDescription" : "<todo>.",
-  "novakidDescription" : "<todo>.",
 
   "category" : "teleporter",
   "lightColor" : [51, 41, 71],
   "lightPosition" : [0, 1],
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/abysssavepoint.config",
+  "interactData" : "/interface/warping/abysssavepointdebug.config",
 
   "inventoryIcon" : "abysssavepointicon.png",
   "orientations" : [

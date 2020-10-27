@@ -8,12 +8,12 @@
       "staff" : {
         "default" : "idle",
         "states" : {
-		  "idle" : {},
+          "idle" : {},
           "trigger" : {
             "frames" : 4,
             "cycle" : 0.25,
             "mode" : "transition",
-			"transition" : "idle"
+            "transition" : "idle"
           }
         }
       }
@@ -33,7 +33,7 @@
                 "image" : "<partImage>:idle<paletteSwaps>"
               }
             },
-			"trigger" : {
+            "trigger" : {
               "properties" : {
                 "image" : "<partImage>:trigger.<frame><paletteSwaps>"
               }
@@ -56,7 +56,7 @@
                 "image" : "<partImage>:idle<paletteSwaps>"
               }
             },
-			"trigger" : {
+            "trigger" : {
               "properties" : {
                 "image" : "<partImage>:trigger.<frame><paletteSwaps>"
               }
@@ -79,8 +79,7 @@
   },
 
   "sounds" : {
-    "adjust" : [ "/sfx/gun/ancientcannon_fire.ogg" ],
-    "trigger" : [ "/sfx/objects/ancientenergy_chord.ogg" ],
+    "adjust" : [ "/sfx/melee/elemental_aura_activate.ogg" ],
     "error" : [ "/sfx/interface/clickon_error.ogg" ]
   }
 }

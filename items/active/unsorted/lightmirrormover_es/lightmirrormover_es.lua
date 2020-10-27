@@ -9,7 +9,6 @@ function init()
   self.animationStates = config.getParameter("animationStates", {})
 
   self.adjustmentCooldown = config.getParameter("adjustmentCooldown")
-  self.fireCooldown = config.getParameter("fireCooldown")
   
   self.adjustmentEnergyCost = config.getParameter("adjustmentEnergyCost", 0)
   self.fireEnergyCost = config.getParameter("fireEnergyCost", 0)
@@ -29,15 +28,11 @@ function init()
   self.returnTime = config.getParameter("returnTime")
   
   storage.adjustTimer = self.adjustmentCooldown
-  storage.fireTimer = self.fireCooldown
   self.stanceTimer = self.returnDelay
   self.angleOffset = self.idleAngle
 end
 
 function activate(fireMode, shiftHeld)
-  if fireMode == "alt" and storage.fireTimer == 0 and status.overConsumeResource("energy", self.fireEnergyCost) then
-    fireMirror()
-  end
 end
 
 function update(dt, fireMode, shiftHeld)
@@ -78,7 +73,6 @@ function update(dt, fireMode, shiftHeld)
   end
   
   storage.adjustTimer = math.max(storage.adjustTimer - dt, 0)
-  storage.fireTimer = math.max(storage.fireTimer - dt, 0)
 
   if fireMode == "primary"
       and storage.adjustTimer == 0
@@ -103,20 +97,6 @@ function adjustMirror()
       animator.setAnimationState(stateType, state)
     end
   world.sendEntityMessage(storage.messengerId, self.adjustMessage, activeItem.ownerAimPosition())
-end
-
-function fireMirror()
-  storage.fireTimer = self.fireCooldown
-  setStage("casting", self.returnDelay)
-  if discardedMessengerId() then
-    animator.playSound("error")
-    return
-  end
-  animator.playSound("trigger")
-    for stateType, state in pairs(self.animationStates) do
-      animator.setAnimationState(stateType, state)
-    end
-  world.sendEntityMessage(storage.messengerId, self.fireMessage, activeItem.ownerAimPosition())
 end
 
 function updateAim()
