@@ -15,6 +15,8 @@ function init()
     monster.setUniqueId(config.getParameter("uniqueId"))
   end
 
+  message.setHandler("despawn", despawn)
+
   -- Precondition: It is impossible for the mirror to receive this message in the middle of an adjustment.
   message.setHandler("adjust", function(_, _, aimPosition)
     local aimVector = world.distance(aimPosition, mcontroller.position())
@@ -27,6 +29,13 @@ function init()
     setStage(1, self.teleportDelay)
     self.nextPosition = nextPosition
   end)
+  
+  if config.getParameter("canFollow") then
+    message.setHandler("follow", follow)
+    --[[message.setHandler("unfollow", function()
+      self.followTargetId = nil
+    end)]]
+  end
   
   self.damageListener = damageListener("damageTaken", fire)
   
@@ -49,19 +58,16 @@ function init()
   end
   
   self.nextPosition = nil
-  self.isAdjusting = false
-  self.adjustTimer = self.adjustTime
-  
-  self.startAngle = 0
-  self.endAngle = 0
-  self.currentAngle = 0
   
   self.stage = 0
   self.timer = 0.0
   
   self.fireTimer = 0.0
   
-  beginAdjust(self.startingDirection)
+  self.followTargetId = nil
+  
+  monster.setDamageBar("none")
+  resetMirror()
 end
 
 function shouldDie()
@@ -75,6 +81,10 @@ function update(dt)
     teleport(dt)
   elseif self.stage == 2 then -- Make it wait a bit before setting the animation state.
     reappear(dt)
+  end
+  
+  if self.followTargetId and world.entityExists(self.followTargetId) then
+    mcontroller.setPosition(world.entityPosition(self.followTargetId))
   end
 end
 
@@ -99,6 +109,7 @@ function teleport(dt)
   if self.timer == 0 then
     mcontroller.setPosition(self.nextPosition)
     setStage(2, self.reappearDelay)
+    resetMirror()
     return
   end
   self.timer = math.max(0, self.timer - dt)
@@ -156,4 +167,28 @@ function beginAdjust(direction)
   self.startAngle = self.currentAngle
   self.endAngle = interp.angleDiff(self.startAngle, vec2.angle(direction)) + self.startAngle
   self.adjustTimer = 0.0
+end
+
+function resetMirror()
+  self.isAdjusting = false
+  self.adjustTimer = self.adjustTime
+  
+  self.startAngle = 0
+  self.endAngle = 0
+  self.currentAngle = 0
+  
+  beginAdjust(self.startingDirection)
+  self.adjustTimer = self.adjustTime - 0.0001
+end
+
+function follow(_, _, sourceId)
+  self.followTargetId = sourceId
+end
+
+function despawn()
+  hasDespawned = true
+  monster.setDropPool(nil)
+  monster.setDeathParticleBurst(nil)
+  monster.setDeathSound(nil)
+  status.addEphemeralEffect("monsterdespawn")
 end

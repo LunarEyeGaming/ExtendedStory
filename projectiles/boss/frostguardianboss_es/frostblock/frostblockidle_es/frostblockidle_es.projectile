@@ -13,21 +13,21 @@
       "action" : "sound",
       "options" : [ "/sfx/melee/giantsword_charge_full.ogg" ]
     },
-	{
+    {
       "time" : 0,
       "repeat" : false,
-	  "action" : "particle",
-	  "specification" : {
-		"type" : "textured",
-		"image" : "/projectiles/boss/frostguardianboss_es/frostblock/frostblock_6x8.png?setcolor=ffffff",
-		"position" : [0, 0],
-		"fullbright" : true,
-		"layer" : "middle",
-		"destructionAction" : "fade",
-		"timeToLive" : 0,
-		"destructionTime" : 0.25
-	  }
-	}
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/frostguardianboss_es/frostblock/frostblock_6x8.png?setcolor=ffffff",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "middle",
+        "destructionAction" : "fade",
+        "timeToLive" : 0,
+        "destructionTime" : 0.25
+      }
+    }
   ],
   "physicsCollisions" : {
     "frostblock" : {

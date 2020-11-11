@@ -35,6 +35,8 @@
       "power" : 40,
       "damageTeam" : {"type" : "friendly"}
     },
+    
+    "canFollow" : false,
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -46,8 +48,6 @@
       "airForce" : 35.0,
       "physicsEffectCategories" : ["boss"]
     },
-
-    "blockedSensors" : [ [1.5, -1.1], [1.5, -0.5], [1.5, 0.5], [1.5, 1.1] ],
 
     "knockoutTime" : 0.5,
     "knockoutEffect" : "blink",
@@ -142,10 +142,6 @@
     },
 
     "mouthOffset" : [0, 0],
-    "feetOffset" : [0, -8],
-
-    "attackTime" : 1,
-    "fireInterval" : 0.3,
-    "cooldownTime" : 1.5
+    "feetOffset" : [0, -8]
   }
 }

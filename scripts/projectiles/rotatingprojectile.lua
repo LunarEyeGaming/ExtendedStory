@@ -1,6 +1,3 @@
-require "/scripts/vec2.lua"
-require "/scripts/util.lua"
-
 function init()
   self.rotateRate = config.getParameter("rotateRate")
   self.rotationAmount = 0

@@ -117,7 +117,7 @@
                         "type": "action",
                         "name": "timer",
                         "parameters": {
-                          "time": {"value": 1}
+                          "time": {"value": 2}
                         }
                       },
                       {
@@ -126,6 +126,14 @@
                         "name": "setAggressive",
                         "parameters": {
                           "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
                         }
                       },
                       {
@@ -153,20 +161,20 @@
                                 }
                               },
                               {
-								"title": "repeater",
-								"type": "decorator",
-								"name": "repeater",
-								"parameters": {
-								  "maxLoops": {"value": -1},
-							      "untilSuccess": {"value": false}
-								},
-								"child": {
-								  "title": "sequence",
-								  "type": "composite",
-								  "name": "sequence",
-								  "parameters": {},
-								  "children": [
-									{
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
                                       "title": "repeater",
                                       "type": "decorator",
                                       "name": "repeater",
@@ -240,9 +248,9 @@
                                         ]
                                       }
                                     }
-								  ]
-								}
-						      }
+                                  ]
+                                }
+                              }
                             ]
                           }
                         ]
@@ -300,6 +308,14 @@
                     "name": "setAggressive",
                     "parameters": {
                       "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
                     }
                   },
                   {

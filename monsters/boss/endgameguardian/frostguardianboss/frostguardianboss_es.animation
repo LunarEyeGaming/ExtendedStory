@@ -7,18 +7,18 @@
         "states" : {
           "idle" : {
             "frames" : 1
-		  },
+          },
           "blink" : {
             "frames" : 3,
             "cycle" : 0.2,
-			"mode" : "transition",
-			"transition" : "idle"
+            "mode" : "transition",
+            "transition" : "idle"
           },
           "fade" : {
             "frames" : 4,
             "cycle" : 0.5,
             "mode" : "transition",
-			"transition" : "transparent"
+            "transition" : "transparent"
           },
           "transparent" : {
             "frames" : 1
@@ -27,7 +27,7 @@
             "frames" : 4,
             "cycle" : 0.5,
             "mode" : "transition",
-			"transition" : "idle"
+            "transition" : "idle"
           },
           "windup" : {
             "frames" : 3,
@@ -52,98 +52,98 @@
           },
           "charged" : {
             "frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "loop"
+            "cycle" : 0.25,
+            "mode" : "loop"
           },
-		  "winddownlaser" : {
-		    "frames" : 5,
-			"cycle" : 0.5,
-			"mode" : "transition",
+          "winddownlaser" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
             "transition" : "idle"
-		  },
-		  "hurt" : {
-		    "frames" : 4,
-			"cycle" : 0.3,
-			"mode" : "loop"
-		  },
-		  "dying" : {
-		    "frames" : 3,
-			"cycle" : 3.0,
-			"mode" : "transition",
-			"transition" : "dying2"
-		  },
-		  "dying2" : {
-		    "frames" : 3,
-			"cycle" : 0.3,
-			"mode" : "transition",
-			"transition" : "dying3"
-		  },
-		  "dying3" : {
-		    "frames" : 3,
-			"cycle" : 6.0
-		  }
+          },
+          "hurt" : {
+            "frames" : 4,
+            "cycle" : 0.3,
+            "mode" : "loop"
+          },
+          "dying" : {
+            "frames" : 3,
+            "cycle" : 3.0,
+            "mode" : "transition",
+            "transition" : "dying2"
+          },
+          "dying2" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "dying3"
+          },
+          "dying3" : {
+            "frames" : 3,
+            "cycle" : 6.0
+          }
         }
       },
-	  "beam1" : {
-		"priority" : 0,
-		"default" : "off",
-		"states" : {
-		  "off" : {},
-	      "windup" : {
-			"frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "fire",
+      "beam1" : {
+        "priority" : 0,
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "windup" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "fire",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
               "immediateSoundRangeMultiplier" : 2.0
             }
-		  },
-		  "fire" : {
-			"frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "loop",
+          },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
             "properties" : {
               "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
               "persistentSoundRangeMultiplier" : 2.0
             }
-		  },
-		  "winddown" : {
-			"frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "off",
+          },
+          "winddown" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
               "immediateSoundRangeMultiplier" : 2.0
             }
-		  }
-		}
-	  },
-	  "beam2" : {
-		"priority" : 0,
-		"default" : "off",
-		"states" : {
-		  "off" : {},
-		  "windup" : {
-			"frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "fire"
-		  },
-		  "fire" : {
-			"frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "loop"
-		  },
-		  "winddown" : {
-			"frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "off"
-		  }
-		}
-	  },
+          }
+        }
+      },
+      "beam2" : {
+        "priority" : 0,
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "windup" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "fire"
+          },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      },
 
       "sound" : {
         "priority" : 0,
@@ -268,13 +268,13 @@
 
           "sound" : {}
         }
-	  },
+      },
       "beam1" : {
         "properties" : {
           "zLevel" : 3,
           "centered" : true,
-		  "fullbright" : true,
-		  "offset" : [0, -31.25],
+          "fullbright" : true,
+          "offset" : [0, -31.25],
           "transformationGroups" : [ "beam1" ]
         },
 
@@ -296,15 +296,15 @@
                 "image" : "<partImage>:winddown"
               }
             }
-		  }
+          }
         }
       },
       "beam2" : {
         "properties" : {
           "zLevel" : 3,
           "centered" : true,
-		  "fullbright" : true,
-		  "offset" : [0, -31.25],
+          "fullbright" : true,
+          "offset" : [0, -31.25],
           "transformationGroups" : [ "beam2" ]
         },
 
@@ -326,7 +326,7 @@
                 "image" : "<partImage>:winddown"
               }
             }
-		  }
+          }
         }
       }
     }
@@ -338,8 +338,8 @@
 
   "transformationGroups" : {
     "body" : {"interpolated" : true},
-	"beam1" : {"interpolated" : true},
-	"beam2" : {"interpolated" : true}
+    "beam1" : {"interpolated" : true},
+    "beam2" : {"interpolated" : true}
   },
 
   "particleEmitters" : {
@@ -556,18 +556,18 @@
       "pool" : [ "/sfx/npc/boss/robotboss_pain1.ogg", "/sfx/npc/boss/robotboss_pain2.ogg", "/sfx/npc/boss/robotboss_pain3.ogg" ],
       "rangeMultiplier" : 1.5
     },
-	"laserwindup" : {
-	  "pool" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ],
-	  "rangeMultiplier" : 1.5
-	},
+    "laserwindup" : {
+      "pool" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
     "dyingpart2" : {
       "pool" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ],
       "rangeMultiplier" : 1.5
     },
-	"corecrack" : {
-	  "pool" : [ "/sfx/npc/boss/fg_coreray.ogg" ],
-	  "rangeMultiplier" : 1.5
-	},
+    "corecrack" : {
+      "pool" : [ "/sfx/npc/boss/fg_coreray.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
     "explode" : {
       "pool" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
       "rangeMultiplier" : 1.5

@@ -115,13 +115,26 @@
         }
       },
       {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [-3.9375, 0]},
+          "position": {"key": "self"}
+        },
+        "output": {
+          "position": "eyePos"
+        }
+      },
+      {
         "title": "spawnMonster",
         "type": "action",
         "name": "spawnMonster",
         "parameters": {
           "type": {"value": "abyssartifactboss2eye_es"},
           "level": {"value": 10},
-          "position": {"key": "self"}
+          "position": {"key": "eyePos"},
+          "parameters": {"value": {"musicStagehands": ["bossmusic2"]}}
         }
       },
       {

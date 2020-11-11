@@ -5,6 +5,7 @@
         "priority" : 1,
         "default" : "idle",
         "states" : {
+          "invisible" : {},
           "idle" : {
             "frames" : 6,
             "cycle" : 0.75,
@@ -36,10 +37,10 @@
         "partStates" : {
           "eye" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:idle.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
           }
         }
       }
@@ -56,34 +57,34 @@
       "particles" : [
       ]
     },
-	"teleport" : {
-	  "active" : false,
+    "teleport" : {
+      "active" : false,
       "burstCount" : 20,
       "transformationGroups" : ["body"],
       "particles" : [
-		{
-		  "particle" : {
+        {
+          "particle" : {
             "type" : "animated",
             "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
             "position" : [0, 0],
             "initialVelocity" : [0, 0],
             "finalVelocity" : [0, 0],
-	        "approach" : [20, 20],
+            "approach" : [20, 20],
             "size" : 1,
             "layer" : "front",
             "timeToLive" : 0.4,
-	        "fade" : 1,
+            "fade" : 1,
             "fullbright" : true,
-	        "destructionAction" : "fade",
-	        "destructionTime" : 0.0,
+            "destructionAction" : "fade",
+            "destructionTime" : 0.0,
             "variance" : {
               "position" : [0.5, 0.5],
               "initialVelocity" : [10, 10]
             }
           }
-		}
+        }
       ]
-	},
+    },
     "rest" : {
       "active" : false,
       "burstCount" : 10,
@@ -96,14 +97,14 @@
             "position" : [0, 0],
             "initialVelocity" : [6, 0],
             "finalVelocity" : [0, 0],
-	        "approach" : [12, 12],
+            "approach" : [12, 12],
             "size" : 1,
             "layer" : "front",
             "timeToLive" : 0.4,
-	        "fade" : 1,
+            "fade" : 1,
             "fullbright" : true,
-	        "destructionAction" : "fade",
-	        "destructionTime" : 0.0,
+            "destructionAction" : "fade",
+            "destructionTime" : 0.0,
             "variance" : {
               "initialVelocity" : [2, 2]
             }
@@ -111,16 +112,16 @@
         }
       ]
     },
-	"idle" : {
-	  "active" : false,
+    "idle" : {
+      "active" : false,
       "emissionRate" : 100.0,
       "offsetRegion" : [-8, -8, 8, 8],
       "particles" : [
-		{
-		  "particle" : "shadowsmoke"
-		}
+        {
+          "particle" : "shadowsmoke"
+        }
       ]
-	},
+    },
     "destroy" : {
       "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
       "burstCount" : 15,

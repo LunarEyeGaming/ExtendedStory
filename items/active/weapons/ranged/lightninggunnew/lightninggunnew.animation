@@ -19,9 +19,9 @@
             "frames" : 3,
             "cycle" : 0.2,
             "mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/objects/terraforge_loop2.ogg"
-			}
+            "properties" : {
+              "persistentSound" : "/sfx/objects/terraforge_loop2.ogg"
+            }
           },
           "fire" : {
             "frames" : 4,
@@ -29,31 +29,31 @@
             "mode" : "transition",
             "transition" : "off"
           },
-		  "fire2" : {
-		    "frames" : 3,
-			"cycle" : 0.3,
+          "fire2" : {
+            "frames" : 3,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "off"
-		  },
-		  "fire3" : {
-		    "frames" : 2,
-			"cycle" : 0.2,
+          },
+          "fire3" : {
+            "frames" : 2,
+            "cycle" : 0.2,
             "mode" : "transition",
             "transition" : "off"
-		  }
+          }
         }
       },
-	  "beamorigin" : {
-	    "default" : "idle",
-		"states" : {
-		  "idle" : {},
-		  "fire" : {
-		    "frames" : 4,
-			"cycle" : 0.25,
-			"mode" : "loop"
-		  }
-		}
-	  }
+      "beamorigin" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop"
+          }
+        }
+      }
     },
 
     "parts" : {
@@ -167,7 +167,7 @@
   },
   
   "particleEmitters" : {
-	"beamCollision" : {
+    "beamCollision" : {
       "active" : false,
       "transformationGroups" : ["muzzle", "beamEnd"],
       "emissionRate" : 50,
@@ -175,19 +175,19 @@
         {
           "particle" : "electricswoosh1"
         },
-		{
+        {
           "particle" : "electricswoosh2"
         },
-		{
+        {
           "particle" : "electricenergy"
         },
-		{
+        {
           "particle" : "smallelectriccloud1"
         },
-		{
+        {
           "particle" : "smallelectriccloud2"
         },
-		{
+        {
           "particle" : "electricalburn"
         }
       ]
@@ -202,7 +202,7 @@
 
   "sounds" : {
     "fire" : ["/sfx/gun/elemental_lance.ogg"],
-	"fire2" : ["/sfx/gun/pulsecannon2.ogg"],
-	"fire3" : ["/sfx/gun/plasmacannon_fire.ogg"]
+    "fire2" : ["/sfx/gun/pulsecannon2.ogg"],
+    "fire3" : ["/sfx/gun/lightninggun_fire3.ogg"]
   }
 }

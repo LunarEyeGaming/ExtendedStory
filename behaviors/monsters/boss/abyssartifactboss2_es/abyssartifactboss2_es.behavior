@@ -68,7 +68,7 @@
             "type": "module",
             "name": "monster-targeting",
             "parameters": {
-              "targetQueryRange": {"value": 20},
+              "targetQueryRange": {"value": 60},
               "keepTargetInRange": {"value": 1000},
               "targetEntityTypes": {"value": ["player"]},
               "keepTargetInSight": {"value": true},
@@ -107,20 +107,18 @@
                     "parameters": {},
                     "children": [
                       {
-                        "title": "timer",
-                        "type": "action",
-                        "name": "timer",
-                        "parameters": {
-                          "time": {"value": 1}
-                        }
-                      },
-                      {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
                         "parameters": {
                           "enable": {"value": true}
                         }
+                      },
+                      {
+                        "title": "abyssartifactboss2_es-intro",
+                        "type": "module",
+                        "name": "abyssartifactboss2_es-intro",
+                        "parameters": {}
                       },
                       {
                         "title": "setAggressive",
@@ -161,11 +159,12 @@
                                 }
                               },
                               {
-                                "title": "setVelocity",
+                                "title": "controlApproachVelocity",
                                 "type": "action",
-                                "name": "setVelocity",
+                                "name": "controlApproachVelocity",
                                 "parameters": {
-                                  "velocity": {"key": "<chaseVelocity>"}
+                                  "velocity": {"key": "<chaseVelocity>"},
+                                  "force": {"value": 200}
                                 }
                               },
                               {
@@ -177,20 +176,20 @@
                                 }
                               },
                               {
-								"title": "repeater",
-								"type": "decorator",
-								"name": "repeater",
-								"parameters": {
-								  "maxLoops": {"value": -1},
-							      "untilSuccess": {"value": false}
-								},
-								"child": {
-								  "title": "sequence",
-								  "type": "composite",
-								  "name": "sequence",
-								  "parameters": {},
-								  "children": [
-									{
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
                                       "title": "abyssartifactboss2_es-volleyattack",
                                       "type": "module",
                                       "name": "abyssartifactboss2_es-volleyattack",
@@ -226,9 +225,9 @@
                                       "name": "abyssartifactboss2_es-slimeattack",
                                       "parameters": {}
                                     }
-								  ]
-								}
-						      }
+                                  ]
+                                }
+                              }
                             ]
                           },
                           {

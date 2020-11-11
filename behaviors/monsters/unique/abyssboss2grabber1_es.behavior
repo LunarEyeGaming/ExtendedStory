@@ -1,0 +1,178 @@
+{
+  "name": "abyssboss2grabber1_es",
+  "description": "",
+  "scripts": [
+    "/scripts/behavior.lua",
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": { },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "battleMusic",
+        "type": "action",
+        "name": "battleMusic",
+        "parameters": {
+          "enable": {"value": true}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "mirror"}
+        },
+        "output": {
+          "entity": "lightMirror"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "lightMirror"}
+        },
+        "output": {
+          "position": "mirrorPos"
+        }
+      },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "mirrorPos"},
+          "speed": {"value": 75}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "mirrorPos"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+      {
+        "title": "listPush",
+        "type": "action",
+        "name": "listPush",
+        "parameters": {
+          "entity": {"key": "self"}
+        },
+        "output": {
+          "list": "messageArgs"
+        }
+      },
+      {
+        "title": "sendEntityMessage",
+        "type": "action",
+        "name": "sendEntityMessage",
+        "parameters": {
+          "arguments": {"key": "messageArgs"},
+          "entity": {"key": "lightMirror"},
+          "message": {"value": "follow"}
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "disappear"}
+        },
+        "output": {
+          "entity": "disappearEntity"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "disappearEntity"}
+        },
+        "output": {
+          "position": "disappearPos"
+        }
+      },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "disappearPos"},
+          "speed": {"value": 75}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": true}
+        }
+      }
+    ]
+  }
+}

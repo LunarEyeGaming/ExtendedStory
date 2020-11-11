@@ -7,14 +7,6 @@
   "shortdescription" : "Dark Blood Drip",
   "race" : "ancient",
 
-  "apexDescription" : "...",
-  "avianDescription" : "...",
-  "floranDescription" : "...",
-  "glitchDescription" : "...",
-  "humanDescription" : "...",
-  "hylotlDescription" : "...",
-  "novakidDescription" : "...",
-
   "category" : "trap",
   "price" : 0,
 
@@ -57,6 +49,7 @@
     }
   ],
 
+  // TODO: Make a condensed version of this script to optimize this object, for there will be a lot of them.
   "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
   "scriptDelta" : 2,
 
@@ -79,11 +72,7 @@
   "fireTime" : 10, // rate of fire
   "fireTimeVariance" : 3.0, // variation in rate of fire
   "projectile" : "abyssblooddripping_es", // name of projectile (required)
-  "projectileConfig" : { // extra configuration overrides for projectile
-    "damageTeam" : { "type" : "environment" },
-    "power" : 0,
-    "speed" : 0
-  },
+  "projectileConfig" : {},
   
   "health" : 5,
 

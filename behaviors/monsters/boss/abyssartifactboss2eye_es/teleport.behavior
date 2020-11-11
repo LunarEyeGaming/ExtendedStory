@@ -49,11 +49,20 @@
             }
           },
           {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "invisible"},
+              "type": {"value": "eye"}
+            }
+          },
+          {
             "title": "timer",
             "type": "action",
             "name": "timer",
             "parameters": {
-              "time": {"value": 0.01}
+              "time": {"value": 0.1}
             }
           },
           {
@@ -64,6 +73,23 @@
               "minAngle": {"key": "<minAngle>"},
               "maxAngle": {"key": "<maxAngle>"},
               "teleportDistance": {"key": "<teleportDistance>"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 0.1}
+            }
+          },
+          {
+            "title": "setAnimationState",
+            "type": "action",
+            "name": "setAnimationState",
+            "parameters": {
+              "state": {"value": "idle"},
+              "type": {"value": "eye"}
             }
           },
           {

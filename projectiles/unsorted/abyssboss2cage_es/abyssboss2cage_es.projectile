@@ -1,0 +1,34 @@
+{
+  "projectileName" : "abyssboss2cage_es",
+  "image" : "temp.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "physics" : "illusion",
+  "physicsCollisions" : {
+    "side1" : {
+      "collision" : [ [2.5, 2.5], [2.5, -2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "projectile", "itemdrop"]
+    },
+    "side2" : {
+      "collision" : [ [-2.5, -2.5], [-2.5, 2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "projectile", "itemdrop"]
+    },
+    "side3" : {
+      "collision" : [ [-2.5, 2.5], [2.5, 2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "projectile", "itemdrop"]
+    }
+  },
+
+  "onlyHitTerrain" : true,
+  "orientationLocked" : true,
+
+  "speed" : 0,
+  "timeToLive" : 60,
+  
+  "scripts" : [ "/projectiles/unsorted/abyssboss2cage_es/abyssboss2cage.lua" ],
+  "scriptDelta" : 1,
+  "followOffset" : [0, 3]
+}

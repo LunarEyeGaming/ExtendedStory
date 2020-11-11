@@ -223,6 +223,14 @@
                         }
                       },
                       {
+                        "title": "playSound",
+                        "type": "action",
+                        "name": "playSound",
+                        "parameters": {
+                          "sound": {"value": "aggro"}
+                        }
+                      },
+                      {
                         "title": "repeater",
                         "type": "decorator",
                         "name": "repeater",
@@ -878,6 +886,24 @@
                     }
                   },
                   {
+                    "title": "ravenousstalker_es-controldrawablestate",
+                    "type": "module",
+                    "name": "ravenousstalker_es-controldrawablestate",
+                    "parameters": {
+                      "inputState": {"value": "idle"}
+                    }
+                  },
+                  {
+                    "title": "sendEntityMessage",
+                    "type": "action",
+                    "name": "sendEntityMessage",
+                    "parameters": {
+                      "arguments": {"value": ["grabbedend_es"]},
+                      "entity": {"key": "target"},
+                      "message": {"value": "applyStatusEffect"}
+                    }
+                  },
+                  {
                     "title": "parallel",
                     "type": "composite",
                     "name": "parallel",
@@ -950,6 +976,54 @@
                     "name": "ravenousstalker_es-controldrawablestate",
                     "parameters": {
                       "inputState": {"value": "idle"}
+                    }
+                  },
+                  {
+                    "title": "setJsonObjectKey",
+                    "type": "action",
+                    "name": "setJsonObjectKey",
+                    "parameters": {
+                      "object": {"key": "animatedDrawableVars"},
+                      "key": {"value": "state"},
+                      "string": {"key": "drawableState"}
+                    },
+                    "output": {
+                      "object": "animatedDrawableVars"
+                    }
+                  },
+                  {
+                    "title": "setJsonObjectKey",
+                    "type": "action",
+                    "name": "setJsonObjectKey",
+                    "parameters": {
+                      "object": {"key": "animatedDrawableVars"},
+                      "key": {"value": "progress"},
+                      "number": {"key": "drawableProgress"}
+                    },
+                    "output": {
+                      "object": "animatedDrawableVars"
+                    }
+                  },
+                  {
+                    "title": "setJsonObjectKey",
+                    "type": "action",
+                    "name": "setJsonObjectKey",
+                    "parameters": {
+                      "object": {"key": "animatedDrawableVars"},
+                      "key": {"value": "direction"},
+                      "number": {"key": "facingDirection"}
+                    },
+                    "output": {
+                      "object": "animatedDrawableVars"
+                    }
+                  },
+                  {
+                    "title": "setAnimationParameter",
+                    "type": "action",
+                    "name": "setAnimationParameter",
+                    "parameters": {
+                      "key": {"value": "animatedDrawableVars"},
+                      "value": {"key": "animatedDrawableVars"}
                     }
                   },
                   {

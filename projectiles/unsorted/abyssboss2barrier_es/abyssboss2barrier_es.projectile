@@ -1,0 +1,19 @@
+{
+  "projectileName" : "abyssboss2barrier_es",
+  "image" : "temp.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 1,
+  "physics" : "illusion",
+  "physicsCollisions" : {
+    "barrier" : {
+      "collision" : [ [2, 8], [2, -8], [-2, -8], [-2, 8] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "projectile", "itemdrop"]
+    }
+  },
+
+  "onlyHitTerrain" : true,
+
+  "speed" : 0,
+  "timeToLive" : 60
+}

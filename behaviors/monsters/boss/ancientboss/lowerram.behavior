@@ -19,58 +19,58 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "lowersweepstart"}
-		},
-		"output": {
-		  "entity": "sweepStart"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "lowersweepend"}
-		},
-		"output": {
-		  "entity": "sweepEnd"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "sweepStart"}
-		},
-		"output": {
-		  "position": "sweepStartPos"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "sweepEnd"}
-		},
-		"output": {
-		  "position": "sweepEndPos"
-		}
-	  },
-	  {
-		"title": "ancientboss-teleportto",
-		"type": "module",
-		"name": "ancientboss-teleportto",
-		"parameters": {
-		  "teleportPosition": {"key": "sweepStartPos"}
-		}
-	  },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "lowersweepstart"}
+        },
+        "output": {
+          "entity": "sweepStart"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "lowersweepend"}
+        },
+        "output": {
+          "entity": "sweepEnd"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "sweepStart"}
+        },
+        "output": {
+          "position": "sweepStartPos"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "sweepEnd"}
+        },
+        "output": {
+          "position": "sweepEndPos"
+        }
+      },
+      {
+        "title": "ancientboss-teleportto",
+        "type": "module",
+        "name": "ancientboss-teleportto",
+        "parameters": {
+          "teleportPosition": {"key": "sweepStartPos"}
+        }
+      },
       {
         "title": "setDamageOnTouch",
         "type": "action",
@@ -79,15 +79,15 @@
           "touchDamage": {"value": true}
         }
       },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "sweepEndPos"},
-		  "speed": {"value": 75}
-		}
-	  },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "sweepEndPos"},
+          "speed": {"value": 75}
+        }
+      },
       {
         "title": "setDamageOnTouch",
         "type": "action",

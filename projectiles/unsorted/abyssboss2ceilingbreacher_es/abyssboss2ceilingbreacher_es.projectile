@@ -1,0 +1,56 @@
+{
+  "projectileName" : "abyssboss2ceilingbreacher_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "delayprojectile",
+      "config" : {
+        "timeToLive" : 0.0,
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/regularexplosion/abyssceilingbreachexplosion_es.config"
+          }
+        ]
+      }
+    },
+    {
+      "action" : "projectile",
+      "type" : "delayprojectile",
+      "offset" : [-5, 0],
+      "config" : {
+        "timeToLive" : 0.0,
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/regularexplosion/abyssceilingbreachexplosion_es.config"
+          }
+        ]
+      }
+    },
+    {
+      "action" : "projectile",
+      "type" : "delayprojectile",
+      "offset" : [5, 0],
+      "config" : {
+        "timeToLive" : 0.0,
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/regularexplosion/abyssceilingbreachexplosion_es.config"
+          }
+        ]
+      }
+    }
+  ],
+  "damageKind" : "default",
+  "onlyHitTerrain" : true
+}

@@ -127,7 +127,10 @@
 
   "sounds" : {
     "deathPuff" : [ ],
-    "aggro" : [],
+    "aggro" : {
+      "pool" : [ "/sfx/npc/quadruped/arrowhead_turnhostile.ogg" ],
+      "rangeMultiplier" : 3.0
+    },
     "grab" : [ "/sfx/npc/monsters/monster_bite2.ogg" ]
   }
 }

@@ -10,20 +10,20 @@
   "shortdescription" : "Intervention Portal",
   "race" : "generic",
 
-  "apexDescription" : "If I escape through this door, whatever is chasing me will be gone.",
-  "avianDescription" : "The light coming from this door is blindingly bright.",
-  "floranDescription" : "Bright light! Floran musst enter light!",
-  "glitchDescription" : "Gallant. Out into the unknown once again!",
-  "humanDescription" : "The destination of this door should be better than this place.",
-  "hylotlDescription" : "The place on the other side should be more inviting than this dreadful world.",
-  "novakidDescription" : "Should be better than this unfriendly place.",
+  "apexDescription" : "<todo>.",
+  "avianDescription" : "<todo>.",
+  "floranDescription" : "<todo>.",
+  "glitchDescription" : "<todo>.",
+  "humanDescription" : "<todo>.",
+  "hylotlDescription" : "<todo>.",
+  "novakidDescription" : "<todo>.",
 
   "lightColor" : [76, 60, 86],
 
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "interventionportal.png:<color>.<frame>", "fullbright" : true }, { "image" : "interventionportallit.png:<color>.<frame>" } ],
+      "imageLayers" : [ { "image" : "interventionportal2.png:<color>.<frame>", "fullbright" : true }, { "image" : "interventionportal2lit.png:<color>.<frame>" } ],
       "imagePosition" : [-16, 0],
       "animationPosition" : [-16, 0],
       "spaceScan" : 0.1,
@@ -39,8 +39,8 @@
 
   "animation" : "/objects/abyss/interventionportal_es/interventionportal_es.animation",
   "animationParts" : {
-    "bg" : "interventionportal.png",
-    "fg" : "interventionportallit.png"
+    "bg" : "interventionportal2.png",
+    "fg" : "interventionportal2lit.png"
   },
 
   "scripts" : [ "/objects/abyss/interventionportal_es/interventionexitportal_es.lua" ],

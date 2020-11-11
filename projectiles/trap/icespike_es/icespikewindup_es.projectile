@@ -3,10 +3,10 @@
   "physics" : "laser",
   "bounces" : 0,
   "speed" : 0,
-  "timeToLive" : 0.4,
+  "timeToLive" : 0.5,
   "damageKindImage" : "icon.png",
   "image" : "icespikewindup_es.png",
-  "animationCycle" : 0.4,
+  "animationCycle" : 0.5,
   "frameNumber" : 9,
   "power" : 2,
   "damagePoly" : [ [-20, 8], [-20, -8], [20, 0] ],
@@ -15,12 +15,12 @@
     {
       "action" : "projectile",
       "type" : "icespike_es",
-	  "inheritDamageFactor" : 1
+      "inheritDamageFactor" : 1
     },
-	{
-	  "action" : "sound",
+    {
+      "action" : "sound",
       "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
-	}
+    }
   ],
   "damageKind" : "ice",
   "onlyHitTerrain" : true

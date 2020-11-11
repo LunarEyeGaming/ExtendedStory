@@ -14,7 +14,7 @@
       },
       "cover" : {
         "priority" : 1,
-        "default" : "visible",
+        "default" : "invisible",
         "states" : {
           "visible" : {},
           "invisible" : {}
@@ -43,10 +43,10 @@
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -60,10 +60,10 @@
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -78,10 +78,10 @@
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -95,10 +95,10 @@
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -112,10 +112,10 @@
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -124,16 +124,16 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, 20.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -142,16 +142,16 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, 10.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -160,16 +160,16 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, 0.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -178,16 +178,16 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, -10.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -196,16 +196,16 @@
           "zLevel" : 1,
           "centered" : true,
           "offset" : [0.0, -20.0],
-		  "fullbright" : true,
+          "fullbright" : true,
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
             "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:<shellState>.<frame>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>:<shellState>.<frame>"
+              }
+            }
           }
         }
       },
@@ -219,10 +219,10 @@
         "partStates" : {
           "cover" : {
             "visible" : {
-			  "properties" : {
-			    "image" : "<partImage>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
           }
         }
       },
@@ -236,10 +236,10 @@
         "partStates" : {
           "cover" : {
             "visible" : {
-			  "properties" : {
-			    "image" : "<partImage>"
-			  }
-			}
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
           }
         }
       }
@@ -248,7 +248,7 @@
 
   "transformationGroups" : {
     "body" : {"interpolated" : true},
-	"cover" : {"interpolated" : true}
+    "cover" : {"interpolated" : true}
   },
 
   "particleEmitters" : {
@@ -257,44 +257,44 @@
       "particles" : [
       ]
     },
-	"idle" : {
-	  "active" : false,
+    "idle" : {
+      "active" : false,
       "emissionRate" : 100.0,
       "offsetRegion" : [-8, -8, 8, 8],
       "particles" : [
-		{
-		  "particle" : "shadowsmoke"
-		}
+        {
+          "particle" : "shadowsmoke"
+        }
       ]
-	},
-	"shellburst" : {
-	  "active" : false,
+    },
+    "shellburst" : {
+      "active" : false,
       "burstCount" : 20,
       "transformationGroups" : ["body", "cover"],
       "particles" : [
-		{
-		  "particle" : {
+        {
+          "particle" : {
             "type" : "animated",
             "animation" : "/animations/abyssspell_es/abyssspell_es.animation",
             "position" : [3.9375, 0],
             "initialVelocity" : [18, 0],
             "finalVelocity" : [10, 0],
-	        "approach" : [16, 16],
+            "approach" : [16, 16],
             "size" : 1,
             "layer" : "front",
             "timeToLive" : 0.4,
-	        "fade" : 1,
+            "fade" : 1,
             "fullbright" : true,
-	        "destructionAction" : "fade",
-	        "destructionTime" : 0.0,
+            "destructionAction" : "fade",
+            "destructionTime" : 0.0,
             "variance" : {
               "position" : [0.5, 0.5],
               "initialVelocity" : [2, 2]
             }
           }
-		}
+        }
       ]
-	},
+    },
     "destroy" : {
       "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
       "burstCount" : 15,
@@ -303,7 +303,10 @@
   },
 
   "sounds" : {
-    "turnHostile" : [ ],
+    "turnHostile" : {
+      "pool" : [ "/sfx/npc/boss/spiderboss_turnhostile.ogg" ],
+      "rangeMultiplier" : 3
+    },
     "deathPuff" : [ ],
     "fireVolley" : {
       "pool" : [ "/sfx/npc/boss/abyssartifactboss_abyssbeam.ogg" ],
