@@ -1,8 +1,8 @@
 require "/scripts/pathutil.lua"
 require "/scripts/vec2.lua"
 
--- Function: setOpenSegment: Sets segmentNumber to open and sets every segment from one to segmentCount EXCEPT segmentNumber to closed. It also translates the "cover" transformationGroup to the appropriate segment.
--- precondition: all segments have a margin of segmentSize in between each other, the median segment(s) must be the closest to the center
+-- Function: setOpenSegment: Sets segmentNumber to open and every other segment to closed. Also translates the "cover" transformationGroup to the appropriate segment.
+-- precondition: all segments have a margin of segmentSize in between each other, the median segment(s) is/are the closest to the center
 -- param segmentNumber -- the segment number in the sequence of segments
 -- param segmentCount -- the number of segments in total
 -- param segmentSize -- the size of each segment in blocks

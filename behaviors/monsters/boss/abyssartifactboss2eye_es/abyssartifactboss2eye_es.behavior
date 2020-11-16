@@ -52,6 +52,15 @@
         }
       },
       {
+        "title": "addEphemeralEffect",
+        "type": "action",
+        "name": "addEphemeralEffect",
+        "parameters": {
+          "name": {"value": "strictradianceweakness_es"},
+          "duration": {"value": 4294967296}
+        }
+      },
+      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -118,6 +127,17 @@
                         "name": "timer",
                         "parameters": {
                           "time": {"value": 2}
+                        }
+                      },
+                      {
+                        "title": "loadUniqueEntity",
+                        "type": "action",
+                        "name": "loadUniqueEntity",
+                        "parameters": {
+                          "uniqueId": {"value": "column"}
+                        },
+                        "output": {
+                          "entity": "columnEnt"
                         }
                       },
                       {
@@ -281,10 +301,12 @@
                     }
                   },
                   {
-                    "title": "abyssartifactboss-dying",
-                    "type": "module",
-                    "name": "abyssartifactboss-dying",
-                    "parameters": { }
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
                   },
                   {
                     "title": "setDying",

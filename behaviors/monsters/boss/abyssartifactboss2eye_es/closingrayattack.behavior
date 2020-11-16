@@ -169,7 +169,7 @@
                       "parameters": {
                         "aimVector": {"key": "aimVector1"},
                         "offset": {"key": "<projectileOffset>"},
-                        "projectileConfig": {"value": {"power": 10}},
+                        "projectileConfig": {"value": {"power": 20}},
                         "projectileType": {"value": "nyctosenergyshard_es"},
                         "scalePower": {"value": true}
                       }
@@ -181,7 +181,7 @@
                       "parameters": {
                         "aimVector": {"key": "aimVector2"},
                         "offset": {"key": "<projectileOffset>"},
-                        "projectileConfig": {"value": {"power": 10}},
+                        "projectileConfig": {"value": {"power": 20}},
                         "projectileType": {"value": "nyctosenergyshard_es"},
                         "scalePower": {"value": true}
                       }
@@ -216,7 +216,7 @@
         "parameters": {
           "aimVector": {"key": "toTarget"},
           "offset": {"key": "<projectileOffset>"},
-          "projectileConfig": {"value": {"power": 10}},
+          "projectileConfig": {"value": {"power": 20}},
           "projectileType": {"value": "nyctosenergyshard2_es"},
           "scalePower": {"value": true}
         }

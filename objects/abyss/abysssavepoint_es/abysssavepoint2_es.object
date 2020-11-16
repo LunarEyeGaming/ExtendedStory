@@ -3,8 +3,8 @@
   "colonyTags" : ["misc"],
   "objectType" : "teleporter",
   "rarity" : "Legendary",
-  "description" : "A teleporter to ???.",
-  "shortdescription" : "Teleporter to ???",
+  "description" : "A teleporter connected to ^green;two^reset; locations inside Nadir.",
+  "shortdescription" : "Teleporter to Nadir",
   "price" : 3000,
   "printable" : false,
 
@@ -21,7 +21,7 @@
   "lightPosition" : [0, 1],
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/abysssavepoint.config",
+  "interactData" : "/interface/warping/abysssavepoint2.config",
 
   "inventoryIcon" : "abysssavepoint2icon.png",
   "orientations" : [

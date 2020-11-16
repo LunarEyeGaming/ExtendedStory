@@ -3,6 +3,7 @@
   "description": "",
   "scripts": [
     "/scripts/behavior.lua",
+    "/scripts/actions/animator.lua",
     "/scripts/actions/entity.lua",
     "/scripts/actions/math.lua",
     "/scripts/actions/monster.lua",
@@ -163,6 +164,15 @@
         "name": "setVelocity",
         "parameters": {
           "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "sendEntityMessage",
+        "type": "action",
+        "name": "sendEntityMessage",
+        "parameters": {
+          "entity": {"key": "lightMirror"},
+          "message": {"value": "despawn"}
         }
       },
       {

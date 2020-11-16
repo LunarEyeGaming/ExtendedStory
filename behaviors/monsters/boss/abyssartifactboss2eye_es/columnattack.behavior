@@ -9,8 +9,7 @@
     "/scripts/actions/monster.lua",
     "/scripts/behavior.lua",
     "/scripts/actions/time.lua",
-    "/scripts/actions/projectiles.lua",
-    "/scripts/actions/boss/ancientboss.lua"
+    "/scripts/actions/projectiles.lua"
   ],
   "parameters": {},
   "root": {
@@ -24,19 +23,7 @@
         "type": "action",
         "name": "entityPosition",
         "parameters": {
-          "entity": {"key": "target"}
-        },
-        "output": {
-          "position": "targetPos"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "targetPos"},
-          "offset": {"value": [0, 6]}
+          "entity": {"key": "columnEnt"}
         },
         "output": {
           "position": "attackPos"
@@ -58,34 +45,34 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
-		"title": "resetTransformationGroup",
-		"type": "action",
-		"name": "resetTransformationGroup",
-		"parameters": {
-		  "transformationGroup": {"value": "body"}
-		}
-	  },
-	  {
-	    "title": "vecAngle",
-	    "type": "action",
-	    "name": "vecAngle",
-	    "parameters": {
-	      "vector": {"value": [0, -5]}
-	    },
-	    "output": {
-	      "angle": "targetAngle"
-	    }
-	  },
-	  {
-	    "title": "rotateTransformationGroup",
-	    "type": "action",
-	    "name": "rotateTransformationGroup",
-	    "parameters": {
-	      "transformationGroup": {"value": "body"},
-	      "angle": {"key": "targetAngle"}
-	    }
-	  },
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"}
+        }
+      },
+      {
+        "title": "vecAngle",
+        "type": "action",
+        "name": "vecAngle",
+        "parameters": {
+          "vector": {"value": [0, -5]}
+        },
+        "output": {
+          "angle": "targetAngle"
+        }
+      },
+      {
+        "title": "rotateTransformationGroup",
+        "type": "action",
+        "name": "rotateTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"},
+          "angle": {"key": "targetAngle"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",
@@ -109,7 +96,7 @@
         "parameters": {
           "aimVector": {"value": [0, -1]},
           "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"power": 15}},
+          "projectileConfig": {"value": {"power": 30}},
           "projectileType": {"value": "abyssalchargecolumns_es"},
           "scalePower": {"value": true}
         }

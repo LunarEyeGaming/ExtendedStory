@@ -19,15 +19,21 @@ function init()
 
   -- Precondition: It is impossible for the mirror to receive this message in the middle of an adjustment.
   message.setHandler("adjust", function(_, _, aimPosition)
-    local aimVector = world.distance(aimPosition, mcontroller.position())
-    animator.playSound("adjust")
-    beginAdjust(aimVector)
+    if self.interactable then
+      local aimVector = world.distance(aimPosition, mcontroller.position())
+      animator.playSound("adjust")
+      beginAdjust(aimVector)
+    end
   end)
   
   message.setHandler("teleport", function(_, _, nextPosition)
     animator.setAnimationState("movement", "disappear")
     setStage(1, self.teleportDelay)
     self.nextPosition = nextPosition
+  end)
+
+  message.setHandler("setInteractability", function(_, _, interactable)
+    self.interactable = interactable
   end)
   
   if config.getParameter("canFollow") then
@@ -66,6 +72,8 @@ function init()
   
   self.followTargetId = nil
   
+  self.interactable = true
+  
   monster.setDamageBar("none")
   resetMirror()
 end
@@ -75,6 +83,12 @@ function shouldDie()
 end
 
 function update(dt)
+  if not self.interactable then
+    status.addEphemeralEffect("invulnerable")
+  else
+    status.removeEphemeralEffect("invulnerable")
+  end
+
   if self.stage == 0 then
     idle(dt)
   elseif self.stage == 1 then

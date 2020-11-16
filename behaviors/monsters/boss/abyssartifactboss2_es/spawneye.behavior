@@ -132,9 +132,18 @@
         "name": "spawnMonster",
         "parameters": {
           "type": {"value": "abyssartifactboss2eye_es"},
-          "level": {"value": 10},
           "position": {"key": "eyePos"},
-          "parameters": {"value": {"musicStagehands": ["bossmusic2"]}}
+          "parameters": {"value": {"musicStagehands": ["bossmusic2"], "uniqueId": "bosseye"}}
+        }
+      },
+      {
+        "title": "spawnMonster",
+        "type": "action",
+        "name": "spawnMonster",
+        "parameters": {
+          "type": {"value": "abyssartifactboss2healthbar_es"},
+          "position": {"key": "self"},
+          "parameters": {"value": {}}
         }
       },
       {

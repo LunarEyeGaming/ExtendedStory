@@ -1,44 +1,25 @@
 {
-  "type" : "mirroroflight_es",
+  "type" : "abyssartifactboss2healthbar_es",
+  "shortDescription" : "",
 
-  "categories" : [ "mirroroflight_es" ],
+  "categories" : [ "abyssartifactboss2healthbar_es" ],
   "parts" : [ "body" ],
 
-  "animation" : "mirroroflight_es.animation",
+  "animation" : "abyssartifactboss2healthbar_es.animation",
   "reversed" : false,
 
   "dropPools" : [ "empty" ],
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/mission/mirroroflight_es/mirroroflight_es.lua"
+      "/monsters/mission/abyssartifactboss2healthbar_es/abyssartifactboss2healthbar_es.lua"
     ],
     "initialScriptDelta" : 1,
 
     "metaBoundBox" : [-2.5, -2.5, 2.5, 2.5],
     "scale" : 1.0,
     
-    "startingDirection" : [1, 0],
-
-    "teleportDelay" : 0.45,
-    "reappearDelay" : 0.1,
-
-    "adjustTime" : 0.5,
-    "adjustProgressOffset" : 0.5,
-
-    "fireOffset" : [0, 0],
-    "fireCooldown" : 2.0,
-    "fireCooldown2" : 0.5,
-
-    "projectileType" : "lightmirrorshot_es",
-    "projectileConfig" : {
-      "power" : 40,
-      "damageTeam" : {"type" : "friendly"}
-    },
-    
     "canFollow" : false,
-
-    "renderLayer" : "Projectile-20",
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -98,35 +79,8 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
-        "fireStatusImmunity" : {
+        "invulnerable" : {
           "baseValue" : 1.0
-        },
-        "iceStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "electricStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "poisonStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "specialStatusImmunity" : {
-          "baseValue" : 1.0
-        },
-        "abysseffectImmunity" : {
-          "baseValue" : 1.0
-        },
-        "ionizedImmunity" : {
-          "baseValue" : 1.0
-        },
-        "shadowImmunity" : {
-         "baseValue" : 1
-        },
-        "radiationburnImmunity" : { 
-          "baseValue" : 1
-        },
-        "acidicbacteriaImmunity" : { 
-          "baseValue" : 1
         }
       },
 

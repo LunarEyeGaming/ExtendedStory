@@ -6557,7 +6557,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-1, -1, 1, 9], \"xTargetVelocity\" : 60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
+                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-11, -1, 1, 20], \"xTargetVelocity\" : 60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
                     },
                  "propertytypes":
                     {
@@ -6577,7 +6577,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-1, -1, 11, 9], \"xTargetVelocity\" : -60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
+                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-1, -1, 11, 20], \"xTargetVelocity\" : -60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
                     },
                  "propertytypes":
                     {

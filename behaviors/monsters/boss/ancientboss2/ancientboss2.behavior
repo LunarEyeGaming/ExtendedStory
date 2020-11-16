@@ -118,7 +118,6 @@
                         "name": "spawnMonster",
                         "parameters": {
                           "type": {"value": "leftfist"},
-                          "level": {"value": 10},
                           "position": {"key": "leftfist"}
                         },
                         "output": {
@@ -131,7 +130,6 @@
                         "name": "spawnMonster",
                         "parameters": {
                           "type": {"value": "rightfist"},
-                          "level": {"value": 10},
                           "position": {"key": "rightfist"}
                         },
                         "output": {

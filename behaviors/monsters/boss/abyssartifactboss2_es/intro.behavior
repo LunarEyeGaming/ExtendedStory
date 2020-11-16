@@ -68,6 +68,43 @@
         }
       },
       {
+        "title": "queryEntity",
+        "type": "action",
+        "name": "queryEntity",
+        "parameters": {
+          "entityTypes": {"value": ["player"]},
+          "range": {"value": 60}
+        },
+        "output": {
+          "list": "players"
+        }
+      },
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "players"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sendEntityMessage",
+            "type": "action",
+            "name": "sendEntityMessage",
+            "parameters": {
+              "arguments": {"value": ["/cinematics/cutscenemodeend_es.cinematic"]},
+              "entity": {"key": "eachItem"},
+              "message": {"value": "playCinematic"}
+            }
+          }
+        }
+      },
+      {
         "title": "setOpenSegment",
         "type": "action",
         "name": "setOpenSegment",

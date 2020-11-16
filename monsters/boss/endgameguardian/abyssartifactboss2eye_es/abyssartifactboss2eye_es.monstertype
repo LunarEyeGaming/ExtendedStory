@@ -54,7 +54,7 @@
 
     "renderLayer" : "Projectile-20",
 
-    "damageBar" : "Special",
+    "damageBar" : "None",
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -102,7 +102,7 @@
           "baseValue" : 100
         },
         "protection" : {
-          "baseValue" : 100
+          "baseValue" : 0
         },
         "healthRegen" : {
           "baseValue" : 0.0
