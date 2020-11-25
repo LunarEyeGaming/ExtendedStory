@@ -20,14 +20,6 @@
     "parameters": {},
     "children": [
       {
-        "title": "setDying",
-        "type": "action",
-        "name": "setDying",
-        "parameters": {
-          "shouldDie": {"value": false}
-        }
-      },
-      {
         "title": "setAggressive",
         "type": "action",
         "name": "setAggressive",
@@ -41,6 +33,15 @@
         "name": "battleMusic",
         "parameters": {
           "enable": {"value": true}
+        }
+      },
+      {
+        "title": "sendEntityMessage",
+        "type": "action",
+        "name": "sendEntityMessage",
+        "parameters": {
+          "entity": {"value": "barrier"},
+          "message": {"value": "burrow"}
         }
       },
       {
@@ -176,11 +177,12 @@
         }
       },
       {
-        "title": "setDying",
+        "title": "setResourcePercentage",
         "type": "action",
-        "name": "setDying",
+        "name": "setResourcePercentage",
         "parameters": {
-          "shouldDie": {"value": true}
+          "percentage": {"value": 0},
+          "resource": {"value": "health"}
         }
       }
     ]

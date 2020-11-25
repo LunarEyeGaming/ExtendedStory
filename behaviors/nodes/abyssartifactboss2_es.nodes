@@ -4,12 +4,15 @@
     "name": "setOpenSegment",
     "title": "setOpenSegment",
     "properties": {
-      "segmentNumber": {"type": "number", "value": null},
+      "segmentIndex": {"type": "number", "value": null},
       "segmentCount": {"type": "number", "value": 5},
-      "segmentSize": {"type": "number", "value": 10}
+      "segmentSize": {"type": "number", "value": 10},
+      "coverOffset": {"type": "vec2", "value": [0, 0]}
     },
     "category": "abyssartifactboss2",
     "script": "/scripts/actions/boss/abyssartifactboss2_es.lua",
-    "output": {}
+    "output": {
+      "openSegmentOffset": {"type": "vec2", "key": null}
+    }
   }
 }

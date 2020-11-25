@@ -1,5 +1,5 @@
 {
-  "projectileName" : "abyssalhaze_es",
+  "projectileName" : "abyssalhaze3_es",
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
   "animationCycle" : 1.0,
   "timeToLive" : 49,
@@ -15,7 +15,7 @@
   "damagePoly" : [ [128, -400], [128, 400], [-128, 400], [-128, -400] ],
   "damageKind" : "nodamage",
   "damageRepeatTimeout" : 0.01,
-  "statusEffects" : ["abyssalhazepoison_es"],
+  "statusEffects" : ["abyssalhazepoison3_es"],
 
   "periodicActions" : [
     {

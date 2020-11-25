@@ -176,9 +176,20 @@
                         "name": "spawnProjectile",
                         "parameters": {
                           "aimVector": {"value": [-1, 0]},
-                          "offset": {"value": [-48, 0]},
+                          "offset": {"value": [-64, 0]},
                           "projectileConfig": {"value": {"power": 0}},
                           "projectileType": {"value": "abyssalhaze2_es"}
+                        }
+                      },
+                      {
+                        "title": "spawnProjectile",
+                        "type": "action",
+                        "name": "spawnProjectile",
+                        "parameters": {
+                          "aimVector": {"value": [-1, 0]},
+                          "offset": {"value": [-96, 0]},
+                          "projectileConfig": {"value": {"power": 0}},
+                          "projectileType": {"value": "abyssalhaze3_es"}
                         }
                       },
                       {

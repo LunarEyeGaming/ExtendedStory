@@ -68,7 +68,7 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Nadir",
+          name = "Nadir (Undiscovered Region)",
           planetName = "Dark Abyss Dimension",
           icon = "default",
           warpAction = string.format("InstanceWorld:abyssartifactdungeonboss2", storage.uuid, world.threatLevel())

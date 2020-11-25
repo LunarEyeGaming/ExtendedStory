@@ -5716,7 +5716,7 @@
                  "visible":true,
                  "width":16,
                  "x":7096,
-                 "y":1456
+                 "y":1432
                 }, 
                 {
                  "height":8,
@@ -6597,7 +6597,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"detectArea\" : [ [-1, -1], [1, 3] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                     "parameters":"{ \"detectArea\" : [ [-1, -1], [1, 7] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
                     },
                  "propertytypes":
                     {
@@ -8313,6 +8313,66 @@
                  "width":8,
                  "x":6384,
                  "y":1872
+                }, 
+                {
+                 "gid":8944,
+                 "height":16,
+                 "id":4521,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-1, -6, 77, 9], \"xTargetVelocity\" : -60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":6472,
+                 "y":1544
+                }, 
+                {
+                 "gid":8943,
+                 "height":16,
+                 "id":4522,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"physicsForces\" : { \"jumpForce\" : {\"type\" : \"DirectionalForceRegion\", \"rectRegion\" : [-1, -1, 8, 10], \"yTargetVelocity\" : -60, \"controlForce\" : 1600, \"categoryBlacklist\" : [\"projectile\", \"boss\"] } } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":7040,
+                 "y":1440
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":4523,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-1, -2], [4, 5] ], \"detectDuration\" : 8, \"detectDamageTeam\" : { \"type\" : \"enemy\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":6456,
+                 "y":1536
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -14324,6 +14384,46 @@
                  "width":0,
                  "x":6672,
                  "y":1984
+                }, 
+                {
+                 "height":0,
+                 "id":4524,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":576,
+                         "y":-104
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":6464,
+                 "y":1528
+                }, 
+                {
+                 "height":0,
+                 "id":4525,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":8,
+                         "y":0
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":6464,
+                 "y":1528
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -14395,7 +14495,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":4521,
+ "nextobjectid":4526,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

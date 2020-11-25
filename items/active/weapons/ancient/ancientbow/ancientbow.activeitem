@@ -24,16 +24,23 @@
     "bowFullbright" : "ancientbowfullbright.png"
   },
   "animationCustom" : {
-    "animatedParts" : { "parts" : {
-      "bow" : { "properties" : {
-        "offset" : [0, 0]
-      }},
-      "bowFullbright" : { "properties" : {
-        "offset" : [0, 0]
-      }}
-    }},
+    "animatedParts" : {
+      "parts" : {
+        "bow" : {
+          "properties" : {
+            "offset" : [0, 0]
+          }
+        },
+        "bowFullbright" : { 
+          "properties" : {
+            "offset" : [0, 0]
+          }
+        }
+      }
+    },
     "sounds" : {
       "draw" : [ "/sfx/gun/ancientbow_draw.ogg" ],
+      "cue" : [ "/sfx/interface/sniper_mark_pitch7.ogg" ],
       "release" : [ "/sfx/gun/ancientbow_fire.ogg" ],
       "perfectRelease" : [ "/sfx/gun/ancientbow_fire_perfect.ogg" ]
     }
@@ -41,7 +48,7 @@
 
   "scripts" : ["/items/active/weapons/bow/bow.lua"],
 
-  "primaryAbilityType" : "bowshot",
+  "primaryAbilityType" : "bowshotimproved_es",
   "primaryAbility" : {
     "drawSpeedMultiplier" : "constant",
     "projectileType" : "ancientarrow",
@@ -52,9 +59,9 @@
     }
   },
 
-  "altAbilityType" : "bowshot",
+  "altAbilityType" : "bowshotimproved_es",
   "altAbility" : {
-    "name" : "Chaos Arrow",
+    "name" : "Sentry Arrow",
     "energyPerShot" : 100,
     "drawSpeedMultiplier" : "constant",
     "projectileType" : "ancienttargetarrow_es",

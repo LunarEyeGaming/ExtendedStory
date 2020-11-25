@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "pickupQuestTemplates" : [ ],
   "category" : "enviroProtectionPack",
-  "description" : "Prevents any low or high temperatures, neutralizes high levels of radiation, and provides oxygen to the wearer.",
+  "description" : "Has the effects of the Cooling EPP and provides protection to elemental biomes.",
   "shortdescription" : "Ancient EPP",
 
   "maleFrames" : "back.png",
@@ -52,8 +52,8 @@
   "radioMessagesOnPickup" : [ "pickupepp" ],
 
   "colorOptions" : [
-    // WHITE
-    { "ffca8a" : "e6e6e6", "e0975c" : "b6b6b6", "a85636" : "7b7b7b", "6f2919" : "373737" },
+    // DEFAULT
+    { "ffca8a" : "8b826f", "e0975c" : "625c4f", "a85636" : "474239", "6f2919" : "2a2722" },
     // BLACK
     { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
     // GREY

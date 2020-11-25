@@ -13,6 +13,7 @@
     "/scripts/actions/boss/abyssartifactboss2_es.lua"
   ],
   "parameters": {
+    "coverOffset": [3.9375, 0.3125]
   },
   "root": {
     "title": "sequence",
@@ -109,7 +110,11 @@
         "type": "action",
         "name": "setOpenSegment",
         "parameters": {
-          "segmentNumber": {"value": 3}
+          "segmentIndex": {"value": 3},
+          "coverOffset": {"key": "<coverOffset>"}
+        },
+        "output": {
+          "openSegmentOffset": "offset"
         }
       },
       {

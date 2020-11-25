@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "pickupQuestTemplates" : [ ],
   "category" : "enviroProtectionPack",
-  "description" : "Completely resistant to every element.",
+  "description" : "Provides protection against every environmental hazard(normal and Extended Story only).",
   "shortdescription" : "Dark Matter EPP",
 
   "maleFrames" : "back.png",
@@ -39,6 +39,10 @@
       "amount" : 1.0
     },
     {
+      "stat" : "biomeelectricImmunity",
+      "amount" : 1.0
+    },
+    {
       "stat" : "breathProtection",
       "amount" : 1.0
     },
@@ -47,10 +51,6 @@
       "amount" : 1.0
     },
     {
-      "stat" : "biomeelectricImmunity",
-      "amount" : 1.0
-    },
-	{
       "stat" : "putridairImmunity",
       "amount" : 1.0
     }

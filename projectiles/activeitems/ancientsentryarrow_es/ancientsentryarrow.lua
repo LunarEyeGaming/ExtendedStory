@@ -27,6 +27,13 @@ function update(dt)
 
   self.fireTimer = math.max(0, self.fireTimer - dt)
   local near = world.entityQuery(mcontroller.position(), self.fireRadius, { includedTypes = {"monster", "npc"}, order = "nearest" })
+  
+  for i, ent in ipairs(near) do
+    if not entity.isValidTarget(ent) then
+      table.remove(near, i)
+    end
+  end
+  
   if #near > 0 and #self.orbiters > 0 and self.fireTimer == 0 then
     local orbiterNum = math.random(1, #self.orbiters)
     local orbiter = table.remove(self.orbiters, orbiterNum)

@@ -15,6 +15,7 @@
     {
       "image" : "debugsprite.png:off.1",
       "imagePosition" : [-72, 0],
+      "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
     }
   ],
@@ -24,6 +25,9 @@
   "animationParts" : {
     "shield" : "debugsprite.png"
   },
+
+  "inputNodes" : [ [-1, 4] ],
+  "outputNodes" : [ [0, 0] ],
 
   "scripts" : [ "ruinbusterlasershield.lua" ]
 }

@@ -13,6 +13,7 @@
     "/scripts/actions/boss/abyssartifactboss2_es.lua"
   ],
   "parameters": {
+    "coverOffset": [3.9375, 0.3125]
   },
   "root": {
     "title": "sequence",
@@ -25,7 +26,11 @@
         "type": "action",
         "name": "setOpenSegment",
         "parameters": {
-          "segmentNumber": {"value": 1}
+          "segmentIndex": {"value": 1},
+          "coverOffset": {"key": "<coverOffset>"}
+        },
+        "output": {
+          "openSegmentOffset": "offset"
         }
       },
       {
@@ -110,7 +115,7 @@
                     "name": "spawnProjectile",
                     "parameters": {
                       "aimVector": {"value": [-1, 0]},
-                      "offset": {"value": [-3.9375, 20.3125]},
+                      "offset": {"key": "offset"},
                       "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/abyssalcharge_es/spawn.config"}]}},
                       "projectileType": {"value": "orbitalup"},
                       "scalePower": {"value": true}

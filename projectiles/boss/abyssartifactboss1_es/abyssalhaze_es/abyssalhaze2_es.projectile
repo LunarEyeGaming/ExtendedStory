@@ -18,17 +18,17 @@
   "statusEffects" : ["abyssalhazepoison2_es"],
 
   "periodicActions" : [
-	{
-	  "time" : 0.01,
-	  "action" : "loop",
+    {
+      "time" : 0.01,
+      "action" : "loop",
       "count" : 3,
       "body" : [
         {
           "action" : "particle",
-	      "specification" : "abyssalhaze_es"
+          "specification" : "abyssalhaze_es"
         }
       ]
-	}
+    }
   ],
 
   "scripts" : [ "/projectiles/tracksourcestatus.lua" ],

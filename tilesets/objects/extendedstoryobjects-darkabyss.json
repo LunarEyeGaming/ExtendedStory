@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-darkabyss",
  "spacing":0,
- "tilecount":51,
+ "tilecount":52,
  "tileheight":256,
  "tileproperties":
     {
@@ -342,6 +342,13 @@
          "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"abyssacidtrap_es",
+         "tilesetDirection":"right"
+        },
+     "51":
+        {
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"abyssboss2barrier_es",
          "tilesetDirection":"right"
         },
      "6":
@@ -710,6 +717,13 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "51":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "imagePositionX":"string",
@@ -1025,6 +1039,12 @@
          "image":"..\/images\/objects\/abyssacidtrapright.png",
          "imageheight":16,
          "imagewidth":8
+        },
+     "51":
+        {
+         "image":"..\/images\/objects\/abyssboss2barrier_es.png",
+         "imageheight":128,
+         "imagewidth":32
         },
      "6":
         {

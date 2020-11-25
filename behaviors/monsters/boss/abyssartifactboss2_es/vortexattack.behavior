@@ -13,318 +13,152 @@
     "/scripts/actions/boss/abyssartifactboss2_es.lua"
   ],
   "parameters": {
+    "coverOffset": [3.9375, 0.3125]
   },
   "root": {
-    "title": "randomize",
+    "title": "sequence",
     "type": "composite",
-    "name": "randomize",
+    "name": "sequence",
     "parameters": {},
     "children": [
       {
-        "title": "sequence",
+        "title": "randomize",
         "type": "composite",
-        "name": "sequence",
+        "name": "randomize",
         "parameters": {},
         "children": [
           {
-            "title": "setOpenSegment",
+            "title": "setNumber",
             "type": "action",
-            "name": "setOpenSegment",
+            "name": "setNumber",
             "parameters": {
-              "segmentNumber": {"value": 2}
+              "number": {"value": 2}
+            },
+            "output": {
+              "number": "segmentIndex"
             }
           },
           {
-            "title": "setAnimationState",
+            "title": "setNumber",
             "type": "action",
-            "name": "setAnimationState",
+            "name": "setNumber",
             "parameters": {
-              "state": {"value": "visible"},
-              "type": {"value": "cover"}
+              "number": {"value": 3}
+            },
+            "output": {
+              "number": "segmentIndex"
             }
           },
           {
-            "title": "timer",
+            "title": "setNumber",
             "type": "action",
-            "name": "timer",
+            "name": "setNumber",
             "parameters": {
-              "time": {"value": 0.6}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "invisible"},
-              "type": {"value": "cover"}
-            }
-          },
-          {
-            "title": "burstParticleEmitter",
-            "type": "action",
-            "name": "burstParticleEmitter",
-            "parameters": {
-              "emitter": {"value": "shellburst"}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "shellBurst"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.75}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "vortexWindup"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.5}
-            }
-          },
-          {
-            "title": "spawnProjectile",
-            "type": "action",
-            "name": "spawnProjectile",
-            "parameters": {
-              "aimVector": {"value": [-1, 0]},
-              "offset": {"value": [-3.9375, 10]},
-              "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/primedabyssvortex_es/spawn.config"}]}},
-              "projectileType": {"value": "orbitalup"},
-              "scalePower": {"value": true}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1.0}
+              "number": {"value": 4}
+            },
+            "output": {
+              "number": "segmentIndex"
             }
           }
         ]
       },
       {
-        "title": "sequence",
-        "type": "composite",
-        "name": "sequence",
-        "parameters": {},
-        "children": [
-          {
-            "title": "setOpenSegment",
-            "type": "action",
-            "name": "setOpenSegment",
-            "parameters": {
-              "segmentNumber": {"value": 3}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "visible"},
-              "type": {"value": "cover"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.6}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "invisible"},
-              "type": {"value": "cover"}
-            }
-          },
-          {
-            "title": "burstParticleEmitter",
-            "type": "action",
-            "name": "burstParticleEmitter",
-            "parameters": {
-              "emitter": {"value": "shellburst"}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "shellBurst"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.75}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "vortexWindup"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.5}
-            }
-          },
-          {
-            "title": "spawnProjectile",
-            "type": "action",
-            "name": "spawnProjectile",
-            "parameters": {
-              "aimVector": {"value": [-1, 0]},
-              "offset": {"value": [-3.9375, 0]},
-              "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/primedabyssvortex_es/spawn.config"}]}},
-              "projectileType": {"value": "orbitalup"},
-              "scalePower": {"value": true}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1.0}
-            }
-          }
-        ]
+        "title": "setOpenSegment",
+        "type": "action",
+        "name": "setOpenSegment",
+        "parameters": {
+          "segmentIndex": {"key": "segmentIndex"},
+          "coverOffset": {"key": "<coverOffset>"}
+        },
+        "output": {
+          "openSegmentOffset": "offset"
+        }
       },
       {
-        "title": "sequence",
-        "type": "composite",
-        "name": "sequence",
-        "parameters": {},
-        "children": [
-          {
-            "title": "setOpenSegment",
-            "type": "action",
-            "name": "setOpenSegment",
-            "parameters": {
-              "segmentNumber": {"value": 4}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "visible"},
-              "type": {"value": "cover"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.6}
-            }
-          },
-          {
-            "title": "setAnimationState",
-            "type": "action",
-            "name": "setAnimationState",
-            "parameters": {
-              "state": {"value": "invisible"},
-              "type": {"value": "cover"}
-            }
-          },
-          {
-            "title": "burstParticleEmitter",
-            "type": "action",
-            "name": "burstParticleEmitter",
-            "parameters": {
-              "emitter": {"value": "shellburst"}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "shellBurst"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.75}
-            }
-          },
-          {
-            "title": "playSound",
-            "type": "action",
-            "name": "playSound",
-            "parameters": {
-              "sound": {"value": "vortexWindup"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.5}
-            }
-          },
-          {
-            "title": "spawnProjectile",
-            "type": "action",
-            "name": "spawnProjectile",
-            "parameters": {
-              "aimVector": {"value": [-1, 0]},
-              "offset": {"value": [-3.9375, -10]},
-              "projectileConfig": {"value": {"power": 45, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/primedabyssvortex_es/spawn.config"}]}},
-              "projectileType": {"value": "orbitalup"},
-              "scalePower": {"value": true}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1.0}
-            }
-          }
-        ]
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "visible"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.6}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "shellburst"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "shellBurst"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.75}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "vortexWindup"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"value": [-1, 0]},
+          "offset": {"key": "offset"},
+          "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/primedabyssvortex_es/spawn.config"}]}},
+          "projectileType": {"value": "orbitalup"},
+          "scalePower": {"value": true}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
       }
     ]
   }
