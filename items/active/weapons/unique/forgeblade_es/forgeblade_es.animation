@@ -38,27 +38,27 @@
             "cycle" : 0.12,
             "mode" : "transition",
             "transition" : "idle", 
-			"properties" : {
-			  "immediateSound" : "/sfx/gun/elemental_lance.ogg"
-			}
+            "properties" : {
+              "immediateSound" : "/sfx/gun/elemental_lance.ogg"
+            }
           },
           "fire6" : {
             "frames" : 4,
             "cycle" : 0.12,
             "mode" : "transition",
             "transition" : "idle", 
-			"properties" : {
-			  "immediateSound" : "/sfx/gun/elemental_lance.ogg"
-			}
+            "properties" : {
+              "immediateSound" : "/sfx/gun/elemental_lance.ogg"
+            }
           },
           "fire7" : {
             "frames" : 6,
             "cycle" : 0.33,
             "mode" : "transition",
             "transition" : "idle", 
-			"frameProperties" : {
-			  "immediateSound" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_shotgun1.ogg"]
-			}
+            "frameProperties" : {
+              "immediateSound" : ["/sfx/gun/plasma_pistol1.ogg", "/sfx/gun/plasma_shotgun1.ogg"]
+            }
           }
         }
       },
@@ -105,21 +105,21 @@
           }
         }
       },
-	  "sfx" : {
-	    "default" : "off",
-		"states" : {
-		  "off" : {},
-		  "windup" : {
-		    "frames" : 1,
-			"cycle" : 1,
-			"mode" : "transition",
-			"transition" : "off",
-			"properties" : {
-			  "immediateSound" : "/sfx/melee/lightningblade_altwindup2.ogg"
-			}
-		  }
-		}
-	  }
+      "sfx" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "windup" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "immediateSound" : "/sfx/melee/lightningblade_altwindup2.ogg"
+            }
+          }
+        }
+      }
     },
 
     "parts" : {
@@ -221,7 +221,7 @@
               "properties" : {
                 "image" : "/items/active/weapons/melee/broadsword/swoosh/fireswoosh.png:<frame>?flipy",
                 "offset" : [0, -2.5],
-				"damageArea" : [[-5, -2], [-2.5, -3], [1, -3], [4, -1.75], [5, 0.25], [5, 2.25], [4, 3.25], [0, 2.5]]
+                "damageArea" : [[-5, -2], [-2.5, -3], [1, -3], [4, -1.75], [5, 0.25], [5, 2.25], [4, 3.25], [0, 2.5]]
               }
             },
             "fire3" : {
@@ -256,31 +256,31 @@
               "properties" : {
                 "image" : "fireexplosion.png:<frame>",
                 "offset" : [2.5, 2.5],
-				"damageArea" : [[-4.0, 0], [-2.5, -2.5], [0, -4.0], [2.5, -2.5], [4.0, 0], [2.5, 2.5], [0, 4.0], [-2.5, 2.5]]
+                "damageArea" : [[-4.0, 0], [-2.5, -2.5], [0, -4.0], [2.5, -2.5], [4.0, 0], [2.5, 2.5], [0, 4.0], [-2.5, 2.5]]
               }
             }
           }
         }
       },
-	  "sfx" : {
-	    "properties" : {
-		  "transformationGroups" : ["weapon"]
-		},
-		"partStates" : {
-		  "sfx" : {
-		    "off" : {
-			  "properties" : {
-			    "image" : ""
-			  }
-			},
-			"windup" : {
-			  "properties" : {
-			    "image" : ""
-			  }
-			}
-		  }
-		}
-	  }
+      "sfx" : {
+        "properties" : {
+          "transformationGroups" : ["weapon"]
+        },
+        "partStates" : {
+          "sfx" : {
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
     }
   },
 
@@ -306,7 +306,7 @@
       "emissionRate" : 5,
       "particles" : [
         { "particle" : "fireswoosh1"},
-		{ "particle" : "fireswoosh2"}
+        { "particle" : "fireswoosh2"}
       ]
     }
   },

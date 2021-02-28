@@ -34,7 +34,7 @@
     "scripts" : ["/items/active/weapons/umbrium/shadoweyes_es/shadoweyesability.lua"],
     "class" : "ShadowEyesAbility",
 
-	"chargeTime" : 1.5,
+    "chargeTime" : 1.5,
     "energyCost" : 120.0,
     "baseDamage" : 16.0,
     
@@ -62,8 +62,8 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-		
-		"animationStates" : {}
+        
+        "animationStates" : {}
       },
       "charge" : {
         "armRotation" : 0,
@@ -72,8 +72,8 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-		
-		"animationStates" : {}
+        
+        "animationStates" : {}
       },
       "winddown" : {
         "duration" : 0.5,
@@ -83,8 +83,8 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-		
-		"animationStates" : {}
+        
+        "animationStates" : {}
       }
     }
   },
@@ -92,9 +92,9 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "name" : "Spell Wave",
-	"elementalConfig" : {
-	  "abyss" : {
-	    "projectileType" : "abyssbossspelltail_es",
+    "elementalConfig" : {
+      "abyss" : {
+        "projectileType" : "abyssbossspelltail_es",
         "projectileParameters" : {
           "bounces" : 0,
           "speed" : 50,
@@ -102,15 +102,16 @@
           "timeToLive" : 0.5,
           "knockback" : 20
         }
-	  }
-	},
+      }
+    },
     "fireType" : "auto",
     "energyUsage" : 125,
-	"fireTime" : 1.0,
-	"projectileCount" : 12,
-	"inaccuracy" : 0.08,
-	"baseDamage" : 8,
-    "useParticleEmitter" : false
+    "fireTime" : 1.0,
+    "projectileCount" : 12,
+    "inaccuracy" : 0.08,
+    "baseDamage" : 8,
+    "useParticleEmitter" : false,
+    "hidePrimaryMuzzleFlash" : true
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

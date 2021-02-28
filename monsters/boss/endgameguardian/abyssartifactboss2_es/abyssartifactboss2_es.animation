@@ -20,6 +20,14 @@
           "invisible" : {}
         }
       },
+      "touchdamage" : {
+        "priority" : 1,
+        "default" : "on",
+        "states" : {
+          "on" : {},
+          "off" : {}
+        }
+      },
       "damage" : {
         "priority" : 4,
         "default" : "none",
@@ -72,8 +80,7 @@
           "zLevel" : 0,
           "centered" : true,
           "offset" : [0.0, 0.0],
-          "transformationGroups" : [ "body" ],
-          "damageArea" : [ [5, 25], [5, -25], [-5, -25], [-5, 25] ]
+          "transformationGroups" : [ "body" ]
         },
         "partStates" : {
           "segment" : {
@@ -238,6 +245,20 @@
             "visible" : {
               "properties" : {
                 "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      },
+      "touchdamage" : {
+        "properties" : {
+          "anchorPart" : "segment3"
+        },
+        "partStates" : {
+          "touchdamage" : {
+            "on" : {
+              "properties" : {
+                "damageArea" : [ [2.5, 25], [2.5, -25], [-2.5, -25], [-2.5, 25] ]
               }
             }
           }

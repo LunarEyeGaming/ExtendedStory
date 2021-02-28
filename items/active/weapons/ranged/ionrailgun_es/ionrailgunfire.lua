@@ -33,7 +33,7 @@ function ChargeFire:update(dt, fireMode, shiftHeld)
   if animator.animationState("beamfire") == "off" then
     animator.resetTransformationGroup("laserbeam")
     animator.setGlobalTag("beamDirectives", "")
-	activated = false
+    activated = false
   end
 end
 
@@ -47,7 +47,7 @@ function ChargeFire:charge()
 
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = math.max(self.chargeTimer - self.dt, 0)
-	
+    
     if self.chargeTimer == 0 and status.overConsumeResource("energy", self.energyUsage * self.fireTime) then
       self:setState(self.fire)
     end
@@ -62,7 +62,7 @@ function ChargeFire:fire()
     animator.setAnimationState("firing", "idle")
     self.cooldownTimer = self.cooldownTime or 0
     self:setState(self.cooldown, self.cooldownTimer)
-	return
+    return
   end
   self:drawBeam()
 
@@ -99,17 +99,17 @@ function ChargeFire:cooldown(duration)
       self:aimVector(0, 0),
       false,
       {
-	    timeToLive = 0,
-	    power = baseDamage,
-	    piercing = true,
-	    damageType = "damage",
-	    damageKind = "ionplasma",
-	    actionOnReap = {{action = "config", file = "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}}
+        timeToLive = 0,
+        power = baseDamage,
+        piercing = true,
+        damageType = "damage",
+        damageKind = "ionplasma",
+        actionOnReap = {{action = "config", file = "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}}
       }
     )
   end
   util.wait(duration, function()
-	local damageArea = { vec2.add({0, 0}, self.weapon.muzzleOffset), vec2.add({self.beamLength, 0}, self.weapon.muzzleOffset) }
+    local damageArea = { vec2.add({0, 0}, self.weapon.muzzleOffset), vec2.add({self.beamLength, 0}, self.weapon.muzzleOffset) }
     self.weapon:setDamage({baseDamage = baseDamage, damageSourceKind = "ionplasma", knockback = 0, damageRepeatTimeout = 1.0}, damageArea)
     local from = self.stances.cooldown.weaponOffset or {0,0}
     local to = self.stances.idle.weaponOffset or {0,0}
@@ -137,7 +137,7 @@ function ChargeFire:drawBeam()
   collidePoint = world.lineCollision(self:firePosition(), beamEnd)
   if collidePoint and activated == false then
     beamEnd = collidePoint
-	activated = true
+    activated = true
   end
   local beamLength = world.magnitude(self:firePosition(), beamEnd)
   laserBeamOffsetX = beamLength / 2

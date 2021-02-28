@@ -132,6 +132,10 @@
   "sounds" : {
     "turnHostile" : [ ],
     "deathPuff" : [ ],
+    "transition" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_pain1.ogg", "/sfx/npc/boss/crystalboss_pain2.ogg" ],
+      "rangeMultiplier" : 3
+    },
     "fire1" : {
       "pool" : [ "/sfx/npc/darkabyss/abysseye_fire.ogg" ],
       "rangeMultiplier" : 3

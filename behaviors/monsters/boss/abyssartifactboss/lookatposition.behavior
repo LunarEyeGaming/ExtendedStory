@@ -13,7 +13,7 @@
   ],
   "parameters": {
     "selectedPosition": "self",
-	"eyeOffset": 3
+    "eyeOffset": 3
   },
   "root": {
     "title": "sequence",
@@ -49,8 +49,8 @@
         "type": "action",
         "name": "translateTransformationGroup",
         "parameters": {
-		  "offset": {"key": "eyePosition"},
-		  "transformationGroup": {"value": "eyepupil"}
+          "offset": {"key": "eyePosition"},
+          "transformationGroup": {"value": "eyepupil"}
         }
       }
     ]

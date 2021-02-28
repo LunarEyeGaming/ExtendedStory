@@ -48,14 +48,6 @@
         }
       },
       {
-        "title": "setDamageOnTouch",
-        "type": "action",
-        "name": "setDamageOnTouch",
-        "parameters": {
-          "touchDamage": {"value": true}
-        }
-      },
-      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -77,6 +69,77 @@
               "targetOnDamage": {"value": true},
               "targetOutOfSightTime": {"value": 999999}
             }
+          },
+          // If any player is opposite to the chaseDirection--chaseDirection * xOffset < 0, they get a status effect that pulls them towards the front of the boss--{chaseDirection * coverOffset[1], coverOffset[2]}. Iterate over "targets" and "outOfSightTargets"
+          {
+            "title": "selector",
+            "type": "composite",
+            "name": "selector",
+            "parameters": {},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "each",
+                    "type": "decorator",
+                    "name": "each",
+                    "parameters": {
+                      "list": {"key": "targets"},
+                      "type": {"value": "entity"}
+                    },
+                    "child": {
+                      "title": "abyssartifactboss2_es-pullentity",
+                      "type": "module",
+                      "name": "abyssartifactboss2_es-pullentity",
+                      "parameters": {
+                        "entityId": {"key": "eachItem"},
+                        "chaseDirection": {"key": "<chaseDirection>"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "each",
+                    "type": "decorator",
+                    "name": "each",
+                    "parameters": {
+                      "list": {"key": "outOfSightTargets"},
+                      "type": {"value": "entity"}
+                    },
+                    "child": {
+                      "title": "abyssartifactboss2_es-pullentity",
+                      "type": "module",
+                      "name": "abyssartifactboss2_es-pullentity",
+                      "parameters": {
+                        "entityId": {"key": "eachItem"},
+                        "chaseDirection": {"key": "<chaseDirection>"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "off"},
+                      "type": {"value": "touchdamage"}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "on"},
+                  "type": {"value": "touchdamage"}
+                }
+              }
+            ]
           },
           {
             "title": "Spiderboss",
@@ -177,69 +240,142 @@
                                 }
                               },
                               {
-                                "title": "repeater",
-                                "type": "decorator",
-                                "name": "repeater",
-                                "parameters": {
-                                  "maxLoops": {"value": -1},
-                                  "untilSuccess": {"value": false}
-                                },
-                                "child": {
-                                  "title": "sequence",
-                                  "type": "composite",
-                                  "name": "sequence",
-                                  "parameters": {},
-                                  "children": [
-                                    {
-                                      "title": "abyssartifactboss2_es-volleyattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-volleyattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": 2},
+                                      "untilSuccess": {"value": false}
                                     },
-                                    {
-                                      "title": "abyssartifactboss2_es-slimeattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-slimeattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-vortexattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-vortexattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-volleyattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-volleyattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-waveattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-waveattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss2_es-slimeattack",
-                                      "type": "module",
-                                      "name": "abyssartifactboss2_es-slimeattack",
-                                      "parameters": {
-                                        "coverOffset": {"key": "<coverOffset>"}
-                                      }
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "abyssartifactboss2_es-volleyattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-volleyattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-slimeattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-slimeattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-vortexattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-vortexattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-volleyattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-volleyattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-waveattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-waveattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-slimeattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-slimeattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        }
+                                      ]
                                     }
-                                  ]
-                                }
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "abyssartifactboss2_es-volleyattack2a",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-volleyattack2a",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-slimeattack2",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-slimeattack2",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-vortexattack",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-vortexattack",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-volleyattack2b",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-volleyattack2b",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-waveattack2",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-waveattack2",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-slimeattack2",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-slimeattack2",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           },

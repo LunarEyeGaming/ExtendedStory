@@ -1,0 +1,225 @@
+{
+  "name": "abyssartifactboss2eye_es-transition",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "teleport"}
+        }
+      },
+      {
+        "title": "addEphemeralEffect",
+        "type": "action",
+        "name": "addEphemeralEffect",
+        "parameters": {
+          "duration": {"value": 0.75},
+          "name": {"value": "invulnerable"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "eye"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.1}
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "spawn"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.1}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "eye"}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "teleport"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "transition"}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1.0}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "random",
+                  "type": "action",
+                  "name": "random",
+                  "parameters": {
+                    "max": {"value": 0.5},
+                    "min": {"value": -0.5}
+                  },
+                  "output": {
+                    "number": "offsetX"
+                  }
+                },
+                {
+                  "title": "random",
+                  "type": "action",
+                  "name": "random",
+                  "parameters": {
+                    "max": {"value": 0.5},
+                    "min": {"value": -0.5}
+                  },
+                  "output": {
+                    "number": "offsetY"
+                  }
+                },
+                {
+                  "title": "entityPosition",
+                  "type": "action",
+                  "name": "entityPosition",
+                  "parameters": {
+                    "entity": {"key": "target"}
+                  },
+                  "output": {
+                    "position": "lookPosition"
+                  }
+                },
+                {
+                  "title": "abyssartifactboss2eye_es-look",
+                  "type": "module",
+                  "name": "abyssartifactboss2eye_es-look",
+                  "parameters": {
+                    "position": {"key": "lookPosition"}
+                  }
+                },
+                {
+                  "title": "translateTransformationGroup",
+                  "type": "action",
+                  "name": "translateTransformationGroup",
+                  "parameters": {
+                    "offset": {"value": ["offsetX", "offsetY"]},
+                    "transformationGroup": {"value": "body"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.07}
+                  }
+                },
+                {
+                  "title": "resetTransformationGroup",
+                  "type": "action",
+                  "name": "resetTransformationGroup",
+                  "parameters": {
+                    "transformationGroup": {"value": "body"}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
+  }
+}

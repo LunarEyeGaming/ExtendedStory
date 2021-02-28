@@ -21,7 +21,6 @@ function ChainGunFire:init()
   end
 end
 
--- TODO: Implement animation for barrel and body
 
 function ChainGunFire:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)

@@ -23,22 +23,22 @@
             "mode" : "loop"
           },
           "windup" : {
-		    "frames" : 4,
-			"cycle" : 0.4,
-			"mode" : "transition",
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "transition",
             "transition" : "active"
-		  },
-		  "active" : {
-		    "frames" : 4,
-			"cycle" : 0.4,
-			"mode" : "loop"
-		  },
-		  "winddown" : {
-		    "frames" : 5,
-			"cycle" : 0.5,
-			"mode" : "transition",
+          },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
             "transition" : "inactive"
-		  }
+          }
         }
       }
     },
@@ -86,7 +86,7 @@
         "properties" : {
           "zLevel" : 1,
           "fullbright" : true,
-		  "anchorPart" : "gun"
+          "anchorPart" : "gun"
         },
 
         "partStates" : {

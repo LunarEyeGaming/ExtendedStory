@@ -27,7 +27,7 @@
 
     "phases" : [
       {
-        "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack"]
+        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack"]
       },
       {
         "enterPhase" : "destroyerMinionsAttack",
@@ -54,10 +54,10 @@
         "skills" : ["ufoTeleportAttack", "destroyerSprayNPrayAttack", "ufoTeleportAttack", "destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
       },
       {
-        "enterPhase" : "destroyerSwoopAttack",
+        "enterPhase" : "quantumsentryDestructionAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.1,
-        "skills" : ["destroyerSwoopAttack", "destroyerSwoopAttack", "ufoTeleportAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerSwoopAttack", "ufoTeleportAttack"]
+        "skills" : ["ufoTeleportAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
       }
     ],
 

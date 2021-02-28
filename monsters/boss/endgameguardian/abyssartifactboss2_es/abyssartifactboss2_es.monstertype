@@ -40,7 +40,7 @@
     },
 
     "damageParts" : {
-      "segment3" : {
+      "touchdamage" : {
         "damage" : 20,
         "knockback" : 50,
 
@@ -141,12 +141,12 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
-		"electricResistance" : {
-		  "baseValue" : 0
-		},
-		"poisonResistance" : {
-		  "baseValue" : 0
-		},
+        "electricResistance" : {
+          "baseValue" : 0
+        },
+        "poisonResistance" : {
+          "baseValue" : 0
+        },
         "abysseffectImmunity" : {
           "baseValue" : 1.0
         },
@@ -160,6 +160,9 @@
           "baseValue" : 1
         },
         "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
+        },
+        "invulnerable" : { 
           "baseValue" : 1
         }
       },

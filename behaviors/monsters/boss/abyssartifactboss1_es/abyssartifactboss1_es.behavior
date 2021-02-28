@@ -30,14 +30,6 @@
         }
       },
       {
-        "title": "setFlag",
-        "type": "action",
-        "name": "setFlag",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
-      {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
@@ -222,15 +214,6 @@
                                 "parameters": {
                                   "percentage": {"value": 0.0},
                                   "resource": {"value": "health"}
-                                }
-                              },
-                              {
-                                "title": "addEphemeralEffect",
-                                "type": "action",
-                                "name": "addEphemeralEffect",
-                                "parameters": {
-                                  "duration": {"value": 0.1},
-                                  "name": {"value": "invulnerable"}
                                 }
                               },
                               {

@@ -1,8 +1,9 @@
 {
   "projectileName" : "abyssboss2cage_es",
-  "image" : "temp.png",
+  "image" : "abyssboss2cage.png",
   "animationCycle" : 1.0,
-  "frameNumber" : 1,
+  "animationLoops" : false,
+  "frameNumber" : 7,
   "physics" : "illusion",
   "physicsCollisions" : {
     "side1" : {
@@ -27,7 +28,7 @@
 
   "speed" : 0,
   "timeToLive" : 60,
-  "renderLayer" : "ForegroundEntity",
+  "renderLayer" : "Player+2",
   
   "scripts" : [ "/projectiles/unsorted/abyssboss2cage_es/abyssboss2cage.lua" ],
   "scriptDelta" : 1,

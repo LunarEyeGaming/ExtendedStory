@@ -29,6 +29,16 @@ function setOpenSegment(args, board)
   return true, {openSegmentOffset = finalOffset}
 end
 
+-- param capturerId
+-- param percentage
+-- output healthPercentage
+function capturerHealthPercentage(args, board)
+  if args.capturerId == nil or not world.entityExists(args.capturerId) then return false end
+  local health = world.entityHealth(args.capturerId)
+  local percentage = health[1] / health[2]
+
+  return percentage > args.percentage
+end
 
 -- Returns a vec2 based on the segment index, the total number of segments, and the size of each segment
 function getSegmentToOffset_(segmentIndex, segmentCount, segmentSize)

@@ -14,5 +14,17 @@
     "output": {
       "openSegmentOffset": {"type": "vec2", "key": null}
     }
+  },
+  "capturerHealthPercentage": {
+    "type": "action",
+    "name": "capturerHealthPercentage",
+    "title": "capturerHealthPercentage",
+    "properties": {
+      "capturerId": {"type": "entity", "value": null},
+      "percentage": {"type": "number", "value": 1}
+    },
+    "category": "abyssartifactboss2",
+    "script": "/scripts/actions/boss/abyssartifactboss2_es.lua",
+    "output": {}
   }
 }

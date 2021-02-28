@@ -50,7 +50,7 @@
 
     "stances" : {
       "idle" : {"armRotation" : 0, "weaponRotation" : 45, "allowRotate" : false, "allowFlip" : true},
-      "windup1" : {"duration" : 0.1, "armRotation" : 305, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+      "windup1" : {"duration" : 0.1, "armRotation" : -55, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
       "preslash1" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},      
       "fire1" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
       "wait1" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
@@ -64,8 +64,8 @@
       "fire4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
       "wait4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
       "windup5" : {"duration" : 0.2,"armRotation" : 45,"weaponRotation" : 135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-      "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true} 
+      "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+      "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -135,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true} 
     }
   },
 

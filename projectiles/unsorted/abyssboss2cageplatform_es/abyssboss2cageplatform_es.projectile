@@ -1,6 +1,6 @@
 {
   "projectileName" : "abyssboss2cageplatform_es",
-  "image" : "temp.png",
+  "image" : "abyssboss2cageplatform.png",
   "animationCycle" : 1.0,
   "frameNumber" : 1,
   "physics" : "illusion",
@@ -17,13 +17,14 @@
   "orientationLocked" : true,
   "speed" : 60,
   "timeToLive" : 60,
+  "renderLayer" : "Player+10",
   
   "scripts" : [ "/projectiles/unsorted/abyssboss2cageplatform_es/abyssboss2cageplatform.lua" ],
   "scriptDelta" : 1,
 
   "stop1Delay" : 0.5,
   "captureDelay" : 0.5,
-  "redirectionDelay" : 2.0,
+  "redirectionDelay" : 0.5,
   "enterArenaDelay" : 8.5,
   "stop2Delay" : 3.0,
   

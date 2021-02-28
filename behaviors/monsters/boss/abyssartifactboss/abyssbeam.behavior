@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -27,67 +27,67 @@
           "sound": {"value": "beamwindup"}
         }
       },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-        	      "title": "entityPosition",
-        	      "type": "action",
-        	      "name": "entityPosition",
-        	      "parameters": {
-			        "entity": {"key": "target"}
-			      },
-			      "output": {
-			        "position": "targetPos"
-			      }
-        	    },
-			    {
-				  "title": "abyssartifactboss-lookatposition",
-			      "type": "module",
-			      "name": "abyssartifactboss-lookatposition",
-			      "parameters": {
-				    "selectedPosition": {"key": "targetPos"}
-				  }
-				},
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.01}
-				  }
-				},
-				{
-				  "title": "resetTransformationGroup",
-				  "type": "action",
-				  "name": "resetTransformationGroup",
-				  "parameters": {
-				    "transformationGroup": {"value": "eyepupil"}
-				  }
-				}
-			  ]
-			}
-		  },
-		  {
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "entityPosition",
+                  "type": "action",
+                  "name": "entityPosition",
+                  "parameters": {
+                    "entity": {"key": "target"}
+                  },
+                  "output": {
+                    "position": "targetPos"
+                  }
+                },
+                {
+                  "title": "abyssartifactboss-lookatposition",
+                  "type": "module",
+                  "name": "abyssartifactboss-lookatposition",
+                  "parameters": {
+                    "selectedPosition": {"key": "targetPos"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.01}
+                  }
+                },
+                {
+                  "title": "resetTransformationGroup",
+                  "type": "action",
+                  "name": "resetTransformationGroup",
+                  "parameters": {
+                    "transformationGroup": {"value": "eyepupil"}
+                  }
+                }
+              ]
+            }
+          },
+          {
             "title": "timer",
             "type": "action",
             "name": "timer",
@@ -95,9 +95,9 @@
               "time": {"value": 4.75}
             }
           }
-		]
-	  },
-	  {
+        ]
+      },
+      {
         "title": "entityDirection",
         "type": "action",
         "name": "entityDirection",
@@ -108,7 +108,7 @@
           "vector": "toTarget"
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
@@ -129,17 +129,17 @@
         }
       },
       {
-    	"title": "spawnProjectile",
-    	"type": "action",
-    	"name": "spawnProjectile",
-    	"parameters": {
-    	  "aimVector": {"key": "toTarget"},
-    	  "offset": {"key": "projectilePos"},
-    	  "projectileConfig": {"value": {}},
-    	  "projectileType": {"value": "abyssbeam"}
-    	}
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"key": "toTarget"},
+          "offset": {"key": "projectilePos"},
+          "projectileConfig": {"value": {}},
+          "projectileType": {"value": "abyssbeam"}
+        }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -147,7 +147,7 @@
           "sound": {"value": "beamfire"}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
@@ -155,15 +155,15 @@
           "time": {"value": 1.0}
         }
       },
-	  {
-	    "title": "resetTransformationGroup",
-	    "type": "action",
-	    "name": "resetTransformationGroup",
-	    "parameters": {
-	      "transformationGroup": {"value": "eyepupil"}
-	    }
-	  },
-	  {
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "eyepupil"}
+        }
+      },
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",

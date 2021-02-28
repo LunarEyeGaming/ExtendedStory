@@ -605,7 +605,7 @@
                                           "type": "action",
                                           "name": "addEphemeralEffect",
                                           "parameters": {
-                                            "name": {"value": "abyssalgazerattackimmunity"}
+                                            "name": {"value": "buddhamode_es"}
                                           }
                                         }
                                       ]
@@ -681,6 +681,36 @@
                 "name": "sequence",
                 "parameters": {},
                 "children": [
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "shieldCores"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
                   {
                     "title": "setAggressive",
                     "type": "action",

@@ -1,0 +1,53 @@
+{
+  "projectileName" : "abysscolumnshockwave2_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 0,
+  "speed" : 80,
+  "timeToLive" : 0.8,
+  "periodicActions" : [
+    {
+      "time" : 0.06,
+      "action" : "projectile",
+      "type" : "orbitalup",
+      "inheritDamageFactor" : 1,
+      "direction" : [0, -1],
+      "config" : {
+        "speed" : 800,
+        "onlyHitTerrain" : true,
+        "actionOnReap" : [
+          {
+            "action" : "projectile",
+            "type" : "abysscolumnwindup",
+            "direction" : [1, 0],
+            "offset" : [0, 0.125],
+            "inheritDamageFactor" : 1
+          }
+        ]
+      }
+    },
+    {
+      "time" : 0.02,
+      "action" : "particle",
+      "specification" : {
+        "type" : "ember",
+        "color" : [94, 113, 128],
+        "fullbright" : true,
+        "initialVelocity" : [0, 10],
+        "finalVelocity" : [0, -20],
+        "approach" : [0, 55],
+        "position" : [0, 0],
+        "timeToLive" : 1,
+        "variance" : {
+          "initialVelocity" : [2, 2]
+        }
+      }
+    }
+  ],
+  "damageKind" : "plasmabullet",
+  "onlyHitTerrain" : true
+}

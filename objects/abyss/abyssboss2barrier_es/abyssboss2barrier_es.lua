@@ -8,9 +8,15 @@ function init()
   self.burrowTime = config.getParameter("burrowTime")
   self.segmentResetDistance = config.getParameter("segmentResetDistance")
   self.ceilingDebrisDistance = config.getParameter("ceilingDebrisDistance")
+  self.isOpaque = config.getParameter("isOpaque", false)
+  
+  if not storage.barrierSpaces then
+    setupMaterialSpaces()
+  end
 
   self.state = FSM:new()
   self.state:set(idle)
+  object.setMaterialSpaces()
 
   message.setHandler("burrow", function()
     self.state:set(burrow)
@@ -28,6 +34,9 @@ function idle()
 end
 
 function burrow()
+  if self.isOpaque then
+    object.setMaterialSpaces(storage.barrierSpaces)
+  end
   animator.playSound("movestart")
   animator.playSound("moveloop", -1)
   animator.burstParticleEmitter("floordebris")
@@ -61,5 +70,14 @@ function setBurrowDistance(distance)
 
   if distance > self.ceilingDebrisDistance then
     animator.setParticleEmitterActive("ceilingdebris", true)
+  end
+end
+
+
+function setupMaterialSpaces()
+  local spaces = object.spaces()
+  storage.barrierSpaces = {}
+  for i, space in ipairs(spaces) do
+    table.insert(storage.barrierSpaces, {space, "metamaterial:objectsolid"})
   end
 end

@@ -1,0 +1,66 @@
+{
+  "objectName" : "abyssboss2barrieropaque_es",
+  "colonyTags" : [""],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 250,
+  "description" : "Ambush barrier.",
+  "shortdescription" : "Nyctos Barrier",
+  "race" : "generic",
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "segment.png:tip",
+  "orientations" : [
+    {
+      "dualImage" : "segment.png:tip",
+      "imagePosition" : [-16, -128],
+
+      "metaBoundBox" : [-20, -20, 20, 20],
+      "spaces" : [
+        [ -2, 15 ], [ -1, 15 ], [ 0, 15 ], [ 1, 15 ],
+        [ -2, 14 ], [ -1, 14 ], [ 0, 14 ], [ 1, 14 ],
+        [ -2, 13 ], [ -1, 13 ], [ 0, 13 ], [ 1, 13 ],
+        [ -2, 12 ], [ -1, 12 ], [ 0, 12 ], [ 1, 12 ],
+        [ -2, 11 ], [ -1, 11 ], [ 0, 11 ], [ 1, 11 ],
+        [ -2, 10 ], [ -1, 10 ], [ 0, 10 ], [ 1, 10 ],
+        [ -2, 9 ], [ -1, 9 ], [ 0, 9 ], [ 1, 9 ],
+        [ -2, 8 ], [ -1, 8 ], [ 0, 8 ], [ 1, 8 ],
+        [ -2, 7 ], [ -1, 7 ], [ 0, 7 ], [ 1, 7 ],
+        [ -2, 6 ], [ -1, 6 ], [ 0, 6 ], [ 1, 6 ],
+        [ -2, 5 ], [ -1, 5 ], [ 0, 5 ], [ 1, 5 ],
+        [ -2, 4 ], [ -1, 4 ], [ 0, 4 ], [ 1, 4 ],
+        [ -2, 3 ], [ -1, 3 ], [ 0, 3 ], [ 1, 3 ],
+        [ -2, 2 ], [ -1, 2 ], [ 0, 2 ], [ 1, 2 ],
+        [ -2, 1 ], [ -1, 1 ], [ 0, 1 ], [ 1, 1 ],
+        [ -2, 0 ], [ -1, 0 ], [ 0, 0 ], [ 1, 0 ]
+      ],
+      "anchors" : ["bottom"]
+    }
+  ],
+
+  "animation" : "abyssboss2barrier_es.animation",
+  "animationPosition" : [0, -64],
+  "animationParts" : {
+    "segment1" : "segment.png",
+    "segment2" : "segment.png:body",
+    "segment3" : "segment.png:body"
+  },
+
+  "scripts" : [
+    "abyssboss2barrier_es.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "partStartingDistances" : {
+    "segment1" : 0,
+    "segment2" : -16,
+    "segment3" : -32
+  },
+  
+  "isOpaque" : true,
+  "burrowDistance" : 64,
+  "burrowTime" : 2,
+  "segmentResetDistance" : 48,
+  "ceilingDebrisDistance" : 16
+}

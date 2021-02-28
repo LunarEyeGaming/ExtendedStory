@@ -9,19 +9,19 @@
             "frames" : 6,
             "cycle" : 0.9,
             "mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/gun/antimattercannon_charged.ogg",
+            "properties" : {
+              "persistentSound" : "/sfx/gun/antimattercannon_charged.ogg",
               "persistentSoundRangeMultiplier" : 0.5
-			}
+            }
           },
           "fly" : {
             "frames" : 6,
             "cycle" : 0.6,
             "mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/objects/plasmadisc.ogg",
+            "properties" : {
+              "persistentSound" : "/sfx/objects/plasmadisc.ogg",
               "persistentSoundRangeMultiplier" : 2.0
-			}
+            }
           },
           "firewindup" : {
             "frames" : 8,
@@ -76,7 +76,7 @@
         "properties" : {
           "transformationGroups" : [ "body" ],
           "offset" : [0.0, 0.125],
-		  "fullbright" : true
+          "fullbright" : true
         },
         "partStates" : {
           "body" : {
@@ -159,9 +159,9 @@
             }
           }
         },
-		{
-		  "particle" : "electricalburn"
-		}
+        {
+          "particle" : "electricalburn"
+        }
       ]
     },
     "deathPoof" : {
@@ -206,6 +206,6 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-	"fire" : [ "/sfx/gun/electricrailgun1.ogg" ]
+    "fire" : [ "/sfx/gun/electricrailgun1.ogg" ]
   }
 }

@@ -6551,7 +6551,7 @@
                  "y":1800
                 }, 
                 {
-                 "gid":8945,
+                 "gid":8946,
                  "height":16,
                  "id":4360,
                  "name":"",
@@ -6571,7 +6571,7 @@
                  "y":1992
                 }, 
                 {
-                 "gid":8944,
+                 "gid":8945,
                  "height":16,
                  "id":4361,
                  "name":"",
@@ -8315,7 +8315,7 @@
                  "y":1872
                 }, 
                 {
-                 "gid":8944,
+                 "gid":8945,
                  "height":16,
                  "id":4521,
                  "name":"",
@@ -8335,7 +8335,7 @@
                  "y":1544
                 }, 
                 {
-                 "gid":8943,
+                 "gid":8944,
                  "height":16,
                  "id":4522,
                  "name":"",
@@ -8373,6 +8373,70 @@
                  "width":16,
                  "x":6456,
                  "y":1536
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":4530,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-4, 1], [0, 5] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1608,
+                 "y":2104
+                }, 
+                {
+                 "gid":7961,
+                 "height":16,
+                 "id":4531,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1608,
+                 "y":2096
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":4536,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-4, 1], [0, 5] ], \"detectDuration\" : 0.5, \"detectDamageTeam\" : { \"type\" : \"friendly\" } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1456,
+                 "y":1880
+                }, 
+                {
+                 "gid":7961,
+                 "height":16,
+                 "id":4537,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1456,
+                 "y":1872
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -14424,6 +14488,86 @@
                  "width":0,
                  "x":6464,
                  "y":1528
+                }, 
+                {
+                 "height":0,
+                 "id":4532,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1616,
+                 "y":2096
+                }, 
+                {
+                 "height":0,
+                 "id":4533,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-24,
+                         "y":-24
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1616,
+                 "y":2088
+                }, 
+                {
+                 "height":0,
+                 "id":4534,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-8,
+                         "y":-16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1464,
+                 "y":1872
+                }, 
+                {
+                 "height":0,
+                 "id":4535,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-24,
+                         "y":-24
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1464,
+                 "y":1864
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -14495,7 +14639,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":4526,
+ "nextobjectid":4538,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -14658,7 +14802,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":8902,
+         "firstgid":8903,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-other.json"
         }],
  "tilewidth":8,

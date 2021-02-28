@@ -176,14 +176,6 @@
                         }
                       },
                       {
-                        "title": "timer",
-                        "type": "action",
-                        "name": "timer",
-                        "parameters": {
-                          "time": {"value": 5}
-                        }
-                      },
-                      {
                         "title": "setAnimationState",
                         "type": "action",
                         "name": "setAnimationState",
@@ -613,42 +605,9 @@
                                         "type": "action",
                                         "name": "sendEntityMessage",
                                         "parameters": {
-                                          "arguments": {"value": ["/cinematics/slowfade3.cinematic"]},
+                                          "arguments": {"value": ["lst-abyssboss_es"]},
                                           "entity": {"key": "eachItem"},
-                                          "message": {"value": "playCinematic"}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "title": "timer",
-                                    "type": "action",
-                                    "name": "timer",
-                                    "parameters": {
-                                      "time": {"value": 1.0}
-                                    }
-                                  },
-                                  {
-                                    "title": "each",
-                                    "type": "decorator",
-                                    "name": "each",
-                                    "parameters": {
-                                      "list": {"key": "players"},
-                                      "type": {"value": "entity"}
-                                    },
-                                    "child": {
-                                      "title": "succeeder",
-                                      "type": "decorator",
-                                      "name": "succeeder",
-                                      "parameters": {},
-                                      "child": {
-                                        "title": "sendEntityMessage",
-                                        "type": "action",
-                                        "name": "sendEntityMessage",
-                                        "parameters": {
-                                          "arguments": {"value": ["InstanceWorld:abyssartifactdungeonboss"]},
-                                          "entity": {"key": "eachItem"},
-                                          "message": {"value": "warp"}
+                                          "message": {"value": "applyStatusEffect"}
                                         }
                                       }
                                     }

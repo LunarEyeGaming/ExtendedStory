@@ -45,6 +45,15 @@
         }
       },
       {
+        "title": "sendEntityMessage",
+        "type": "action",
+        "name": "sendEntityMessage",
+        "parameters": {
+          "entity": {"value": "barrier2"},
+          "message": {"value": "burrow"}
+        }
+      },
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",

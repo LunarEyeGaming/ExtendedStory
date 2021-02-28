@@ -12,7 +12,6 @@ end
 
 function LightningSlam:aimVector(inaccuracy)
   local aimAngle = vec2.angle(world.distance(activeItem.ownerAimPosition(), mcontroller.position()))
-  sb.logInfo("%s", world.distance(activeItem.ownerAimPosition(), mcontroller.position()))
   local aimVector = vec2.rotate({1, 0}, aimAngle + sb.nrand(inaccuracy, 0))
   return aimVector
 end

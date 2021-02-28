@@ -11,15 +11,15 @@
     "/scripts/actions/time.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/boss/ancientboss.lua",
-	"/scripts/behavior/bdata.lua"
+    "/scripts/behavior/bdata.lua"
   ],
   "parameters": {
     "shieldCoreCount" : 5,
-	"spawnInterval" : 0.1,
-	"shieldCoreMinX" : -60,
-	"shieldCoreMaxX" : 40,
-	"shieldCoreMinY" : -20,
-	"shieldCoreMaxY" : 20
+    "spawnInterval" : 0.1,
+    "shieldCoreMinX" : -60,
+    "shieldCoreMaxX" : 40,
+    "shieldCoreMinY" : -20,
+    "shieldCoreMaxY" : 20
   },
   "root": {
     "title": "sequence",
@@ -27,7 +27,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -43,15 +43,15 @@
           "time": {"value": 1.2}
         }
       },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "spawn"},
-		  "speed": {"value": 50}
-		}
-	  },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "spawn"},
+          "speed": {"value": 50}
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",
@@ -75,11 +75,11 @@
           "parameters": {},
           "children": [
             {
-			  "title": "inverter",
-			  "type": "decorator",
-			  "name": "inverter",
-			  "parameters": {},
-			  "child": {
+              "title": "inverter",
+              "type": "decorator",
+              "name": "inverter",
+              "parameters": {},
+              "child": {
                 "title": "entityExists",
                 "type": "action",
                 "name": "entityExists",
@@ -87,7 +87,7 @@
                   "entity": {"key": "eachItem"}
                 }
               }
-			},
+            },
             {
               "title": "sub",
               "type": "action",
@@ -115,43 +115,43 @@
           "result": "newShieldCoreCount"
         }
       },
-	  {
-	    "title": "repeater",
-		"type": "decorator",
-		"name": "repeater",
-		"parameters": {
-		  "maxLoops": {"key": "newShieldCoreCount"}
-		},
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
-			  "title": "random",
-			  "type": "action",
-			  "name": "random",
-			  "parameters": {
-			    "max": {"key": "<shieldCoreMaxX>"},
-				"min": {"key": "<shieldCoreMinX>"}
-			  },
-			  "output": {
-			    "number": "spawnX"
-			  }
-			},
-			{
-			  "title": "random",
-			  "type": "action",
-			  "name": "random",
-			  "parameters": {
-			    "max": {"key": "<shieldCoreMaxY>"},
-				"min": {"key": "<shieldCoreMinY>"}
-			  },
-			  "output": {
-			    "number": "spawnY"
-			  }
-			},
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"key": "newShieldCoreCount"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "random",
+              "type": "action",
+              "name": "random",
+              "parameters": {
+                "max": {"key": "<shieldCoreMaxX>"},
+                "min": {"key": "<shieldCoreMinX>"}
+              },
+              "output": {
+                "number": "spawnX"
+              }
+            },
+            {
+              "title": "random",
+              "type": "action",
+              "name": "random",
+              "parameters": {
+                "max": {"key": "<shieldCoreMaxY>"},
+                "min": {"key": "<shieldCoreMinY>"}
+              },
+              "output": {
+                "number": "spawnY"
+              }
+            },
             {
               "title": "offsetPosition",
               "type": "action",
@@ -164,41 +164,41 @@
                 "position": "shieldSpawn"
               }
             },
-	        {
+            {
               "title": "spawnMonster",
               "type": "action",
               "name": "spawnMonster",
               "parameters": {
                 "type": {"value": "ancientfragment"},
-	      	    "position": {"key": "shieldSpawn"}
+                  "position": {"key": "shieldSpawn"}
               },
-	      	  "output": {
-		        "entityId": "shieldId"
-		      }
+                "output": {
+                "entityId": "shieldId"
+              }
             },
-			{
-			  "title": "listPush",
-			  "type": "action",
-			  "name": "listPush",
-			  "parameters": {
-			    "entity": {"key": "shieldId"},
-				"list": {"key": "shieldCores"}
-			  },
-			  "output": {
-			    "list": "shieldCores"
-			  }
-			},
-			{
-			  "title": "timer",
-			  "type": "action",
-			  "name": "timer",
-			  "parameters": {
-			    "time": {"key": "<spawnInterval>"}
-			  }
-			}
-		  ]
-		}
-	  },
+            {
+              "title": "listPush",
+              "type": "action",
+              "name": "listPush",
+              "parameters": {
+                "entity": {"key": "shieldId"},
+                "list": {"key": "shieldCores"}
+              },
+              "output": {
+                "list": "shieldCores"
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"key": "<spawnInterval>"}
+              }
+            }
+          ]
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",

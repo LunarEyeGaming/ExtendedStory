@@ -48,7 +48,7 @@
 	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 2.0,"knockback" : 30}],
 
     "stances" : {
-      "windup1" : {"duration" : 0.1, "armRotation" : 305, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+      "windup1" : {"duration" : 0.1, "armRotation" : -55, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
       "preslash1" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},	  
 	  "fire1" : {"duration" : 0.4,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
 	  "wait1" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 

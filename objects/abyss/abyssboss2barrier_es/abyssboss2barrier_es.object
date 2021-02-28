@@ -17,7 +17,6 @@
       "imagePosition" : [-16, -128],
 
       "metaBoundBox" : [-20, -20, 20, 20],
-      "spaces" : [ [0, 0 ] ],
       "anchors" : ["bottom"]
     }
   ],
@@ -41,6 +40,7 @@
     "segment3" : -32
   },
   
+  "isOpaque" : false,
   "burrowDistance" : 64,
   "burrowTime" : 2,
   "segmentResetDistance" : 48,

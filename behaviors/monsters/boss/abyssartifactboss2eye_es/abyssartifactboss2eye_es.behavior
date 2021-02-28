@@ -10,7 +10,8 @@
     "/scripts/actions/status.lua",
     "/scripts/actions/monster.lua",
     "/scripts/actions/animator.lua",
-    "/scripts/actions/projectiles.lua"
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/abyssartifactboss2_es.lua"
   ],
   "parameters": {},
   "root": {
@@ -141,6 +142,17 @@
                         }
                       },
                       {
+                        "title": "loadUniqueEntity",
+                        "type": "action",
+                        "name": "loadUniqueEntity",
+                        "parameters": {
+                          "uniqueId": {"value": "grabber"}
+                        },
+                        "output": {
+                          "entity": "grabberEnt"
+                        }
+                      },
+                      {
                         "title": "setAggressive",
                         "type": "action",
                         "name": "setAggressive",
@@ -172,12 +184,12 @@
                             },
                             "children": [
                               {
-                                "title": "resourcePercentage",
+                                "title": "capturerHealthPercentage",
                                 "type": "action",
-                                "name": "resourcePercentage",
+                                "name": "capturerHealthPercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.0},
-                                  "resource": {"value": "health"}
+                                  "percentage": {"value": 0.5},
+                                  "capturerId": {"key": "grabberEnt"}
                                 }
                               },
                               {
@@ -195,81 +207,178 @@
                                   "parameters": {},
                                   "children": [
                                     {
-                                      "title": "repeater",
-                                      "type": "decorator",
-                                      "name": "repeater",
-                                      "parameters": {
-                                        "maxLoops": {"value": 5}
-                                      },
-                                      "child": {
-                                        "title": "sequence",
-                                        "type": "composite",
-                                        "name": "sequence",
-                                        "parameters": {},
-                                        "children": [
-                                          {
-                                            "title": "randomize",
-                                            "type": "composite",
-                                            "name": "randomize",
-                                            "parameters": {},
-                                            "children": [
-                                              {
-                                                "title": "cooldown",
-                                                "type": "decorator",
-                                                "name": "cooldown",
-                                                "parameters": {
-                                                  "cooldown": {"value": 5}
-                                                },
-                                                "child": {
-                                                  "title": "abyssartifactboss2eye_es-columnattack",
-                                                  "type": "module",
-                                                  "name": "abyssartifactboss2eye_es-columnattack",
-                                                  "parameters": {}
-                                                }
-                                              },
-                                              {
-                                                "title": "cooldown",
-                                                "type": "decorator",
-                                                "name": "cooldown",
-                                                "parameters": {
-                                                  "cooldown": {"value": 1}
-                                                },
-                                                "child": {
-                                                  "title": "abyssartifactboss2eye_es-explosivechargeattack",
-                                                  "type": "module",
-                                                  "name": "abyssartifactboss2eye_es-explosivechargeattack",
-                                                  "parameters": {}
-                                                }
-                                              },
-                                              {
-                                                "title": "cooldown",
-                                                "type": "decorator",
-                                                "name": "cooldown",
-                                                "parameters": {
-                                                  "cooldown": {"value": 1}
-                                                },
-                                                "child": {
-                                                  "title": "abyssartifactboss2eye_es-closingrayattack",
-                                                  "type": "module",
-                                                  "name": "abyssartifactboss2eye_es-closingrayattack",
-                                                  "parameters": {}
-                                                }
-                                              }
-                                            ]
+                                      "title": "randomize",
+                                      "type": "composite",
+                                      "name": "randomize",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "cooldown",
+                                          "type": "decorator",
+                                          "name": "cooldown",
+                                          "parameters": {
+                                            "cooldown": {"value": 5}
                                           },
-                                          {
-                                            "title": "abyssartifactboss2eye_es-teleport",
+                                          "child": {
+                                            "title": "abyssartifactboss2eye_es-columnattack",
                                             "type": "module",
-                                            "name": "abyssartifactboss2eye_es-teleport",
-                                            "parameters": {
-                                              "teleportDistance": {"value": 10}
-                                            }
+                                            "name": "abyssartifactboss2eye_es-columnattack",
+                                            "parameters": {}
                                           }
-                                        ]
+                                        },
+                                        {
+                                          "title": "cooldown",
+                                          "type": "decorator",
+                                          "name": "cooldown",
+                                          "parameters": {
+                                            "cooldown": {"value": 1}
+                                          },
+                                          "child": {
+                                            "title": "abyssartifactboss2eye_es-explosivechargeattack",
+                                            "type": "module",
+                                            "name": "abyssartifactboss2eye_es-explosivechargeattack",
+                                            "parameters": {}
+                                          }
+                                        },
+                                        {
+                                          "title": "cooldown",
+                                          "type": "decorator",
+                                          "name": "cooldown",
+                                          "parameters": {
+                                            "cooldown": {"value": 1}
+                                          },
+                                          "child": {
+                                            "title": "abyssartifactboss2eye_es-closingrayattack",
+                                            "type": "module",
+                                            "name": "abyssartifactboss2eye_es-closingrayattack",
+                                            "parameters": {}
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "title": "abyssartifactboss2eye_es-teleport",
+                                      "type": "module",
+                                      "name": "abyssartifactboss2eye_es-teleport",
+                                      "parameters": {
+                                        "teleportDistance": {"value": 10},
+                                        "minAngle": {"value": 0.8},
+                                        "maxAngle": {"value": 2.3}
                                       }
                                     }
                                   ]
                                 }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "abyssartifactboss2eye_es-transition",
+                                    "type": "module",
+                                    "name": "abyssartifactboss2eye_es-transition",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "randomize",
+                                          "type": "composite",
+                                          "name": "randomize",
+                                          "parameters": {},
+                                          "children": [
+                                            {
+                                              "title": "cooldown",
+                                              "type": "decorator",
+                                              "name": "cooldown",
+                                              "parameters": {
+                                                "cooldown": {"value": 8}
+                                              },
+                                              "child": {
+                                                "title": "abyssartifactboss2eye_es-columnattack2",
+                                                "type": "module",
+                                                "name": "abyssartifactboss2eye_es-columnattack2",
+                                                "parameters": {}
+                                              }
+                                            },
+                                            {
+                                              "title": "cooldown",
+                                              "type": "decorator",
+                                              "name": "cooldown",
+                                              "parameters": {
+                                                "cooldown": {"value": 1}
+                                              },
+                                              "child": {
+                                                "title": "abyssartifactboss2eye_es-explosivechargeattack2",
+                                                "type": "module",
+                                                "name": "abyssartifactboss2eye_es-explosivechargeattack2",
+                                                "parameters": {}
+                                              }
+                                            },
+                                            {
+                                              "title": "cooldown",
+                                              "type": "decorator",
+                                              "name": "cooldown",
+                                              "parameters": {
+                                                "cooldown": {"value": 1}
+                                              },
+                                              "child": {
+                                                "title": "abyssartifactboss2eye_es-closingrayattack2",
+                                                "type": "module",
+                                                "name": "abyssartifactboss2eye_es-closingrayattack2",
+                                                "parameters": {}
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2eye_es-teleport",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2eye_es-teleport",
+                                          "parameters": {
+                                            "teleportDistance": {"value": 10},
+                                            "minAngle": {"value": 0.8},
+                                            "maxAngle": {"value": 2.3}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           }

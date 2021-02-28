@@ -23,27 +23,27 @@
       // Algorithm: try to do the first three nodes. If that doesn't work, this entire sequence still succeeds, but it skips the last node.
       // Algorithm success status logic: first three fail || last node succeeds
       {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "stop"}
-		},
-		"output": {
-		  "entity": "stopEntity"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "stopEntity"}
-		},
-		"output": {
-		  "position": "stopPos"
-		}
-	  },
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "stop"}
+        },
+        "output": {
+          "entity": "stopEntity"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "stopEntity"}
+        },
+        "output": {
+          "position": "stopPos"
+        }
+      },
       {
         "title": "distance",
         "type": "action",
