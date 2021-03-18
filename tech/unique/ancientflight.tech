@@ -16,12 +16,12 @@
   "animationParts" : {
     "ballGlow" : "ancientflightglow.png",
     "ball" : "ancientflight.png",
-	"up" : "up.png",
-	"right" : "right.png",
-	"down" : "down.png",
-	"left" : "left.png",
-	"energybar" : "energybar.png",
-	"energybarframe" : "energybarframe.png"
+    "up" : "up.png",
+    "right" : "right.png",
+    "down" : "down.png",
+    "left" : "left.png",
+    "energybar" : "energybar.png",
+    "energybarframe" : "energybarframe.png"
   },
 
   "transformedMovementParameters" : {
@@ -31,10 +31,10 @@
     "normalGroundFriction" : 1.5,
     "ambulatingGroundFriction" : 0.2,
     "slopeSlidingFactor" : 3.0,
-	"gravityEnabled" : false,
-	"liquidImpedance" : 0.0,
-	"liquidFriction" : 0.0,
-	"airFriction" : 0.5,
+    "gravityEnabled" : false,
+    "liquidImpedance" : 0.0,
+    "liquidFriction" : 0.0,
+    "airFriction" : 0.5,
 
     "airJumpProfile" : {
       "jumpSpeed" : 16,
@@ -52,6 +52,7 @@
     }
   },
   "fireCooldown" : 0.5,
+  "barDimensions" : [62, 8],
 
   "ballSpeed" : 14,
 

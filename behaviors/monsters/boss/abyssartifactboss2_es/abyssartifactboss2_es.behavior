@@ -15,7 +15,7 @@
   "parameters": {
     "chaseVelocity": [-10, 0],
     "chaseDirection": -1,
-    "coverOffset": [3.9375, 0.3125]
+    "coverOffset": [2.75, 0]
   },
   "root": {
     "title": "Reset",
@@ -250,7 +250,7 @@
                                     "type": "decorator",
                                     "name": "repeater",
                                     "parameters": {
-                                      "maxLoops": {"value": 2},
+                                      "maxLoops": {"value": 1},
                                       "untilSuccess": {"value": false}
                                     },
                                     "child": {
@@ -357,9 +357,23 @@
                                           }
                                         },
                                         {
+                                          "title": "abyssartifactboss2_es-pushbackfield",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-pushbackfield",
+                                          "parameters": {}
+                                        },
+                                        {
                                           "title": "abyssartifactboss2_es-waveattack2",
                                           "type": "module",
                                           "name": "abyssartifactboss2_es-waveattack2",
+                                          "parameters": {
+                                            "coverOffset": {"key": "<coverOffset>"}
+                                          }
+                                        },
+                                        {
+                                          "title": "abyssartifactboss2_es-charge",
+                                          "type": "module",
+                                          "name": "abyssartifactboss2_es-charge",
                                           "parameters": {
                                             "coverOffset": {"key": "<coverOffset>"}
                                           }
@@ -383,7 +397,9 @@
                             "title": "abyssartifactboss2_es-spawneye",
                             "type": "module",
                             "name": "abyssartifactboss2_es-spawneye",
-                            "parameters": {}
+                            "parameters": {
+                              "coverOffset": {"key": "<coverOffset>"}
+                            }
                           }
                         ]
                       }

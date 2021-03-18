@@ -38,7 +38,7 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "visible"},
+          "state": {"value": "cannonTele"},
           "type": {"value": "cover"}
         }
       },
@@ -47,40 +47,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 1.3}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "invisible"},
-          "type": {"value": "cover"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "shellburst"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "shellBurst"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.4}
+          "time": {"value": 1.7}
         }
       },
       {
@@ -118,7 +85,8 @@
                       "offset": {"key": "offset"},
                       "projectileConfig": {"value": {"power": 15, "timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "config", "file": "/projectiles/boss/abyssartifactboss2_es/abyssalcharge_es/spawn.config"}]}},
                       "projectileType": {"value": "orbitalup"},
-                      "scalePower": {"value": true}
+                      "scalePower": {"value": true},
+                      "trackSource": {"value": true}
                     }
                   }
                 ]
@@ -141,6 +109,32 @@
               }
             }
           ]
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "cannonEnd"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "cover"}
         }
       }
     ]

@@ -79,7 +79,7 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "visible"},
+          "state": {"value": "cannonTele"},
           "type": {"value": "cover"}
         }
       },
@@ -88,40 +88,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.6}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "invisible"},
-          "type": {"value": "cover"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "shellburst"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "shellBurst"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.75}
+          "time": {"value": 1.35}
         }
       },
       {
@@ -157,7 +124,33 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 1.0}
+          "time": {"value": 0.6}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "cannonEnd"},
+          "type": {"value": "cover"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "cover"}
         }
       }
     ]

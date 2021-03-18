@@ -29,7 +29,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/melee/blunt_kill_organic1.ogg" ],
-	  "altFire" : [ "/sfx/melee/ixodoomclaw_web2.ogg" ]
+      "altFire" : [ "/sfx/melee/ixodoomclaw_web2.ogg" ]
     }
   },
   "baseOffset" : [0.5, 0.0],
@@ -73,9 +73,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.2,
@@ -93,8 +93,10 @@
   "altAbility" : {
     "elementalConfig" : {
       "poison" : { "name" : "Super Blob", "projectileType" : "rottenblobplayer2", "projectileParameters" : {"speed" : 50}}
-	  },
-	"fireTime" : 3.0
+    },
+    "hidePrimaryMuzzleFlash" : true,
+    "useParticleEmitter" : false,
+    "fireTime" : 3.0
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

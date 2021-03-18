@@ -1,0 +1,31 @@
+{
+  "projectileName" : "abysspushbackfield_es",
+  "image" : "abysspushbackfield.png",
+  "physics" : "laser",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "lightColor" : [51, 41, 71],
+  "fullbright" : true,
+  "actionOnReap" : [],
+  "power" : 0,
+  "speed" : 15,
+  "timeToLive" : 5,
+  "damageKind" : "plasma",
+  "piercing" : true,
+  "damagePoly" : [ [30, 200], [30, -200], [-34.5, 200], [-34.5, -200] ],
+
+  "boundBox" : [3.75, -25, 4.5, 25],
+  "physicsForces" : {
+    "antimovement" : {
+      "type" : "DirectionalForceRegion",
+      "rectRegion" : [3.75, -25, 4.5, 25],
+      "yTargetVelocity" : 0,
+      "xTargetVelocity" : 10,
+      "controlForce" : 1000,
+      "categoryWhitelist" : ["player"]
+    }
+  }
+}

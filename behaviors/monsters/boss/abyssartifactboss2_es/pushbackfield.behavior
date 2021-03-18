@@ -1,0 +1,64 @@
+{
+  "name": "abyssartifactboss2_es-pushbackfield",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/abyssartifactboss2_es.lua"
+  ],
+  "parameters": {
+    "projectileOffset": [150, 0],
+    "chaseDirection": 1
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      // NOTE: This code affects the y-axis of vectors too.
+      {
+        "title": "vecMultiply",
+        "type": "action",
+        "name": "vecMultiply",
+        "parameters": {
+          "first": {"value": [-1, 0]},
+          "number": {"value": "<chaseDirection>"}
+        },
+        "output": {
+          "vector": "aimVector"
+        }
+      },
+      {
+        "title": "vecMultiply",
+        "type": "action",
+        "name": "vecMultiply",
+        "parameters": {
+          "first": {"key": "<projectileOffset>"},
+          "number": {"value": "<chaseDirection>"}
+        },
+        "output": {
+          "vector": "projectileOffset"
+        }
+      },
+      {
+        "title": "spawnProjectile",
+        "type": "action",
+        "name": "spawnProjectile",
+        "parameters": {
+          "aimVector": {"key": "aimVector"},
+          "offset": {"key": "projectileOffset"},
+          "projectileConfig": {"value": {"power": 20}},
+          "projectileType": {"value": "abysspushbackfield_es"},
+          "scalePower": {"value": true}
+        }
+      }
+    ]
+  }
+}

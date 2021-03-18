@@ -23,11 +23,11 @@ function update(dt)
   local entities = world.entityQuery(pos, self.queryDistance, self.queryParameters)
   if entityType == nil then
     sb.logWarn("[Extended Story Debug] Projectile is missing parameter 'monsterType'")
-	projectile.die()
+    projectile.die()
   else
     if detectionLimit(entities) == true then
-	  projectile.die()
-	end
+      projectile.die()
+    end
   end
 end
 
@@ -35,8 +35,8 @@ function detectionLimit(entities)
   validEntities = 0
   for _, entity in pairs(entities) do
     if world.monsterType(entity) == entityType then
-	  validEntities = validEntities + 1
-	end
+      validEntities = validEntities + 1
+    end
   end
   if validEntities >= self.entityLimit then
     return true

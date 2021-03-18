@@ -8,12 +8,12 @@
   "speed" : 0,
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "supervoidgap",
-	  "offset" : [0, 40],
-	  "direction" : [0, -1],
-	  "inheritDamageFactor" : 1
-	}
+      "action" : "projectile",
+      "type" : "supervoidgap",
+      "offset" : [0, 40],
+      "direction" : [0, -1],
+      "inheritDamageFactor" : 1
+    }
   ],
   "damageKind" : "fire",
   "damageType" : "nodamage"

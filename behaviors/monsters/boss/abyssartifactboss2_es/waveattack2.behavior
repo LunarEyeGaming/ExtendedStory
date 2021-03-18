@@ -108,19 +108,11 @@
           "type": "action",
           "name": "setAnimationState",
           "parameters": {
-            "state": {"value": "visible"},
+            "state": {"value": "mouthClosing"},
             "type": {"value": "cover"}
           }
         },
-        {
-          "title": "timer",
-          "type": "action",
-          "name": "timer",
-          "parameters": {
-            "time": {"value": 0.25}
-          }
-        },
-        {
+        /*{
           "title": "setAnimationState",
           "type": "action",
           "name": "setAnimationState",
@@ -144,15 +136,7 @@
           "parameters": {
             "sound": {"value": "shellBurst"}
           }
-        },
-        {
-          "title": "timer",
-          "type": "action",
-          "name": "timer",
-          "parameters": {
-            "time": {"value": 0.25}
-          }
-        },
+        },*/
         {
           "title": "spawnProjectile",
           "type": "action",
@@ -162,7 +146,8 @@
             "offset": {"key": "offset"},
             "projectileConfig": {"value": {"power": 20}},
             "projectileType": {"value": "abyssalwavespawner_es"},
-            "scalePower": {"value": true}
+            "scalePower": {"value": true},
+            "trackSource": {"value": true}
           }
         },
         {
@@ -170,7 +155,16 @@
           "type": "action",
           "name": "timer",
           "parameters": {
-            "time": {"value": 0.5}
+            "time": {"value": 1.0}
+          }
+        },
+        {
+          "title": "setAnimationState",
+          "type": "action",
+          "name": "setAnimationState",
+          "parameters": {
+            "state": {"value": "invisible"},
+            "type": {"value": "cover"}
           }
         }
       ]

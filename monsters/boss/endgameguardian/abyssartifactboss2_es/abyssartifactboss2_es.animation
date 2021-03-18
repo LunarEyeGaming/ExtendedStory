@@ -16,8 +16,56 @@
         "priority" : 1,
         "default" : "invisible",
         "states" : {
-          "visible" : {},
-          "invisible" : {}
+          "invisible" : {},
+          "mouthClosed" : {},
+          "mouthOpening" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "mouthOpen"
+          },
+          "preroar" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "roar"
+          },
+          "mouthOpen" : {},
+          "roar" : {
+            "frames" : 2,
+            "cycle" : 0.05,
+            "mode" : "loop"
+          },
+          "mouthClosing" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "mouthClosed"
+          },
+          "cannonTele" : {
+            "frames" : 7,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "cannonIdle"
+          },
+          "cannonEnd" : {
+            "frames" : 7,
+            "cycle" : 0.4,
+            "mode" : "end"
+          },
+          "slimeTele" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "slimeIdle"
+          },
+          "slimeEnd" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "end"
+          },
+          "cannonIdle" : {},
+          "slimeIdle" : {}
         }
       },
       "touchdamage" : {
@@ -220,14 +268,69 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "offset" : [3.9375, 0.3125],
+          "offset" : [2.25, 0.0],
           "transformationGroups" : [ "body", "cover" ]
         },
         "partStates" : {
           "cover" : {
-            "visible" : {
+            "mouthClosed" : {
               "properties" : {
-                "image" : "<partImage>"
+                "image" : "<partImage>:mouthClosed.<frame>"
+              }
+            },
+            "mouthOpening" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpening.<frame>"
+              }
+            },
+            "preroar" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpening.<frame>"
+              }
+            },
+            "mouthOpen" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpen.<frame>"
+              }
+            },
+            "roar" : {
+              "properties" : {
+                "image" : "<partImage>:roar.<frame>"
+              }
+            },
+            "mouthClosing" : {
+              "properties" : {
+                "image" : "<partImage>:mouthClosing.<frame>"
+              }
+            },
+            "cannonTele" : {
+              "properties" : {
+                "image" : "<partImage>:cannonTele.<frame>"
+              }
+            },
+            "cannonIdle" : {
+              "properties" : {
+                "image" : "<partImage>:cannonIdle.<frame>"
+              }
+            },
+            "cannonEnd" : {
+              "properties" : {
+                "image" : "<partImage>:cannonEnd.<frame>"
+              }
+            },
+            "slimeTele" : {
+              "properties" : {
+                "image" : "<partImage>:slimeTele.<frame>"
+              }
+            },
+            "slimeIdle" : {
+              "properties" : {
+                "image" : "<partImage>:slimeIdle.<frame>"
+              }
+            },
+            "slimeEnd" : {
+              "properties" : {
+                "image" : "<partImage>:slimeEnd.<frame>"
               }
             }
           }
@@ -242,9 +345,64 @@
         },
         "partStates" : {
           "cover" : {
-            "visible" : {
+            "mouthClosed" : {
               "properties" : {
-                "image" : "<partImage>"
+                "image" : "<partImage>:mouthClosed.<frame>"
+              }
+            },
+            "mouthOpening" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpening.<frame>"
+              }
+            },
+            "preroar" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpening.<frame>"
+              }
+            },
+            "mouthOpen" : {
+              "properties" : {
+                "image" : "<partImage>:mouthOpen.<frame>"
+              }
+            },
+            "roar" : {
+              "properties" : {
+                "image" : "<partImage>:roar.<frame>"
+              }
+            },
+            "mouthClosing" : {
+              "properties" : {
+                "image" : "<partImage>:mouthClosing.<frame>"
+              }
+            },
+            "cannonTele" : {
+              "properties" : {
+                "image" : "<partImage>:cannonTele.<frame>"
+              }
+            },
+            "cannonIdle" : {
+              "properties" : {
+                "image" : "<partImage>:cannonIdle.<frame>"
+              }
+            },
+            "cannonEnd" : {
+              "properties" : {
+                "image" : "<partImage>:cannonEnd.<frame>"
+              }
+            },
+            "slimeTele" : {
+              "properties" : {
+                "image" : "<partImage>:slimeTele.<frame>"
+              }
+            },
+            "slimeIdle" : {
+              "properties" : {
+                "image" : "<partImage>:slimeIdle.<frame>"
+              }
+            },
+            "slimeEnd" : {
+              "properties" : {
+                "image" : "<partImage>:slimeEnd.<frame>"
               }
             }
           }
@@ -262,6 +420,13 @@
               }
             }
           }
+        }
+      },
+      "darkness" : {
+        "properties" : {
+          "anchorPart" : "segment3",
+          "image" : "<partImage>",
+          "offset" : [-105.0625, 0]
         }
       }
     }

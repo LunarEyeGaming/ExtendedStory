@@ -82,7 +82,7 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "visible"},
+          "state": {"value": "slimeIdle"},
           "type": {"value": "cover"}
         }
       },
@@ -94,7 +94,7 @@
           "time": {"value": 2.5}
         }
       },
-      {
+      /*{
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -118,7 +118,7 @@
         "parameters": {
           "sound": {"value": "shellBurst"}
         }
-      },
+      },*/
       {
         "title": "offsetPosition",
         "type": "action",

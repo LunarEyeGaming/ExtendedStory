@@ -86,24 +86,24 @@
             "speed" : -1.0
           }
         },
-		{
+        {
           "name" : "action-projectile",
-		  "cooldown" : 1,
+          "cooldown" : 1,
           "parameters" : {
             "projectileCount" : 1,
             "projectileType" : "orbitalup",
             "projectileParameters" : {
               "power" : 30,
-			  "timeToLive" : 0,
-			  "speed" : 0,
-			  "actionOnReap" : [
-			    {
-				  "action" : "projectile",
-				  "type" : "fireelemental_fireballwindup",
-				  "offsetRange" : [-2, -2, 2, 2],
-				  "inheritDamageFactor" : 1
-				}
-			  ]
+              "timeToLive" : 0,
+              "speed" : 0,
+              "actionOnReap" : [
+                {
+                  "action" : "projectile",
+                  "type" : "fireelemental_fireballwindup",
+                  "offsetRange" : [-2, -2, 2, 2],
+                  "inheritDamageFactor" : 1
+                }
+              ]
             },
             "aimDirection" : [0, 0],
             "inaccuracy" : 0,

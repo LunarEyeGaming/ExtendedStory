@@ -18,6 +18,7 @@ function TeslaStream:init()
     end
   end
   self.arcCooldownTimer = self.arcCooldownTime
+  self.impactSoundTimer = self.impactSoundTime
 end
 
 function TeslaStream:update(dt, fireMode, shiftHeld)
@@ -31,6 +32,7 @@ function TeslaStream:update(dt, fireMode, shiftHeld)
     self:setState(self.fire)
   end
   self.arcCooldownTimer = math.max(0, self.arcCooldownTimer - dt)
+  self.impactSoundTimer = math.max(self.impactSoundTimer - self.dt, 0)
 end
 
 function TeslaStream:fire()
@@ -54,6 +56,12 @@ function TeslaStream:fire()
       animator.setParticleEmitterActive("beamCollision", true)
       animator.resetTransformationGroup("beamEnd")
       animator.translateTransformationGroup("beamEnd", {beamLength, 0})
+
+      if self.impactSoundTimer == 0 then
+        animator.setSoundPosition("beamImpact", {beamLength, 0})
+        animator.playSound("beamImpact")
+        self.impactSoundTimer = self.impactSoundTime
+      end
     else
       animator.setParticleEmitterActive("beamCollision", false)
     end

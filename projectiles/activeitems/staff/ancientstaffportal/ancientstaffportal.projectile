@@ -1,7 +1,7 @@
 {
   "projectileName" : "ancientstaffportal",
   "physics" : "hover",
-  "timeToLive" : 6.35,
+  "timeToLive" : 6.7,
   "image" : "ancientstaffportal.png",
   "animationCycle" : 0.35,
   "lightColor" : [90, 60, 110],
@@ -16,7 +16,7 @@
       "options" : [ "/sfx/melee/astraltear2.ogg" ]
     },
     {
-      "time" : 6,
+      "time" : 6.35,
       "repeat" : false,
       "action" : "sound",
       "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]

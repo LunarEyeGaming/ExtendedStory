@@ -1,8 +1,8 @@
 {
   "type" : "abyssartifactboss2_es",
-  "shortdescription" : "Nyctos",
+  "shortdescription" : "",
   "categories" : [ "abyssartifactboss2_es" ],
-  "parts" : [ "body", "cover" ],
+  "parts" : [ "body", "cover", "darkness" ],
 
   "animation" : "abyssartifactboss2_es.animation",
   "dropPools" : [
@@ -21,23 +21,6 @@
     "behavior" : "abyssartifactboss2_es",
 
     "behaviorConfig" : { },
-
-    "forceRegions" : {
-      "left" : {
-        "type" : "DirectionalForceRegion",
-        "rectRegion" : [-32, -5, -2, 25],
-        "xTargetVelocity" : 100,
-        "controlForce" : 80,
-        "categoryWhitelist" : [ "player" ]
-      },
-      "right" : {
-        "type" : "DirectionalForceRegion",
-        "rectRegion" : [2, -5, 32, 25],
-        "xTargetVelocity" : -100,
-        "controlForce" : 80,
-        "categoryWhitelist" : [ "player" ]
-      }
-    },
 
     "damageParts" : {
       "touchdamage" : {

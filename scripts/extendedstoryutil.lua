@@ -2,7 +2,7 @@
 
 -- Certain scripts may not work under specific script contexts due to some tables being unavailable. The legend below is intended to help in knowing when using each function is appropriate.
 -- * = works under any script context
--- # = requires certain Starbound tables. See each table's documentation for more details at Starbound\doc\lua\ or https://starbounder.org/Modding:Lua/Tables
+-- # = requires certain Starbound tables. See each table's documentation for more details at Starbound/doc/lua/ or https://starbounder.org/Modding:Lua/Tables
 
 -- #root
 function getAllElementalResistances(blacklist)
@@ -22,6 +22,7 @@ function getAllElementalResistances(blacklist)
 end
 
 -- Removes all keys in t that are in the blacklist
+-- *
 function blacklistTableByKey(t, blacklist)
   for _, key in pairs(blacklist) do
     t[key] = nil

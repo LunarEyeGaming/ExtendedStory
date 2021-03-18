@@ -8,15 +8,14 @@
       "projectile" : "invisibleprojectile",
       "parameters" : {
         "power" : 0,
-		"actionOnReap" : [
-		  {
-		    "action" : "explosion",
-			"foregroundRadius" : 4,
-			"backgroundRadius" : 0,
-			"explosiveDamageAmount" : 12,
-			"delaySteps" : 2
-		  }
-		]
+        "onlyHitTerrain" : true,
+        "actionOnReap" : [
+          {
+            "action" : "projectile",
+            "type" : "worldrot_es",
+            "offset" : [0, -1]
+          }
+        ]
       },
       "velocity" : [0, -1000],
       "ratePerX" : 0.01,

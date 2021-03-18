@@ -3,7 +3,7 @@
   "physics" : "laser",
   "bounces" : 1,
   "speed" : 1,
-  "acceleration" : 50,
+  "acceleration" : 35,
   "timeToLive" : 8,
   "damageKindImage" : "icon.png",
   "lightColor" : [128, 0, 128],
@@ -18,33 +18,33 @@
     {
       "time" : 0,
       "repeat" : false,
-	  "action" : "particle",
-	  "specification" : {
-		"type" : "textured",
-		"image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
-		"position" : [0, 0],
-		"fullbright" : true,
-		"layer" : "middle",
-		"destructionAction" : "fade",
-		"timeToLive" : 0,
-		"destructionTime" : 0.25
-	  }
-	}
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "middle",
+        "destructionAction" : "fade",
+        "timeToLive" : 0,
+        "destructionTime" : 0.25
+      }
+    }
   ],
   "actionOnReap" : [
     {
-	  "action" : "particle",
-	  "specification" : {
-		"type" : "textured",
-		"image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
-		"position" : [0, 0],
-		"fullbright" : true,
-		"layer" : "middle",
-		"destructionAction" : "fade",
-		"timeToLive" : 0,
-		"destructionTime" : 0.25
-	  }
-	}
+      "action" : "particle",
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/boss/supervoidboss/supervoidgaps/supervoidgaps.png?setcolor=ffffff",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "middle",
+        "destructionAction" : "fade",
+        "timeToLive" : 0,
+        "destructionTime" : 0.25
+      }
+    }
   ],
   "damageKind" : "plasma"
 }
