@@ -12,25 +12,25 @@
   "timeToLive" : 5,
   "periodicActions" : [
     {
-	  "time" : 0.01,
-	  "action" : "projectile",
-	  "type" : "orbitalup",
-	  "inheritDamageFactor" : 1,
-	  "direction" : [0, -1],
-	  "config" : {
-	    "speed" : 800,
-		"onlyHitTerrain" : true,
-		"actionOnReap" : [
-		  {
-		    "action" : "projectile",
-			"type" : "ruinseedshockwavefire_es",
-			"direction" : [1, 0],
-			"offset" : [0, 1.375],
-	        "inheritDamageFactor" : 1
-		  }
-		]
-	  }
-	}
+      "time" : 0.01,
+      "action" : "projectile",
+      "type" : "orbitalup",
+      "inheritDamageFactor" : 1,
+      "direction" : [0, -1],
+      "config" : {
+        "speed" : 800,
+        "onlyHitTerrain" : true,
+        "actionOnReap" : [
+          {
+            "action" : "projectile",
+            "type" : "ruinseedshockwavefire_es",
+            "direction" : [1, 0],
+            "offset" : [0, 1.0],
+            "inheritDamageFactor" : 1
+          }
+        ]
+      }
+    }
   ],
   "damageKind" : "plasmabullet",
   "onlyHitTerrain" : true

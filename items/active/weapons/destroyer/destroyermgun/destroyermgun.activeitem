@@ -23,9 +23,9 @@
   },
   "animationCustom" : {
     "sounds" : {
-	  "altFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ]
-	},
-	"particleEmitters" : {
+      "altFire" : [ "/sfx/gun/plasma_shotgun3.ogg" ]
+    },
+    "particleEmitters" : {
       "altMuzzleFlash" : {
         "active" : false,
         "transformationGroups" : ["muzzle"],
@@ -49,9 +49,9 @@
     "name" : "NAN",
     "scripts" : ["/items/active/weapons/destroyer/destroyermgun/destroyermgunfire.lua"],
     "class" : "ChargeFire",
-	
-	"fireTimer" : 0.1,
-	
+    
+    "fireTimer" : 0.1,
+    
     "chargeLevels" : [
       {
         "time" : 0,
@@ -69,12 +69,12 @@
         "time" : 0.9999,
         "energyCost" : 0,
         "cooldown" : 0.1,
-        "projectileType" : "explosivelasershot",
+        "projectileType" : "destroyerplasmashotplayer_es",
         "projectileCount" : 1,
         "spreadAngle" : 0,
         "projectileParameters" : {"speed" : 60},
         "inaccuracy" : 0.06,
-        "baseDamage" : 2,
+        "baseDamage" : 3,
         "fireSound" : "fire2"
       }
     ],
@@ -121,8 +121,8 @@
     "elementalConfig" : {
       "physical" : { "name" : "Doomcannon Spread", "projectileType" : "doomshot", "projectileCount" : 5, "fireTime" : 0.5, "inaccuracy" : 0.08, "projectileParameters" : {}}
     },
-    "energyUsage" : 20,
-	"baseDps" : 20
+    "energyUsage" : 30,
+    "baseDps" : 20
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -101,7 +101,9 @@ function triggerProjectiles()
   end
   
   for i, projectile in ipairs(storage.activeProjectiles) do
-    world.callScriptedEntity(projectile, "trigger", activeItem.ownerAimPosition())
+    if world.entityExists(projectile) then
+      world.callScriptedEntity(projectile, "trigger", activeItem.ownerAimPosition())
+    end
   end
 end
 

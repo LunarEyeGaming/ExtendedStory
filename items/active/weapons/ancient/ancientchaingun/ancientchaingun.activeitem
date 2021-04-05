@@ -9,7 +9,7 @@
   "category" : "Ancient Chaos Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
-  "level" : 10,
+  "level" : 8,
   
   "critChance" : 4,
   "critBonus" : 10,
@@ -19,16 +19,16 @@
   "animation" : "ancientchaingun.animation",
   "animationParts" : {
     "butt" : "",
-	"beamorigin" : "rainbowmuzzle.png",
+    "beamorigin" : "rainbowmuzzle.png",
     "middle" : "ancientchaingunnew.png",
-	"middleFullbright" : "ancientchaingunnewfullbright.png",
+    "middleFullbright" : "ancientchaingunnewfullbright.png",
     "barrel" : "",
     "muzzleFlash" : "ancientmuzzleflash.png"
   },
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/ancientchaingun_fire.ogg"],
-	  "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart.ogg" ],
+      "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart.ogg" ],
       "fireLoop" : [ "/sfx/gun/ancientchaingun_beamloop.ogg" ],
       "fireEnd" : [ "/sfx/gun/ancientchaingun_beamstop.ogg" ],
       "beamImpact" : [ "/sfx/gun/ancientchaingun_beamimpact.ogg" ]
@@ -42,7 +42,7 @@
         "particles" : [
           { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] },
           { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] },
-		  { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] }
+          { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] }
         ]
       }
     },
@@ -65,7 +65,7 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.01,
+    "fireTime" : 0.03,
     "baseDps" : 42.0,
     "energyUsage" : 175,
     "inaccuracy" : 0.08,
@@ -113,7 +113,7 @@
   "altAbility" : {
     "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
     "class" : "BeamFire",
-	"name" : "Ancient Laser",
+    "name" : "Ancient Laser",
 
     "fireTime" : 0.2,
     "baseDps" : 15,
@@ -165,7 +165,7 @@
 
         "animationStates" : {
           "middle" : "windup",
-		  "beamorigin" : "fire"
+          "beamorigin" : "fire"
         }
       },
       "cooldown" : {
@@ -179,7 +179,7 @@
 
         "animationStates" : {
           "middle" : "winddown",
-		  "beamorigin" : "idle"
+          "beamorigin" : "idle"
         }
       }
     }

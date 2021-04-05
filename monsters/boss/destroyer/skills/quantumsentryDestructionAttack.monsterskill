@@ -7,29 +7,25 @@
     "scripts" : [ "/monsters/boss/destroyer/skills/quantumsentryDestructionAttack.lua" ],
 
     "quantumsentryDestructionAttack" : {
-      "skillTime": 5,
+      "skillTime": 7.5,
       "bobTime" : 2,
       "bobHeight" : 3,
 
       "projectileOffset" : [0, 0],
-      "fireInterval" : 1.0,
+      "fireInterval" : 1.5,
       "projectile" : {
-        "type" : "redplasmashot",
+        "type" : "delayprojectile",
         "config" : {
-          "speed" : 40,
-          "power" : 1,
-          "periodicActions" : [
+          "speed" : 0,
+          "power" : 30,
+          "timeToLive" : 0,
+          "actionOnReap" : [
             {
-              "time" : 0,
-              "repeat" : false,
-              "action" : "sound",
-              "options" : [ "/sfx/gun/supremeioncannon_altfire.ogg" ]
-            },
-			{
-			  "time" : 0.05,
-			  "action" : "config",
-			  "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
-			}
+              "action" : "projectile",
+              "type" : "quantumsentryshot_es",
+              "inheritDamageFactor" : 1,
+              "direction" : [0, -1]
+            }
           ]
         }
       }

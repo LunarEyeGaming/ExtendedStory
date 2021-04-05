@@ -3,72 +3,55 @@
     "stateTypes" : {
       "movement" : {
         "priority" : 0,
-        "default" : "closed",
+        "default" : "idle",
 
         "states" : {
-          "closed" : {
-            "frames" : 1,
-            "cycle" : 3,
-            "mode" : "transition",
-			"transition" : "opened"
-          },
-		  "opened" : {
-		    "frames" : 7,
-			"cycle" : 1,
-			"mode" : "transition",
-			"transition" : "closed"
-		  }
+          "idle" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "loop"
+          }
         }
       },
-	  "sfx" : {
-	    "priority" : 0,
-		"default" : "idle",
-		
-		"states" : {
-		  "idle" : {
-		    "properties" : {
-			  "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg",
+      "sfx" : {
+        "priority" : 0,
+        "default" : "idle",
+        
+        "states" : {
+          "idle" : {
+            "properties" : {
+              "persistentSound" : "/sfx/tech/tech_particlethrust.ogg",
               "persistentSoundRangeMultiplier" : 0.75
-			}
-		  }
-		}
-	  }
+            }
+          }
+        }
+      }
     },
 
     "parts" : {
       "ufo" : {
-	    "properties" : {
-		},
+        "properties" : {
+        },
         "partStates" : {
           "movement" : {
-            "closed" : {
+            "idle" : {
               "properties" : {
-                "image" : "<partImage>:closed.<frame>"
-              }
-            },
-			"opened" : {
-              "properties" : {
-                "image" : "<partImage>:opened.<frame>"
+                "image" : "<partImage>:idle.<frame>"
               }
             }
           }
         }
       },
-	  "ufofullbright" : {
-	    "properties" : {
-		  "fullbright" : true,
-		  "zLevel" : 20
-		},
+      "ufofullbright" : {
+        "properties" : {
+          "fullbright" : true,
+          "zLevel" : 20
+        },
         "partStates" : {
           "movement" : {
-            "closed" : {
+            "idle" : {
               "properties" : {
-                "image" : "<partImage>:closed.<frame>"
-              }
-            },
-			"opened" : {
-              "properties" : {
-                "image" : "<partImage>:opened.<frame>"
+                "image" : "<partImage>:idle.<frame>"
               }
             }
           }

@@ -16,7 +16,7 @@
   
   "radioMessagesOnPickup" : [ "pickupbow" ],
 
-  "level" : 10,
+  "level" : 8,
 
   "animation" : "/items/active/weapons/bow/energybow.animation",
   "animationParts" : {
@@ -53,8 +53,9 @@
     "drawSpeedMultiplier" : "constant",
     "projectileType" : "ancientarrow",
     "powerProjectileType" : "chargedancientarrow",
+    "energyPerShot" : 50,
     "projectileParameters" : {
-      "power" : 20.5,
+      "power" : 8,
       "speed" : 90
     }
   },
@@ -67,7 +68,7 @@
     "projectileType" : "ancienttargetarrow_es",
     "powerProjectileType" : "ancientsentryarrowtele_es",
     "projectileParameters" : {
-      "power" : 20.5,
+      "power" : 6,
       "speed" : 50
     }
   },

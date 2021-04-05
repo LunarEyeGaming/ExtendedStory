@@ -57,50 +57,44 @@
 
     "projectileType" : "standardbullet",
     "projectileParameters" : {
-	  "speed" : 800,
-	  "timeToLive" : 1,
-	  "damageTeam" : { "type" : "friendly" },
-	  "power" : 0,
-	  "piercing" : true,
-	  "bounces" : 0,
-	  "actionOnCollide" : [
-	    {
-		  "action" : "sound",
-		  "options" : [ "/sfx/projectiles/bullet_ricochet1.ogg", "/sfx/projectiles/bullet_ricochet2.ogg", "/sfx/projectiles/bullet_ricochet3.ogg", "/sfx/projectiles/bullet_ricochet4.ogg", "/sfx/projectiles/bullet_ricochet5.ogg", "/sfx/projectiles/bullet_ricochet6.ogg", "/sfx/projectiles/bullet_ricochet7.ogg", "/sfx/projectiles/bullet_ricochet8.ogg", "/sfx/projectiles/bullet_ricochet9.ogg", "/sfx/projectiles/bullet_ricochet10.ogg", "/sfx/projectiles/bullet_ricochet11.ogg", "/sfx/projectiles/bullet_ricochet12.ogg", "/sfx/projectiles/bullet_ricochet13.ogg"]
-		}
-	  ],
-	  "periodicActions" : [
-	    {
-		  "time" : 0.01,
-		  "repeat" : true,
-		  "action" : "projectile",
-		  "type" : "ancientrailgunshot",
-		  "config" : {"knockback" : 20, "speed" : 0}
-		}
-	  ],
-	  "actionOnReap" : [
-	    {
-		  "action" : "loop",
-		  "count" : 3,
-		  "body" : [
-		    {
-			  "action" : "projectile",
-			  "type" : "laserburst",
-			  "offsetRange" : [-3, -3, 3, 3],
-			  "config" : {
-			    "periodicActions" : [
-				  {
-				    "time" : 0,
-					"repeat" : false,
-					"action" : "sound",
-					"options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
-				  }
-				]
-			  }
-			}
-		  ]
-		}
-	  ]
+      "speed" : 800,
+      "timeToLive" : 1,
+      "damageTeam" : { "type" : "friendly" },
+      "power" : 0,
+      "piercing" : true,
+      "bounces" : 0,
+      "periodicActions" : [
+        {
+          "time" : 0.01,
+          "repeat" : true,
+          "action" : "projectile",
+          "type" : "ancientrailgunshot",
+          "config" : {"knockback" : 20, "speed" : 0}
+        }
+      ],
+      "actionOnReap" : [
+        {
+          "action" : "loop",
+          "count" : 3,
+          "body" : [
+            {
+              "action" : "projectile",
+              "type" : "laserburst",
+              "offsetRange" : [-3, -3, 3, 3],
+              "config" : {
+                "periodicActions" : [
+                  {
+                    "time" : 0,
+                    "repeat" : false,
+                    "action" : "sound",
+                    "options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
 
     "stances" : {
@@ -141,52 +135,53 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : { 
-	    "projectileType" : "ancientlasershothoming", "name" : "Homing Shot",
+        "projectileType" : "ancientlasershothoming", "name" : "Homing Shot",
         "projectileParameters" : {
           "knockback" : 20,
-	      "speed" : 100,
-		  "timeToLive" : 5,
-	      "bounces" : 0,
-		  "piercing" : false,
-	      "actionOnCollide" : [
-	        {
-		      "action" : "sound",
-		      "options" : [ "/sfx/projectiles/bullet_ricochet1.ogg", "/sfx/projectiles/bullet_ricochet2.ogg", "/sfx/projectiles/bullet_ricochet3.ogg", "/sfx/projectiles/bullet_ricochet4.ogg", "/sfx/projectiles/bullet_ricochet5.ogg", "/sfx/projectiles/bullet_ricochet6.ogg", "/sfx/projectiles/bullet_ricochet7.ogg", "/sfx/projectiles/bullet_ricochet8.ogg", "/sfx/projectiles/bullet_ricochet9.ogg", "/sfx/projectiles/bullet_ricochet10.ogg", "/sfx/projectiles/bullet_ricochet11.ogg", "/sfx/projectiles/bullet_ricochet12.ogg", "/sfx/projectiles/bullet_ricochet13.ogg"]
-		    }
-	      ],
-	      "periodicActions" : [
-	        {
-		      "time" : 0.01,
-		      "repeat" : true,
-		      "action" : "projectile",
-		      "type" : "ancientlasershot",
-		      "config" : {"speed" : 0, "actionOnReap" : [], "timeToLive" : 1, "periodicActions" : []}
-	    	}
-	      ],
-	      "actionOnReap" : [
-	        {
-	    	  "action" : "loop",
-		      "count" : 3,
-	    	  "body" : [
-		        {
-		    	  "action" : "projectile",
-			      "type" : "orbitalup",
-			      "offsetRange" : [-3, -3, 3, 3],
-			      "config" : {
-			        "timeToLive" : 0,
-					"speed" : 0,
-			        "piercing" : true,
-			        "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/laserburst/laserburst.config"}]
-			      }
-			    }
-		      ]
-		    }
-	      ]
+          "speed" : 100,
+          "timeToLive" : 5,
+          "bounces" : 0,
+          "piercing" : false,
+          "actionOnCollide" : [
+            {
+              "action" : "sound",
+              "options" : [ "/sfx/projectiles/bullet_ricochet1.ogg", "/sfx/projectiles/bullet_ricochet2.ogg", "/sfx/projectiles/bullet_ricochet3.ogg", "/sfx/projectiles/bullet_ricochet4.ogg", "/sfx/projectiles/bullet_ricochet5.ogg", "/sfx/projectiles/bullet_ricochet6.ogg", "/sfx/projectiles/bullet_ricochet7.ogg", "/sfx/projectiles/bullet_ricochet8.ogg", "/sfx/projectiles/bullet_ricochet9.ogg", "/sfx/projectiles/bullet_ricochet10.ogg", "/sfx/projectiles/bullet_ricochet11.ogg", "/sfx/projectiles/bullet_ricochet12.ogg", "/sfx/projectiles/bullet_ricochet13.ogg"]
+            }
+          ],
+          "periodicActions" : [
+            {
+              "time" : 0.01,
+              "repeat" : true,
+              "action" : "projectile",
+              "type" : "ancientlasershot",
+              "config" : {"speed" : 0, "actionOnReap" : [], "timeToLive" : 1, "periodicActions" : []}
+            }
+          ],
+          "actionOnReap" : [
+            {
+              "action" : "loop",
+              "count" : 3,
+              "body" : [
+                {
+                  "action" : "projectile",
+                  "type" : "orbitalup",
+                  "offsetRange" : [-3, -3, 3, 3],
+                  "config" : {
+                    "timeToLive" : 0,
+                    "speed" : 0,
+                    "piercing" : true,
+                    "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/laserburst/laserburst.config"}]
+                  }
+                }
+              ]
+            }
+          ]
         }
-	  }
+      }
     },
     "energyUsage" : 25,
-	"fireTime" : 2.0
+    "fireTime" : 2.0,
+    "useParticleEmitter" : false
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

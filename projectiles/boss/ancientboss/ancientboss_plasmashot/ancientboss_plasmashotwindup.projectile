@@ -19,10 +19,10 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [164, 81, 132],
+            "color" : [164, 81, 196],
             "fade" : 0.9,
             "approach" : [30, 30],
-            "light" : [160, 40, 40],
+            "light" : [160, 40, 160],
             "timeToLive" : 0.5,
             "layer" : "middle",
             "variance" : {
@@ -50,11 +50,11 @@
       {
         "action" : "projectile",
         "inheritDamageFactor" : 1,
-        "type" : "redpulsecannonexplosion"
+        "type" : "ancientbossplasmashotexplosion_es"
       },
       {
         "action" : "light",
-        "color" : "red"
+        "color" : "blue"
       }
     ]
   },

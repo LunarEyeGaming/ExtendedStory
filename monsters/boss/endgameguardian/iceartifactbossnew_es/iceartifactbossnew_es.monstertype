@@ -22,7 +22,7 @@
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
     "scale" : 1.0,
-	"renderLayer" : "Projectile-20",
+    "renderLayer" : "Projectile-20",
 
     "movementSettings" : {
       "gravityEnabled" : false,
@@ -48,7 +48,6 @@
     "damageParts" : {
       "beam" : {
         "damage" : 25,
-		"damageTeam" : 0,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma"
@@ -133,12 +132,12 @@
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
         },
-		"fireResistance" : {
-		  "baseValue" : -0.5
-		},
-		"iceResistance" : {
-		  "baseValue" : 1.0
-		}
+        "fireResistance" : {
+          "baseValue" : -0.5
+        },
+        "iceResistance" : {
+          "baseValue" : 1.0
+        }
       },
 
       "resources" : {

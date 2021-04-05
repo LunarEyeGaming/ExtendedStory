@@ -1,8 +1,7 @@
 {
   "input" : [
     { "item" : "ancientfragment", "count" : 40 },
-	{ "item" : "solariumstar", "count" : 10 },
-	{ "item" : "essence", "count" : 100 }
+    { "item" : "essence", "count" : 100 }
   ],
   "output" : { "item" : "ancientrailgun", "count" : 1 },
   "groups" : [ "ancientforge", "weapons", "all" ]

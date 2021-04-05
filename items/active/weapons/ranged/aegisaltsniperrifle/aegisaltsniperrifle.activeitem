@@ -29,15 +29,15 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/plasma_sniper2.ogg"],
-	  "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
+      "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
         "color" : [150, 0, 150]
       }
     },
-	"particleEmitters" : {
-	  "altMuzzleFlash" : {
+    "particleEmitters" : {
+      "altMuzzleFlash" : {
         "active" : false,
         "rotationGroup" : "weapon",
         "emissionRate" : 8,
@@ -47,7 +47,7 @@
           { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
         ]
       }
-	}
+    }
   },
 
   "baseOffset" : [0.9, 0.7],
@@ -71,24 +71,7 @@
     "projectileType" : "aegisaltsnipershot",
     "projectileParameters" : {
       "knockback" : 20,
-	  "speed" : 200,
-	  "actionOnReap" : [
-	    {
-	      "action" : "projectile",
-	      "type" : "laserburst",
-	      "config" : {
-			"processing" : "?scalenearest=0.5",
-			"periodicActions" : [
-			  {
-				"time" : 0,
-				"repeat" : false,
-				"action" : "sound",
-				"options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
-		      }
-			]
-		  }
-	    }
-	  ]
+      "speed" : 200
     },
 
     "stances" : {
@@ -108,10 +91,10 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.5,
@@ -131,10 +114,10 @@
       "physical" : { "projectileType" : "ancientchainshot", "projectileParameters" : { } }
     },
     "energyUsage" : 20,
-	"cooldownTime" : 1.0,
-	"maxTargets" : 10,
+    "cooldownTime" : 1.0,
+    "maxTargets" : 10,
     "targetQueryDistance" : 3,
-	"name" : "Phasing Chain Shot"
+    "name" : "Phasing Chain Shot"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

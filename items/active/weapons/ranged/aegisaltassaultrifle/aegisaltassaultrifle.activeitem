@@ -29,15 +29,15 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/plasma_sniper1.ogg"],
-	  "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
+      "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
         "color" : [150, 0, 150]
       }
     },
-	"particleEmitters" : {
-	  "altMuzzleFlash" : {
+    "particleEmitters" : {
+      "altMuzzleFlash" : {
         "active" : false,
         "rotationGroup" : "weapon",
         "emissionRate" : 8,
@@ -47,7 +47,7 @@
           { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
         ]
       }
-	}
+    }
   },
 
   "baseOffset" : [0.8, 0.225],
@@ -70,13 +70,13 @@
 
     "projectileType" : "aegisaltbullet",
     "projectileParameters" : {
-      "knockback" : 20,
-	  "actionOnReap" : [
-	    {
-		  "action" : "config",
-		  "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
-		}
-	  ]
+      "knockback" : 5,
+      "actionOnReap" : [
+        {
+          "action" : "config",
+          "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
+        }
+      ]
     },
 
     "stances" : {
@@ -113,18 +113,19 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : { "projectileType" : "aegisaltriflerocket", "projectileParameters" : {
-	    "actionOnReap" : [
+        "actionOnReap" : [
           {
-	        "action" : "config",
-	        "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
-	      }
+            "action" : "config",
+            "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
+          }
         ]
-	  } }
+      } }
     },
-    "energyUsage" : 40,
-	"fireTime" : 0.2,
-	"inaccuracy" : 0.05,
-	"name" : "Aegisalt Rocket Burst"
+    "energyUsage" : 70,
+    "fireTime" : 0.2,
+    "inaccuracy" : 0.05,
+    "baseDps" : 30,
+    "name" : "Aegisalt Rocket Burst"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -1,0 +1,15 @@
+{
+  "projectileName" : "destroyerstaff2body_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "physics" : "illusion",
+  "lightColor" : [150, 100, 100],
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 0,
+  "timeToLive" : 0.5,
+  "bounces" : 0,
+  "piercing" : true,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "plasma"
+}

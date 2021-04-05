@@ -11,6 +11,7 @@ function init()
   self.projectileType = config.getParameter("firedProjectile")
   self.projectileConfig = config.getParameter("firedProjectileConfig")
   self.projectileConfig.power = self.projectileConfig.power or projectile.power()
+  self.projectileConfig.powerMultiplier = self.projectileConfig.powerMultiplier or projectile.powerMultiplier()
 
   message.setHandler("kill", function(_, _, id)
     targetId = id
@@ -36,7 +37,8 @@ end
 
 function destroy()
   local selfPosition = mcontroller.position()
-  if projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) and targetId then
+  if projectile.sourceEntity() and world.entityExists(projectile.sourceEntity())
+    and targetId and world.entityExists(targetId) then
     world.spawnProjectile(self.projectileType, selfPosition, projectile.sourceEntity(), world.distance(world.entityPosition(targetId), selfPosition), false, self.projectileConfig)
     local foundTargetAction = config.getParameter("foundTargetAction")
     if next(foundTargetAction) ~= nil then

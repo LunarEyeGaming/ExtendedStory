@@ -30,19 +30,19 @@ function update(dt)
     if status.resourcePercentage("health") <= 0.02 then
       if not self.activated then
         if self.masterId then
-	      world.sendEntityMessage(self.masterId, "activate")
-	    else
-	      world.spawnProjectile("invisibleprojectile", mcontroller.position())
-	    end
+          world.sendEntityMessage(self.masterId, "activate")
+        else
+          world.spawnProjectile("invisibleprojectile", mcontroller.position())
+        end
         self.activated = true
         self.deactivated = false
-	  end
+      end
     elseif not self.deactivated then
-	  if self.masterId then
-	    world.sendEntityMessage(self.masterId, "deactivate")
-	  else
-	    world.spawnProjectile("invisibleprojectile", mcontroller.position())
-	  end
+      if self.masterId then
+        world.sendEntityMessage(self.masterId, "deactivate")
+      else
+        world.spawnProjectile("invisibleprojectile", mcontroller.position())
+      end
       self.deactivated = true
     else
       self.activated = false
@@ -51,19 +51,19 @@ function update(dt)
     if status.resourcePercentage("health") == 1.0 then
       if not self.activated then
         if self.masterId then
-	      world.sendEntityMessage(self.masterId, "activate")
-	    else
-	      world.spawnProjectile("invisibleprojectile", mcontroller.position())
-	    end
+          world.sendEntityMessage(self.masterId, "activate")
+        else
+          world.spawnProjectile("invisibleprojectile", mcontroller.position())
+        end
         self.activated = true
         self.deactivated = false
-	  end
+      end
     elseif not self.deactivated then
-	  if self.masterId then
-	    world.sendEntityMessage(self.masterId, "deactivate")
-	  else
-	    world.spawnProjectile("invisibleprojectile", mcontroller.position())
-	  end
+      if self.masterId then
+        world.sendEntityMessage(self.masterId, "deactivate")
+      else
+        world.spawnProjectile("invisibleprojectile", mcontroller.position())
+      end
       self.deactivated = true
     else
       self.activated = false

@@ -1,6 +1,6 @@
 function init()
   monster.setDeathParticleBurst("deathPoof")
-  animator.setAnimationState("movement", "closed")
+  animator.setAnimationState("movement", "idle")
 
   if animator.hasSound("deathPuff") then
     monster.setDeathSound("deathPuff")

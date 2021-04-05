@@ -22,6 +22,31 @@
     "parameters": {},
     "children": [
       {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "targets"},
+          "type": {"value": "entity"}
+        },
+        "child": {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sendEntityMessage",
+            "type": "action",
+            "name": "sendEntityMessage",
+            "parameters": {
+              "arguments": {"value": [["/music/dreadedthingsapproach-by-teknoaxe-loop.ogg"], 2.0]},
+              "entity": {"key": "eachItem"},
+              "message": {"value": "playAltMusic"}
+            }
+          }
+        }
+      },
+      {
         "title": "loadUniqueEntity",
         "type": "action",
         "name": "loadUniqueEntity",
@@ -162,31 +187,6 @@
         "name": "setVelocity",
         "parameters": {
           "velocity": {"value": [-50, 0]}
-        }
-      },
-      {
-        "title": "each",
-        "type": "decorator",
-        "name": "each",
-        "parameters": {
-          "list": {"key": "targets"},
-          "type": {"value": "entity"}
-        },
-        "child": {
-          "title": "succeeder",
-          "type": "decorator",
-          "name": "succeeder",
-          "parameters": {},
-          "child": {
-            "title": "sendEntityMessage",
-            "type": "action",
-            "name": "sendEntityMessage",
-            "parameters": {
-              "arguments": {"value": [["/music/dreadedthingsapproach-by-teknoaxe-loop.ogg"], 0.0]},
-              "entity": {"key": "eachItem"},
-              "message": {"value": "playAltMusic"}
-            }
-          }
         }
       },
       {

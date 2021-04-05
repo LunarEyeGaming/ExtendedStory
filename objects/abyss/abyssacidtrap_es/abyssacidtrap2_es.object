@@ -150,7 +150,7 @@
   "projectile" : "orbitalup", // name of projectile (required)
   "projectileConfig" : { // extra configuration overrides for projectile
     "damageTeam" : { "type" : "environment" },
-    "power" : 20,
+    "power" : 800,
     "speed" : 0,
     "onlyHitTerrain" : true,
     "timeToLive" : 0,

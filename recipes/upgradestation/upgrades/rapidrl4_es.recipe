@@ -1,10 +1,9 @@
 {
   "input" : [
+    { "item" : "rapidrl3_es", "count" : 1 },
     { "item" : "scorchedcore", "count" : 5 },
-	{ "item" : "durasteelbar", "count" : 20 },
-	{ "item" : "refinedlunarite", "count" : 20 },
-	{ "item" : "rapidrl3_es", "count" : 1 },
-	{ "item" : "ancientupgrademodule_es", "count" : 4 }
+    { "item" : "weaponamplifier", "count" : 1 },
+    { "item" : "ancientupgrademodule_es", "count" : 10 }
   ],
   "output" : { "item" : "rapidrl4_es", "count" : 1 },
   "groups" : [ "upgradestation", "upgrades", "all" ]

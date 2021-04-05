@@ -31,38 +31,6 @@
         }
       },
 
-      "eye" : {
-        "priority" : 1,
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 1
-          },
-          "windup" : {
-            "frames" : 6,
-            "cycle" : 0.6,
-            "mode" : "transition",
-            "transition" : "attack"
-          },
-          "attack" : {
-            "frames" : 1,
-            "cycle" : 1,
-            "mode" : "loop"
-          },
-          "winddown" : {
-            "frames" : 4,
-            "cycle" : 0.6,
-            "mode" : "transition",
-            "transition" : "idle"
-          },
-          "hurt" : {
-            "frames" : 1,
-            "cycle" : 1,
-            "mode" : "loop"
-          }
-        }
-      },
-
       "beamglow" : {
         "priority" : 0,
         "default" : "off",
@@ -108,7 +76,11 @@
           "idle" : {
             "frames" : 5,
             "cycle" : 0.5,
-            "mode" : "loop"
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg",
+              "persistentSoundRangeMultiplier" : 2
+            }
           },
           "disappear" : {
             "frames" : 10,
@@ -118,6 +90,45 @@
             "properties" : {
               "immediateSound" : "/sfx/gun/ancientchaingun_beamstop.ogg",
               "immediateSoundRangeMultiplier" : 3
+            }
+          }
+        }
+      },
+      "beam" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1
+          },
+          "windup" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/cultistboss_beamwindup.ogg",
+              "immediateSoundRangeMultiplier" : 3.0
+            }
+          },
+          "active" : {
+            "frames" : 8,
+            "cycle" : 0.66,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_on1.ogg",
+              "immediateSoundRangeMultiplier" : 3.0,
+              "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
+              "persistentSoundRangeMultiplier" : 3.0
+            }
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.4,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
+              "immediateSoundRangeMultiplier" : 3.0
             }
           }
         }
@@ -190,6 +201,7 @@
           }
         }
       },
+
       "shield" : {
         "properties" : {
           "rotationGroup" : "all",
@@ -212,6 +224,34 @@
             "disappear" : {
               "properties" : {
                 "image" : "<partImage>:disappear.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "beam" : {
+        "properties" : {
+          "zLevel" : 5,
+          "centered" : true,
+          "offset" : [0, -20],
+          "fullbright" : true
+        },
+        "partStates" : {
+          "beam" : {
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>",
+                "damageArea" : [ [-0.5, 20.0], [0.5, 20.0], [0.5, -20.0], [-0.5, -20.0] ]
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
               }
             }
           }
@@ -265,19 +305,9 @@
       "emissionRate" : 100,
       "offsetRegion" : [-10, -2, 10, 2],
       "particles" : [
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/mediumflameelectric/mediumflameelectric.animation",
-            "timeToLive" : 1.0,
-            "rotation" : 0,
-            "initialVelocity" : [0, 0],
-            "layer" : "front",
-            "variance" : {
-              "rotation" : 180
-            }
-          }
-        }
+        { "particle" : "ancientenergy1" },
+        { "particle" : "ancientenergy2" },
+        { "particle" : "ancientenergy3" }
       ]
     },
     "falling" : {
@@ -679,7 +709,7 @@
       "pool" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
       "rangeMultiplier" : 3
     },
-    "landing" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
+    "landing" : [ "/sfx/npc/boss/ancientboss_slam1.ogg", "/sfx/npc/boss/ancientboss_slam2.ogg", "/sfx/npc/boss/ancientboss_slam3.ogg" ],
     "stunned" : [ "/sfx/npc/boss/guardian_floorhazard_electric_loop.ogg" ],
     "teleportIn" : {
       "pool" : [ "/sfx/npc/boss/ancientboss_appear.ogg" ],

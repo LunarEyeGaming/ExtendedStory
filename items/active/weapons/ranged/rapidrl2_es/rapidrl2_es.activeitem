@@ -28,7 +28,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/rocket2.ogg" ],
-	  "altFire" : [ "/sfx/gun/tank_shot.ogg" ]
+      "altFire" : [ "/sfx/gun/tank_shot.ogg" ]
     }
   },
   "baseOffset" : [0.0, 0.4],
@@ -43,8 +43,8 @@
     "class" : "GunFire",
 
     "fireTime" : 0.25,
-    "baseDps" : 18.0,
-    "energyUsage" : 30,
+    "baseDps" : 16.0,
+    "energyUsage" : 33,
     "inaccuracy" : 0.03,
     "fireType" : "auto",
 
@@ -72,9 +72,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.25,
@@ -91,8 +91,8 @@
   "altAbilityType" : "rocketburst",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "H. Rocket Burst", "projectileType" : "homingrocket_es", "inaccuracy" : 0.5}
-	  }
+      "physical" : { "name" : "H. Rocket Burst", "projectileType" : "homingrocket_es", "inaccuracy" : 0.5, "baseDps" : 12}
+      }
   },
   "learnBlueprintsOnPickup" : [ "rapidrl3_es" ],
 

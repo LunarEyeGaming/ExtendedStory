@@ -1,7 +1,10 @@
+require "/scripts/vec2.lua"
+
 function init()
   message.setHandler("setTarget", function(_, _, entityId)
     self.target = entityId
   end)
+  self.angledProjectileOffset = {19, 0}
 end
 
 function update()
@@ -22,7 +25,8 @@ end
 function destroy()
   if projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("altlaserbeaminitial_es", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 165, power = projectile.power(), powerMultiplier = projectile.powerMultiplier()})
+    local offset = vec2.rotate(self.angledProjectileOffset, rotation)
+    world.spawnProjectile("laserbeamwindup_es", vec2.add(mcontroller.position(), offset), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { power = projectile.power(), powerMultiplier = projectile.powerMultiplier()})
     projectile.processAction(projectile.getParameter("explosionAction"))
   end
 end

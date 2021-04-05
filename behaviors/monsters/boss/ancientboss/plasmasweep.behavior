@@ -127,6 +127,7 @@
         "parameters": {
           "position": {"key": "sweepEndPos"},
           "flightSpeed": {"value": 25},
+          "projectileConfig": {"value": {"power": 20}},
           "projectileInterval": {"value": 0.2},
           "projectileType": {"value": "ancientpulse"},
           "projectileOffset": {"value": [0, -5]},

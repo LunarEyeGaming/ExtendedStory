@@ -18,7 +18,7 @@
   "parameters": {
     "phase1": 0.875,
     "phase2": 0.75,
-	"phase3": 0.5
+    "phase3": 0.5
   },
   "root": {
     "title": "sequence",
@@ -313,7 +313,7 @@
                       "entity": {"key": "target"}
                     }
                   },
-				  {
+                  {
                     "title": "resourcePercentage",
                     "type": "action",
                     "name": "resourcePercentage",
@@ -344,7 +344,7 @@
                           "enable": {"value": true}
                         }
                       },
-					  {
+                      {
                         "title": "setAggressive",
                         "type": "action",
                         "name": "setAggressive",
@@ -352,293 +352,293 @@
                           "aggressive": {"value": true}
                         }
                       },
-					  {
-					    "title": "dynamic",
-						"type": "composite",
-						"name": "dynamic",
-						"parameters": {},
-						"children": [
-						  {
-                    	    "title": "parallel",
-                    	    "type": "composite",
-                    	    "name": "parallel",
-                    	    "parameters": {
-                    	      "fail": {"value": 1},
-                    	      "success": {"value": -1}
-                    	    },
-                    	    "children": [
-                    	      {
-                    	        "title": "resourcePercentage",
-                    	        "type": "action",
-                    	        "name": "resourcePercentage",
-                    	        "parameters": {
-                    	          "percentage": {"value": 0.66},
-                    	          "resource": {"value": "health"}
-                    	        }
-                    	      },
-							  {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-                    	    	    "title": "supervoidbossphase2-orbshield",
-                    	    	    "type": "module",
-                    	    	    "name": "supervoidbossphase2-orbshield",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-								    "title": "setParticleEmitterActive",
-									"type": "action",
-									"name": "setParticleEmitterActive",
-									"parameters": {
-									  "emitter": {"value": "idle"},
-									  "active": {"value": true}
-									}
-								  },
-								  {
-                        		    "title": "repeater",
-                        		    "type": "decorator",
-                        		    "name": "repeater",
-                    	    	    "parameters": {
-                    	    	      "maxLoops": {"value": -1},
-                    	    	      "untilSuccess": {"value": false}
-                    	    	    },
-                    	    	    "child": {
-                    	    	      "title": "sequence",
-                    	    	      "type": "composite",
-                    	    	      "name": "sequence",
-                    	    	      "parameters": {},
-                    	    	      "children": [
-                    	    	        {
-                    	    	          "title": "supervoidbossphase2-laser",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-laser",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-bullethell1",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-bullethell1",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-bullethell2",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-bullethell2",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-bullethell3",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-bullethell3",
-                    	    	          "parameters": {}
-                    	    	        }
-                    	    	      ]
-                    	    	    }
-                    	    	  }
-								]
-							  }
-                    	    ]
-                    	  },
-						  {
-                    	    "title": "parallel",
-                    	    "type": "composite",
-                    	    "name": "parallel",
-                    	    "parameters": {
-                    	      "fail": {"value": 1},
-                    	      "success": {"value": -1}
-                    	    },
-                    	    "children": [
-                    	      {
-                    	        "title": "resourcePercentage",
-                    	        "type": "action",
-                    	        "name": "resourcePercentage",
-                    	        "parameters": {
-                    	          "percentage": {"value": 0.33},
-                    	          "resource": {"value": "health"}
-                    	        }
-                    	      },
-							  {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-                    	    	    "title": "supervoidbossphase2-transition",
-                    	    	    "type": "module",
-                    	    	    "name": "supervoidbossphase2-transition",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-                        		    "title": "repeater",
-                        		    "type": "decorator",
-                        		    "name": "repeater",
-                    	    	    "parameters": {
-                    	    	      "maxLoops": {"value": -1},
-                    	    	      "untilSuccess": {"value": false}
-                    	    	    },
-                    	    	    "child": {
-                    	    	      "title": "sequence",
-                    	    	      "type": "composite",
-                    	    	      "name": "sequence",
-                    	    	      "parameters": {},
-                    	    	      "children": [
-                    	    	        {
-                    	    	          "title": "supervoidbossphase2-bullethell4",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-bullethell4",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-replicatingorbs",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-replicatingorbs",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-electrocutionorbs",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-electrocutionorbs",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-cellzap",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-cellzap",
-                    	    	          "parameters": {}
-                    	    	        }
-                    	    	      ]
-                    	    	    }
-                    	    	  }
-								]
-							  }
-                    	    ]
-                    	  },
-						  {
-                    	    "title": "parallel",
-                    	    "type": "composite",
-                    	    "name": "parallel",
-                    	    "parameters": {
-                    	      "fail": {"value": 1},
-                    	      "success": {"value": -1}
-                    	    },
-                    	    "children": [
-                    	      {
-                    	        "title": "resourcePercentage",
-                    	        "type": "action",
-                    	        "name": "resourcePercentage",
-                    	        "parameters": {
-                    	          "percentage": {"value": 0.0},
-                    	          "resource": {"value": "health"}
-                    	        }
-                    	      },
-							  {
-							    "title": "supervoidbossphase2-stage3orbs",
-								"type": "module",
-								"name": "supervoidbossphase2-stage3orbs",
-								"parameters": {}
-							  },
-							  {
-							    "title": "sequence",
-								"type": "composite",
-								"name": "sequence",
-								"parameters": {},
-								"children": [
-								  {
-                    	    	    "title": "setAnimationState",
-                    	    	    "type": "action",
-                    	    	    "name": "setAnimationState",
-                    	    	    "parameters": {
-									  "state": {"value": "on"},
-									  "type": {"value": "stage3orbs"}
-									}
-                        		  },
-								  {
-								    "title": "setParticleEmitterActive",
-									"type": "action",
-									"name": "setParticleEmitterActive",
-									"parameters": {
-									  "emitter": {"value": "idle"},
-									  "active": {"value": false}
-									}
-								  },
-								  {
-								    "title": "setParticleEmitterActive",
-									"type": "action",
-									"name": "setParticleEmitterActive",
-									"parameters": {
-									  "emitter": {"value": "idlephase3"},
-									  "active": {"value": true}
-									}
-								  },
-								  {
-                    	    	    "title": "supervoidbossphase2-transition",
-                    	    	    "type": "module",
-                    	    	    "name": "supervoidbossphase2-transition",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-                    	    	    "title": "supervoidbossphase2-orbshield2",
-                    	    	    "type": "module",
-                    	    	    "name": "supervoidbossphase2-orbshield2",
-                    	    	    "parameters": {}
-                        		  },
-								  {
-                        		    "title": "repeater",
-                        		    "type": "decorator",
-                        		    "name": "repeater",
-                    	    	    "parameters": {
-                    	    	      "maxLoops": {"value": -1},
-                    	    	      "untilSuccess": {"value": false}
-                    	    	    },
-                    	    	    "child": {
-                    	    	      "title": "sequence",
-                    	    	      "type": "composite",
-                    	    	      "name": "sequence",
-                    	    	      "parameters": {},
-                    	    	      "children": [
-                    	    	        {
-                    	    	          "title": "supervoidbossphase2-stage3attack1",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-stage3attack1",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-stage3attack2",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-stage3attack2",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-stage3attack3",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-stage3attack3",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-stage3attack4",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-stage3attack4",
-                    	    	          "parameters": {}
-                    	    	        },
-										{
-                    	    	          "title": "supervoidbossphase2-vacuum",
-                    	    	          "type": "module",
-                    	    	          "name": "supervoidbossphase2-vacuum",
-                    	    	          "parameters": {}
-                    	    	        }
-                    	    	      ]
-                    	    	    }
-                    	    	  }
-								]
-							  }
-                    	    ]
-                    	  }
-						]
-					  }
+                      {
+                        "title": "dynamic",
+                        "type": "composite",
+                        "name": "dynamic",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.66},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "supervoidbossphase2-orbshield",
+                                    "type": "module",
+                                    "name": "supervoidbossphase2-orbshield",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "setParticleEmitterActive",
+                                    "type": "action",
+                                    "name": "setParticleEmitterActive",
+                                    "parameters": {
+                                      "emitter": {"value": "idle"},
+                                      "active": {"value": true}
+                                    }
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "supervoidbossphase2-laser",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-laser",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-bullethell1",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-bullethell1",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-bullethell2",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-bullethell2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-bullethell3",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-bullethell3",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.33},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "supervoidbossphase2-transition",
+                                    "type": "module",
+                                    "name": "supervoidbossphase2-transition",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "supervoidbossphase2-bullethell4",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-bullethell4",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-replicatingorbs",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-replicatingorbs",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-electrocutionorbs",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-electrocutionorbs",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-cellzap",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-cellzap",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "parallel",
+                            "type": "composite",
+                            "name": "parallel",
+                            "parameters": {
+                              "fail": {"value": 1},
+                              "success": {"value": -1}
+                            },
+                            "children": [
+                              {
+                                "title": "resourcePercentage",
+                                "type": "action",
+                                "name": "resourcePercentage",
+                                "parameters": {
+                                  "percentage": {"value": 0.0},
+                                  "resource": {"value": "health"}
+                                }
+                              },
+                              {
+                                "title": "supervoidbossphase2-stage3orbs",
+                                "type": "module",
+                                "name": "supervoidbossphase2-stage3orbs",
+                                "parameters": {}
+                              },
+                              {
+                                "title": "sequence",
+                                "type": "composite",
+                                "name": "sequence",
+                                "parameters": {},
+                                "children": [
+                                  {
+                                    "title": "setAnimationState",
+                                    "type": "action",
+                                    "name": "setAnimationState",
+                                    "parameters": {
+                                      "state": {"value": "on"},
+                                      "type": {"value": "stage3orbs"}
+                                    }
+                                  },
+                                  {
+                                    "title": "setParticleEmitterActive",
+                                    "type": "action",
+                                    "name": "setParticleEmitterActive",
+                                    "parameters": {
+                                      "emitter": {"value": "idle"},
+                                      "active": {"value": false}
+                                    }
+                                  },
+                                  {
+                                    "title": "setParticleEmitterActive",
+                                    "type": "action",
+                                    "name": "setParticleEmitterActive",
+                                    "parameters": {
+                                      "emitter": {"value": "idlephase3"},
+                                      "active": {"value": true}
+                                    }
+                                  },
+                                  {
+                                    "title": "supervoidbossphase2-transition",
+                                    "type": "module",
+                                    "name": "supervoidbossphase2-transition",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "supervoidbossphase2-orbshield2",
+                                    "type": "module",
+                                    "name": "supervoidbossphase2-orbshield2",
+                                    "parameters": {}
+                                  },
+                                  {
+                                    "title": "repeater",
+                                    "type": "decorator",
+                                    "name": "repeater",
+                                    "parameters": {
+                                      "maxLoops": {"value": -1},
+                                      "untilSuccess": {"value": false}
+                                    },
+                                    "child": {
+                                      "title": "sequence",
+                                      "type": "composite",
+                                      "name": "sequence",
+                                      "parameters": {},
+                                      "children": [
+                                        {
+                                          "title": "supervoidbossphase2-stage3attack1",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-stage3attack1",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-stage3attack2",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-stage3attack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-stage3attack3",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-stage3attack3",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-stage3attack4",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-stage3attack4",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "supervoidbossphase2-vacuum",
+                                          "type": "module",
+                                          "name": "supervoidbossphase2-vacuum",
+                                          "parameters": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -649,7 +649,7 @@
                 "name": "sequence",
                 "parameters": {},
                 "children": [
-				  {
+                  {
                     "title": "inverter",
                     "type": "decorator",
                     "name": "inverter",
@@ -672,7 +672,7 @@
                       "enable": {"value": false}
                     }
                   },
-				  {
+                  {
                     "title": "parallel",
                     "type": "composite",
                     "name": "parallel",

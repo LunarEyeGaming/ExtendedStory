@@ -1,9 +1,8 @@
 {
   "input" : [
-	{ "item" : "fusioncore", "count" : 1 },
-	{ "item" : "solariumstar", "count" : 30 },
-	{ "item" : "ironbar", "count" : 50 },
-	{ "item" : "volatilepowder", "count" : 20 }
+    { "item" : "fusioncore", "count" : 1 },
+    { "item" : "ironbar", "count" : 50 },
+    { "item" : "volatilepowder", "count" : 20 }
   ],
   "output" : { "item" : "nuclearrocketlauncher", "count" : 1 },
   "groups" : [ "ancientforge", "weapons", "all" ]

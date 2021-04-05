@@ -3,6 +3,7 @@ function init()
   self.projectileType = config.getParameter("firedProjectile")
   self.projectileConfig = config.getParameter("firedProjectileConfig")
   self.projectileConfig.power = self.projectileConfig.power or projectile.power()
+  self.projectileConfig.powerMultiplier = self.projectileConfig.powerMultiplier or projectile.powerMultiplier()
   self.queryDelta = 10
   self.queryStep = self.queryDelta
 end

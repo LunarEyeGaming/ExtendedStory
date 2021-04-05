@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  /*{
+      /*{
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -35,268 +35,366 @@
           "time": {"value": 1.2}
         }
       },*/
-	  {
-		"title": "ancientboss-teleportto",
-		"type": "module",
-		"name": "ancientboss-teleportto",
-		"parameters": {
-		  "teleportPosition": {"key": "spawn"},
-		  "teleportDelay": {"value": 1.5}
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "lowersweepstart"}
-		},
-		"output": {
-		  "entity": "lowersweepstart"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "lowersweepend"}
-		},
-		"output": {
-		  "entity": "lowersweepend"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "uppersweepstart"}
-		},
-		"output": {
-		  "entity": "uppersweepstart"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "uppersweepend"}
-		},
-		"output": {
-		  "entity": "uppersweepend"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "minionstart"}
-		},
-		"output": {
-		  "entity": "minionstart"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "minionend"}
-		},
-		"output": {
-		  "entity": "minionend"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "uppersweepstart"}
-		},
-		"output": {
-		  "position": "position1"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "uppersweepend"}
-		},
-		"output": {
-		  "position": "position2"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "lowersweepstart"}
-		},
-		"output": {
-		  "position": "position3"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "lowersweepend"}
-		},
-		"output": {
-		  "position": "position4"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "minionstart"}
-		},
-		"output": {
-		  "position": "position5"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "minionend"}
-		},
-		"output": {
-		  "position": "position6"
-		}
-	  },
-	  {
+      {
+        "title": "ancientboss-teleportto",
+        "type": "module",
+        "name": "ancientboss-teleportto",
+        "parameters": {
+          "teleportPosition": {"key": "spawn"},
+          "teleportDelay": {"value": 1.5}
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "lowersweepstart"}
+        },
+        "output": {
+          "entity": "lowersweepstart"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "lowersweepend"}
+        },
+        "output": {
+          "entity": "lowersweepend"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "uppersweepstart"}
+        },
+        "output": {
+          "entity": "uppersweepstart"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "uppersweepend"}
+        },
+        "output": {
+          "entity": "uppersweepend"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "minionstart"}
+        },
+        "output": {
+          "entity": "minionstart"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "minionend"}
+        },
+        "output": {
+          "entity": "minionend"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "uppersweepstart"}
+        },
+        "output": {
+          "position": "position1"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "uppersweepend"}
+        },
+        "output": {
+          "position": "position2"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "lowersweepstart"}
+        },
+        "output": {
+          "position": "position3"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "lowersweepend"}
+        },
+        "output": {
+          "position": "position4"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "minionstart"}
+        },
+        "output": {
+          "position": "position5"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "minionend"}
+        },
+        "output": {
+          "position": "position6"
+        }
+      },
+      {
+        "title": "sequence",
+        "type": "composite",
+        "name": "sequence",
+        "parameters": {},
+        "children": [
+          {
+            "title": "listClear",
+            "type": "action",
+            "name": "listClear",
+            "parameters": {},
+            "output": {
+              "list": "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position1"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position2"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position3"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position4"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position5"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listPush",
+            "type": "action",
+            "name": "listPush",
+            "parameters": {
+              "list": {"key": "laserPositions"},
+              "position": {"key": "position6"}
+            },
+            "output" : {
+              "list" : "laserPositions"
+            }
+          },
+          {
+            "title": "listShuffle",
+            "type": "action",
+            "name": "listShuffle",
+            "parameters": {
+              "list": {"key": "laserPositions"}
+            },
+            "output": {
+              "list": "laserPositions"
+            }
+          }
+        ]
+      },
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 10}
+          "maxLoops": {"value": 2}
         },
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
-			  "title": "randomize",
-			  "type": "composite",
-			  "name": "randomize",
-			  "parameters": {},
-			  "children": [
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position1"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    },
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position2"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    },
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position3"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    },
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position4"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    },
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position5"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    },
-				{
-    		      "title": "spawnTargetedProjectile",
-    		      "type": "action",
-    		      "name": "spawnTargetedProjectile",
-    		      "parameters": {
-    		        "aimVector": {"value": [1, 0]},
-    		        "offset": {"value": [0, 0]},
-					"position": {"key": "position6"},
-    		        "parameters": {"value": {}},
-    		        "projectileType": {"value": "supernovabeam"},
-                    "scalePower": {"value": true},
-                    "target": {"key": "target"},
-                    "trackSource": {"value": false}
-    		      }
-    		    }
-			  ]
-			},
-			{
-			  "title": "timer",
-			  "type": "action",
-			  "name": "timer",
-			  "parameters": {
-			    "time": {"value": 1.0}
-			  }
-			}
-		  ]
-		}
+        "child": {
+          "title": "each",
+          "type": "decorator",
+          "name": "each",
+          "parameters": {
+            "list": {"key": "laserPositions"},
+            "type": {"value": "position"}
+          },
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "playSound",
+                "type": "action",
+                "name": "playSound",
+                "parameters": {
+                  "sound": {"value": "minionspawn2"}
+                }
+              },
+              {
+                "title": "entityPosition",
+                "type": "action",
+                "name": "entityPosition",
+                "parameters": {
+                  "entity": {"key": "target"}
+                },
+                "output": {
+                  "position": "targetPosition"
+                }
+              },
+              {
+                "title": "distance",
+                "type": "action",
+                "name": "distance",
+                "parameters": {
+                  "from": {"key": "eachItem"},
+                  "to": {"key": "targetPosition"}
+                },
+                "output": {
+                  "vector": "aimVector"
+                }
+              },
+              {
+                "title": "spawnTargetedProjectile",
+                "type": "action",
+                "name": "spawnTargetedProjectile",
+                "parameters": {
+                  "aimVector": {"key": "aimVector"},
+                  "parameters": {"value": {"power": 17}},
+                  "position": {"key": "eachItem"},
+                  "projectileType": {"value": "ancientbossdelayedlaserbeam_es"},
+                  "target": {"key": "target"},
+                  "trackSource": {"value": false}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": 1.0}
+                }
+              },
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "listPop",
+                    "type": "action",
+                    "name": "listPop",
+                    "parameters": {
+                      "list": {"key": "targets"}
+                    },
+                    "output": {
+                      "list": "targets",
+                      "entity": "cycledTarget"
+                    }
+                  },
+                  {
+                    "title": "listPushBack",
+                    "type": "action",
+                    "name": "listPushBack",
+                    "parameters": {
+                      "entity": {"key": "cycledTarget"},
+                      "list": {"key": "targets"}
+                    },
+                    "output" : {
+                      "list": "targets"
+                    }
+                  },
+                  {
+                    "title": "listGet",
+                    "type": "action",
+                    "name": "listGet",
+                    "parameters": {
+                      "list": {"key": "targets"}
+                    },
+                    "output": {
+                      "entity": "target"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
       },
       {
         "title": "timer",

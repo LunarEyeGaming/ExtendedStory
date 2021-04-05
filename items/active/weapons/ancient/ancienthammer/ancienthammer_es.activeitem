@@ -8,7 +8,7 @@
   "tooltipKind" : "sword",
   "category" : "Ancient Hammer",
   "twoHanded" : true,
-  "level" : 10,
+  "level" : 8,
   "itemTags" : ["weapon","melee","hammer"],
   
   "critChance" : 25,
@@ -84,12 +84,12 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : { 
-	    "name" : "Ancient Orboids", 
-		"projectileType" : "ancienthammeralt-windup",
-		"minChargeTime" : 1.5,
-		"chargeTime" : 1.6,
-		"energyUsage" : 100
-	  }
+        "name" : "Ancient Orboids", 
+        "projectileType" : "ancienthammeralt-windup",
+        "minChargeTime" : 1.5,
+        "chargeTime" : 1.6,
+        "energyUsage" : 100
+      }
     }
   },
 

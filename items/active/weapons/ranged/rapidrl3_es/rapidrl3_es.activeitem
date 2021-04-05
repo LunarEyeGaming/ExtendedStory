@@ -28,7 +28,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/rocketblast1.ogg" ],
-	  "altFire" : [ "/sfx/gun/rocket2.ogg" ]
+      "altFire" : [ "/sfx/gun/rocket2.ogg" ]
     }
   },
   "baseOffset" : [0.3, 0.4],
@@ -72,9 +72,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.25,
@@ -91,8 +91,8 @@
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "H. Rocket Spread", "projectileType" : "mechhomingmissile", "inaccuracy" : 0.06, "projectileCount" : 5, "fireTime" : 1.0, "projectileParameters" : {"timeToLive" : 5}}
-	  }
+      "physical" : { "name" : "H. Rocket Spread", "projectileType" : "mechhomingmissile", "inaccuracy" : 0.06, "projectileCount" : 5, "fireTime" : 1.0, "projectileParameters" : {"timeToLive" : 5}, "energyUsage" : 35, "baseDps" : 17}
+      }
   },
   "learnBlueprintsOnPickup" : [ "rapidrl4_es" ],
 

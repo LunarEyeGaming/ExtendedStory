@@ -11,13 +11,13 @@
       "bobTime" : 2,
       "bobHeight" : 3,
 
-      "projectileOffset" : [0, -4],
+      "projectileOffset" : [0, 0],
       "fireInterval" : 0.1,
       "projectile" : {
         "type" : "delayedlasershot",
         "config" : {
           "speed" : 0,
-          "power" : 10,
+          "power" : 15,
           "periodicActions" : [
             {
               "time" : 0,

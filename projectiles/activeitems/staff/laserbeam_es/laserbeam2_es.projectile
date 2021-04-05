@@ -1,0 +1,28 @@
+{
+  "projectileName" : "laserbeam2_es",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "periodicActions" : [],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "laserbeamwinddown2_es"
+    }
+  ],
+  "timeToLive" : 5,
+  "image" : "laserbeam2_es.png",
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "speed" : 0,
+  "animationCycle" : 0.66,
+  "lightColor" : [93, 10, 47],
+  "frameNumber" : 8,
+  "power" : 50,
+  "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
+  "damageKind" : "plasma",
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "persistentAudio" : "/sfx/npc/boss/crystalboss_beam.ogg"
+}

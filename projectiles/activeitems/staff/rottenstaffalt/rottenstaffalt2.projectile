@@ -8,27 +8,27 @@
   "actionOnReap" : [
     {
       "action" : "loop",
-	  "count" : 5,
-	  "body" : [
-	    {
-		  "action" : "projectile",
-		  "inheritDamageFactor" : 1,
-		  "type" : "invisibleprojectile",
-		  "offsetRange" : [-5, -5, 5, 5],
-		  "config" : {
-		    "periodicActions" : [
-			  {
-			    "time" : 0,
-				"repeat" : false,
-				"action" : "config",
-				"file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
-			  }
-			],
-			"timeToLive" : 0,
-			"onlyHitTerrain" : true
-		  }
-		}
-	  ]
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "projectile",
+          "inheritDamageFactor" : 0.2,
+          "type" : "invisibleprojectile",
+          "offsetRange" : [-5, -5, 5, 5],
+          "config" : {
+            "periodicActions" : [
+              {
+                "time" : 0,
+                "repeat" : false,
+                "action" : "config",
+                "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+              }
+            ],
+            "timeToLive" : 0,
+            "onlyHitTerrain" : true
+          }
+        }
+      ]
     }
   ],
   "speed" : 0,

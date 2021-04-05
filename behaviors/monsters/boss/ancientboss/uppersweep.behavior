@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -35,59 +35,59 @@
           "time": {"value": 1.2}
         }
       },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "uppersweepstart"}
-		},
-		"output": {
-		  "entity": "sweepStart"
-		}
-	  },
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "uppersweepend"}
-		},
-		"output": {
-		  "entity": "sweepEnd"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "sweepStart"}
-		},
-		"output": {
-		  "position": "sweepStartPos"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "sweepEnd"}
-		},
-		"output": {
-		  "position": "sweepEndPos"
-		}
-	  },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "sweepStartPos"},
-		  "speed": {"value": 50}
-		}
-	  },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "uppersweepstart"}
+        },
+        "output": {
+          "entity": "sweepStart"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "uppersweepend"}
+        },
+        "output": {
+          "entity": "sweepEnd"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "sweepStart"}
+        },
+        "output": {
+          "position": "sweepStartPos"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "sweepEnd"}
+        },
+        "output": {
+          "position": "sweepEndPos"
+        }
+      },
+      {
+        "title": "flyToPosition",
+        "type": "action",
+        "name": "flyToPosition",
+        "parameters": {
+          "position": {"key": "sweepStartPos"},
+          "speed": {"value": 50}
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",
@@ -96,21 +96,21 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
-		"title": "ancientboss-movefire",
-		"type": "module",
-		"name": "ancientboss-movefire",
-		"parameters": {
-		  "position": {"key": "sweepEndPos"},
-		  "flightSpeed": {"value": 25},
-		  "projectileInterval": {"value": 0.2},
-		  "projectileType": {"value": "ancientboss_plasmashotwindup"},
-		  "projectileOffset": {"value": [0, 4]},
-		  "projectileConfig": {"value": {"power": 7}},
-		  "aimVector": {"value": [0, 0]},
-		  "fireSound": {"value": "fire1"}
-		}
-	  },
+      {
+        "title": "ancientboss-movefire",
+        "type": "module",
+        "name": "ancientboss-movefire",
+        "parameters": {
+          "position": {"key": "sweepEndPos"},
+          "flightSpeed": {"value": 25},
+          "projectileInterval": {"value": 0.2},
+          "projectileType": {"value": "ancientboss_plasmashotwinduphoming_es"},
+          "projectileOffset": {"value": [0, 4]},
+          "projectileConfig": {"value": {"power": 10}},
+          "aimVector": {"value": [0, 0]},
+          "fireSound": {"value": "fire1"}
+        }
+      },
       {
         "title": "setVelocity",
         "type": "action",

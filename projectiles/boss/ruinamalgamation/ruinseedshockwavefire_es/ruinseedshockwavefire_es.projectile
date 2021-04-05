@@ -1,10 +1,10 @@
 {
   "projectileName" : "ruinseedshockwavefire_es",
   "image" : "ruinseedshockwavefire.png",
-  "animationCycle" : 0.25,
+  "animationCycle" : 0.15,
   "animationLoops" : false,
-  "timeToLive" : 0.25,
-  "frameNumber" : 5,
+  "timeToLive" : 0.15,
+  "frameNumber" : 3,
   "power" : 50,
   "speed" : 0,
   "orientationLocked" : true,
@@ -15,5 +15,12 @@
   "damagePoly" : [ [-4, 11], [4, 11], [4, -11], [-4, -11] ],
   "lightColor" : [255, 150, 150],
   "damageKind" : "plasma",
-  "emitters" : ["barrierflames"]
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "ruinseedshockwavefire2_es",
+      "inheritDamageFactor" : 1
+    }
+  ]
 }

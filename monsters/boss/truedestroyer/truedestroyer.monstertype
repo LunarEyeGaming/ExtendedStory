@@ -12,7 +12,7 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/boss/bossMonster.lua",
+      "/monsters/boss/truedestroyer/bossMonster_truedestroyer.lua",
       "/monsters/simpleRangedAttack.lua",
       "/scripts/stateMachine.lua",
       "/scripts/util.lua",
@@ -27,37 +27,25 @@
 
     "phases" : [
       {
-        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack"]
+        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack", "quantumsentryDestructionAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack"]
       },
       {
         "enterPhase" : "destroyerMinionsAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.8,
-        "skills" : ["destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack"]
-      },
-      {
-        "enterPhase" : "destroyerMinionsAttack",
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.6,
-        "skills" : ["destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
+        "healthPercentage" : 0.75,
+        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "quantumsentryDestructionAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
       },
       {
         "enterPhase" : "destroyerMegaLaserAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.4,
-        "skills" : ["destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack"]
-      },
-      {
-        "enterPhase" : "destroyerMegaLaserAttack",
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.2,
+        "healthPercentage" : 0.5,
         "skills" : ["ufoTeleportAttack", "destroyerSprayNPrayAttack", "ufoTeleportAttack", "destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
       },
       {
         "enterPhase" : "quantumsentryDestructionAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.1,
-        "skills" : ["ufoTeleportAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
+        "healthPercentage" : 0.2,
+        "skills" : ["ufoTeleportAttack"]
       }
     ],
 

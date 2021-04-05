@@ -2,28 +2,10 @@
   "projectileName" : "destroyerstaff2",
   "physics" : "laser",
   "timeToLive" : 20,
-  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
-  "animationCycle" : 0.3,
+  "image" : "destroyerstaff2head2.png",
+  "animationCycle" : 1,
   "lightColor" : [150, 75, 75],
-  "frameNumber" : 4,
-  "actionOnReap" : [
-    {
-	  "action" : "loop",
-	  "count" : 20,
-	  "body" : [
-	    {
-		  "action" : "projectile",
-		  "type" : "explosivelasershot",
-		  "fuzzAngle" : 180,
-	      "inheritDamageFactor" : 0.05,
-		  "config" : {
-		    "piercing" : true,
-			"periodicActions" : []
-		  }
-		}
-	  ]
-	}
-  ],
+  "frameNumber" : 1,
   "periodicActions" : [
     {
       "time" : 0.01,
@@ -33,50 +15,35 @@
         "type" : "textured",
         "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png:1",
         "position" : [0, 0],
-        "layer" : "middle",
+        "layer" : "back",
         "timeToLive" : 0.0,
         "destructionTime" : 0.5,
         "destructionAction" : "shrink",
         "fullbright" : true
       }
     },
-	{
+    {
       "time" : 0.01,
       "repeat" : true,
       "action" : "particle",
+      "rotate" : true,
       "specification" : {
         "type" : "textured",
         "image" : "/projectiles/activeitems/staff/destroyerstaff2/destroyerstaff2head.png",
         "position" : [0, 0],
-        "layer" : "middle",
+        "layer" : "back",
         "timeToLive" : 0.02,
         "destructionTime" : 0.23,
         "destructionAction" : "shrink",
         "fullbright" : true
       }
     },
-	{
-      "time" : 0.01,
-      "repeat" : true,
-      "action" : "particle",
-      "specification" : {
-        "type" : "textured",
-        "image" : "/projectiles/activeitems/staff/destroyerstaff2/destroyerstaff2head2.png",
-        "position" : [0, 0],
-        "layer" : "middle",
-        "timeToLive" : 0.02,
-        "destructionTime" : 0,
-        "destructionAction" : "shrink",
-        "fullbright" : true
-      }
-    },
-	{
-	  "time" : 0.1,
-	  "action" : "projectile",
-	  "type" : "explosivelasershot",
-	  "inheritDamageFactor" : 0.1,
-	  "config" : {"speed" : 60}
-	}
+    {
+      "time" : 0.1,
+      "action" : "projectile",
+      "type" : "destroyerstaff2body_es",
+      "inheritDamageFactor" : 0.5
+    }
   ],
   "speed" : 0,
   "power" : 30,
@@ -85,6 +52,7 @@
   "damageRepeatTimeout" : 0.25,
 
   "orientationLocked" : false,
+  "flippable" : true,
   "fullbright" : true,
 
   "piercing" : true,

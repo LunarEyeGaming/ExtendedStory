@@ -65,7 +65,8 @@
             "mode" : "end"
           },
           "cannonIdle" : {},
-          "slimeIdle" : {}
+          "slimeIdle" : {},
+          "spawnEye" : {}
         }
       },
       "touchdamage" : {
@@ -332,6 +333,11 @@
               "properties" : {
                 "image" : "<partImage>:slimeEnd.<frame>"
               }
+            },
+            "spawnEye" : {
+              "properties" : {
+                "image" : "<partImage>:spawnEye.<frame>"
+              }
             }
           }
         }
@@ -404,6 +410,11 @@
               "properties" : {
                 "image" : "<partImage>:slimeEnd.<frame>"
               }
+            },
+            "spawnEye" : {
+              "properties" : {
+                "image" : "<partImage>:spawnEye.<frame>"
+              }
             }
           }
         }
@@ -443,13 +454,70 @@
       "particles" : [
       ]
     },
-    "idle" : {
+    "spawneye1" : {
       "active" : false,
-      "emissionRate" : 100.0,
-      "offsetRegion" : [-8, -8, 8, 8],
+      "emissionRate" : 25,
+      "transformationGroups" : ["body", "cover"],
+      "offsetRegion" : [3, 0, 4, 0],
       "particles" : [
         {
-          "particle" : "shadowsmoke"
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [12, -8],
+            "finalVelocity" : [0, 1],
+            "approach" : [24, 16],
+            "size" : 1.3,
+            "layer" : "front",
+            "timeToLive" : 0.25,
+            "fade" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.85,
+            "variance" : {
+              "position": [0, 1]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+            "position" : [0, 0],
+            "initialVelocity" : [12, 8],
+            "finalVelocity" : [0, -1],
+            "approach" : [24, 16],
+            "size" : 1.3,
+            "layer" : "front",
+            "timeToLive" : 0.25,
+            "fade" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.85,
+            "variance" : {
+              "position": [0, 1]
+            }
+          }
+        }
+      ]
+    },
+    "spawneye2" : {
+      "active" : false,
+      "emissionRate" : 50,
+      "transformationGroups" : ["body", "cover"],
+      "offsetRegion" : [4.5, -1.5, 7.5, 1.5],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
+            "position" : [0, 0],
+            "size" : 1.3,
+            "layer" : "front",
+            "timeToLive" : 0.25,
+            "fade" : 1,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.85
+          }
         }
       ]
     },

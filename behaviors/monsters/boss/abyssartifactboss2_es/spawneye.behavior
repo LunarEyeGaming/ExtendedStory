@@ -82,7 +82,7 @@
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
-          "state": {"value": "slimeIdle"},
+          "state": {"value": "spawnEye"},
           "type": {"value": "cover"}
         }
       },
@@ -91,40 +91,66 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 2.5}
-        }
-      },
-      /*{
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "invisible"},
-          "type": {"value": "cover"}
+          "time": {"value": 0.5}
         }
       },
       {
-        "title": "burstParticleEmitter",
+        "title": "setParticleEmitterActive",
         "type": "action",
-        "name": "burstParticleEmitter",
+        "name": "setParticleEmitterActive",
         "parameters": {
-          "emitter": {"value": "shellburst"}
+          "active": {"value": true},
+          "emitter": {"value": "spawneye1"}
         }
       },
       {
-        "title": "playSound",
+        "title": "timer",
         "type": "action",
-        "name": "playSound",
+        "name": "timer",
         "parameters": {
-          "sound": {"value": "shellBurst"}
+          "time": {"value": 1.5}
         }
-      },*/
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": true},
+          "emitter": {"value": "spawneye2"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": false},
+          "emitter": {"value": "spawneye1"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
+        }
+      },
       {
         "title": "offsetPosition",
         "type": "action",
         "name": "offsetPosition",
         "parameters": {
-          "offset": {"value": [-3.9375, 0]},
+          "offset": {"value": [-6, 0]},
           "position": {"key": "self"}
         },
         "output": {
@@ -149,6 +175,15 @@
           "type": {"value": "abyssartifactboss2healthbar_es"},
           "position": {"key": "self"},
           "parameters": {"value": {}}
+        }
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": false},
+          "emitter": {"value": "spawneye2"}
         }
       },
       {

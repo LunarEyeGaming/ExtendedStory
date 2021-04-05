@@ -54,7 +54,7 @@
       "allowFlip" : true
     },
     "charge" : {
-      "duration" : 0.6,
+      "duration" : 1.5,
       "armRotation" : 20,
       "weaponRotation" : -20,
       "twoHanded" : true,
@@ -94,16 +94,31 @@
 
   "primaryAbilityType" : "elementorb",
   "primaryAbility" : {
-    "name" : "^red;Terrain Breaker", 
-	"projectileType" : "destroyerstaff1",
-	"projectileParameters" : {}
+    "name" : "^red;Destruction Shower", 
+    "projectileType" : "delayprojectile",
+    "energyCost" : 100,
+    "projectileParameters" : {
+      "baseDamage" : 1,
+      "timeToLive" : 0,
+      "actionOnReap" : [
+        {
+          "action" : "projectile",
+          "type" : "destroyerstaff1b",
+          "direction" : [0, 1],
+          "inheritDamageFactor" : 1
+        }
+      ]
+    }
   },
 
   "altAbilityType" : "elementorb",
   "altAbility" : {
     "name" : "^red;Destroyer Wyrm", 
-	"projectileType" : "destroyerstaff2", 
-	"projectileParameters" : {}
+    "projectileType" : "destroyerstaff2",
+    "energyCost" : 100, 
+    "projectileParameters" : {
+      "baseDamage" : 5
+    }
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

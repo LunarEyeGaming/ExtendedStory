@@ -15,21 +15,21 @@
   "damageKind" : "default",
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "orbitalup",
-	  "angle" : 0,
-	  "offset" : [ 0.0, 1.0 ],
-	  "config" : {
-	    "onlyHitTerrain" : true,
-		"timeToLive" : 0,
-		"speed" : 0,
-		"actionOnReap" : [
-		  {
-		    "action" : "config",
-		    "file" : "/projectiles/explosions/solariumexplosion/solariumexplosion.config"
-		  }
-		]
-	  }
-	}
+      "action" : "projectile",
+      "type" : "orbitalup",
+      "angle" : 0,
+      "offset" : [ 0.0, 1.0 ],
+      "config" : {
+        "onlyHitTerrain" : true,
+        "timeToLive" : 0,
+        "speed" : 0,
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/solariumexplosion/solariumexplosion.config"
+          }
+        ]
+      }
+    }
   ]
 }

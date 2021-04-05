@@ -2,7 +2,7 @@
   "projectileName" : "largefireball",
   "physics" : "grenadezbomb",
   "bounces" : 0,
-  "image" : "largefireball.png:0",
+  "image" : "largefireball.png",
   "animationCycle" : 1,
   "fullbright" : true,
   "lightColor" : [253, 160, 57],
@@ -15,7 +15,7 @@
       "rotate" : true,
       "specification" : {
         "type" : "textured",
-        "image" : "/projectiles/weather/largefireball/largefireball.png:1",
+        "image" : "/projectiles/weather/largefireball/largefireball.png",
         "position" : [0, 0],
         "layer" : "back",
         "timeToLive" : 0.0,

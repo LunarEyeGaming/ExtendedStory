@@ -7,7 +7,7 @@ ChargeFire = WeaponAbility:new()
 function ChargeFire:init()
   self.weapon:setStance(self.stances.idle)
 
-  self.cooldownTimer = 0
+  storage.cooldownTimer = storage.cooldownTimer or 0
   self.chargeTimer = 0
 
   self.weapon.onLeaveAbility = function()
@@ -18,19 +18,15 @@ end
 function ChargeFire:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
-  self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
+  storage.cooldownTimer = math.max(0, storage.cooldownTimer - self.dt)
 
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
-    and self.cooldownTimer == 0
+    and storage.cooldownTimer == 0
     and not self.weapon.currentAbility
     and not world.lineTileCollision(mcontroller.position(), self:firePosition())
     and not status.resourceLocked("energy") then
 
     self:setState(self.charge)
-  end
-  local chargeTime = self.chargeTimer
-  if chargeTime == 2.0 then
-    self:setState(self.fire)
   end
 end
 
@@ -57,8 +53,7 @@ end
 function ChargeFire:fire()
   if world.lineTileCollision(mcontroller.position(), self:firePosition()) then
     animator.setAnimationState("firing", "off")
-    self.cooldownTimer = self.chargeLevel.cooldown or 0
-    self:setState(self.cooldown, self.cooldownTimer)
+    self:setState(self.cooldown, self.chargeLevel.stanceCooldown or 0)
     return
   end
 
@@ -73,9 +68,9 @@ function ChargeFire:fire()
     util.wait(self.stances.fire.duration)
   end
 
-  self.cooldownTimer = self.chargeLevel.cooldown or 0
+  storage.cooldownTimer = self.chargeLevel.cooldown or 0
 
-  self:setState(self.cooldown, self.cooldownTimer)
+  self:setState(self.cooldown, self.chargeLevel.stanceCooldown or 0)
 end
 
 function ChargeFire:cooldown(duration)

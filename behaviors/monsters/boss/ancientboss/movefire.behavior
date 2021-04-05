@@ -13,14 +13,15 @@
   ],
   "parameters": {
     "position": [650, 650],
-	"projectileInterval": 1,
-	"flightSpeed": 10,
-	"projectileType": "delayedplasmashot",
-	"projectileOffset": [0, -5],
-	"projectileConfig": {},
-	"aimVector": [1, 0],
-	"fireSound": "fire",
-	"durationLimit": 0
+    "projectileInterval": 1,
+    "flightSpeed": 10,
+    "projectileType": "delayedplasmashot",
+    "projectileOffset": [0, -5],
+    "projectileConfig": {},
+    "aimVector": [1, 0],
+    "fireSound": "fire",
+    "durationLimit": 0,
+    "trackSource": false
   },
   "root": {
     "title": "sequence",
@@ -28,64 +29,64 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "flyToPosition",
-			"type": "action",
-			"name": "flyToPosition",
-			"parameters": {
-			  "position": {"key": "<position>"},
-			  "speed": {"key": "<flightSpeed>"}
-			}
-		  },
-		  {
-		    "title": "sequence",
-			"type": "composite",
-			"name": "sequence",
-			"parameters": {},
-			"children": [
-			  {
-			    "title": "greaterThan",
-				"type": "action",
-				"name": "greaterThan",
-				"parameters": {
-				  "first": {"key": "<durationLimit>"},
-				  "second": {"value": 0}
-				}
-			  },
-			  {
-			    "title": "timer",
-				"type": "action",
-				"name": "timer",
-				"parameters": {
-				  "time": {"key": "<durationLimit>"}
-				}
-			  }
-			]
-		  },
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-    		      "title": "spawnProjectile",
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "<position>"},
+              "speed": {"key": "<flightSpeed>"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "greaterThan",
+                "type": "action",
+                "name": "greaterThan",
+                "parameters": {
+                  "first": {"key": "<durationLimit>"},
+                  "second": {"value": 0}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"key": "<durationLimit>"}
+                }
+              }
+            ]
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
@@ -96,30 +97,30 @@
                     "projectileType": {"key": "<projectileType>"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
-                    "trackSource": {"value": false}
+                    "trackSource": {"key": "<trackSource>"}
                   }
                 },
-				{
-				  "title": "playSound",
-				  "type": "action",
-				  "name": "playSound",
-				  "parameters": {
-				    "sound": {"key": "<fireSound>"}
-				  }
-				},
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"key": "<projectileInterval>"}
-				  }
-				}
-			  ]
-			}
-		  }
-		]
-	  }
+                {
+                  "title": "playSound",
+                  "type": "action",
+                  "name": "playSound",
+                  "parameters": {
+                    "sound": {"key": "<fireSound>"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"key": "<projectileInterval>"}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
     ]
   }
 }

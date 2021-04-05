@@ -1,8 +1,7 @@
 {
   "input" : [
     { "item" : "darkmatterbar", "count" : 10 },
-	{ "item" : "ironbar", "count" : 20 },
-	{ "item" : "solariumstar", "count" : 5 }
+    { "item" : "ironbar", "count" : 20 }
   ],
   "output" : { "item" : "darkmatterpickaxe", "count" : 1 },
   "groups" : [ "ancientforge", "weapons", "all" ]

@@ -9,124 +9,124 @@
   "piercing" : true,
   "periodicActions" : [
     {
-	  "time" : 0.01,
+      "time" : 0.01,
       "action" : "projectile",
-	  "type" : "antimatterbeamimpact_es",
-	  "fuzzAngle" : 180
+      "type" : "antimatterbeamimpact_es",
+      "fuzzAngle" : 180
     },
-	{
-	  "time" : 0.0,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
-	}
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
+    }
   ],
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "invisibleprojectile",
-	  "config" : {
-	    "damageTeam" : { "type" : "friendly" },
-	    "power" : 0,
-	    "bounces" : -1,
-	    "piercing" : true,
-	    "periodicActions" : [
-	      {
-	        "time" : 0,
-	        "repeat" : false,
-	        "action" : "projectile",
-	        "type" : "antimatterexplosion_es",
-	        "angle" : 90,
-	        "fuzzAngle" : 180,
-	        "config" : {
-	          "piercing" : true,
-	          "bounces" : -1,
-	          "speed" : 0, 
-	          "processing" : "?scalenearest;10;10"
-	        }
-	      },
-	      {
-	        "time" : 0,
-	        "repeat" : false,
-	        "action" : "sound",
-	        "options" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ]
-	      },
-	      {
-	        "time" : 0,
-	        "repeat" : false,
-	        "action" : "loop",
-	        "count" : 10,
-	        "body" : [
-	          {
-	            "action" : "projectile",
-	            "type" : "antimatterexplosionsmall_es",
-	            "angle" : 90,
-	            "fuzzAngle" : 180,
-	            "offsetRange" : [ -5, -5, 5, 5 ]
-	          }
-	        ]
-	      },
-	      {
-	        "time" : 0.3,
-	        "repeat" : false,
-	        "action" : "projectile",
-	        "type" : "antimatterexplosion_es",
-	        "angle" : 90,
-	        "fuzzAngle" : 180,
-	        "config" : {
-	          "piercing" : true,
-	          "bounces" : -1,
-	          "speed" : 0, 
-	          "processing" : "?scalenearest;10;10"
-	        }
-	      },
-	      {
-	        "time" : 0.2,
-	        "repeat" : false,
-	        "action" : "loop",
-	        "count" : 10,
-	        "body" : [
-	          {
-	            "action" : "projectile",
-	            "type" : "antimatterexplosionsmall_es",
-	            "angle" : 90,
-	            "fuzzAngle" : 180,
-	            "offsetRange" : [ -10, -10, 10, 10 ]
-	          }
-	        ]
-	      },
-	      {
-	        "time" : 0.1,
-	        "repeat" : false,
-	        "action" : "projectile",
-	        "type" : "antimatterexplosion_es",
-	        "angle" : 90,
-	        "fuzzAngle" : 180,
-	        "config" : {
-	          "piercing" : true,
-	          "bounces" : -1,
-	          "speed" : 0, 
-	          "processing" : "?scalenearest;10;10"
-	        }
-	      },
-	      {
-	        "time" : 0.4,
-	        "repeat" : false,
-	        "action" : "loop",
-	        "count" : 10,
-	        "body" : [
-	          {
-	            "action" : "projectile",
-	            "type" : "antimatterexplosionsmall_es",
-	            "angle" : 90,
-	            "fuzzAngle" : 180,
-	            "offsetRange" : [ -20, -20, 20, 20 ]
-	          }
-	        ]
-	      }
-	    ]
-	  }
-	}
+      "action" : "projectile",
+      "type" : "invisibleprojectile",
+      "config" : {
+        "damageTeam" : { "type" : "friendly" },
+        "power" : 0,
+        "bounces" : -1,
+        "piercing" : true,
+        "periodicActions" : [
+          {
+            "time" : 0,
+            "repeat" : false,
+            "action" : "projectile",
+            "type" : "antimatterexplosion_es",
+            "angle" : 90,
+            "fuzzAngle" : 180,
+            "config" : {
+              "piercing" : true,
+              "bounces" : -1,
+              "speed" : 0, 
+              "processing" : "?scalenearest;10;10"
+            }
+          },
+          {
+            "time" : 0,
+            "repeat" : false,
+            "action" : "sound",
+            "options" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ]
+          },
+          {
+            "time" : 0,
+            "repeat" : false,
+            "action" : "loop",
+            "count" : 10,
+            "body" : [
+              {
+                "action" : "projectile",
+                "type" : "antimatterexplosionsmall_es",
+                "angle" : 90,
+                "fuzzAngle" : 180,
+                "offsetRange" : [ -5, -5, 5, 5 ]
+              }
+            ]
+          },
+          {
+            "time" : 0.3,
+            "repeat" : false,
+            "action" : "projectile",
+            "type" : "antimatterexplosion_es",
+            "angle" : 90,
+            "fuzzAngle" : 180,
+            "config" : {
+              "piercing" : true,
+              "bounces" : -1,
+              "speed" : 0, 
+              "processing" : "?scalenearest;10;10"
+            }
+          },
+          {
+            "time" : 0.2,
+            "repeat" : false,
+            "action" : "loop",
+            "count" : 10,
+            "body" : [
+              {
+                "action" : "projectile",
+                "type" : "antimatterexplosionsmall_es",
+                "angle" : 90,
+                "fuzzAngle" : 180,
+                "offsetRange" : [ -10, -10, 10, 10 ]
+              }
+            ]
+          },
+          {
+            "time" : 0.1,
+            "repeat" : false,
+            "action" : "projectile",
+            "type" : "antimatterexplosion_es",
+            "angle" : 90,
+            "fuzzAngle" : 180,
+            "config" : {
+              "piercing" : true,
+              "bounces" : -1,
+              "speed" : 0, 
+              "processing" : "?scalenearest;10;10"
+            }
+          },
+          {
+            "time" : 0.4,
+            "repeat" : false,
+            "action" : "loop",
+            "count" : 10,
+            "body" : [
+              {
+                "action" : "projectile",
+                "type" : "antimatterexplosionsmall_es",
+                "angle" : 90,
+                "fuzzAngle" : 180,
+                "offsetRange" : [ -20, -20, 20, 20 ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   ],
   "damageKind" : "plasma"
 }

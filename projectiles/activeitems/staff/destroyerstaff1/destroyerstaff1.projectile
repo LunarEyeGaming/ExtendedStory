@@ -8,24 +8,24 @@
   "frameNumber" : 4,
   "periodicActions" : [
     {
-	  "time" : 5,
-	  "repeat" : false,
-	  "action" : "projectile",
-	  "type" : "redpulsecannonexplosion"
-	}
+      "time" : 5,
+      "repeat" : false,
+      "action" : "projectile",
+      "type" : "redpulsecannonexplosion"
+    }
   ],
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "destroyerstaff1b",
-	  "direction" : [0, 1]
-	}
+      "action" : "projectile",
+      "type" : "destroyerstaff1b",
+      "direction" : [0, 1],
+      "inheritDamageFactor" : 1
+    }
   ],
   "speed" : 0,
   "power" : 30,
   "damageKind" : "plasma",
-  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
-  "damageRepeatTimeout" : 0.25,
+  "damageType" : "NoDamage",
 
   "orientationLocked" : true,
   "fullbright" : true,
@@ -36,7 +36,7 @@
   "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
 
   "controlMovement" : {
-    "maxSpeed" : 100,
+    "maxSpeed" : 50,
     "controlForce" : 500
   }
 }

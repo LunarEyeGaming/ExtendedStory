@@ -12,7 +12,8 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/monster.lua",
+      "/monsters/mission/truedestroyerminioncap_es.lua"
     ],
 
     "behavior" : "monster",
@@ -53,9 +54,9 @@
             "projectileType" : "redplasmashot",
             "projectileParameters" : {
               "speed" : 60,
-              "timeToLive" : 8
+              "timeToLive" : 8,
+              "power" : 5
             },
-            "power" : 2,
             "fireOffset" : [0.0, 0.0],
             "aimAtTarget" : true,
             "inaccuracy" : 0.0,
@@ -163,7 +164,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 3
+          "baseValue" : 15
         },
         "protection" : {
           "baseValue" : 0.0

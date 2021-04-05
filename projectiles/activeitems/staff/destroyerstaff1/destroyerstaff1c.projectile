@@ -9,22 +9,22 @@
   ],
   "actionOnReap" : [
     {
-	  "action" : "loop",
-	  "count" : 20,
-	  "body" : [
-	    {
-		  "action" : "projectile",
-		  "type" : "explosivelasershot",
-		  "fuzzAngle" : 180,
-		  "inheritDamageFactor" : 1,
-		  "config" : {
-		    "piercing" : true,
-			"periodicActions" : [],
-			"timeToLive" : 10
-		  }
-		}
-	  ]
-	}
+      "action" : "loop",
+      "count" : 20,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "explosivelasershot",
+          "fuzzAngle" : 180,
+          "inheritDamageFactor" : 1,
+          "config" : {
+            "piercing" : true,
+            "periodicActions" : [],
+            "timeToLive" : 10
+          }
+        }
+      ]
+    }
   ],
   "speed" : 50,
   "power" : 10,

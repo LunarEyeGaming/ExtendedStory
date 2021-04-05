@@ -20,7 +20,7 @@
   "animationParts" : {
     "gun" : "solariumfusioncannon.png",
     "gunfullbright" : "solariumfusioncannonunlit.png",
-	"energycarrier" : "energycarrier.png"
+    "energycarrier" : "energycarrier.png"
   },
   "animationCustom" : {
   },
@@ -50,7 +50,8 @@
       {
         "time" : 2.0,
         "energyCost" : 9999999,
-        "cooldown" : 2.2,
+        "cooldown" : 60.0,
+        "stanceCooldown" : 2.2,
         "projectileType" : "solariumfusioncannonshot",
         "projectileCount" : 1,
         "inaccuracy" : 0,
@@ -67,10 +68,10 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-		
-		"animationStates" : {
-		  "energycarrier" : "idle"
-		}
+        
+        "animationStates" : {
+          "energycarrier" : "idle"
+        }
       },
       "charge" : {
         "armRotation" : 0,
@@ -88,10 +89,10 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		
-		"animationStates" : {
-		  "energycarrier" : "off"
-		}
+        
+        "animationStates" : {
+          "energycarrier" : "off"
+        }
       },
       "cooldown" : {
         "duration" : 2.2,
@@ -110,12 +111,12 @@
       "physical" : { "name" : "Solarium Mine Burst", "projectileType" : "solariummine"}
     },
     "energyUsage" : 20,
-	"baseDps" : 20,
-	"burstCount" : 3,
-	"inaccuracy" : 0.1,
-	"burstTime" : 0.05,
-	"fireType" : "burst",
-	"fireTime" : 1.0
+    "baseDps" : 20,
+    "burstCount" : 3,
+    "inaccuracy" : 0.1,
+    "burstTime" : 0.05,
+    "fireType" : "burst",
+    "fireTime" : 1.0
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

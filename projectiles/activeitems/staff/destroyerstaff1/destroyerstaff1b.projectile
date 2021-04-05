@@ -8,36 +8,21 @@
   "frameNumber" : 4,
   "periodicActions" : [
     {
-	  "time" : 0.05,
-	  "action" : "projectile",
-	  "type" : "explosivelasershot",
-	  "direction" : [0, -1],
-	  "offsetRange" : [-20, 0, 20, 0],
-	  "inheritDamageFactor" : 0.1,
-	  "config" : {
-	    "speed" : 100
-	  }
-	}
-  ],
-  "actionOnReap" : [
-    {
-	  "action" : "loop",
-	  "count" : 10,
-	  "body" : [
-	    {
-		  "action" : "projectile",
-		  "type" : "destroyerstaff1c",
-		  "inheritDamageFactor" : 0.1,
-		  "fuzzAngle" : 180
-		}
-	  ]
-	}
+      "time" : 0.05,
+      "action" : "projectile",
+      "type" : "destroyerplasmashotplayer_es",
+      "direction" : [0, -1],
+      "offsetRange" : [-20, 0, 20, 0],
+      "inheritDamageFactor" : 1.0,
+      "config" : {
+        "speed" : 100
+      }
+    }
   ],
   "speed" : 50,
   "power" : 30,
   "damageKind" : "plasma",
-  "damagePoly" : [ [-10, 0], [-7, -7], [0, -10], [7, -7], [10, 0], [7, 7], [0, 10], [-7, 7] ],
-  "damageRepeatTimeout" : 0.25,
+  "damageType" : "NoDamage",
 
   "orientationLocked" : true,
   "fullbright" : true,

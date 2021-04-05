@@ -65,14 +65,13 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {
-        "projectileType" : "destroyershot"
+        "projectileType" : "destroyerorbplayer_es"
       }
     },
     "projectileParameters" : {
-      "speed" : 35,
-      "power" : 400
+      "speed" : 35
     },
-    "baseDps" : 20
+    "baseDps" : 10
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

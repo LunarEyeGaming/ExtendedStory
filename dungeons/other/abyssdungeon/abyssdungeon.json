@@ -389,6 +389,14 @@
                  "height":8,
                  "id":3127,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"projectileConfig\" : {\"speed\" : 30}}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -4925,6 +4933,14 @@
                  "height":16,
                  "id":4039,
                  "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"delay\" : 0.3}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -6551,7 +6567,7 @@
                  "y":1800
                 }, 
                 {
-                 "gid":8946,
+                 "gid":8947,
                  "height":16,
                  "id":4360,
                  "name":"",
@@ -6571,7 +6587,7 @@
                  "y":1992
                 }, 
                 {
-                 "gid":8945,
+                 "gid":8946,
                  "height":16,
                  "id":4361,
                  "name":"",
@@ -8315,7 +8331,7 @@
                  "y":1872
                 }, 
                 {
-                 "gid":8945,
+                 "gid":8946,
                  "height":16,
                  "id":4521,
                  "name":"",
@@ -8335,7 +8351,7 @@
                  "y":1544
                 }, 
                 {
-                 "gid":8944,
+                 "gid":8945,
                  "height":16,
                  "id":4522,
                  "name":"",
@@ -14802,7 +14818,7 @@
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-darkabyss.json"
         }, 
         {
-         "firstgid":8903,
+         "firstgid":8904,
          "source":"..\/..\/..\/tilesets\/objects\/extendedstoryobjects-other.json"
         }],
  "tilewidth":8,

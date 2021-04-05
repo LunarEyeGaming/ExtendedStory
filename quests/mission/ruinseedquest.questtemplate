@@ -29,14 +29,13 @@
     "bossUid" : "ruinamalgamation",
 
     "brainMessageHeight" : 400,
-	"showTech" : [
-	  "quickblink",
-	  "jumpsphere",
-	  "multijump4_es"
-	],
+    "showTech" : [
+      "quickblink",
+      "jumpsphere"
+    ],
 
     "warpAction" : "InstanceWorld:outpost",
-	"associatedMission" : "ruinseedmission",
-	"missionUnlockedCinema" : "/cinematics/coordinates.cinematic"
+    "associatedMission" : "ruinseedmission",
+    "missionUnlockedCinema" : "/cinematics/coordinates.cinematic"
   }
 }

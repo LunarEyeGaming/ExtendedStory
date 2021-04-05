@@ -410,12 +410,30 @@
   "ancientmessTreasure" : [
     [1, {
       "pool" : [
-        {"weight" : 0.500, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.200, "item" : ["ancientfragment", 1]},
-        {"weight" : 0.100, "item" : ["ancientfragment", 2]},
-        {"weight" : 0.080, "item" : ["ancientfragment", 3]},
-        {"weight" : 0.070, "item" : ["ancientfragment", 4]},
-        {"weight" : 0.050, "item" : ["ancientfragment", 5]}
+        {"weight" : 0.250, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : ["ancientfragment", 1]},
+        {"weight" : 0.250, "item" : ["ancientfragment", 2]},
+        {"weight" : 0.250, "item" : ["ancientfragment", 3]},
+        {"weight" : 0.080, "item" : ["ancientfragment", 4]},
+        {"weight" : 0.070, "item" : ["ancientfragment", 5]}
+      ],
+      "poolRounds" : [
+        [0.20, 0],
+        [0.80, 1]
+      ],
+      "allowDuplication" : false
+    }]
+  ],
+
+  "ancientmessTreasure2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.250, "pool" : "noMeatMonsterTreasure"},
+        {"weight" : 0.100, "item" : ["ancientfragment", 6]},
+        {"weight" : 0.250, "item" : ["ancientfragment", 7]},
+        {"weight" : 0.250, "item" : ["ancientfragment", 8]},
+        {"weight" : 0.080, "item" : ["ancientfragment", 9]},
+        {"weight" : 0.070, "item" : ["ancientfragment", 10]}
       ],
       "poolRounds" : [
         [0.20, 0],

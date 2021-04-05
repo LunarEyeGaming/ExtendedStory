@@ -7,6 +7,7 @@ function init()
   self.projectile = config.getParameter("orbiterProjectile")
   self.projectileConfig = config.getParameter("orbiterProjectileConfig")
   self.projectileConfig.power = self.projectileConfig.power or projectile.power()
+  self.projectileConfig.powerMultiplier = self.projectileConfig.powerMultiplier or projectile.powerMultiplier()
   self.projectileConfig.masterId = entity.id()
 
   self.orbiters = {}

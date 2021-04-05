@@ -7,23 +7,48 @@
     "scripts" : [ "/monsters/boss/destroyer/skills/destroyerSprayNPrayAttack.lua" ],
 
     "destroyerSprayNPrayAttack" : {
-      "skillTime": 10,
+      "skillTime" : 7,
       "bobTime" : 2,
       "bobHeight" : 3,
 
-      "projectileOffset" : [0, -4],
-      "fireInterval" : 0.1,
+      "projectileOffset" : [0, 0],
+      "fireInterval" : 0.3,
       "projectile" : {
-        "type" : "genericlaser",
+        "type" : "delayprojectile",
         "config" : {
-          "speed" : 40,
+          "speed" : 0,
           "power" : 10,
-          "periodicActions" : [
+          "timeToLive" : 0,
+          "actionOnReap" : [
             {
-              "time" : 0,
-              "repeat" : false,
               "action" : "sound",
               "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+            },
+            {
+              "action" : "projectile",
+              "type" : "genericlaser",
+              "inheritDamageFactor" : 1,
+              "config" : {
+                "speed" : 50
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "genericlaser",
+              "inheritDamageFactor" : 1,
+              "angleAdjust" : 30,
+              "config" : {
+                "speed" : 50
+              }
+            },
+            {
+              "action" : "projectile",
+              "type" : "genericlaser",
+              "inheritDamageFactor" : 1,
+              "angleAdjust" : -30,
+              "config" : {
+                "speed" : 50
+              }
             }
           ]
         }

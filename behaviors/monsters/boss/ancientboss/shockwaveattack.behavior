@@ -24,10 +24,10 @@
         "type": "action",
         "name": "stopAllSounds",
         "parameters": {
-		  "sound": {"value": "stunned"}
-		}
+          "sound": {"value": "stunned"}
+        }
       },
-	  {
+      {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -43,23 +43,6 @@
           "time": {"value": 1.2}
         }
       },
-	  {
-		"title": "flyToPosition",
-		"type": "action",
-		"name": "flyToPosition",
-		"parameters": {
-		  "position": {"key": "spawn"},
-		  "speed": {"value": 50}
-		}
-	  },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
-        }
-      },
       {
         "title": "repeater",
         "type": "decorator",
@@ -67,42 +50,109 @@
         "parameters": {
           "maxLoops": {"value": 7}
         },
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [0, -1]},
-    	        "offset": {"value": [0, -5]},
-    	        "projectileConfig": {"value": {"power": 20}},
-    	        "projectileType": {"value": "ancientboss_shockwavetorpedo"},
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "parallel",
+              "type": "composite",
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": 2}
+              },
+              "children": [
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "entityPosition",
+                      "type": "action",
+                      "name": "entityPosition",
+                      "parameters": {
+                        "entity": {"key": "target"}
+                      },
+                      "output": {
+                        "position": "targetPos"
+                      }
+                    },
+                    {
+                      "title": "offsetPosition",
+                      "type": "action",
+                      "name": "offsetPosition",
+                      "parameters": {
+                        "offset": {"value": [0, 20]},
+                        "position": {"key": "targetPos"}
+                      },
+                      "output": {
+                        "position": "firePos"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "flyToPosition",
+                  "type": "action",
+                  "name": "flyToPosition",
+                  "parameters": {
+                    "position": {"key": "firePos"},
+                    "speed": {"value": 50}
+                  }
+                }
+              ]
+            },
+            {
+              "title": "setVelocity",
+              "type": "action",
+              "name": "setVelocity",
+              "parameters": {
+                "velocity": {"value": [0, 0]}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.1}
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [0, -1]},
+                "offset": {"value": [0, -5]},
+                "projectileConfig": {"value": {"power": 20}},
+                "projectileType": {"value": "ancientboss_shockwavetorpedo"},
                 "scalePower": {"value": true}
-    	      }
-    	    },
-			{
-			  "title": "playSound",
-			  "type": "action",
-			  "name": "playSound",
-			  "parameters": {
-			    "sound": {"value": "minionspawn1"}
-			  }
-			},
-    	    {
-    	      "title": "timer",
-    	      "type": "action",
-    	      "name": "timer",
-    	      "parameters": {
-    	        "time": {"value": 1.0}
-    	      }
-    	    }
-		  ]
-		}
+              }
+            },
+            {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "minionspawn1"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.9}
+              }
+            }
+          ]
+        }
       },
       {
         "title": "timer",
