@@ -3,14 +3,28 @@
   "physics" : "laser",
   "bounces" : 0,
   "timeToLive" : 20,
-  "image" : "abyssvortex.png",
+  "image" : "abyssvortex2.png",
   "damageKindImage" : "icon.png",
   "speed" : 100,
   "animationCycle" : 0.4,
   "lightColor" : [10, 10, 10],
   "frameNumber" : 4,
-  "power" : 50,
-  "damageKind" : "abyss",
-  "damagePoly" : [ [8, 0], [6, 6], [0, 8], [-6, 6], [-8, 0], [-6, -6], [0, -8], [6, -6] ],
-  "fullbright" : true
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "fullbright" : true,
+
+  "persistentStatusEffects" : ["abyssvortexmovement_es"],
+  "statusEffectArea" : [ [-10.0, 0], [-6.7, -6.7], [0, -10.0], [6.7, -6.7], [10.0, 0], [6.7, 6.7], [0, 10.0], [-6.7, 6.7] ],
+
+  "boundBox" : [-10, -10, 10, 10],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -18,
+      "controlForce" : 2000,
+      "categoryWhitelist" : ["player"]
+    }
+  }
 }

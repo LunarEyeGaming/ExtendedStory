@@ -12,155 +12,275 @@
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/boss/ancientboss.lua"
   ],
-  "parameters": {},
+  "parameters": {
+    "offset1": [-20, 25],
+    "offset2": [20, 25],
+    "sweeps": 5
+  },
   "root": {
-    "title": "sequence",
-    "type": "composite",
-    "name": "sequence",
-    "parameters": {},
-    "children": [
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "sweepStart"}
-		},
-		"output": {
-		  "position": "sweepStartPos"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "target"}
-		},
-		"output": {
-		  "position": "targetPos"
-		}
-	  },
-	  {
-		"title": "offsetPosition",
-		"type": "action",
-		"name": "offsetPosition",
-		"parameters": {
-		  "position": {"key": "targetPos"},
-		  "offset": {"value": [20, 25]}
-		},
-		"output": {
-		  "position": "sweepStartPos"
-		}
-	  },
-	  {
-		"title": "offsetPosition",
-		"type": "action",
-		"name": "offsetPosition",
-		"parameters": {
-		  "position": {"key": "targetPos"},
-		  "offset": {"value": [-20, 25]}
-		},
-		"output": {
-		  "position": "sweepEndPos"
-		}
-	  },
-	  {
-	    "title": "esmodules-failsafeflight",
-		"type": "module",
-		"name": "esmodules-failsafeflight",
-		"parameters": {
-		  "position": {"key": "sweepStartPos"},
-		  "speed": {"value": 50},
-		  "durationLimit": {"value": 1}
-		}
-	  },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
+    "title": "repeater",
+    "type": "decorator",
+    "name": "repeater",
+    "parameters": {
+      "maxLoops": {"key": "<sweeps>"}
+    },
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": 2}
+          },
+          "children": [
+            {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "entityPosition",
+                  "type": "action",
+                  "name": "entityPosition",
+                  "parameters": {
+                    "entity": {"key": "target"}
+                  },
+                  "output": {
+                    "position": "targetPos"
+                  }
+                },
+                {
+                  "title": "selector",
+                  "type": "composite",
+                  "name": "selector",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "optional",
+                      "type": "decorator",
+                      "name": "optional",
+                      "parameters": {
+                        "shouldRun": {"key": "reversedSweep"}
+                      },
+                      "child": {
+                        "title": "offsetPosition",
+                        "type": "action",
+                        "name": "offsetPosition",
+                        "parameters": {
+                          "position": {"key": "targetPos"},
+                          "offset": {"key": "<offset2>"}
+                        },
+                        "output": {
+                          "position": "sweepStartPos"
+                        }
+                      }
+                    },
+                    {
+                      "title": "offsetPosition",
+                      "type": "action",
+                      "name": "offsetPosition",
+                      "parameters": {
+                        "position": {"key": "targetPos"},
+                        "offset": {"key": "<offset1>"}
+                      },
+                      "output": {
+                        "position": "sweepStartPos"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "esmodules-failsafeflight",
+              "type": "module",
+              "name": "esmodules-failsafeflight",
+              "parameters": {
+                "position": {"key": "sweepStartPos"},
+                "speed": {"value": 50},
+                "durationLimit": {"value": 1}
+              }
+            }
+          ]
+        },
+        {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, 0]}
+          }
+        },
+        {
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": 1}
+          },
+          "children": [
+            {
+              "title": "repeater",
+              "type": "decorator",
+              "name": "repeater",
+              "parameters": {
+                "maxLoops": {"value": -1}
+              },
+              "child": {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "entityDirection",
+                    "type": "action",
+                    "name": "entityDirection",
+                    "parameters": {
+                      "target": {"key": "target"}
+                    },
+                    "output": {
+                      "vector": "aimVector"
+                    }
+                  },
+                  {
+                    "title": "entityPosition",
+                    "type": "action",
+                    "name": "entityPosition",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    },
+                    "output": {
+                      "position": "targetPos"
+                    }
+                  },
+                  {
+                    "title": "selector",
+                    "type": "composite",
+                    "name": "selector",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "optional",
+                        "type": "decorator",
+                        "name": "optional",
+                        "parameters": {
+                          "shouldRun": {"key": "reversedSweep"}
+                        },
+                        "child": {
+                          "title": "offsetPosition",
+                          "type": "action",
+                          "name": "offsetPosition",
+                          "parameters": {
+                            "position": {"key": "targetPos"},
+                            "offset": {"key": "<offset1>"}
+                          },
+                          "output": {
+                            "position": "sweepEndPos"
+                          }
+                        }
+                      },
+                      {
+                        "title": "offsetPosition",
+                        "type": "action",
+                        "name": "offsetPosition",
+                        "parameters": {
+                          "position": {"key": "targetPos"},
+                          "offset": {"key": "<offset2>"}
+                        },
+                        "output": {
+                          "position": "sweepEndPos"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.01}
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "ancientboss-movefire",
+              "type": "module",
+              "name": "ancientboss-movefire",
+              "parameters": {
+                "position": {"key": "sweepEndPos"},
+                "flightSpeed": {"value": 70},
+                "projectileInterval": {"value": 0.3},
+                "projectileType": {"value": "ancientbossdelayedlaserbeam3_es"},
+                //"projectileType": {"value": "ancientbossdelayedlaserbeam_es"},
+                "projectileOffset": {"value": [0, 0]},
+                "projectileConfig": {"value": {"power": 13}},
+                "aimVector": {"key": "aimVector"},
+                "fireSound": {"value": "laserfire"},
+                "durationLimit": {"value": 1.5}
+              }
+            }
+          ]
+        },
+        {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, 0]}
+          }
+        },
+        {
+          "title": "timer",
+          "type": "action",
+          "name": "timer",
+          "parameters": {
+            "time": {"value": 0.5}
+          }
+        },
+        {
+          "title": "selector",
+          "type": "composite",
+          "name": "selector",
+          "parameters": {},
+          "children": [
+            {
+              "title": "optional",
+              "type": "decorator",
+              "name": "optional",
+              "parameters": {
+                "shouldRun": {"key": "reversedSweep"}
+              },
+              "child": {
+                "title": "unsetFlag",
+                "type": "action",
+                "name": "unsetFlag",
+                "parameters": {
+                  "name": {"value": "reversedSweep"}
+                }
+              }
+            },
+            {
+              "title": "setFlag",
+              "type": "action",
+              "name": "setFlag",
+              "parameters": {
+                "name": {"value": "reversedSweep"}
+              }
+            }
+          ]
         }
-      },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
-        	      "title": "entityDirection",
-        	      "type": "action",
-        	      "name": "entityDirection",
-        	      "parameters": {
-        	        "target": {"key": "target"}
-        	      },
-        	      "output": {
-        	        "vector": "aimVector"
-        	      }
-        	    },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.01}
-				  }
-				}
-			  ]
-			}
-		  },
-		  {
-		    "title": "ancientboss-movefire",
-		    "type": "module",
-		    "name": "ancientboss-movefire",
-		    "parameters": {
-		      "position": {"key": "sweepEndPos"},
-		      "flightSpeed": {"value": 25},
-		      "projectileInterval": {"value": 0.1},
-		      "projectileType": {"value": "ancientboss_plasmashot"},
-		      "projectileOffset": {"value": [0, 4]},
-		      "projectileConfig": {"value": {"power": 7}},
-		      "aimVector": {"key": "aimVector"},
-		      "fireSound": {"value": "fire2"},
-		      "durationLimit": {"value": 2}
-		    }
-	      }
-		]
-	  },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.5}
-        }
-      }
-    ]
+      ]
+    }
   }
 }

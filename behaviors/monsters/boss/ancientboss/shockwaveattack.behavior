@@ -97,12 +97,13 @@
                   ]
                 },
                 {
-                  "title": "flyToPosition",
-                  "type": "action",
-                  "name": "flyToPosition",
+                  "title": "esmodules-failsafeflight",
+                  "type": "module",
+                  "name": "esmodules-failsafeflight",
                   "parameters": {
                     "position": {"key": "firePos"},
-                    "speed": {"value": 50}
+                    "speed": {"value": 50},
+                    "durationLimit": {"value": 1.5}
                   }
                 }
               ]

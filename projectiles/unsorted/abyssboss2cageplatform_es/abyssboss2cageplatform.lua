@@ -57,25 +57,25 @@ end
 
 function update(dt)
   --world.debugText("stop1Force = %s", self.stop1Force, mcontroller.position(), "green")
-  if self.stages[self.stage] then
-    updateStages(dt)
-  end
+  updateStages(dt)
   mcontroller.setRotation(0)
 end
 
 function updateStages(dt)
-  self.timer = math.max(0, self.timer - dt)
-  if self.timer == 0 then
-    local endFunc = self.stages[self.stage].endFunc
-    if endFunc then
-      endFunc()
+  if self.stages[self.stage] then
+    self.timer = math.max(0, self.timer - dt)
+    if self.timer == 0 then
+      local endFunc = self.stages[self.stage].endFunc
+      if endFunc then
+        endFunc()
+      end
+      setStage(self.stages[self.stage].nextStage or self.stage + 1)
+      return
     end
-    setStage(self.stages[self.stage].nextStage or self.stage + 1)
-    return
-  end
-  local func = self.stages[self.stage].func
-  if func then
-    func()
+    local func = self.stages[self.stage].func
+    if func then
+      func()
+    end
   end
 end
 

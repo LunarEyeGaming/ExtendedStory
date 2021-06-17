@@ -1,9 +1,12 @@
+
 function init()
   monster.setDeathParticleBurst("deathPoof")
   self.targetRadius = config.getParameter("targetRadius")
   self.targetTypes = config.getParameter("targetTypes")
   self.disappearRadius = config.getParameter("disappearRadius")
+
   self.target = nil
+  self.visible = true
   
   if config.getParameter("uniqueId") then
     monster.setUniqueId(config.getParameter("uniqueId"))
@@ -14,6 +17,14 @@ function init()
   end
 
   message.setHandler("despawn", despawn)
+  
+  message.setHandler("teleport", function(_, _, position)
+    animator.setAnimationState("body", "invisible")
+    self.visible = false
+    mcontroller.setPosition(position)
+  end)
+  
+  monster.setDamageBar(config.getParameter("damageBar", "None"))
 end
 
 function shouldDie()
@@ -21,24 +32,25 @@ function shouldDie()
 end
 
 function update(dt)
-  animator.resetTransformationGroup("body")
-  local entities = queryEntities(self.targetRadius, self.targetTypes)
-  if #entities > 0 then
-    if not self.target or not world.entityExists(self.target) then
-      self.target = entities[1]
-    end
-    local rotationAngle = vec2.angle(world.distance(world.entityPosition(self.target), mcontroller.position()))
-    animator.rotateTransformationGroup("body", rotationAngle)
-  end
   if self.target and world.entityExists(self.target) then
-    if world.magnitude(world.entityPosition(self.target), mcontroller.position()) < self.disappearRadius then
-      status.setResourcePercentage("health", 0.0)
-    end
-    if status.resourcePositive("health") then
-      animator.setAnimationState("body", "idle")
+    local targetPosition = world.entityPosition(self.target)
+    local currentPosition = mcontroller.position()
+    local shouldDisappear = world.magnitude(targetPosition, currentPosition) < self.disappearRadius
+    if self.visible then
+      updateEye(targetPosition)
+      if shouldDisappear then
+        self.visible = false
+        animator.setAnimationState("body", "disappear")
+      end
+    elseif not shouldDisappear then
+      self.visible = true
+      animator.setAnimationState("body", "appear")
     end
   else
-    animator.setAnimationState("body", "invisible")
+    local entities = queryEntities(self.targetRadius, self.targetTypes)
+    if #entities > 0 then
+      self.target = entities[1]
+    end
   end
 end
 
@@ -60,4 +72,10 @@ function queryEntities(radius, types)
   end
   
   return results
+end
+
+function updateEye(lookPosition)
+  animator.resetTransformationGroup("body")
+  local rotationAngle = vec2.angle(world.distance(lookPosition, mcontroller.position()))
+  animator.rotateTransformationGroup("body", rotationAngle)
 end

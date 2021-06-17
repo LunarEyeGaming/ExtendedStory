@@ -1,8 +1,9 @@
 {
-  "name": "ancientboss-resetvisibility",
+  "name": "ancientboss-reset",
   "description": "",
   "scripts": [
-    "/scripts/actions/animator.lua"
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/entity.lua"
   ],
   "parameters": {},
   "root": {
@@ -44,6 +45,14 @@
         "name": "stopAllSounds",
         "parameters": {
           "sound": {"value": "stunned"}
+        }
+      },
+      {
+        "title": "setDamageOnTouch",
+        "type": "action",
+        "name": "setDamageOnTouch",
+        "parameters": {
+          "touchDamage": {"value": false}
         }
       }
     ]

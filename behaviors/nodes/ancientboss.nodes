@@ -5,18 +5,71 @@
     "title": "moveFire",
     "properties": {
       "position": {"type": "position", "key": "self"},
-	  "flightTime": {"type": "number", "value": 1},
-	  "projectileCount": {"type": "number", "value": 1},
+      "flightTime": {"type": "number", "value": 1},
+      "projectileCount": {"type": "number", "value": 1},
       "projectileType": {"type": "string", "value": "\"bullet-4\""},
       "projectileConfig": {"type": "json", "value": {}},
       "projectileOffset": {"type": "vec2", "value": [0, 0]},
-	  "projectileBaseDamage": {"type": "number", "value": 5},
+      "projectileBaseDamage": {"type": "number", "value": 5},
       "aimVector": {"type": "vec2", "value": null}
     },
     "category": "ancientboss",
     "script": "/scripts/actions/boss/ancientboss.lua",
     "output": {
       "projectiles": {"type": "list", "key": null}
+    }
+  },
+  "plasmaSweepTelegraph": {
+    "type": "action",
+    "name": "plasmaSweepTelegraph",
+    "title": "plasmaSweepTelegraph",
+    "properties": {
+      "sweepStartPos": {"type": "position", "key": "self"},
+      "sweepEndPos": {"type": "position", "key": "self"},
+      "fireSpeed": {"type": "number", "value": 1},
+      "fireInterval": {"type": "number", "value": 1},
+      "projTypeMarker": {"type": "string", "value": "\"bullet-4\""},
+      "projTypePointer": {"type": "string", "value": "\"bullet-4\""}
+    },
+    "category": "ancientboss",
+    "script": "/scripts/actions/boss/ancientboss.lua",
+    "output": {}
+  },
+  "spawnGapProjectiles": {
+    "type": "action",
+    "name": "spawnGapProjectiles",
+    "title": "spawnGapProjectiles",
+    "properties": {
+      "areaWidth": {"type": "number", "value": 86},
+      "center": {"type": "position", "key": "self"},
+      "power": {"type": "number", "value": 10},
+      "projectileCount": {"type": "number", "value": 20},
+      "projectileType": {"type": "string", "value": "ancientboss_plasmashotwindup2"},
+      "segmentWidth": {"type": "number", "value": 2},
+      "aimVector": {"type": "vec2", "value": [0, -1]},
+      "spawnInterval": {"type": "number", "value": 0.1},
+      "timeToLive": {"type": "number", "value": null}
+    },
+    "category": "kluexboss",
+    "script": "/scripts/actions/boss/kluexboss.lua",
+    "output": {
+      "projectiles": {"type": "list", "key": null}
+    }
+  },
+  "spawnShieldCores": {
+    "type": "action",
+    "name": "spawnShieldCores",
+    "title": "spawnShieldCores",
+    "properties": {
+      "position1": {"type": "position", "key": "self"},
+      "position2": {"type": "position", "key": "self"},
+      "numRows": {"type": "number", "value": 1},
+      "numCols": {"type": "number", "value": 1}
+    },
+    "category": "ancientboss",
+    "script": "/scripts/actions/boss/ancientboss.lua",
+    "output": {
+      "entities": {"type": "list", "key": null}
     }
   }
 }

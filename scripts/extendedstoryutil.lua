@@ -1,6 +1,6 @@
 -- Utility scripts created by "Void Eye Gaming."
 
--- Certain scripts may not work under specific script contexts due to some tables being unavailable. The legend below is intended to help in knowing when using each function is appropriate.
+-- Certain scripts may not work under specific script contexts due to some built-in tables being unavailable. The legend below is intended to help in knowing when using each function is appropriate.
 -- * = works under any script context
 -- # = requires certain Starbound tables. See each table's documentation for more details at Starbound/doc/lua/ or https://starbounder.org/Modding:Lua/Tables
 

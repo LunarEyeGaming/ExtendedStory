@@ -1,0 +1,22 @@
+{
+  "name" : "abyssvortexmovement_es",
+
+  "effectConfig" : {
+    "flightMovement" : {
+      //"gravityEnabled" : false,
+      "airForce" : 2000,
+      "flySpeed" : 15,
+      "ignorePlatformCollision" : true
+    }
+  },
+  "defaultDuration" : 30,
+
+  "scripts" : [
+    "abyssvortexmovement_es.lua"
+  ],
+
+  "animationConfig" : "abyssvortexmovement_es.animation",
+
+  "label" : "Abyss Vortex Movement",
+  "icon" : "/interface/statuses/haste.png"
+}

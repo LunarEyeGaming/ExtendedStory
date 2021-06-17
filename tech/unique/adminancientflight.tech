@@ -15,10 +15,10 @@
   "animationParts" : {
     "ballGlow" : "ancientflightglow.png",
     "ball" : "ancientflight.png",
-	"up" : "up.png",
-	"right" : "right.png",
-	"down" : "down.png",
-	"left" : "left.png"
+    "up" : "up.png",
+    "right" : "right.png",
+    "down" : "down.png",
+    "left" : "left.png"
   },
 
   "transformedMovementParameters" : {
@@ -28,10 +28,10 @@
     "normalGroundFriction" : 1.5,
     "ambulatingGroundFriction" : 0.2,
     "slopeSlidingFactor" : 3.0,
-	"gravityEnabled" : false,
-	"collisionEnabled" : false,
-	"liquidImpedance" : 0.0,
-	"liquidFriction" : 0.0,
+    "gravityEnabled" : false,
+    "collisionEnabled" : false,
+    "liquidImpedance" : 0.0,
+    "liquidFriction" : 0.0,
 
     "airJumpProfile" : {
       "jumpSpeed" : 16,

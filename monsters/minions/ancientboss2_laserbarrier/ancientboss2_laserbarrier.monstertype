@@ -14,107 +14,16 @@
     "scripts" : [
       "/monsters/monster.lua"
     ],
+    "initialScriptDelta" : 1,
+    "behaviorUpdateDelta" : 1,
 
-    "behavior" : "monster",
-    "deathBehavior" : "monster-death",
+    "behavior" : "ancientboss2_laserbarrier",
 
-    "seeThroughLiquid" : false,
-    "behaviorConfig" : {
-      "damageOnTouch" : false,
-
-      "targetQueryRange" : 100,
-      "targetOnDamage" : true,
-      "keepTargetInSight" : true,
-      "keepTargetInRange" : 100,
-      "targetOutOfSightTime" : 1.0,
-
-      "foundTargetActions" : [
-        {
-		  "name" : "action-animate",
-		  "parameters" : {
-            "stateType" : "mainbody",
-            "state" : "appear",
-            "animationTime" : 0.8
-          }
-		}
-	  ],
-
-      "fleeActions" : [ ],
-
-      "hostileActions" : [
-		{
-          "name" : "action-fire",
-          "cooldown" : 1,
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 100,
-            "minimumRange" : 0,
-            "windupStopForce" : 0,
-            "faceTarget" : false,
-            "rotateToTarget" : false,
-            "windupState" : "windup",
-            "windupTime" : 0.5,
-
-            "projectileType" : "invisibleprojectile",
-            "projectileParameters" : {
-			  "onlyHitTerrain" : true
-            },
-            "fireOffset" : [0, 0],
-            "onGround" : false,
-            "fireState" : "",
-            "fireSound" : "",
-            "projectileCount" : 17,
-            "projectileInterval" : 1.0,
-
-            "winddownStopForce" : 0,
-            "winddownState" : "winddown",
-            "winddownTime" : 0.2
-          }
-        },
-		{
-          "name" : "action-suicide",
-          "cooldown" : 1.0,
-          "parameters" : {
-            "minimumRange" : 0,
-            "maximumRange" : 100,
-            "onGround" : false,
-            "windupTime" : 0.05,
-            "windupStopForce" : 50,
-            "windupState" : ""
-          }
-        }
-	  ],
-
-      "periodicActions" : [ ],
-
-      "approachActions" : [
-        {
-          "name" : "approach-fly"
-        }
-	  ],
-
-      "followActions" : [
-        {
-          "name" : "approach-teleport",
-          "parameters" : {
-          }
-        },
-        {
-          "name" : "approach-fly"
-        }
-      ],
-
-      "wanderActions" : [ ],
-
-      "concurrentActions" : [ ],
-
-      "concurrentHostileActions" : [ ],
-	  "deathActions" : [ ]
-    },
+    "behaviorConfig" : {},
 
     "damageBar" : "None",
-	
-	"damageParts" : {
+    
+    "damageParts" : {
       "laserbeam" : {
         "damage" : 40,
 
@@ -154,10 +63,7 @@
 
     "bodyMaterialKind" : "stone",
 
-    "knockoutTime" : 0.81,
-    "knockoutAnimationStates" : {
-      "damage" : "stunned"
-    },
+    "knockoutTime" : 0.0,
     "deathParticles" : "deathPoof",
     "knockoutEffect" : "",
 
@@ -215,30 +121,30 @@
         "specialStatusImmunity" : {
           "baseValue" : 1.0
         },
-		"poisonResistance" : {
-		  "baseValue" : 1.0
-		},
-		"fireResistance" : {
-		  "baseValue" : 1.0
-		},
-		"iceResistance" : {
-		  "baseValue" : 1.0
-		},
-		"electricResistance" : {
-		  "baseValue" : 1.0
-		},
-		"physicalResistance" : {
-		  "baseValue" : 1.0
-		},
-		"ionResistance" : {
-		  "baseValue" : 1.0
-		},
-		"abyssResistance" : {
-		  "baseValue" : 1.0
-		},
-		"megadamageResistance" : {
-		  "baseValue" : 1.0
-		}
+        "poisonResistance" : {
+          "baseValue" : 1.0
+        },
+        "fireResistance" : {
+          "baseValue" : 1.0
+        },
+        "iceResistance" : {
+          "baseValue" : 1.0
+        },
+        "electricResistance" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 1.0
+        },
+        "ionResistance" : {
+          "baseValue" : 1.0
+        },
+        "abyssResistance" : {
+          "baseValue" : 1.0
+        },
+        "megadamageResistance" : {
+          "baseValue" : 1.0
+        }
       },
 
       "resources" : {

@@ -1,0 +1,13 @@
+{
+  "type" : "stalkerhelper_es",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/stalkerhelper_es/stalkerhelper_es.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-5, -5, 5, 5],
+  
+  "stalkerUid" : "stalker",
+  "stalkerOffset" : [0, 0],
+  "message" : "teleport"
+}

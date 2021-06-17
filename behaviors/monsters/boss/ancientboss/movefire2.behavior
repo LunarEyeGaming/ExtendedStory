@@ -17,6 +17,7 @@
     "flightSpeed": 10,
     "projectileType": "delayedplasmashot",
     "projectileOffset": [0, -5],
+    "projectileConfig": {},
     "fireSound": "fire",
     "durationLimit": 0
   },
@@ -95,14 +96,25 @@
                   }
                 },
                 {
+                  "title": "offsetPosition",
+                  "type": "action",
+                  "name": "offsetPosition",
+                  "parameters": {
+                    "position": {"key": "self"},
+                    "offset": {"key": "<projectileOffset>"}
+                  },
+                  "output": {
+                    "position": "firingPosition"
+                  }
+                },
+                {
                   "title": "spawnTargetedProjectile",
                   "type": "action",
                   "name": "spawnTargetedProjectile",
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
-                    "offset": {"key": "<projectileOffset>"},
-                    "parameters": {"value": {"power": 10}},
-                    "position": {"key": "self"},
+                    "parameters": {"value": "<projectileConfig>"},
+                    "position": {"key": "firingPosition"},
                     "projectileType": {"key": "<projectileType>"},
                     "scalePower": {"value": true},
                     "target": {"key": "target"},

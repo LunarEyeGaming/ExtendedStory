@@ -6,12 +6,13 @@
   },
   "isolatedvault02" : {
     "type" : "mission",
-    "text" : "Readings show an anomaly in the underground; I would advise you explore the area with caution."
+    "text" : "Readings show an anomaly in the underground. I would advise you explore the area with caution."
   },
   "isolatedvault03" : {
     "type" : "mission",
     "senderName" : "Unknown",
     "portraitImage" : "/interface/chatbubbles/quantumsentrystatic2.png:<frame>",
+    "portraitFrames" : 4,
     "text" : "^green;Signal receiver detected.\n\n^red;ERROR: TARGET BLACKLIST UNREADABLE! Using default target blacklist."
   },
   "isolatedvault04" : {
@@ -22,7 +23,8 @@
     "type" : "mission",
     "senderName" : "Unknown",
     "portraitImage" : "/interface/chatbubbles/quantumsentrystatic.png:<frame>",
-    "text" : "^red;SOS Message - Temperatures are unsustainable."
+    "portraitFrames" : 4,
+    "text" : "^red;SOS Message - Security breach detected. Initiating defense mode..."
   },
   //"isolatedvault06" : {
   //  "type" : "mission",
@@ -36,7 +38,7 @@
     "type" : "mission",
     "senderName" : "Omega the Quantum Sentry",
     "portraitImage" : "/interface/chatbubbles/quantumsentry.png",
-    "text" : "^red;WARNING: INTRUDER DETECTED! EXTERMINATE INTRUDER IMMEDIATELY!"
+    "text" : "^red;Intruder spotted. Engaging intruder."
   },
   // ------- ROBOT FACILITY MESSAGES -------
   "robotfacility01" : {
@@ -135,7 +137,22 @@
   
   "abyssdungeon-techreenabled" : {
     "type" : "mission",
-    "text" : "The anomalous field that surrounded the ^red;*inaudible*^reset;... You are now safe to ^red;*bzzzzzzt*^reset; tech. I advise you^red;--------------------------------------------------------^orange;[Connection Lost]^reset;"
+    "text" : "The anomalous field that surrounded the ^red;*inaudible*^reset;... You are now safe to ^red;*bzzzzzzt*^reset; tech."
+  },
+  
+  "abyssdungeon-creaturenearby" : {
+    "type" : "mission",
+    "text" : "I am detecting signatures of the creature extremely close to your location. I advise you^red;--^reset;"
+  },
+  
+  "abyssdungeon-whitenoise" : {
+    "type" : "mission",
+    "senderName" : "Cheap Scare Tactic",
+    "text" : "^red;974826YUjgfusygf763J76tg7jhfSGgh7f37hC6h7eFaGpUSs7cfairseIItSa6cgthiecIUHUAIHH8376ja6hdfJKUYH63hfdjajfjJJMCSNNXPLfasdmjnfgUIUIAHZ ^orange;[Connection Lost]^reset;",
+    "portraitImage" : "/interface/chatbubbles/quantumsentrystatic.png:<frame>",
+    "portraitFrames" : 4,
+    "persistTime" : 0,
+    "chatterSound" : "/sfx/misc/whitenoise.ogg"
   },
   
   // ------- OTHER MESSAGES -------

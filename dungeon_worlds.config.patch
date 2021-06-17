@@ -11,7 +11,7 @@
       "ambientLightLevel" : [300, 300, 300],
       "musicTrack" : "/music/lava-exploration1.ogg",
       "biome" : "scorchedcity",
-      "environmentStatusEffects" : ["dontstarve"]
+      "environmentStatusEffects" : ["dontstarve", "quickhealnerf_es"]
     }
   },
   {
@@ -51,7 +51,8 @@
       "threatLevel" : 9,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
-      "dungeonBaseHeight" : 1500,
+      "dungeonBaseHeight" : 600,
+      "dungeonSurfaceHeight" : 480,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/error-0xbfaf000.ogg",
       "biome" : "darkabyss",
@@ -165,7 +166,7 @@
       "musicTrack" : "/music/shadowlands7codex-by-kevinmacleod.ogg",
       //"musicTrack" : "",
       "biome" : "darkabyss",
-      "overrideTech" : [ ],
+      "overrideTech" : [ "vortexoverride_es" ],
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -226,6 +227,22 @@
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "",
       "ambientNoises" : "/sfx/environmental/abyssdimension_ambience3.ogg",
+      "biome" : "darkabyssdimension2",
+      "environmentStatusEffects" : ["dontstarve", "spheredeactivater"]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/abyssartifactdungeon3",
+    "value" : {
+      "primaryDungeon" : "abyssartifactdungeon3",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2500, 2500],
+      "dungeonBaseHeight" : 1500,
+      "ambientLightLevel" : [1200, 1200, 1200],
+      "ambientNoises" : "/sfx/environmental/abyssdimension_ambience3.ogg",
+      "musicTrack" : "",
       "biome" : "darkabyssdimension2",
       "environmentStatusEffects" : ["dontstarve", "spheredeactivater"]
     }

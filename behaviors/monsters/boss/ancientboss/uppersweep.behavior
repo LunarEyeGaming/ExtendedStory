@@ -36,55 +36,11 @@
         }
       },
       {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepstart"}
-        },
-        "output": {
-          "entity": "sweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepend"}
-        },
-        "output": {
-          "entity": "sweepEnd"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepStart"}
-        },
-        "output": {
-          "position": "sweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepEnd"}
-        },
-        "output": {
-          "position": "sweepEndPos"
-        }
-      },
-      {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
         "parameters": {
-          "position": {"key": "sweepStartPos"},
+          "position": {"key": "upperSweepStartPos"},
           "speed": {"value": 50}
         }
       },
@@ -97,17 +53,16 @@
         }
       },
       {
-        "title": "ancientboss-movefire",
+        "title": "ancientboss-movefire2",
         "type": "module",
-        "name": "ancientboss-movefire",
+        "name": "ancientboss-movefire2",
         "parameters": {
-          "position": {"key": "sweepEndPos"},
+          "position": {"key": "upperSweepEndPos"},
           "flightSpeed": {"value": 25},
           "projectileInterval": {"value": 0.2},
           "projectileType": {"value": "ancientboss_plasmashotwinduphoming_es"},
           "projectileOffset": {"value": [0, 4]},
           "projectileConfig": {"value": {"power": 10}},
-          "aimVector": {"value": [0, 0]},
           "fireSound": {"value": "fire1"}
         }
       },

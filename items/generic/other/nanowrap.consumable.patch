@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/description",
+    "value": "This bandage knits wounds together fast. Restores 100 health over 1 second.\n30 second cooldown"
+  },
+  {
+    "op": "add",
+    "path": "/blockingEffects/-",
+    "value": "quickhealblock_es"
+  }
+]

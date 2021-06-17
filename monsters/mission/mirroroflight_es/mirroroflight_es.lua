@@ -93,7 +93,7 @@ function update(dt)
     idle(dt)
   elseif self.stage == 1 then
     teleport(dt)
-  elseif self.stage == 2 then -- Make it wait a bit before setting the animation state.
+  elseif self.stage == 2 then
     reappear(dt)
   end
   
@@ -122,7 +122,7 @@ end
 function teleport(dt)
   if self.timer == 0 then
     mcontroller.setPosition(self.nextPosition)
-    setStage(2, self.reappearDelay)
+    setStage(2, self.reappearDelay)  -- Make it wait a bit before setting the animation state.
     resetMirror()
     return
   end

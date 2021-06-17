@@ -1,0 +1,757 @@
+{
+  "globalTagDefaults" : {
+    "rotationFrame" : "0",
+    "ballDirectives" : "",
+    "barDirectives" : "",
+    "warningDirectives" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "ballState" : {
+        "default" : "off",
+        "states" : {
+          "deactivate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "lightsOff" : ["glow", "glowwarning"]
+            }
+          },
+          "off" : {
+            "properties" : {
+              "lightsOff" : ["glow", "glowwarning"]
+            }
+          },
+          "activate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "on"
+          },
+          "on" : {
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
+              "lightsOn" : ["glow"],
+              "lightsOff" : ["glowwarning"]
+            }
+          },
+          "left" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "right" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "up" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "down" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/mech_activate4.ogg",
+              "persistentSound" : "/sfx/melee/charge_full_hold1.ogg",
+              "lightsOn" : ["glow"],
+              "lightsOff" : ["glowwarning"]
+            }
+          },
+          "fire2" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tools/energypickaxe_start.ogg",
+              "persistentSound" : "/sfx/melee/charge_full_hold1.ogg",
+              "lightsOn" : ["glow"],
+              "lightsOff" : ["glowwarning"]
+            }
+          },
+          "upright" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "downright" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "downleft" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "upleft" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "warning" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg",
+              "persistentSound" : "/sfx/interface/ancientflight_warning.ogg",
+              "lightsOn" : ["glowwarning"],
+              "lightsOff" : ["glow"]
+            }
+          }
+        }
+      },
+      "right" : {
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {
+            "frames" : 1
+          },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "activeWarning" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "deactivating" : {
+            "frames" : 1,
+            "cycle" : 0.01,
+            "mode" : "transition",
+            "transition" : "inactive",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+            }
+          }
+        }
+      },
+      "left" : {
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {
+            "frames" : 1
+          },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "activeWarning" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "deactivating" : {
+            "frames" : 1,
+            "cycle" : 0.01,
+            "mode" : "transition",
+            "transition" : "inactive",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+            }
+          }
+        }
+      },
+      "up" : {
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {
+            "frames" : 1
+          },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "activeWarning" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "deactivating" : {
+            "frames" : 1,
+            "cycle" : 0.01,
+            "mode" : "transition",
+            "transition" : "inactive",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+            }
+          }
+        }
+      },
+      "down" : {
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {
+            "frames" : 1
+          },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "activeWarning" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_appear3.ogg",
+              "persistentSound" : "/sfx/tech/forcefield_loop.ogg"
+            }
+          },
+          "deactivating" : {
+            "frames" : 1,
+            "cycle" : 0.01,
+            "mode" : "transition",
+            "transition" : "inactive",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/crystaltrap_off.ogg"
+            }
+          }
+        }
+      },
+      "transform" : {
+        "default" : "off",
+        "states" : {
+          "deactivate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "off"
+          },
+          "off" : { },
+          "activate" : {
+            "frames" : 3,
+            "cycle" : 0.12,
+            "mode" : "transition",
+            "transition" : "on"
+          },
+          "on" : { }
+        }
+      },
+      "damage" : {
+        "default" : "off",
+        "states" : {
+          "off" : { },
+          "on" : {
+            "frames" : 6,
+            "cycle" : 0.33,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      },
+      "energybar" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1
+          },
+          "on" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "ballGlow" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "on" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:<rotationFrame><ballDirectives>"
+              }
+            },
+            "left" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:left.<frame><ballDirectives>"
+              }
+            },
+            "right" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:right.<frame><ballDirectives>"
+              }
+            },
+            "up" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:up.<frame><ballDirectives>"
+              }
+            },
+            "down" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:down.<frame><ballDirectives>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "upright" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upright.<frame><ballDirectives>"
+              }
+            },
+            "downright" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:downright.<frame><ballDirectives>"
+              }
+            },
+            "downleft" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:downleft.<frame><ballDirectives>"
+              }
+            },
+            "upleft" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upleft.<frame><ballDirectives>"
+              }
+            },
+            "warning" : {
+              "properties" : {
+                "zLevel" : 1,
+                "fullbright" : true,
+                "image" : "<partImage>:upleft.1<ballDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "ball" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "ballState" : {
+            "deactivate" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "transform.png:deactivate.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "offset" : [0, 1.5],
+                "fullbright" : true,
+                "image" : "transform.png:activate.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<rotationFrame><ballDirectives>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><ballDirectives>"
+              }
+            },
+            "warning" : {
+              "properties" : {
+                "image" : "<partImage>:upleft.1<ballDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "right" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true,
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "right" : {
+            "inactive" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "activeWarning" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>?hueshift=77"
+              }
+            },
+            "deactivating" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "left" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true,
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "left" : {
+            "inactive" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "activeWarning" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>?hueshift=77"
+              }
+            },
+            "deactivating" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "up" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true,
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "up" : {
+            "inactive" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "activeWarning" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>?hueshift=77"
+              }
+            },
+            "deactivating" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "down" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true,
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "down" : {
+            "inactive" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "active" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "activeWarning" : {
+              "properties" : {
+                "fullbright" : true,
+                "image" : "<partImage>:active.<frame>?hueshift=77"
+              }
+            },
+            "deactivating" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "energybar" : {
+        "properties" : {
+          "transformationGroups" : [ "ball", "energybar" ],
+          "centered" : true,
+          "fullbright" : true,
+          "offset" : [0, 1.3]
+        },
+        "partStates" : {
+          "energybar" : {
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage><barDirectives><warningDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "energybarframe" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true,
+          "fullbright" : true,
+          "offset" : [0, 1.3]
+        },
+        "partStates" : {
+          "energybar" : {
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      },
+      "transform" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "transform" : {
+            "deactivate" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "transform.png:deactivate.<frame>"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "offset" : [0, 1.5],
+                "fullbright" : true,
+                "image" : "transform.png:activate.<frame>"
+              }
+            },
+            "on" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+      "damage" : {
+        "properties" : {
+          "transformationGroups" : [ "ball" ],
+          "centered" : true
+        },
+        "partStates" : {
+          "damage" : {
+            "on" : {
+              "properties" : {
+                "offset" : [0, 0],
+                "fullbright" : true,
+                "image" : "/projectiles/explosions/ancientexplosion/ancientexplosion.png:<frame>"
+              }
+            },
+            "off" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "ball" : { "interpolated" : true },
+    "energybar" : { "interpolated" : true },
+    "beamEnd" : {}
+  },
+
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 1],
+      "color" : [106, 34, 132],
+      "transformationGroups" : ["ball"]
+    },
+    "glowwarning" : {
+      "position" : [0, 1],
+      "color" : [185, 24, 42],
+      "transformationGroups" : ["ball"]
+    }
+  },
+
+  "particleEmitters" : {
+    "activateParticles" : {
+      "particles" : [ ]
+    },
+    "deactivateParticles" : {
+      "particles" : [ ]
+    },
+    "ancientspherebash" : {
+      "active" : false,
+      "transformationGroups" : ["ball"],
+      "offset" : [0, 1],
+      "emissionRate" : 40,
+      "particles" : [
+        { "particle" : "ancientspherebash"}
+      ]
+    },
+    "ancientsphererecharge" : {
+      "active" : false,
+      "transformationGroups" : ["ball"],
+      "offsetRegion" : [0.5, 0.5, -0.5, -0.5],
+      "emissionRate" : 40,
+      "particles" : [
+        { "particle" : "ancientenergy1"}
+      ]
+    }
+  },
+
+  "sounds" : {
+    "activate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "deactivate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "forceDeactivate" : [ "/sfx/tech/tech_sonicsphere_charge1.ogg" ],
+    "shutdown" : [ "/sfx/tech/mech_explosion_windup.ogg" ],
+    "move" : [ "/sfx/tech/vehicle_appear3.ogg" ],
+    "fire" : [ "/sfx/gun/ancientshotgun_altfire.ogg" ],
+    "recharge" : [ "/sfx/tech/tech_hoverloop.ogg" ]
+  }
+}

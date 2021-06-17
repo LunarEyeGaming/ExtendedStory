@@ -523,7 +523,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/forsaken-grotto.ogg\"], 2.0] }",
                      "stagehand":"messenger"
                     },
                  "propertytypes":
@@ -565,7 +565,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"radioMessages\" : [\"abyssdungeon-warptobossmessage\", \"abyssdungeon-techreenabled\"] }",
+                     "parameters":"{ \"radioMessages\" : [ \"abyssdungeon-warptobossmessage\", \"abyssdungeon-techreenabled\", \"abyssdungeon-creaturenearby\", \"abyssdungeon-whitenoise\" ] }",
                      "stagehand":"radiomessage"
                     },
                  "propertytypes":

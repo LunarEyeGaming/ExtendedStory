@@ -14,12 +14,8 @@
     "/scripts/behavior/bdata.lua"
   ],
   "parameters": {
-    "shieldCoreCount" : 5,
-    "spawnInterval" : 0.1,
-    "shieldCoreMinX" : -60,
-    "shieldCoreMaxX" : 40,
-    "shieldCoreMinY" : -20,
-    "shieldCoreMaxY" : 20
+    "numRows": 2,
+    "numCols": 4
   },
   "root": {
     "title": "sequence",
@@ -60,67 +56,12 @@
           "velocity": {"value": [0, 0]}
         }
       },
-      {
-        "title": "each",
-        "type": "decorator",
-        "name": "each",
-        "parameters": {
-          "list": {"key": "shieldCores"},
-          "type": {"value": "entity"}
-        },
-        "child": {
-          "title": "selector",
-          "type": "composite",
-          "name": "selector",
-          "parameters": {},
-          "children": [
-            {
-              "title": "inverter",
-              "type": "decorator",
-              "name": "inverter",
-              "parameters": {},
-              "child": {
-                "title": "entityExists",
-                "type": "action",
-                "name": "entityExists",
-                "parameters": {
-                  "entity": {"key": "eachItem"}
-                }
-              }
-            },
-            {
-              "title": "sub",
-              "type": "action",
-              "name": "sub",
-              "parameters": {
-                "first": {"key": "<shieldCoreCount>"},
-                "second": {"value": 1}
-              },
-              "output": {
-                "result": "newShieldCoreCount"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "title": "add",
-        "type": "action",
-        "name": "add",
-        "parameters": {
-          "addend": {"key": "<shieldCoreCount>"},
-          "number": {"value": 0}
-        },
-        "output": {
-          "result": "newShieldCoreCount"
-        }
-      },
-      {
+      /*{
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"key": "newShieldCoreCount"}
+          "maxLoops": {"key": "<shieldCoreCount>"}
         },
         "child": {
           "title": "sequence",
@@ -170,9 +111,9 @@
               "name": "spawnMonster",
               "parameters": {
                 "type": {"value": "ancientfragment"},
-                  "position": {"key": "shieldSpawn"}
+                "position": {"key": "shieldSpawn"}
               },
-                "output": {
+              "output": {
                 "entityId": "shieldId"
               }
             },
@@ -197,6 +138,20 @@
               }
             }
           ]
+        }
+      },*/
+      {
+        "title": "spawnShieldCores",
+        "type": "action",
+        "name": "spawnShieldCores",
+        "parameters": {
+          "position1": {"key": "shieldCorePos1"},
+          "position2": {"key": "shieldCorePos2"},
+          "numRows": {"key": "<numRows>"},
+          "numCols": {"key": "<numCols>"}
+        },
+        "output": {
+          "entities": "shieldCores"
         }
       },
       {

@@ -19,77 +19,12 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  /*{
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "target"}
-		},
-		"output": {
-		  "position": "targetPos"
-		}
-	  },
-	  {
-		"title": "offsetPosition",
-		"type": "action",
-		"name": "offsetPosition",
-		"parameters": {
-		  "position": {"key": "targetPos"},
-		  "offset": {"value": [0, 25]}
-		},
-		"output": {
-		  "position": "telegraphPos"
-		}
-	  },
-	  {
-	    "title": "esmodules-failsafeflight",
-		"type": "module",
-		"name": "esmodules-failsafeflight",
-		"parameters": {
-		  "position": {"key": "telegraphPos"},
-		  "speed": {"value": 50},
-		  "durationLimit": {"value": 1}
-		}
-	  },
       {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "playersweeptelegraph"}
-        }
-      },
-	  {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-		  "sound": {"value": "windup5"}
-		}
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.5}
-        }
-      },*/
-	  {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 2}
+          "maxLoops": {"value": 5}
         },
         "child": {
           "title": "sequence",
@@ -102,21 +37,9 @@
               "type": "module",
               "name": "ancientboss-playersweep",
               "parameters": {}
-            },
-            {
-              "title": "ancientboss-playersweep2",
-              "type": "module",
-              "name": "ancientboss-playersweep2",
-              "parameters": {}
             }
           ]
         }
-      },
-      {
-        "title": "ancientboss-playersweep",
-        "type": "module",
-        "name": "ancientboss-playersweep",
-        "parameters": {}
       }
     ]
   }

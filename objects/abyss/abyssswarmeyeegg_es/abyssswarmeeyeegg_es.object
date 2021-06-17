@@ -104,7 +104,7 @@
 
   "scripts" : ["/objects/spawner/monsterspawner.lua"],
   "spawner" : {
-    "monsterTypes" : ["abyssswarmeye2_es"], //type of monster to spawn (random from list)
+    "monsterTypes" : ["abyssswarmeye_es"], //type of monster to spawn (random from list)
     "monsterParams" : { //additional parameters of spawned monster
       "aggressive" : true
     },

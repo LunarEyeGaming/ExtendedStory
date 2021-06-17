@@ -442,32 +442,6 @@
                     }
                   },
                   {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "invisible"},
-                      "type": {"value": "eye"}
-                    }
-                  },
-                  {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "invisible"},
-                      "type": {"value": "eyetentacles"}
-                    }
-                  },
-                  {
-                    "title": "resetTransformationGroup",
-                    "type": "action",
-                    "name": "resetTransformationGroup",
-                    "parameters": {
-                      "transformationGroup": {"value": "body"}
-                    }
-                  },
-                  {
                     "title": "battleMusic",
                     "type": "action",
                     "name": "battleMusic",
@@ -476,12 +450,46 @@
                     }
                   },
                   {
-                    "title": "setResourcePercentage",
+                    "title": "setVelocity",
                     "type": "action",
-                    "name": "setResourcePercentage",
+                    "name": "setVelocity",
                     "parameters": {
-                      "percentage": {"value": 1},
-                      "resource": {"value": "health"}
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "setParticleEmitterActive",
+                    "type": "action",
+                    "name": "setParticleEmitterActive",
+                    "parameters": {
+                      "emitter": {"value": "afterimage"},
+                      "active": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "disappear"},
+                      "type": {"value": "eye"}
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "disappear"},
+                      "type": {"value": "eyetentacles"}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.8}
                     }
                   },
                   {
@@ -493,11 +501,11 @@
                     }
                   },
                   {
-                    "title": "setVelocity",
+                    "title": "resetTransformationGroup",
                     "type": "action",
-                    "name": "setVelocity",
+                    "name": "resetTransformationGroup",
                     "parameters": {
-                      "velocity": {"value": [0, 0]}
+                      "transformationGroup": {"value": "body"}
                     }
                   },
                   {

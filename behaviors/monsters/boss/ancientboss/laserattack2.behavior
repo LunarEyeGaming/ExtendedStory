@@ -45,138 +45,6 @@
         }
       },
       {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepstart"}
-        },
-        "output": {
-          "entity": "lowersweepstart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepend"}
-        },
-        "output": {
-          "entity": "lowersweepend"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepstart"}
-        },
-        "output": {
-          "entity": "uppersweepstart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepend"}
-        },
-        "output": {
-          "entity": "uppersweepend"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "minionstart"}
-        },
-        "output": {
-          "entity": "minionstart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "minionend"}
-        },
-        "output": {
-          "entity": "minionend"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "uppersweepstart"}
-        },
-        "output": {
-          "position": "position1"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "uppersweepend"}
-        },
-        "output": {
-          "position": "position2"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "lowersweepstart"}
-        },
-        "output": {
-          "position": "position3"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "lowersweepend"}
-        },
-        "output": {
-          "position": "position4"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "minionstart"}
-        },
-        "output": {
-          "position": "position5"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "minionend"}
-        },
-        "output": {
-          "position": "position6"
-        }
-      },
-      {
         "title": "sequence",
         "type": "composite",
         "name": "sequence",
@@ -197,7 +65,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position1"}
+              "position": {"key": "upperSweepStartPos"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -209,7 +77,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position2"}
+              "position": {"key": "upperSweepEndPos"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -221,7 +89,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position3"}
+              "position": {"key": "lowerSweepStartPos"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -233,7 +101,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position4"}
+              "position": {"key": "lowerSweepEndPos"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -245,7 +113,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position5"}
+              "position": {"key": "laserPos1"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -257,7 +125,7 @@
             "name": "listPush",
             "parameters": {
               "list": {"key": "laserPositions"},
-              "position": {"key": "position6"}
+              "position": {"key": "laserPos2"}
             },
             "output" : {
               "list" : "laserPositions"
@@ -302,7 +170,7 @@
                 "type": "action",
                 "name": "playSound",
                 "parameters": {
-                  "sound": {"value": "minionspawn2"}
+                  "sound": {"value": "laserfire"}
                 }
               },
               {

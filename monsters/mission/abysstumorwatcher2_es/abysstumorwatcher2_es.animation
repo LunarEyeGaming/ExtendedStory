@@ -1,0 +1,97 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+
+        "states" : {
+          "idle" : {},
+          "disappear" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "invisible"
+          },
+          "invisible" : {},
+          "spook" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : [ "body" ]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "spook" : {
+              "properties" : {
+                "image" : "<partImage>:spook"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+          "anchorPart" : "body",
+          "fullbright" : true,
+          "zLevel" : 20
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "disappear" : {
+              "properties" : {
+                "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "spook" : {
+              "properties" : {
+                "image" : "<partImage>:spook"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "transformationGroups" : {
+    "body" : { "interpolated" : true }
+  },
+
+  "particleEmitters" : {
+    "deathPoof" : {
+      "particles" : [ ]
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "sounds" : {
+    "deathPuff" : [ ]
+  }
+}

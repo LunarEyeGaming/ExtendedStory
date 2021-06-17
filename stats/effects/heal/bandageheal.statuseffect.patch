@@ -1,0 +1,13 @@
+[
+  {
+    "op": "test",
+    "path": "/scripts/0",
+    "value": "rb-quickheal.lua",
+    "inverse": true
+  },
+  {
+    "op": "replace",
+    "path": "/scripts/0",
+    "value": "quickheal_es.lua"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "projectileName" : "abysstrapprojectile_es",
+  "physics" : "laser",
+  "bounces" : 0,
+  "timeToLive" : 20,
+  "image" : "abysstrapprojectile.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "animationCycle" : 0.4,
+  "lightColor" : [10, 10, 10],
+  "frameNumber" : 8,
+  "power" : 50,
+  "damageKind" : "abyss",
+  "damagePoly" : [ [8, 0], [6, 6], [0, 8], [-6, 6], [-8, 0], [-6, -6], [0, -8], [6, -6] ],
+  "fullbright" : true
+}

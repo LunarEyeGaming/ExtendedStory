@@ -769,6 +769,26 @@
 
       "skyParameters" : {
         "spaceLevel" : 3000,
+        "ambientLightLevel" : [ 0, 0, 0 ],
+        "skyType" : "barren",
+        "horizonImages" : [ ],
+        "dayLength" : 1153.36,
+        "surfaceLevel" : 1200,
+        "seed" : -5288806180628666923
+      }
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/abyssartifactdungeon3",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "beamUpRule" : "AnywhereWithWarning",
+      "dungeonWorld" : "abyssartifactdungeon3",
+      "disableDeathDrops" : true,
+
+      "skyParameters" : {
+        "spaceLevel" : 3000,
         "ambientLightLevel" : [ 128, 128, 128 ],
         "skyType" : "barren",
         "horizonImages" : [ ],

@@ -36,55 +36,11 @@
         }
       },
       {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepstart"}
-        },
-        "output": {
-          "entity": "sweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepend"}
-        },
-        "output": {
-          "entity": "sweepEnd"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepStart"}
-        },
-        "output": {
-          "position": "sweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepEnd"}
-        },
-        "output": {
-          "position": "sweepEndPos"
-        }
-      },
-      {
         "title": "offsetPosition",
         "type": "action",
         "name": "offsetPosition",
         "parameters": {
-          "position": {"key": "sweepStartPos"},
+          "position": {"key": "upperSweepStartPos"},
           "offset": {"value": [0, -20]}
         },
         "output": {
@@ -96,7 +52,7 @@
         "type": "action",
         "name": "offsetPosition",
         "parameters": {
-          "position": {"key": "sweepEndPos"},
+          "position": {"key": "upperSweepEndPos"},
           "offset": {"value": [0, -20]}
         },
         "output": {

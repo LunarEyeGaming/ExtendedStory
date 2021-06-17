@@ -2,8 +2,8 @@
   "projectileName" : "abyssvortex",
   "physics" : "laser",
   "bounces" : 0,
-  "timeToLive" : 5,
-  "image" : "abyssvortex.png",
+  "timeToLive" : 20,
+  "image" : "abyssvortexwarning.png",
   "damageKindImage" : "icon.png",
   "speed" : 1,
   "animationCycle" : 0.4,
@@ -12,6 +12,8 @@
   "power" : 50,
   "damageKind" : "abyss",
   "damagePoly" : [ [9, 0], [6, 6], [0, 9], [-6, 6], [-9, 0], [-6, -6], [0, -9], [6, -6] ],
+  "damageRepeatTimeout" : 0.1,
+  "piercing" : true,
   
   "fullbright" : true,
   

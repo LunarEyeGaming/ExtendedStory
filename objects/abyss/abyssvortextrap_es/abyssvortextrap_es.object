@@ -147,10 +147,10 @@
 
   "fireTime" : 2.0, // rate of fire
   "fireTimeVariance" : 0.0, // variation in rate of fire
-  "projectile" : "abyssvortex2", // name of projectile (required)
+  "projectile" : "abyssvortexwindup_es", // name of projectile (required)
   "projectileConfig" : { // extra configuration overrides for projectile
     "damageTeam" : { "type" : "environment" },
-    "power" : 800,
+    "power" : 200,
     "speed" : 25
   },
   

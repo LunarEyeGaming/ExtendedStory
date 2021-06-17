@@ -15,9 +15,9 @@
   "onlyHitTerrain" : true,
 
   "speed" : 0,
-  "timeToLive" : 1.5,
+  "timeToLive" : 9999,
   "power" : 50,
-  "scripts" : [ "ancientbossdelayedlaserbeam_es.lua" ],
+  "scripts" : [ "ancientbossdelayedlaserbeam2_es.lua" ],
   "scriptDelta" : 1,
 
   "explosionAction" : {

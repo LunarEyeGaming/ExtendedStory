@@ -1,0 +1,12 @@
+{
+  "name" : "quickhealblock_es",
+  "effectConfig" : { },
+  "defaultDuration" : 30,
+
+  "scripts" : [
+    "quickhealblock_es.lua"
+  ],
+
+  "label" : "Blocked Healing - Some force blocks you from consuming quick heal items.",
+  "icon" : "/interface/statuses/healblock.png"
+}

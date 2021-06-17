@@ -1,12 +1,10 @@
 require "/scripts/util.lua"
 
 function init()
-  local players = world.entityQuery(entity.position(), 200, {includedTypes = {"player"}})
-  players = util.filter(shuffled(players), function(entityId)
-      return not world.lineTileCollision(entity.position(), world.entityPosition(entityId))
-    end)
-  self.target = players[1]
-  if not self.target then projectile.die() end
+  message.setHandler("setTarget", function(_, _, entityId)
+    self.target = entityId
+  end)
+  message.setHandler("kill", projectile.die)
 end
 
 function update()

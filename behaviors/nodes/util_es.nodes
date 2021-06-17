@@ -56,5 +56,19 @@
     "output": {
       "stringVal": {"type": "string", "key": null}
     }
+  },
+  
+  "vecNorm": {
+    "type": "action",
+    "name": "vecNorm",
+    "title": "vecNorm",
+    "properties": {
+      "vector": {"type": "vec2", "value": null}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "vector": {"type": "vec2", "key": null}
+    }
   }
 }

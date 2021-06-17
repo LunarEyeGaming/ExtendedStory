@@ -3,19 +3,14 @@
   "description": "",
   "scripts": [
     "/scripts/actions/movement.lua",
-    "/scripts/actions/math.lua",
-    "/scripts/actions/position.lua",
-    "/scripts/actions/animator.lua",
-    "/scripts/actions/monster.lua",
     "/scripts/behavior.lua",
-    "/scripts/actions/time.lua",
-    "/scripts/actions/projectiles.lua"
+    "/scripts/actions/time.lua"
   ],
   "parameters": {
-    "position": [650, 650],
-	"speed": 10,
-	"tolerance": 1,
-	"durationLimit": 10
+    "position": null,
+    "speed": 10,
+    "tolerance": 1,
+    "durationLimit": null
   },
   "root": {
     "title": "sequence",
@@ -23,35 +18,35 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-		"title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "timer",
-		    "type": "action",
-		    "name": "timer",
-		    "parameters": {
-		      "time": {"key": "<durationLimit>"}
-		    }
-		  },
-		  {
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"key": "<durationLimit>"}
+            }
+          },
+          {
             "title": "flyToPosition",
             "type": "action",
             "name": "flyToPosition",
             "parameters": {
               "position": {"key": "<position>"},
-			  "speed": {"key": "<speed>"},
+              "speed": {"key": "<speed>"},
               "tolerance": {"key": "<tolerance>"}
             }
           }
-		]
-	  }
+        ]
+      }
     ]
   }
 }

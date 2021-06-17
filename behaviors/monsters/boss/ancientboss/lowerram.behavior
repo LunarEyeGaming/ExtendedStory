@@ -20,55 +20,11 @@
     "parameters": {},
     "children": [
       {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepstart"}
-        },
-        "output": {
-          "entity": "sweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepend"}
-        },
-        "output": {
-          "entity": "sweepEnd"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepStart"}
-        },
-        "output": {
-          "position": "sweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepEnd"}
-        },
-        "output": {
-          "position": "sweepEndPos"
-        }
-      },
-      {
         "title": "ancientboss-teleportto",
         "type": "module",
         "name": "ancientboss-teleportto",
         "parameters": {
-          "teleportPosition": {"key": "sweepStartPos"}
+          "teleportPosition": {"key": "lowerSweepStartPos"}
         }
       },
       {
@@ -84,7 +40,7 @@
         "type": "action",
         "name": "flyToPosition",
         "parameters": {
-          "position": {"key": "sweepEndPos"},
+          "position": {"key": "lowerSweepEndPos"},
           "speed": {"value": 75}
         }
       },

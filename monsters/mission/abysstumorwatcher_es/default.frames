@@ -4,7 +4,12 @@
     "dimensions" : [4, 1],
 
     "names" : [
-      [ "disappear.3", "disappear.2", "disappear.1", "idle" ]
+      [ "appear.1", "appear.2", "appear.3", "idle" ]
     ]
+  },
+  "aliases" : {
+    "disappear.1" : "appear.3",
+    "disappear.2" : "appear.2",
+    "disappear.3" : "appear.1"
   }
 }

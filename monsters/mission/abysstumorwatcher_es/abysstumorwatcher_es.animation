@@ -13,7 +13,13 @@
             "mode" : "transition",
             "transition" : "invisible"
           },
-          "invisible" : {}
+          "invisible" : {},
+          "appear" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
         }
       }
     },
@@ -33,6 +39,11 @@
             "disappear" : {
               "properties" : {
                 "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "appear" : {
+              "properties" : {
+                "image" : "<partImage>:appear.<frame>"
               }
             }
           }
@@ -54,6 +65,11 @@
             "disappear" : {
               "properties" : {
                 "image" : "<partImage>:disappear.<frame>"
+              }
+            },
+            "appear" : {
+              "properties" : {
+                "image" : "<partImage>:appear.<frame>"
               }
             }
           }
