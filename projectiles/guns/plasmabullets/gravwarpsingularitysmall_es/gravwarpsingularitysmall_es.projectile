@@ -20,11 +20,20 @@
       "categoryWhitelist" : ["monster", "npc", "vehicle"]
     }
   },
+  
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/gravwarpexplosion_es/gravwarpexplosion_es.config"
+    }
+  ],
+
   "supportsProcessing" : true,
   "piercing" : true,
   "lightColor" : [80, 190, 60],
   "fullbright" : true,
   "damageKind" : "plasma",
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   
   "scripts" : [ "/scripts/projectiles/rotatingprojectile.lua" ],
   "rotateRate" : -0.5

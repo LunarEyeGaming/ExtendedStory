@@ -1,29 +1,20 @@
 {
   "frameGrid" : {
-    "size" : [121, 121],
+    "size" : [122, 122],
     "dimensions" : [5, 2],
     "names" : [
       [ "idle", "blink.1", "blink.2" ],
-	  [ "windup.1", "windup.2", "windup.3", "windup.4", "charged" ]
+      [ "windup.1", "windup.2", "windup.3", "windup.4", "charged" ]
     ]
   },
   "aliases" : {
     "blink.3" : "blink.1",
-	"open" : "blink.1",
-	"closed" : "blink.2",
-	
-	"portalwindup.1" : "windup.1",
-	"portalwindup.2" : "windup.2",
-	"portalwindup.3" : "windup.3",
-	"portalcharged.1" : "windup.4",
-	"portalcharged.2" : "charged",
-	"portalwinddown.1" : "windup.3",
-	"portalwinddown.2" : "windup.2",
-	"portalwinddown.3" : "windup.1",
-	
-	"winddown.1" : "windup.4",
-	"winddown.2" : "windup.3",
-	"winddown.3" : "windup.2",
-	"winddown.4" : "windup.1"
+    "open" : "blink.1",
+    "closed" : "blink.2",
+    
+    "winddown.1" : "windup.4",
+    "winddown.2" : "windup.3",
+    "winddown.3" : "windup.2",
+    "winddown.4" : "windup.1"
   }
 }

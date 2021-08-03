@@ -7,177 +7,266 @@
     "/scripts/actions/projectiles.lua"
   ],
   "parameters": {
-    "slamNumber": 4
+    "slamNumber": 3,
+    "slamSpeedVec": [75, 0]
   },
   "root": {
-    "title": "repeater",
-    "type": "decorator",
-    "name": "repeater",
-    "parameters": {
-      "maxLoops": {"value": "<slamNumber>"},
-      "untilSuccess": {"value": false}
-    },
-    "child": {
-      "title": "sequence",
-      "type": "composite",
-      "name": "sequence",
-      "parameters": {},
-      "children": [
-        {
-          "title": "setAnimationState",
-          "type": "action",
-          "name": "setAnimationState",
-          "parameters": {
-            "state": {"value": "off"},
-            "type": {"value": "beam"}
-          }
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+          "maxLoops": {"value": "<slamNumber>"},
+          "untilSuccess": {"value": false}
         },
-        {
-          "title": "setAnimationState",
-          "type": "action",
-          "name": "setAnimationState",
-          "parameters": {
-            "state": {"value": "idle"},
-            "type": {"value": "eye1"}
-          }
-        },
-        {
-          "title": "setAnimationState",
-          "type": "action",
-          "name": "setAnimationState",
-          "parameters": {
-            "state": {"value": "idle"},
-            "type": {"value": "eye2"}
-          }
-        },
-        {
-          "title": "resetTransformationGroup",
-          "type": "action",
-          "name": "resetTransformationGroup",
-          "parameters": {
-            "transformationGroup": {"value": "beam"}
-          }
-        },
-        {
-          "title": "controlParameters",
-          "type": "action",
-          "name": "controlParameters",
-          "parameters": {
-            "parameters": {"value": {"gravityEnabled": false}}
-          }
-        },
-        {
-          "title": "entityPosition",
-          "type": "action",
-          "name": "entityPosition",
-          "parameters": {
-            "entity": {"key": "target"}
-          },
-          "output": {
-            "position": "targetPos"
-          }
-        },
-        {
-          "title": "offsetPosition",
-          "type": "action",
-          "name": "offsetPosition",
-          "parameters": {
-            "offset": {"value": [0, 20]},
-            "position": {"key": "targetPos"}
-          },
-          "output": {
-            "position": "preslam"
-          }
-        },
-        {
-          "title": "parallel",
+        "child": {
+          "title": "sequence",
           "type": "composite",
-          "name": "parallel",
-          "parameters": {
-            "fail": {"value": -1},
-            "success": {"value": 1}
-          },
+          "name": "sequence",
+          "parameters": {},
           "children": [
             {
-              "title": "timer",
+              "title": "setAnimationState",
               "type": "action",
-              "name": "timer",
+              "name": "setAnimationState",
               "parameters": {
-                "time": {"value": 5}
+                "state": {"value": "off"},
+                "type": {"value": "beam"}
               }
             },
             {
-              "title": "flyToPosition",
+              "title": "setAnimationState",
               "type": "action",
-              "name": "flyToPosition",
+              "name": "setAnimationState",
               "parameters": {
-                "position": {"key": "preslam"},
-                "speed": {"value": 20},
-                "tolerance": {"value": 1}
+                "state": {"value": "idle"},
+                "type": {"value": "eye1"}
               }
-            }
-          ]
-        },
-        {
-          "title": "setVelocity",
-          "type": "action",
-          "name": "setVelocity",
-          "parameters": {
-            "velocity": {"value": [0, 0]}
-          }
-        },
-        {
-          "title": "timer",
-          "type": "action",
-          "name": "timer",
-          "parameters": {
-            "time": {"value": 0.25}
-          }
-        },
-        {
-          "title": "setDamageOnTouch",
-          "type": "action",
-          "name": "setDamageOnTouch",
-          "parameters": {
-            "touchDamage": {"value": true}
-          }
-        },
-        {
-          "title": "parallel",
-          "type": "composite",
-          "name": "parallel",
-          "parameters": {
-            "fail": {"value": -1},
-            "success": {"value": -1}
-          },
-          "children": [
+            },
+            {
+              "title": "setAnimationState",
+              "type": "action",
+              "name": "setAnimationState",
+              "parameters": {
+                "state": {"value": "idle"},
+                "type": {"value": "eye2"}
+              }
+            },
             {
               "title": "controlParameters",
               "type": "action",
               "name": "controlParameters",
               "parameters": {
-                "parameters": {"value": {"gravityEnabled": true}}
+                "parameters": {"value": {"gravityEnabled": false}}
               }
             },
             {
-              "title": "dynamic",
+              "title": "parallel",
               "type": "composite",
-              "name": "dynamic",
-              "parameters": {},
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": 2}
+              },
               "children": [
                 {
-                  "title": "onGround",
-                  "type": "action",
-                  "name": "onGround",
-                  "parameters": {}
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "entityPosition",
+                      "type": "action",
+                      "name": "entityPosition",
+                      "parameters": {
+                        "entity": {"key": "target"}
+                      },
+                      "output": {
+                        "position": "targetPos"
+                      }
+                    },
+                    {
+                      "title": "offsetPosition",
+                      "type": "action",
+                      "name": "offsetPosition",
+                      "parameters": {
+                        "offset": {"value": [0, 20]},
+                        "position": {"key": "targetPos"}
+                      },
+                      "output": {
+                        "position": "preslam"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "title": "runner",
-                  "type": "action",
-                  "name": "runner",
-                  "parameters": {}
+                  "title": "esmodules-failsafeflight",
+                  "type": "module",
+                  "name": "esmodules-failsafeflight",
+                  "parameters": {
+                    "position": {"key": "preslam"},
+                    "speed": {"value": 20},
+                    "tolerance": {"value": 7},
+                    "durationLimit": {"value": 3}
+                  }
                 }
               ]
+            },
+            {
+              "title": "ruinamalgamation-gradualstop",
+              "type": "module",
+              "name": "ruinamalgamation-gradualstop",
+              "parameters": {
+                "stopDuration": {"value": 0.25},
+                "controlForce": {"value": 200}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.15}
+              }
+            },
+            {
+              "title": "setDamageOnTouch",
+              "type": "action",
+              "name": "setDamageOnTouch",
+              "parameters": {
+                "touchDamage": {"value": true}
+              }
+            },
+            {
+              "title": "entityDirection",
+              "type": "action",
+              "name": "entityDirection",
+              "parameters": {
+                "entity": {"key": "self"},
+                "offset": {"value": [0, 0]},
+                "target": {"key": "target"}
+              },
+              "output": {
+                "vector": "aimVector"
+              }
+            },
+            {
+              "title": "vecAngle",
+              "type": "action",
+              "name": "vecAngle",
+              "parameters": {
+                "vector": {"key": "aimVector"}
+              },
+              "output": {
+                "angle": "targetAngleBase"
+              }
+            },
+            {
+              "title": "vecRotate",
+              "type": "action",
+              "name": "vecRotate",
+              "parameters": {
+                "angle": {"key": "targetAngleBase"},
+                "vector": {"key": "<slamSpeedVec>"}
+              },
+              "output": {
+                "vector": "slamVelocity"
+              }
+            },
+            {
+              "title": "parallel",
+              "type": "composite",
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": 1}
+              },
+              "children": [
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.25}
+                  }
+                },
+                {
+                  "title": "failer",
+                  "type": "decorator",
+                  "name": "failer",
+                  "parameters": {},
+                  "child": {
+                    "title": "controlApproachVelocity",
+                    "type": "action",
+                    "name": "controlApproachVelocity",
+                    "parameters": {
+                      "velocity": {"key": "slamVelocity"},
+                      "force": {"value": 800}
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "title": "parallel",
+              "type": "composite",
+              "name": "parallel",
+              "parameters": {
+                "fail": {"value": -1},
+                "success": {"value": -1}
+              },
+              "children": [
+                {
+                  "title": "controlParameters",
+                  "type": "action",
+                  "name": "controlParameters",
+                  "parameters": {
+                    "parameters": {"value": {"gravityEnabled": true}}
+                  }
+                },
+                {
+                  "title": "dynamic",
+                  "type": "composite",
+                  "name": "dynamic",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "onGround",
+                      "type": "action",
+                      "name": "onGround",
+                      "parameters": {}
+                    },
+                    {
+                      "title": "runner",
+                      "type": "action",
+                      "name": "runner",
+                      "parameters": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "playSound",
+              "type": "action",
+              "name": "playSound",
+              "parameters": {
+                "sound": {"value": "slam"}
+              }
+            },
+            {
+              "title": "burstParticleEmitter",
+              "type": "action",
+              "name": "burstParticleEmitter",
+              "parameters": {
+                "emitter": {"value": "slam"}
+              }
             },
             {
               "title": "spawnProjectile",
@@ -185,10 +274,10 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [1, 0]},
-                "offset": {"value": [6, -6]},
+                "offset": {"value": [6, 1]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {"power": 20}},
-                "projectileType": {"value": "energyflame"},
+                "projectileType": {"value": "ruinseedshockwave_es"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
@@ -200,72 +289,58 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [-1, 0]},
-                "offset": {"value": [-6, -6]},
+                "offset": {"value": [-6, 1]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {"power": 20}},
-                "projectileType": {"value": "energyflame"},
+                "projectileType": {"value": "ruinseedshockwave_es"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
+            },
+            {
+              "title": "setDamageOnTouch",
+              "type": "action",
+              "name": "setDamageOnTouch",
+              "parameters": {
+                "touchDamage": {"value": false}
+              }
             }
           ]
-        },
-        {
-          "title": "playSound",
-          "type": "action",
-          "name": "playSound",
-          "parameters": {
-            "sound": {"value": "slam"}
-          }
-        },
-        {
-          "title": "burstParticleEmitter",
-          "type": "action",
-          "name": "burstParticleEmitter",
-          "parameters": {
-            "emitter": {"value": "slam"}
-          }
-        },
-        {
-          "title": "spawnProjectile",
-          "type": "action",
-          "name": "spawnProjectile",
-          "parameters": {
-            "aimVector": {"value": [1, 0]},
-            "offset": {"value": [6, -1.375]},
-            "position": {"key": "self"},
-            "projectileConfig": {"value": {"power": 20}},
-            "projectileType": {"value": "ruinseedshockwave_es"},
-            "scalePower": {"value": true},
-            "sourceEntity": {"key": "self"},
-            "trackSource": {"value": false}
-          }
-        },
-        {
-          "title": "spawnProjectile",
-          "type": "action",
-          "name": "spawnProjectile",
-          "parameters": {
-            "aimVector": {"value": [-1, 0]},
-            "offset": {"value": [-6, -1.375]},
-            "position": {"key": "self"},
-            "projectileConfig": {"value": {"power": 20}},
-            "projectileType": {"value": "ruinseedshockwave_es"},
-            "scalePower": {"value": true},
-            "sourceEntity": {"key": "self"},
-            "trackSource": {"value": false}
-          }
-        },
-        {
-          "title": "setDamageOnTouch",
-          "type": "action",
-          "name": "setDamageOnTouch",
-          "parameters": {
-            "touchDamage": {"value": false}
-          }
         }
-      ]
-    }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"value": [0, 20]},
+          "position": {"key": "self"}
+        },
+        "output": {
+          "position": "tempHover"
+        }
+      },
+      {
+        "title": "esmodules-failsafeflight",
+        "type": "module",
+        "name": "esmodules-failsafeflight",
+        "parameters": {
+          "position": {"key": "tempHover"},
+          "speed": {"value": 20},
+          "tolerance": {"value": 7},
+          "durationLimit": {"value": 0.75}
+        }
+      },
+      {
+        "title": "ruinamalgamation-gradualstop",
+        "type": "module",
+        "name": "ruinamalgamation-gradualstop",
+        "parameters": {
+          "stopDuration": {"value": 0.75},
+          "controlForce": {"value": 100}
+        }
+      }
+    ]
   }
 }

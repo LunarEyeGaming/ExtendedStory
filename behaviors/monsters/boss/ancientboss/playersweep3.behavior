@@ -24,7 +24,7 @@
     "parameters": {
       "maxLoops": {"key": "<sweeps>"}
     },
-    "child": {
+    "child": { // Might return as an elemental boss attack or final boss attack because it is REALLY difficult.
       "title": "sequence",
       "type": "composite",
       "name": "sequence",
@@ -214,17 +214,18 @@
               }
             },
             {
-              "title": "ancientboss-movefire2",
+              "title": "ancientboss-movefire",
               "type": "module",
-              "name": "ancientboss-movefire2",
+              "name": "ancientboss-movefire",
               "parameters": {
                 "position": {"key": "sweepEndPos"},
                 "flightSpeed": {"value": 70},
                 "projectileInterval": {"value": 0.3},
-                //"projectileType": {"value": "ancientbossdelayedlaserbeam3_es"},
-                "projectileType": {"value": "ancientbossdelayedlaserbeam_es"},
+                "projectileType": {"value": "ancientrocketboss_es"},
+                //"projectileType": {"value": "ancientbossdelayedlaserbeam_es"},
                 "projectileOffset": {"value": [0, 0]},
                 "projectileConfig": {"value": {"power": 13}},
+                "aimVector": {"key": "aimVector"},
                 "fireSound": {"value": "laserfire"},
                 "durationLimit": {"value": 1.5}
               }

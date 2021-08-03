@@ -22,60 +22,60 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-	    "title": "setParticleEmitterActive",
-		"type": "action",
-		"name": "setParticleEmitterActive",
-		"parameters": {
-		  "emitter": {"value": "firewindup"},
-		  "active": {"value": true}
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "self"}
-		},
-		"output": {
-		  "y": "hoverY"
-		}
-	  },
-	  {
-	    "title": "playSound",
-		"type": "action",
-		"name": "playSound",
-		"parameters": {
-		  "sound": {"value": "firebreath"},
-		  "loops": {"value": -1}
-		}
-	  },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 1.5}
-		}
-	  },
-	  {
-	    "title": "playSound",
-		"type": "action",
-		"name": "playSound",
-		"parameters": {
-		  "sound": {"value": "fire"}
-		}
-	  },
-	  {
-	    "title": "setParticleEmitterActive",
-		"type": "action",
-		"name": "setParticleEmitterActive",
-		"parameters": {
-		  "emitter": {"value": "firewindup"},
-		  "active": {"value": false}
-		}
-	  },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "firewindup"},
+          "active": {"value": true}
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "self"}
+        },
+        "output": {
+          "y": "hoverY"
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "firebreath"},
+          "loops": {"value": -1}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "fire"}
+        }
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "firewindup"},
+          "active": {"value": false}
+        }
+      },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -85,37 +85,37 @@
           "type": {"value": "attack"}
         }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 0.35}
-		}
-	  },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.35}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
               "title": "Reset",
               "type": "composite",
               "name": "sequence",
               "parameters": {},
               "children": [
-			    {
+                {
                   "title": "faceEntity",
                   "type": "action",
                   "name": "faceEntity",
@@ -237,32 +237,32 @@
                     "transformationGroup": {"value": "head"}
                   }
                 },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.01}
-				  }
-				}
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.01}
+                  }
+                }
               ]
             }
-		  },
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
               "title": "Reset",
               "type": "composite",
               "name": "sequence",
               "parameters": {},
               "children": [
-			    {
-    		      "title": "spawnProjectile",
+                {
+                  "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
@@ -276,27 +276,27 @@
                     "trackSource": {"value": false}
                   }
                 },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.01}
-				  }
-				}
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.01}
+                  }
+                }
               ]
             }
-		  },
-		  {
-		    "title": "timer",
-			"type": "action",
-			"name": "timer",
-			"parameters": {
-			  "time": {"value": 10}
-			}
-		  }
-		]
-	  },
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 10}
+            }
+          }
+        ]
+      },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -306,14 +306,14 @@
           "type": {"value": "attack"}
         }
       },
-	  {
-	    "title": "stopAllSounds",
-		"type": "action",
-		"name": "stopAllSounds",
-		"parameters": {
-		  "sound": {"value": "firebreath"}
-		}
-	  },
+      {
+        "title": "stopAllSounds",
+        "type": "action",
+        "name": "stopAllSounds",
+        "parameters": {
+          "sound": {"value": "firebreath"}
+        }
+      },
       {
         "title": "resetTransformationGroup",
         "type": "action",

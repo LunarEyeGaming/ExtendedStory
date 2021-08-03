@@ -11,15 +11,10 @@
   "frameNumber" : 4,
   "power" : 20,
   "onlyHitTerrain" : true,
-  "damagePoly" : [ [-5, 5], [-5, -5], [5, -5], [5, 5] ],
   "supportsProcessing" : true,
   "fullbright" : true,
-  "actionOnReap" : [
-    {
-      "action" : "spawnmonster",
-      "type" : "ancientboss2_laserbarrier",
-      "level" : 10
-    }
-  ],
-  "damageKind" : "plasma"
+  "damageKind" : "plasma",
+  "monsterType" : "ancientboss2_laserbarrier",
+
+  "scripts" : [ "ancientboss2_barrierorb2.lua" ]
 }

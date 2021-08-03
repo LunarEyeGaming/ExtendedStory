@@ -1,7 +1,7 @@
 {
   "projectileName" : "gravwarpshot_es",
-  "physics" : "stickybullet",
-  "bounces" : -1,
+  "physics" : "bullet",
+  "bounces" : 0,
   "image" : "gravwarpshot.png",
   "animationCycle" : 0.5,
   "frameNumber" : 4,
@@ -10,40 +10,37 @@
   "timeToLive" : 5,
   "periodicActions" : [
     {
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "rotate" : true,
-	  "specification" : {
-		"type" : "animated",
-		"animation" : "/animations/gravwarptrail_es/gravwarptrail_es.animation",
-		"position" : [0, 0],
-		"fullbright" : true,
-		"layer" : "back",
-		"destructionAction" : "fade",
-		"timeToLive" : 1,
-		"destructionTime" : 0
-	  }
-	}
+      "time" : 0.01,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/gravwarptrail_es/gravwarptrail_es.animation",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "back",
+        "destructionAction" : "fade",
+        "timeToLive" : 1,
+        "destructionTime" : 0
+      }
+    }
   ],
   
-  "actionOnCollide" : [
-    {
-	  "action" : "projectile",
-	  "type" : "gravwarpsingularitysmall_es",
-      "inheritDamageFactor" : 1
-	},
-    {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
-	}
-  ],
+  "deadCollisionAction" : {
+    "action" : "projectile",
+    "type" : "gravwarpsingularitysmall_es",
+    "inheritDamageFactor" : 1
+  },
   
   "actionOnReap" : [
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
-	}
+      "action" : "config",
+      "file" : "/projectiles/explosions/gravwarpexplosion_es/gravwarpexplosion_es.config"
+    }
   ],
+  
+  "scripts" : [ "gravwarpshot_es.lua" ],
+
   "supportsProcessing" : true,
   "lightColor" : [80, 190, 60],
   "fullbright" : true,

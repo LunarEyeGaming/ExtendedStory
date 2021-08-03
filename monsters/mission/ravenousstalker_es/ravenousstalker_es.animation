@@ -6,6 +6,10 @@
         "default" : "idle",
         "states" : {
           "idle" : {},
+          "tele" : {
+            "frames" : 1,
+            "cycle" : 1
+          },
           "pregrab" : {},
           "grab" : {
             "frames" : 2,
@@ -54,6 +58,69 @@
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle"
+              }
+            },
+            "tele" : {
+              "properties" : {
+                "image" : "<partImage>:tele.<frame>"
+              }
+            },
+            "pregrab" : {
+              "properties" : {
+                "image" : "<partImage>:pregrab"
+              }
+            },
+            "grab" : {
+              "properties" : {
+                "image" : "<partImage>:grab.<frame>"
+              }
+            },
+            "grabend" : {
+              "properties" : {
+                "image" : "<partImage>:grabend"
+              }
+            },
+            "predmg" : {
+              "properties" : {
+                "image" : "<partImage>:predmg.<frame>"
+              }
+            },
+            "dmg" : {
+              "properties" : {
+                "image" : "<partImage>:dmg.<frame>"
+              }
+            },
+            "release" : {
+              "properties" : {
+                "image" : "<partImage>:release"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+          "zLevel" : 2,
+          "anchorPart" : "body",
+          "fullbright" : true
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "tele" : {
+              "properties" : {
+                "image" : "<partImage>:tele.<frame>"
               }
             },
             "pregrab" : {
@@ -129,6 +196,10 @@
     "deathPuff" : [ ],
     "aggro" : {
       "pool" : [ "/sfx/npc/quadruped/arrowhead_turnhostile.ogg" ],
+      "rangeMultiplier" : 3.0
+    },
+    "tele" : {
+      "pool" : [ "/sfx/npc/quadruped/arrowhead_idle1.ogg", "/sfx/npc/quadruped/arrowhead_idle2.ogg" ],
       "rangeMultiplier" : 3.0
     },
     "grab" : [ "/sfx/npc/monsters/monster_bite2.ogg" ]

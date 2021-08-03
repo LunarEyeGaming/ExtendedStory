@@ -1,0 +1,353 @@
+{
+  "name": "tentaclegnat2_es",
+  "description": "",
+  "scripts": [
+    "/scripts/behavior.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/flying.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/sensor.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/util_es.lua"
+  ],
+  "parameters": {
+    "flyState": "fly",
+    "chargeState": "swoop",
+    "maxRange": 8,
+    "minMoveDistance": 4,
+    "idleTime": 0.0,
+    "swarmingTimes": [2.0, 2.75, 3.5, 4.25],
+    "chargeSpeed": 100,
+    "chargeControlForce": 1000,
+    "rotationOffset": 0,
+    "invulTime": 1.0
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "addEphemeralEffect",
+        "type": "action",
+        "name": "addEphemeralEffect",
+        "parameters": {
+          "name": {"value": "invulnerable"},
+          "duration": {"key": "<invulTime>"}
+        }
+      },
+      {
+        "title": "setAggressive",
+        "type": "action",
+        "name": "setAggressive",
+        "parameters": {
+          "aggressive": {"value": false}
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": 1}
+        }
+      },
+      {
+        "title": "randomFromList",
+        "type": "action",
+        "name": "randomFromList",
+        "parameters": {
+          "list": {"key": "<swarmingTimes>"}
+        },
+        "output": {
+          "number": "swarmingTime"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 200},
+              "keepTargetInRange": {"value": 200},
+              "keepTargetInSight": {"value": true},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 5.0},
+              "targetOnNotification": {"value": false}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "setAnimationState",
+                          "type": "action",
+                          "name": "setAnimationState",
+                          "parameters": {
+                            "state": {"value": "<flyState>"},
+                            "type": {"value": "body"}
+                          }
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 1}
+                        },
+                        "children": [
+                          {
+                            "title": "timer",
+                            "type": "action",
+                            "name": "timer",
+                            "parameters": {
+                              "time": {"key": "swarmingTime"}
+                            }
+                          },
+                          {
+                            "title": "failer",
+                            "type": "decorator",
+                            "name": "failer",
+                            "parameters": {},
+                            "child": {
+                              "title": "swarmPosition",
+                              "type": "action",
+                              "name": "swarmPosition",
+                              "parameters": {
+                                "center": {"key": "spawn"},
+                                "idleTime": {"key": "<idleTime>"},
+                                "maxRange": {"key": "<maxRange>"},
+                                "minMoveDistance": {"key": "<minMoveDistance>"}
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "setAnimationState",
+                          "type": "action",
+                          "name": "setAnimationState",
+                          "parameters": {
+                            "state": {"value": "<chargeState>"},
+                            "type": {"value": "body"}
+                          }
+                        }
+                      },
+                      {
+                        "title": "entityDirection",
+                        "type": "action",
+                        "name": "entityDirection",
+                        "parameters": {
+                          "entity": {"key": "self"},
+                          "offset": {"value": [0, 0]},
+                          "target": {"key": "target"}
+                        },
+                        "output": {
+                          "vector": "aimVector"
+                        }
+                      },
+                      {
+                        "title": "vecAngle",
+                        "type": "action",
+                        "name": "vecAngle",
+                        "parameters": {
+                          "vector": {"key": "aimVector"}
+                        },
+                        "output": {
+                          "angle": "aimAngle"
+                        }
+                      },
+                      {
+                        "title": "add",
+                        "type": "action",
+                        "name": "add",
+                        "parameters": {
+                          "addend": {"key": "aimAngle"},
+                          "number": {"key": "<rotationOffset>"}
+                        },
+                        "output": {
+                          "result": "rotationAngle"
+                        }
+                      },
+                      {
+                        "title": "vecRotate",
+                        "type": "action",
+                        "name": "vecRotate",
+                        "parameters": {
+                          "angle": {"key": "aimAngle"},
+                          "vector": {"value": [2, 0]}
+                        },
+                        "output": {
+                          "vector": "collisionVector"
+                        }
+                      },
+                      {
+                        "title": "setDamageOnTouch",
+                        "type": "action",
+                        "name": "setDamageOnTouch",
+                        "parameters": {
+                          "touchDamage": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "parallel",
+                        "type": "composite",
+                        "name": "parallel",
+                        "parameters": {
+                          "fail": {"value": -1},
+                          "success": {"value": 1}
+                        },
+                        "children": [
+                          {
+                            "title": "repeater",
+                            "type": "decorator",
+                            "name": "repeater",
+                            "parameters": {},
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "faceDirection",
+                                  "type": "action",
+                                  "name": "faceDirection",
+                                  "parameters": {
+                                    "direction": {"value": 1}
+                                  }
+                                },
+                                {
+                                  "title": "controlApproachVelocityAlongAngle",
+                                  "type": "action",
+                                  "name": "controlApproachVelocityAlongAngle",
+                                  "parameters": {
+                                    "angle": {"key": "aimAngle"},
+                                    "force": {"key": "<chargeControlForce>"},
+                                    "velocity": {"key": "<chargeSpeed>"}
+                                  }
+                                },
+                                {
+                                  "title": "resetTransformationGroup",
+                                  "type": "action",
+                                  "name": "resetTransformationGroup",
+                                  "parameters": {
+                                    "transformationGroup": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "rotateTransformationGroup",
+                                  "type": "action",
+                                  "name": "rotateTransformationGroup",
+                                  "parameters": {
+                                    "angle": {"key": "rotationAngle"},
+                                    "transformationGroup": {"value": "body"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.01}
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "title": "lineTileCollision",
+                            "type": "action",
+                            "name": "lineTileCollision",
+                            "parameters": {
+                              "offset": {"key": "collisionVector"}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "setResourcePercentage",
+                        "type": "action",
+                        "name": "setResourcePercentage",
+                        "parameters": {
+                          "resource": {"value": "health"},
+                          "percentage": {"value": 0.0}
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

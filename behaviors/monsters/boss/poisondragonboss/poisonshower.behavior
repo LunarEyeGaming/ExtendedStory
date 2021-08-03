@@ -18,9 +18,9 @@
     "type": "composite",
     "name": "parallel",
     "parameters": {
-	  "fail": {"value": -1},
-	  "success": {"value": 1}
-	},
+      "fail": {"value": -1},
+      "success": {"value": 1}
+    },
     "children": [
       {
         "title": "repeater",
@@ -29,54 +29,54 @@
         "parameters": {
           "maxLoops": {"value": -1}
         },
-		"child": {
-		  "title": "sequence",
-		  "type": "composite",
-		  "name": "sequence",
-		  "parameters": {},
-		  "children": [
-		    {
-			  "title": "random",
-			  "type": "action",
-			  "name": "random",
-			  "parameters": {
-			    "min": {"value": -100},
-				"max": {"value": 50}
-			  },
-			  "output": {
-			    "number": "meteorX"
-			  }
-			},
-			{
-    	      "title": "spawnProjectile",
-    	      "type": "action",
-    	      "name": "spawnProjectile",
-    	      "parameters": {
-    	        "aimVector": {"value": [1, -1]},
-    	        "offset": {"value": ["meteorX", 50]},
-    	        "projectileConfig": {"value": {}},
-    	        "projectileType": {"value": "poisondragonmeteor"}
-    	      }
-    	    },
-    	    {
-    	      "title": "timer",
-    	      "type": "action",
-    	      "name": "timer",
-    	      "parameters": {
-    	        "time": {"value": 0.25}
-    	      }
-    	    }
-		  ]
-		}
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "random",
+              "type": "action",
+              "name": "random",
+              "parameters": {
+                "min": {"value": -100},
+                "max": {"value": 50}
+              },
+              "output": {
+                "number": "meteorX"
+              }
+            },
+            {
+              "title": "spawnProjectile",
+              "type": "action",
+              "name": "spawnProjectile",
+              "parameters": {
+                "aimVector": {"value": [1, -1]},
+                "offset": {"value": ["meteorX", 50]},
+                "projectileConfig": {"value": {}},
+                "projectileType": {"value": "poisondragonmeteor"}
+              }
+            },
+            {
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+                "time": {"value": 0.25}
+              }
+            }
+          ]
+        }
       },
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 10}
-		}
-	  }
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 10}
+        }
+      }
     ]
   }
 }

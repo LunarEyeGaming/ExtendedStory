@@ -19,8 +19,6 @@
       "/monsters/mission/ravenousstalker_es/rendergrabbers_es.lua"
     ],
 
-    // Behavior plan: Utilizes default targeting system to detect players. The target radius should be large enough for it to spot the player when in the lower portion of Nadir but not the upper portion. Upon detecting the player, it will follow them slowly, and if it gets close enough, it will lunge at the player without warning. At this point, if it gets within a certain radius to the player, it will set its animation state to the grabbing animation(using foreground drawables) and apply a status effect that locks the player in place. After a certain amount of time, it will briefly enable a damage poly that deals a lot of damage(contact damage). Bonus: include a parameter for blood color for individual species.
-    // Necessary constants: Speed to follow the player at, lunge speed, grab radius, grab status effect, amount of time before damage, amount of time before release
     "behavior" : "ravenousstalker_es",
 
     "behaviorConfig" : { },

@@ -1930,27 +1930,6 @@
                  "y":2312
                 }, 
                 {
-                 "height":48,
-                 "id":1340,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/forsaken-grotto.ogg\"], 2.0] }",
-                     "stagehand":"messenger"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":3392,
-                 "y":2320
-                }, 
-                {
                  "gid":7825,
                  "height":16,
                  "id":1342,
@@ -2922,7 +2901,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{\"uniqueId\" : \"lowersweepend\"}",
+                     "parameters":"{\"uniqueId\" : \"laserpos4\"}",
                      "stagehand":"cannonpos"
                     },
                  "propertytypes":
@@ -2943,7 +2922,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{\"uniqueId\" : \"lowersweepstart\"}",
+                     "parameters":"{\"uniqueId\" : \"laserpos3\"}",
                      "stagehand":"cannonpos"
                     },
                  "propertytypes":
@@ -3539,6 +3518,69 @@
                  "width":752,
                  "x":944,
                  "y":2120
+                }, 
+                {
+                 "height":32,
+                 "id":1608,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"lowersweepstart\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1808,
+                 "y":2304
+                }, 
+                {
+                 "height":32,
+                 "id":1610,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"uniqueId\" : \"lowersweepend\"}",
+                     "stagehand":"cannonpos"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":2528,
+                 "y":2304
+                }, 
+                {
+                 "height":448,
+                 "id":1611,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"stopAltMusic\", \"messageArgs\" : 2.0 }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":992,
+                 "x":3392,
+                 "y":1920
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5101,7 +5143,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":1608,
+ "nextobjectid":1612,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.1.6",

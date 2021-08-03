@@ -1,0 +1,55 @@
+{
+  "projectileName" : "ancientrocketboss_es",
+  "image" : "/projectiles/guns/rockets/ancientrocket_es/ancientrocket.png",
+  "animationCycle" : 0.4,
+  "lightColor" : [128, 0, 128],
+  "frameNumber" : 5,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "default",
+  "emitters" : [ ],
+  "damagePoly" : [ [-8, 0], [-6, -6], [0, -8], [6, -6], [8, 0], [6, 6], [0, 8], [-6, 6] ],
+  "damageKind" : "plasma",
+  "damageType" : "NoDamage",
+  "speed" : 1,
+  "acceleration" : 75,
+  "periodicActions" : [
+    {
+      "time" : 0.03,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/activeitems/ancientlasershot/essence.png",
+        "position" : [0, 0],
+        "initialVelocity" : [0, 0],
+        "finalVelocity" : [0, 0],
+        "fullbright" : true,
+        "layer" : "middle",
+        "destructionAction" : "fade",
+        "timeToLive" : 0,
+        "size" : 0.5,
+        "destructionTime" : 0.5,
+        "variance" : {
+          "size" : 0.25,
+          "initialVelocity" : [2, 2],
+          "rotation" : 180
+        }
+      }
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+    }
+  ],
+  "timeToLive" : 5.0,
+  "power" : 10,
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 1,
+
+  "rotationRate" : 0.6,
+  "trackingLimit" : 2.0
+}

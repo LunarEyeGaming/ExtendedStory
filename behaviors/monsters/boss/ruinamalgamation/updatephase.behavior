@@ -1,0 +1,169 @@
+{
+  "name": "ruinamalgamation-updatephase",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/boss/ruinamalgamation.lua"
+  ],
+  "parameters": {
+    "stateHealthPercent1": 0.8,
+    "stateHealthPercent2": 0.6,
+    "stateHealthPercent3": 0.4
+  },
+  "root": {
+    "title": "succeeder",
+    "type": "decorator",
+    "name": "succeeder",
+    "parameters": {},
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "inverter",
+          "type": "decorator",
+          "name": "inverter",
+          "parameters": {},
+          "child": {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "resource": {"value": "health"},
+              "percentage": {"key": "<stateHealthPercent1>"}
+            }
+          }
+        },
+        {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "resourcePercentage",
+                "type": "action",
+                "name": "resourcePercentage",
+                "parameters": {
+                  "resource": {"value": "health"},
+                  "percentage": {"key": "<stateHealthPercent2>"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "stage2"},
+                  "type": {"value": "body"}
+                }
+              }
+            ]
+          }
+        },
+        {
+          "title": "inverter",
+          "type": "decorator",
+          "name": "inverter",
+          "parameters": {},
+          "child": {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "resource": {"value": "health"},
+              "percentage": {"key": "<stateHealthPercent2>"}
+            }
+          }
+        },
+        {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "resourcePercentage",
+                "type": "action",
+                "name": "resourcePercentage",
+                "parameters": {
+                  "resource": {"value": "health"},
+                  "percentage": {"key": "<stateHealthPercent3>"}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "stage3"},
+                  "type": {"value": "body"}
+                }
+              }
+            ]
+          }
+        },
+        {
+          "title": "inverter",
+          "type": "decorator",
+          "name": "inverter",
+          "parameters": {},
+          "child": {
+            "title": "resourcePercentage",
+            "type": "action",
+            "name": "resourcePercentage",
+            "parameters": {
+              "resource": {"value": "health"},
+              "percentage": {"key": "<stateHealthPercent3>"}
+            }
+          }
+        },
+        {
+          "title": "succeeder",
+          "type": "decorator",
+          "name": "succeeder",
+          "parameters": {},
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "resourcePercentage",
+                "type": "action",
+                "name": "resourcePercentage",
+                "parameters": {
+                  "resource": {"value": "health"},
+                  "percentage": {"value": 0.0}
+                }
+              },
+              {
+                "title": "setAnimationState",
+                "type": "action",
+                "name": "setAnimationState",
+                "parameters": {
+                  "state": {"value": "stage4"},
+                  "type": {"value": "body"}
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

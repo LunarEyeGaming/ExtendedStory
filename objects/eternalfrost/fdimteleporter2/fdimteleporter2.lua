@@ -41,7 +41,7 @@ function onInteraction(args)
         includePlayerBookmarks = false,
         destinations = { {
           name = "Cryonia Temple",
-          planetName = "Location of Ice Artifact",
+          planetName = "Frozen Dimension",
           icon = "default",
           warpAction = string.format("InstanceWorld:iceartifactdungeon3:%s", storage.uuid)
         } }

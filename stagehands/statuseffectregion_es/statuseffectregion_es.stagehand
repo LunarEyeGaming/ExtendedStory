@@ -1,0 +1,11 @@
+{
+  "type" : "statuseffectregion_es",
+  "keepAlive" : true,
+
+  "scripts" : ["/stagehands/statuseffectregion_es/statuseffectregion_es.lua"],
+  "scriptDelta" : 1,
+
+  "broadcastArea" : [-50, -50, 50, 50],
+  
+  "effect" : null
+}

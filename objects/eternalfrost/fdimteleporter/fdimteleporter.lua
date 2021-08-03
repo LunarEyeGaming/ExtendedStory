@@ -41,7 +41,7 @@ function onInteraction(args)
         includePlayerBookmarks = false,
         destinations = { {
           name = "Frozen Caverns",
-          planetName = "Location of Ice Artifact",
+          planetName = "Frozen Dimension",
           icon = "default",
           warpAction = string.format("InstanceWorld:iceartifactdungeon2:%s", storage.uuid)
         } }

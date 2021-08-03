@@ -1,0 +1,217 @@
+{
+  "name": "ruinamalgamation-burrow",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": {
+    "toHoverSpeed": 20,
+    "preBurrowSpeed": 20,
+    "slamVelocity": [0, -100],
+    "slamControlForce": 300,
+    "burrowVelocity": [0, -4],
+    "burrowControlForce": 80,
+    "burrowTime": 3,
+    "toBurrowSpeed": 20
+  },
+  "root": {
+    "title": "succeeder",
+    "type": "decorator",
+    "name": "succeeder",
+    "parameters": {},
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "flyToPosition",
+          "type": "action",
+          "name": "flyToPosition",
+          "parameters": {
+            "position": {"key": "hover"},
+            "speed": {"key": "<toHoverSpeed>"},
+            "tolerance": {"value": 1}
+          }
+        },
+        {
+          "title": "flyToPosition",
+          "type": "action",
+          "name": "flyToPosition",
+          "parameters": {
+            "position": {"key": "preBurrow"},
+            "speed": {"key": "<preBurrowSpeed>"},
+            "tolerance": {"value": 1}
+          }
+        },
+        {
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": -1}
+          },
+          "children": [
+            {
+              "title": "controlParameters",
+              "type": "action",
+              "name": "controlParameters",
+              "parameters": {
+                "parameters": {"value": {"gravityEnabled": true}}
+              }
+            },
+            {
+              "title": "controlApproachVelocity",
+              "type": "action",
+              "name": "controlApproachVelocity",
+              "parameters": {
+                "velocity": {"key": "<slamVelocity>"},
+                "force": {"key": "<slamControlForce>"}
+              }
+            },
+            {
+              "title": "dynamic",
+              "type": "composite",
+              "name": "dynamic",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "onGround",
+                  "type": "action",
+                  "name": "onGround",
+                  "parameters": {}
+                },
+                {
+                  "title": "runner",
+                  "type": "action",
+                  "name": "runner",
+                  "parameters": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "playSound",
+          "type": "action",
+          "name": "playSound",
+          "parameters": {
+            "sound": {"value": "slam"}
+          }
+        },
+        {
+          "title": "burstParticleEmitter",
+          "type": "action",
+          "name": "burstParticleEmitter",
+          "parameters": {
+            "emitter": {"value": "slam"}
+          }
+        },
+        {
+          "title": "setVelocity",
+          "type": "action",
+          "name": "setVelocity",
+          "parameters": {
+            "velocity": {"value": [0, 0]}
+          }
+        },
+        {
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": -1}
+          },
+          "children": [
+            {
+              "title": "controlParameters",
+              "type": "action",
+              "name": "controlParameters",
+              "parameters": {
+                "parameters": {"value": {"collisionEnabled": false}}
+              }
+            },
+            {
+              "title": "dynamic",
+              "type": "composite",
+              "name": "dynamic",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "parallel",
+                      "type": "composite",
+                      "name": "parallel",
+                      "parameters": {
+                        "fail": {"value": -1},
+                        "success": {"value": 1}
+                      },
+                      "children": [
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"key": "<burrowTime>"}
+                          }
+                        },
+                        {
+                          "title": "failer",
+                          "type": "decorator",
+                          "name": "failer",
+                          "parameters": {},
+                          "child": {
+                            "title": "controlApproachVelocity",
+                            "type": "action",
+                            "name": "controlApproachVelocity",
+                            "parameters": {
+                              "velocity": {"key": "<burrowVelocity>"},
+                              "force": {"key": "<burrowControlForce>"}
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "title": "flyToPosition",
+                      "type": "action",
+                      "name": "flyToPosition",
+                      "parameters": {
+                        "position": {"key": "burrow"},
+                        "speed": {"key": "<toBurrowSpeed>"},
+                        "tolerance": {"value": 1}
+                      }
+                    },
+                    {
+                      "title": "setVelocity",
+                      "type": "action",
+                      "name": "setVelocity",
+                      "parameters": {
+                        "velocity": {"value": [0, 0]}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "runner",
+                  "type": "action",
+                  "name": "runner",
+                  "parameters": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

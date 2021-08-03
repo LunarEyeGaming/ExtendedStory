@@ -7,12 +7,13 @@
   "flippable" : false,
   "fullbright" : true,
   "damageKindImage" : "icon.png",
-  "physics" : "laser",
+  "physics" : "illusion",
   "emitters" : [ ],
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+      "action" : "projectile",
+      "type" : "presupervoidannihilation",
+      "inheritDamageFactor" : 1
     }
   ],
   "periodicActions" : [
@@ -36,9 +37,14 @@
   "damagePoly" : [ [-10, 10], [-10, -10], [10, -10], [10, 10] ],
   "damageKind" : "plasma",
 
-  "speed" : 100,
-  "timeToLive" : 2.5,
+  "speed" : 10,
+  "acceleration" : 50,
+  "timeToLive" : 2.0,
 
-  "scripts" : [ "/projectiles/tracksourcestatus.lua" ],
-  "scriptDelta" : 1
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 1,
+
+  "rotationRate" : 2.0,
+  "trackingLimit" : 2.0,
+  "homingDistance" : 100
 }

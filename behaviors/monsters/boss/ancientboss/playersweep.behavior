@@ -13,8 +13,10 @@
     "/scripts/actions/boss/ancientboss.lua"
   ],
   "parameters": {
-    "offset1": [-20, 25],
-    "offset2": [20, 25],
+    "startOffset1": [-20, 25],
+    "endOffset1": [20, 3],
+    "startOffset2": [20, 25],
+    "endOffset2": [-20, 3],
     "sweeps": 5
   },
   "root": {
@@ -75,7 +77,7 @@
                         "name": "offsetPosition",
                         "parameters": {
                           "position": {"key": "targetPos"},
-                          "offset": {"key": "<offset2>"}
+                          "offset": {"key": "<startOffset2>"}
                         },
                         "output": {
                           "position": "sweepStartPos"
@@ -88,7 +90,7 @@
                       "name": "offsetPosition",
                       "parameters": {
                         "position": {"key": "targetPos"},
-                        "offset": {"key": "<offset1>"}
+                        "offset": {"key": "<startOffset1>"}
                       },
                       "output": {
                         "position": "sweepStartPos"
@@ -141,17 +143,6 @@
                 "parameters": {},
                 "children": [
                   {
-                    "title": "entityDirection",
-                    "type": "action",
-                    "name": "entityDirection",
-                    "parameters": {
-                      "target": {"key": "target"}
-                    },
-                    "output": {
-                      "vector": "aimVector"
-                    }
-                  },
-                  {
                     "title": "entityPosition",
                     "type": "action",
                     "name": "entityPosition",
@@ -181,7 +172,7 @@
                           "name": "offsetPosition",
                           "parameters": {
                             "position": {"key": "targetPos"},
-                            "offset": {"key": "<offset1>"}
+                            "offset": {"key": "<endOffset2>"}
                           },
                           "output": {
                             "position": "sweepEndPos"
@@ -194,7 +185,7 @@
                         "name": "offsetPosition",
                         "parameters": {
                           "position": {"key": "targetPos"},
-                          "offset": {"key": "<offset2>"}
+                          "offset": {"key": "<endOffset1>"}
                         },
                         "output": {
                           "position": "sweepEndPos"
@@ -214,17 +205,16 @@
               }
             },
             {
-              "title": "ancientboss-movefire",
+              "title": "ancientboss-movefire2",
               "type": "module",
-              "name": "ancientboss-movefire",
+              "name": "ancientboss-movefire2",
               "parameters": {
                 "position": {"key": "sweepEndPos"},
                 "flightSpeed": {"value": 50},
-                "projectileInterval": {"value": 0.1},
-                "projectileType": {"value": "ancientboss_plasmashotwindup2"},
+                "projectileInterval": {"value": 0.15},
+                "projectileType": {"value": "ancientboss_plasmashotwindup"},
                 "projectileOffset": {"value": [0, 4]},
                 "projectileConfig": {"value": {"power": 10}},
-                "aimVector": {"key": "aimVector"},
                 "fireSound": {"value": "fire1"},
                 "durationLimit": {"value": 1.5}
               }

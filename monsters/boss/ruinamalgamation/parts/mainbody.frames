@@ -1,9 +1,12 @@
 {
   "frameGrid" : {
-    "size" : [121, 122],
-    "dimensions" : [10, 1],
+    //"size" : [121, 122],
+    "size" : [122, 122],
+    //"dimensions" : [10, 1],
+    "dimensions" : [8, 1],
     "names" : [
-      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8", "idle.9", "idle.10" ]
+      //[ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8", "idle.9", "idle.10" ]
+      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8" ]
     ]
   },
   "aliases" : { }

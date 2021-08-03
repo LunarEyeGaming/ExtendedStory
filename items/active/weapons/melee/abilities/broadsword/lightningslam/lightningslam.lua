@@ -127,28 +127,29 @@ function LightningSlam:spawnProjectiles()
   local impact, impactHeight = self:impactPosition()
 
   if impact then
-    world.spawnProjectile("electricplasmaexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
+    world.spawnProjectile(self.projectileType, position, activeItem.ownerEntityId(), {0, 0}, false, params)
     self.weapon.weaponOffset = {0, impactHeight + self.impactWeaponOffset}
     local directions = {1}
     if self.bothDirections then directions[2] = -1 end
     local positions = self:shockwaveProjectilePositions(impact, self.maxDistance, directions)
     if #positions > 0 then
       animator.playSound(self.weapon.elementalType.."impact")
-      local params = copy(self.projectileParameters)
-      params.powerMultiplier = activeItem.ownerPowerMultiplier()
-      params.power = params.power * config.getParameter("damageLevelMultiplier")
-      params.actionOnReap = {
+      local shockwaveParams = copy(self.shockwaveProjectileParameters)
+      shockwaveParams.powerMultiplier = activeItem.ownerPowerMultiplier()
+      shockwaveParams.power = shockwaveParams.power * config.getParameter("damageLevelMultiplier")
+      shockwaveParams.onlyHitTerrain = true
+      shockwaveParams.actionOnReap = {
         {
           action = "projectile",
           inheritDamageFactor = 1,
-          type = self.projectileType
+          type = self.shockwaveProjectileType
         }
       }
       for i,position in pairs(positions) do
         local xDistance = world.distance(position, impact)[1]
         local dir = util.toDirection(xDistance)
-        params.timeToLive = (math.floor(math.abs(xDistance))) * 0.025
-        world.spawnProjectile("shockwavespawner", position, activeItem.ownerEntityId(), {dir,0}, false, params)
+        shockwaveParams.timeToLive = (math.floor(math.abs(xDistance))) * 0.025
+        world.spawnProjectile("shockwavespawner", position, activeItem.ownerEntityId(), {dir,0}, false, shockwaveParams)
       end
     end
   end

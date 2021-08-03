@@ -3,7 +3,7 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A sniper rifle that shoots high velocity lasers.",
+  "description" : "A heavy-duty, hi-tech sniper rifle.",
   "shortdescription" : "Aegisalt Sniper Rifle",
   "tooltipKind" : "gun",
   "category" : "sniperRifle",
@@ -28,7 +28,7 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_sniper2.ogg"],
+      "fire" : ["/sfx/gun/aegisalt_sniper_fire.ogg"],
       "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
     },
     "lights" : {
@@ -61,9 +61,9 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 1.0,
-    "baseDps" : 10,
-    "energyUsage" : 60,
+    "fireTime" : 1.5,
+    "baseDps" : 7.5,
+    "energyUsage" : 45,
     "projectileCount" : 1,
     "inaccuracy" : 0.0,
     "fireType" : "auto",
@@ -84,7 +84,7 @@
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0,
+        "duration" : 0.5,
         "armRotation" : 6,
         "weaponRotation" : 6,
         "twoHanded" : true,
@@ -97,7 +97,7 @@
         }
       },
       "cooldown" : {
-        "duration" : 0.5,
+        "duration" : 1.0,
         "armRotation" : 6,
         "weaponRotation" : 6,
         "twoHanded" : true,
@@ -111,11 +111,11 @@
   "altAbilityType" : "markedshot",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "projectileType" : "ancientchainshot", "projectileParameters" : { } }
+      "physical" : { "projectileType" : "aegisaltchainshot_es", "projectileParameters" : { } }
     },
-    "energyUsage" : 20,
+    "energyUsage" : 40,
     "cooldownTime" : 1.0,
-    "maxTargets" : 10,
+    "maxTargets" : 7,
     "targetQueryDistance" : 3,
     "name" : "Phasing Chain Shot"
   },

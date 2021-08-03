@@ -2,7 +2,7 @@
   "type" : "ruinamalgamation",
   "shortdescription" : "Seed of Ruin",
   "categories" : [ "ruinamalgamation" ],
-  "parts" : [ "mainbody", "eye1", "eye2", "eye3", "eye4", "smalleyes", "beam" ],
+  "parts" : [ "mainbody", "eye1", "eye2", "eye3", "eye4", "eye5", "eye6", "beam" ],
 
   "animation" : "ruinamalgamation.animation",
   "dropPools" : [
@@ -19,42 +19,14 @@
     "behaviorUpdateDelta" : 1,
 
     "behavior" : "ruinamalgamation",
-    "lockFacingDirection" : true,
+    "facingMode" : "transformation",
 
-    "behaviorConfig" : {
-      "colorChangeWindup" : 0.4,
-      "colorChangeWinddown" : 0.4,
-
-      "windupTime" : 0.4,
-      "fastWindupTime" : 0.15,
-
-      "plasmaAttackFlySpeed" : 50,
-      "plasmaAttackX" : 20,
-      "plasmaAttackY" : 15,
-      "plasmaMinY" : 0
-    },
-
-    "forceRegions" : {
-      "left" : {
-        "type" : "DirectionalForceRegion",
-        "rectRegion" : [-32, -5, -2, 25],
-        "xTargetVelocity" : 100,
-        "controlForce" : 80,
-        "categoryWhitelist" : [ "player" ]
-      },
-      "right" : {
-        "type" : "DirectionalForceRegion",
-        "rectRegion" : [2, -5, 32, 25],
-        "xTargetVelocity" : -100,
-        "controlForce" : 80,
-        "categoryWhitelist" : [ "player" ]
-      }
-    },
+    "behaviorConfig" : {},
 
     "damageParts" : {
       "beam" : {
-        "damage" : 25,
-		"damageTeam" : 0,
+        "damage" : 42,
+        "damageTeam" : 0,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma"
@@ -63,18 +35,7 @@
 
     "renderLayer" : "Projectile-20",
 
-    "damageSources" : {
-      "windswept" : {
-        "poly" : [ [-32, -5], [-32, 25], [32, 25], [32, -5] ],
-        "damage" : 0.0,
-
-        "teamType" : "enemy",
-        "damageSourceKind" : "hidden",
-        "statusEffects" : [ "windswept" ],
-
-        "damageRepeatTimeout" : 0.5
-      }
-    },
+    "damageSources" : {},
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
@@ -94,7 +55,7 @@
       "runSpeed" : 13,
       "flySpeed" : 11,
       "airFriction" : 0.5,
-      "airForce" : 800.0,
+      "airForce" : 450.0,
       "airJumpProfile" : {
         "jumpControlForce" : 0,
         "jumpInitialPercentage" : 0
@@ -104,7 +65,7 @@
 
     "touchDamage" : {
       "poly" : [ [6, 3], [6, -3], [3, -6], [-3, -6], [-6, -3], [-6, 3], [-3, 6], [3, 6] ],
-      "damage" : 20,
+      "damage" : 33,
 
       "teamType" : "enemy",
       "damageSourceKind" : "hammer",

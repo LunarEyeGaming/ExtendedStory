@@ -1,0 +1,29 @@
+{
+  "projectileName" : "aegisaltgrenadefiring_es",
+  "image" : "aegisaltgrenadefiring.png",
+  "fullbright" : true,
+  "animationCycle" : 0.25,
+  "frameNumber" : 6,
+  "physics" : "hover",
+  "timeToLive" : 1.5,
+  "bounces" : -1,
+  "orientationLocked" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
+    }
+  ],
+  "power" : 0,
+  "speed" : 0,
+  "lightColor" : [83, 28, 97],
+  "damageKind" : "plasma",
+  "damagePoly" : [ [1, 66], [1, 1], [66, 1], [66, -1], [1, -1], [1, -66], [-1, -66], [-1, -1], [-66, -1], [-66, 1], [-1, 1], [-1, 66] ],
+  "damageRepeatTimeout" : 0.2,
+  "piercing" : true,
+  
+  "scripts" : ["/projectiles/guns/grenades/aegisaltgrenade_es/aegisaltgrenadefiring_es.lua"],
+  "endAngle" : 180,
+  
+  "persistentAudio" : "/sfx/gun/aegisaltpistol_loop2.ogg"
+}

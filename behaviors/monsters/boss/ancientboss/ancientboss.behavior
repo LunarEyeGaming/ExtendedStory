@@ -109,6 +109,28 @@
         }
       },
       {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "laserpos3"}
+        },
+        "output": {
+          "entity": "laserPos3Ent"
+        }
+      },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "laserpos4"}
+        },
+        "output": {
+          "entity": "laserPos4Ent"
+        }
+      },
+      {
         "title": "entityPosition",
         "type": "action",
         "name": "entityPosition",
@@ -194,6 +216,28 @@
         },
         "output": {
           "position": "laserPos2"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "laserPos3Ent"}
+        },
+        "output": {
+          "position": "laserPos3"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "laserPos4Ent"}
+        },
+        "output": {
+          "position": "laserPos4"
         }
       },
       {
@@ -336,9 +380,9 @@
                                   "parameters": {},
                                   "children": [
                                     {
-                                      "title": "ancientboss-uppersweep",
+                                      "title": "ancientboss-sidesweep",
                                       "type": "module",
-                                      "name": "ancientboss-uppersweep",
+                                      "name": "ancientboss-sidesweep",
                                       "parameters": {}
                                     },
                                     {
@@ -418,9 +462,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-uppersweep",
+                                          "title": "ancientboss-sidesweep",
                                           "type": "module",
-                                          "name": "ancientboss-uppersweep",
+                                          "name": "ancientboss-sidesweep",
                                           "parameters": {}
                                         },
                                         {
@@ -516,9 +560,9 @@
                                       "parameters": {},
                                       "children": [
                                         {
-                                          "title": "ancientboss-uppersweep",
+                                          "title": "ancientboss-plasmasweep",
                                           "type": "module",
-                                          "name": "ancientboss-uppersweep",
+                                          "name": "ancientboss-plasmasweep",
                                           "parameters": {}
                                         },
                                         {
@@ -528,9 +572,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-plasmasweep",
+                                          "title": "ancientboss-sidesweep",
                                           "type": "module",
-                                          "name": "ancientboss-plasmasweep",
+                                          "name": "ancientboss-sidesweep",
                                           "parameters": {}
                                         },
                                         {
@@ -546,9 +590,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-shockwaveattack",
+                                          "title": "ancientboss-shockwaveattack2",
                                           "type": "module",
-                                          "name": "ancientboss-shockwaveattack",
+                                          "name": "ancientboss-shockwaveattack2",
                                           "parameters": {}
                                         }
                                       ]
@@ -642,27 +686,27 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-laserattack",
+                                          "title": "ancientboss-slam2",
                                           "type": "module",
-                                          "name": "ancientboss-laserattack",
+                                          "name": "ancientboss-slam2",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-shockwaveattack",
+                                          "title": "ancientboss-shockwaveattack2",
                                           "type": "module",
-                                          "name": "ancientboss-shockwaveattack",
+                                          "name": "ancientboss-shockwaveattack2",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-playersweep3",
+                                          "title": "ancientboss-sidesweep",
                                           "type": "module",
-                                          "name": "ancientboss-playersweep3",
+                                          "name": "ancientboss-sidesweep",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-uppersweep",
+                                          "title": "ancientboss-playersweep2",
                                           "type": "module",
-                                          "name": "ancientboss-uppersweep",
+                                          "name": "ancientboss-playersweep2",
                                           "parameters": {}
                                         },
                                         {
@@ -901,15 +945,6 @@
                     }
                   },
                   {
-                    "title": "listClear",
-                    "type": "action",
-                    "name": "listClear",
-                    "parameters": {},
-                    "output": {
-                      "list": "barriers"
-                    }
-                  },
-                  {
                     "title": "setAggressive",
                     "type": "action",
                     "name": "setAggressive",
@@ -943,15 +978,6 @@
                     }
                   },
                   {
-                    "title": "setGlobalTag",
-                    "type": "action",
-                    "name": "setGlobalTag",
-                    "parameters": {
-                      "tag": {"value": "phase1"},
-                      "type": {"value": "phase"}
-                    }
-                  },
-                  {
                     "title": "setVelocity",
                     "type": "action",
                     "name": "setVelocity",
@@ -971,6 +997,54 @@
                     "name": "ancientboss-teleportto",
                     "parameters": {
                       "teleportPosition": {"key": "spawn"}
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "barriers"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "listClear",
+                    "type": "action",
+                    "name": "listClear",
+                    "parameters": {},
+                    "output": {
+                      "list": "barriers"
+                    }
+                  },
+                  {
+                    "title": "setGlobalTag",
+                    "type": "action",
+                    "name": "setGlobalTag",
+                    "parameters": {
+                      "tag": {"value": "phase1"},
+                      "type": {"value": "phase"}
                     }
                   },
                   {

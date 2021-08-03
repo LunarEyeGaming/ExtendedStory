@@ -116,6 +116,14 @@
         }
       },
       {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.1}
+        }
+      },
+      {
         "title": "burstParticleEmitter",
         "type": "action",
         "name": "burstParticleEmitter",

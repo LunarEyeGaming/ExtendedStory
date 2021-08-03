@@ -324,6 +324,51 @@
                               ]
                             },
                             {
+                              "title": "setAnimationState",
+                              "type": "action",
+                              "name": "setAnimationState",
+                              "parameters": {
+                                "state": {"value": "tele"},
+                                "type": {"value": "body"}
+                              }
+                            },
+                            {
+                              "title": "playSound",
+                              "type": "action",
+                              "name": "playSound",
+                              "parameters": {
+                                "sound": {"value": "tele"}
+                              }
+                            },
+                            {
+                              "title": "parallel",
+                              "type": "composite",
+                              "name": "parallel",
+                              "parameters": {
+                                "fail": {"value": 1},
+                                "success": {"value": -1}
+                              },
+                              "children": [
+                                {
+                                  "title": "controlApproachVelocity",
+                                  "type": "action",
+                                  "name": "controlApproachVelocity",
+                                  "parameters": {
+                                    "force": {"value": 50},
+                                    "velocity": {"value": [0, 0]}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.66}
+                                  }
+                                }
+                              ]
+                            },
+                            {
                               "title": "entityDirection",
                               "type": "action",
                               "name": "entityDirection",

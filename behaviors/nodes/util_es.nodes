@@ -41,7 +41,15 @@
       "value": {"type": "json", "value": {}}
     },
     "category": "util_es",
-    "script": "/scripts/actions/util_es.lua"
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "entity": {"type": "entity", "key": null},
+      "number": {"type": "number", "key": null},
+      "position": {"type": "position", "key": null},
+      "vec2": {"type": "vec2", "key": null},
+      "bool": {"type": "bool", "key": null},
+      "string": {"type": "string", "key": null}
+    }
   },
   
   "setString": {
@@ -69,6 +77,40 @@
     "script": "/scripts/actions/util_es.lua",
     "output": {
       "vector": {"type": "vec2", "key": null}
+    }
+  },
+  
+  "randomFromList": {
+    "type": "action",
+    "name": "randomFromList",
+    "title": "randomFromList",
+    "properties": {
+      "list": {"type": "list", "value": null}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "entity": {"type": "entity", "key": null},
+      "number": {"type": "number", "key": null},
+      "position": {"type": "position", "key": null},
+      "vec2": {"type": "vec2", "key": null},
+      "bool": {"type": "bool", "key": null},
+      "string": {"type": "string", "key": null}
+    }
+  },
+  
+  "easePlus": {
+    "type": "action",
+    "name": "easePlus",
+    "title": "easePlus",
+    "properties": {
+      "func": {"type": "string", "value": null},
+      "ratio": {"type": "number", "value": null}
+    },
+    "category": "util_es",
+    "script": "/scripts/actions/util_es.lua",
+    "output": {
+      "ratio": {"type": "number", "key": null}
     }
   }
 }

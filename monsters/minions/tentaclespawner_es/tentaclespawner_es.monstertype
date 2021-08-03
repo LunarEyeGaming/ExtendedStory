@@ -20,7 +20,7 @@
 
     "seeThroughLiquid" : false,
     "behaviorConfig" : {
-      "damageOnTouch" : true,
+      "damageOnTouch" : false,
 
       "targetQueryRange" : 20,
       "targetOnDamage" : true,
@@ -32,12 +32,25 @@
 
       "fleeActions" : [ ],
 
-      "hostileActions" : [ ],
+      "hostileActions" : [
+        {
+          "name" : "action-suicide",
+          "cooldown" : 1.0,
+          "parameters" : {
+            "minimumRange" : 0,
+            "maximumRange" : 3,
+            "onGround" : false,
+            "windupTime" : 0.05,
+            "windupStopForce" : 50,
+            "windupState" : ""
+          }
+        }
+      ],
 
       "periodicActions" : [ ],
 
       "approachActions" : [
-	    {
+        {
           "name" : "approach-fly"
         }
       ],
@@ -55,54 +68,41 @@
 
       "wanderActions" : [ ],
 
-      "concurrentActions" : [
-        {
-          "name" : "action-spawncompanions",
-          "parameters" : {
-            "maxCount" : 6,
-            "spawnCooldown" : 7.5,
-            "monsterType" : "tentaclegnat"
-          }
-        }
-      ],
+      "concurrentActions" : [ ],
 
-      "concurrentHostileActions" : [
+      "concurrentHostileActions" : [ ],
+      "deathActions" : [
         {
-          "name" : "action-spawncompanions",
-          "parameters" : {
-            "maxCount" : 6,
-            "spawnCooldown" : 7.5,
-            "monsterType" : "tentaclegnat"
-          }
-        }
-      ],
-	  "deathActions" : [
-	    {
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
-            "projectileType" : "invisibleprojectile",
+            "projectileType" : "delayprojectile",
             "projectileParameters" : {
               "actionOnReap" : [
-			    {
-				  "action" : "spawnmonster",
-				  "type" : "tentaclebomb",
-				  "level" : 5
-				}
-			  ],
-			  "timeToLive" : 0,
-			  "damageType" : "NoDamage"
+                {
+                  "action": "loop",
+                  "count": 6,
+                  "body": [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "tentaclegnat2_es",
+                      "level" : 5
+                    }
+                  ]
+                }
+              ],
+              "timeToLive" : 0
             },
             "aimDirection" : [0, 0],
             "inaccuracy" : 0,
             "fireOffset" : [0, 0]
           }
         }
-	  ]
+      ]
     },
 
     "touchDamage" : {
-      "poly" : [ [0.26, 0.625],  [0.625, 0.26], [0.625, -0.26], [0.26, -0.625], [-0.26, -0.625], [-0.625, -0.26], [-0.625, 0.26], [-0.26, 0.625] ],
+      "poly" : [ [0.468, 1.125],  [1.125, 0.468], [1.125, -0.468], [0.468, -1.125], [-0.468, -1.125], [-1.125, -0.468], [-1.125, 0.468], [-0.468, 1.125] ],
       "damage" : 3,
 
       "teamType" : "enemy",
@@ -115,7 +115,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [0.26, 0.625],  [0.625, 0.26], [0.625, -0.26], [0.26, -0.625], [-0.26, -0.625], [-0.625, -0.26], [-0.625, 0.26], [-0.26, 0.625] ],
+      "collisionPoly" : [ [0.468, 1.125],  [1.125, 0.468], [1.125, -0.468], [0.468, -1.125], [-0.468, -1.125], [-1.125, -0.468], [-1.125, 0.468], [-0.468, 1.125] ],
 
       "mass" : 0.5,
       "walkSpeed" : 1,
@@ -158,7 +158,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 10
+          "baseValue" : 20
         },
         "protection" : {
           "baseValue" : 0.0

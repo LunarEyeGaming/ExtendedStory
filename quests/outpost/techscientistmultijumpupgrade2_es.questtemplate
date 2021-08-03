@@ -1,0 +1,39 @@
+{
+  "id" : "techscientistmultijumpupgrade2_es",
+  "prerequisites" : [ "techscientistmultijumpupgrade_es", "bossvaulttrigger_es" ],
+  "title" : "^orange;Hopping Around",
+  "text" : "I have concluded from my research that I need some ^orange;ancient material^white; to finish up this next multi-jump upgrade. I don't know any way to get this stuff, but I think it might be worth asking anyways.",
+  "completionText" : "What the--? How did you get this? Nevermind. This should be more than enough to finish it.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [ ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      }
+    },
+    "requireTurnIn" : true,
+
+    "turnInDescription" : "Speak to ^orange;Elliott^reset; at the ^orange;Outpost^reset;",
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "ancientfragment",
+        "count" : 15,
+        "consume" : true
+      }
+    ],
+    
+    "showTech" : [
+      "multijump3_es"
+    ]
+  }
+}

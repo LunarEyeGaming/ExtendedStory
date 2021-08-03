@@ -28,7 +28,7 @@
     }
   ],
 
-  "scripts" : [ "/objects/abyss/abyssvortex/abyssvortex.lua" ],
+  "scripts" : [ "abyssvortex.lua" ],
   "scriptDelta" : 1,
   
   "rotationPeriod" : -4,
@@ -47,7 +47,7 @@
     }
   ],
 
-  "animation" : "/objects/abyss/abyssvortex/abyssvortex.animation",
+  "animation" : "abyssvortex.animation",
 
   "animationParts" : {
     "forcepad" : "vortex.png",

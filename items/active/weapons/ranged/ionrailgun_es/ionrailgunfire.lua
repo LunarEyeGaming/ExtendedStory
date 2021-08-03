@@ -6,14 +6,23 @@ ChargeFire = WeaponAbility:new()
 
 function ChargeFire:init()
   self.weapon:setStance(self.stances.idle)
+  self.leveledBaseDamage = (self.baseDamage * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1)))
+  self.explosionDamage = self.leveledBaseDamage * self.explosionDamageMultiplier
+  
+  self.damageConfig.baseDamage = self.leveledBaseDamage
+  self.damageArea = {
+    vec2.add({0, 0}, self.weapon.muzzleOffset),
+    vec2.add({self.beamLength, 0}, self.weapon.muzzleOffset)
+  }
+  
+  self.energyCost = self.energyUsage * self.fireTime
 
   self.cooldownTimer = 0
-  self.chargeTimer = 0
+  self.chargeTimer = self.chargeTime
 
   self.weapon.onLeaveAbility = function()
     self.weapon:setStance(self.stances.idle)
   end
-  activated = false
 end
 
 function ChargeFire:update(dt, fireMode, shiftHeld)
@@ -29,32 +38,25 @@ function ChargeFire:update(dt, fireMode, shiftHeld)
 
     self:setState(self.charge)
   end
-  local chargeTime = self.chargeTimer
-  if animator.animationState("beamfire") == "off" then
-    animator.resetTransformationGroup("laserbeam")
-    animator.setGlobalTag("beamDirectives", "")
-    activated = false
-  end
 end
 
 function ChargeFire:charge()
   self.weapon:setStance(self.stances.charge)
 
   animator.setAnimationState("firing", "charge")
-  collidePoint = nil
-
-  self.chargeTimer = self.chargeTime
 
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.chargeTimer = math.max(self.chargeTimer - self.dt, 0)
     
-    if self.chargeTimer == 0 and status.overConsumeResource("energy", self.energyUsage * self.fireTime) then
+    if self.chargeTimer == 0 and status.overConsumeResource("energy", self.energyCost) then
       self:setState(self.fire)
     end
 
     coroutine.yield()
   end
+
   animator.setAnimationState("firing", "idle")
+  self.chargeTimer = self.chargeTime
 end
 
 function ChargeFire:fire()
@@ -64,7 +66,28 @@ function ChargeFire:fire()
     self:setState(self.cooldown, self.cooldownTimer)
     return
   end
-  self:drawBeam()
+  local collidePoint = self:drawBeam()
+
+  if collidePoint then
+    projectilePos = collidePoint
+  else
+    projectilePos = beamEnd
+  end
+  if not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
+    world.spawnProjectile(
+      "orbitalup",
+      projectilePos,
+      activeItem.ownerEntityId(),
+      self:aimVector(0, 0),
+      false,
+      {
+        timeToLive = 0,
+        power = self.leveledBaseDamage,
+        damageKind = "ionplasma",
+        actionOnReap = {{action = "config", file = "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}}
+      }
+    )
+  end
 
   self.weapon:setStance(self.stances.fire)
 
@@ -83,36 +106,12 @@ end
 function ChargeFire:cooldown(duration)
   self.weapon:setStance(self.stances.cooldown)
   self.weapon:updateAim()
-  baseDamage = (self.baseDamage * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1)))
-
+  
   local progress = 0
-  if collidePoint then
-    projectilePos = collidePoint
-  else
-    projectilePos = beamEnd
-  end
-  if not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
-    world.spawnProjectile(
-      "orbitalup",
-      projectilePos,
-      activeItem.ownerEntityId(),
-      self:aimVector(0, 0),
-      false,
-      {
-        timeToLive = 0,
-        power = baseDamage,
-        piercing = true,
-        damageType = "damage",
-        damageKind = "ionplasma",
-        actionOnReap = {{action = "config", file = "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}}
-      }
-    )
-  end
+  local from = self.stances.cooldown.weaponOffset or {0, 0}
+  local to = self.stances.idle.weaponOffset or {0, 0}
   util.wait(duration, function()
-    local damageArea = { vec2.add({0, 0}, self.weapon.muzzleOffset), vec2.add({self.beamLength, 0}, self.weapon.muzzleOffset) }
-    self.weapon:setDamage({baseDamage = baseDamage, damageSourceKind = "ionplasma", knockback = 0, damageRepeatTimeout = 1.0}, damageArea)
-    local from = self.stances.cooldown.weaponOffset or {0,0}
-    local to = self.stances.idle.weaponOffset or {0,0}
+    self.weapon:setDamage(self.damageConfig, self.damageArea)
     self.weapon.weaponOffset = {interp.linear(progress, from[1], to[1]), interp.linear(progress, from[2], to[2])}
 
     self.weapon.relativeWeaponRotation = util.toRadians(interp.linear(progress, self.stances.cooldown.weaponRotation, self.stances.idle.weaponRotation))
@@ -120,6 +119,11 @@ function ChargeFire:cooldown(duration)
 
     progress = math.min(1.0, progress + (self.dt / duration))
   end)
+
+  animator.resetTransformationGroup("laserbeam")
+  animator.setGlobalTag("beamDirectives", "")
+
+  self.chargeTimer = self.chargeTime
 end
 
 function ChargeFire:firePosition()
@@ -134,10 +138,9 @@ end
 
 function ChargeFire:drawBeam()
   beamEnd = vec2.add(self:firePosition(), vec2.mul(self:aimVector(0, 0), self.beamLength))
-  collidePoint = world.lineCollision(self:firePosition(), beamEnd)
-  if collidePoint and activated == false then
+  local collidePoint = world.lineCollision(self:firePosition(), beamEnd)
+  if collidePoint then
     beamEnd = collidePoint
-    activated = true
   end
   local beamLength = world.magnitude(self:firePosition(), beamEnd)
   laserBeamOffsetX = beamLength / 2
@@ -145,6 +148,7 @@ function ChargeFire:drawBeam()
   animator.translateTransformationGroup("laserbeam", laserBeamOffset)
   animator.setGlobalTag("beamDirectives", "scalenearest;"..beamLength..";1")
   animator.setAnimationState("beamfire", "fire")
+  return collidePoint
 end
 
 function ChargeFire:uninit()

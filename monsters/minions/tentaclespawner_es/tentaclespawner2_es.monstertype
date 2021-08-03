@@ -37,7 +37,7 @@
       "periodicActions" : [ ],
 
       "approachActions" : [
-	    {
+        {
           "name" : "approach-fly"
         }
       ],
@@ -76,32 +76,32 @@
           }
         }
       ],
-	  "deathActions" : [
-	    {
+      "deathActions" : [
+        {
           "name" : "action-projectile",
           "parameters" : {
             "projectileCount" : 1,
             "projectileType" : "invisibleprojectile",
             "projectileParameters" : {
               "actionOnReap" : [
-			    {
-				  "action" : "spawnmonster",
-				  "type" : "tentaclebomb",
-				  "level" : 5,
-				  "arguments" : {
-				    "damageTeamType" : "friendly"
-				  }
-				}
-			  ],
-			  "timeToLive" : 0,
-			  "damageType" : "NoDamage"
+                {
+                  "action" : "spawnmonster",
+                  "type" : "tentaclebomb",
+                  "level" : 5,
+                  "arguments" : {
+                    "damageTeamType" : "friendly"
+                  }
+                }
+              ],
+              "timeToLive" : 0,
+              "damageType" : "NoDamage"
             },
             "aimDirection" : [0, 0],
             "inaccuracy" : 0,
             "fireOffset" : [0, 0]
           }
         }
-	  ]
+      ]
     },
 
     "touchDamage" : {

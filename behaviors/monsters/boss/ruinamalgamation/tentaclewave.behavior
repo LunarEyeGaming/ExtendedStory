@@ -1,0 +1,315 @@
+{
+  "name": "ruinamalgamation-tentaclewave",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/behavior.lua"
+  ],
+  "parameters": {
+    "tunnelSpeed": 40,
+    "tunnelTolerance": 1,
+    "emergeSpeed": 50,
+    "emergeTolerance": 1,
+    "firstWaitTime": 5.5,
+    "otherWaitTime": 1.5
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "controlParameters",
+            "type": "action",
+            "name": "controlParameters",
+            "parameters": {
+              "parameters": {"value": {"collisionEnabled": false}}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "sequence",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "randomize",
+                    "type": "composite",
+                    "name": "randomize",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "burrowLeft"},
+                              "speed": {"key": "<tunnelSpeed>"},
+                              "tolerance": {"key": "<tunnelTolerance>"}
+                            }
+                          },
+                          {
+                            "title": "setVelocity",
+                            "type": "action",
+                            "name": "setVelocity",
+                            "parameters": {
+                              "velocity": {"value": [0, 0]}
+                            }
+                          },
+                          {
+                            "title": "timer",
+                            "type": "action",
+                            "name": "timer",
+                            "parameters": {
+                              "time": {"value": 1.5}
+                            }
+                          },
+                          {
+                            "title": "setNumber",
+                            "type": "action",
+                            "name": "setNumber",
+                            "parameters": {
+                              "number": {"key": "<firstWaitTime>"}
+                            },
+                            "output": {
+                              "number": "waitTime"
+                            }
+                          },
+                          {
+                            "title": "each",
+                            "type": "decorator",
+                            "name": "each",
+                            "parameters": {
+                              "list": {"key": "leftTentacles"},
+                              "type": {"value": "entity"}
+                            },
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "sendEntityMessage",
+                                  "type": "action",
+                                  "name": "sendEntityMessage",
+                                  "parameters": {
+                                    "entity": {"key": "eachItem"},
+                                    "message": {"value": "attack"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"key": "waitTime"}
+                                  }
+                                },
+                                {
+                                  "title": "setNumber",
+                                  "type": "action",
+                                  "name": "setNumber",
+                                  "parameters": {
+                                    "number": {"key": "<otherWaitTime>"}
+                                  },
+                                  "output": {
+                                    "number": "waitTime"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "emergeLeft"},
+                              "speed": {"key": "<emergeSpeed>"},
+                              "tolerance": {"key": "<emergeTolerance>"}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "burrowRight"},
+                              "speed": {"key": "<tunnelSpeed>"},
+                              "tolerance": {"key": "<tunnelTolerance>"}
+                            }
+                          },
+                          {
+                            "title": "setVelocity",
+                            "type": "action",
+                            "name": "setVelocity",
+                            "parameters": {
+                              "velocity": {"value": [0, 0]}
+                            }
+                          },
+                          {
+                            "title": "timer",
+                            "type": "action",
+                            "name": "timer",
+                            "parameters": {
+                              "time": {"value": 1.5}
+                            }
+                          },
+                          {
+                            "title": "setNumber",
+                            "type": "action",
+                            "name": "setNumber",
+                            "parameters": {
+                              "number": {"key": "<firstWaitTime>"}
+                            },
+                            "output": {
+                              "number": "waitTime"
+                            }
+                          },
+                          {
+                            "title": "each",
+                            "type": "decorator",
+                            "name": "each",
+                            "parameters": {
+                              "list": {"key": "rightTentacles"},
+                              "type": {"value": "entity"}
+                            },
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "sendEntityMessage",
+                                  "type": "action",
+                                  "name": "sendEntityMessage",
+                                  "parameters": {
+                                    "entity": {"key": "eachItem"},
+                                    "message": {"value": "attack"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"key": "waitTime"}
+                                  }
+                                },
+                                {
+                                  "title": "setNumber",
+                                  "type": "action",
+                                  "name": "setNumber",
+                                  "parameters": {
+                                    "number": {"key": "<otherWaitTime>"}
+                                  },
+                                  "output": {
+                                    "number": "waitTime"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "title": "flyToPosition",
+                            "type": "action",
+                            "name": "flyToPosition",
+                            "parameters": {
+                              "position": {"key": "emergeRight"},
+                              "speed": {"key": "<emergeSpeed>"},
+                              "tolerance": {"key": "<emergeTolerance>"}
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "playSound",
+                    "type": "action",
+                    "name": "playSound",
+                    "parameters": {
+                      "sound": {"value": "emerge"}
+                    }
+                  },
+                  {
+                    "title": "burstParticleEmitter",
+                    "type": "action",
+                    "name": "burstParticleEmitter",
+                    "parameters": {
+                      "emitter": {"value": "emerge"}
+                    }
+                  },
+                  {
+                    "title": "offsetPosition",
+                    "type": "action",
+                    "name": "offsetPosition",
+                    "parameters": {
+                      "offset": {"value": [0, 20]},
+                      "position": {"key": "self"}
+                    },
+                    "output": {
+                      "position": "tempEmerge"
+                    }
+                  },
+                  {
+                    "title": "esmodules-failsafeflight",
+                    "type": "module",
+                    "name": "esmodules-failsafeflight",
+                    "parameters": {
+                      "position": {"key": "tempEmerge"},
+                      "speed": {"value": 20},
+                      "tolerance": {"value": 3},
+                      "durationLimit": {"value": 0.75}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "runner",
+                "type": "action",
+                "name": "runner",
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -22,22 +22,22 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-	    "title": "timer",
-		"type": "action",
-		"name": "timer",
-		"parameters": {
-		  "time": {"value": 1}
-		}
-	  },
-	  {
-	    "title": "burstParticleEmitter",
-		"type": "action",
-		"name": "burstParticleEmitter",
-		"parameters": {
-		  "emitter": {"value": "spitwindup"}
-		}
-	  },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "spitwindup"}
+        }
+      },
       {
         "title": "playSound",
         "type": "action",
@@ -46,7 +46,7 @@
           "sound": {"value": "spitwindup"}
         }
       },
-	  {
+      {
         "title": "faceEntity",
         "type": "action",
         "name": "faceEntity",

@@ -6,5 +6,6 @@
   "inventoryIcon" : "ancientfragment.png",
   "description" : "Fragmented material from ancient machines.",
   "shortdescription" : "Ancient Fragment",
-  "itemTags" : [ "reagent" ]
+  "itemTags" : [ "reagent" ],
+  "pickupQuestTemplates" : [ "bossvaulttrigger_es" ]
 }

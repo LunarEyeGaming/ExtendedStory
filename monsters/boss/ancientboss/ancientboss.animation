@@ -23,10 +23,16 @@
           "visible" : {
             "frames" : 8,
             "cycle" : 1,
-            "mode" : "loop"
+            "mode" : "loop",
+            "properties" : {
+              "lightsOn" : [ "glow" ]
+            }
           },
           "invisible" : {
-            "frames" : 1
+            "frames" : 1,
+            "properties" : {
+              "lightsOff" : [ "glow" ]
+            }
           }
         }
       },

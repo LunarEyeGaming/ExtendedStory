@@ -1,0 +1,19 @@
+{
+  "frameGrid" : {
+    "size" : [122, 122],
+    "dimensions" : [6, 2],
+    "names" : [
+      [ "idle", "blink.1", "blink.2" ],
+      [ "portalwindup.1", "portalwindup.2", "portalwindup.3", "portalwindup.4", "portalcharged.1", "portalcharged.2" ]
+    ]
+  },
+  "aliases" : {
+    "blink.3" : "blink.1",
+    "open" : "blink.1",
+    "closed" : "blink.2",
+    "portalwinddown.1" : "portalwindup.4",
+    "portalwinddown.2" : "portalwindup.3",
+    "portalwinddown.3" : "portalwindup.2",
+    "portalwinddown.4" : "portalwindup.1"
+  }
+}

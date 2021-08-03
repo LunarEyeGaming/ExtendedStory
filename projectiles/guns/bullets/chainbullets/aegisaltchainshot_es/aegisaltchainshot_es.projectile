@@ -1,0 +1,41 @@
+{
+  "projectileName" : "aegisaltchainshot_es",
+  "physics" : "laser",
+  "damageKindImage" : "icon.png",
+  "image" : "aegisaltchainshot.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "fullbright" : true,
+  "speed" : 100,
+  "supportsProcessing" : true,
+  "movementSettings" : {
+    "collisionEnabled" : false
+  },
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/impact_plasma.ogg" ]
+    },
+    {
+      "action" : "loop",
+      "count" : 5,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : "energyblade"
+        },
+        {
+          "action" : "particle",
+          "specification" : "energyblade2"
+        }
+      ]
+    }
+  ],
+  "lightColor" : [83, 28, 97],
+  "damageKind" : "plasma",
+  "piercing" : true,
+
+  "scripts" : [ "/scripts/projectiles/chainbullet.lua" ],
+  "chainProjectile" : "aegisaltchainshot2_es"
+}

@@ -17,8 +17,16 @@
   "script" : "/quests/scripts/story/destroysupervoideye.lua",
   "scriptConfig" : {
     "portraits" : {
-      "questStarted" : "questGiver",
-      "questComplete" : "questReceiver"
+      //"questStarted" : "questGiver",
+      //"questComplete" : "questReceiver"
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      }
     },
 
     "descriptions" : {

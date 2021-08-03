@@ -1,13 +1,7 @@
 {
   "name" : "spheredeactivater",
-  "effectConfig" : {
-    "starvationCompoundDamage" : 2,
-    "movementModifiers" : {
-      "speedModifier" : 1
-    },
-    "soundInterval" : 0.5
-  },
-  "defaultDuration" : 0.1,
+  "effectConfig" : {},
+  "defaultDuration" : 1.0,
 
   "scripts" : [
     "spheredeactivater.lua"

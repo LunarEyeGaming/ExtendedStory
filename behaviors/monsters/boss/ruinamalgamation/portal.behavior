@@ -24,11 +24,12 @@
         }
       },
       {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
+        "title": "ruinamalgamation-gradualstop",
+        "type": "module",
+        "name": "ruinamalgamation-gradualstop",
         "parameters": {
-          "velocity": {"value": [0, 0]}
+          "stopDuration": {"value": 0.5},
+          "controlForce": {"value": 100}
         }
       },
       {
@@ -84,7 +85,7 @@
               "name": "spawnProjectile",
               "parameters": {
                 "aimVector": {"value": [1, 0]},
-                "offset": {"value": [5, 3.5]},
+                "offset": {"value": [-2, 3.5]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {}},
                 "projectileType": {"value": "portalspawner_es"},
@@ -111,6 +112,14 @@
         "parameters": {
           "state": {"value": "portalwinddown"},
           "type": {"value": "eye2"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.0}
         }
       }
     ]

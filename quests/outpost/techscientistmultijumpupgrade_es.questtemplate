@@ -1,0 +1,39 @@
+{
+  "id" : "techscientistmultijumpupgrade_es",
+  "prerequisites" : [ "techscientist4", "destroyruin" ], // Ephemeral quests...
+  "title" : "^orange;Several Giant Leaps",
+  "text" : "I've heard rumors that the Ancient Gateways floating in space contain ^orange;Ancient Essence^white;, a very rare material. If this rumor turns out to be true, can I have 400 of it for research purposes? In exchange, I could give you an upgrade of the multi-jump tech that has the power of the ^green;Pulse Jump^white;.",
+  "completionText" : "Excellent! I am looking forward to seeing how this material will affect my tech. Here's the multi-jump upgrade.",
+  "moneyRange" : [700, 700],
+  "rewards" : [ ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      }
+    },
+    "requireTurnIn" : true,
+
+    "turnInDescription" : "Speak to ^orange;Elliott^reset; at the ^orange;Outpost^reset;",
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "essence",
+        "count" : 400,
+        "consume" : true
+      }
+    ],
+    
+    "enableTech" : [
+      "multijump2_es"
+    ]
+  }
+}

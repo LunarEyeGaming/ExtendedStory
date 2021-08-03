@@ -30,9 +30,9 @@
       "fire5" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
       "fire6" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
       "fire7" : [ "/sfx/melee/lightningblade_swing1.ogg", "/sfx/melee/lightningblade_swing2.ogg", "/sfx/melee/lightningblade_swing3.ogg", "/sfx/melee/lightningblade_swing4.ogg", "/sfx/melee/lightningblade_swing5.ogg", "/sfx/melee/lightningblade_swing6.ogg", "/sfx/melee/lightningblade_swing7.ogg", "/sfx/melee/lightningblade_swing8.ogg", "/sfx/melee/lightningblade_swing9.ogg" ],
-	  "electricStart" : [ "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg" ],
-	  "electricBlast" : [ "/sfx/gun/antimattercannon_charged.ogg" ],
-	  "electricEnd" : [ "/sfx/melee/lightningblade_altwinddown.ogg" ]
+      "electricStart" : [ "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg", "/sfx/npc/boss/tentacleboss_beam_blast.ogg" ],
+      "electricBlast" : [ "/sfx/gun/antimattercannon_charged.ogg" ],
+      "electricEnd" : [ "/sfx/melee/lightningblade_altwinddown.ogg" ]
     }
   },
 
@@ -45,30 +45,30 @@
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
     "damageConfig" : {"damageSourceKind" : "electricbroadsword","statusEffects" : [ "electrified" ],"knockbackMode" : "facing","timeout" : 0.5},
-    "fireTime" : 0.5,
-    "baseDps" : 15,
-	"comboSteps" : 7,
-	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0]],
-	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 2.5,"knockback" : 30},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 2.5,"knockback" : 40}],
+    "fireTime" : 0.75,
+    "baseDps" : 8,
+    "comboSteps" : 7,
+    "swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0]],
+    "stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 25},{"baseDamageFactor" : 2.5,"knockback" : 30},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 2.5,"knockback" : 40}],
 
     "stances" : {
-	  "idle" : {"aimAngle" : 0},
+      "idle" : {"aimAngle" : 0},
       "windup1" : {"duration" : 0.15, "aimAngle" : 0},
-	  "windup3" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
-	  "fire3" : {"duration" : 0.3, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
-	  "wait3" : {"duration" : 0.1, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
-	  "windup4" : {"duration" : 0.15, "armRotation" : -150, "weaponRotation" : 55, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
-	  "fire4" : {"duration" : 0.2, "armRotation" : 0, "weaponRotation" : -90, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
-	  "wait4" : {"duration" : 0.1, "armRotation" : -90, "weaponRotation" : -10, "weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
-	  "windup5" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "wait5" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
-	  "windup6" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "fire6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "wait6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
-	  "windup7" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "fire7" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
-	  "wait7" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}
+      "windup3" : {"duration" : 0.2, "armRotation" : -90, "weaponRotation" : -180, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+      "fire3" : {"duration" : 0.3, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+      "wait3" : {"duration" : 0.1, "armRotation" : 80, "weaponRotation" : -170, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+      "windup4" : {"duration" : 0.15, "armRotation" : -150, "weaponRotation" : 55, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+      "fire4" : {"duration" : 0.2, "armRotation" : 0, "weaponRotation" : -90, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true, "aimAngle" : 0},
+      "wait4" : {"duration" : 0.1, "armRotation" : -90, "weaponRotation" : -10, "weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+      "windup5" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "wait5" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+      "windup6" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "fire6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "wait6" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}, 
+      "windup7" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "fire7" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "aimAngle" : 0}, 
+      "wait7" : {"duration" : 1.5,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true, "aimAngle" : 0}
     }
   },
 

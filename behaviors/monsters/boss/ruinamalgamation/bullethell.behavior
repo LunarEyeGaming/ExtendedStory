@@ -3,6 +3,7 @@
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
+    "/scripts/actions/projectiles.lua",
     "/scripts/actions/time.lua"
   ],
   "parameters": {
@@ -79,28 +80,37 @@
           "parameters": {},
           "children": [
             {
+              "title": "entityDirection",
+              "type": "action",
+              "name": "entityDirection",
+              "parameters": {
+                "target": {"key": "target"}
+              },
+              "output": {
+                "vector": "aimVector"
+              }
+            },
+            {
               "title": "spawnProjectile",
               "type": "action",
               "name": "spawnProjectile",
               "parameters": {
-                "aimVector": {"value": [1, 0]},
+                "aimVector": {"key": "aimVector"},
                 "offset": {"value": [-5, -2]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {
                   "timeToLive": 0,
-                  "damageType": "NoDamage",
-                  "speed": 0,
                   "power": 20,
                   "actionOnReap": [
                     {
                       "action": "loop",
-                      "count": 10,
+                      "count": 5,
                       "body": [
                         {
                           "action": "projectile",
                           "type": "ruinseedenergy_es",
                           "inheritDamageFactor": 1,
-                          "fuzzAngle": 180
+                          "fuzzAngle": 45
                         }
                       ]
                     },
@@ -110,7 +120,7 @@
                     }
                   ]
                 }},
-                "projectileType": {"value": "orbitalup"},
+                "projectileType": {"value": "delayprojectile"},
                 "scalePower": {"value": true},
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}

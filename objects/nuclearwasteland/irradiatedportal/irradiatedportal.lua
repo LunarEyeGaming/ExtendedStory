@@ -68,8 +68,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Irradiated Dimension",
-          planetName = "Location of Poison Artifact",
+          name = "Underground Dungeon",
+          planetName = "Irradiated Dimension",
           icon = "default",
           warpAction = string.format("InstanceWorld:poisonartifactdungeon", storage.uuid, world.threatLevel())
         } }

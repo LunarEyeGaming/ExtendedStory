@@ -99,9 +99,15 @@
     "slamFreezeTime" : 0.25,
     "slamSpeed" : 100,
 
-    "projectileType" : "electricshockwave",
+    "projectileType" : "electricplasmaexplosion",
     "projectileParameters" : {
       "power" : 3.5,
+      "knockback" : 35,
+      "knockbackMode" : "facing"
+    },
+    "shockwaveProjectileType" : "electricshockwave",
+    "shockwaveProjectileParameters" : {
+      "power" : 1.0,
       "knockback" : 35,
       "knockbackMode" : "facing"
     },

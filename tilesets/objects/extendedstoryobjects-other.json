@@ -8,8 +8,8 @@
  "margin":0,
  "name":"extendedstoryobjects-other",
  "spacing":0,
- "tilecount":47,
- "tileheight":82,
+ "tilecount":49,
+ "tileheight":176,
  "tileproperties":
     {
      "0":
@@ -304,6 +304,20 @@
          "imagePositionX":"-8",
          "imagePositionY":"-8",
          "object":"lightmirrorstation_es",
+         "tilesetDirection":"right"
+        },
+     "47":
+        {
+         "imagePositionX":"-88",
+         "imagePositionY":"-112",
+         "object":"ruinseedtentacle_es",
+         "tilesetDirection":"right"
+        },
+     "48":
+        {
+         "imagePositionX":"-88",
+         "imagePositionY":"-112",
+         "object":"ruinseedtentacle_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -638,6 +652,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "47":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "48":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "imagePositionX":"string",
@@ -928,6 +956,18 @@
          "imageheight":16,
          "imagewidth":16
         },
+     "47":
+        {
+         "image":"..\/images\/objects\/ruinseedtentacle_es.png",
+         "imageheight":176,
+         "imagewidth":176
+        },
+     "48":
+        {
+         "image":"..\/images\/objects\/ruinseedtentacleright_es.png",
+         "imageheight":176,
+         "imagewidth":176
+        },
      "5":
         {
          "image":"..\/images\/objects\/healthdeductortrap.png",
@@ -959,6 +999,6 @@
          "imagewidth":16
         }
     },
- "tilewidth":152,
+ "tilewidth":176,
  "type":"tileset"
 }

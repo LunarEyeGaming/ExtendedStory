@@ -1,0 +1,34 @@
+{
+  "id" : "bossvaulttrigger_es", // Trigger quest to make exploring the Bossvault a prerequisite.
+  "mainQuest" : true,
+  "prerequisites" : [ ],
+  "title" : "^orange;Bossvault",
+  "text" : "You have explored the Bossvault. New quests may be unlocked.",
+  "completionText" : "This text should not be seen.",
+  "moneyRange" : [0, 0],
+  "rewards" : [],
+  "speaker" : "questGiver",
+  "canBeAbandoned" : false,
+  "showCompleteDialog" : false,
+  
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+
+    "portraits" : {
+      "questStarted" : "questGiver",
+      "questComplete" : "questGiver"
+    },
+    
+    "requireTurnIn" : false,
+    
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "ancientfragment",
+        "count" : 1,
+        "consume" : false
+      }
+    ]
+  }
+}

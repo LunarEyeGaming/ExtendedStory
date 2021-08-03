@@ -3,96 +3,201 @@
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
-    "/scripts/actions/time.lua"
+    "/scripts/actions/math.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/behavior.lua"
   ],
   "parameters": {
-    "fireStart": 0.45
+    "minionCap": 3
   },
   "root": {
-    "title": "sequence",
-    "type": "composite",
-    "name": "sequence",
+    "title": "succeeder",
+    "type": "decorator",
+    "name": "succeeder",
     "parameters": {},
-    "children": [
-      {
-        "title": "repeater",
-        "type": "decorator",
-        "name": "repeater",
-        "parameters": {
-          "maxLoops": {"value": 5},
-          "untilSuccess": {"value": false}
+    "child": {
+      "title": "sequence",
+      "type": "composite",
+      "name": "sequence",
+      "parameters": {},
+      "children": [
+        {
+          "title": "inverter",
+          "type": "decorator",
+          "name": "inverter",
+          "parameters": {},
+          "child": {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "listSize",
+                "type": "action",
+                "name": "listSize",
+                "parameters": {
+                  "list": {"key": "minions"}
+                },
+                "output": {
+                  "number": "minionCount"
+                }
+              },
+              {
+                "title": "gte",
+                "type": "action",
+                "name": "gte",
+                "parameters": {
+                  "first": {"key": "minionCount"},
+                  "second": {"key": "<minionCap>"}
+                }
+              }
+            ]
+          }
         },
-        "child": {
-          "title": "sequence",
+        {
+          "title": "selector",
           "type": "composite",
-          "name": "sequence",
+          "name": "selector",
           "parameters": {},
           "children": [
             {
-              "title": "spawnProjectile",
+              "title": "sub",
               "type": "action",
-              "name": "spawnProjectile",
+              "name": "sub",
               "parameters": {
-                "aimVector": {"value": [1, 0]},
-                "offset": {"value": [0, 0]},
-                "position": {"key": "self"},
-                "projectileConfig": {"value": {
-                  "timeToLive": 0,
-                  "damageType": "NoDamage",
-                  "actionOnReap": [
-                    {
-                      "action": "projectile",
-                      "type": "invisibleprojectile",
-                      "offsetRange": [-3, -3, 3, 3],
-                      "config": {
-                        "timeToLive": 0,
-                        "damageType": "NoDamage",
-                        "actionOnReap": [
-                          {
-                            "action": "spawnmonster",
-                            "type": "tentaclespawner_es",
-                            "level": 5
-                          },
-                          {
-                            "action": "loop",
-                            "count": 20,
-                            "body": [
-                              {
-                                "action": "particle",
-                                "specification": "tentaclegooshard"
-                              },
-                              {
-                                "action": "particle",
-                                "specification": "tentacleshard"
-                              }
-                            ]
-                          },
-                          {
-                            "action": "sound",
-                            "options": [ "/sfx/objects/meat_break1.ogg", "/sfx/objects/meat_break2.ogg", "/sfx/objects/meat_break3.ogg" ]
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }},
-                "projectileType": {"value": "invisibleprojectile"},
-                "scalePower": {"value": true},
-                "sourceEntity": {"key": "self"},
-                "trackSource": {"value": false}
+                "first": {"key": "<minionCap>"},
+                "second": {"key": "minionCount"}
+              },
+              "output": {
+                "result": "numNewMinions"
               }
             },
             {
-              "title": "timer",
+              "title": "setNumber",
               "type": "action",
-              "name": "timer",
+              "name": "setNumber",
               "parameters": {
-                "time": {"value": 1.0}
+                "number": {"key": "<minionCap>"}
+              },
+              "output": {
+                "number": "numNewMinions"
               }
             }
           ]
+        },
+        {
+          "title": "parallel",
+          "type": "composite",
+          "name": "parallel",
+          "parameters": {
+            "fail": {"value": -1},
+            "success": {"value": -1}
+          },
+          "children": [
+            {
+              "title": "controlParameters",
+              "type": "action",
+              "name": "controlParameters",
+              "parameters": {
+                "parameters": {"value": {"collisionEnabled": false}}
+              }
+            },
+            {
+              "title": "dynamic",
+              "type": "composite",
+              "name": "dynamic",
+              "parameters": {},
+              "children": [
+                {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+                        "time": {"value": 1.5}
+                      }
+                    },
+                    {
+                      "title": "flyToPosition",
+                      "type": "action",
+                      "name": "flyToPosition",
+                      "parameters": {
+                        "position": {"key": "minionSpawn"},
+                        "speed": {"value": 50},
+                        "tolerance": {"value": 1}
+                      }
+                    },
+                    {
+                      "title": "repeater",
+                      "type": "decorator",
+                      "name": "repeater",
+                      "parameters": {
+                        "maxLoops": {"key": "numNewMinions"},
+                        "untilSuccess": {"value": false}
+                      },
+                      "child": {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "spawnProjectile",
+                            "type": "action",
+                            "name": "spawnProjectile",
+                            "parameters": {
+                              "aimVector": {"value": [0, 1]},
+                              "offset": {"value": [0, 0]},
+                              "position": {"key": "self"},
+                              "projectileConfig": {"value": {
+                                "timeToLive": 0,
+                                "actionOnReap": [
+                                  {
+                                    "action": "projectile",
+                                    "type": "ruineggspawner_es",
+                                    "offsetRange": [-6, -3, 6, 3],
+                                    "fuzzAngle" : 25
+                                  }
+                                ]
+                              }},
+                              "projectileType": {"value": "delayprojectile"},
+                              "scalePower": {"value": true},
+                              "sourceEntity": {"key": "self"},
+                              "trackSource": {"value": false}
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "title": "ruinamalgamation-gradualstop",
+                      "type": "module",
+                      "name": "ruinamalgamation-gradualstop",
+                      "parameters": {
+                        "stopDuration": {"value": 0.5},
+                        "controlForce": {"value": 200}
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "runner",
+                  "type": "action",
+                  "name": "runner",
+                  "parameters": {}
+                }
+              ]
+            }
+          ]
         }
-      }
-    ]
+      ]
+    }
   }
 }

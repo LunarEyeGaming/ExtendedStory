@@ -14,10 +14,8 @@
     "/scripts/actions/world.lua"
   ],
   "parameters": {
-    "leftfistId": 0,
-    "rightfistId": 0,
-    "target": 123,
-    "sourceId": 123
+    "leftfistId": null,
+    "rightfistId": null
   },
   "root": {
     "title": "sequence",
@@ -101,9 +99,9 @@
             },
             {
               "title": "sendNotification",
-                "type": "action",
-                "name": "sendNotification",
-                "parameters": {
+              "type": "action",
+              "name": "sendNotification",
+              "parameters": {
                 "entity": {"value": "<leftfistId>"},
                 "target": {"key": "target"},
                 "type": {"value": "attack"}
@@ -127,9 +125,9 @@
             },
             {
               "title": "sendNotification",
-                "type": "action",
-                "name": "sendNotification",
-                "parameters": {
+              "type": "action",
+              "name": "sendNotification",
+              "parameters": {
                 "entity": {"value": "<rightfistId>"},
                 "target": {"key": "target"},
                 "type": {"value": "attack"}
@@ -144,6 +142,45 @@
               }
             }
           ]
+        }
+      },
+      {
+        "title": "succeeder",
+        "type": "decorator",
+        "name": "succeeder",
+        "parameters": {},
+        "child": {
+          "title": "each",
+          "type": "decorator",
+          "name": "each",
+          "parameters": {
+            "list": {"key": "barriers"},
+            "type": {"value": "entity"}
+          },
+          "child": {
+            "title": "succeeder",
+            "type": "decorator",
+            "name": "succeeder",
+            "parameters": {},
+            "child": {
+              "title": "sendNotification",
+              "type": "action",
+              "name": "sendNotification",
+              "parameters": {
+                "entity": {"key": "eachItem"},
+                "type": {"value": "deactivate"}
+              }
+            }
+          }
+        }
+      },
+      {
+        "title": "listClear",
+        "type": "action",
+        "name": "listClear",
+        "parameters": {},
+        "output": {
+          "list": "barriers"
         }
       },
       {

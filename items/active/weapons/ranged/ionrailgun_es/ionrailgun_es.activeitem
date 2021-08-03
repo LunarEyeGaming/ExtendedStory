@@ -36,10 +36,17 @@
     "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
     "class" : "ChargeFire",
     "baseDamage" : 3,
+    "explosionDamageMultiplier": 0.5,
     "chargeTime" : 1.5,
     "energyUsage" : 75,
     "cooldownTime" : 0.25,
     "beamLength" : 100,
+
+    "damageConfig" : {
+      "damageSourceKind" : "ionplasma",
+      "knockback" : 0,
+      "damageRepeatTimeout" : 1.0
+    },
 
     //Display only
     "baseDps" : 5.25,

@@ -68,8 +68,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Voltage Dimension",
-          planetName = "Location of Electric Artifact",
+          name = "Electric Tower",
+          planetName = "Voltage Dimension",
           icon = "default",
           warpAction = string.format("InstanceWorld:electricartifactdungeon", storage.uuid, world.threatLevel())
         } }

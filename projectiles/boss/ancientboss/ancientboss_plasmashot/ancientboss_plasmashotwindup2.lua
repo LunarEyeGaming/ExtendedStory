@@ -17,7 +17,7 @@ end
 function destroy()
   if shouldFire then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("ancientboss_plasmashot", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 75, power = projectile.getParameter("power")})
+    world.spawnProjectile("ancientboss_plasmashot", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 50, power = projectile.getParameter("power")})
     projectile.processAction(projectile.getParameter("explosionAction"))
   end
 end

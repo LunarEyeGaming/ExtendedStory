@@ -28,8 +28,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_sniper1.ogg"],
-      "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
+      "fire" : ["/sfx/gun/plasma_mp2.ogg"],
+      "altFire" : ["/sfx/gun/grenade1.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
@@ -62,21 +62,15 @@
     "class" : "GunFire",
 
     "fireTime" : 0.06,
-    "baseDps" : 20,
-    "energyUsage" : 60,
+    "baseDps" : 21,
+    "energyUsage" : 50,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
     "fireType" : "auto",
 
     "projectileType" : "aegisaltbullet",
     "projectileParameters" : {
-      "knockback" : 5,
-      "actionOnReap" : [
-        {
-          "action" : "config",
-          "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
-        }
-      ]
+      "knockback" : 5
     },
 
     "stances" : {
@@ -109,23 +103,16 @@
     }
   },
 
-  "altAbilityType" : "rocketburst",
+  "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "projectileType" : "aegisaltriflerocket", "projectileParameters" : {
-        "actionOnReap" : [
-          {
-            "action" : "config",
-            "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
-          }
-        ]
-      } }
+      "physical" : { "projectileType" : "aegisaltgrenade_es" }
     },
-    "energyUsage" : 70,
-    "fireTime" : 0.2,
+    "energyUsage" : 25,
+    "fireTime" : 3.0,
     "inaccuracy" : 0.05,
-    "baseDps" : 30,
-    "name" : "Aegisalt Rocket Burst"
+    "baseDps" : 14,
+    "name" : "Laser Grenade"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

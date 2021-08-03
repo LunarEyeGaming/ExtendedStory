@@ -2,7 +2,7 @@
   "projectileName" : "ancientboss_plasmashothoming_es",
   "image" : "ancientboss_plasmashot.png",
   "animationCycle" : 0.2,
-  "lightColor" : [150, 100, 100],
+  "lightColor" : [150, 100, 150],
   "frameNumber" : 4,
   "flippable" : false,
   "fullbright" : true,
@@ -45,9 +45,9 @@
 
   "speed" : 75,
 
-  "scripts" : [ "ancientboss_plasmashothoming_es.lua" ],
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
   "scriptDelta" : 1,
 
-  "rotationRate" : 1.5,
+  "rotationRate" : 1.8,
   "trackingLimit" : 2.0
 }

@@ -2,6 +2,32 @@ require "/scripts/util.lua"
 require "/scripts/vec2.lua"
 require "/scripts/behavior/bdata.lua"
 
+EaseFunctions = {}
+
+function EaseFunctions.sin(ratio)
+  return math.sin(ratio * math.pi / 2)
+end
+
+function EaseFunctions.doubleSin(ratio)
+  return math.sin(ratio * math.pi)
+end
+
+function EaseFunctions.quadSin(ratio)
+  return math.sin(ratio * math.pi * 2 - math.pi / 2) / 2 + 0.5
+end
+
+function EaseFunctions.inOutSin(ratio)
+  return util.easeInOutSin(ratio, 0, 1.0)
+end
+
+function _anyTypeTable(value)
+  results = {}
+  for _, dataType in pairs(ListTypes) do
+    results[dataType] = value
+  end
+  return results
+end
+
 -- A function that sets an animation parameter. Why this is not a thing in vanilla is beyond me.
 -- param key
 -- param value
@@ -48,7 +74,10 @@ end
 -- output value
 
 function getJsonObjectKey(args, board)
-
+  local object = args.object or {}
+  local value = object[args.key]
+  if value == nil then return false end
+  return true, _anyTypeTable(value)
 end
 
 -- Returns a string. Ideal for setting board variables.
@@ -77,6 +106,7 @@ end
 -- param withoutEntity
 -- output entity
 -- output list
+
 function queryEntityRect(args, board)
   if args.position1 == nil or args.position2 == nil then return false end
 
@@ -91,4 +121,25 @@ function queryEntityRect(args, board)
   end
 
   return false
+end
+
+-- param list list
+-- output AnyType value
+
+function randomFromList(args, board)
+  if args.list == nil or next(args.list) == nil then return false end
+  return true, _anyTypeTable(util.randomFromList(args.list))
+end
+
+-- param string func
+-- param float ratio
+-- output float ratio
+
+function easePlus(args, board)
+  local ratio = args.ratio
+  func = EaseFunctions[args.func]
+  if func then
+    ratio = func(ratio)
+  end
+  return true, {ratio = ratio}
 end

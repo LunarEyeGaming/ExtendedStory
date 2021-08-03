@@ -7,26 +7,21 @@
   "damageKindImage" : "icon.png",
   "physics" : "default",
   "emitters" : [ ],
-  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
-  "damageKind" : "plasma",
+  "onlyHitTerrain" : true,
   "piercing" : true,
   
   "periodicActions" : [
   ],
   "actionOnReap" : [
     {
-	  "action" : "sound",
-	  "options" : ["/sfx/gun/supervoidobliterator_fire.ogg"]
-	},
+      "action" : "sound",
+      "options" : ["/sfx/gun/supervoidobliterator_fire.ogg"]
+    },
     {
       "action" : "projectile",
       "type" : "ruinseedsupervoidblast_es",
       "inheritDamageFactor" : 1,
-      "angle" : 90,
-      "fuzzAngle" : 15,
-      "config" : {
-        "actionOnReap" : []
-      }
+      "fuzzAngle" : 180
     }
   ],
 

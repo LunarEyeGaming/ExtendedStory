@@ -105,6 +105,27 @@
     }
   },
   {
+    "name" : "lostsoul",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 1],
+    "spawnChance" : 0.01,
+    "monsterType" : [
+      [0.2, "apexlostsoul"],
+      [0.2, "avianlostsoul"],
+      [0.2, "floranlostsoul"],
+      [0.2, "humanlostsoul"],
+      [0.2, "hylotllostsoul"]
+    ],
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+  {
     "name" : "apexlostsoul",
 
     "spawnParameters" : {
