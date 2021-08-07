@@ -6,10 +6,10 @@ ChargeFire = WeaponAbility:new()
 
 function ChargeFire:init()
   self.weapon:setStance(self.stances.idle)
-  self.leveledBaseDamage = (self.baseDamage * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1)))
-  self.explosionDamage = self.leveledBaseDamage * self.explosionDamageMultiplier
+  self.leveledBaseDamage = self.baseDamage * root.evalFunction("weaponDamageLevelMultiplier", config.getParameter("level", 1))
+  self.explosionDamage = self.leveledBaseDamage * self.explosionDamageMultiplier * activeItem.ownerPowerMultiplier()
   
-  self.damageConfig.baseDamage = self.leveledBaseDamage
+  self.damageConfig.baseDamage = self.baseDamage
   self.damageArea = {
     vec2.add({0, 0}, self.weapon.muzzleOffset),
     vec2.add({self.beamLength, 0}, self.weapon.muzzleOffset)
@@ -82,7 +82,7 @@ function ChargeFire:fire()
       false,
       {
         timeToLive = 0,
-        power = self.leveledBaseDamage,
+        power = self.explosionDamage,
         damageKind = "ionplasma",
         actionOnReap = {{action = "config", file = "/projectiles/explosions/iongrenadeexplosion/iongrenadeexplosion2.config"}}
       }

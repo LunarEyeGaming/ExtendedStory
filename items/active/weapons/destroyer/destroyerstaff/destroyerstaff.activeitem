@@ -96,9 +96,9 @@
   "primaryAbility" : {
     "name" : "^red;Destruction Shower", 
     "projectileType" : "delayprojectile",
-    "energyCost" : 100,
+    "energyCost" : 150,
     "projectileParameters" : {
-      "baseDamage" : 1,
+      "baseDamage" : 1.5,
       "timeToLive" : 0,
       "actionOnReap" : [
         {
