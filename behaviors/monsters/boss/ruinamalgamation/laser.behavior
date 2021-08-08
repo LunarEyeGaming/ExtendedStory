@@ -3,16 +3,10 @@
   "description": "",
   "scripts": [
     "/scripts/actions/animator.lua",
-    "/scripts/actions/math.lua",
-    "/scripts/actions/time.lua",
-    "/scripts/actions/util_es.lua"
+    "/scripts/actions/time.lua"
   ],
   "parameters": {
-    "startAngle": 3.78,
-    "endAngle": 0.78,
-    "xDistance": 30,
-    "minXAdjust": -7,
-    "maxXAdjust": 7
+    "fireStart": 0.45
   },
   "root": {
     "title": "sequence",
@@ -20,415 +14,133 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "entityDirection",
+	  {
+        "title": "flyToPosition",
         "type": "action",
-        "name": "entityDirection",
-        "parameters": {
-          "target": {"key": "target"}
-        },
-        "output": {
-          "direction": "targetDirection"
-        }
-      },
-      {
-        "title": "multiply",
-        "type": "action",
-        "name": "multiply",
-        "parameters": {
-          "factor": {"key": "<xDistance>"},
-          "number": {"key": "targetDirection"}
-        },
-        "output": {
-          "result": "xOffset"
-        }
-      },
-      {
-        "title": "multiply",
-        "type": "action",
-        "name": "multiply",
-        "parameters": {
-          "factor": {"value": -1},
-          "number": {"key": "xOffset"}
-        },
-        "output": {
-          "result": "xOffset"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
+        "name": "flyToPosition",
         "parameters": {
           "position": {"key": "hover"},
-          "offset": {"value": ["xOffset", 0]}
-        },
-        "output": {
-          "position": "nextPos"
+          "tolerance": {"value": 1}
         }
       },
       {
-        "title": "random",
+        "title": "setVelocity",
         "type": "action",
-        "name": "random",
+        "name": "setVelocity",
         "parameters": {
-          "max": {"key": "<maxXAdjust>"},
-          "min": {"key": "<minXAdjust>"}
-        },
-        "output": {
-          "number": "xOffset"
+          "velocity": {"value": [0, 0]}
         }
       },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "nextPos"},
-          "offset": {"value": ["xOffset", 0]}
-        },
-        "output": {
-          "position": "nextPos"
-        }
-      },
-      {
-        "title": "multiply",
-        "type": "action",
-        "name": "multiply",
-        "parameters": {
-          "factor": {"key": "<startAngle>"},
-          "number": {"key": "targetDirection"}
-        },
-        "output": {
-          "result": "startAngleAdj"
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "eye1"}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 3.0}
-            },
-            "output": {
-              "ratio": "progress"
-            }
-          },
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "easePlus",
-                  "type": "action",
-                  "name": "easePlus",
-                  "parameters": {
-                    "func": {"value": "inOutSin"},
-                    "ratio": {"key": "progress"}
-                  },
-                  "output": {
-                    "ratio": "rotateProgress"
-                  }
-                },
-                {
-                  "title": "lerp",
-                  "type": "action",
-                  "name": "lerp",
-                  "parameters": {
-                    "ratio": {"key": "rotateProgress"},
-                    "min": {"value": 0},
-                    "max": {"key": "startAngleAdj"}
-                  },
-                  "output": {
-                    "number": "rotateAngle"
-                  }
-                },
-                {
-                  "title": "resetTransformationGroup",
-                  "type": "action",
-                  "name": "resetTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"}
-                  }
-                },
-                {
-                  "title": "rotateTransformationGroup",
-                  "type": "action",
-                  "name": "rotateTransformationGroup",
-                  "parameters": {
-                    "angle": {"key": "rotateAngle"},
-                    "transformationGroup": {"value": "body"}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "flyToPosition",
-                  "type": "action",
-                  "name": "flyToPosition",
-                  "parameters": {
-                    "position": {"key": "nextPos"},
-                    "speed": {"value": 20},
-                    "tolerance": {"value": 7}
-                  }
-                },
-                {
-                  "title": "ruinamalgamation-gradualstop",
-                  "type": "module",
-                  "name": "ruinamalgamation-gradualstop",
-                  "parameters": {
-                    "stopDuration": {"value": 0.5},
-                    "controlForce": {"value": 100}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "windup"},
-          "type": {"value": "beam"}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 3.0}
-            },
-            "output": {
-              "ratio": "progress"
-            }
-          },
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "easePlus",
-                  "type": "action",
-                  "name": "easePlus",
-                  "parameters": {
-                    "func": {"value": "inOutSin"},
-                    "ratio": {"key": "progress"}
-                  },
-                  "output": {
-                    "ratio": "rotateProgress"
-                  }
-                },
-                {
-                  "title": "lerp",
-                  "type": "action",
-                  "name": "lerp",
-                  "parameters": {
-                    "ratio": {"key": "rotateProgress"},
-                    "min": {"key": "startAngleAdj"},
-                    "max": {"key": "<endAngle>"}
-                  },
-                  "output": {
-                    "number": "rotateAngle"
-                  }
-                },
-                {
-                  "title": "resetTransformationGroup",
-                  "type": "action",
-                  "name": "resetTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"}
-                  }
-                },
-                {
-                  "title": "rotateTransformationGroup",
-                  "type": "action",
-                  "name": "rotateTransformationGroup",
-                  "parameters": {
-                    "angle": {"key": "rotateAngle"},
-                    "transformationGroup": {"value": "body"}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "winddown"},
-          "type": {"value": "beam"}
-        }
-      },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.25}
+		  "time": {"value": 0.5}
+		}
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "windup"},
+          "type": {"value": "eye1"}
         }
       },
-      {
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+		  "time": {"value": 3}
+		}
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "windup"},
+          "type": {"value": "beam"}
+		}
+      },
+	  {
+        "title": "repeater",
+        "type": "decorator",
+        "name": "repeater",
+        "parameters": {
+		  "maxLoops": {"value": 300},
+		  "untilSuccess": {"value": false}
+		},
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "rotateTransformationGroup",
+              "type": "action",
+              "name": "rotateTransformationGroup",
+              "parameters": {
+			    "angle": {"value": 0.01},
+		        "rotationCenter": {"value": [-1.3, 3.5]},
+				"transformationGroup": {"value": "beam"}
+			  }
+            },
+			{
+              "title": "timer",
+              "type": "action",
+              "name": "timer",
+              "parameters": {
+			    "time": {"value": 0.01}
+			  }
+            }
+          ]
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "winddown"},
+          "type": {"value": "beam"}
+		}
+      },
+	  {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+		  "time": {"value": 0.25}
+		}
+      },
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye1"}
-        }
+		}
       },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 0.25}
-            },
-            "output": {
-              "ratio": "progress"
-            }
-          },
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "easePlus",
-                  "type": "action",
-                  "name": "easePlus",
-                  "parameters": {
-                    "func": {"value": "inOutSin"},
-                    "ratio": {"key": "progress"}
-                  },
-                  "output": {
-                    "ratio": "rotateProgress"
-                  }
-                },
-                {
-                  "title": "lerp",
-                  "type": "action",
-                  "name": "lerp",
-                  "parameters": {
-                    "ratio": {"key": "rotateProgress"},
-                    "min": {"key": "<endAngle>"},
-                    "max": {"value": 0}
-                  },
-                  "output": {
-                    "number": "rotateAngle"
-                  }
-                },
-                {
-                  "title": "resetTransformationGroup",
-                  "type": "action",
-                  "name": "resetTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"}
-                  }
-                },
-                {
-                  "title": "rotateTransformationGroup",
-                  "type": "action",
-                  "name": "rotateTransformationGroup",
-                  "parameters": {
-                    "angle": {"key": "rotateAngle"},
-                    "transformationGroup": {"value": "body"}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
+	  {
         "title": "resetTransformationGroup",
         "type": "action",
         "name": "resetTransformationGroup",
         "parameters": {
-          "transformationGroup": {"value": "body"}
-        }
+		  "transformationGroup": {"value": "beam"}
+		}
       },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 1.5}
-        }
+		  "time": {"value": 1.5}
+		}
       }
     ]
   }

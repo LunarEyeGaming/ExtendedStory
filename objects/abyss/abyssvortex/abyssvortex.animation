@@ -4,16 +4,32 @@
       "padState" : {
         "default" : "closed",
         "states" : {
-          "closed" : {
-            "properties" : {
-              "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
-            }
+		  "closed" : {},
+          "open" : {
+            "frames" : 9,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "openloop",
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg"
+			}
           },
-          "opened" : {
-            "properties" : {
-              "immediateSound" : "/sfx/projectiles/gravitymine_detonate.ogg",
-              "persistentSound" : "/sfx/objects/abyssvortex_loop.ogg"
-            }
+          "openloop" : {
+            "frames" : 2,
+            "cycle" : 0.1,
+            "mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
+			}
+          },
+          "close" : {
+            "frames" : 9,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "closed",
+			"properties" : {
+			  "immediateSound" : "/sfx/projectiles/astraltear_stop2.ogg"
+			}
           }
         }
       }
@@ -22,194 +38,46 @@
     "parts" : {
       "forcepad" : {
         "properties" : {
-          "centered" : true,
-          "zLevel" : 2,
-          "fullbright" : true,
-          "offset" : [0, 0],
-          "transformationGroups" : ["vortex"],
-          "image" : "<partImage>"
-        }
-      },
-      "fg" : {
-        "properties" : {
-          "centered" : true,
-          "zLevel" : 1,
-          "image" : "<partImage>"
-        }
-      },
-      "bg" : {
-        "properties" : {
-          "centered" : true,
-          "image" : "<partImage>",
-          "fullbright" : true
-        }
-      }
-    }
-  },
-  
-  "particleEmitters" : {
-    "wind" : {
-      "emissionRate" : 70.0,
-      "particles" : [
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [5, 5],
-            "initialVelocity" : [-50, -50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5, 5],
-              "initialVelocity" : [4, 4]
-            }
-          }
+		  "centered" : false,
+		  "zLevel" : 2,
+		  "fullbright" : true,
+		  "offset" : [-6.625, -6.625]
         },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [5, -5.5],
-            "initialVelocity" : [-50, 50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5, 5.5],
-              "initialVelocity" : [4, 4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [-5.5, -5.5],
-            "initialVelocity" : [50, 50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5.5, 5.5],
-              "initialVelocity" : [4, 4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [-5.5, 5],
-            "initialVelocity" : [50, -50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5.5, 5],
-              "initialVelocity" : [4, 4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [-5.5, 0],
-            "initialVelocity" : [50, 0],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5.5, 5],
-              "initialVelocity" : [4, 0]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [5, 0],
-            "initialVelocity" : [-50, 0],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5, 5],
-              "initialVelocity" : [4, 0]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [0, -5.5],
-            "initialVelocity" : [0, 50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5, 5.5],
-              "initialVelocity" : [0, 4]
-            }
-          }
-        },
-        {
-          "particle" : {
-            "type" : "streak",
-            "size" : 1.0,
-            "color" : [220, 220, 220, 200],
-            "fade" : 0.9,
-            "position" : [0, 5],
-            "initialVelocity" : [0, -50],
-            "finalVelocity" : [0, 0.0],
-            "destructionTime" : 0.0,
-            "approach" : [0, 0],
-            "timeToLive" : 0.2,
-            "length" : 10.0,
-            "variance" : {
-              "position" : [5, 5],
-              "initialVelocity" : [0, 4]
+
+        "partStates" : {
+          "padState" : {
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "openloop" : {
+              "properties" : {
+                "image" : "<partImage>:openloop.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
             }
           }
         }
-      ]
-    }
-  },
-  
-  "transformationGroups" : {
-    "vortex" : {
-      "interpolated" : true
+      },
+	  "fg" : {
+	    "properties" : {
+		  "centered" : false,
+		  "zLevel" : 1,
+		  "image" : "<partImage>"
+		}
+	  },
+	  "bg" : {
+	    "properties" : {
+		  "centered" : false,
+		  "image" : "<partImage>",
+		  "fullbright" : true
+		}
+	  }
     }
   }
 }

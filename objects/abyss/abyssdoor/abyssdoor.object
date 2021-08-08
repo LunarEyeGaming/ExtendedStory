@@ -6,17 +6,17 @@
 
   "category" : "door",
   "price" : 0,
-  "description" : "An ordinary Abyss Stone door.",
+  "description" : "A door with an unblinking eye in the center.",
   "shortdescription" : "Abyss Door",
   "race" : "generic",
 
-  "apexDescription" : "This door seems to have survived the test of time, but not without wearing away.",
-  "avianDescription" : "An ancient door made of dark stone.",
-  "floranDescription" : "Giant black ssstone door.",
-  "glitchDescription" : "Intrigued. I wonder how the mechanisms that open the door work.",
-  "humanDescription" : "It's a normal door carved from abyss stone.",
-  "hylotlDescription" : "A large cluster of abyss stone slabs made into a simple door.",
-  "novakidDescription" : "A big ol' stone door.",
+  "apexDescription" : "A door made of dark obsidian.",
+  "avianDescription" : "A sturdy door with a creepy eye.",
+  "floranDescription" : "Creepy eye ssstares at Floran.",
+  "glitchDescription" : "Disturbed. The eye in the center is unsettling.",
+  "humanDescription" : "A door with an eye that is staring into my soul.",
+  "hylotlDescription" : "This door is a relic of a time long past.",
+  "novakidDescription" : "Creepy-lookin' door with an eye.",
 
   "inventoryIcon" : "abyssdooricon.png",
   "orientations" : [
@@ -46,11 +46,11 @@
   "animationCustom" : {
     "sounds" : {
       "open" : {
-        "pool" : [ "/sfx/objects/stonedoor_open_fast.ogg" ],
+        "pool" : [ "/sfx/objects/airlock_open.ogg" ],
         "rangeMultiplier" : 0.5
       },
       "close" : {
-        "pool" : [ "/sfx/objects/stonedoor_close_fast.ogg" ],
+        "pool" : [ "/sfx/objects/airlock_close.ogg" ],
         "rangeMultiplier" : 0.5
       }
     }

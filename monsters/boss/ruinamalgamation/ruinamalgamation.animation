@@ -5,33 +5,33 @@
         "default" : "idle",
         "states" : {
           "idle" : {
-            "frames" : 8,
+            "frames" : 10,
             "cycle" : 1.0,
             "mode" : "loop"
           },
-          "stage2" : {
-            "frames" : 8,
+		  "stage2" : {
+            "frames" : 10,
             "cycle" : 0.75,
             "mode" : "loop"
           },
-          "stage3" : {
-            "frames" : 8,
+		  "stage3" : {
+            "frames" : 10,
             "cycle" : 0.5,
             "mode" : "loop"
           },
-          "stage4" : {
-            "frames" : 8,
+		  "stage4" : {
+            "frames" : 10,
             "cycle" : 0.4,
             "mode" : "loop"
           },
-          "dying" : {
-            "frames" : 8,
+		  "dying" : {
+            "frames" : 10,
             "cycle" : 0.4,
             "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
               "persistentSoundRangeMultiplier" : 2.0
-            }
+			}
           }
         }
       },
@@ -64,7 +64,10 @@
             "frames" : 3,
             "cycle" : 0.3,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           },
           "closed" : {
             "frames" : 1
@@ -73,7 +76,10 @@
             "frames" : 1,
             "cycle" : 0.1,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           }
         }
       },
@@ -84,8 +90,8 @@
             "frames" : 1
           },
           "portalwindup" : {
-            "frames" : 4,
-            "cycle" : 0.4,
+            "frames" : 3,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "portalcharged",
             "properties" : {
@@ -95,16 +101,16 @@
           },
           "portalcharged" : {
             "frames" : 2,
-            "cycle" : 0.1,
-            "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
+			"cycle" : 0.1,
+			"mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
               "persistentSoundRangeMultiplier" : 2.0
-            }
+			}
           },
           "portalwinddown" : {
-            "frames" : 4,
-            "cycle" : 0.4,
+            "frames" : 3,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "idle",
             "properties" : {
@@ -116,7 +122,10 @@
             "frames" : 3,
             "cycle" : 0.3,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           },
           "closed" : {
             "frames" : 1
@@ -125,7 +134,10 @@
             "frames" : 1,
             "cycle" : 0.1,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           }
         }
       },
@@ -162,7 +174,10 @@
             "frames" : 3,
             "cycle" : 0.3,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           },
           "closed" : {
             "frames" : 1
@@ -171,7 +186,10 @@
             "frames" : 1,
             "cycle" : 0.1,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           }
         }
       },
@@ -208,7 +226,10 @@
             "frames" : 3,
             "cycle" : 0.3,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           },
           "closed" : {
             "frames" : 1
@@ -217,53 +238,10 @@
             "frames" : 1,
             "cycle" : 0.1,
             "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      },
-      "eye5" : {
-        "default" : "closed",
-        "states" : {
-          "idle" : {
-            "frames" : 1
-          },
-          "blink" : {
-            "frames" : 3,
-            "cycle" : 0.3,
-            "mode" : "transition",
-            "transition" : "idle"
-          },
-          "closed" : {
-            "frames" : 1
-          },
-          "open" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      },
-      "eye6" : {
-        "default" : "closed",
-        "states" : {
-          "idle" : {
-            "frames" : 1
-          },
-          "blink" : {
-            "frames" : 3,
-            "cycle" : 0.3,
-            "mode" : "transition",
-            "transition" : "idle"
-          },
-          "closed" : {
-            "frames" : 1
-          },
-          "open" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_wakeup1.ogg"
+            }
           }
         }
       },
@@ -277,7 +255,7 @@
             "frames" : 6,
             "cycle" : 0.15,
             "mode" : "transition",
-            "transition" : "fire",
+			"transition" : "fire",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
               "immediateSoundRangeMultiplier" : 2.0
@@ -292,16 +270,16 @@
               "persistentSoundRangeMultiplier" : 2.0
             }
           },
-          "winddown" : {
-            "frames" : 6,
-            "cycle" : 0.15,
-            "mode" : "transition",
-            "transition" : "off",
+		  "winddown" : {
+		    "frames" : 6,
+			"cycle" : 0.15,
+			"mode" : "transition",
+			"transition" : "off",
             "properties" : {
               "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
               "immediateSoundRangeMultiplier" : 2.0
             }
-          }
+		  }
         }
       },
       "damage" : {
@@ -333,22 +311,22 @@
                 "image" : "<partImage>:idle.<frame>"
               }
             },
-            "stage2" : {
+			"stage2" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
             },
-            "stage3" : {
+			"stage3" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
             },
-            "stage4" : {
+			"stage4" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
             },
-            "dying" : {
+			"dying" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>"
               }
@@ -360,53 +338,8 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye1" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "charged" : {
-              "properties" : {
-                "image" : "<partImage>:charged"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye1unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye1",
+          "offset" : [0.0, -0.12],
+          "transformationGroups" : [ "body" ],
           "fullbright" : true
         },
         "partStates" : {
@@ -453,53 +386,8 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye2" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "portalwindup" : {
-              "properties" : {
-                "image" : "<partImage>:portalwindup.<frame>"
-              }
-            },
-            "portalcharged" : {
-              "properties" : {
-                "image" : "<partImage>:portalcharged.<frame>"
-              }
-            },
-            "portalwinddown" : {
-              "properties" : {
-                "image" : "<partImage>:portalwinddown.<frame>"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye2unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye2",
+          "offset" : [0.0, -0.12],
+          "transformationGroups" : [ "body" ],
           "fullbright" : true
         },
         "partStates" : {
@@ -546,53 +434,8 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye3" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "charged" : {
-              "properties" : {
-                "image" : "<partImage>:charged"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye3unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye3",
+          "offset" : [0.0, -0.12],
+          "transformationGroups" : [ "body" ],
           "fullbright" : true
         },
         "partStates" : {
@@ -639,53 +482,8 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye4" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "windup" : {
-              "properties" : {
-                "image" : "<partImage>:windup.<frame>"
-              }
-            },
-            "charged" : {
-              "properties" : {
-                "image" : "<partImage>:charged"
-              }
-            },
-            "winddown" : {
-              "properties" : {
-                "image" : "<partImage>:winddown.<frame>"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye4unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye4",
+          "offset" : [0.0, -0.12],
+          "transformationGroups" : [ "body" ],
           "fullbright" : true
         },
         "partStates" : {
@@ -728,140 +526,22 @@
           }
         }
       },
-      "eye5" : {
+      "smalleyes" : {
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye5" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye5unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye5",
-          "fullbright" : true
-        },
-        "partStates" : {
-          "eye5" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye6" : {
-        "properties" : {
-          "zLevel" : 1,
-          "centered" : true,
-          "anchorPart" : "mainbody"
-        },
-        "partStates" : {
-          "eye6" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
-        }
-      },
-      "eye6unlit" : {
-        "properties" : {
-          "zLevel" : 2,
-          "centered" : true,
-          "anchorPart" : "eye6",
-          "fullbright" : true
-        },
-        "partStates" : {
-          "eye6" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "blink" : {
-              "properties" : {
-                "image" : "<partImage>:blink.<frame>"
-              }
-            },
-            "open" : {
-              "properties" : {
-                "image" : "<partImage>:open"
-              }
-            },
-            "closed" : {
-              "properties" : {
-                "image" : "<partImage>:closed"
-              }
-            }
-          }
+          "offset" : [0.0, -0.125],
+          "transformationGroups" : [ "body" ],
+          "fullbright" : true,
+		  "image" : "<partImage>"
         }
       },
       "beam" : {
         "properties" : {
-          "zLevel" : 3,
+          "zLevel" : 2,
           "centered" : true,
-          "offset" : [0, -40],
-          "anchorPart" : "mainbody",
+          "offset" : [-1.3, -36.5],
           "fullbright" : true,
-          //"transformationGroups" : [ "body", "beam" ]
           "transformationGroups" : [ "beam" ]
         },
         "partStates" : {
@@ -887,11 +567,13 @@
       }
     }
   },
+  "globalTagDefaults" : {
+    "colorState" : "red"
+  },
 
   "transformationGroups" : {
-    "facing" : { "interpolated" : false },
     "body" : {"interpolated" : true},
-    "beam" : {"interpolated" : true}
+	"beam" : {"interpolated" : true}
   },
 
   "particleEmitters" : {
@@ -900,19 +582,60 @@
       "particles" : [
       ]
     },
+    "windleft" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [-32, -5, -32.0, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
+    "windright" : {
+      "emissionRate" : 200.0,
+      "offsetRegion" : [32.0, -5, 32, 40],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "streak",
+            "size" : 1.0,
+            "color" : [220, 220, 220, 200],
+            "fade" : 0.9,
+            "position" : [0.0, 0.0],
+            "initialVelocity" : [-64.0, 0.0],
+            "finalVelocity" : [0, 0.0],
+            "destructionTime" : 0.0,
+            "approach" : [0, 10],
+            "timeToLive" : 0.5,
+            "length" : 10.0,
+            "variance" : {
+              "initialVelocity" : [-3.0, 1.0]
+            }
+          }
+        }
+      ]
+    },
     "destroy" : {
       "offsetRegion" : [-3.5, -2.75, 3.5, 5.0],
       "burstCount" : 15,
       "particles" : [ ]
     },
     "slam" : {
-      "burstCount" : 20,
-      "offsetRegion" : [-8, -6, 8, -4],
-      "particles" : [
-        { "particle" : "dust4" }
-      ]
-    },
-    "emerge" : {
       "burstCount" : 20,
       "offsetRegion" : [-8, -6, 8, -4],
       "particles" : [
@@ -933,18 +656,8 @@
   "sounds" : {
     "turnHostile" : [  ],
     "deathPuff" : [ "/sfx/npc/boss/ruinseed_explosion.ogg" ],
-    "dying" : [ "/sfx/npc/boss/ruinseed_death.ogg" ],
-    "slam" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
-    "emerge" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
-    "roar" : [ "/sfx/npc/boss/tentacleboss_roar.ogg" ],
-    "wakeup" : {
-      "pool" : [ "/sfx/npc/boss/tentacleboss_wakeup1.ogg" ],
-      "rangeMultiplier" : 1.5
-    },
-    "blink" : {
-      "pool" : [ "/sfx/npc/boss/tentacleboss_wakeup1.ogg" ],
-      "rangeMultiplier" : 0.5
-    }
+	"dying" : [ "/sfx/npc/boss/ruinseed_death.ogg" ],
+    "slam" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ]
   },
 
   "effects" : {

@@ -14,7 +14,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
@@ -31,23 +31,23 @@
           "velocity": {"value": [0, 0]}
         }
       },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.5}
-        }
+		  "time": {"value": 0.5}
+		}
       },
-      {
+	  {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
         "parameters": {
-          "direction": {"value": 1}
-        }
+		  "direction": {"value": 1}
+		}
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -56,22 +56,22 @@
           "type": {"value": "eye4"}
         }
       },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 3.0}
-        }
+		  "time": {"value": 3.0}
+		}
       },
-      {
+	  {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-          "maxLoops": {"value": 5},
-          "untilSuccess": {"value": false}
-        },
+		  "maxLoops": {"value": 1},
+		  "untilSuccess": {"value": false}
+		},
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -83,7 +83,7 @@
               "type": "action",
               "name": "spawnProjectile",
               "parameters": {
-                "aimVector": {"value": [0, 1]},
+                "aimVector": {"value": [1, 0]},
                 "offset": {"value": [1, -4]},
                 "position": {"key": "self"},
                 "projectileConfig": {"value": {}},
@@ -92,42 +92,26 @@
                 "sourceEntity": {"key": "self"},
                 "trackSource": {"value": false}
               }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 1.0}
-              }
             }
           ]
         }
       },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.5}
-        }
+		  "time": {"value": 0.5}
+		}
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye4"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.5}
-        }
+		}
       }
     ]
   }

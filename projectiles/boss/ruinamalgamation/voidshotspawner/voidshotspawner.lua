@@ -27,9 +27,9 @@ end
 function destroy()
   if self.target and projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    if not fireProjectile == false then
+	if not fireProjectile == false then
       world.spawnProjectile("supervoidblast", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 50, power = projectile.getParameter("power")})
       projectile.processAction(projectile.getParameter("explosionAction"))
-    end
+	end
   end
 end

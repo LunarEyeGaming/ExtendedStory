@@ -4,31 +4,31 @@
       "portal" : {
         "default" : "off",
         "states" : {
-          "off" : {
-            "frames" : 3,
-            "cycle" : 6,
-            "mode" : "loop"
-          },
+          "off" : {},
           "on" : {
-		    "frames" : 3,
-			"cycle" : 0.3,
-			"mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg"
-            }
+		    "frames" : 2,
+			"cycle" : 0.2,
+			"mode" : "loop"
 		  },
           "open" : {
-            "frames" : 3,
-            "cycle" : 0.3,
+            "frames" : 5,
+            "cycle" : 0.6,
             "mode" : "transition",
             "transition" : "on"
           },
           "close" : {
-            "frames" : 3,
-            "cycle" : 0.3,
+            "frames" : 5,
+            "cycle" : 0.6,
             "mode" : "transition",
             "transition" : "off"
-          }
+          },
+          "vanish" : {
+            "frames" : 8,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "gone"
+          },
+          "gone" : {}
         }
       }
     },
@@ -43,7 +43,7 @@
           "portal" : {
             "off" : {
               "properties" : {
-                "image" : "<partImage>:<color>.off.<frame>",
+                "image" : "<partImage>:<color>.off",
                 "fullbright" : true
               }
             },
@@ -67,6 +67,19 @@
                 "image" : "<partImage>:<color>.close.<frame>",
                 "fullbright" : true
               }
+            },
+
+            "vanish" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.vanish.<frame>",
+                "fullbright" : true
+              }
+            },
+
+            "gone" : {
+              "properties" : {
+                "image" : ""
+              }
             }
           }
         }
@@ -81,7 +94,7 @@
           "portal" : {
             "off" : {
               "properties" : {
-                "image" : "<partImage>:<color>.off.<frame>"
+                "image" : "<partImage>:<color>.off"
               }
             },
 
@@ -101,6 +114,18 @@
               "properties" : {
                 "image" : "<partImage>:<color>.close.<frame>"
               }
+            },
+
+            "vanish" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.vanish.<frame>"
+              }
+            },
+
+            "gone" : {
+              "properties" : {
+                "image" : ""
+              }
             }
           }
         }
@@ -109,7 +134,7 @@
   },
 
   "sounds" : {
-    "on" : [ "/sfx/npc/boss/tentacleboss_portal_open.ogg" ],
-    "off" : [ "/sfx/npc/boss/tentacleboss_portal_close.ogg" ]
+    "on" : [],
+    "off" : []
   }
 }

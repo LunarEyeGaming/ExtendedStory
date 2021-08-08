@@ -246,166 +246,31 @@
     }
   },
   {
-    "name" : "hoppingpumpkin_es",
+    "name" : "hoppingpumpkin",
 
     "spawnParameters" : {
       "area" : "surface",
       "region" : "exposed",
       "time" : "day"
     },
-    "groupSize" : [1, 1],
+    "groupSize" : [1, 3],
     "spawnChance" : 0.1,
-    "monsterType" : "hoppingpumpkin_es",
+    "monsterType" : "hoppingpumpkin",
     "monsterParameters" : {
       "aggressive" : true
     }
   },
   {
-    "name" : "hoppingpumpkin2_es",
+    "name" : "hoppingpumpkin2",
 
     "spawnParameters" : {
       "area" : "surface",
       "region" : "exposed",
       "time" : "night"
     },
-    "groupSize" : [1, 1],
+    "groupSize" : [1, 3],
     "spawnChance" : 0.1,
-    "monsterType" : "hoppingpumpkin2_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "crow_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "day"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "crow_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "ghost_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "ghost_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "ghostskull_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 10],
-    "spawnChance" : 0.005,
-    "monsterType" : "ghostskull_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "ghostpumpkin_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "ghostpumpkin_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "smallghost_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "smallghost_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "alphaghost_es",
-
-    "spawnParameters" : {
-      "area" : "air",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.0001,
-    "monsterType" : "alphaghost_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "ghosthand_es",
-
-    "spawnParameters" : {
-      "area" : "surface",
-      "region" : "all",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.1,
-    "monsterType" : "ghosthand_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "giantpumpkin_es",
-
-    "spawnParameters" : {
-      "area" : "surface",
-      "region" : "exposed",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "giantpumpkin_es",
-    "monsterParameters" : {
-      "aggressive" : true
-    }
-  },
-  {
-    "name" : "tormentedtree",
-
-    "spawnParameters" : {
-      "area" : "surface",
-      "region" : "exposed",
-      "time" : "night"
-    },
-    "groupSize" : [1, 1],
-    "spawnChance" : 0.01,
-    "monsterType" : "tormentedtree",
+    "monsterType" : "hoppingpumpkin2",
     "monsterParameters" : {
       "aggressive" : true
     }

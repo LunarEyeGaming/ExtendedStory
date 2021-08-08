@@ -1,0 +1,25 @@
+{
+  "projectileName" : "portalspawner_es",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "timeToLive" : 0.01,
+  "damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default",
+  "renderLayer" : "Monster+50",
+  "periodicActions" : [
+    {
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "ruinseedportal_es",
+	  "angle" : -90,
+	  "fuzzAngle" : 45,
+	  "config" : {
+	    "speed" : 10
+	  }
+	}
+  ]
+}

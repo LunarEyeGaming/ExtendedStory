@@ -534,7 +534,7 @@
     "op" : "add",
     "path" : "/regionTypes/undergrounddarkabyss",
     "value" : {
-      "caveLiquid" : ["abyss2_es"],
+      "caveLiquid" : ["abyss"],
       "biome": [
         [1,["undergrounddarkabyss"]]
       ]
@@ -544,7 +544,7 @@
     "op" : "add",
     "path" : "/regionTypes/undergroundabyssfog",
     "value" : {
-      "caveLiquid" : ["abyss2_es"],
+      "caveLiquid" : ["abyss"],
       "biome": [
         [1,["undergroundabyssfog"]]
       ]
@@ -583,8 +583,8 @@
     "op" : "add",
     "path" : "/regionTypes/coredarkabyss",
     "value" : {
-      "caveLiquid" : ["abyss2_es"],
-      "oceanLiquid" : ["abyss"],
+      "caveLiquid" : ["liquidfabric"],
+      "oceanLiquid" : ["liquidfog"],
       "fgCaveSelector" : [ "coreCaves" ],
       "bgCaveSelector" : [ "coreBackgroundCaves" ],
       "oceanLevelOffset" : -20,

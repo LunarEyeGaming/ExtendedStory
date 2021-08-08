@@ -3,9 +3,7 @@
   "blockingStat" : "abysseffectImmunity",
 
   "effectConfig" : {
-	"tickTime" : 1,
-    "tickDamage" : 20,
-    "directives" : "fade=34153b=0.75"
+	"healingMultiplier" : 0.5
   },
   "defaultDuration" : 5.0,
 
@@ -15,6 +13,6 @@
 
   "animationConfig" : "abysseffect.animation",
 
-  "label" : "Dark Sap - Stay away from the darkness.",
-  "icon" : "/interface/statuses/darksap.png"
+  "label" : "Fading - You are fading from reality",
+  "icon" : "/interface/statuses/chaoticvoid.png"
 }

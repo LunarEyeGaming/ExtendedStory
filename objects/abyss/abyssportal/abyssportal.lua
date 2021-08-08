@@ -68,8 +68,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Temple of Nyctos",
-          planetName = "Dark Abyss Dimension",
+          name = "Dark Abyss Dimension",
+          planetName = "Location of Abyss Artifact",
           icon = "default",
           warpAction = string.format("InstanceWorld:abyssartifactdungeon", storage.uuid, world.threatLevel())
         } }

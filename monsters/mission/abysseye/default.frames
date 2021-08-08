@@ -1,23 +1,19 @@
 {
   "frameGrid" : {
-    "size" : [37, 37],
-    "dimensions" : [7, 4],
+    "size" : [55, 45],
+    "dimensions" : [8, 2],
     "names" : [
-      [ "open.1", "open.2", "open.3", "open.4", "open.5", "open.6", "close.7"],
-	  [ "idle.1" ],
-      [ "windup1.1", "windup1.2" ],
-      [ "windup1.3", "windup1.4", "windup1.5", "windup1.6", "charged.1", "charged.2" ]
+      [ "open.1", "open.2", "open.3", "open.4", "open.5", "open.6", "open.7", "idle" ],
+	  [ "close.8" ]
     ]
   },
   "aliases" : {
-    "close.1" : "open.6",
-	"close.2" : "open.5",
-	"close.3" : "open.4",
-	"close.4" : "open.3",
-	"close.5" : "open.2",
-	"close.6" : "open.1",
-    
-    "windup2.1" : "windup1.1",
-    "windup2.2" : "windup1.2"
+    "close.1" : "open.7",
+	"close.2" : "open.6",
+	"close.3" : "open.5",
+	"close.4" : "open.4",
+	"close.5" : "open.3",
+	"close.6" : "open.2",
+	"close.7" : "open.1"
   }
 }

@@ -7,7 +7,7 @@
   "description" : "Creates a vortex that sucks in anything nearby.",
   "shortdescription" : "Abyss Vortex",
   "race" : "generic",
-  "health" : 1,
+  "health" : 50,
 
   "category" : "wire",
   "price" : 100,
@@ -24,37 +24,21 @@
       "spaceScan" : 0.1,
       "anchors" : [ "background" ],
 
-      "metaBoundBox" : [-25, -25, 25, 25]
+      "metaBoundBox" : [-10, -10, 10, 10]
     }
   ],
 
-  "scripts" : [ "abyssvortex.lua" ],
+  "scripts" : [ "/objects/abyss/abyssvortex/forcepad.lua" ],
   "scriptDelta" : 1,
-  
-  "rotationPeriod" : -4,
-  "openTime" : 0.5,
-  "activateThreshold" : 0.4,
-  
-  "damageSources" : [
-    {
-      "poly" : [ [-1.5, 0], [-1, -1], [0, -1.5], [1, -1], [1.5, 0], [1, 1], [0, 1.5], [-1, 1] ],
-      "damage" : 100.0,
 
-      "teamType" : "enemy",
-      "damageSourceKind" : "abyss",
-
-      "damageRepeatTimeout" : 0.1
-    }
-  ],
-
-  "animation" : "abyssvortex.animation",
+  "animation" : "/objects/abyss/abyssvortex/abyssvortex.animation",
 
   "animationParts" : {
     "forcepad" : "vortex.png",
-    "fg" : "vortexactivater.png",
-    "bg" : "vortexactivater.png"
+	"fg" : "vortexactivaterlit.png",
+	"bg" : "vortexactivater.png"
   },
-  "animationPosition" : [4, 4],
+  "animationPosition" : [-8, -8],
   "smashOnBreak" : true,
   "smashSounds" : [ "/sfx/objects/rock_break1.ogg", "/sfx/objects/rock_break2.ogg", "/sfx/objects/rock_break3.ogg", "/sfx/objects/rock_break4.ogg", "/sfx/objects/rock_break5.ogg", "/sfx/objects/rock_crumble1.ogg", "/sfx/objects/rock_crumble2.ogg", "/sfx/objects/rock_crumble3.ogg", "/sfx/objects/rock_crumble4.ogg", "/sfx/objects/rock_crumble5.ogg" ],
   "smashParticles" : [ { "count" : 10, "particle" : "potshard" } ],
@@ -63,11 +47,10 @@
   "physicsForces" : {
     "jumpForce" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 25,
+      "outerRadius" : 16,
       "innerRadius" : 0,
       "targetRadialVelocity" : -70,
-      "controlForce" : 1000,
-      "categoryWhitelist" : ["player", "monster", "npc", "vehicle", "itemdrop"]
+      "controlForce" : 1000
     }
   }
 }

@@ -35,42 +35,15 @@
         "properties" : {
           "transformationGroups" : [ "body" ],
           "offset" : [0.0, 0.0],
-          "zLevel" : 3
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle<aggro>"
-              }
-            },
-            "wake" : {
-              "properties" : {
-                "image" : "<partImage>:wake.<frame>"
-              }
-            }
-          },
-          "attack" : {
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:idle.aggro"
-              }
-            }
-          }
+          "zLevel" : 1,
+		  "image" : "<partImage>"
         }
       },
       "eye" : {
         "properties" : {
           "transformationGroups" : [ "aim", "facing", "body" ],
           "offset" : [0, 0],
-          "zLevel" : 1
+          "zLevel" : 3
         },
         "partStates" : {
           "body" : {

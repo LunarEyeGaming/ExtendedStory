@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2jEBQkEMRMHTgi7E4PUboaWm2b1kijGQfWWecz4PANd6v87ZLH3\/7dL73yK902TpbSdIbzhBesPJ0tveJL3VZuntm6S3QJta7JduQ4tsbDN9WzSpxVnSHWmRSV2m74YutbhPujUdckOT6ZugSS3yS4e00SKNtEgbLdJGi7TRIm30SBMt0kaLtNEjTbRIEy3SRo800SJt9EgTPdJGizTRI220SBM90kSPtNEjTfRIEz3S5N8fC4BNvpd4sSM=",
+         "data":"eJzt2rFtxFAQQ0G14k7dpWN24uhnFxkGSEkTTAPLF26u6zsA3NbP13W9Wfv+b9fe\/y7aOz1Ze9snaG\/4BO0Nn6y97Z20t3qz9vZL2lugzaN9e3R5tO+NNqPD2\/qv\/Ze0b4o2j\/YN0eXRvhu6PNq3QpfR4Wul3N0n7ZugyaN9CzZEh4yJFhkULTImWmRMtMiYaJEx0SNDokXGRIuMiR4ZEi0yJFpkTPTIkGiRMdEjQ6JHxkSLDIkeGRMtMiR6ZEj0yJjokSHRI0OiR4bkjz8WAG\/yC99ncBE=",
          "encoding":"base64",
          "height":44,
          "name":"back",
@@ -17,7 +17,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztktkNg0AQxagldaX6rSTiA+VQDlg2eGawJX8iMW89TSIiUp3rJb+SG7of25QZuhX7lBm6CVqJAd1BNIWDfvvIynHQb51J+R\/022ZXxkC\/YyVlH\/T7VVW2Qb\/XmZTv0O9zRuU99LucXblDv4Xa5QK9v9rlDL232uQj9NZqlwv0vqNt03rpf7XJZ+hdyRZtMhb0nnSHFZqs0iW9YaQWbZKF3i5ii9l7zNokvVnUFqs0ma1LeqvoPdrkcdAb2aNNLtDbUD32fkvfVr1LepMjexzRM31b1SbpHewxjhGgN8jYI31X1S7pu6kef3XV+10lbfH4Hnul76rWJH2nPebRFuM3Sd9UqUn6tsxN0ndUa5K+KXOT9P9H0BbH22xxl\/Y43maD3drieNuKHpu7fdQWx9hWdvgq\/d8Rtcd9ts4Wmxt+dCvLniKj6WnLFuWfvGvyBiJIFuY=",
+         "data":"eJztklFOxDAQxXoV7n8gfnMUVKGIRbDQtNl6ZmJL\/tuVOi\/eNhERqc77W34lN3Q\/tik7dCv2KTt0E7QSA7qDaAoH\/faRlfug3zqT8jrot82uzIF+x0rKNej3q6qMQb\/XSsrf0O+zovI79LusrnxBv4XaZYfeX+1yh95bbfIRemu1yw6972zbdlz6W23yO\/SuZItd+ptt8hN6T7rDR+nvX71LesNILXbpO1Ztkt4uYoutwC4ZoTeL2mKXvmm1LumtovfYimyUAXoje7TJDr0N1ePZ\/9K3Ve+S3uTOHmf0TN9WtUl6B3uMYwToDTL2SN9VtUv6bqrH7uz\/VfJu6Hsj9HhW+q5qTdJ32mMeXw19X4Um6ZsqNUnflrlJ+o5qTdI3ZW6S\/v4I2uJ8bfGa9jhfGzyvLc73SI82+VxbnOPRDu3yf+3xmmdbtMfnjtL3FJlN28bbGv29yAht+9nYBxUwnAk=",
          "encoding":"base64",
          "height":44,
          "name":"front",
@@ -98,7 +98,7 @@
          "name":"anchors etc",
          "objects":[
                 {
-                 "gid":238,
+                 "gid":236,
                  "height":8,
                  "id":821,
                  "name":"",
@@ -128,7 +128,7 @@
  "nextobjectid":883,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.1.6",
+ "tiledversion":"1.1.5",
  "tileheight":8,
  "tilesets":[
         {
@@ -136,140 +136,140 @@
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/materials.json"
         }, 
         {
-         "firstgid":198,
+         "firstgid":196,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/liquids.json"
         }, 
         {
-         "firstgid":226,
+         "firstgid":224,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/miscellaneous.json"
         }, 
         {
-         "firstgid":250,
+         "firstgid":246,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/supports.json"
         }, 
         {
-         "firstgid":287,
+         "firstgid":282,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/generic.json"
         }, 
         {
-         "firstgid":2267,
+         "firstgid":2207,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/ancient.json"
         }, 
         {
-         "firstgid":2430,
+         "firstgid":2369,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/apex.json"
         }, 
         {
-         "firstgid":2801,
+         "firstgid":2740,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/avian.json"
         }, 
         {
-         "firstgid":3106,
+         "firstgid":3045,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/floran.json"
         }, 
         {
-         "firstgid":3301,
+         "firstgid":3240,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/glitch.json"
         }, 
         {
-         "firstgid":3527,
+         "firstgid":3466,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/human.json"
         }, 
         {
-         "firstgid":3815,
+         "firstgid":3747,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/hylotl.json"
         }, 
         {
-         "firstgid":4047,
+         "firstgid":3979,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-race\/novakid.json"
         }, 
         {
-         "firstgid":4111,
+         "firstgid":4042,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/crafting.json"
         }, 
         {
-         "firstgid":4191,
+         "firstgid":4122,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/decorative.json"
         }, 
         {
-         "firstgid":5628,
+         "firstgid":5538,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/door.json"
         }, 
         {
-         "firstgid":5760,
+         "firstgid":5666,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/farmable.json"
         }, 
         {
-         "firstgid":5835,
+         "firstgid":5741,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/furniture.json"
         }, 
         {
-         "firstgid":6189,
+         "firstgid":6087,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/light.json"
         }, 
         {
-         "firstgid":6647,
+         "firstgid":6529,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/other.json"
         }, 
         {
-         "firstgid":6959,
+         "firstgid":6832,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/pot.json"
         }, 
         {
-         "firstgid":7256,
+         "firstgid":7129,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/sapling.json"
         }, 
         {
-         "firstgid":7257,
+         "firstgid":7130,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/spawner.json"
         }, 
         {
-         "firstgid":7273,
+         "firstgid":7146,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/storage.json"
         }, 
         {
-         "firstgid":7507,
+         "firstgid":7377,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/teleporter.json"
         }, 
         {
-         "firstgid":7549,
+         "firstgid":7417,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/tools.json"
         }, 
         {
-         "firstgid":7554,
+         "firstgid":7422,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/trap.json"
         }, 
         {
-         "firstgid":7758,
+         "firstgid":7626,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/wire.json"
         }, 
         {
-         "firstgid":7980,
+         "firstgid":7843,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-type\/container.json"
         }, 
         {
-         "firstgid":8265,
+         "firstgid":8125,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-type\/farmable.json"
         }, 
         {
-         "firstgid":8343,
+         "firstgid":8203,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-type\/loungeable.json"
         }, 
         {
-         "firstgid":8624,
+         "firstgid":8481,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-type\/noisy.json"
         }, 
         {
-         "firstgid":8665,
+         "firstgid":8522,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-type\/teleporter.json"
         }, 
         {
-         "firstgid":8692,
+         "firstgid":8548,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/huge-objects.json"
         }, 
         {
-         "firstgid":8793,
-         "source":"..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
+         "firstgid":8649,
+         "source":"..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }],
  "tilewidth":8,
  "type":"map",

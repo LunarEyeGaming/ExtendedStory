@@ -8,8 +8,8 @@
  "margin":0,
  "name":"extendedstoryobjects-other",
  "spacing":0,
- "tilecount":49,
- "tileheight":176,
+ "tilecount":41,
+ "tileheight":82,
  "tileproperties":
     {
      "0":
@@ -262,62 +262,6 @@
          "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"healingorbsocketinverted_es",
-         "tilesetDirection":"right"
-        },
-     "41":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"directionalforceregiondown_es",
-         "tilesetDirection":"right"
-        },
-     "42":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"directionalforceregionleft_es",
-         "tilesetDirection":"right"
-        },
-     "43":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"directionalforceregionright_es",
-         "tilesetDirection":"right"
-        },
-     "44":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"directionalforceregionup_es",
-         "tilesetDirection":"right"
-        },
-     "45":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"messagesender_es",
-         "tilesetDirection":"right"
-        },
-     "46":
-        {
-         "imagePositionX":"-8",
-         "imagePositionY":"-8",
-         "object":"lightmirrorstation_es",
-         "tilesetDirection":"right"
-        },
-     "47":
-        {
-         "imagePositionX":"-88",
-         "imagePositionY":"-112",
-         "object":"ruinseedtentacle_es",
-         "tilesetDirection":"right"
-        },
-     "48":
-        {
-         "imagePositionX":"-88",
-         "imagePositionY":"-112",
-         "object":"ruinseedtentacle_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -610,62 +554,6 @@
          "object":"string",
          "tilesetDirection":"string"
         },
-     "41":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "42":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "43":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "44":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "45":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "46":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "47":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
-     "48":
-        {
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
      "5":
         {
          "imagePositionX":"string",
@@ -784,7 +672,7 @@
         },
      "20":
         {
-         "image":"..\/..\/..\/..\/tiled\/isolatedvault\/objects\/spheredeactivater.png",
+         "image":"..\/images\/objects\/spheredeactivater.png",
          "imageheight":16,
          "imagewidth":16
         },
@@ -920,54 +808,6 @@
          "imageheight":16,
          "imagewidth":8
         },
-     "41":
-        {
-         "image":"..\/images\/objects\/directionalforceregiondown.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "42":
-        {
-         "image":"..\/images\/objects\/directionalforceregionleft.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "43":
-        {
-         "image":"..\/images\/objects\/directionalforceregionright.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "44":
-        {
-         "image":"..\/images\/objects\/directionalforceregionup.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "45":
-        {
-         "image":"..\/images\/objects\/messagesender.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "46":
-        {
-         "image":"..\/images\/objects\/lightmirrorstation.png",
-         "imageheight":16,
-         "imagewidth":16
-        },
-     "47":
-        {
-         "image":"..\/images\/objects\/ruinseedtentacle_es.png",
-         "imageheight":176,
-         "imagewidth":176
-        },
-     "48":
-        {
-         "image":"..\/images\/objects\/ruinseedtentacleright_es.png",
-         "imageheight":176,
-         "imagewidth":176
-        },
      "5":
         {
          "image":"..\/images\/objects\/healthdeductortrap.png",
@@ -999,6 +839,6 @@
          "imagewidth":16
         }
     },
- "tilewidth":176,
+ "tilewidth":152,
  "type":"tileset"
 }

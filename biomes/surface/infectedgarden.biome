@@ -1,24 +1,22 @@
 {
   "name" : "infectedgarden",
-  "friendlyName" : "Haunted",
+  "friendlyName" : "Halloween",
   //Replaced infected garden with Halloween biome
 
   "spawnProfile" : {
     "groups" : [
       {
-        "select" : 11,
+        "select" : 9,
         "pool" : [
           [ 1.0, "batong" ],
-          [ 1.0, "hoppingpumpkin2_es" ],
-          [ 1.0, "hoppingpumpkin_es" ],
-          [ 1.0, "ghost_es" ],
-          [ 1.0, "ghostpumpkin_es" ],
-          [ 1.0, "crow_es" ],
-          [ 1.0, "smallghost_es" ],
-          [ 1.0, "ghosthand_es" ],
-          [ 1.0, "alphaghost_es" ],
-          [ 1.0, "giantpumpkin_es" ],
-          [ 1.0, "ghostskull_es" ]
+          [ 1.0, "apexlostsoul" ],
+          [ 1.0, "avianlostsoul" ],
+          [ 1.0, "floranlostsoul" ],
+          [ 1.0, "humanlostsoul" ],
+          [ 1.0, "hylotllostsoul" ],
+          [ 1.0, "hoppingpumpkin" ],
+          [ 1.0, "hoppingpumpkin2" ],
+		  [ 1.0, "annihilatordrone" ]
         ]
       },
       {
@@ -28,6 +26,18 @@
           [ 0.3, "fawnfly" ],
           [ 0.3, "mudstag" ]
         ]
+      },
+      {
+        "select" : 2,
+        "pool" : "nightTerrors"
+      },
+      {
+        "select" : 1,
+        "pool" : "generatedGround"
+      },
+      {
+        "select" : 1,
+        "pool" : "generatedFlying"
       },
       {
         "select" : 2,
@@ -71,7 +81,7 @@
   ],
 
   "mainBlock" : "halloweendirt",
-  "subBlocks" : [ "halloweencobblestone" ],
+  "subBlocks" : [ "halloweencobblestone", "blackblock" ],
   "ores" : "surface",
 
   "parallax" : "/parallax/surface/infectedgarden.parallax",
@@ -87,10 +97,10 @@
 
   "musicTrack" : {
     "day" : {
-      "tracks" : [ "/music/echoesoftime-by-kevinmacleod.ogg", "/music/forsaken-grotto.ogg" ]
+      "tracks" : [ "/music/forsaken-grotto.ogg", "/music/drosera.ogg", "/music/tentacle-exploration1.ogg", "/music/lava-exploration2.ogg" ]
     },
     "night" : {
-      "tracks" : [ "/music/eveningofchaos-by-kevinmacleod.ogg" ]
+      "tracks" : [ "/music/silence.ogg", "/music/temple-of-kluex.ogg" ]
     }
   },
 
@@ -254,96 +264,6 @@
 
       // CROPS
 
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "plainpumpkin" ], [0.35, "pumpkincarved" ], [0.35, "jackolantern" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
-      {
-        "mode" : "floor",
-        "priority" : 1.0,
-        "variants" : 1,
-        "distribution" : "/biomes/distributions.config:surfaceCrops",
-
-        "type" : "object",
-        "objectSets" : [
-          {
-            "pool" : [ [0.35, "tombstone1" ], [0.35, "tombstone2" ], [0.35, "tombstone3" ], [0.35, "tombstone4" ], [0.35, "tombstone5" ], [0.35, "tombstone6" ], [0.35, "tombstone7" ], [0.35, "tombstone8" ], [0.35, "tombstone9" ], [0.35, "tombstone10" ], [0.35, "tombstone11" ] ],
-            "parameters" : {
-            }
-          }
-        ]
-      },
       {
         "mode" : "floor",
         "priority" : 1.0,
