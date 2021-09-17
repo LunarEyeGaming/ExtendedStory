@@ -16,64 +16,64 @@
       "inheritDamageFactor" : 0,
       "inheritSpeedFactor" : 0
     },
-	{
-	  "time" : 0.0,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ]
-	},
-	{
-	  "time" : 0.0,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
-	},
-	{
-	  "time" : 5.0,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/npc/boss/tentacleboss_tentacle_windup.ogg" ]
-	},
-	{
-	  "time" : 5.0,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/npc/boss/kluexboss_vortex_windy.ogg" ]
-	},
-	{
-	  "time" : 0.77,
-	  "repeat" : false,
-	  "action" : "sound",
-	  "options" : [ "/sfx/cinematics/finale/tentacle_destruction.ogg" ]
-	},
-	{
-	  "time" : 5.0,
-	  "repeat" : false,
-	  "action" : "projectile",
-	  "type" : "laserbeaminitial_es",
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/guardian_death_fade.ogg" ]
+    },
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_beam_charge.ogg" ]
+    },
+    {
+      "time" : 5.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/tentacleboss_tentacle_windup.ogg" ]
+    },
+    {
+      "time" : 5.0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/npc/boss/kluexboss_vortex_windy.ogg" ]
+    },
+    {
+      "time" : 0.77,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/cinematics/finale/tentacle_destruction.ogg" ]
+    },
+    {
+      "time" : 5.0,
+      "repeat" : false,
+      "action" : "projectile",
+      "type" : "laserbeaminitial_es",
       "direction" : [0.0, 1.0],
       "inheritDamageFactor" : 1,
       "inheritSpeedFactor" : 0
-	},
-	{
-	  "time" : 5.0,
-	  "repeat" : false,
-	  "action" : "projectile",
-	  "type" : "laserbeaminitial_es",
+    },
+    {
+      "time" : 5.0,
+      "repeat" : false,
+      "action" : "projectile",
+      "type" : "laserbeaminitial_es",
       "direction" : [0.0, -1.0],
       "inheritDamageFactor" : 1,
       "inheritSpeedFactor" : 0
-	},
-	{
-	  "time" : 5.0,
-	  "repeat" : false,
-	  "action" : "projectile",
-	  "type" : "invisibleprojectile",
-	  "config" : {
-	    "speed" : 0,
-		"power" : 0,
-		"timeToLive" : 4.0,
-		"periodicActions" : [
+    },
+    {
+      "time" : 5.0,
+      "repeat" : false,
+      "action" : "projectile",
+      "type" : "invisibleprojectile",
+      "config" : {
+        "speed" : 0,
+        "power" : 0,
+        "timeToLive" : 4.0,
+        "periodicActions" : [
           {
             "action" : "particle",
             "specification" : "astraltearsparkle1",
@@ -99,8 +99,8 @@
             "repeat" : true
           }
         ]
-	  }
-	}
+      }
+    }
   ],
   "animationCycle" : 9.0,
   "lightColor" : [93, 10, 47],
@@ -111,17 +111,17 @@
   "damageKind" : "abyss",
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "ngravityexplosion",
-	  "inheritDamageFactor" : 0,
-	  "inheritSpeedFactor" : 0,
-	  "config" : {
-	    "timeToLive" : 2.0
-	  }
-	},
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/cyberbossexplosion/cyberbossexplosionnogibs.config"
-	}
+      "action" : "projectile",
+      "type" : "ngravityexplosion",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0,
+      "config" : {
+        "timeToLive" : 2.0
+      }
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/cyberbossexplosion/cyberbossexplosionnogibs.config"
+    }
   ]
 }

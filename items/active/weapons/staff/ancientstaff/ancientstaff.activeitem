@@ -57,7 +57,7 @@
       "allowFlip" : true
     },
     "charge" : {
-      "duration" : 0.6,
+      "duration" : 1.6,
       "armRotation" : 20,
       "weaponRotation" : -20,
       "twoHanded" : true,
@@ -96,7 +96,7 @@
   "elementalType" : "physical",
 
   "primaryAbilityType" : "kluexshooter",
-  "primaryAbility" : {"name" : "Laser Beam Shooter", "projectileType" : "delayedlaserbeam"},
+  "primaryAbility" : {"name" : "Laser Beam Shooter", "projectileType" : "delayedlaserbeam", "energyPerShot" : 25, "projectileParameters" : {"baseDamage" : 5}},
 
   "altAbilityType" : "kluexshooter",
   "altAbility" : {

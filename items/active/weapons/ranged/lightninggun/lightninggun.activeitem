@@ -23,8 +23,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-	  "altFire" : ["/sfx/gun/shockblast.ogg"]
-	}
+      "altFire" : ["/sfx/gun/shockblast.ogg"]
+    }
   },
   "muzzleOffset" : [2.5, 0.5],
 
@@ -67,7 +67,7 @@
         "spreadAngle" : 1,
         "projectileParameters" : {},
         "inaccuracy" : 0.1,
-        "baseDamage" : 27,
+        "baseDamage" : 23,
         "fireSound" : "fire3"
       }
     ],
@@ -115,8 +115,8 @@
       "electric" : { "name" : "Lightning Bolt", "projectileType" : "em_lightninggunshot1", "projectileCount" : 1, "projectileParameters" : {}}
     },
     "energyUsage" : 75,
-	"baseDps" : 5,
-	"fireTime" : 0.5
+    "baseDamage" : 7,
+    "fireTime" : 0.5
   },
   "learnBlueprintsOnPickup" : [ "lightninggunnew" ],
 

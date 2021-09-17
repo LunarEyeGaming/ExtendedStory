@@ -62,7 +62,8 @@ function build(directory, config, parameters, level, seed)
     config.tooltipFields = {}
     config.tooltipFields.levelLabel = util.round(configParameter("level", 1), 1)
     config.tooltipFields.dpsLabel = util.round((config.primaryAbility.baseDps or 0) * config.damageLevelMultiplier, 1)
-    config.tooltipFields.speedLabel = util.round(1 / (config.primaryAbility.endFireTime or 1.0), 1)
+    config.tooltipFields.speedLabel = util.round(1 / (config.primaryAbility.startFireTime or 1.0), 1) .. " -> " .. util.round(1 / (config.primaryAbility.endFireTime or 1.0), 1)
+    config.tooltipFields.windupTimeLabel = util.round(config.primaryAbility.windupTime or 0, 1)
     config.tooltipFields.damagePerShotLabel = util.round((config.primaryAbility.baseDps or 0) * (config.primaryAbility.endFireTime or 1.0) * config.damageLevelMultiplier, 1)
     config.tooltipFields.energyPerShotLabel = util.round((config.primaryAbility.energyUsage or 0) * (config.primaryAbility.endFireTime or 1.0), 1)
     if elementalType ~= "physical" then

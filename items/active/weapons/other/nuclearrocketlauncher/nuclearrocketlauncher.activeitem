@@ -1,6 +1,6 @@
 {
   "itemName" : "nuclearrocketlauncher",
-  "level" : 10,
+  "level" : 8,
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
@@ -15,15 +15,17 @@
   "critBonus" : 12,
 
   "inventoryIcon" : [
-    { "image" : "nuclearrocketlauncher.png:idle.1" }
+    { "image" : "nuclearrocketlaunchericon.png" }
   ],
 
   "animation" : "nuclearrocketlauncher.animation",
   "animationParts" : {
-    "butt" : "",
-    "middle" : "nuclearrocketlauncher.png",
-    "middlefullbright" : "nuclearrocketlauncherunlit.png",
-    "barrel" : "",
+    "gun" : "gun.png",
+    "gunfullbright" : "gunfullbright.png",
+    "cells" : "cells.png",
+    "cellsfullbright" : "cellsfullbright.png",
+    "lamp": "lamp.png",
+    "lampfullbright": "lampfullbright.png",
     "muzzleFlash" : ""
   },
   "animationCustom" : {
@@ -34,30 +36,29 @@
     }},
     "sounds" : {
       "fire" : [ "/sfx/gun/nuclearrocketlauncher_fire.ogg" ],
-      "altFire" : [ "/sfx/gun/solariumfusioncannon_fire.ogg" ]
+      "altFire" : [ "/sfx/gun/nuclearrocketlauncher_fire.ogg" ]
     }
   },
-  "baseOffset" : [0.7, 0.45],
-  "muzzleOffset" : [3.0, 0.125],
+  "baseOffset" : [0.75, -0.375],
+  "muzzleOffset" : [1.5, 0.75],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "electric",
+  "elementalType" : "physical",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
     "fireTime" : 1.5,
-    "baseDps" : 8.0,
+    "baseDps" : 10.0,
     "energyUsage" : 75,
     "inaccuracy" : 0.008,
     "fireType" : "auto",
 
     "projectileType" : "superredeemershot",
     "projectileParameters" : {
-      "knockback" : 40,
-      "speed" : 2
+      "knockback" : 40
     },
     "projectileCount" : 1,
 
@@ -79,11 +80,13 @@
         "allowRotate" : false,
         "allowFlip" : false,
         "animationStates" : {
-          "middle" : "fire"
+          "gun" : "fire",
+          "cells" : "fire",
+          "lamp" : "switch"
         }
       },
       "cooldown" : {
-        "duration" : 0.11,
+        "duration" : 1.0,
         "armRotation" : 5,
         "weaponRotation" : 5,
         "twoHanded" : true,
@@ -97,7 +100,7 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}, "fireTime" : 5}
+      "physical" : { "name" : "Fusion Globe", "projectileType" : "fusionglobe_es", "projectileParameters" : {}, "fireTime" : 1.0, "energyUsage" : 75}
     },
 
     "stances" : {
@@ -118,11 +121,13 @@
         "allowRotate" : false,
         "allowFlip" : false,
         "animationStates" : {
-          "middle" : "fire2"
+          "gun" : "fire2",
+          "cells" : "fire2",
+          "lamp" : "switch2"
         }
       },
       "cooldown" : {
-        "duration" : 0.11,
+        "duration" : 1.0,
         "armRotation" : 5,
         "weaponRotation" : 5,
         "twoHanded" : true,

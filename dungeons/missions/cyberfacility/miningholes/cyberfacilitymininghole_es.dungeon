@@ -1,0 +1,44 @@
+{
+  "metadata" : {
+    "name" : "cyberfacilitymininghole_es",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "mininghole1", "mininghole2", "mininghole3", "mininghole4" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "mininghole1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "mininghole1.json" ]
+    },
+    {
+      "name" : "mininghole2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "mininghole2.json" ]
+    },
+    {
+      "name" : "mininghole3",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "mininghole3.json" ]
+    },
+    {
+      "name" : "mininghole4",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "mininghole4.json" ]
+    }
+  ]
+}

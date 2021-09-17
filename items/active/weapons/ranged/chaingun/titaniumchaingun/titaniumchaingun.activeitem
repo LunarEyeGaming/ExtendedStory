@@ -5,7 +5,7 @@
   "rarity" : "Uncommon",
   "description" : "A simple titanium chain gun.",
   "shortdescription" : "Titanium Chain Gun",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "chaingun_es",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","chaingun"],
@@ -61,8 +61,8 @@
     
     "spinFrameCount" : 2,
 
-    "baseDps" : 17.0,
-    "energyUsage" : 23,
+    "baseDps" : 18.0,
+    "energyUsage" : 20,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -104,7 +104,7 @@
       }
     }
   },
-  "altAbilityType" : "burstshot",
+  "altAbilityType" : "chaingunburst_es",
   "altAbility" : {},
 
   "builder" : "/items/buildscripts/buildchaingun.lua"

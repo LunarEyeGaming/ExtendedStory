@@ -1,0 +1,30 @@
+{
+  "projectileName" : "staticsingularitywindup",
+
+  "image" : "staticsingularitywindup.png",
+  "fullbright" : true,
+  "lightColor" : [93, 10, 47],
+  "animationCycle" : 0.25,
+  "frameNumber" : 7,
+
+  "bounces" : -1,
+  "onlyHitTerrain" : true,
+  "speed" : 0,
+
+  "timeToLive" : 0.25,
+
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "staticsingularity",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0,
+      "config" : {
+        "timeToLive" : 2.0
+      }
+    }
+  ]
+}

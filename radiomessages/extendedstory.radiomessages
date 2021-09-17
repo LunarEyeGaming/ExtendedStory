@@ -72,7 +72,7 @@
 
   "ancientsphere01" : {
     "type" : "mission",
-    "text" : "It should be worth nothing that an Ancient Sphere has been forcibly equipped on your person. Please do not panic and follow the instructions."
+    "text" : "It should be worth noting that an Ancient Sphere has been forcibly equipped on your person. Please do not panic and follow the instructions."
   },
   "ancientsphere02" : {
     "type" : "mission",
@@ -99,8 +99,8 @@
     "text" : "All basics for the Ancient Sphere have been covered. Please exit through the ^orange;conveniently-placed teleporter^reset; at the end."
   },
   // ------- OTHER MESSAGES -------
-  "limbodoor" : {
-    "type" : "mission",
+  "bossvaultdoor" : {
+    "type" : "tutorial",
     "text" : "This door will take you to a dimension that is abnormally dangerous. I would recommend not exploring the dimension without proper gear."
   },
   "biomefreezing" : {

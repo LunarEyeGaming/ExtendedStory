@@ -1,20 +1,44 @@
 {
   "projectileName" : "superredeemershot",
   "image" : "superredeemershot.png",
-  "animationCycle" : 0.4,
-  "frameNumber" : 7,
-  "lightColor" : [128, 0, 128],
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "lightColor" : [34, 84, 130],
   "pointLight" : true,
-  "physics" : "rocket",
   "fullbright" : true,
-  "speed" : 2,
+
+  "speed" : 1,
   "acceleration" : 160,
+  "physics" : "rocket",
+
   "power" : 10.0,
-  "damageKind" : "plasma",
-  "actionOnReap" : [
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  
+  "periodicActions" : [
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/fusionexplosion/fusionexplosion.config"
-	}
-  ]
+      "time" : 0.05,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/fusionshottrail_es/fusionshottrail_es.animation",
+        "position" : [0, 0],
+        "fullbright" : true,
+        "layer" : "back",
+        "destructionAction" : "fade",
+        "timeToLive" : 0.2,
+        "destructionTime" : 0.2
+      }
+    }
+  ],
+  
+  "scripts" : ["fusionshot_es.lua"],
+  "scriptDelta" : 1,
+  
+  "fuseRadius" : 3,
+  "explodeAction" : {
+    "action" : "config",
+    "file" : "/projectiles/explosions/fusionexplosion/lua-fusionexplosion.config"
+  }
 }

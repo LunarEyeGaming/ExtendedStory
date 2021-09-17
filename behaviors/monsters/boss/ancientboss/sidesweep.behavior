@@ -7,6 +7,7 @@
     "/scripts/actions/position.lua",
     "/scripts/actions/animator.lua",
     "/scripts/actions/monster.lua",
+    "/scripts/actions/world.lua",
     "/scripts/behavior.lua",
     "/scripts/actions/time.lua",
     "/scripts/actions/projectiles.lua",
@@ -36,44 +37,140 @@
         }
       },
       {
-        "title": "flyToPosition",
-        "type": "action",
-        "name": "flyToPosition",
-        "parameters": {
-          "position": {"key": "laserPos3"},
-          "speed": {"value": 50}
-        }
-      },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
-        }
-      },
-      {
-        "title": "ancientboss-movefire2",
-        "type": "module",
-        "name": "ancientboss-movefire2",
-        "parameters": {
-          "position": {"key": "upperSweepStartPos"},
-          "flightSpeed": {"value": 25},
-          "projectileInterval": {"value": 0.2},
-          "projectileType": {"value": "ancientboss_plasmashotwindup"},
-          "projectileOffset": {"value": [0, 4]},
-          "projectileConfig": {"value": {"power": 10}},
-          "fireSound": {"value": "fire1"},
-          "target": {"key": "target"}
-        }
-      },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, 0]}
-        }
+        "title": "selector",
+        "type": "composite",
+        "name": "selector",
+        "parameters": {},
+        "children": [
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "entityPosition",
+                "type": "action",
+                "name": "entityPosition",
+                "parameters": {
+                  "entity": {"key": "target"}
+                },
+                "output": {
+                  "position": "targetPos"
+                }
+              },
+              {
+                "title": "distance",
+                "type": "action",
+                "name": "distance",
+                "parameters": {
+                  "from": {"key": "spawn"},
+                  "to": {"key": "targetPos"}
+                },
+                "output": {
+                  "x": "targetDistX"
+                }
+              },
+              {
+                "title": "greaterThan",
+                "type": "action",
+                "name": "greaterThan",
+                "parameters": {
+                  "first": {"key": "targetDistX"},
+                  "second": {"value": 0}
+                }
+              },
+              {
+                "title": "flyToPosition",
+                "type": "action",
+                "name": "flyToPosition",
+                "parameters": {
+                  "position": {"key": "laserPos4"},
+                  "speed": {"value": 50}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              },
+              {
+                "title": "ancientboss-movefire2",
+                "type": "module",
+                "name": "ancientboss-movefire2",
+                "parameters": {
+                  "position": {"key": "upperSweepEndPos"},
+                  "flightSpeed": {"value": 25},
+                  "projectileInterval": {"value": 0.2},
+                  "projectileType": {"value": "ancientboss_plasmashotwindup"},
+                  "projectileOffset": {"value": [0, 4]},
+                  "projectileConfig": {"value": {"power": 10}},
+                  "fireSound": {"value": "fire1"},
+                  "target": {"key": "target"}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              }
+            ]
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "flyToPosition",
+                "type": "action",
+                "name": "flyToPosition",
+                "parameters": {
+                  "position": {"key": "laserPos3"},
+                  "speed": {"value": 50}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              },
+              {
+                "title": "ancientboss-movefire2",
+                "type": "module",
+                "name": "ancientboss-movefire2",
+                "parameters": {
+                  "position": {"key": "upperSweepStartPos"},
+                  "flightSpeed": {"value": 25},
+                  "projectileInterval": {"value": 0.2},
+                  "projectileType": {"value": "ancientboss_plasmashotwindup"},
+                  "projectileOffset": {"value": [0, 4]},
+                  "projectileConfig": {"value": {"power": 10}},
+                  "fireSound": {"value": "fire1"},
+                  "target": {"key": "target"}
+                }
+              },
+              {
+                "title": "setVelocity",
+                "type": "action",
+                "name": "setVelocity",
+                "parameters": {
+                  "velocity": {"value": [0, 0]}
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "title": "ancientboss-movefire2",

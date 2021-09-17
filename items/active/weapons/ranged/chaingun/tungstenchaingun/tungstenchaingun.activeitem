@@ -3,9 +3,9 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Common",
-  "description" : "A chain gun made out of tungsten.",
+  "description" : "A crude chain gun made out of tungsten.",
   "shortdescription" : "Tungsten Chain Gun",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "chaingun_es",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","chaingun"],
@@ -62,7 +62,7 @@
     
     "spinFrameCount" : 2,
     
-    "baseDps" : 14.0,
+    "baseDps" : 18.0,
     "energyUsage" : 15,
     "inaccuracy" : 0.08,
 
@@ -85,8 +85,8 @@
       },
       "fire" : {
         "duration" : 0,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
+        "armRotation" : -2,
+        "weaponRotation" : -2,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -94,9 +94,9 @@
         "frontArmFrame" : "swimIdle.2"
       },
       "cooldown" : {
-        "duration" : 0.01,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
+        "duration" : 0.05,
+        "armRotation" : -2,
+        "weaponRotation" : -2,
         "twoHanded" : true,
 
         "allowRotate" : false,

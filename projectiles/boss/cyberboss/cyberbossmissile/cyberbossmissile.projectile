@@ -14,13 +14,15 @@
   ],
   "emitters" : [ "rocketsmoke" ],
   "power" : 100.0,
-  "speed" : 30.0,
+  "speed" : 50.0,
   "timeToLive" : 10.0,
   "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "default",
 
-  "scripts" : [ "cyberbossmissile.lua" ],
-  "controlForce" : 90,
-  "maxSpeed" : 50
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 1.5,
+  "trackingLimit" : 2.0
 }

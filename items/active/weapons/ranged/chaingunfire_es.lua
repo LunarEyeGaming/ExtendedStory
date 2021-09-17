@@ -7,10 +7,8 @@ ChainGunFire = WeaponAbility:new()
 function ChainGunFire:init()
   self.weapon:setStance(self.stances.idle)
 
-  counter = 0
-  self.fireFrame = 1
+  --self.fireFrame = 1
   self.fireTime = self.startFireTime
-  self.isFiring = false
 
   self.cooldownTimer = self.fireTime
   self.spinTimer = self.fireTime
@@ -44,9 +42,6 @@ function ChainGunFire:update(dt, fireMode, shiftHeld)
     animator.setAnimationState("body", "idle")
     self.isFiring = false
   end]]
-  if self.weapon.currentAbility == nil then
-    world.debugPoint(mcontroller.position(), "blue")
-  end
 
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
     and not self.weapon.currentAbility

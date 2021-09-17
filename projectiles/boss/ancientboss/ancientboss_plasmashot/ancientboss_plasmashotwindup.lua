@@ -4,7 +4,11 @@ function init()
   message.setHandler("setTarget", function(_, _, entityId)
     self.target = entityId
   end)
-  message.setHandler("kill", projectile.die)
+  message.setHandler("kill", function()
+    shouldFire = false
+    projectile.die()
+  end)
+  shouldFire = true
 end
 
 function update()
@@ -23,7 +27,7 @@ function update()
 end
 
 function destroy()
-  if self.target and projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
+  if shouldFire then
     local rotation = mcontroller.rotation()
     world.spawnProjectile("ancientboss_plasmashot", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 75, power = projectile.getParameter("power")})
     projectile.processAction(projectile.getParameter("explosionAction"))

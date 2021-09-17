@@ -58,7 +58,7 @@
             "projectileType" : "heatbeam",
             "projectileParameters" : {
               "speed" : 40,
-              "power" : 15
+              "power" : 10
             },
             "fireOffset" : [0, 0],
             "onGround" : false,
@@ -91,7 +91,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
-      "damage" : 10,
+      "damage" : 7,
 
       "teamType" : "enemy",
       "damageSourceKind" : "impact",
@@ -152,7 +152,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 150
+          "baseValue" : 100
         },
         "protection" : {
           "baseValue" : 0.0

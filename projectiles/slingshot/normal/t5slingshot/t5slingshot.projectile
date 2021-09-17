@@ -9,9 +9,10 @@
   "power" : 20,
   "actionOnReap" : [
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
-	}
+      "action" : "config",
+      "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
+    }
   ],
-  "damageKind" : "default"
+  "damageKind" : "default",
+  "damageType" : "NoDamage"
 }

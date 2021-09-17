@@ -42,7 +42,7 @@
       ],
 
       "foundTargetActions" : [ 
-	    {
+        {
           "name" : "action-animate",
           "parameters" : {
             "stateType" : "body",
@@ -50,9 +50,9 @@
             "animationTime" : 1
           }
         }
-	  ],
-	  "hostileActions" : [
-	    {
+      ],
+      "hostileActions" : [
+        {
           "name" : "action-charge",
           "cooldown" : 1,
           "parameters" : {
@@ -77,13 +77,13 @@
             "winddownState" : "idle"
           }
         }
-	  ],
+      ],
 
       "approachActions" : [
       ],
 
       "concurrentActions" : [
-	    {
+        {
           "name" : "action-animate",
           "parameters" : {
             "stateType" : "body",
@@ -91,7 +91,7 @@
             "animationTime" : 0.1
           }
         }
-	  ],
+      ],
 
       "concurrentHostileActions" : [],
 
@@ -148,7 +148,7 @@
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
-        "/stats/spacemonster_primary.lua"
+        "/stats/monster_primary.lua"
       ],
       "primaryScriptDelta" : 5,
 

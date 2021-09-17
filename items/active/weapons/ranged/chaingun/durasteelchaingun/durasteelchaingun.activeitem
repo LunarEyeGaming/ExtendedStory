@@ -5,7 +5,7 @@
   "rarity" : "Uncommon",
   "description" : "A perfectly lethal mix of rapid fire and explosives. ^yellow;Explosive Bullets!",
   "shortdescription" : "Durasteel Chain Gun",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "chaingun_es",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
@@ -38,7 +38,8 @@
       }
     },
     "sounds" : {
-      "fire" : ["/sfx/gun/sniper3.ogg"]
+      "fire" : ["/sfx/gun/sniper3.ogg"],
+      "whir" : [ "/sfx/gun/durasteel_chaingun_whir.ogg" ]
     }
   },
 
@@ -62,7 +63,7 @@
     
     "spinFrameCount" : 2,
 
-    "baseDps" : 30.0,
+    "baseDps" : 25.0,
     "energyUsage" : 30,
     "inaccuracy" : 0.08,
 
@@ -120,8 +121,8 @@
     
     "spinFrameCount" : 2,
 
-    "baseDps" : 30.0,
-    "energyUsage" : 50,
+    "baseDps" : 25.0,
+    "energyUsage" : 40,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,

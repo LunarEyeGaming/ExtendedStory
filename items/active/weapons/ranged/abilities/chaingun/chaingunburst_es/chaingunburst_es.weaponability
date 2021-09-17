@@ -1,0 +1,58 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "particleEmitters" : {
+      "altMuzzleFlash" : {
+        "active" : false,
+        "rotationGroup" : "weapon",
+        "emissionRate" : 8,
+        "transformationGroups" : ["muzzle"],
+        "offsetRegion" : [0.0, -0.25, 0.5, 0.25],
+        "particles" : []
+      }
+    },
+    "sounds" : {
+      "altFire" : [ "/sfx/gun/ar4.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Gatling Burst",
+    "type" : "chaingunburst_es",
+    "scripts" : ["/items/active/weapons/ranged/abilities/chaingun/chaingunburst_es/chaingunburst_es.lua"],
+    "class" : "ChainGunBurst",
+    "projectileType": "titaniumchaingunshot_es",
+    "projectileParameters" : {},
+    "inaccuracy" : 0.05,
+    "burstCount" : 13,
+    "burstTime" : 0.04,
+    "baseDps" : 10,
+    "fireTime" : 0.2,
+    "fireType" : "burst",
+    
+    "spinFrameCount" : 2,
+
+    "energyUsage" : 50,
+
+    "stances" : {
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -1.5,
+        "weaponRotation" : -1.5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.05,
+        "armRotation" : -1.5,
+        "weaponRotation" : -1.5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

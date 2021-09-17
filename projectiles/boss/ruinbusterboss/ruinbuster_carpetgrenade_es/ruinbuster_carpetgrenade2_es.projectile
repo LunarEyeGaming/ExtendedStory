@@ -1,0 +1,70 @@
+{
+  "projectileName" : "ruinbuster_carpetgrenade2_es",
+  "physics" : "grenade",
+  "speed" : 50,
+  "bounces" : 0,
+  "timeToLive" : 1,
+  "damageKindImage" : "fireicon.png",
+  "pointLight" : true,
+  "lightColor" : [80, 60, 40],
+  "image" : "ruinbuster_carpetgrenade_es.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 2,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/fireexplosionlarge/fireexplosionlarge.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : 0,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : 45,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : 90,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : 135,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : 180,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : -135,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : -90,
+      "inheritDamageFactor" : 0.5
+    },
+    {
+      "action" : "projectile",
+      "type" : "flamethrower",
+      "angle" : -45,
+      "inheritDamageFactor" : 0.5
+    }
+  ],
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "fireplasma"
+}

@@ -253,7 +253,7 @@
             "type": "action",
             "name": "timer",
             "parameters": {
-              "time": {"value": 1.0}
+              "time": {"value": 0.25}
             }
           }
         ]
@@ -263,7 +263,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.5}
+          "time": {"value": 0.15}
         }
       },
       {

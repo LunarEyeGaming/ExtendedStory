@@ -3,16 +3,16 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A rapid fire rifle that shoots lasers.",
-  "shortdescription" : "Aegisalt Machinegun",
+  "description" : "A basic assault rifle with burst firing capabilities.",
+  "shortdescription" : "Aegisalt Rifle",
   "tooltipKind" : "gun",
   "category" : "assaultRifle",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 6,
   
-  "critChance" : 5,
-  "critBonus" : 5,
+  //"critChance" : 5,
+  //"critBonus" : 5,
 
   "inventoryIcon" : [
     { "image" : "aegisaltassaultrifle.png:idle.1" }
@@ -28,13 +28,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_mp2.ogg"],
+      "fire" : ["/sfx/gun/plasma_ar1.ogg"],
       "altFire" : ["/sfx/gun/grenade1.ogg"]
-    },
-    "lights" : {
-      "muzzleFlash" : {
-        "color" : [150, 0, 150]
-      }
     },
     "particleEmitters" : {
       "altMuzzleFlash" : {
@@ -51,7 +46,7 @@
   },
 
   "baseOffset" : [0.8, 0.225],
-  "muzzleOffset" : [2.4, 0],
+  "muzzleOffset" : [2.625, 0.125],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -61,12 +56,14 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.06,
+    "fireTime" : 0.11,
     "baseDps" : 21,
-    "energyUsage" : 50,
+    "energyUsage" : 37,
     "projectileCount" : 1,
-    "inaccuracy" : 0.02,
-    "fireType" : "auto",
+    "inaccuracy" : 0.01,
+    "fireType" : "burst",
+    "burstCount" : 4,
+    "burstTime" : 0.06,
 
     "projectileType" : "aegisaltbullet",
     "projectileParameters" : {

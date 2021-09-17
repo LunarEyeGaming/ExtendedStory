@@ -812,45 +812,53 @@
                     }
                   },
                   {
-                    "title": "queryEntity",
-                    "type": "action",
-                    "name": "queryEntity",
-                    "parameters": {
-                      "entityTypes": {"value": ["projectile"]},
-                      "range": {"value": 100}
-                    },
-                    "output": {
-                      "list": "projectiles"
-                    }
-                  },
-                  {
                     "title": "succeeder",
                     "type": "decorator",
                     "name": "succeeder",
                     "parameters": {},
                     "child": {
-                      "title": "each",
-                      "type": "decorator",
-                      "name": "each",
-                      "parameters": {
-                        "list": {"key": "projectiles"},
-                        "type": {"value": "entity"}
-                      },
-                      "child": {
-                        "title": "succeeder",
-                        "type": "decorator",
-                        "name": "succeeder",
-                        "parameters": {},
-                        "child": {
-                          "title": "sendEntityMessage",
+                      "title": "sequence",
+                      "type": "composite",
+                      "name": "sequence",
+                      "parameters": {},
+                      "children": [
+                        {
+                          "title": "queryEntity",
                           "type": "action",
-                          "name": "sendEntityMessage",
+                          "name": "queryEntity",
                           "parameters": {
-                            "entity": {"key": "eachItem"},
-                            "message": {"value": "kill"}
+                            "entityTypes": {"value": ["projectile"]},
+                            "range": {"value": 100}
+                          },
+                          "output": {
+                            "list": "projectiles"
+                          }
+                        },
+                        {
+                          "title": "each",
+                          "type": "decorator",
+                          "name": "each",
+                          "parameters": {
+                            "list": {"key": "projectiles"},
+                            "type": {"value": "entity"}
+                          },
+                          "child": {
+                            "title": "succeeder",
+                            "type": "decorator",
+                            "name": "succeeder",
+                            "parameters": {},
+                            "child": {
+                              "title": "sendEntityMessage",
+                              "type": "action",
+                              "name": "sendEntityMessage",
+                              "parameters": {
+                                "entity": {"key": "eachItem"},
+                                "message": {"value": "kill"}
+                              }
+                            }
                           }
                         }
-                      }
+                      ]
                     }
                   },
                   {

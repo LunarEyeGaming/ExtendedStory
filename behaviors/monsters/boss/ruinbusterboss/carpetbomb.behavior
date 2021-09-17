@@ -150,7 +150,7 @@
                     "aimVector": {"value": [0, 0]},
                     "offset": {"value": [0, 0]},
                     "position": {"key": "self"},
-                    "projectileConfig": {"value": {}},
+                    "projectileConfig": {"value": {"power": 25}},
                     "projectileType": {"value": "ruinbuster_carpetgrenade_es"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},

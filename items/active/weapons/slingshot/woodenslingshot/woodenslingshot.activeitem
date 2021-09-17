@@ -11,8 +11,8 @@
   "twoHanded" : false,
   "itemTags" : ["weapon", "ranged", "bow"],
   
-  "critChance" : 1,
-  "critBonus" : 1,
+  //"critChance" : 1,
+  //"critBonus" : 1,
 
   "level" : 1,
 
@@ -37,9 +37,10 @@
 
   "primaryAbilityType" : "slingshot",
   "primaryAbility" : {
-    //"drawSpeedMultiplier" : "constant",
-    //"projectileType" : "ancientarrow",
-    //"powerProjectileType" : "chargedancientarrow"
+    "projectileParameters" : {
+      "speed" : 40,
+      "power" : 4
+    }
   },
 
   "builder" : "/items/buildscripts/buildbow.lua"

@@ -5,40 +5,67 @@
   "rarity" : "Legendary",
   "description" : "Plasma chain guns are boss!",
   "shortdescription" : "Aegisalt Chain Gun",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "chaingun_es",
   "category" : "Chain Gun",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "itemTags" : ["weapon","ranged","chaingun"],
   "level" : 6,
   
   "critChance" : 1,
   "critBonus" : 5,
 
-  "inventoryIcon" : "aegisaltchaingun.png:idle",
+  "inventoryIcon" : "aegisaltchaingunicon2.png",
 
-  "animation" : "aegisaltchaingun.animation",
+  "animation" : "/items/active/weapons/ranged/chaingun/chaingunglow.animation",
   "animationParts" : {
-    "butt" : "",
-    "middle" : "aegisaltchaingun.png",
-	"middleFullbright" : "aegisaltchaingununlit.png",
-    "barrel" : "",
-    "muzzleFlash" : ""
+    "body" : "body.png",
+    "bodyfullbright" : "bodyfullbright.png",
+    "barrel" : "barrel2.png",
+    "magazine" : "magazine.png",
+    "muzzleFlash" : "/items/active/weapons/ranged/extendedstorymuzzleflashes/purplemuzzleflash.png"
   },
   "animationCustom" : {
+    "particleEmitters" : {
+      "altMuzzleFlash" : {
+        "active" : false,
+        "transformationGroups" : ["muzzle"],
+        "emissionRate" : 8,
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0],
+        "particles" : []
+      }
+    },
+    "animatedParts" : {
+      "stateTypes" : {
+        "magazine" : {
+          "states" : {"reload" : {"frames" : 1}}
+        }
+      },
+      "parts" : {
+        "body" : {"properties" : {"offset" : [0.125, -0.5]}},
+        "barrel" : {"properties" : {"offset" : [2.5625, -0.125]}},
+        "magazine" : {"properties" : {"offset" : [0.375, -0.5]}}
+      }
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 150]
+      }
+    },
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_pistol3.ogg"],
-	  "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
+      "fire" : ["/sfx/gun/plasma_mp1.ogg"],
+      "altFire" : ["/sfx/gun/plasma_sniper3.ogg"],
+      "whir" : [ "/sfx/gun/durasteel_chaingun_whir.ogg" ]
     }
   },
 
-  "baseOffset" : [1.2, -0.8],
-  "muzzleOffset" : [2.5, 0.25],
+  "baseOffset" : [0, 0],
+  "muzzleOffset" : [4.0, -0.625],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
   "elementalType" : "physical",
 
-  "primaryAbility" : {
+  /*"primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
@@ -53,12 +80,12 @@
     "projectileType" : "aegisaltbullet",
     "projectileParameters" : {
       "knockback" : 2,
-	  "actionOnReap" : [
-	    {
-		  "action" : "config",
-		  "file" : "/projectiles/explosions/laserburstsmall/laserburstsmall.config"
-		}
-	  ]
+      "actionOnReap" : [
+        {
+          "action" : "config",
+          "file" : "/projectiles/explosions/laserburstsmall/laserburstsmall.config"
+        }
+      ]
     },
     "stances" : {
       "idle" : {
@@ -77,9 +104,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-		"animationStates" : {
-		  "middle" : "fire"
-		}
+        "animationStates" : {
+          "middle" : "fire"
+        }
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -91,19 +118,100 @@
         "allowFlip" : false
       }
     }
-  },
-  "altAbilityType" : "explosiveshot",
-  "altAbility" : {
-    "name" : "Mine Layer",
-	"fireTime" : 0.1,
-	"baseDps" : 20,
-	"cooldownTime" : 0.0,
-	"inaccuracy" : 0.1,
-	"energyUsage" : 125,
-	"elementalConfig" : {
-	  "physical" : { "projectileType" : "proximitymine", "projectileParameters" : { "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/laserburst/laserburst.config"}] } }
-	}
+  },*/
+  
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
+    "class" : "ChainGunFire",
+
+    "windupTime" : 1.5,
+    "startFireTime" : 0.3,
+    "endFireTime" : 0.04,
+    
+    "whirMinPitch" : 1.0,
+    "whirMaxPitch" : 2.0,
+    
+    "spinFrameCount" : 2,
+
+    "baseDps" : 25.0,
+    "energyUsage" : 30,
+    "inaccuracy" : 0.08,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "aegisaltbullet",
+    "projectileParameters" : {
+      "knockback" : 2
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+        "frontArmFrame" : "swimIdle.2"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
+      },
+      "cooldown" : {
+        "duration" : 0.01,
+        "armRotation" : -1,
+        "weaponRotation" : -1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
+      }
+    }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "name" : "Air Mines",
+    "fireTime" : 0.1,
+    "baseDps" : 15,
+    "cooldownTime" : 0.0,
+    "inaccuracy" : 0.1,
+    "energyUsage" : 100,
+    "useParticleEmitter" : false,
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "aegisaltairmine_es" }
+    },
+    "stances" : {
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -5,
+        "weaponRotation" : -5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
+      },
+      "cooldown" : {
+        "duration" : 0.11,
+        "armRotation" : -5,
+        "weaponRotation" : -5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+        "frontArmFrame" : "swimIdle.2"
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildchaingun.lua"
 }

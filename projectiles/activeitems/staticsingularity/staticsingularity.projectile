@@ -7,28 +7,67 @@
   "speed" : 0,
   "fullbright" : true,
   "piercing" : true,
-  "animationCycle" : 0.375,
+  "animationCycle" : 0.25,
   "lightColor" : [93, 10, 47],
-  "frameNumber" : 4,
+  "frameNumber" : 2,
   "power" : 50,
   "damageRepeatTimeout" : 0.3,
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
   "damageKind" : "abyss",
+  
+  "periodicActions" : [
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/staticsingularityswirls_es/staticsingularityswirls_es.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "angularVelocity" : -90,
+        "timeToLive" : 3.0,
+        "destructionTime" : 1.5,
+        "destructionAction" : "fade",
+        "variance" : {
+          "angularVelocity" : 22.5
+        }
+      }
+    },
+    {
+      "time" : 0.5,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/staticsingularityswirls_es/staticsingularityswirls_es.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "angularVelocity" : -90,
+        "timeToLive" : 3.0,
+        "destructionTime" : 1.5,
+        "destructionAction" : "fade",
+        "variance" : {
+          "angularVelocity" : 22.5
+        }
+      }
+    }
+  ],
+  
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "ngravityexplosion",
-	  "inheritDamageFactor" : 0,
-	  "inheritSpeedFactor" : 0,
-	  "config" : {
-	    "timeToLive" : 2.0
-	  }
-	},
-	{
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosionlarge_es.config"
-	}
+      "action" : "projectile",
+      "type" : "ngravityexplosion",
+      "inheritDamageFactor" : 0,
+      "inheritSpeedFactor" : 0,
+      "config" : {
+        "timeToLive" : 2.0
+      }
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosionlarge_es.config"
+    }
   ],
 
   "boundBox" : [-10, -10, 10, 10],
@@ -41,5 +80,10 @@
       "controlForce" : 500,
       "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
     }
-  }
+  },
+  
+  "scripts" : ["staticsingularity.lua"],
+  "scriptDelta" : 1,
+  
+  "overrideRadius" : 150
 }

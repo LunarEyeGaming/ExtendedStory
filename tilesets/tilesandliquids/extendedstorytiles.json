@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstorytiles",
  "spacing":0,
- "tilecount":25,
+ "tilecount":24,
  "tileheight":8,
  "tileproperties":
     {
@@ -91,10 +91,6 @@
      "23":
         {
          "material":"permafrostbrick_es"
-        },
-     "25":
-        {
-         "material":"skybrick_es"
         },
      "3":
         {
@@ -204,10 +200,6 @@
          "material":"string"
         },
      "23":
-        {
-         "material":"string"
-        },
-     "25":
         {
          "material":"string"
         },
@@ -341,12 +333,6 @@
      "23":
         {
          "image":"..\/images\/tiles\/permafrostbrick_es.png",
-         "imageheight":8,
-         "imagewidth":8
-        },
-     "25":
-        {
-         "image":"..\/images\/tiles\/radiantbrick.png",
          "imageheight":8,
          "imagewidth":8
         },

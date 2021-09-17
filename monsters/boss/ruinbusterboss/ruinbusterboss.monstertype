@@ -43,9 +43,9 @@
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
-	
-	"damageParts" : {
-	  "laser" : {
+    
+    "damageParts" : {
+      "laser" : {
         "damage" : 15,
 
         "teamType" : "enemy",
@@ -55,7 +55,7 @@
 
         "damageTeam" : 0
       }
-	},
+    },
 
     "touchDamage" : {
       "poly" : [ [8.4375, 16.4375], [16.4375, 8.4375], [16.4375, -8.4375], [8.4375, -16.4375], [-8.4375, -16.4375], [-16.4375, -8.4375], [-16.4375, 8.4375], [-8.4375, 16.4375] ],
@@ -88,7 +88,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2500
+          "baseValue" : 1500
         },
         "protection" : {
           "baseValue" : 25.0

@@ -32,11 +32,11 @@
             "mode" : "transition",
             "transition" : "winddown"
           },
-		  "winddown" : {
-		    "frames" : 15,
-			"cycle" : 2.0,
-			"mode" : "transition",
-			"transition" : "off",
+          "winddown" : {
+            "frames" : 15,
+            "cycle" : 2.0,
+            "mode" : "transition",
+            "transition" : "off",
             "properties" : {
               "persistentSound" : "/sfx/gun/solariumfusioncannon_winddown.ogg",
               "persistentSoundStopTime" : 0.5
@@ -44,20 +44,20 @@
             "frameProperties" : {
               "immediateSound" : [ "/sfx/gun/solariumfusioncannon_mainmove.ogg", "", "", "", "", "", "", "/sfx/gun/solariumfusioncannon_mainopen.ogg", "", "", "", "", "/sfx/gun/solariumfusioncannon_miniopen.ogg", "", "" ]
             }
-		  }
+          }
         }
       },
-	  "energycarrier" : {
-	    "default" : "idle",
-		"states" : {
-		  "off" : {},
-		  "idle" : {
-		    "frames" : 14,
-			"cycle" : 1.0,
-			"mode" : "loop"
-		  }
-		}
-	  }
+      "energycarrier" : {
+        "default" : "idle",
+        "states" : {
+          "off" : {},
+          "idle" : {
+            "frames" : 14,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          }
+        }
+      }
     },
 
     "parts" : {
@@ -148,7 +148,7 @@
 
         "partStates" : {
           "energycarrier" : {
-		    "off" : {
+            "off" : {
               "properties" : {
                 "image" : ""
               }
@@ -171,6 +171,6 @@
 
   "sounds" : {
     "fire" : ["/music/silence.ogg"],
-	"fire2" : ["/sfx/gun/solariumfusioncannon_fire.ogg"]
+    "fire2" : ["/sfx/gun/solariumfusioncannon_fire.ogg"]
   }
 }

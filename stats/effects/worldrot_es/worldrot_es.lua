@@ -24,7 +24,16 @@ function rotMaterial()
     util.randomIntInRange({self.bounds[2], self.bounds[4]})
   }
   if math.sqrt(offset[1] ^ 2 + offset[2] ^ 2) <= 2 then return end
-  world.spawnProjectile("worldrot_es", vec2.add(mcontroller.position(), offset), nil)
+
+  local position = vec2.add(mcontroller.position(), offset)
+  --if not world.pointTileCollision(position) then return end
+
+  local inspectPosition = vec2.add(position, {0, 1})
+  inspectPosition = {math.modf(inspectPosition[1]), math.modf(inspectPosition[2])}  -- Note: There is a third value because math.modf returns two values. world API calls seem to ignore this.
+
+  if not world.pointTileCollision(inspectPosition) and world.tileIsOccupied(inspectPosition) then return end  -- Prevent tree destruction
+  
+  world.spawnProjectile("worldrot_es", position, nil)
 end
 
 function probeBoundaries()

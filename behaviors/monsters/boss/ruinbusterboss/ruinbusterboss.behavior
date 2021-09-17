@@ -12,13 +12,55 @@
     "/scripts/actions/animator.lua",
     "/scripts/actions/projectiles.lua"
   ],
-  "parameters": {},
+  "parameters": {
+    "holeIds": ["hole1", "hole2", "hole3", "hole4"]
+  },
   "root": {
     "title": "Reset",
     "type": "composite",
     "name": "sequence",
     "parameters": {},
     "children": [
+      {
+        "title": "each",
+        "type": "decorator",
+        "name": "each",
+        "parameters": {
+          "list": {"key": "<holeIds>"},
+          "type": {"value": "string"}
+        },
+        "child": {
+          "title": "sequence",
+          "type": "composite",
+          "name": "sequence",
+          "parameters": {},
+          "children": [
+            {
+              "title": "loadUniqueEntity",
+              "type": "action",
+              "name": "loadUniqueEntity",
+              "parameters": {
+                "uniqueId": {"key": "eachItem"}
+              },
+              "output": {
+                "entity": "holePlacer"
+              }
+            },
+            {
+              "title": "listPush",
+              "type": "action",
+              "name": "listPush",
+              "parameters": {
+                "entity": {"key": "holePlacer"},
+                "list": {"key": "holePlacers"}
+              },
+              "output": {
+                "list": "holePlacers"
+              }
+            }
+          ]
+        }
+      },
       {
         "title": "setDying",
         "type": "action",
@@ -49,6 +91,34 @@
               "targetOnDamage": {"value": true},
               "targetOutOfSightTime": {"value": 9999}
             }
+          },
+          {
+            "title": "parallel",
+            "type": "composite",
+            "name": "parallel",
+            "parameters": {
+              "fail": {"value": -1},
+              "success": {"value": -1}
+            },
+            "children": [
+              {
+                "title": "filter",
+                "type": "decorator",
+                "name": "filter",
+                "parameters": {
+                  "list": {"key": "minions"},
+                  "type": {"value": "entity"}
+                },
+                "child": {
+                  "title": "entityExists",
+                  "type": "action",
+                  "name": "entityExists",
+                  "parameters": {
+                    "entity": {"key": "filterItem"}
+                  }
+                }
+              }
+            ]
           },
           {
             "title": "faceDirection",
@@ -187,6 +257,12 @@
                                       "parameters": {}
                                     },
                                     {
+                                      "title": "ruinbusterboss-carpetbombupwards",
+                                      "type": "module",
+                                      "name": "ruinbusterboss-carpetbombupwards",
+                                      "parameters": {}
+                                    },
+                                    {
                                       "title": "ruinbusterboss-ramattack",
                                       "type": "module",
                                       "name": "ruinbusterboss-ramattack",
@@ -254,15 +330,15 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ruinbusterboss-minionattack",
-                                          "type": "module",
-                                          "name": "ruinbusterboss-minionattack",
-                                          "parameters": {}
-                                        },
-                                        {
                                           "title": "ruinbusterboss-ramattack",
                                           "type": "module",
                                           "name": "ruinbusterboss-ramattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-carpetbombupwards",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-carpetbombupwards",
                                           "parameters": {}
                                         },
                                         {
@@ -272,15 +348,21 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ruinbusterboss-rocketattacknohoming",
+                                          "title": "ruinbusterboss-rocketattack",
                                           "type": "module",
-                                          "name": "ruinbusterboss-rocketattacknohoming",
+                                          "name": "ruinbusterboss-rocketattack",
                                           "parameters": {}
                                         },
                                         {
                                           "title": "ruinbusterboss-overloaders",
                                           "type": "module",
                                           "name": "ruinbusterboss-overloaders",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-minionattack2",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-minionattack2",
                                           "parameters": {}
                                         }
                                       ]
@@ -341,9 +423,21 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ruinbusterboss-minionattack2",
+                                          "title": "ruinbusterboss-minionattack",
                                           "type": "module",
-                                          "name": "ruinbusterboss-minionattack2",
+                                          "name": "ruinbusterboss-minionattack",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-overloaders",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-overloaders",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ruinbusterboss-overloaders",
+                                          "type": "module",
+                                          "name": "ruinbusterboss-overloaders",
                                           "parameters": {}
                                         },
                                         {
@@ -359,15 +453,15 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ruinbusterboss-ramattack",
+                                          "title": "ruinbusterboss-mininglaser",
                                           "type": "module",
-                                          "name": "ruinbusterboss-ramattack",
+                                          "name": "ruinbusterboss-mininglaser",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ruinbusterboss-overloaders",
+                                          "title": "ruinbusterboss-carpetbombupwards",
                                           "type": "module",
-                                          "name": "ruinbusterboss-overloaders",
+                                          "name": "ruinbusterboss-carpetbombupwards",
                                           "parameters": {}
                                         },
                                         {
@@ -416,6 +510,45 @@
                     "name": "battleMusic",
                     "parameters": {
                       "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "minions"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "listClear",
+                    "type": "action",
+                    "name": "listClear",
+                    "parameters": {},
+                    "output": {
+                      "list": "minions"
                     }
                   },
                   {
@@ -474,6 +607,45 @@
                     }
                   },
                   {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "minions"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "succeeder",
+                        "type": "decorator",
+                        "name": "succeeder",
+                        "parameters": {},
+                        "child": {
+                          "title": "sendEntityMessage",
+                          "type": "action",
+                          "name": "sendEntityMessage",
+                          "parameters": {
+                            "entity": {"key": "eachItem"},
+                            "message": {"value": "despawn"}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "listClear",
+                    "type": "action",
+                    "name": "listClear",
+                    "parameters": {},
+                    "output": {
+                      "list": "minions"
+                    }
+                  },
+                  {
                     "title": "flyToPosition",
                     "type": "action",
                     "name": "flyToPosition",
@@ -497,6 +669,46 @@
                     "name": "setVelocity",
                     "parameters": {
                       "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 2.0}
+                    }
+                  },
+                  {
+                    "title": "succeeder",
+                    "type": "decorator",
+                    "name": "succeeder",
+                    "parameters": {},
+                    "child": {
+                      "title": "each",
+                      "type": "decorator",
+                      "name": "each",
+                      "parameters": {
+                        "list": {"key": "holePlacers"},
+                        "type": {"value": "entity"}
+                      },
+                      "child": {
+                        "title": "sequence",
+                        "type": "composite",
+                        "name": "sequence",
+                        "parameters": {},
+                        "children": [
+                          {
+                            "title": "sendEntityMessage",
+                            "type": "action",
+                            "name": "sendEntityMessage",
+                            "parameters": {
+                              "entity": {"key": "eachItem"},
+                              "message": {"value": "placeDungeon"}
+                            }
+                          }
+                        ]
+                      }
                     }
                   },
                   {

@@ -19,109 +19,109 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-		"title": "randomize",
-		"type": "composite",
-		"name": "randomize",
-		"parameters": {},
-		"children": [
-		  {
-			"title": "loadUniqueEntity",
-			"type": "action",
-			"name": "loadUniqueEntity",
-			"parameters": {
-			  "uniqueId": {"value": "pos1"}
-			},
-			"output": {
-			  "entity": "laserPos"
-			}
-		  },
-		  {
-			"title": "loadUniqueEntity",
-			"type": "action",
-			"name": "loadUniqueEntity",
-			"parameters": {
-			  "uniqueId": {"value": "pos2"}
-			},
-			"output": {
-			  "entity": "laserPos"
-			}
-		  },
-		  {
-			"title": "loadUniqueEntity",
-			"type": "action",
-			"name": "loadUniqueEntity",
-			"parameters": {
-			  "uniqueId": {"value": "pos3"}
-			},
-			"output": {
-			  "entity": "laserPos"
-			}
-		  },
-		  {
-			"title": "loadUniqueEntity",
-			"type": "action",
-			"name": "loadUniqueEntity",
-			"parameters": {
-			  "uniqueId": {"value": "pos4"}
-			},
-			"output": {
-			  "entity": "laserPos"
-			}
-		  }
-		]
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "laserPos"}
-		},
-		"output": {
-		  "position": "laser_pos"
-		}
-	  },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "animate",
-			"type": "action",
-			"name": "animate",
-			"parameters": {
-			  "fallback": {"value": "winddown"},
-			  "state": {"value": "windup"},
-			  "type": {"value": "thrusters"}
-			}
-		  },
-		  {
-			"title": "flyToPosition",
-			"type": "action",
-			"name": "flyToPosition",
-			"parameters": {
-			  "position": {"key": "laser_pos"},
-			  "speed": {"value": 50}
-			}
-		  },
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-			    {
+      {
+        "title": "randomize",
+        "type": "composite",
+        "name": "randomize",
+        "parameters": {},
+        "children": [
+          {
+            "title": "loadUniqueEntity",
+            "type": "action",
+            "name": "loadUniqueEntity",
+            "parameters": {
+              "uniqueId": {"value": "pos1"}
+            },
+            "output": {
+              "entity": "laserPos"
+            }
+          },
+          {
+            "title": "loadUniqueEntity",
+            "type": "action",
+            "name": "loadUniqueEntity",
+            "parameters": {
+              "uniqueId": {"value": "pos2"}
+            },
+            "output": {
+              "entity": "laserPos"
+            }
+          },
+          {
+            "title": "loadUniqueEntity",
+            "type": "action",
+            "name": "loadUniqueEntity",
+            "parameters": {
+              "uniqueId": {"value": "pos3"}
+            },
+            "output": {
+              "entity": "laserPos"
+            }
+          },
+          {
+            "title": "loadUniqueEntity",
+            "type": "action",
+            "name": "loadUniqueEntity",
+            "parameters": {
+              "uniqueId": {"value": "pos4"}
+            },
+            "output": {
+              "entity": "laserPos"
+            }
+          }
+        ]
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "laserPos"}
+        },
+        "output": {
+          "position": "laser_pos"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "winddown"},
+              "state": {"value": "windup"},
+              "type": {"value": "thrusters"}
+            }
+          },
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "laser_pos"},
+              "speed": {"value": 50}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {},
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
                   "title": "entityDirection",
                   "type": "action",
                   "name": "entityDirection",
@@ -144,47 +144,47 @@
                     "vector": "aimVector"
                   }
                 },
-			    {
-	              "title": "vecAngle",
-	        	  "type": "action",
-	        	  "name": "vecAngle",
-	        	  "parameters": {
-	        	    "vector": {"key": "aimVector"}
-	        	  },
-	        	  "output": {
-	        	    "angle": "targetAngle"
-	        	  }
-	            },
-		        {
-			      "title": "rotateTransformationGroup",
-			      "type": "action",
-			      "name": "rotateTransformationGroup",
-			      "parameters": {
-			        "transformationGroup": {"value": "body"},
-			        "angle": {"key": "targetAngle"}
-			      }
-		        },
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.01}
-				  }
-				},
-				{
-				  "title": "resetTransformationGroup",
-				  "type": "action",
-				  "name": "resetTransformationGroup",
-				  "parameters": {
-				    "transformationGroup": {"value": "body"}
-				  }
-				}
-			  ]
-			}
-		  }
-		]
-	  },
+                {
+                  "title": "vecAngle",
+                  "type": "action",
+                  "name": "vecAngle",
+                  "parameters": {
+                    "vector": {"key": "aimVector"}
+                  },
+                  "output": {
+                    "angle": "targetAngle"
+                  }
+                },
+                {
+                  "title": "rotateTransformationGroup",
+                  "type": "action",
+                  "name": "rotateTransformationGroup",
+                  "parameters": {
+                    "transformationGroup": {"value": "body"},
+                    "angle": {"key": "targetAngle"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.01}
+                  }
+                },
+                {
+                  "title": "resetTransformationGroup",
+                  "type": "action",
+                  "name": "resetTransformationGroup",
+                  "parameters": {
+                    "transformationGroup": {"value": "body"}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
       {
         "title": "setVelocity",
         "type": "action",
@@ -193,34 +193,34 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
-		"title": "resetTransformationGroup",
-		"type": "action",
-		"name": "resetTransformationGroup",
-		"parameters": {
-		  "transformationGroup": {"value": "body"}
-		}
-	  },
-	  {
-	    "title": "vecAngle",
-	    "type": "action",
-	    "name": "vecAngle",
-	    "parameters": {
-	      "vector": {"value": [0, -5]}
-	    },
-	    "output": {
-	      "angle": "targetAngle"
-	    }
-	  },
-	  {
-	    "title": "rotateTransformationGroup",
-	    "type": "action",
-	    "name": "rotateTransformationGroup",
-	    "parameters": {
-	      "transformationGroup": {"value": "body"},
-	      "angle": {"key": "targetAngle"}
-	    }
-	  },
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"}
+        }
+      },
+      {
+        "title": "vecAngle",
+        "type": "action",
+        "name": "vecAngle",
+        "parameters": {
+          "vector": {"value": [0, -5]}
+        },
+        "output": {
+          "angle": "targetAngle"
+        }
+      },
+      {
+        "title": "rotateTransformationGroup",
+        "type": "action",
+        "name": "rotateTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"},
+          "angle": {"key": "targetAngle"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",
@@ -229,7 +229,7 @@
           "time": {"value": 1.5}
         }
       },
-	  {
+      {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -305,46 +305,38 @@
                         },
                         "children": [
                           {
-                            "title": "emitParticles",
-                            "type": "action",
-                            "name": "emitParticles",
-                            "parameters": {
-                              "emitter": {"value": "falling"}
+                            "title": "repeater",
+                            "type": "decorator",
+                            "name": "repeater",
+                            "parameters": {},
+                            "child": {
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "spawnProjectile",
+                                  "type": "action",
+                                  "name": "spawnProjectile",
+                                  "parameters": {
+                                    "aimVector": {"value": [0, -1]},
+                                    "offset": {"value": [0, 0]},
+                                    "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "orbitalup", "fuzzAngle": 5, "config": {"speed": 100, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/invisibleexplosion/invisibleexplosion2.config"}]}}]}},
+                                    "projectileType": {"value": "orbitalup"}
+                                  }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.01}
+                                  }
+                                }
+                              ]
                             }
                           },
-						  {
-						    "title": "repeater",
-							"type": "decorator",
-							"name": "repeater",
-							"parameters": {},
-							"child": {
-						      "title": "sequence",
-							  "type": "composite",
-							  "name": "sequence",
-							  "parameters": {},
-							  "children": [
-							    {
-    						      "title": "spawnProjectile",
-    						      "type": "action",
-    						      "name": "spawnProjectile",
-    						      "parameters": {
-    						        "aimVector": {"value": [0, -1]},
-    						        "offset": {"value": [0, 0]},
-    						        "projectileConfig": {"value": {"timeToLive": 0, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "orbitalup", "fuzzAngle": 5, "config": {"speed": 100, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/invisibleexplosion/invisibleexplosion2.config"}]}}]}},
-    						        "projectileType": {"value": "orbitalup"}
-    						      }
-    	    				    },
-							    {
-							      "title": "timer",
-								  "type": "action",
-								  "name": "timer",
-								  "parameters": {
-								    "time": {"value": 0.01}
-								  }
-							    }
-							  ]
-						    }
-						  },
                           {
                             "title": "timer",
                             "type": "action",
@@ -379,14 +371,14 @@
           "time": {"value": 0.3}
         }
       },
-	  {
-		"title": "resetTransformationGroup",
-		"type": "action",
-		"name": "resetTransformationGroup",
-		"parameters": {
-		  "transformationGroup": {"value": "body"}
-		}
-	  },
+      {
+        "title": "resetTransformationGroup",
+        "type": "action",
+        "name": "resetTransformationGroup",
+        "parameters": {
+          "transformationGroup": {"value": "body"}
+        }
+      },
       {
         "title": "timer",
         "type": "action",

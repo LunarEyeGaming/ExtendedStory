@@ -31,8 +31,8 @@
       "targetOutOfSightTime" : 10.0,
 
       "hurtWaitForGround" : false,
-	  "hostileActions" : [
-	    {
+      "hostileActions" : [
+        {
           "name" : "action-fire",
           "cooldown" : 3.0,
           "parameters" : {
@@ -41,7 +41,7 @@
             "minimumRange" : 4,
             "onGround" : false,
             "windupStopForce" : 50,
-			"windupState" : "windup",
+            "windupState" : "windup",
             "windupTime" : 0.8,
 
             "projectileType" : "genericlaser",
@@ -61,7 +61,7 @@
             "winddownTime" : 0.5
           }
         }
-	  ],
+      ],
 
       "wanderActions" : [
         {
@@ -87,7 +87,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
-      "damage" : 15,
+      "damage" : 8,
 
       "teamType" : "enemy",
       "damageSourceKind" : "impact",
@@ -130,7 +130,7 @@
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
-        "/stats/spacemonster_primary.lua"
+        "/stats/monster_primary.lua"
       ],
       "primaryScriptDelta" : 5,
 
@@ -145,7 +145,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 80
+          "baseValue" : 40
         },
         "protection" : {
           "baseValue" : 0.0

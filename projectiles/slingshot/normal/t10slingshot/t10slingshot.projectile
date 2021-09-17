@@ -11,9 +11,9 @@
   "lightColor" : [83, 28, 97],
   "actionOnReap" : [
     {
-	  "action" : "config",
-	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
-	}
+      "action" : "config",
+      "file" : "/projectiles/explosions/laserburst/laserburst.config"
+    }
   ],
   "scripts" : ["/scripts/projectiles/homingprojectile.lua"],
   "rotationRate" : 2.5,

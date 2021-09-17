@@ -17,58 +17,99 @@
           }
         }
       },
-      "middle" : {
+      "gun" : {
         "default" : "idle",
         "states" : {
           "idle" : {
-            "frames" : 20,
+            "frames" : 8,
             "cycle" : 1.0,
             "mode" : "loop"
           },
-		  "fire" : {
-            "frames" : 11,
-            "cycle" : 1.4,
+          "fire" : {
+            "frames" : 4,
+            "cycle" : 0.4,
             "mode" : "transition",
-			"transition" : "idle"
+            "transition" : "idle"
           },
-		  "fire2" : {
-            "frames" : 11,
-            "cycle" : 1.4,
+          "fire2" : {
+            "frames" : 4,
+            "cycle" : 0.4,
             "mode" : "transition",
-			"transition" : "idle"
+            "transition" : "idle"
+          }
+        }
+      },
+      "lamp" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          },
+          "idle2" : {
+            "frames" : 1,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          },
+          "switch" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle2"
+          },
+          "switch2" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "cells" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          },
+          "fire" : {
+            "frames" : 8,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire2" : {
+            "frames" : 8,
+            "cycle" : 1.0,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       }
     },
 
     "parts" : {
-      "butt" : {
+      "gun" : {
         "properties" : {
           "centered" : true,
-          "image" : "<partImage><paletteSwaps>",
-          "offset" : [0, 0], // x offset is set dynamically
-          "transformationGroups" : ["weapon"]
-        }
-      },
-      "middle" : {
-        "properties" : {
-          "centered" : true,
-          "offset" : [0, 0], // x offset is set dynamically
+          "offset" : [-0.5, 0.375], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         },
         "partStates" : {
-          "middle" : {
+          "gun" : {
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame><paletteSwaps>"
               }
             },
-			"fire" : {
+            "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire.<frame><paletteSwaps>"
               }
             },
-			"fire2" : {
+            "fire2" : {
               "properties" : {
                 "image" : "<partImage>:fire2.<frame><paletteSwaps>"
               }
@@ -76,27 +117,26 @@
           }
         }
       },
-      "middlefullbright" : {
+      "gunfullbright" : {
         "properties" : {
           "centered" : true,
-          "offset" : [0.7, 0.45],
+          "anchorPart" : "gun",
           "zLevel" : 1,
-          "transformationGroups" : ["weapon"],
           "fullbright" : true
         },
         "partStates" : {
-          "middle" : {
+          "gun" : {
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame><paletteSwaps>"
               }
             },
-			"fire" : {
+            "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire.<frame><paletteSwaps>"
               }
             },
-			"fire2" : {
+            "fire2" : {
               "properties" : {
                 "image" : "<partImage>:fire2.<frame><paletteSwaps>"
               }
@@ -104,12 +144,122 @@
           }
         }
       },
-      "barrel" : {
+      "lamp" : {
         "properties" : {
           "centered" : true,
-          "image" : "<partImage><paletteSwaps>",
-          "offset" : [0, 0], // x offset is set dynamically
-          "transformationGroups" : ["weapon"]
+          "offset" : [-0.0625, 0.625],
+          "anchorPart" : "gun",
+          "zLevel" : 2
+        },
+        "partStates" : {
+          "lamp" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame><paletteSwaps>"
+              }
+            },
+            "idle2" : {
+              "properties" : {
+                "image" : "<partImage>:idle2.<frame><paletteSwaps>"
+              }
+            },
+            "switch" : {
+              "properties" : {
+                "image" : "<partImage>:switch.<frame><paletteSwaps>"
+              }
+            },
+            "switch2" : {
+              "properties" : {
+                "image" : "<partImage>:switch2.<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      },
+      "lampfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "anchorPart" : "lamp",
+          "zLevel" : 3,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "lamp" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame><paletteSwaps>"
+              }
+            },
+            "idle2" : {
+              "properties" : {
+                "image" : "<partImage>:idle2.<frame><paletteSwaps>"
+              }
+            },
+            "switch" : {
+              "properties" : {
+                "image" : "<partImage>:switch.<frame><paletteSwaps>"
+              }
+            },
+            "switch2" : {
+              "properties" : {
+                "image" : "<partImage>:switch2.<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      },
+      "cells" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [-1.9375, -0.0625],
+          "anchorPart" : "gun",
+          "zLevel" : -2
+        },
+        "partStates" : {
+          "cells" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame><paletteSwaps>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><paletteSwaps>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2.<frame><paletteSwaps>"
+              }
+            }
+          }
+        }
+      },
+      "cellsfullbright" : {
+        "properties" : {
+          "centered" : true,
+          "anchorPart" : "cells",
+          "zLevel" : -1,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "cells" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame><paletteSwaps>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame><paletteSwaps>"
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "<partImage>:fire2.<frame><paletteSwaps>"
+              }
+            }
+          }
         }
       },
       "muzzleFlash" : {

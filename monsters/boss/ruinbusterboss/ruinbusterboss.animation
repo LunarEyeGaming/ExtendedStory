@@ -7,8 +7,8 @@
         "states" : {
           "idle" : {
             "frames" : 4,
-			"cycle" : 2,
-			"mode" : "loop"
+            "cycle" : 2,
+            "mode" : "loop"
           }
         }
       },
@@ -21,16 +21,16 @@
           "idle" : {},
           "windup" : {
             "frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "active"
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "active"
           },
-		  "active" : {},
+          "active" : {},
           "winddown" : {
             "frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "idle"
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
@@ -43,20 +43,20 @@
           "idle" : {},
           "windup" : {
             "frames" : 1,
-			"cycle" : 0.5,
-			"mode" : "transition",
-			"transition" : "active",
-			"properties" : {
-			  "immediateSound" : "/sfx/melee/charge_combo8.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {
+              "immediateSound" : "/sfx/melee/charge_combo8.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           },
-		  "active" : {},
+          "active" : {},
           "winddown" : {
             "frames" : 1,
-			"cycle" : 0.5,
-			"mode" : "transition",
-			"transition" : "idle"
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
@@ -69,32 +69,32 @@
           "idle" : {},
           "windup" : {
             "frames" : 6,
-			"cycle" : 0.6,
-			"mode" : "transition",
-			"transition" : "active",
-			"properties" : {
-			  "persistentSound" : "/sfx/melee/staff_charge4_electric.ogg",
-			  "persistentSoundRangeMultiplier" : 5.0
-			}
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/staff_charge4_electric.ogg",
+              "persistentSoundRangeMultiplier" : 5.0
+            }
           },
-		  "active" : {
-		    "frames" : 4,
-			"cycle" : 0.5,
-			"mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/npc/boss/guardian_floorhazard_electric_loop.ogg",
-			  "persistentSoundRangeMultiplier" : 5.0
-			}
-		  },
+          "active" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/guardian_floorhazard_electric_loop.ogg",
+              "persistentSoundRangeMultiplier" : 5.0
+            }
+          },
           "winddown" : {
             "frames" : 3,
-			"cycle" : 0.3,
-			"mode" : "transition",
-			"transition" : "idle",
-			"properties" : {
-			  "immediateSound" : "/sfx/npc/boss/guardian_floorhazard_electric_end.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/guardian_floorhazard_electric_end.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           }
         }
       },
@@ -105,38 +105,38 @@
 
         "states" : {
           "idle" : {
-		    "frames" : 4,
-			"cycle" : 2,
-			"mode" : "loop"
-		  },
+            "frames" : 4,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
           "windup" : {
             "frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "active",
-			"properties" : {
-			  "immediateSound" : "/sfx/interface/thruster_off.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {
+              "immediateSound" : "/sfx/interface/thruster_off.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           },
-		  "active" : {
-		    "frames" : 3,
-			"cycle" : 0.3,
-			"mode" : "loop",
-			"properties" : {
-			  "persistentSound" : "/sfx/interface/ship_thrusters.ogg",
-			  "persistentSoundRangeMultiplier" : 5.0
-			}
-		  },
+          "active" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/interface/ship_thrusters.ogg",
+              "persistentSoundRangeMultiplier" : 5.0
+            }
+          },
           "winddown" : {
             "frames" : 1,
-			"cycle" : 0.1,
-			"mode" : "transition",
-			"transition" : "idle",
-			"properties" : {
-			  "immediateSound" : "/sfx/interface/thruster_off.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/interface/thruster_off.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           }
         }
       },
@@ -153,10 +153,10 @@
             "cycle" : 0.15,
             "mode" : "transition",
             "transition" : "fire",
-			"properties" : {
-			  "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/tentacleboss_beam_blast.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           },
           "fire" : {
             "frames" : 2,
@@ -172,10 +172,10 @@
             "cycle" : 0.15,
             "mode" : "transition",
             "transition" : "idle",
-			"properties" : {
-			  "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
-			  "immediateSoundRangeMultiplier" : 5.0
-			}
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
+              "immediateSoundRangeMultiplier" : 5.0
+            }
           }
         }
       },
@@ -198,7 +198,7 @@
       "body" : {
         "properties" : {
           "zLevel" : 2,
-		  "transformationGroups" : ["body"]
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -211,12 +211,12 @@
           }
         }
       },
-	  
-	  "bodyfullbright" : {
+      
+      "bodyfullbright" : {
         "properties" : {
           "zLevel" : 3,
-		  "fullbright" : true,
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -229,13 +229,13 @@
           }
         }
       },
-	  
-	  "eyes" : {
+      
+      "eyes" : {
         "properties" : {
           "zLevel" : 3,
-		  "fullbright" : true,
-		  "offset" : [2.4375, 0],
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "offset" : [2.4375, 0],
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -245,17 +245,17 @@
                 "image" : "<partImage>:idle"
               }
             },
-			"windup" : {
+            "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup"
               }
             },
-			"active" : {
+            "active" : {
               "properties" : {
                 "image" : "<partImage>:active"
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown"
               }
@@ -263,28 +263,28 @@
           }
         }
       },
-	  
-	  "laserbarrel" : {
+      
+      "laserbarrel" : {
         "properties" : {
           "zLevel" : 4,
-		  "fullbright" : true,
-		  "offset" : [7.5625, 0.125],
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "offset" : [7.5625, 0.125],
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
           "laserbarrel" : {
-			"windup" : {
+            "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup"
               }
             },
-			"active" : {
+            "active" : {
               "properties" : {
                 "image" : "<partImage>:active"
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown"
               }
@@ -292,28 +292,28 @@
           }
         }
       },
-	  
-	  "overloaders" : {
+      
+      "overloaders" : {
         "properties" : {
           "zLevel" : 3,
-		  "fullbright" : true,
-		  "offset" : [-12.1875, 0],
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "offset" : [-12.1875, 0],
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
           "overloaders" : {
-			"windup" : {
+            "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup.<frame>"
               }
             },
-			"active" : {
+            "active" : {
               "properties" : {
                 "image" : "<partImage>:active.<frame>"
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
               }
@@ -321,13 +321,13 @@
           }
         }
       },
-	  
-	  "thrusters" : {
+      
+      "thrusters" : {
         "properties" : {
           "zLevel" : 4,
-		  "fullbright" : true,
-		  "offset" : [-17, 0],
-		  "transformationGroups" : ["body"]
+          "fullbright" : true,
+          "offset" : [-17, 0],
+          "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -337,17 +337,17 @@
                 "image" : "<partImage>:idle.<frame>"
               }
             },
-			"windup" : {
+            "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup"
               }
             },
-			"active" : {
+            "active" : {
               "properties" : {
                 "image" : "<partImage>:active.<frame>"
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown"
               }
@@ -355,29 +355,29 @@
           }
         }
       },
-	  
-	  "laser" : {
+      
+      "laser" : {
         "properties" : {
           "zLevel" : 5,
-		  "fullbright" : true,
-		  "offset" : [40, 0],
-		  "transformationGroups" : ["body", "beam"]
+          "fullbright" : true,
+          "offset" : [40, 0],
+          "transformationGroups" : ["body", "beam"]
         },
 
         "partStates" : {
           "laser" : {
-			"windup" : {
+            "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup.<frame>"
               }
             },
-			"fire" : {
+            "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire.<frame>",
-				"damageArea" : [ [30, 4.0625], [-30, 4.0625], [-30, -4.0625], [30, -4.0625] ]
+                "damageArea" : [ [30, 4.0625], [-30, 4.0625], [-30, -4.0625], [30, -4.0625] ]
               }
             },
-			"winddown" : {
+            "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
               }
@@ -389,7 +389,7 @@
   },
   "globalTagDefaults" : {
     "phase" : "phase1",
-	"invisible" : ""
+    "invisible" : ""
   },
 
   "transformationGroups" : {
@@ -411,7 +411,7 @@
             "animation" : "/animations/ancientteleport/ancientteleport.animation",
             "timeToLive" : 1.0,
             "layer" : "front",
-			"fullbright" : true
+            "fullbright" : true
           }
         }
       ]
@@ -433,19 +433,6 @@
             }
           }
         }
-      ]
-    },
-    "falling" : {
-      "emissionRate" : 100.0,
-      "offsetRegion" : [-10, 4, 10, 4],
-      "particles" : [
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" },
-        { "particle" : "fallingair" }
       ]
     },
     "landing" : {
@@ -665,35 +652,35 @@
       "pool" : [ "/sfx/gun/rocket2.ogg" ],
       "rangeMultiplier" : 3
     },
-	"laserfire" : {
-	  "pool" : [ "/sfx/gun/plasma_sniper2.ogg", "/sfx/gun/pulsecannon2.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"overloaders" : {
-	  "pool" : [ "/sfx/gun/ancientcannon_altfire.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"empblastwindup" : {
-	  "pool" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ],
-	  "rangeMultiplier" : 3
-	},
-	"fire1" : {
+    "laserfire" : {
+      "pool" : [ "/sfx/gun/plasma_sniper2.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "overloaders" : {
+      "pool" : [ "/sfx/gun/ancientcannon_altfire.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "empblastwindup" : {
+      "pool" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ],
+      "rangeMultiplier" : 3
+    },
+    "fire1" : {
       "pool" : [ "/sfx/npc/boss/guardian_stab.ogg" ],
       "rangeMultiplier" : 3
     },
-	"fire2" : {
+    "fire2" : {
       "pool" : [ "/sfx/gun/pulsecannon_blast1.ogg" ],
       "rangeMultiplier" : 3
     },
-	"fire3" : {
+    "fire3" : {
       "pool" : [ "/sfx/gun/plasma_sniper5.ogg" ],
       "rangeMultiplier" : 3
     },
-	"minionspawn1" : {
+    "minionspawn1" : {
       "pool" : [ "/sfx/gun/plasma_sniper4.ogg" ],
       "rangeMultiplier" : 3
     },
-	"minionspawn2" : {
+    "minionspawn2" : {
       "pool" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
       "rangeMultiplier" : 3
     },

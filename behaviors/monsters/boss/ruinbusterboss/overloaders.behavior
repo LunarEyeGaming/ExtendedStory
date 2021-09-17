@@ -19,58 +19,58 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
-		"title": "loadUniqueEntity",
-		"type": "action",
-		"name": "loadUniqueEntity",
-		"parameters": {
-		  "uniqueId": {"value": "pos3"}
-		},
-		"output": {
-		  "entity": "fireId"
-		}
-	  },
-	  {
-	    "title": "entityPosition",
-		"type": "action",
-		"name": "entityPosition",
-		"parameters": {
-		  "entity": {"key": "fireId"}
-		},
-		"output": {
-		  "position": "firePos"
-		}
-	  },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "animate",
-			"type": "action",
-			"name": "animate",
-			"parameters": {
-			  "fallback": {"value": "winddown"},
-			  "state": {"value": "windup"},
-			  "type": {"value": "thrusters"}
-			}
-		  },
-		  {
-			"title": "flyToPosition",
-			"type": "action",
-			"name": "flyToPosition",
-			"parameters": {
-			  "position": {"key": "firePos"},
-			  "speed": {"value": 50}
-			}
-		  }
-		]
-	  },
+      {
+        "title": "loadUniqueEntity",
+        "type": "action",
+        "name": "loadUniqueEntity",
+        "parameters": {
+          "uniqueId": {"value": "pos3"}
+        },
+        "output": {
+          "entity": "fireId"
+        }
+      },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "fireId"}
+        },
+        "output": {
+          "position": "firePos"
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "winddown"},
+              "state": {"value": "windup"},
+              "type": {"value": "thrusters"}
+            }
+          },
+          {
+            "title": "flyToPosition",
+            "type": "action",
+            "name": "flyToPosition",
+            "parameters": {
+              "position": {"key": "firePos"},
+              "speed": {"value": 50}
+            }
+          }
+        ]
+      },
       {
         "title": "setVelocity",
         "type": "action",
@@ -79,47 +79,47 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
-	    "title": "parallel",
-		"type": "composite",
-		"name": "parallel",
-		"parameters": {
-		  "fail": {"value": -1},
-		  "success": {"value": 1}
-		},
-		"children": [
-		  {
-		    "title": "animate",
-			"type": "action",
-			"name": "animate",
-			"parameters": {
-			  "fallback": {"value": "winddown"},
-			  "state": {"value": "windup"},
-			  "type": {"value": "overloaders"}
-			}
-		  },
-		  {
-		    "title": "timer",
-			"type": "action",
-			"name": "timer",
-			"parameters": {
-			  "time": {"value": 1}
-			}
-		  },
-		  {
-		    "title": "repeater",
-			"type": "decorator",
-			"name": "repeater",
-			"parameters": {
-			  "maxLoops": {"value": -1}
-			},
-			"child": {
-			  "title": "sequence",
-			  "type": "composite",
-			  "name": "sequence",
-			  "parameters": {},
-			  "children": [
-				{
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 1}
+        },
+        "children": [
+          {
+            "title": "animate",
+            "type": "action",
+            "name": "animate",
+            "parameters": {
+              "fallback": {"value": "winddown"},
+              "state": {"value": "windup"},
+              "type": {"value": "overloaders"}
+            }
+          },
+          {
+            "title": "timer",
+            "type": "action",
+            "name": "timer",
+            "parameters": {
+              "time": {"value": 1}
+            }
+          },
+          {
+            "title": "repeater",
+            "type": "decorator",
+            "name": "repeater",
+            "parameters": {
+              "maxLoops": {"value": -1}
+            },
+            "child": {
+              "title": "sequence",
+              "type": "composite",
+              "name": "sequence",
+              "parameters": {},
+              "children": [
+                {
                   "title": "random",
                   "type": "action",
                   "name": "random",
@@ -131,7 +131,7 @@
                     "number": "regionX"
                   }
                 },
-		        {
+                {
                  "title": "random",
                   "type": "action",
                   "name": "random",
@@ -143,42 +143,42 @@
                     "number": "regionY"
                   }
                 },
-			    {
-    		      "title": "spawnProjectile",
+                {
+                  "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"value": [0, 0]},
                     "offset": {"value": ["regionX", "regionY"]},
                     "position": {"key": "self"},
-                    "projectileConfig": {"value": {}},
+                    "projectileConfig": {"value": {"power": 20}},
                     "projectileType": {"value": "electricalregionwindup_es"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
                     "trackSource": {"value": false}
                   }
                 },
-				{
-				  "title": "playSound",
-				  "type": "action",
-				  "name": "playSound",
-				  "parameters": {
-				    "sound": {"value": "overloaders"}
-				  }
-				},
-				{
-				  "title": "timer",
-				  "type": "action",
-				  "name": "timer",
-				  "parameters": {
-				    "time": {"value": 0.07}
-				  }
-				}
-			  ]
-			}
-		  }
-		]
-	  },
+                {
+                  "title": "playSound",
+                  "type": "action",
+                  "name": "playSound",
+                  "parameters": {
+                    "sound": {"value": "overloaders"}
+                  }
+                },
+                {
+                  "title": "timer",
+                  "type": "action",
+                  "name": "timer",
+                  "parameters": {
+                    "time": {"value": 0.07}
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
       {
         "title": "setVelocity",
         "type": "action",
