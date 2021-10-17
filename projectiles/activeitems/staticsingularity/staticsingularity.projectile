@@ -1,7 +1,7 @@
 {
   "projectileName" : "staticsingularity",
   "bounces" : -1,
-  "timeToLive" : 10,
+  "timeToLive" : 5,
   "image" : "staticsingularity.png",
   "damageKindImage" : "icon.png",
   "speed" : 0,
@@ -28,10 +28,30 @@
         "layer" : "back",
         "angularVelocity" : -90,
         "timeToLive" : 3.0,
+        "size" : 0.75,
         "destructionTime" : 1.5,
         "destructionAction" : "fade",
         "variance" : {
-          "angularVelocity" : 22.5
+          "rotation" : 180
+        }
+      }
+    },
+    {
+      "time" : 0.0,
+      "repeat" : false,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/staticsingularityswirls_es/staticsingularityswirls_es.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "angularVelocity" : -360,
+        "timeToLive" : 0.0,
+        "size" : 1.5,
+        "destructionTime" : 1.5,
+        "destructionAction" : "shrink",
+        "variance" : {
+          "rotation" : 180
         }
       }
     },
@@ -45,10 +65,29 @@
         "layer" : "back",
         "angularVelocity" : -90,
         "timeToLive" : 3.0,
+        "size" : 0.75,
         "destructionTime" : 1.5,
         "destructionAction" : "fade",
         "variance" : {
-          "angularVelocity" : 22.5
+          "rotation" : 180
+        }
+      }
+    },
+    {
+      "time" : 0.3,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/staticsingularityswirls_es/staticsingularityswirls_es.animation",
+        "position" : [0, 0],
+        "layer" : "back",
+        "angularVelocity" : -360,
+        "timeToLive" : 0.0,
+        "size" : 1.5,
+        "destructionTime" : 1.5,
+        "destructionAction" : "shrink",
+        "variance" : {
+          "rotation" : 180
         }
       }
     }
@@ -77,7 +116,7 @@
       "outerRadius" : 40,
       "innerRadius" : 4,
       "targetRadialVelocity" : -70,
-      "controlForce" : 500,
+      "controlForce" : 750,
       "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
     }
   },

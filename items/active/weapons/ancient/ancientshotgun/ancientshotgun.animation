@@ -17,82 +17,105 @@
           }
         }
       },
-	  "middle" : {
-	    "default" : "idle",
-		"states" : {
-		  "idle" : {
-		    "frames" : 1,
-			"cycle" : 1,
-			"mode" : "loop"
-		  },
-		  "fire" : {
-		    "frames" : 5,
-			"cycle" : 0.75,
-			"mode" : "transition",
-			"transition" : "idle"
-		  }
-		}
-	  }
+      "gun" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 8,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          },
+          "fire" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "shells" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "mode" : "loop"
+          },
+          "fire" : {
+            "frames" : 8,
+            "cycle" : 0.75,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
     },
 
     "parts" : {
-      "butt" : {
+      "gun" : {
         "properties" : {
           "centered" : true,
-          "image" : "<partImage><paletteSwaps>",
-          "offset" : [0, 0], // x offset is set dynamically
+          "offset" : [1.5, 0.5], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
+        },
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
         }
       },
-      "middle" : {
+      "gunFullbright" : {
         "properties" : {
+          "anchorPart" : "gun",
           "centered" : true,
-          "offset" : [0, 0], // x offset is set dynamically
-          "transformationGroups" : ["weapon"]
+          "zLevel" : 1,
+          "fullbright" : true
         },
-		"partStates" : {
-		  "middle" : {
-		    "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:idle.<frame>"
-			  }
-			},
-			"fire" : {
-			  "properties" : {
-			    "image" : "<partImage>:fire.<frame>"
-			  }
-			}
-		  }
-		}
-	  },
-      "middleFullbright" : {
-        "properties" : {
-		  "anchorPart" : "middle",
-          "centered" : true,
-		  "zLevel" : 1,
-		  "fullbright" : true
-        },
-		"partStates" : {
-		  "middle" : {
-		    "idle" : {
-			  "properties" : {
-			    "image" : "<partImage>:idle.<frame>"
-			  }
-			},
-			"fire" : {
-			  "properties" : {
-			    "image" : "<partImage>:fire.<frame>"
-			  }
-			}
-		  }
-		}
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
+        }
       },
-      "barrel" : {
+      "shells" : {
         "properties" : {
+          "anchorPart" : "gun",
+          "offset" : [1.125, 0.8125],
           "centered" : true,
-          "image" : "<partImage><paletteSwaps>",
-          "offset" : [0, 0], // x offset is set dynamically
-          "transformationGroups" : ["weapon"]
+          "zLevel" : -1,
+          "fullbright" : true
+        },
+        "partStates" : {
+          "shells" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            }
+          }
         }
       },
       "muzzleFlash" : {
@@ -140,7 +163,7 @@
     "muzzleFlash" : {
       "active" : false,
       "position" : [0, 0],
-      "color" : [90, 90, 0]
+      "color" : [150, 0, 150]
     }
   },
 

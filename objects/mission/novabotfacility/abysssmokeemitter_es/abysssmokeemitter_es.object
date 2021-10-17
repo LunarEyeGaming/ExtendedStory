@@ -1,0 +1,36 @@
+{
+  "objectName" : "abysssmokeemitter_es",
+  "colonyTags" : [ ],
+  "printable" : false,
+  "rarity" : "Common",
+  "category" : "Technical",
+  "price" : 0,
+  "health" : 0.1,
+  "description" : "Activates and sends a message if the given region has no tiles.",
+  "shortdescription" : "Abyss Smoke Emitter",
+  "race" : "generic",
+
+  "smashOnBreak" : true,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "debug.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/mission/novabotfacility/abysssmokeemitter_es/abysssmokeemitter_es.lua" ],
+  "scriptDelta" : 60,
+
+  "animation" : "abysssmokeemitter_es.animation",
+  "animationParts" : {
+    "smokeEmitter" : "emitter.png"
+  },
+  "animationPosition" : [0, 0],
+  
+  "detectRegion" : [-2, -20, 2, 0],
+  
+  "interactive" : false
+}

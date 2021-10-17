@@ -1,7 +1,8 @@
 {
   "globalTagDefaults" : {
     "paletteSwaps" : "",
-    "meterProgress" : "0"
+    "meterProgress" : "0",
+    "beamOriginPhase" : "1"
   },
 
   "animatedParts" : {
@@ -179,7 +180,7 @@
             "idle" : {},
             "fire" : {
               "properties" : {
-                "image" : "<partImage>:<frame>"
+                "image" : "<partImage>:<beamOriginPhase>.<frame>"
               }
             }
           }

@@ -16,12 +16,13 @@
       "projectile" : {
         "type" : "destroyershot",
         "config" : {
-          "speed" : 20,
-          "power" : 75,
+          "speed" : 1,
+          "acceleration" : 20,
+          "power" : 40,
           "movementSettings" : {
             "collisionEnabled" : false
           },
-		  "processing" : "?scalenearest;5;5",
+          "processing" : "?scalenearest;5;5",
           "periodicActions" : [
             {
               "time" : 0,
@@ -29,24 +30,25 @@
               "action" : "sound",
               "options" : [ "/sfx/gun/plasma_sniper5.ogg" ]
             },
-			{
-			  "time" : 0.01,
-			  "action" : "loop",
-			  "count" : 1,
-			  "body" : [
-			    {
-				  "action" : "projectile",
-				  "type" : "destroyershot",
-				  "angle" : 90,
-				  "fuzzAngle" : 180,
-				  "config" : { "power" : 75, "speed" : 30, "movementSettings" : { "collisionEnabled" : false } }
-				},
-				{
-				  "action" : "sound",
-				  "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
-				}
-			  ]
-			}
+            {
+              "time" : 0.01,
+              "action" : "loop",
+              "count" : 1,
+              "body" : [
+                {
+                  "action" : "projectile",
+                  "type" : "destroyershot",
+                  "angle" : 90,
+                  "fuzzAngle" : 180,
+                  "inheritDamageFactor" : 1,
+                  "config" : { "speed" : 50, "timeToLive" : 0.25, "movementSettings" : { "collisionEnabled" : false } }
+                },
+                {
+                  "action" : "sound",
+                  "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+                }
+              ]
+            }
           ]
         }
       }

@@ -1,0 +1,64 @@
+{
+  "objectName" : "abysssmokeemitter2_es",
+  "colonyTags" : [ ],
+  "printable" : false,
+  "rarity" : "Common",
+  "category" : "Technical",
+  "price" : 0,
+  "health" : 0.1,
+  "description" : "Covers the area with damaging abyssal smoke.",
+  "shortdescription" : "Abyss Smoke Screen",
+  "race" : "generic",
+
+  "smashOnBreak" : true,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "debug.png:<color>.off",
+      "imagePosition" : [0, 0],
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/mission/novabotfacility/abysssmokeemitter_es/abysssmokeemitter2_es.lua" ],
+  "scriptDelta" : 60,
+
+  "animation" : "abysssmokeemitter2_es.animation",
+  "animationParts" : {
+    "smokeEmitter" : "emitter.png"
+  },
+  "animationPosition" : [0, 0],
+  
+  "detectRegion" : [-2, -25, 2, 0],
+  "levels" : [
+    {
+      "damage" : 10.0,
+      "emissionRate" : 0.3
+    },
+    {
+      "damage" : 20.0,
+      "emissionRate" : 0.6
+    },
+    {
+      "damage" : 30.0,
+      "emissionRate" : 1.0
+    },
+    {
+      "damage" : 40.0,
+      "emissionRate" : 1.3
+    }
+  ],
+  "damageSource" : {
+    "poly" : [ [21, 32], [21, -32], [-21, -32], [-21, 32] ],
+    "damage" : 10.0,
+
+    "teamType" : "enemy",
+    "damageSourceKind" : "abyss",
+    "damageType" : "Environment",
+
+    "damageRepeatTimeout" : 1.0
+  },
+  
+  "interactive" : false
+}

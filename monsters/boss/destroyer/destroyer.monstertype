@@ -39,7 +39,7 @@
         "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.6,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack", "destroyerDestructionShowerAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerGiantLaserShotAttack", "destroyerDestructionShowerAttack"]
       },
       {
         "enterPhase" : "destroyerSkyMegaLaserAttack",
@@ -54,7 +54,7 @@
         "skills" : ["destroyerScatterAttack", "destroyerGiantLaserShotAttack", "destroyerScatterAttack", "destroyerBulletCirclesAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerDestructionShowerAttack", "destroyerDestructionShowerAttack", "destroyerScatterAttack"]
       }
     ],
-	"renderLayer" : "BackgroundTile-10",
+    "renderLayer" : "BackgroundTile-10",
 
     "queryTargetDistance" : 50.0,
     "switchTargetDistance" : 10.0,
@@ -73,7 +73,7 @@
       "flySpeed" : 20,
       "airForce" : 200.0,
       "physicsEffectCategories" : ["boss"],
-	  "collisionEnabled" : false
+      "collisionEnabled" : false
     },
 
     "knockoutTime" : 0.1,
@@ -112,10 +112,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1250
+          "baseValue" : 1500
         },
         "protection" : {
-          "baseValue" : 50.0
+          "baseValue" : 20.0
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -144,9 +144,9 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
-		"megadamageResistance" : {
-		  "baseValue" : 1.0
-		},
+        "megadamageResistance" : {
+          "baseValue" : 1.0
+        },
         "abysseffectImmunity" : {
           "baseValue" : 1.0
         },
@@ -200,13 +200,13 @@
               "action" : "config",
               "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
             },
-			{
-			  "action" : "projectile",
-			  "type" : "massiveinvisibleprojectile",
-			  "config" : {
-			    "statusEffects" : [ "destroyereffectimmunity" ]
-			  }
-			}
+            {
+              "action" : "projectile",
+              "type" : "massiveinvisibleprojectile",
+              "config" : {
+                "statusEffects" : [ "destroyereffectimmunity" ]
+              }
+            }
           ]
         },
 

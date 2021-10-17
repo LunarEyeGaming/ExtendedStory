@@ -12,49 +12,43 @@
       "bobHeight" : 0,
 
       "projectileOffset" : [0, -4],
-      "fireInterval" : 0.2,
+      "fireInterval" : 0.4,
       "projectile" : {
         "type" : "invisibleprojectile",
         "config" : {
           "speed" : 0,
-		  "onlyHitTerrain" : true,
+          "onlyHitTerrain" : true,
           "timeToLive" : 0,
-		  "damageTeam" : { "type" : "enemy" },
-		  "actionOnReap" : [
-		    {
-			  "action" : "projectile",
-			  "type" : "destroyershot",
-			  "offsetRange" : [-50, 50, 50, 50],
-			  "direction" : [0, -1],
-			  "config" : {
-			    "periodicActions" : [
-				  {
-				    "time" : 0.1,
-					"action" : "config",
-					"file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
-				  }
-				],
-				"speed" : 50,
-				"timeToLive" : 10,
-				"actionOnReap" : [
-				  {
-				    "action" : "loop",
-					"count" : 15,
-					"body" : [
-					  {
-					    "action" : "config",
-					    "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
-					  }
-					]
-				  }
-				]
-			  }
-			},
-			{
-			  "action" : "sound",
-			  "options" : ["/sfx/gun/pulsecannon1.ogg"]
-			}
-		  ]
+          "damageTeam" : { "type" : "enemy" },
+          "actionOnReap" : [
+            {
+              "action" : "projectile",
+              "type" : "destroyershot",
+              "offsetRange" : [-50, 50, 50, 50],
+              "direction" : [0, -1],
+              "config" : {
+                "periodicActions" : [
+                  {
+                    "time" : 0.1,
+                    "action" : "config",
+                    "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+                  }
+                ],
+                "speed" : 50,
+                "timeToLive" : 10,
+                "actionOnReap" : [
+                  {
+                    "action" : "config",
+                    "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+                  }
+                ]
+              }
+            },
+            {
+              "action" : "sound",
+              "options" : ["/sfx/gun/pulsecannon1.ogg"]
+            }
+          ]
         }
       }
     }

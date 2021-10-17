@@ -9,7 +9,7 @@
   "fullbright" : true,
   "piercing" : true,
   "periodicActions" : [
-	{
+    {
       "time" : 0.01,
       "repeat" : true,
       "action" : "particle",
@@ -18,34 +18,34 @@
         "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
         "position" : [0, 0],
         "layer" : "front",
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 0],
+        "initialVelocity" : [0, 0],
+        "finalVelocity" : [0, 0],
         "timeToLive" : 1.5,
         "destructionTime" : 0.0,
         "destructionAction" : "fade",
         "fullbright" : true,
-		"variance" : {
-		  "initialVelocity" : [4, 4],
-		  "position" : [1, 1]
-		}
+        "variance" : {
+          "initialVelocity" : [4, 4],
+          "position" : [1, 1]
+        }
       }
     }
   ],
   "actionOnReap" : [
     {
-	  "action" : "projectile",
-	  "type" : "staticsingularity",
-	  "inheritDamageFactor" : 1,
-	  "inheritSpeedFactor" : 0
-	}
+      "action" : "projectile",
+      "type" : "staticsingularity",
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0
+    }
   ],
 
-  "boundBox" : [-10, -10, 10, 10],
+  "boundBox" : [-15, -15, 15, 15],
   "physicsForces" : {
     "vacuum" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 40,
-      "innerRadius" : 4,
+      "outerRadius" : 15,
+      "innerRadius" : 0,
       "targetRadialVelocity" : -70,
       "controlForce" : 500,
       "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]

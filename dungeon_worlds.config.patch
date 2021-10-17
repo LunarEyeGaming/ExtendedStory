@@ -56,7 +56,7 @@
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/error-0xbfaf000.ogg",
       "biome" : "darkabyss",
-      "environmentStatusEffects" : ["dontstarve", "biomefreezing"]
+      "environmentStatusEffects" : ["dontstarve", "biomefreezing", "quickhealnerf_es"]
     }
   },
   {
@@ -163,10 +163,9 @@
       "dungeonBaseHeight" : 1500,
       "dungeonSurfaceHeight" : 1350,
       "ambientLightLevel" : [1200, 1200, 1200],
-      "musicTrack" : "/music/forsaken-grotto.ogg",
+      "musicTrack" : "/music/penumbra-by-kevinmacleod.ogg",
       //"musicTrack" : "",
       "biome" : "darkabyss",
-      "overrideTech" : [ "vortexoverride_es" ],
       "environmentStatusEffects" : ["dontstarve"]
     }
   },

@@ -15,13 +15,11 @@ end
 function DblHelixBeamFire:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
-  self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
   self.impactSoundTimer = math.max(self.impactSoundTimer - self.dt, 0)
 
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
     and not self.weapon.currentAbility
     and not world.lineTileCollision(mcontroller.position(), self:firePosition())
-    and self.cooldownTimer == 0
     and not status.resourceLocked("energy") then
 
     self.transitionTimer = 0
@@ -34,6 +32,7 @@ function DblHelixBeamFire:fire()
 
   animator.playSound("fireStart")
   animator.playSound("fireLoop", -1)
+  animator.playSound("fireBedding", -1)
 
   while self.fireMode == (self.activatingFireMode or self.abilitySlot) do
     self.progressTimer = math.min(self.windupTime, self.progressTimer + self.dt)
@@ -43,18 +42,21 @@ function DblHelixBeamFire:fire()
       break
     end
     self.fireTime = interp.linear(progress, self.startFireTime, self.endFireTime)
+    animator.setSoundPitch("fireLoop", interp.linear(progress, self.beamMinPitch, self.beamMaxPitch))
+    animator.setSoundVolume("fireBedding", progress)
     self:updateMeter()
     local beamLength = self:animateBeam(true)
 
     self.weapon:setDamage(self.damageConfig, self:makeDamagePoly(beamLength, beamLength / self.beamLength * progress), self.fireTime)
 
+    mcontroller.controlModifiers({runningSuppressed=true})
+
     coroutine.yield()
   end
 
-  self:reset()
+  self:reset2()
   animator.playSound("fireEnd")
 
-  self.cooldownTimer = self.fireTime
   self:setState(self.winddown)
 end
 
@@ -87,8 +89,8 @@ function DblHelixBeamFire:winddown()
   self.weapon:setStance(self.stances.cooldown)
   while self.progressTimer > 0 do
     self.progressTimer = math.max(0, self.progressTimer - self.dt)
-    --local progress = self.progressTimer / self.windupTime
-    --animator.setSoundPitch("whir", interp.linear(progress, self.whirMinPitch, self.whirMaxPitch))
+    local progress = self.progressTimer / self.windupTime
+    animator.setSoundPitch("fireLoop", interp.linear(progress, self.beamMinPitch, self.beamMaxPitch))
     self:updateMeter()
     if self.transitionTimer > 0 then
       self.transitionTimer = math.max(0, self.transitionTimer - self.dt)
@@ -103,6 +105,8 @@ function DblHelixBeamFire:winddown()
       and not status.resourceLocked("energy")
       and not world.lineTileCollision(mcontroller.position(), self:firePosition()) then
 
+      animator.stopAllSounds("fireLoop")
+
       self:setState(self.fire)
     end
 
@@ -111,13 +115,13 @@ function DblHelixBeamFire:winddown()
   --activeItem.setScriptedAnimationParameter("chains", {})
   
   --animator.setAnimationState("body", "idle")
-  --animator.stopAllSounds("whir")
+  animator.stopAllSounds("fireLoop")
 end
 
 function DblHelixBeamFire:animateBeam(includeImpact)
   local beamStart = self:firePosition()
-  local beamLength = math.min(self.beamLength, world.magnitude(beamStart, activeItem.ownerAimPosition()))
-  local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), beamLength))
+  local beamEnd = vec2.add(beamStart, vec2.mul(vec2.norm(self:aimVector(0)), self.beamLength))
+  local beamLength = self.beamLength
 
   local collidePoint = world.lineCollision(beamStart, beamEnd)
   if collidePoint then
@@ -140,6 +144,7 @@ function DblHelixBeamFire:animateBeam(includeImpact)
   end
 
   self:drawBeam(beamEnd, collidePoint, beamLength / self.beamLength * self.progressTimer / self.windupTime)
+  animator.setGlobalTag("beamOriginPhase", self:beamFrame())
   
   return beamLength
 end
@@ -200,4 +205,12 @@ end
 
 function DblHelixBeamFire:waveSegmentHeight(taperLength, period, amplitude, x1, x2)
   return (amplitude * math.sin(math.pi * x1 / taperLength)) * math.sin(math.pi * x2 / period)
+end
+
+function DblHelixBeamFire:reset2()
+  self.weapon:setDamage()
+  activeItem.setScriptedAnimationParameter("chains", {})
+  animator.setParticleEmitterActive("beamCollision", false)
+  animator.stopAllSounds("fireStart")
+  animator.stopAllSounds("fireBedding")
 end

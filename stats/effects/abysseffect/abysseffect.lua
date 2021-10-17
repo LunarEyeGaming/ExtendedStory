@@ -15,7 +15,6 @@ function init()
       damageSourceKind = "abyss",
       sourceEntityId = entity.id()
     })
-  healingMultiplier = config.getParameter("healingMultiplier", 0)
 end
 
 function update(dt)
@@ -30,8 +29,4 @@ function update(dt)
         sourceEntityId = entity.id()
       })
   end
-  oldHealthAmount = currentHealthAmount or status.resource("health")
-  currentHealthAmount = status.resource("health")
-  healthLost = -healingMultiplier * math.max((currentHealthAmount - oldHealthAmount), 0)
-  status.modifyResource("health", healthLost)
 end

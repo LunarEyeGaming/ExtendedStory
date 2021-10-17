@@ -1,0 +1,75 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "emitterState" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1
+          },
+          "on" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "smokeEmitter" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "emitterState" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.off"
+              }
+            },
+
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.on"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "particleEmitters" : {
+    "smoke" : {
+      "emissionRate" : 1.0,
+      "emissionRateVariance" : 0.5,
+      "active" : false,
+
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "textured",
+            "image" : "/particles/images/abyssgas.png",
+            "initialVelocity" : [0, 10],
+            "approach" : [2, 2],
+            "finalVelocity" : [0, 10],
+            "angularVelocity" : 0,
+            "timeToLive" : 5,
+            "collidesForeground" : true,
+            "collidesLiquid" : true,
+            "destructionAction" : "shrink",
+            "destructionTime" : 2,
+            "variance" : {
+              "initialVelocity" : [5, 5]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "on" : [],
+    "off" : []
+  }
+}

@@ -13,55 +13,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/fireexplosionlarge/fireexplosionlarge.config"
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : 0,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : 45,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : 90,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : 135,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : 180,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : -135,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : -90,
-      "inheritDamageFactor" : 0.5
-    },
-    {
-      "action" : "projectile",
-      "type" : "flamethrower",
-      "angle" : -45,
-      "inheritDamageFactor" : 0.5
+      "file" : "/projectiles/explosions/fireexplosionlarge/fireexplosionlargestatus.config"
     }
   ],
   "power" : 50,

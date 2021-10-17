@@ -3,10 +3,10 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A heavy-duty weapon used for stronger enemies that a standard-issue ancient rifle cannot take out.",
-  "shortdescription" : "^magenta; ^reset;", 
-  "tooltipKind" : "gun",
-  "category" : "Ancient Chaos Gun",
+  "description" : "A gun that makes a chain-like beam. It also fires bullets rapidly, like a normal chain gun.",
+  "shortdescription" : "^magenta; ^reset;", 
+  "tooltipKind" : "chaingun_es",
+  "category" : "Ancient Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 8,
@@ -27,8 +27,9 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/ancientchaingun_fire.ogg"],
-      "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart.ogg" ],
+      "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart2.ogg" ],
       "fireLoop" : [ "/sfx/gun/ancientchaingun_beamloop.ogg" ],
+      "fireBedding" : [ "/sfx/gun/ancientchaingun_beamloop_bedding.ogg" ],
       "fireEnd" : [ "/sfx/gun/ancientchaingun_beamstop.ogg" ],
       "beamImpact" : [ "/sfx/gun/ancientchaingun_beamimpact.ogg" ]
     },
@@ -80,6 +81,8 @@
     "beamLength" : 50,
     "beamTransitionTime" : 0.25,
     "beamFrames" : 4,
+    "beamMinPitch" : 0.5,
+    "beamMaxPitch" : 1.2,
     
     "meterFrames" : 8,
 
@@ -153,7 +156,7 @@
     "projectileCount" : 1,
     "fireType" : "auto",
 
-    "projectileType" : "ancientlasershotarc_es",
+    "projectileType" : "ancientlasershoterratic_es",
     "projectileParameters" : {
       "knockback" : 2,
       "turnRate" : [-0.4, 0.4]
@@ -195,5 +198,5 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildchaingun.lua"
 }

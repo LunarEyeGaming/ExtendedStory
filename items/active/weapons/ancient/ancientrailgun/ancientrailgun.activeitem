@@ -49,8 +49,8 @@
     "class" : "GunFire",
 
     "fireTime" : 1.5,
-    "baseDps" : 2,
-    "energyUsage" : 100,
+    "baseDps" : 9,
+    "energyUsage" : 75,
     "projectileCount" : 1,
     "inaccuracy" : 0.0,
     "fireType" : "auto",
@@ -59,8 +59,6 @@
     "projectileParameters" : {
       "speed" : 800,
       "timeToLive" : 1,
-      "damageTeam" : { "type" : "friendly" },
-      "power" : 0,
       "piercing" : true,
       "bounces" : 0,
       "periodicActions" : [
@@ -69,6 +67,7 @@
           "repeat" : true,
           "action" : "projectile",
           "type" : "ancientrailgunshot",
+          "inheritDamageFactor" : 0,
           "config" : {"knockback" : 20, "speed" : 0}
         }
       ],

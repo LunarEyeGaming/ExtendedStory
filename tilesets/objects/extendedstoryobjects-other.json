@@ -8,7 +8,7 @@
  "margin":0,
  "name":"extendedstoryobjects-other",
  "spacing":0,
- "tilecount":41,
+ "tilecount":43,
  "tileheight":82,
  "tileproperties":
     {
@@ -262,6 +262,20 @@
          "imagePositionX":"0",
          "imagePositionY":"-8",
          "object":"healingorbsocketinverted_es",
+         "tilesetDirection":"right"
+        },
+     "41":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysssmokeemitter_es",
+         "tilesetDirection":"right"
+        },
+     "42":
+        {
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"abysssmokeemitter2_es",
          "tilesetDirection":"right"
         },
      "5":
@@ -554,6 +568,20 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "41":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "42":
+        {
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "imagePositionX":"string",
@@ -806,6 +834,18 @@
         {
          "image":"..\/images\/objects\/ihealingorbsocketright.png",
          "imageheight":16,
+         "imagewidth":8
+        },
+     "41":
+        {
+         "image":"..\/images\/objects\/abysssmokeemitter.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "42":
+        {
+         "image":"..\/images\/objects\/abysssmokeemitter.png",
+         "imageheight":8,
          "imagewidth":8
         },
      "5":

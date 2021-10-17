@@ -1,5 +1,5 @@
 {
-  "projectileName" : "ancientlasershotarc_es",
+  "projectileName" : "ancientlasershoterratic_es",
   "physics" : "laser",
   "image" : "ancientlasershot.png",
   "damageKindImage" : "icon.png",
@@ -7,7 +7,7 @@
   "animationCycle" : 0.5,
   "frameNumber" : 2,
   "power" : 50,
-  "timeToLive" : 5,
+  "timeToLive" : 2,
   "fullbright" : true,
   "periodicActions" : [
     {
@@ -41,8 +41,9 @@
   "damageKind" : "plasmabullet",
   "lightColor" : [83, 28, 97],
   
-  "scripts" : ["/scripts/projectiles/arcfollower.lua"],
+  "scripts" : ["ancientlasershoterratic_es.lua"],
   "scriptDelta" : 1,
   
-  "turnRate" : 0.2
+  "turnRate" : 0.2,
+  "turnEndTime" : 1.5
 }
