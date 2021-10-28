@@ -11,8 +11,8 @@
   "twoHanded" : false,
   "itemTags" : ["weapon", "ranged", "bow"],
   
-  //"critChance" : 2,
-  //"critBonus" : 1,
+  "critChance" : 2,
+  "critBonus" : 1,
 
   "level" : 1,
 
@@ -40,14 +40,14 @@
     //"drawSpeedMultiplier" : "constant",
     "projectileType" : "t2slingshot",
     "powerProjectileType" : "t2cslingshot",
-    "stances" : {
+	"stances" : {
       "draw" : {
-        "backArmFrame" : "swimIdle.2"
+		"backArmFrame" : "swimIdle.2"
       },
       "fire" : {
-        "backArmFrame" : "swimIdle.2"
+		"backArmFrame" : "swimIdle.2"
       }
-    }
+	}
   },
 
   "builder" : "/items/buildscripts/buildbow.lua"

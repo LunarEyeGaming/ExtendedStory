@@ -1,8 +1,9 @@
 {
   "input" : [
-    { "item" : "rapidrl2_es", "count" : 1 },
-    { "item" : "essence", "count" : 250 },
-    { "item" : "ancientupgrademodule_es", "count" : 4 }
+    { "item" : "goldbar", "count" : 20 },
+	{ "item" : "arkite", "count" : 10 },
+	{ "item" : "rapidrl2_es", "count" : 1 },
+	{ "item" : "upgrademodule_es", "count" : 4 }
   ],
   "output" : { "item" : "rapidrl3_es", "count" : 1 },
   "groups" : [ "upgradestation", "upgrades", "all" ]

@@ -9,7 +9,7 @@
   "category" : "Unique Weapon ^white;| ^#a600cc;Mythical",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
-  "level" : 8,
+  "level" : 10,
   
   "critChance" : 50,
   "critBonus" : 50,
@@ -20,12 +20,12 @@
   "animationParts" : {
     "gun" : "blackholegunnew.png",
     "gunfullbright" : "blackholegunnewunlit.png",
-    "blackhole" : "blackhole.png"
+	"blackhole" : "blackhole.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "altFire" : ["/sfx/gun/plasmacannon_fire.ogg"]
-    }
+	  "altFire" : ["/sfx/gun/plasmacannon_fire.ogg"]
+	}
   },
   "muzzleOffset" : [2.3, 0.5],
 
@@ -40,7 +40,7 @@
         "time" : 0,
         "energyCost" : 0,
         "cooldown" : 0.0,
-        "projectileType" : "delayprojectile",
+        "projectileType" : "invisibleprojectile",
         "projectileCount" : 1,
         "projectileParameters" : {"timeToLive" : 0, "damageType" : "nodamage"},
         "inaccuracy" : 0,
@@ -50,7 +50,7 @@
       },
       {
         "time" : 2.5,
-        "energyCost" : 250,
+        "energyCost" : 300,
         "cooldown" : 0.25,
         "projectileType" : "darkmattershot_es",
         "projectileCount" : 1,
@@ -105,7 +105,7 @@
         "time" : 0,
         "energyCost" : 0,
         "cooldown" : 0.0,
-        "projectileType" : "delayprojectile",
+        "projectileType" : "invisibleprojectile",
         "projectileCount" : 1,
         "projectileParameters" : {"timeToLive" : 0, "damageType" : "nodamage"},
         "inaccuracy" : 0,
@@ -115,7 +115,7 @@
       },
       {
         "time" : 2.5,
-        "energyCost" : 250,
+        "energyCost" : 70,
         "cooldown" : 0.25,
         "projectileType" : "bouncingsingularity",
         "projectileCount" : 1,

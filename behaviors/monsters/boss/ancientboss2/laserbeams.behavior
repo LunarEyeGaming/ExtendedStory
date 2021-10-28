@@ -19,9 +19,9 @@
     "type": "composite",
     "name": "parallel",
     "parameters": {
-      "fail": {"value": -1},
-      "success": {"value": 1}
-    },
+	  "fail": {"value": -1},
+	  "success": {"value": 1}
+	},
     "children": [
       {
         "title": "repeater",
@@ -30,88 +30,88 @@
         "parameters": {
           "maxLoops": {"value": -1}
         },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
             {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [0, 1]},
-                "offset": {"value": [10, 12.5]},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "ancientboss2_laser"}
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [0, 1]},
-                "offset": {"value": [-10, 12.5]},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "ancientboss2_laser2"}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.2}
-              }
-            }
-          ]
-        }
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, 1]},
+    	        "offset": {"value": [10, 12.5]},
+    	        "projectileConfig": {"value": {}},
+    	        "projectileType": {"value": "ancientboss2_laser"}
+    	      }
+    	    },
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, 1]},
+    	        "offset": {"value": [-10, 12.5]},
+    	        "projectileConfig": {"value": {}},
+    	        "projectileType": {"value": "ancientboss2_laser2"}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.2}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
+	  {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
           "maxLoops": {"value": -1}
         },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [0, 0]},
-                "offset": {"value": [0, -13]},
-                "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "offsetRange": [-31, 0, 31, 0], "config": {"onlyHitTerrain": true, "speed": 0, "periodicActions": [{"time": 0.1, "action": "projectile", "type": "ancientorb_boss", "config": {"timeToLive": 1, "onlyHitTerrain": true, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "ancientboss2_laser", "direction": [0, 1], "config": {"actionOnReap": [], "power": 100}}]}}], "timeToLive": 1, "actionOnReap": []}}]}]}},
-                "projectileType": {"value": "orbitalup"}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 2}
-              }
-            }
-          ]
-        }
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, 0]},
+    	        "offset": {"value": [0, -13]},
+    	        "projectileConfig": {"value": {"onlyHitTerrain": true, "timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "orbitalup", "offsetRange": [-31, 0, 31, 0], "config": {"onlyHitTerrain": true, "speed": 0, "periodicActions": [{"time": 0.1, "action": "projectile", "type": "ancientorb_boss", "config": {"timeToLive": 1, "onlyHitTerrain": true, "speed": 0, "actionOnReap": [{"action": "projectile", "type": "ancientboss2_laser", "direction": [0, 1], "config": {"actionOnReap": [], "power": 100}}]}}], "timeToLive": 1, "actionOnReap": []}}]}]}},
+    	        "projectileType": {"value": "orbitalup"}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 2}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 20.0}
-        }
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 20.0}
+		}
+	  }
     ]
   }
 }

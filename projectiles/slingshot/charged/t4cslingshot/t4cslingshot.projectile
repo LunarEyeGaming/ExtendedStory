@@ -10,10 +10,10 @@
   "lightColor" : [102, 58, 31],
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
-    }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/smallregularexplosion/smallregularexplosion.config"
+	}
   ],
-  "damageKind" : "default",
-  "damageType" : "NoDamage"
+  "statusEffects" : ["burning"],
+  "damageKind" : "fire"
 }

@@ -3,72 +3,53 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Uncommon",
-  "description" : "A simple titanium chain gun.",
+  "description" : "A simple titanium chain gun. Turn your foes into minced meat!",
   "shortdescription" : "Titanium Chain Gun",
-  "tooltipKind" : "chaingun_es",
+  "tooltipKind" : "gun",
   "category" : "Chain Gun",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","chaingun"],
+  "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 4,
   
   "critChance" : 3,
   "critBonus" : 8,
 
-  "inventoryIcon" : "titaniumchaingunicon.png",
+  "inventoryIcon" : "titaniumchaingunnew.png:idle",
 
-  "animation" : "/items/active/weapons/ranged/chaingun/chaingun.animation",
+  "animation" : "titaniumchaingun.animation",
   "animationParts" : {
-    "body" : "body.png",
-    "barrel" : "barrel.png",
-    "magazine" : "magazine.png",
+    "butt" : "",
+    "middle" : "titaniumchaingunnew.png",
+    "barrel" : "",
     "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
   },
   "animationCustom" : {
-    "animatedParts" : {
-      "stateTypes" : {
-        "magazine" : {
-          "states" : {"reload" : {"cycle" : 0.08}}
-        }
-      },
-      "parts" : {
-        "body" : {"properties" : {"offset" : [-0.1875, -0.375]}},
-        "barrel" : {"properties" : {"offset" : [2.375, -0.25]}},
-        "magazine" : {"properties" : {"offset" : [-0.4375, -0.5625]}}
-      }
-    },
     "sounds" : {
-      "fire" : ["/sfx/gun/titaniumchaingun_fire.ogg"]
+      "fire" : ["/sfx/gun/mp3.ogg"],
+	  "altFire" : ["/sfx/gun/rocket2.ogg"]
     }
   },
 
-  "baseOffset" : [0, 0],
-  "muzzleOffset" : [3.5, -0.5],
+  "baseOffset" : [1.2, -0.8],
+  "muzzleOffset" : [2.5, 0.25],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
-    "class" : "ChainGunFire",
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
 
-    "windupTime" : 1.5,
-    "startFireTime" : 0.4,
-    "endFireTime" : 0.08,
-    
-    "whirMinPitch" : 1.0,
-    "whirMaxPitch" : 2.0,
-    
-    "spinFrameCount" : 2,
-
-    "baseDps" : 18.0,
-    "energyUsage" : 20,
+    "fireTime" : 0.03,
+    "baseDps" : 22.0,
+    "energyUsage" : 50,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
     "fireType" : "auto",
 
-    "projectileType" : "titaniumchaingunshot_es",
+    "projectileType" : "bullet-2",
     "projectileParameters" : {
       "knockback" : 2
     },
@@ -79,8 +60,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2"
+        "allowFlip" : true
       },
       "fire" : {
         "duration" : 0,
@@ -90,7 +70,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
+		"animationStates" : {
+		  "middle" : "fire"
+		}
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -99,13 +81,23 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
+        "allowFlip" : false
       }
     }
   },
-  "altAbilityType" : "chaingunburst_es",
-  "altAbility" : {},
+  "altAbilityType" : "explosiveburst",
+  "altAbility" : {
+    "elementalConfig" : {
+	  "physical" : {
+		"fireTime" : 0.2,
+		"baseDps" : 20,
+		"cooldownTime" : 0.0,
+		"inaccuracy" : 0.1,
+		"energyUsage" : 50,
+		"projectileType" : "airburstfirebullet"
+	  }
+	}
+  },
 
-  "builder" : "/items/buildscripts/buildchaingun.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

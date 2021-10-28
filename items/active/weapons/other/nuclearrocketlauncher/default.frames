@@ -1,17 +1,23 @@
 {
   "frameGrid" : {
-    "size" : [40, 15],
-    "dimensions" : [5, 3],
+    "size" : [38, 18],
+    "dimensions" : [11, 3],
 
     "names" : [
-      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5" ],
-      [ "fire.1", "fire.2", "fire.3", "fire.4" ],
-      [ "fire2.1", "fire2.2", "fire2.3", "fire2.4" ]
+      [ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8", "idle.9", "idle.10", "idle.11" ],
+	  [ "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6", "fire.7", "fire.8", "fire.9", "fire.10", "fire.11" ],
+	  [ "fire2.1", "fire2.2", "fire2.3", "fire2.4", "fire2.5", "fire2.6", "fire2.7", "fire2.8", "fire2.9", "fire2.10", "fire2.11" ]
     ]
   },
   "aliases" : {
-    "idle.6" : "idle.4",
-    "idle.7" : "idle.3",
-    "idle.8" : "idle.2"
-  }
+    "idle.12" : "idle.10",
+	"idle.13" : "idle.9",
+	"idle.14" : "idle.8",
+	"idle.15" : "idle.7",
+	"idle.16" : "idle.6",
+	"idle.17" : "idle.5",
+	"idle.18" : "idle.4",
+	"idle.19" : "idle.3",
+	"idle.20" : "idle.2"
+  }  
 }

@@ -135,12 +135,12 @@
         "powerMultiplier" : {
           "baseValue" : 1.0
         },
-		"electricResistance" : {
-		  "baseValue" : 1.0
-		},
-		"poisonResistance" : {
-		  "baseValue" : -0.5
-		},
+        "electricResistance" : {
+          "baseValue" : 1.0
+        },
+        "poisonResistance" : {
+          "baseValue" : -0.5
+        },
         "abysseffectImmunity" : {
           "baseValue" : 1.0
         },
@@ -155,6 +155,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

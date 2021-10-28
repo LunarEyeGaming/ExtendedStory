@@ -10,9 +10,9 @@
   "fullbright" : true,
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/frostburnballexplosion/frostburnballexplosion.config"
-    }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/frostburnballexplosion/frostburnballexplosion.config"
+	}
   ],
   "periodicActions" : [
     {
@@ -29,13 +29,19 @@
         "destructionTime" : 0.0,
         "destructionAction" : "fade",
         "fullbright" : true,
-        "variance" : {
-          "position" : [4, 4]
-        }
+		"variance" : {
+		  "position" : [4, 4]
+		}
       }
     }
   ],
   "power" : 50.0,
-  "speed" : 80,
-  "damageKind" : "plasma"
+  "speed" : 30,
+  "damageKind" : "plasma",
+
+  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
+  "scriptDelta" : 3,
+
+  "rotationRate" : 2.5,
+  "trackingLimit" : 2.0
 }

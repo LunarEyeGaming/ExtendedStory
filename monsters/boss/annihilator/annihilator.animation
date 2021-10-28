@@ -50,7 +50,13 @@
 		    "frames" : 18,
 			"cycle" : 1.8,
 			"mode" : "transition",
-			"transition" : "rockets"
+			"transition" : "rockets",
+			"properties" : {
+              "immediateSoundRangeMultiplier" : 5.0
+			},
+			"frameProperties" : {
+			  "immediateSound" : ["/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg", "/sfx/gun/rocket3.ogg"]
+			}
 		  },
 		  "static" : {
 		    "frames" : 2,
@@ -977,10 +983,7 @@
     "turnHostile" : [  ],
     "deathPuff" : [ "/sfx/npc/boss/fg_coreray.ogg" ],
 	"dying" : [ "/sfx/npc/boss/annihilator_death.ogg" ],
-	"rocketFire" : {
-      "pool" : [ "/sfx/gun/rocket3.ogg" ],
-	  "rangeMultiplier" : 3
-    }
+	"rocketFire" : ["/sfx/gun/rocket3.ogg"]
   },
 
   "effects" : {

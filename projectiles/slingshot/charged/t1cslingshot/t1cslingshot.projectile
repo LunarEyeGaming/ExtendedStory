@@ -7,5 +7,7 @@
   "animationCycle" : 1,
   "frameNumber" : 1,
   "power" : 20,
-  "damageKind" : "default"
+  "lightColor" : [102, 58, 31],
+  "statusEffects" : ["burning"],
+  "damageKind" : "fire"
 }

@@ -96,7 +96,7 @@
                           "type": {"value": "Special"}
                         }
                       },
-                      {
+					  {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -126,16 +126,16 @@
                         "name": "dynamic",
                         "parameters": {},
                         "children": [
-                          {
+						  {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-                              "fail": {"value": 1},
+							  "fail": {"value": 1},
                               "success": {"value": -1}
-                            },
-                            "children": [
-                              {
+							},
+							"children": [
+							  {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -144,29 +144,29 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-                              {
-                                "title": "repeater",
-                                "type": "decorator",
-                                "name": "repeater",
-                                "parameters": {
-                                  "maxLoops": {"value": -1},
-                                  "untilSuccess": {"value": false}
-                                },
-                                "child": {
-                                  "title": "sequence",
-                                  "type": "composite",
-                                  "name": "sequence",
-                                  "parameters": {},
-                                  "children": [
-                                    {
-                                      "title": "flyToPosition",
-                                      "type": "action",
-                                      "name": "flyToPosition",
-                                      "parameters": {
-                                        "position": {"key": "spawn"},
-                                        "speed": {"value": 25}
-                                      }
-                                    },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+								    {
+									  "title": "flyToPosition",
+									  "type": "action",
+									  "name": "flyToPosition",
+									  "parameters": {
+									    "position": {"key": "spawn"},
+										"speed": {"value": 25}
+									  }
+									},
                                     {
                                       "title": "parallel",
                                       "type": "composite",
@@ -195,173 +195,173 @@
                                         }
                                       ]
                                     },
-                                    {
-                                      "title": "repeater",
-                                      "type": "decorator",
-                                      "name": "repeater",
-                                      "parameters": {
-                                        "maxLoops": {"value": 5}
-                                      },
-                                      "child": {
-                                        "title": "poisondragonboss-fireball",
-                                        "type": "module",
-                                        "name": "poisondragonboss-fireball",
-                                        "parameters": { }
-                                      }
-                                    },
-                                    {
-                                      "title": "poisondragonboss-firebreath",
-                                      "type": "module",
-                                      "name": "poisondragonboss-firebreath",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "inverter",
-                                      "type": "decorator",
-                                      "name": "inverter",
-                                      "parameters": {},
-                                      "child": {
-                                        "title": "resourcePercentage",
-                                        "type": "action",
-                                        "name": "resourcePercentage",
-                                        "parameters": {
-                                          "percentage": {"value": 0.8},
-                                          "resource": {"value": "health"}
-                                        }
-                                      }
-                                    },
-                                    {
-                                      "title": "poisondragonboss-poisonshowerwindup",
-                                      "type": "module",
-                                      "name": "poisondragonboss-poisonshowerwindup",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-poisonsweep",
-                                      "type": "module",
-                                      "name": "poisondragonboss-poisonsweep",
-                                      "parameters": {
-                                        "startingPos": {"value": [-30, 0]},
-                                        "endingPos": {"value": [30, 0]},
-                                        "aimVector": {"value": [1, 0]},
-                                        "projectileOffset": {"value": [7.875, -1.5]}
-                                      }
-                                    },
-                                    {
-                                      "title": "inverter",
-                                      "type": "decorator",
-                                      "name": "inverter",
-                                      "parameters": {},
-                                      "child": {
-                                        "title": "resourcePercentage",
-                                        "type": "action",
-                                        "name": "resourcePercentage",
-                                        "parameters": {
-                                          "percentage": {"value": 0.55},
-                                          "resource": {"value": "health"}
-                                        }
-                                      }
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-charge",
-                                      "type": "module",
-                                      "name": "poisondragonboss-charge",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-poisonsweep",
-                                      "type": "module",
-                                      "name": "poisondragonboss-poisonsweep",
-                                      "parameters": {
-                                        "startingPos": {"value": [30, 0]},
-                                        "endingPos": {"value": [-30, 0]},
-                                        "aimVector": {"value": [-1, 0]},
-                                        "projectileOffset": {"value": [-7.875, -1.5]}
-                                      }
-                                    },
-                                    {
-                                      "title": "inverter",
-                                      "type": "decorator",
-                                      "name": "inverter",
-                                      "parameters": {},
-                                      "child": {
-                                        "title": "resourcePercentage",
-                                        "type": "action",
-                                        "name": "resourcePercentage",
-                                        "parameters": {
-                                          "percentage": {"value": 0.4},
-                                          "resource": {"value": "health"}
-                                        }
-                                      }
-                                    },
-                                    {
-                                      "title": "poisondragonboss-poisonspit",
-                                      "type": "module",
-                                      "name": "poisondragonboss-poisonspit",
-                                      "parameters": {}
-                                    },
-                                    {
-                                      "title": "poisondragonboss-slam",
-                                      "type": "module",
-                                      "name": "poisondragonboss-slam",
-                                      "parameters": {}
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "title": "repeater",
-                                "type": "decorator",
-                                "name": "repeater",
-                                "parameters": {
-                                  "maxLoops": {"value": -1},
-                                  "untilSuccess": {"value": false}
-                                },
-                                "child": {
-                                  "title": "sequence",
-                                  "type": "composite",
-                                  "name": "sequence",
-                                  "parameters": {},
-                                  "children": [
-                                    {
-                                      "title": "timer",
-                                      "type": "action",
-                                      "name": "timer",
-                                      "parameters": {
-                                        "time": {"value": 0.01}
-                                      }
-                                    },
-                                    {
+									{
+									  "title": "repeater",
+									  "type": "decorator",
+									  "name": "repeater",
+									  "parameters": {
+									    "maxLoops": {"value": 5}
+									  },
+									  "child": {
+        							    "title": "poisondragonboss-fireball",
+        							    "type": "module",
+        							    "name": "poisondragonboss-fireball",
+        							    "parameters": { }
+        							  }
+									},
+									{
+									  "title": "poisondragonboss-firebreath",
+									  "type": "module",
+									  "name": "poisondragonboss-firebreath",
+									  "parameters": {}
+									},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.8},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+									  "title": "poisondragonboss-poisonshowerwindup",
+									  "type": "module",
+									  "name": "poisondragonboss-poisonshowerwindup",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-poisonsweep",
+									  "type": "module",
+									  "name": "poisondragonboss-poisonsweep",
+									  "parameters": {
+									    "startingPos": {"value": [-30, 0]},
+										"endingPos": {"value": [30, 0]},
+										"aimVector": {"value": [1, 0]},
+										"projectileOffset": {"value": [7.875, -1.5]}
+									  }
+									},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.55},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-charge",
+									  "type": "module",
+									  "name": "poisondragonboss-charge",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-poisonsweep",
+									  "type": "module",
+									  "name": "poisondragonboss-poisonsweep",
+									  "parameters": {
+									    "startingPos": {"value": [30, 0]},
+										"endingPos": {"value": [-30, 0]},
+										"aimVector": {"value": [-1, 0]},
+										"projectileOffset": {"value": [-7.875, -1.5]}
+									  }
+									},
+									{
+        							  "title": "inverter",
+        							  "type": "decorator",
+        							  "name": "inverter",
+        							  "parameters": {},
+									  "child": {
+									    "title": "resourcePercentage",
+										"type": "action",
+										"name": "resourcePercentage",
+										"parameters": {
+										  "percentage": {"value": 0.4},
+										  "resource": {"value": "health"}
+										}
+									  }
+        							},
+									{
+									  "title": "poisondragonboss-poisonspit",
+									  "type": "module",
+									  "name": "poisondragonboss-poisonspit",
+									  "parameters": {}
+									},
+									{
+									  "title": "poisondragonboss-slam",
+									  "type": "module",
+									  "name": "poisondragonboss-slam",
+									  "parameters": {}
+									}
+								  ]
+								}
+						      },
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+								    {
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parameters": {
+									    "time": {"value": 0.01}
+									  }
+									},
+								    {
                                       "title": "inverter",
                                       "type": "decorator",
                                       "name": "inverter",
@@ -375,18 +375,18 @@
                                         }
                                       }
                                     },
-                                    {
-                                      "title": "poisondragonboss-blockbuster",
-                                      "type": "module",
-                                      "name": "poisondragonboss-blockbuster",
-                                      "parameters": {}
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
+									{
+									  "title": "poisondragonboss-blockbuster",
+									  "type": "module",
+									  "name": "poisondragonboss-blockbuster",
+									  "parameters": {}
+									}
+								  ]
+								}
+						      }
+							]
                           }
-                        ]
+						]
                       }
                     ]
                   }
@@ -421,12 +421,12 @@
                       "enable": {"value": false}
                     }
                   },
-                  {
-                    "title": "poisondragonboss-dying",
-                    "type": "module",
-                    "name": "poisondragonboss-dying",
-                    "parameters": { }
-                  },
+				  {
+        		    "title": "poisondragonboss-dying",
+        		    "type": "module",
+        		    "name": "poisondragonboss-dying",
+        		    "parameters": { }
+        		  },
                   {
                     "title": "setDying",
                     "type": "action",
@@ -459,7 +459,7 @@
                       "type": {"value": "None"}
                     }
                   },
-                  {
+				  {
                     "title": "battleMusic",
                     "type": "action",
                     "name": "battleMusic",
@@ -476,57 +476,57 @@
                       "resource": {"value": "health"}
                     }
                   },
-                  {
-                    "title": "resetTransformationGroup",
-                    "type": "action",
-                    "name": "resetTransformationGroup",
-                    "parameters": {
-                      "transformationGroup": {"value": "head"}
-                    }
-                  },
-                  {
-                    "title": "resetTransformationGroup",
-                    "type": "action",
-                    "name": "resetTransformationGroup",
-                    "parameters": {
-                      "transformationGroup": {"value": "body"}
-                    }
-                  },
-                  {
-                    "title": "stopAllSounds",
-                    "type": "action",
-                    "name": "stopAllSounds",
-                    "parameters": {
-                      "sound": {"value": "firebreath"}
-                    }
-                  },
-                  {
-                    "title": "setAnimationState",
-                    "type": "action",
-                    "name": "setAnimationState",
-                    "parameters": {
-                      "state": {"value": "idle"},
-                      "type": {"value": "attack"}
-                    }
-                  },
-                  {
-                    "title": "setParticleEmitterActive",
-                    "type": "action",
-                    "name": "setParticleEmitterActive",
-                    "parameters": {
-                      "emitter": {"value": "firewindup"},
-                      "active": {"value": false}
-                    }
-                  },
-                  {
-                    "title": "flyToPosition",
-                    "type": "action",
-                    "name": "flyToPosition",
-                    "parameters": {
-                      "position": {"key": "spawn"},
-                      "tolerance": {"value": 1}
-                    }
-                  },
+				  {
+				    "title": "resetTransformationGroup",
+					"type": "action",
+					"name": "resetTransformationGroup",
+					"parameters": {
+					  "transformationGroup": {"value": "head"}
+					}
+				  },
+				  {
+				    "title": "resetTransformationGroup",
+					"type": "action",
+					"name": "resetTransformationGroup",
+					"parameters": {
+					  "transformationGroup": {"value": "body"}
+					}
+				  },
+	              {
+	                "title": "stopAllSounds",
+		            "type": "action",
+		            "name": "stopAllSounds",
+		            "parameters": {
+		              "sound": {"value": "firebreath"}
+		            }
+	              },
+				  {
+				    "title": "setAnimationState",
+					"type": "action",
+					"name": "setAnimationState",
+					"parameters": {
+					  "state": {"value": "idle"},
+					  "type": {"value": "attack"}
+					}
+				  },
+				  {
+				    "title": "setParticleEmitterActive",
+					"type": "action",
+					"name": "setParticleEmitterActive",
+					"parameters": {
+					  "emitter": {"value": "firewindup"},
+					  "active": {"value": false}
+					}
+				  },
+				  {
+        		    "title": "flyToPosition",
+        		    "type": "action",
+        		    "name": "flyToPosition",
+        		    "parameters": {
+        		      "position": {"key": "spawn"},
+        		      "tolerance": {"value": 1}
+        		    }
+        		  },
                   {
                     "title": "runner",
                     "type": "action",

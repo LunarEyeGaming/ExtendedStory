@@ -1,7 +1,7 @@
 {
   "projectileName" : "ancientstaffportal",
   "physics" : "hover",
-  "timeToLive" : 6.7,
+  "timeToLive" : 6.35,
   "image" : "ancientstaffportal.png",
   "animationCycle" : 0.35,
   "lightColor" : [90, 60, 110],
@@ -16,7 +16,7 @@
       "options" : [ "/sfx/melee/astraltear2.ogg" ]
     },
     {
-      "time" : 6.35,
+      "time" : 6,
       "repeat" : false,
       "action" : "sound",
       "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
@@ -46,19 +46,19 @@
   "projectileType" : "fireswarmer",
   "projectileParameters" : {
     "timeToLive": 0.1,
-    "speed": 0,
-    "onlyHitTerrain": true,
-    "processing" : "?scalenearest=0",
-    "actionOnReap": [
-      {
-        "action": "projectile",
-        "type": "supernovabeam",
-        "config": {
-          "timeToLive": 0,
-          "speed": 0
-        }
-      }
-    ]
+	"speed": 0,
+	"onlyHitTerrain": true,
+	"processing" : "?scalenearest=0",
+	"actionOnReap": [
+	  {
+	    "action": "projectile",
+		"type": "supernovabeam",
+		"config": {
+		  "timeToLive": 0,
+		  "speed": 0
+		}
+	  }
+	]
   },
   "spawnRate" : 1.0,
 

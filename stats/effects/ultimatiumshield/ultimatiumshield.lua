@@ -11,9 +11,6 @@ function init()
   self.rechargeDelay = config.getParameter("rechargeDelay") or 0
   self.rechargeRate = self.maxShieldHealth * 0.25
   
-  self.barDimensions = config.getParameter("barDimensions")
-  self.maxHueShift = config.getParameter("maxHueShift")
-  
   currentShieldHealth = status.resource("damageAbsorption")
   
   addVisualEffect()
@@ -27,7 +24,7 @@ function update(dt)
   self.rechargeDelay = self.rechargeDelay - dt
   if self.rechargeDelay <= 0 then
     status.giveResource("damageAbsorption", self.rechargeRate * dt)
-    broken = false
+	broken = false
   end
   --Damage Detection(special)
   
@@ -37,28 +34,25 @@ function update(dt)
   currentShieldHealth = status.resource("damageAbsorption")
   if currentShieldHealth < oldShieldHealth then
     animator.playSound("hit")
-    self.rechargeDelay = config.getParameter("rechargeDelay") or 0
-    recharged = false
+	self.rechargeDelay = config.getParameter("rechargeDelay") or 0
+	recharged = false
   end
   if not status.resourcePositive("damageAbsorption") and broken == false then
-    animator.playSound("break")
-    broken = true
+	animator.playSound("break")
+	broken = true
   end
   --Display Shield Bar
-  animator.resetTransformationGroup("energybar")
   shieldHealthRatio = status.resource("damageAbsorption") / maxShieldHealth
   animator.setAnimationState("energybar", "on")
 
-  animator.setGlobalTag("barDirectives", "?crop=0;0;"..shieldHealthRatio * self.barDimensions[1]..";"..self.barDimensions[2])
-  animator.setGlobalTag("hueDirectives", "?hueshift="..shieldHealthRatio * self.maxHueShift)
-  animator.translateTransformationGroup("energybar", {-(1 - shieldHealthRatio) * self.barDimensions[1] / 16, 0})
+  animator.setGlobalTag("barDirectives", "?scalenearest;"..shieldHealthRatio..";1")
   --Shield Cap, useful for getting rid of negative damage, such as fall damage on moons
   if currentShieldHealth > maxShieldHealth then
     status.setResource("damageAbsorption", self.maxShieldHealth)
   end
   if currentShieldHealth >= maxShieldHealth and recharged == false then
     animator.playSound("charged")
-    recharged = true
+	recharged = true
   end
 end
 

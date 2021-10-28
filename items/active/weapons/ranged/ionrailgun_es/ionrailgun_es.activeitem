@@ -17,13 +17,13 @@
   "animationParts" : {
     "gun" : "ionrailgun_es.png",
     "gunfullbright" : "ionrailgununlit_es.png",
-    "laserbeam" : "ionbeam.png",
-    "ionorb" : "ionorb.png"
+	"laserbeam" : "ionbeam.png",
+	"ionorb" : "ionorb.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "altFire" : ["/sfx/gun/plasma_shotgun2.ogg"]
-    }
+	  "altFire" : ["/sfx/gun/plasma_shotgun2.ogg"]
+	}
   },
   "muzzleOffset" : [3, 0.5],
 
@@ -35,22 +35,15 @@
     "name" : "NAN",
     "scripts" : ["/items/active/weapons/ranged/ionrailgun_es/ionrailgunfire.lua"],
     "class" : "ChargeFire",
-    "baseDamage" : 10,
-    "explosionDamageMultiplier": 0.5,
-    "chargeTime" : 1.5,
-    "energyUsage" : 75,
-    "cooldownTime" : 0.25,
+	"baseDamage" : 4,
+	"chargeTime" : 1.5,
+	"energyCost" : 50,
+	"cooldownTime" : 0.25,
     "beamLength" : 100,
-
-    "damageConfig" : {
-      "damageSourceKind" : "ionplasma",
-      "knockback" : 0,
-      "damageRepeatTimeout" : 1.0
-    },
-
-    //Display only
-    "baseDps" : 5.25,
-    "fireTime" : 1.75,
+	//Display only
+	"baseDps" : 7,
+	"fireTime" : 1.75,
+	"energyUsage" : 50,
     "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -59,9 +52,9 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-        "animationStates" : {
-          "ionorb" : "off"
-        }
+		"animationStates" : {
+		  "ionorb" : "off"
+		}
       },
       "charge" : {
         "armRotation" : 0,
@@ -70,9 +63,9 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-        "animationStates" : {
-          "ionorb" : "small"
-        }
+		"animationStates" : {
+		  "ionorb" : "small"
+		}
       },
       "fire" : {
         "duration" : 0,
@@ -98,14 +91,14 @@
   },
   "altAbilityType" : "grenadelauncher",
   "altAbility" : {
-    "elementalConfig" : {"ion" : {"projectileType" : "iongust_es"}},
+    "elementalConfig" : {"ion" : {"projectileType" : "ionchain5", "projectileParameters" : {"speed" : 125, "power" : 0, "knockback" : 50}}},
     "energyUsage" : 20,
-    "baseDps" : 0,
-    "baseDamage" : 0,
-    "fireTime" : 0.75,
-    "projectileCount" : 1,
-    "inaccuracy" : 0,
-    "name" : "Ion Gust"
+	"baseDps" : 0,
+	"baseDamage" : 0,
+	"fireTime" : 0.75,
+	"projectileCount" : 10,
+	"inaccuracy" : 0.08,
+	"name" : "Ion Gust"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

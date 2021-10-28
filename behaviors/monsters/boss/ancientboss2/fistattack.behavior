@@ -15,9 +15,9 @@
   ],
   "parameters": {
     "leftfistId": 0,
-    "rightfistId": 0,
-    "target": 123,
-    "sourceId": 123
+	"rightfistId": 0,
+	"target": 123,
+	"sourceId": 123
   },
   "root": {
     "title": "sequence",
@@ -33,20 +33,20 @@
           "time": {"value": 0.75}
         }
       },
-      {
-        "title": "repeater",
-        "type": "decorator",
-        "name": "repeater",
-        "parameters": {
-          "maxLoops": {"value": 5}
-        },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
+	  {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 5}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
               "title": "entityExists",
               "type": "action",
               "name": "entityExists",
@@ -54,17 +54,17 @@
                 "entity": {"value": "<leftfistId>"}
               }
             },
-            {
-              "title": "sendNotification",
-              "type": "action",
-              "name": "sendNotification",
-              "parameters": {
-                "entity": {"value": "<leftfistId>"},
-                "target": {"key": "target"},
-                "type": {"value": "attack"}
-              }
-            },
-            {
+		    {
+		      "title": "sendNotification",
+		  	  "type": "action",
+		  	  "name": "sendNotification",
+		  	  "parameters": {
+			    "entity": {"value": "<leftfistId>"},
+			    "target": {"key": "target"},
+			    "type": {"value": "attack"}
+			  }
+		    },
+			{
               "title": "timer",
               "type": "action",
               "name": "timer",
@@ -72,7 +72,7 @@
                 "time": {"value": 2}
               }
             },
-            {
+			{
               "title": "entityExists",
               "type": "action",
               "name": "entityExists",
@@ -80,17 +80,17 @@
                 "entity": {"value": "<rightfistId>"}
               }
             },
-            {
-              "title": "sendNotification",
-              "type": "action",
-              "name": "sendNotification",
-              "parameters": {
-                "entity": {"value": "<rightfistId>"},
-                "target": {"key": "target"},
-                "type": {"value": "attack"}
-              }
-            },
-            {
+			{
+		      "title": "sendNotification",
+		  	  "type": "action",
+		  	  "name": "sendNotification",
+		  	  "parameters": {
+			    "entity": {"value": "<rightfistId>"},
+			    "target": {"key": "target"},
+			    "type": {"value": "attack"}
+			  }
+		    },
+			{
               "title": "timer",
               "type": "action",
               "name": "timer",
@@ -98,17 +98,17 @@
                 "time": {"value": 2}
               }
             }
-          ]
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 2.0}
-        }
-      }
+		  ]
+		}
+	  },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 2.0}
+		}
+	  }
     ]
   }
 }

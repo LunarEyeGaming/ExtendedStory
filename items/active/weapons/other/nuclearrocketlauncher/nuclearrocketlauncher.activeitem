@@ -1,11 +1,11 @@
 {
   "itemName" : "nuclearrocketlauncher",
-  "level" : 8,
+  "level" : 10,
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A gun that exploits a deadly interaction between two energies.",
-  "shortdescription" : "^#a600cc;Fusion Plasma Launcher^reset;",
+  "description" : "Highly unstable fusion that unleashes pure destruction at the area.",
+  "shortdescription" : "^#a600cc;Super Redeemer^reset;",
   "tooltipKind" : "gun",
   "category" : "Unique Weapon ^white;| ^#a600cc;Mythical",
   "twoHanded" : true,
@@ -15,17 +15,15 @@
   "critBonus" : 12,
 
   "inventoryIcon" : [
-    { "image" : "nuclearrocketlaunchericon.png" }
+    { "image" : "nuclearrocketlauncher.png:idle.1" }
   ],
 
   "animation" : "nuclearrocketlauncher.animation",
   "animationParts" : {
-    "gun" : "gun.png",
-    "gunfullbright" : "gunfullbright.png",
-    "cells" : "cells.png",
-    "cellsfullbright" : "cellsfullbright.png",
-    "lamp": "lamp.png",
-    "lampfullbright": "lampfullbright.png",
+    "butt" : "",
+    "middle" : "nuclearrocketlauncher.png",
+    "middlefullbright" : "nuclearrocketlauncherunlit.png",
+    "barrel" : "",
     "muzzleFlash" : ""
   },
   "animationCustom" : {
@@ -35,30 +33,31 @@
       "color" : [101, 52, 120]
     }},
     "sounds" : {
-      "fire" : [ "/sfx/gun/nuclearrocketlauncher_fire.ogg" ],
-      "altFire" : [ "/sfx/gun/nuclearrocketlauncher_fire.ogg" ]
+      "fire" : [ "/sfx/gun/superredeemer_fire.ogg" ],
+	  "altFire" : [ "/sfx/gun/solariumfusioncannon_fire.ogg" ]
     }
   },
-  "baseOffset" : [0.75, -0.375],
-  "muzzleOffset" : [1.5, 0.75],
+  "baseOffset" : [0.7, 0.45],
+  "muzzleOffset" : [3.0, 0.125],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "physical",
+  "elementalType" : "electric",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
     "fireTime" : 1.5,
-    "baseDps" : 10.0,
+    "baseDps" : 8.0,
     "energyUsage" : 75,
     "inaccuracy" : 0.008,
     "fireType" : "auto",
 
     "projectileType" : "superredeemershot",
     "projectileParameters" : {
-      "knockback" : 40
+      "knockback" : 40,
+      "speed" : 2
     },
     "projectileCount" : 1,
 
@@ -79,14 +78,12 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-        "animationStates" : {
-          "gun" : "fire",
-          "cells" : "fire",
-          "lamp" : "switch"
-        }
+		"animationStates" : {
+		  "middle" : "fire"
+		}
       },
       "cooldown" : {
-        "duration" : 1.0,
+        "duration" : 0.11,
         "armRotation" : 5,
         "weaponRotation" : 5,
         "twoHanded" : true,
@@ -100,8 +97,8 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "Fusion Globe", "projectileType" : "fusionglobe_es", "projectileParameters" : {}, "fireTime" : 1.0, "energyUsage" : 75}
-    },
+      "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}, "fireTime" : 5}
+	},
 
     "stances" : {
       "idle" : {
@@ -120,14 +117,12 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-        "animationStates" : {
-          "gun" : "fire2",
-          "cells" : "fire2",
-          "lamp" : "switch2"
-        }
+		"animationStates" : {
+		  "middle" : "fire2"
+		}
       },
       "cooldown" : {
-        "duration" : 1.0,
+        "duration" : 0.11,
         "armRotation" : 5,
         "weaponRotation" : 5,
         "twoHanded" : true,

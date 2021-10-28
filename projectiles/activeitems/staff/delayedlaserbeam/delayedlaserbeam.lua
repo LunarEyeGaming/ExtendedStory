@@ -6,7 +6,6 @@ function init()
   self.rotationSpeed = 0
 
   self.aimPosition = mcontroller.position()
-  self.angledProjectileOffset = {19, 0}
 
   message.setHandler("updateProjectile", function(_, _, aimPosition)
       self.aimPosition = aimPosition
@@ -44,17 +43,16 @@ end
 
 function activate()
   local rotation = mcontroller.rotation()
-  local offset = vec2.rotate(self.angledProjectileOffset, rotation)
   world.spawnProjectile(
-      "laserbeamwindup_es",
-      vec2.add(mcontroller.position(), offset),
+      "laserbeaminitial_es",
+      mcontroller.position(),
       projectile.sourceEntity(),
       {math.cos(rotation), math.sin(rotation)},
       false,
       {
-        speed = 0,
-        power = projectile.power(),
-        powerMultiplier = projectile.powerMultiplier()
+        speed = 165,
+        power = 50,
+        powerMultiplier = 5
       })
 
   projectile.processAction(projectile.getParameter("explosionAction"))

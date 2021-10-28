@@ -13,10 +13,10 @@
   ],
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "laserbeam_es",
-      "inheritDamageFactor" : 1
-    }
+	  "action" : "projectile",
+	  "type" : "laserbeam_es",
+	  "inheritDamageFactor" : 1
+	}
   ],
   "timeToLive" : 0.49,
   "image" : "laserbeamwindup_es.png",
@@ -32,7 +32,7 @@
   "power" : 50,
   "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
   "damageKind" : "plasma",
-  "onlyHitTerrain" : true,
+  "damageType" : "nodamage",
   "movementSettings" : {
     "collisionEnabled" : false
   }

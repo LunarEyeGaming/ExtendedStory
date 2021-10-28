@@ -1,77 +1,77 @@
 {
   "animatedParts" : {
     "stateTypes" : {
-      "body" : {
+      "mainbody" : {
         "default" : "appear",
         "states" : {
-          "invisible" : {},
-          "idle" : {
+		  "invisible" : {},
+          "fly" : {
             "frames" : 1,
             "cycle" : 1.0,
             "mode" : "loop"
           },
-          "appear" : {
-            "frames" : 15,
-            "cycle" : 0.8,
-            "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "immediateSound" : "/sfx/npc/monsters/monster_grow.ogg"
-            }
-          },
-          "disappear" : {
-            "frames" : 15,
-            "cycle" : 0.8,
-            "mode" : "transition",
-            "transition" : "invisible",
-            "properties" : {
-              "immediateSound" : "/sfx/melee/lightningblade_altwinddown.ogg"
-            }
-          }
+		  "appear" : {
+		    "frames" : 15,
+			"cycle" : 0.8,
+			"mode" : "transition",
+			"transition" : "fly",
+			"properties" : {
+			  "immediateSound" : "/sfx/npc/monsters/monster_grow.ogg"
+			}
+		  },
+		  "disappear" : {
+		    "frames" : 15,
+			"cycle" : 0.8,
+			"mode" : "transition",
+			"transition" : "invisible",
+			"properties" : {
+			  "immediateSound" : "/sfx/melee/lightningblade_altwinddown.ogg"
+			}
+		  }
         }
       },
-      "laserbeam" : {
-        "default" : "invisible",
+	  "body" : {
+        "default" : "fly",
         "states" : {
-          "invisible" : {},
+		  "fly" : {},
           "windup" : {
             "frames" : 3,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "idle",
-            "properties" : {
-              "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg"
-            }
+			"transition" : "idle",
+			"properties" : {
+			  "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg"
+			}
           },
-          "idle" : {
-            "frames" : 2,
-            "cycle" : 0.25,
-            "mode" : "loop",
-            "properties" : {
-              "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg"
-            }
-          },
-          "winddown" : {
+		  "idle" : {
+		    "frames" : 2,
+			"cycle" : 0.25,
+			"mode" : "loop",
+			"properties" : {
+			  "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg"
+			}
+		  },
+		  "winddown" : {
             "frames" : 3,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "invisible",
-            "properties" : {
-              "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg"
-            }
+			"transition" : "fly",
+			"properties" : {
+			  "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg"
+			}
           }
         }
       },
-      "blorb" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 4,
-            "cycle" : 0.25,
-            "mode" : "loop"
-          }
-        }
-      },
+	  "blorb" : {
+	    "default" : "idle",
+		"states" : {
+		  "idle" : {
+		    "frames" : 4,
+			"cycle" : 0.25,
+			"mode" : "loop"
+		  }
+		}
+	  },
       "damage" : {
         "priority" : 4,
         "default" : "none",
@@ -81,11 +81,11 @@
           },
           "stunned" : {
             "frames" : 15,
-            "cycle" : 0.8,
-            "mode" : "end",
-            "properties" : {
-              "immediateSound" : "/sfx/melee/lightningblade_altwinddown.ogg"
-            }
+			"cycle" : 0.8,
+			"mode" : "end",
+			"properties" : {
+			  "immediateSound" : "/sfx/melee/lightningblade_altwinddown.ogg"
+			}
           }
         }
       },
@@ -120,20 +120,15 @@
           "transformationGroups" : [ "body" ]
         },
         "partStates" : {
-          "body" : {
-            "idle" : {
+          "mainbody" : {
+            "fly" : {
               "properties" : {
                 "image" : "<partImage>:idle"
               }
             },
-            "appear" : {
+			"appear" : {
               "properties" : {
                 "image" : "<partImage>:appear.<frame>"
-              }
-            },
-            "disappear" : {
-              "properties" : {
-                "image" : "<partImage>:disappear.<frame>"
               }
             }
           },
@@ -155,20 +150,15 @@
           "fullbright" : true
         },
         "partStates" : {
-          "body" : {
-            "idle" : {
+          "mainbody" : {
+            "fly" : {
               "properties" : {
                 "image" : "<partImage>:idle"
               }
             },
-            "appear" : {
+			"appear" : {
               "properties" : {
                 "image" : "<partImage>:appear.<frame>"
-              }
-            },
-            "disappear" : {
-              "properties" : {
-                "image" : "<partImage>:disappear.<frame>"
               }
             }
           },
@@ -208,13 +198,13 @@
           "fullbright" : true
         },
         "partStates" : {
-          "laserbeam" : {
-            "winddown" : {
+          "body" : {
+		    "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
               }
             },
-            "windup" : {
+		    "windup" : {
               "properties" : {
                 "image" : "<partImage>:windup.<frame>"
               }
@@ -222,7 +212,7 @@
             "idle" : {
               "properties" : {
                 "image" : "<partImage>:idle.<frame>",
-                "damageArea" : [ [3.4375, 62.5], [3.4375, -62.5], [-3.4375, -62.5], [-3.4375, 62.5] ]
+				"damageArea" : [ [3.4375, 62.5], [3.4375, -62.5], [-3.4375, -62.5], [-3.4375, 62.5] ]
               }
             }
           }
@@ -276,7 +266,8 @@
 
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
-    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire" : [ "/sfx/projectiles/ancientvortex_loop.ogg" ]
   },
 
   "effects" : {

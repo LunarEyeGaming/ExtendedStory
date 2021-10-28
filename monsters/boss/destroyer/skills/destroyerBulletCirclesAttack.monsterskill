@@ -7,18 +7,18 @@
     "scripts" : [ "/monsters/boss/destroyer/skills/destroyerBulletCirclesAttack.lua" ],
 
     "destroyerBulletCirclesAttack" : {
-      "skillTime": 10,
+      "skillTime": 5,
       "orbitTime" : 10,
       "orbitRadius" : 25,
 
       "projectileOffset" : [0, 0],
-      "fireInterval" : 0.75,
+      "fireInterval" : 0.33,
       "projectile" : {
         "type" : "invisibleprojectile",
         "config" : {
           "speed" : 0,
           "power" : 0,
-          "damageTeam" : { "type" : "enemy" },
+		  "damageTeam" : { "type" : "enemy" },
           "periodicActions" : [
             {
               "time" : 0,
@@ -26,21 +26,21 @@
               "action" : "sound",
               "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
             },
-            {
-              "time" : 0,
-              "repeat" : false,
-              "action" : "loop",
-              "count" : 20,
-              "body" : [
-                {
-                  "action" : "projectile",
-                  "type" : "destroyershot",
-                  "angle" : 90,
-                  "fuzzAngle" : 180,
-                  "config" : {"power" : 125, "speed" : 1, "acceleration" : 30, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ ] }
-                }
-              ]
-            }
+			{
+			  "time" : 0,
+			  "repeat" : false,
+			  "action" : "loop",
+			  "count" : 20,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "destroyershot",
+				  "angle" : 90,
+				  "fuzzAngle" : 180,
+				  "config" : {"power" : 125, "speed" : 50, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ ] }
+				}
+			  ]
+			}
           ]
         }
       }

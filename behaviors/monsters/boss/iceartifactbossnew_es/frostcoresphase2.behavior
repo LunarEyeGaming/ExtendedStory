@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -36,7 +36,7 @@
           "time": {"value": 0.75}
         }
       },
-      {
+	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -48,7 +48,7 @@
           "scalePower": {"value": true}
         }
       },
-      {
+	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",

@@ -54,7 +54,7 @@
     "damageParts" : {
       "beam" : {
         "damage" : 25,
-		"damageTeam" : 0,
+        "damageTeam" : 0,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma"
@@ -179,6 +179,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

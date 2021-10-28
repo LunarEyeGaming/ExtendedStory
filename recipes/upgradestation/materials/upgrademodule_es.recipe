@@ -1,7 +1,7 @@
 {
   "input" : [
-    { "item" : "durasteelbar", "count" : 1 },
-    { "item" : "solariumstar", "count" : 1 }
+    { "item" : "durasteelbar", "count" : 5 },
+	{ "item" : "solariumstar", "count" : 1 }
   ],
   "output" : { "item" : "upgrademodule_es", "count" : 1 },
   "groups" : [ "upgradestation", "materials", "all" ]

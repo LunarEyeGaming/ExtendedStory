@@ -9,7 +9,7 @@
   "fullbright" : true,
   "piercing" : true,
   "periodicActions" : [
-    {
+	{
       "time" : 0.01,
       "repeat" : true,
       "action" : "particle",
@@ -18,34 +18,34 @@
         "animation" : "/animations/shadowsmoke/shadowsmoke.animation",
         "position" : [0, 0],
         "layer" : "front",
-        "initialVelocity" : [0, 0],
-        "finalVelocity" : [0, 0],
+		"initialVelocity" : [0, 0],
+		"finalVelocity" : [0, 0],
         "timeToLive" : 1.5,
         "destructionTime" : 0.0,
         "destructionAction" : "fade",
         "fullbright" : true,
-        "variance" : {
-          "initialVelocity" : [4, 4],
-          "position" : [1, 1]
-        }
+		"variance" : {
+		  "initialVelocity" : [4, 4],
+		  "position" : [1, 1]
+		}
       }
     }
   ],
   "actionOnReap" : [
     {
-      "action" : "config",
+	  "action" : "config",
       "file" : "/projectiles/explosions/darkmatterexplosion_es/darkmatterexplosion_es.config"
-    }
+	}
   ],
 
   "boundBox" : [-10, -10, 10, 10],
   "physicsForces" : {
     "vacuum" : {
       "type" : "RadialForceRegion",
-      "outerRadius" : 10,
-      "innerRadius" : 0,
-      "targetRadialVelocity" : -40,
-      "controlForce" : 1000,
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -70,
+      "controlForce" : 500,
       "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
     }
   },
@@ -56,11 +56,11 @@
   "power" : 50,
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
   "damageKind" : "abyss",
-  "damageRepeatTimeout" : 0.75,
+  "damageRepeatTimeout" : 0.1,
   "actionOnCollide" : [
     {
-      "action" : "config",
+	  "action" : "config",
       "file" : "/projectiles/explosions/globeexplosions/magentaglobeexplosion/magentaglobeexplosion.config"
-    }
+	}
   ]
 }

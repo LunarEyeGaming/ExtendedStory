@@ -13,29 +13,29 @@
       "action" : "config",
       "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
     },
-    {
-      "action" : "particle",
-      "specification" : {
+	{
+	  "action" : "particle",
+	  "specification" : {
         "type" : "textured",
         "image" : "/projectiles/boss/destroyer/destroyershot/destroyershot.png:1?replace;b9182a=7751c4;ea6a56=b59ce7;ff9d8d=e2d4ff?multiply=ffffffc0",
         "position" : [0, 0],
         "layer" : "back",
-        "angularVelocity" : 3600,
-        "light" : [71, 42, 130],
+		"angularVelocity" : 3600,
+		"light" : [71, 42, 130],
         "timeToLive" : 0.0,
         "destructionTime" : 1.0,
         "destructionAction" : "shrink",
         "fullbright" : true
       }
-    },
-    {
-      "action" : "sound",
-      "options" : ["/sfx/gun/pulsecannon_blast1.ogg"]
-    },
-    {
-      "action" : "light",
-      "color" : "blue"
-    }
+	},
+	{
+	  "action" : "sound",
+	  "options" : ["/sfx/gun/pulsecannon_blast1.ogg"]
+	},
+	{
+	  "action" : "light",
+	  "color" : "blue"
+	}
   ],
   "lightColor" : [71, 42, 130],
   "fullbright" : true,

@@ -4,10 +4,10 @@
   "level" : 6,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A powerful broadsword born from the void.",
-  "shortdescription" : "Oblivion Broadsword",
+  "description" : "The mighty katana of a thousand deaths. ^yellow;By KAMS1076^reset;",
+  "shortdescription" : "Oblivion Katana",
   "tooltipKind" : "sword",
-  "category" : "Broadsword",
+  "category" : "Katana",
   "twoHanded" : true,
   "itemTags" : ["weapon", "melee", "broadsword"],
   
@@ -31,69 +31,69 @@
       "fire5" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
       "fire6" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ]
     },
-    "particleEmitters" : {
-      "physicalswoosh" : {
+	"particleEmitters" : {
+	  "physicalswoosh" : {
         "active" : false,
         "transformationGroups" : ["swoosh"],
         "burstCount" : 4,
         "particles" : [
-          { "particle" : "shadowsmoke"},
-          { "particle" : "shadowsmoke"}
+          { "particle" : "defaultwhite"},
+          { "particle" : "defaultwhite"}
         ]
       },
-      "blade" : {
+	  "blade" : {
         "active" : false,
         "transformationGroups" : ["weapon"],
         "offsetRegion" : [-0.5, 1.5, 0.5, 4.0],
         "emissionRate" : 5,
         "particles" : [
-          { "particle" : "shadowsmoke"},
-          { "particle" : "shadowsmoke"}
+          { "particle" : "defaultwhite"},
+          { "particle" : "defaultwhite"}
         ]
       }
-    }
+	}
   },
 
   "scripts" : ["/items/active/weapons/melee/energymeleeweapon.lua"],
 
-  "activeTime" : 3.0,
+  "activeTime" : 2.0,
 
   "elementalType" : "physical",
 
-  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbilityType" : "broadswordcombo", //Down, Up, Spear, Energy Whirl, Shockwave, Vortex 0.5 scale for 1 second
   "primaryAbility" : {
     "fireTime" : 0.5,
     "baseDps" : 20,
-    "comboSteps" : 6,
-    "swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[3, 3, -3, -3],[-2, -12.5, 0, 12.5], [0.75, 0.0, 4.25, 5.0]],
-    "stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1,"knockback" : 25},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.2,"knockback" : 45},{"baseDamageFactor" : 2.0,"knockback" : 30}],
+	"comboSteps" : 6,
+	"swooshOffsetRegions" : [[0.75, 0.0, 4.25, 5.0],[-0.75, 0.0, -4.25, -5.0],[1.5, -1.0, 5.5, 1.0],[3, 3, -3, -3],[-0.75, 0.0, -4.25, -5.0], [0.75, 0.0, 4.25, 5.0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1,"knockback" : 25},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.2,"knockback" : 45},{"baseDamageFactor" : 2.0,"knockback" : 30}],
 
     "stances" : {
-      "windup1" : {"duration" : 0.2, "armRotation" : 90, "weaponRotation" : -10, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
-      "preslash1" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
-      "fire1" : {"duration" : 0.15,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
-      "wait1" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup1" : {"duration" : 0.2, "armRotation" : 90, "weaponRotation" : -10, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+	  "preslash1" : {"duration" : 0.025,"armRotation" : 55,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "fire1" : {"duration" : 0.15,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},
+	  "wait1" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
       "windup2" : {"duration" : 0.1, "armRotation" : 305, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
-      "preslash2" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},      
-      "fire2" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-      "wait2" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
-      "windup3" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
-      "fire3" : {"duration" : 0.2,"armRotation" : 0,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
-      "wait3" : {"duration" : 0.2,"armRotation" : 0,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup4" : {"duration" : 0.1,"armRotation" : -67,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "weaponAngularVelocity" : 1800}, 
-      "fire4" : {"duration" : 0.5,"armRotation" : -135,"weaponRotation" : 0,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "weaponAngularVelocity" : 1800}, 
-      "wait4" : {"duration" : 0.1,"armRotation" : -90,"weaponRotation" : 0,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup5" : {"duration" : 0.1,"armRotation" : 0,"weaponRotation" : 87,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "preslash5" : {"duration" : 0.2,"armRotation" : 45,"weaponRotation" : 135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-      "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup6" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
-      "fire6" : {"duration" : 0.5,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
-      "wait6" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
+      "preslash2" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},	  
+	  "fire2" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+	  "wait2" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true},
+	  "windup3" : {"duration" : 0.15,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "fire3" : {"duration" : 0.2,"armRotation" : 0,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true},
+	  "wait3" : {"duration" : 0.2,"armRotation" : 0,"weaponRotation" : -90,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup4" : {"duration" : 0.1,"armRotation" : -67,"weaponRotation" : -45,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "weaponAngularVelocity" : 1800}, 
+	  "fire4" : {"duration" : 0.5,"armRotation" : -135,"weaponRotation" : 0,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true, "weaponAngularVelocity" : 1800}, 
+	  "wait4" : {"duration" : 0.1,"armRotation" : -90,"weaponRotation" : 0,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup5" : {"duration" : 0.1,"armRotation" : 0,"weaponRotation" : 87,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "preslash5" : {"duration" : 0.2,"armRotation" : 45,"weaponRotation" : 135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+	  "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup6" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
+	  "fire6" : {"duration" : 0.5,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
+	  "wait6" : {"duration" : 0.2,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}
     }
   },
 
-  "altAbilityType" : "oblivionswordalt",
+  "altAbilityType" : "oblivionswordalt", //The way this black hole is created is a series of growing explosions before it creates one large explosion that forms it. It sucks in everything and fires out some black fireballs.
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

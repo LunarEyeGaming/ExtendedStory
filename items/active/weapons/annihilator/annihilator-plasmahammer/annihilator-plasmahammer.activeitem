@@ -41,7 +41,7 @@
     "baseDps" : 11,
     "damageConfig" : {
       "damageSourceKind" : "hammer",
-      "statusEffects" : [ "l6doomed" ]
+	  "statusEffects" : [ "l6doomed" ]
     },
     "stances" : {
       "idle" : {
@@ -86,8 +86,8 @@
     "elementalConfig" : {
       "physical" : {"projectileType" : "annihilatorshockwavewindup"}
     }, "maxDistance" : 35,
-    "cooldownTime" : 3,
-    "name" : "Obliteration"
+	"cooldownTime" : 3,
+	"name" : "Obliteration"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

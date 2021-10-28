@@ -6,7 +6,7 @@
   "description" : "A gun that shoots extremely high voltage electric bolts.",
   "shortdescription" : "^blue;Lightning Gun^reset;",
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "Crafted U. Weapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 6,
@@ -23,8 +23,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "altFire" : ["/sfx/gun/shockblast.ogg"]
-    }
+	  "altFire" : ["/sfx/gun/shockblast.ogg"]
+	}
   },
   "muzzleOffset" : [2.5, 0.5],
 
@@ -52,10 +52,10 @@
         "cooldown" : 0.15,
         "projectileType" : "lightningthrower",
         "projectileCount" : 10,
-        "spreadAngle" : 3,
+        "spreadAngle" : 10,
         "projectileParameters" : {"speed" : 60},
         "inaccuracy" : 0,
-        "baseDamage" : 15,
+        "baseDamage" : 9,
         "fireSound" : "fire2"
       },
       {
@@ -67,7 +67,7 @@
         "spreadAngle" : 1,
         "projectileParameters" : {},
         "inaccuracy" : 0.1,
-        "baseDamage" : 23,
+        "baseDamage" : 27,
         "fireSound" : "fire3"
       }
     ],
@@ -112,11 +112,11 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Lightning Bolt", "projectileType" : "em_lightninggunshot1", "projectileCount" : 1, "projectileParameters" : {}}
+      "electric" : { "name" : "Lightning Bolt", "projectileType" : "invisibleprojectile", "projectileCount" : 1, "projectileParameters" : {"damageTeam" : {"type" : "friendly"}, "timeToLive" : 0, "actionOnReap" : [{"action" : "projectile", "type" : "em_lightninggunshot1", "angleAdjust" : 180}]}}
     },
     "energyUsage" : 75,
-    "baseDamage" : 7,
-    "fireTime" : 0.5
+	"baseDps" : 5,
+	"fireTime" : 0.5
   },
   "learnBlueprintsOnPickup" : [ "lightninggunnew" ],
 

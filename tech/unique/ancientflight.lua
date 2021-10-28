@@ -1,5 +1,5 @@
 require "/scripts/vec2.lua"
-require "/scripts/extendedstoryutil.lua"
+require "/scripts/extendedstorymisc.lua"
 
 function init()
   initCommonParameters()
@@ -9,10 +9,8 @@ function initCommonParameters()
   self.angularVelocity = 0
   self.angle = 0
   self.transformFadeTimer = 0
-
   altFireCooldownTimer = 0
-  maxSphereEnergy = 10000
-  sphereEnergy = maxSphereEnergy
+  sphereEnergy = 10000
   sphereEnergyRatio = 1.0
 
   self.energyCost = config.getParameter("energyCost")
@@ -25,7 +23,6 @@ function initCommonParameters()
   self.transformedMovementParameters.walkSpeed = self.ballSpeed
   self.basePoly = mcontroller.baseParameters().standingPoly
   self.collisionSet = {"Null", "Block", "Dynamic", "Slippery"}
-  self.barDimensions = config.getParameter("barDimensions")
 
   self.forceDeactivateTime = config.getParameter("forceDeactivateTime", 3.0)
   self.forceShakeMagnitude = config.getParameter("forceShakeMagnitude", 0.125)
@@ -37,7 +34,6 @@ function initCommonParameters()
   self.rechargeActive = false
 end
 
--- I need an explanation for what the heck this is for.
 function translateBroadcastArea()
   local broadcastArea = config.getParameter("broadcastArea", {-8, -8, 8, 8})
   local pos = entity.position()
@@ -78,144 +74,136 @@ function update(args)
     local aimPosition = tech.aimPosition()
     mcontroller.controlParameters(self.transformedMovementParameters)
     status.setResourcePercentage("energyRegenBlock", 1.0)
-    altFireLast = args.moves["altFire"]
-    --Movement
-    local direction = {0, 0}
+	altFireLast = args.moves["altFire"]
+	--Movement
+	local direction = {0, 0}
     if args.moves["right"] then
-      direction[1] = direction[1] + 1
-      sphereEnergy = sphereEnergy - 1
-    end
+	  direction[1] = direction[1] + 1
+	  sphereEnergy = sphereEnergy - 1
+	end
     if args.moves["left"] then
-      direction[1] = direction[1] - 1
-      sphereEnergy = sphereEnergy - 1
-    end
+	  direction[1] = direction[1] - 1
+	  sphereEnergy = sphereEnergy - 1
+	end
     if args.moves["up"] then 
-      direction[2] = direction[2] + 1
-      sphereEnergy = sphereEnergy - 1
-    end
+	  direction[2] = direction[2] + 1
+	  sphereEnergy = sphereEnergy - 1
+	end
     if args.moves["down"] then 
-      direction[2] = direction[2] - 1
-      sphereEnergy = sphereEnergy - 1
-    end
-    
-    directions = {
-      "down",
-      "up",
-      "right",
-      "left"
-    }
-    
-    for _, v in pairs(directions) do
-      if args.moves[v] then
-        animator.setAnimationState(v, "active")
+	  direction[2] = direction[2] - 1
+	  sphereEnergy = sphereEnergy - 1
+	end
+	
+	directions = {
+	  "down",
+	  "up",
+	  "right",
+	  "left"
+	}
+	
+	for _, v in pairs(directions) do
+	  if args.moves[v] then
+		animator.setAnimationState(v, "active")
+	  else
+	    animator.setAnimationState(v, "inactive")
+	  end
+	end
+	
+	velocity = vec2.mul(vec2.norm(direction), 50)
+	if not args.moves["run"] then
+	  mcontroller.setVelocity(velocity)
+	end
+	mcontroller.controlApproachVelocity(velocity, 200.0)
+	
+	local direction = {0, 0}
+	
+	local velocity = mcontroller.velocity()
+	
+	if velocity ~= 0 and not (args.moves["up"] or args.moves["down"] or args.moves["left"] or args.moves["right"]) then
+	  if not args.moves["run"] then
+	    mcontroller.setVelocity({0, 0})
+	  end
+      mcontroller.controlApproachVelocity({0, 0}, 100)
+	end
+	if not args.moves["altFire"] and not args.moves["primaryFire"] then
+	  if sphereEnergy <= 2500 then
+	    animator.setAnimationState("ballState", "warning")
       else
-        animator.setAnimationState(v, "inactive")
-      end
-    end
-    
-    velocity = vec2.mul(vec2.norm(direction), 50)
-    if not args.moves["run"] then
-      mcontroller.setVelocity(velocity)
-    end
-    mcontroller.controlApproachVelocity(velocity, 200.0)
-    
-    local direction = {0, 0}
-    
-    local velocity = mcontroller.velocity()
-    
-    if velocity ~= 0 and not (args.moves["up"] or args.moves["down"] or args.moves["left"] or args.moves["right"]) then
-      if not args.moves["run"] then
-        mcontroller.setVelocity({0, 0})
-      end
-      mcontroller.controlApproachVelocity({0, 0}, 200)
-    end
-    if not args.moves["altFire"] and not args.moves["primaryFire"] then
-      if sphereEnergy <= maxSphereEnergy * 0.25 then
-        animator.setAnimationState("ballState", "warning")
-      else
-        animator.setAnimationState("ballState", "on")
-      end
-    end
-    
-    if sphereEnergy <= maxSphereEnergy * 0.25 then
-      animator.setGlobalTag("warningDirectives", "?hueshift=77")
-    else
-      animator.setGlobalTag("warningDirectives", "")
-    end
-    
-    --Primary Ability
-    
-    if args.moves["primaryFire"] then
-      world.spawnProjectile("ancientexplosion", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 30})
-      world.spawnProjectile("ancientflightdrill", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 0})
-      world.spawnProjectile("ancientflightgravity", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 0})
-      animator.setAnimationState("ballState", "fire")
-      sphereEnergy = sphereEnergy - 2
-    end
-    
-    --Alt Ability
+		animator.setAnimationState("ballState", "on")
+	  end
+	end
+	
+	--Primary Ability
+	
+	if args.moves["primaryFire"] then
+	  world.spawnProjectile("ancientexplosion", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 30})
+	  world.spawnProjectile("ancientflightdrill", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 0})
+	  world.spawnProjectile("ancientflightgravity", mcontroller.position(), entity.id(), {0, 0}, true, {power = 0, knockback = 0})
+	  animator.setAnimationState("ballState", "fire")
+	  sphereEnergy = sphereEnergy - 2
+	end
+	
+	--Alt Ability
     self.fireCooldownTimer = math.max(0, self.fireCooldownTimer - args.dt)
-    
-    if args.moves["altFire"] and not args.moves["primaryFire"] then
-      if self.fireCooldownTimer == 0 then
-        local aimVectorAlt = world.distance(aimPosition, mcontroller.position())
-        world.spawnProjectile("ancientclusterball_es", mcontroller.position(), entity.id(), aimVectorAlt, false, {power = 50 * status.stat("powerMultiplier"), speed = 100})
-        sphereEnergy = sphereEnergy - self.fireCooldown * 100
-        self.fireCooldownTimer = self.fireCooldown
-        animator.playSound("fire")
-      end
-      animator.setAnimationState("ballState", "fire2")
-    end
-    
-    --Bash Ability
-    
-    if (mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30) and args.moves["run"] then
-      world.spawnProjectile("ancientspherebash", mcontroller.position(), entity.id(), {0, 0}, true)
-      animator.setParticleEmitterActive("ancientspherebash", true)
-    else
-      animator.setParticleEmitterActive("ancientspherebash", false)
-    end
-    
-    --Recharge
-    
-    if args.moves["jump"] and sphereEnergy < maxSphereEnergy and not (args.moves["left"] or args.moves["right"] or args.moves["up"] or args.moves["down"] or args.moves["primaryFire"] or args.moves["altFire"]) then
-      sphereEnergy = sphereEnergy + 5
-      animator.setParticleEmitterActive("ancientsphererecharge", true)
-      if not self.rechargeActive then
-        animator.playSound("recharge", -1)
-        self.rechargeActive = true
-      end
-    else
-      animator.setParticleEmitterActive("ancientsphererecharge", false)
-      animator.stopAllSounds("recharge")
-      self.rechargeActive = false
-    end
-    rotation = mcontroller.rotation()
+	
+	if args.moves["altFire"] and not args.moves["primaryFire"] then
+	  if self.fireCooldownTimer == 0 then
+	    local aimVectorAlt = world.distance(aimPosition, mcontroller.position())
+	    world.spawnProjectile("ancientclusterball_es", mcontroller.position(), entity.id(), aimVectorAlt, false, {power = 50 * status.stat("powerMultiplier"), speed = 100})
+	    sphereEnergy = sphereEnergy - self.fireCooldown * 100
+		self.fireCooldownTimer = self.fireCooldown
+		animator.playSound("fire")
+	  end
+	  animator.setAnimationState("ballState", "fire2")
+	end
+	
+	--Bash Ability
+	
+	if (mcontroller.xVelocity() >= 30 or mcontroller.yVelocity() >= 30 or mcontroller.xVelocity() <= -30 or mcontroller.yVelocity() <= -30) and args.moves["run"] then
+	  world.spawnProjectile("ancientspherebash", mcontroller.position(), entity.id(), {0, 0}, true)
+	  animator.setParticleEmitterActive("ancientspherebash", true)
+	else
+	  animator.setParticleEmitterActive("ancientspherebash", false)
+	end
+	
+	--Recharge
+	
+	if args.moves["jump"] and sphereEnergy < 10000 and not (args.moves["left"] or args.moves["right"] or args.moves["up"] or args.moves["down"] or args.moves["primaryFire"] or args.moves["altFire"]) then
+	  sphereEnergy = sphereEnergy + 5
+	  animator.setParticleEmitterActive("ancientsphererecharge", true)
+	  if not self.rechargeActive then
+	    animator.playSound("recharge", -1)
+		self.rechargeActive = true
+	  end
+	else
+	  animator.setParticleEmitterActive("ancientsphererecharge", false)
+	  animator.stopAllSounds("recharge")
+	  self.rechargeActive = false
+	end
+	rotation = mcontroller.rotation()
 
     updateAngularVelocity(args.dt)
     updateRotationFrame(args.dt)
 
     checkForceDeactivate(args.dt)
-    
-    --Energy Bar
-    animator.resetTransformationGroup("energybar")
-    sphereEnergyRatio = sphereEnergy / maxSphereEnergy
-    animator.setAnimationState("energybar", "on")
+	
+	--Energy Bar
+	sphereEnergyRatio = sphereEnergy / 10000
+	animator.setAnimationState("energybar", "on")
 
-    animator.setGlobalTag("barDirectives", "?crop=0;0;"..sphereEnergyRatio * self.barDimensions[1]..";"..self.barDimensions[2])
-    animator.translateTransformationGroup("energybar", {-(1 - sphereEnergyRatio) * self.barDimensions[1] / 16, 0})
-    
+    animator.setGlobalTag("barDirectives", "scalenearest;"..sphereEnergyRatio..";1")
+	
   if deactivaterCheck == true then
-      attemptActivation()
-      animator.setAnimationState("ballState", "deactivate")
-      animator.setAnimationState("up", "inactive")
-      animator.setAnimationState("right", "inactive")
-      animator.setAnimationState("down", "inactive")
-      animator.setAnimationState("left", "inactive")
-      animator.setParticleEmitterActive("ancientspherebash", false)
-      animator.setParticleEmitterActive("ancientsphererecharge", false)
-      animator.setAnimationState("energybar", "off")
-    end
+	  attemptActivation()
+	  animator.setAnimationState("ballState", "deactivate")
+	  animator.setAnimationState("up", "inactive")
+	  animator.setAnimationState("right", "inactive")
+	  animator.setAnimationState("down", "inactive")
+	  animator.setAnimationState("left", "inactive")
+	  animator.setParticleEmitterActive("ancientspherebash", false)
+	  animator.setParticleEmitterActive("ancientsphererecharge", false)
+	  animator.setAnimationState("energybar", "off")
+	end
   end
 
   updateTransformFade(args.dt)
@@ -231,7 +219,7 @@ function attemptActivation()
   if not self.active
       and not tech.parentLounging()
       and not status.statPositive("activeMovementAbilities")
-      and not deactivaterCheck == true
+	  and not deactivaterCheck == true
       and status.overConsumeResource("energy", status.resourceMax("energy")) then
 
     local pos = transformPosition()
@@ -396,7 +384,7 @@ function deactivate()
   self.active = false
   if sphereEnergy <= 0 then
     animator.playSound("shutdown")
-    sphereEnergy = 1
+	sphereEnergy = 1
   end
   animator.setAnimationState("up", "inactive")
   animator.setAnimationState("right", "inactive")

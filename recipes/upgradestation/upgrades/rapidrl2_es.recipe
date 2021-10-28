@@ -1,9 +1,9 @@
 {
   "input" : [
-    { "item" : "rapidrl_es", "count" : 1 },
-    { "item" : "essence", "count" : 250 },
-    { "item" : "refinedaegisalt", "count" : 10 },
-    { "item" : "upgrademodule_es", "count" : 4 }
+    { "item" : "refinedaegisalt", "count" : 20 },
+	{ "item" : "solariumstar", "count" : 20 },
+	{ "item" : "rapidrl_es", "count" : 1 },
+	{ "item" : "upgrademodule_es", "count" : 4 }
   ],
   "output" : { "item" : "rapidrl2_es", "count" : 1 },
   "groups" : [ "upgradestation", "upgrades", "all" ]

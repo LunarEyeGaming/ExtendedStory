@@ -3,6 +3,7 @@
   "physics" : "laser",
   "bounces" : 0,
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "fullbright" : true,
   "animationCycle" : 1,
   "frameNumber" : 1,
   "power" : 0,
@@ -10,30 +11,30 @@
   "timeToLive" : 5,
   "periodicActions" : [
     {
-      "time" : 0.02,
-      "action" : "projectile",
-      "type" : "orbitalup",
-      "inheritDamageFactor" : 1,
-      "direction" : [0, -1],
-      "config" : {
-        "speed" : 800,
-        "onlyHitTerrain" : true,
-        "actionOnReap" : [
-          {
-            "action" : "projectile",
-            "type" : "fg_icicleshockwave",
-            "direction" : [0, 1],
-            "offset" : [0, 0.5],
-            "inheritDamageFactor" : 1
-          },
-          {
-            "action" : "sound",
-            "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
-          }
-        ]
-      }
-    }
+	  "time" : 0.02,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "inheritDamageFactor" : 1,
+	  "direction" : [0, -1],
+	  "config" : {
+	    "speed" : 800,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "fg_icicleshockwave",
+			"direction" : [0, 1],
+			"offset" : [0, 0.5],
+	        "inheritDamageFactor" : 1
+		  },
+		  {
+		    "action" : "sound",
+		    "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+		  }
+		]
+	  }
+	}
   ],
-  "damageKind" : "default",
+  "damageKind" : "plasmabullet",
   "onlyHitTerrain" : true
 }

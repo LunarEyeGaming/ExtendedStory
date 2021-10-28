@@ -42,40 +42,40 @@
   "primaryAbility" : {
     "damageConfig" : {"damageSourceKind" : "firebroadsword","statusEffects" : [ "burning" ],"knockbackMode" : "facing","timeout" : 0.5},
     "fireTime" : 0.5,
-    "baseDps" : 30, 
-    "energyUsage" : 0,
-    "comboSteps" : 5,
-    "swooshOffsetRegions" : [[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0],[-2, -12.5, 0, 12.5]],
-    "stepDamageConfig" : [{"baseDamageFactor" : 1.0, "knockback" : 15}, {"baseDamageFactor" : 1.0, "knockback" : 15}, {"baseDamageFactor" : 0.5, "knockback" : 10}, {"baseDamageFactor" : 2.0, "knockback" : 30},{"baseDamageFactor" : 1.5, "knockback" : 40}],
+	"baseDps" : 30, 
+	"energyUsage" : 0,
+	"comboSteps" : 5,
+	"swooshOffsetRegions" : [[-0.75, 0.0, -4.25, -5.0],[0.75, 0.0, 4.25, 5.0],[3.0, -0.5, 6.5, 2.0],[0.75, 0.0, 4.25, 5.0],[10, 4, -10, 0]],
+	"stepDamageConfig" : [{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 1.0,"knockback" : 15},{"baseDamageFactor" : 0.5,"knockback" : 10},{"baseDamageFactor" : 2.0,"knockback" : 30},{"baseDamageFactor" : 1.5,"knockback" : 40}],
 
     "stances" : {
       "idle" : {"armRotation" : 0, "weaponRotation" : 45, "allowRotate" : false, "allowFlip" : true},
-      "windup1" : {"duration" : 0.1, "armRotation" : -55, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
-      "preslash1" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},      
-      "fire1" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-      "wait1" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup2" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
-      "fire2" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
-      "wait2" : {"duration" : 0.23,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup3" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "fire3" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "wait3" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup4" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "fire4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "wait4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
-      "windup5" : {"duration" : 0.2,"armRotation" : 45,"weaponRotation" : 135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
-      "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
-      "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -135,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true} 
+	  "windup1" : {"duration" : 0.1, "armRotation" : 305, "weaponRotation" : -45, "twoHanded" : true, "allowRotate" : false, "allowFlip" : true},
+      "preslash1" : {"duration" : 0.025,"armRotation" : 20,"weaponRotation" : -70,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false},	  
+	  "fire1" : {"duration" : 0.15,"armRotation" : 80,"weaponRotation" : -90,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+	  "wait1" : {"duration" : 0.3,"armRotation" : 80,"weaponRotation" : -90,"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup2" : {"duration" : 0.15,"armRotation" : 90,"weaponRotation" : -10,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
+	  "fire2" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"twoHanded" : true,"allowFlip" : true,"allowRotate" : false}, 
+	  "wait2" : {"duration" : 0.23,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup3" : {"duration" : 0.15,"armRotation" : -15,"weaponRotation" : -60,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire3" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "wait3" : {"duration" : 0.2,"armRotation" : -150,"weaponRotation" : 55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup4" : {"duration" : 0.25,"armRotation" : 90,"weaponRotation" : -10,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "wait4" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : -55,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true}, 
+	  "windup5" : {"duration" : 0.2,"armRotation" : 45,"weaponRotation" : 135,"twoHanded" : true,"allowRotate" : false,"allowFlip" : true}, 
+	  "fire5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"twoHanded" : true,"allowRotate" : false,"allowFlip" : false}, 
+	  "wait5" : {"duration" : 0.3,"armRotation" : -45,"weaponRotation" : 225,"weaponOffset" : [0, 0],"allowRotate" : false,"allowFlip" : true,"twoHanded" : true} 
     }
   },
 
   "altAbilityType" : "kunaiblast",
   "altAbility" : {
     "name" : "^orange;Fireball Spread",
-    "projectileType" : "phoenixfireball2",
-    "cooldownTime" : 1,
+	"projectileType" : "phoenixfireball2",
+	"cooldownTime" : 1,
     "projectileOffset" : [1.75, 0],
-    "projectileTimesAndAngles": [
+	"projectileTimesAndAngles": [
       [0.02, 35],
       [0.04, 30],
       [0.07, 25],
@@ -92,7 +92,7 @@
       [0.04, -30],
       [0.02, -35]
     ],
-    "stances" : {
+	"stances" : {
       "fire" : {
         "duration" : 0.23,
         "armRotation" : -45,

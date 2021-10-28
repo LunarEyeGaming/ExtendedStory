@@ -30,7 +30,6 @@
       "keepTargetInSight" : true,
       "keepTargetInRange" : 200,
       "targetOutOfSightTime" : 5.0,
-      "targetNotificationRange" : 0,
 
       "foundTargetActions" : [
         {
@@ -56,7 +55,7 @@
             "windupState" : "",
 
             "projectileCount" : 1,
-            "projectileType" : "delayprojectile",
+            "projectileType" : "invisibleprojectile",
             "projectileParameters" : {"onlyHitTerrain" : true},
             "rotationCenter" : [0.0, 0.0],
             "fireSound" : "",
@@ -91,6 +90,12 @@
 
       "concurrentActions" : [
         {
+          "name" : "idle-crawl",
+          "parameters" : {
+            "stopForce" : 500
+          }
+        },
+        {
           "name" : "action-globaltag",
           "parameters" : {
             "tagName" : "aggro",
@@ -100,6 +105,12 @@
       ],
 
       "concurrentHostileActions" : [
+        {
+          "name" : "idle-crawl",
+          "parameters" : {
+            "stopForce" : 500
+          }
+        },
         {
           "name" : "action-globaltag",
           "parameters" : {
@@ -113,8 +124,6 @@
     },
 
     "damageBar" : "None",
-
-    "renderLayer" : "Projectile-30",
 
     "touchDamage" : {
       "poly" : [ [0.41, 1.0],  [1.0, 0.41],  [1.0, -0.41],  [0.41, -1.0],  [-0.41, -1.0],  [-1.0, -0.41],  [-1.0, 0.41],  [-0.41, 1.0] ],
@@ -145,7 +154,7 @@
         "jumpControlForce" : 0,
         "jumpInitialPercentage" : 0
       },
-      "physicsEffectCategories" : ["stationarymonster"],
+      "physicsEffectCategories" : ["boss"],
 	  "gravityEnabled" : false
     },
 

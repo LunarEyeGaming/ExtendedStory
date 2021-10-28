@@ -5,17 +5,17 @@
         "default" : "off",
         "states" : {
           "off" : {
-            "frames" : 4,
-            "cycle" : 1,
-            "mode" : "loop"
-          },
+		    "frames" : 4,
+			"cycle" : 1,
+			"mode" : "loop"
+		  },
           "charge" : {
             "frames" : 6,
             "cycle" : 1.5,
             "mode" : "transition",
             "transition" : "fullcharge",
             "properties" : {
-              "persistentSound" : "/sfx/gun/rockvaporcannon_charge.ogg",
+              "persistentSound" : "/sfx/gun/calamitycannon_charge.ogg",
               "persistentSoundStopTime" : 0.1
             }
           },
@@ -24,7 +24,7 @@
             "cycle" : 0.5,
             "mode" : "loop",
             "properties" : {
-              "persistentSound" : "/sfx/gun/rockvaporcannon_charged.ogg"
+              "persistentSound" : "/sfx/gun/calamitycannon_charged.ogg"
             }
           },
           "fire" : {
@@ -33,12 +33,12 @@
             "mode" : "transition",
             "transition" : "winddown"
           },
-          "winddown" : {
-            "frames" : 7,
-            "cycle" : 1.0,
-            "mode" : "transition",
-            "transition" : "off"
-          }
+		  "winddown" : {
+		    "frames" : 7,
+			"cycle" : 1.0,
+			"mode" : "transition",
+			"transition" : "off"
+		  }
         }
       }
     },
@@ -130,6 +130,6 @@
 
   "sounds" : {
     "fire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ],
-    "fire2" : [ "/sfx/gun/rockvaporcannon_fire.ogg" ]
+	"fire2" : [ "/sfx/gun/calamitycannon_fire.ogg" ]
   }
 }

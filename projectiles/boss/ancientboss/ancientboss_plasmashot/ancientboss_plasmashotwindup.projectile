@@ -2,7 +2,7 @@
   "projectileName" : "ancientboss_plasmashotwindup",
   "image" : "ancientboss_plasmashotwindup.png",
   "animationCycle" : 0.4,
-  "lightColor" : [150, 100, 150],
+  "lightColor" : [150, 100, 100],
   "frameNumber" : 8,
   "fullbright" : true,
   "damageKindImage" : "icon.png",
@@ -19,10 +19,10 @@
           "specification" : {
             "type" : "ember",
             "size" : 1.5,
-            "color" : [164, 81, 196],
+            "color" : [164, 81, 132],
             "fade" : 0.9,
             "approach" : [30, 30],
-            "light" : [160, 40, 160],
+            "light" : [160, 40, 40],
             "timeToLive" : 0.5,
             "layer" : "middle",
             "variance" : {
@@ -50,11 +50,11 @@
       {
         "action" : "projectile",
         "inheritDamageFactor" : 1,
-        "type" : "ancientbossplasmashotexplosion_es"
+        "type" : "redpulsecannonexplosion"
       },
       {
         "action" : "light",
-        "color" : "blue"
+        "color" : "red"
       }
     ]
   },

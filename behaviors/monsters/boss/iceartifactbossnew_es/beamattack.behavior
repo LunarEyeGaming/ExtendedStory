@@ -26,13 +26,13 @@
           "time": {"value": 1.5}
         }
       },
-      {
+	  {
         "title": "translateTransformationGroup",
         "type": "action",
         "name": "translateTransformationGroup",
         "parameters": {
           "transformationGroup": {"value": "beam"},
-          "offset": {"value": [0, -4]}
+		  "offset": {"value": [0, -4]}
         }
       },
       {
@@ -115,7 +115,7 @@
           "time": {"value": 0.01}
         }
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -150,25 +150,25 @@
             }
           },
           {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
                   "title": "rotateTransformationGroup",
                   "type": "action",
                   "name": "rotateTransformationGroup",
                   "parameters": {
-                    "angle": {"value": 0.01},
+	    		    "angle": {"value": 0.01},
                     "rotationCenter": {"value": [0, -4]},
-                    "transformationGroup": {"value": "beam"}
-                  }
+	    			"transformationGroup": {"value": "beam"}
+	    		  }
                 },
                 {
                   "title": "timer",
@@ -178,12 +178,12 @@
                     "time": {"value": 0.01}
                   }
                 }
-              ]
-            }
-          }
+			  ]
+			}
+		  }
         ]
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -200,13 +200,13 @@
           "time": {"value": 0.4}
         }
       },
-      {
+	  {
         "title": "resetTransformationGroup",
         "type": "action",
         "name": "resetTransformationGroup",
         "parameters": {
-          "transformationGroup": {"value": "beam"}
-        }
+	      "transformationGroup": {"value": "beam"}
+	    }
       }
     ]
   }

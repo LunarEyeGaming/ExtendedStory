@@ -1,8 +1,9 @@
 {
   "input" : [
     { "item" : "ancientfragment", "count" : 40 },
-    { "item" : "miningrelic5", "count" : 1 },
-    { "item" : "essence", "count" : 65 }
+	{ "item" : "solariumstar", "count" : 15 },
+	{ "item" : "miningrelic5", "count" : 1 },
+	{ "item" : "essence", "count" : 65 }
   ],
   "output" : { "item" : "miningrelicancient", "count" : 1 },
   "groups" : [ "ancientforge", "weapons", "all" ]

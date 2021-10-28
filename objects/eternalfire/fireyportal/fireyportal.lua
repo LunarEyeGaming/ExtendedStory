@@ -68,8 +68,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "???",
-          planetName = "Burning Dimension",
+          name = "Burning Dimension",
+          planetName = "Location of Fire Artifact",
           icon = "default",
           warpAction = string.format("InstanceWorld:fireartifactdungeon", storage.uuid, world.threatLevel())
         } }

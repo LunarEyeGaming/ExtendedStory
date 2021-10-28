@@ -15,9 +15,9 @@
   "damageKind" : "electric",
   "periodicActions" : [
     {
-      "time" : 0.1,
-      "action" : "particle",
-      "specification" : {
+	  "time" : 0.1,
+	  "action" : "particle",
+	  "specification" : {
         "type" : "animated",
         "looping" : true,
         "animation" : "/animations/teslabolt/teslabolt.animation",
@@ -37,24 +37,24 @@
           "rotation" : 180
         }
       }
-    },
-    {
-      "time" : 0.01,
-      "action" : "projectile",
-      "type" : "orbitalup",
-      "fuzzAngle" : 180,
-      "config" : {
-        "speed" : 43.75,
-        "timeToLive" : 0.1,
-        "onlyHitTerrain" : true,
-        "actionOnReap" : [
-          {
-            "action" : "particle",
-            "specification" : "electricswoosh1"
-          }
-        ]
-      }
-    }
+	},
+	{
+	  "time" : 0.01,
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "fuzzAngle" : 180,
+	  "config" : {
+	    "speed" : 43.75,
+		"timeToLive" : 0.1,
+		"onlyHitTerrain" : true,
+		"actionOnReap" : [
+		  {
+		    "action" : "particle",
+			"specification" : "electricswoosh1"
+		  }
+		]
+	  }
+	}
   ],
   "actionOnReap" : [
   ]

@@ -11,8 +11,8 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   
-  //"critChance" : 5,
-  //"critBonus" : 5,
+  "critChance" : 5,
+  "critBonus" : 5,
 
   "inventoryIcon" : "ionflamethrower.png:idle",
 
@@ -20,7 +20,7 @@
   "animationParts" : {
     "butt" : "",
     "middle" : "ionflamethrower.png",
-    "middleFullbright" : "ionflamethrowerunlit.png",
+	"middleFullbright" : "ionflamethrowerunlit.png",
     "barrel" : "",
     "muzzleFlash" : ""
   },
@@ -40,31 +40,31 @@
 
   "primaryAbilityType" : "flamethrower",
   "primaryAbility" : {
-    "baseDps" : 20,
+    "baseDps" : 25,
     "energyUsage" : 30,
-    "projectileType" : "ionflamethrower",
-    "stances" : {
-      "idle" : {
-        "animationStates" : {
-          "firing" : "idle"
-        }
-      },
-      "fire" : {
-        "animationStates" : {
-          "firing" : "fire"
-        }
-      }
-    }
+	"projectileType" : "ionflamethrower",
+	"stances" : {
+	  "idle" : {
+	    "animationStates" : {
+		  "firing" : "idle"
+		}
+	  },
+	  "fire" : {
+	    "animationStates" : {
+		  "firing" : "fire"
+		}
+	  }
+	}
   },
 
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "ion" : {"projectileType" : "ionflamegrenade", "name" : "Ion Pellet"}
-    },
-    "baseDamage" : 7,
-    "energyUsage" : 30,
-    "fireTime" : 5
+	  "ion" : {"projectileType" : "ionflamegrenade", "name" : "Ion Pellet"}
+	},
+	"baseDamage" : 7,
+	"energyUsage" : 30,
+	"fireTime" : 5
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

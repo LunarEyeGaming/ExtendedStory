@@ -213,7 +213,7 @@ function attemptActivation()
   if not self.active
       and not tech.parentLounging()
       and not status.statPositive("activeMovementAbilities")
-      then
+      and status.overConsumeResource("energy", self.energyCost) then
 
     local pos = transformPosition()
     if pos then

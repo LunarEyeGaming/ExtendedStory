@@ -6,7 +6,7 @@
   "description" : "The cannon is made with extreme caution and designed for total destruction.",
   "shortdescription" : "Antimatter Cannon Mk 1",
   "tooltipKind" : "base",
-  "category" : "^red;Cheat Weapon^reset;",
+  "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
@@ -20,7 +20,7 @@
   "animationParts" : {
     "gun" : "antimattercannon.png",
     "gunfullbright" : "antimattercannonunlit.png",
-    "beammuzzle" : "antimattermuzzle.png"
+	"beammuzzle" : "antimattermuzzle.png"
   },
   "animationCustom" : {
   },
@@ -69,10 +69,10 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-        
-        "animationStates" : {
-          "beammuzzle" : "off"
-        }
+		
+		"animationStates" : {
+		  "beammuzzle" : "off"
+		}
       },
       "charge" : {
         "armRotation" : 0,
@@ -99,10 +99,10 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-        
-        "animationStates" : {
-          "beammuzzle" : "on"
-        }
+		
+		"animationStates" : {
+		  "beammuzzle" : "on"
+		}
       }
     }
   },
@@ -112,12 +112,12 @@
       "poison" : { "name" : "Antimatter Grenades", "projectileType" : "antimattergrenade", "projectileParameters" : {}}
     },
     "energyUsage" : 20,
-    "baseDps" : 20,
-    "burstCount" : 10,
-    "inaccuracy" : 0.1,
-    "burstTime" : 0.05,
-    "fireType" : "burst",
-    "fireTime" : 0.25
+	"baseDps" : 20,
+	"burstCount" : 10,
+	"inaccuracy" : 0.1,
+	"burstTime" : 0.05,
+	"fireType" : "burst",
+	"fireTime" : 0.25
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

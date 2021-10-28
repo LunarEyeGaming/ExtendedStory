@@ -2,7 +2,7 @@
   "name" : "forgotten",
   "friendlyName" : "Forgotten",
 
-  "statusEffects" : [ "putridair", "worldrot_es" ],
+  "statusEffects" : [ "putridair" ],
 
   "spawnProfile" : {
     "groups" : [
@@ -15,7 +15,7 @@
           [ 1.0, "backgroundmimic_es" ],
           [ 1.0, "rottenskull_es" ],
           [ 1.0, "buglike_es" ],
-          [ 1.0, "annihilatordrone" ]
+		  [ 1.0, "annihilatordrone" ]
         ]
       },
       {
@@ -58,7 +58,7 @@
       }
     ],
     "monsterParameters" : {
-      "colors" : "forgotten_es"
+      "colors" : "snow"
     }
   },
 

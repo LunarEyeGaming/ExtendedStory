@@ -6,7 +6,7 @@
   "rarity" : "Legendary",
   "tooltipKind" : "bow",
   "category" : "Ancient Bow",
-  "description" : "An antique yet powerful hunting bow.",
+  "description" : "Best bow of all time.\n^green;Shoots heat-seeking arrows.",
   "shortdescription" : "^magenta;^reset;",
   "twoHanded" : true,
   "itemTags" : ["weapon", "ranged", "bow"],
@@ -16,7 +16,7 @@
   
   "radioMessagesOnPickup" : [ "pickupbow" ],
 
-  "level" : 8,
+  "level" : 10,
 
   "animation" : "/items/active/weapons/bow/energybow.animation",
   "animationParts" : {
@@ -24,23 +24,16 @@
     "bowFullbright" : "ancientbowfullbright.png"
   },
   "animationCustom" : {
-    "animatedParts" : {
-      "parts" : {
-        "bow" : {
-          "properties" : {
-            "offset" : [0, 0]
-          }
-        },
-        "bowFullbright" : { 
-          "properties" : {
-            "offset" : [0, 0]
-          }
-        }
-      }
-    },
+    "animatedParts" : { "parts" : {
+      "bow" : { "properties" : {
+        "offset" : [0, 0]
+      }},
+      "bowFullbright" : { "properties" : {
+        "offset" : [0, 0]
+      }}
+    }},
     "sounds" : {
       "draw" : [ "/sfx/gun/ancientbow_draw.ogg" ],
-      "cue" : [ "/sfx/interface/sniper_mark_pitch7.ogg" ],
       "release" : [ "/sfx/gun/ancientbow_fire.ogg" ],
       "perfectRelease" : [ "/sfx/gun/ancientbow_fire_perfect.ogg" ]
     }
@@ -48,29 +41,23 @@
 
   "scripts" : ["/items/active/weapons/bow/bow.lua"],
 
-  "primaryAbilityType" : "bowshotimproved_es",
+  "primaryAbilityType" : "bowshot",
   "primaryAbility" : {
     "drawSpeedMultiplier" : "constant",
     "projectileType" : "ancientarrow",
     "powerProjectileType" : "chargedancientarrow",
-    "energyPerShot" : 50,
     "projectileParameters" : {
-      "power" : 8,
-      "speed" : 90
+      "power" : 20.5
     }
   },
 
-  "altAbilityType" : "bowshotimproved_es",
+  "altAbilityType" : "bowshot",
   "altAbility" : {
-    "name" : "Sentry Arrow",
+    "name" : "Chaos Arrow",
     "energyPerShot" : 100,
     "drawSpeedMultiplier" : "constant",
-    "projectileType" : "ancienttargetarrow_es",
-    "powerProjectileType" : "ancientsentryarrowtele_es",
-    "projectileParameters" : {
-      "power" : 6,
-      "speed" : 50
-    }
+    "projectileType" : "chaosancientarrow",
+    "powerProjectileType" : "explosiveancientarrow"
   },
 
   "builder" : "/items/buildscripts/buildbow.lua"

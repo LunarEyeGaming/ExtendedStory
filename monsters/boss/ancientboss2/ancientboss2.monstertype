@@ -32,7 +32,7 @@
       "plasmaAttackY" : 15,
       "plasmaMinY" : 0
     },
-    "renderLayer" : "Projectile-20",
+	"renderLayer" : "Projectile-20",
 
     "knockoutTime" : 0,
     "knockoutEffect" : "blink",
@@ -90,10 +90,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 2000
         },
         "protection" : {
-          "baseValue" : 25
+          "baseValue" : 50
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -136,6 +136,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

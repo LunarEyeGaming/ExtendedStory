@@ -7,6 +7,9 @@
 
   "broadcastArea" : [-50, -50, 50, 50],
 
-  "effect" : "spheredeactivater",
-  "borderProjectile" : "spheredeactivaterparticle"
+  "music" : [],
+
+  "startFadeOutTime" : 2.0,
+  "fadeInTime" : 2.0,
+  "endFadeOutTime" : 2.0
 }

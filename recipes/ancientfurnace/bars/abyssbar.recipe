@@ -1,12 +1,12 @@
 {
   "input" : [
     { "item" : "abyssshard", "count" : 2 },
-    { "item" : "liquidabyss", "count" : 1 }
+	{ "item" : "liquidabyss", "count" : 1 }
   ],
   "output" : {
     "item" : "abyssbar",
     "count" : 1
   },
   "duration" : 0.15,
-  "groups" : [ "ancientfurnace", "newbars", "all" ]
+  "groups" : [ "ancientfurnace", "bars", "all" ]
 }

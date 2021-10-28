@@ -12,8 +12,7 @@
   "actionOnReap" : [
     {
       "action" : "projectile",
-      "type" : "presupervoidannihilation",
-      "inheritDamageFactor" : 1
+      "type" : "presupervoidannihilation"
     }
   ],
   "periodicActions" : [
@@ -33,13 +32,13 @@
         "fullbright" : true
       }
     },
-    {
-      "time" : 0.1,
-      "action" : "projectile",
-      "type" : "supervoidenergyshardplayer",
-      "angle" : 90,
-      "fuzzAngle" : 180
-    }
+	{
+	  "time" : 0.1,
+	  "action" : "projectile",
+	  "type" : "supervoidenergyshardplayer",
+	  "angle" : 90,
+	  "fuzzAngle" : 180
+	}
   ],
   "damagePoly" : [ [-10, 10], [-10, -10], [10, -10], [10, 10] ],
   "damageKind" : "plasma",

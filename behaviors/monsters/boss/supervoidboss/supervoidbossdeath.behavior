@@ -14,15 +14,16 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"speed" : 0, "timeToLive" : 0, "actionOnReap": [{"action": "item", "name": "supervoidteleporter2"}]}},
-          "projectileType": {"value": "orbitalup"}
+	  {
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"speed" : 0, "timeToLive" : 0, "actionOnReap": [{"action": "item", "name": "supervoidteleporter2"}]}},
+    	  "projectileType": {"value": "orbitalup"},
+		  "scalePower": {"value": true}
         }
       },
       {

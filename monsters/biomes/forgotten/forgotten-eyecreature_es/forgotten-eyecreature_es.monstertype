@@ -59,12 +59,12 @@
       "concurrentHostileActions" : [
         {
           "name" : "action-projectile",
-		  "cooldown" : 1.0,
+		  "cooldown" : 0.5,
           "parameters" : {
             "projectileCount" : 1,
             "projectileType" : "evileyetrailrotten_es",
             "projectileParameters" : {
-              "power" : 15
+              "power" : 30
             },
             "aimDirection" : [0, 0],
             "inaccuracy" : 0,
@@ -90,7 +90,7 @@
 
     "touchDamage" : {
       "poly" : [ [1.8125, 1], [1.8125, -1], [1, -1.8125], [-1, -1.8125], [-1.8125, -1], [-1.8125, 1], [-1, 1.8125], [1, 1.8125] ],
-      "damage" : 12,
+      "damage" : 15,
 
       "teamType" : "enemy",
       "damageSourceKind" : "impact",
@@ -104,7 +104,7 @@
     "movementSettings" : {
       "collisionPoly" : [ [1.8125, 1], [1.8125, -1], [1, -1.8125], [-1, -1.8125], [-1.8125, -1], [-1.8125, 1], [-1, 1.8125], [1, 1.8125] ],
 
-      "mass" : 1.0,
+      "mass" : 2.0,
       "walkSpeed" : 4,
       "runSpeed" : 12,
       "gravityEnabled" : false,
@@ -113,8 +113,8 @@
       "groundFriction" : 10,
 
       "airFriction" : 0,
-      "airForce" : 250,
-      "flySpeed" : 15
+      "airForce" : 15,
+      "flySpeed" : 35
     },
 
     "bodyMaterialKind" : "organic",
@@ -138,7 +138,7 @@
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
-        "/stats/monster_primary.lua"
+        "/stats/spacemonster_primary.lua"
       ],
       "primaryScriptDelta" : 5,
 
@@ -153,7 +153,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 40
+          "baseValue" : 80
         },
         "protection" : {
           "baseValue" : 0.0

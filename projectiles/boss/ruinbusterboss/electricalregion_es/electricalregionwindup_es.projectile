@@ -13,9 +13,9 @@
   "supportsProcessing" : true,
   "periodicActions" : [
     {
-      "time" : 0.1,
-      "action" : "particle",
-      "specification" : {
+	  "time" : 0.1,
+	  "action" : "particle",
+	  "specification" : {
         "type" : "animated",
         "looping" : true,
         "animation" : "/animations/teslabolt/teslabolt.animation",
@@ -35,26 +35,26 @@
           "rotation" : 180
         }
       }
-    }
+	}
   ],
   "actionOnReap" : [
     {
       "action" : "projectile",
       "type" : "electricalregion_es",
-      "inheritDamageFactor" : 1
+	  "inheritDamageFactor" : 1
     },
-    {
+	{
       "action" : "projectile",
       "type" : "whipshock",
-      "inheritDamageFactor" : 1,
-      "config" : {
-        "speed" : 0
-      }
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 0
+	  }
     },
-    {
-      "action" : "sound",
-      "options" : [ "/sfx/projectiles/electricalregion_appear.ogg" ]
-    }
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/projectiles/electricalregion_appear.ogg" ]
+	}
   ],
   "damageKind" : "nodamage",
   "onlyHitTerrain" : true

@@ -9,9 +9,9 @@
   "power" : 10,
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
-    }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+	}
   ],
   "damageKind" : "default"
 }

@@ -8,112 +8,112 @@
   "speed" : 800,
   "periodicActions" : [
     {
-      "time" : 0.01,
+	  "time" : 0.01,
       "action" : "projectile",
-      "type" : "antimattervisiblebeam_es",
-      "config" : {
-        "speed" : 0,
-        "timeToLive" : 3,
-        "power" : 0
-      }
+	  "type" : "antimattervisiblebeam_es",
+	  "config" : {
+	    "speed" : 0,
+		"timeToLive" : 3,
+		"power" : 0
+	  }
     },
-    {
-      "time" : 0.0,
-      "repeat" : false,
+	{
+	  "time" : 0.0,
+	  "repeat" : false,
       "action" : "projectile",
-      "type" : "antimattervisiblebeam_es",
-      "config" : {
-        "speed" : 0,
-        "timeToLive" : 3,
-        "power" : 0
-      }
+	  "type" : "antimattervisiblebeam_es",
+	  "config" : {
+	    "speed" : 0,
+		"timeToLive" : 3,
+		"power" : 0
+	  }
     },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [3, 0],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [-3, 0],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [0, 3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [0, -3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [3, 3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [-3, 3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [3, -3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    },
-    {
-      "time" : 0,
-      "repeat" : false,
-      "action" : "projectile",
-      "type" : "invisibleprojectile",
-      "offset" : [-3, -3],
-      "config" : {
-        "statusEffects" : [ "antimatterfreeze" ]
-      }
-    }
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [3, 0],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [-3, 0],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [0, 3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [0, -3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [3, 3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [-3, 3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [3, -3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	},
+	{
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "projectile",
+	  "type" : "invisibleprojectile",
+	  "offset" : [-3, -3],
+	  "config" : {
+	    "statusEffects" : [ "antimatterfreeze" ]
+	  }
+	}
   ],
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "antimatterbeamend_es"
-    }
+	  "action" : "projectile",
+	  "type" : "antimatterbeamend_es"
+	}
   ],
   "damageKind" : "plasma"
 }

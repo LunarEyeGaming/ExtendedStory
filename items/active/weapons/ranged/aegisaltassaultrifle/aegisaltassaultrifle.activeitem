@@ -3,16 +3,16 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A basic assault rifle with burst firing capabilities.",
-  "shortdescription" : "Aegisalt Rifle",
+  "description" : "A rapid fire rifle that shoots lasers.",
+  "shortdescription" : "Aegisalt Machinegun",
   "tooltipKind" : "gun",
   "category" : "assaultRifle",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
   "level" : 6,
   
-  //"critChance" : 5,
-  //"critBonus" : 5,
+  "critChance" : 5,
+  "critBonus" : 5,
 
   "inventoryIcon" : [
     { "image" : "aegisaltassaultrifle.png:idle.1" }
@@ -28,11 +28,16 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/plasma_ar1.ogg"],
-      "altFire" : ["/sfx/gun/grenade1.ogg"]
+      "fire" : ["/sfx/gun/plasma_sniper1.ogg"],
+	  "altFire" : ["/sfx/gun/plasma_sniper4.ogg"]
     },
-    "particleEmitters" : {
-      "altMuzzleFlash" : {
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 150]
+      }
+    },
+	"particleEmitters" : {
+	  "altMuzzleFlash" : {
         "active" : false,
         "rotationGroup" : "weapon",
         "emissionRate" : 8,
@@ -42,11 +47,11 @@
           { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
         ]
       }
-    }
+	}
   },
 
   "baseOffset" : [0.8, 0.225],
-  "muzzleOffset" : [2.625, 0.125],
+  "muzzleOffset" : [2.4, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -56,18 +61,22 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.11,
-    "baseDps" : 21,
-    "energyUsage" : 37,
+    "fireTime" : 0.06,
+    "baseDps" : 20,
+    "energyUsage" : 60,
     "projectileCount" : 1,
-    "inaccuracy" : 0.01,
-    "fireType" : "burst",
-    "burstCount" : 4,
-    "burstTime" : 0.06,
+    "inaccuracy" : 0.02,
+    "fireType" : "auto",
 
     "projectileType" : "aegisaltbullet",
     "projectileParameters" : {
-      "knockback" : 5
+      "knockback" : 20,
+	  "actionOnReap" : [
+	    {
+		  "action" : "config",
+		  "file" : "/projectiles/explosions/plasmabulletexplosion/plasmabulletexplosion.config"
+		}
+	  ]
     },
 
     "stances" : {
@@ -100,16 +109,22 @@
     }
   },
 
-  "altAbilityType" : "grenadelaunchernosprite",
+  "altAbilityType" : "rocketburst",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "projectileType" : "aegisaltgrenade_es" }
+      "physical" : { "projectileType" : "aegisaltriflerocket", "projectileParameters" : {
+	    "actionOnReap" : [
+          {
+	        "action" : "config",
+	        "file" : "/projectiles/explosions/aegisaltexplosion/aegisaltexplosion.config"
+	      }
+        ]
+	  } }
     },
-    "energyUsage" : 25,
-    "fireTime" : 3.0,
-    "inaccuracy" : 0.05,
-    "baseDps" : 14,
-    "name" : "Laser Grenade"
+    "energyUsage" : 40,
+	"fireTime" : 0.2,
+	"inaccuracy" : 0.05,
+	"name" : "Aegisalt Rocket Burst"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

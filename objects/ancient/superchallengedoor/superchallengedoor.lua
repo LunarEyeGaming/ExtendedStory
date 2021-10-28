@@ -12,7 +12,8 @@ function init()
   object.setInteractive(true)
 
   message.setHandler("onTeleport", function(message, isLocal, data)
-      if not config.getParameter("returnDoor") then
+      if not config.getParameter("returnDoor") and not storage.vanishTime then
+        storage.vanishTime = world.time() + config.getParameter("vanishTime")
         if not (animator.animationState("portal") == "open" or animator.animationState("portal") == "on") then
           animator.setAnimationState("portal", "open")
         end
@@ -24,7 +25,7 @@ function init()
       local nearPlayers = world.entityQuery(object.position(), config.getParameter("messagePlayerRange"), {includedTypes = {"player"}})
       nearPlayers = util.filter(nearPlayers, entity.entityInSight)
       for _,playerId in pairs(nearPlayers) do
-        world.sendEntityMessage(playerId, "queueRadioMessage", "bossvaultdoor")
+        world.sendEntityMessage(playerId, "queueRadioMessage", "challengedoor")
       end
     end)
   end
@@ -44,7 +45,7 @@ function update(dt)
     animator.setAnimationState("portal", "open")
     animator.playSound("on");
     object.setLightColor(config.getParameter("lightColor", {255, 255, 255}))
-  elseif #players == 0 and animator.animationState("portal") == "on" then
+  elseif #players == 0 and animator.animationState("portal") == "on" and not storage.vanishTime then
     animator.setAnimationState("portal", "close")
     animator.playSound("off");
     object.setLightColor({0, 0, 0, 0})

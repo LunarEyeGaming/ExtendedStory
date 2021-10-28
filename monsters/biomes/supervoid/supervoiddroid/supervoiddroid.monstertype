@@ -1,5 +1,5 @@
 {
-  "type" : "supervoiddroid",
+  "type" : "supervoiddroid", //Reskins are frowned upon in the Starbound community
   "shortdescription" : "Scandroid Seeker",
   "description" : "A Scandroid infected by the supervoid.",
 
@@ -56,8 +56,8 @@
 
             "projectileType" : "presupervoidbullet",
             "projectileParameters" : {},
-            "projectileCount" : 3,
-            "projectileInterval" : 0.01,
+			"projectileCount" : 3,
+			"projectileInterval" : 0.01,
             "fireOffset" : [0, 0],
             "aimAtTarget" : true,
             "onGround" : false,

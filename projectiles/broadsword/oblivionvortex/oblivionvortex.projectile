@@ -1,7 +1,7 @@
 {
   "projectileName" : "oblivionvortex",
   "physics" : "hover",
-  "timeToLive" : 7,
+  "timeToLive" : 15,
   "image" : "oblivionvortex.png",
   "animationCycle" : 0.35,
   "lightColor" : [110, 80, 30],
@@ -13,8 +13,7 @@
       "time" : 0.1,
 	  "action" : "projectile",
 	  "type" : "oblivionfireball",
-	  "fuzzAngle" : 180,
-      "inheritDamageFactor" : 0.3
+	  "fuzzAngle" : 180
     }
   ],
   "speed" : 0,
@@ -42,6 +41,26 @@
 
   "fullbright" : true,
   "emitters" : [],
+  
+  "boundBox" : [-100, -100, 100, 100],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 40,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["monster", "npc", "vehicle", "itemdrop"]
+    },
+	"itemmagnet" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 200,
+      "innerRadius" : 4,
+      "targetRadialVelocity" : -40,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["itemdrop"]
+    }
+  },
 
   "bounces" : -1
 }

@@ -1,16 +1,23 @@
 require "/scripts/stagehandutil.lua"
-require "/scripts/extendedstoryutil.lua"
-require "/stagehands/statuseffectregion_es/statuseffectregion_es.lua"
-
-superInit = init
-superUpdate = update
+require "/scripts/extendedstorymisc.lua"
 
 function init()
-  superInit()
-  self.borderProjectile = config.getParameter("borderProjectile")
+  self.players = {}
+  self.music = config.getParameter("music", {})
+  self.musicEnabled = false
 end
 
 function update(dt)
-  superUpdate(dt)
-  spawnProjectileAlongBorder(translateBroadcastArea(), {self.borderProjectile})
+  for playerId, _ in pairs(self.players) do
+    if not world.entityExists(playerId) then
+      -- Player died or left the mission
+      self.players[playerId] = nil
+    end
+  end
+
+  local newPlayers = broadcastAreaQuery({ includedTypes = {"player"} })
+  for _, playerId in pairs(newPlayers) do
+    world.spawnProjectile("spheredeactivater", world.entityPosition(playerId), entity.id(), {1, 0}, false, {damageTeam = {type = "indiscriminate"}})
+  end
+  spawnProjectileAlongBorder(translateBroadcastArea(), {"spheredeactivaterparticle"})
 end

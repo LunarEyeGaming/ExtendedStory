@@ -1,0 +1,83 @@
+{
+  "itemName" : "healthrelic2_es",
+  "price" : 850,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "The tome teaches the user how to cast a basic healing spell.",
+  "shortdescription" : "Moderate Healing Spell",
+  "tooltipKind" : "staff",
+  "category" : "Relic Item ^#ffffff;| ^orange;2",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 4,
+
+  "inventoryIcon" : "healthicon.png:2",
+
+  "animation" : "healthrelic.animation",
+  "animationParts" : {
+    "hold" : "spellhold.png",
+	"charge" : "spellcharge.png"
+  },
+  "animationCustom" : {},
+
+  "scripts" : ["/items/active/weapons/spell/spell.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Health Orbs",
+    "scripts" : ["/items/active/relic/health/healthrelicability.lua"],
+    "class" : "HealthRelicAbility",
+	
+	"chargeTime" : 1.3,
+    "cooldownTime" : 2.8,
+    "energyCost" : 95,
+    
+	"projectileOffsetRegion" : [-25, -10, 25, 10],
+    "projectileType" : "healthrelicprojectile_es",
+    "projectileParameters" : {"damageTeam" : {"type" : "enemy"}, "statusEffects" : [ "healthrelicstatus2_es" ]},
+    "projectileCount" : 6,
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -15,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+	  "precharge" : {
+	    "duration" : 0.75,
+        "armRotation" : -45,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		"frontArmFrame" : "fall.4",
+		"backArmFrame" : "fall.4"
+      },
+      "discharge" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "learnBlueprintsOnPickup" : ["healthrelic3_es"],
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

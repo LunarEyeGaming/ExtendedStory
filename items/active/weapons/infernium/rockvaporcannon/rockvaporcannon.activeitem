@@ -3,10 +3,10 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "'Turn your foes to ashes. Then burn the ashes.'",
+  "description" : "Crackle, sizzle, hiss, unending agony, inferno, vaporizing, death.",
   "shortdescription" : "^#9b0c0c;Rock Vapor Cannon^reset;",
   "tooltipKind" : "base",
-  "category" : "Flamethrower ^white;| ^#9b0c0c;Unreal",
+  "category" : "Cannon ^white;| ^#9b0c0c;Unreal",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
@@ -14,49 +14,111 @@
   "critChance" : 1,
   "critBonus" : 5,
 
-  "inventoryIcon" : "rockvaporcannon.png",
+  "inventoryIcon" : "rockvaporcannon.png:idle.1",
 
-  "animation" : "/items/active/weapons/ranged/energygun_es.animation",
+  "animation" : "rockvaporcannon.animation",
   "animationParts" : {
-    "butt" : "",
-    "barrel" : "",
-    "middle" : "rockvaporcannon.png",
-    "middleFullbright" : "rockvaporcannonunlit.png"
+    "gun" : "rockvaporcannon.png",
+    "gunfullbright" : "rockvaporcannonunlit.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fireStart" : [ "/sfx/npc/boss/dragonboss_fireball1.ogg" ],
-      "fireLoop" : ["/sfx/objects/flametrap_loop.ogg"],
-      "fireEnd" : [ "/sfx/gun/flamethrower_stop.ogg" ],
-      "altFire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
-    }
+	  "altFire" : [ "/sfx/gun/dragonhead_charged_fire1.ogg" ]
+	}
   },
-  "baseOffset" : [0.5, 0.75],
-  "muzzleOffset" : [1.0, 0.0],
+  "muzzleOffset" : [2.5, 0.5],
 
-  "scripts" : ["/items/active/weapons/ranged/flamethrower_es.lua"],
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "fire",
+  "elementalType" : "physical",
 
-  "primaryAbilityType" : "flamethrower",
+  "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
-    "baseDps" : 25,
-    "energyUsage" : 30,
-    "projectileType" : "rockvaporcannonshot"
+    "chargeLevels" : [
+	  {
+        "time" : 0,
+        "energyCost" : 20,
+        "cooldown" : 0.2,
+        "projectileType" : "rockvaporcannonshot",
+        "projectileCount" : 1,
+        "inaccuracy" : 0.01,
+        "baseDamage" : 8,
+        "fireSound" : "fire"
+      },
+	  {
+        "time" : 1.0,
+        "energyCost" : 75,
+        "cooldown" : 0.15,
+        "projectileType" : "rockvaporcannonshoth",
+        "projectileCount" : 3,
+        "spreadAngle" : 30,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 9,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 1.5,
+        "energyCost" : 200,
+        "cooldown" : 0.5,
+        "projectileType" : "rockvaporcannonshotbig",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 20,
+        "fireSound" : "fire2"
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
   },
 
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "fire" : {
-        "projectileType" : "rockvaporcannonshot2"
-      }
+      "physical" : {
+	    "projectileType" : "rockvaporcannonshot"
+	  }
     },
-    "fireTime" : 2.5,
-    "projectileCount" : 3,
-    "inaccuracy" : 0.08,
-    "energyUsage" : 30,
-    "baseDps" : 50
+	"fireTime" : 2.5,
+	"projectileCount" : 3,
+	"inaccuracy" : 0.08,
+	"energyUsage" : 30,
+	"baseDps" : 50
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

@@ -51,52 +51,6 @@
             }
           },
           {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1},
-              "untilSuccess": {"value": true}
-            },
-            "child": {
-              "title": "inverter",
-              "type": "decorator",
-              "name": "inverter",
-              "parameters": {},
-              "child": {
-                "title": "sequence",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "receivedNotification",
-                    "type": "action",
-                    "name": "receivedNotification",
-                    "parameters": {
-                      "type": {"value": "barrierSpawned"}
-                    },
-                    "output": {
-                      "target": "newBarrier"
-                    }
-                  },
-                  {
-                    "title": "listPush",
-                    "type": "action",
-                    "name": "listPush",
-                    "parameters": {
-                      "entity": {"key": "newBarrier"},
-                      "list": {"key": "barriers"}
-                    },
-                    "output": {
-                      "list": "barriers"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          {
             "title": "Spiderboss",
             "type": "composite",
             "name": "dynamic",
@@ -164,6 +118,7 @@
                         "name": "spawnMonster",
                         "parameters": {
                           "type": {"value": "leftfist"},
+                          "level": {"value": 10},
                           "position": {"key": "leftfist"}
                         },
                         "output": {
@@ -176,6 +131,7 @@
                         "name": "spawnMonster",
                         "parameters": {
                           "type": {"value": "rightfist"},
+                          "level": {"value": 10},
                           "position": {"key": "rightfist"}
                         },
                         "output": {
@@ -279,6 +235,12 @@
                                       "parameters": {}
                                     },
                                     {
+                                      "title": "ancientboss2-minionattack",
+                                      "type": "module",
+                                      "name": "ancientboss2-minionattack",
+                                      "parameters": {}
+                                    },
+                                    {
                                       "title": "inverter",
                                       "type": "decorator",
                                       "name": "inverter",
@@ -311,6 +273,12 @@
                                       "parameters": {}
                                     },
                                     {
+                                      "title": "ancientboss2-minionattack",
+                                      "type": "module",
+                                      "name": "ancientboss2-minionattack",
+                                      "parameters": {}
+                                    },
+                                    {
                                       "title": "inverter",
                                       "type": "decorator",
                                       "name": "inverter",
@@ -340,6 +308,12 @@
                                       "title": "ancientboss2-laserattack",
                                       "type": "module",
                                       "name": "ancientboss2-laserattack",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ancientboss2-minionattack",
+                                      "type": "module",
+                                      "name": "ancientboss2-minionattack",
                                       "parameters": {}
                                     },
                                     {
@@ -378,6 +352,12 @@
                                       "title": "ancientboss2-orbattack3",
                                       "type": "module",
                                       "name": "ancientboss2-orbattack3",
+                                      "parameters": {}
+                                    },
+                                    {
+                                      "title": "ancientboss2-minionattack",
+                                      "type": "module",
+                                      "name": "ancientboss2-minionattack",
                                       "parameters": {}
                                     }
                                   ]

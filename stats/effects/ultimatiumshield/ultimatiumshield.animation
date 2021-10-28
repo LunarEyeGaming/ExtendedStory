@@ -1,7 +1,6 @@
 {
   "globalTagDefaults" : {
-    "barDirectives" : "",
-    "hueDirectives" : ""
+	"barDirectives" : ""
   },
   "animatedParts" : {
     "stateTypes" : {
@@ -16,14 +15,14 @@
     },
 
     "parts" : {
-      "energybar" : {
-        "properties" : {
-          "transformationGroups" : [ "energybar" ],
-          "centered" : true,
-          "zLevel" : 2,
-          "fullbright" : true,
-          "offset" : [0, 3.0]
-        },
+	  "energybar" : {
+	    "properties" : {
+		  "transformationGroups" : [ "energybar" ],
+		  "centered" : true,
+		  "zLevel" : 2,
+		  "fullbright" : true,
+		  "offset" : [0, 3.0]
+		},
         "partStates" : {
           "energybar" : {
             "off" : {
@@ -33,18 +32,19 @@
             },
             "on" : {
               "properties" : {
-                "image" : "ultimatiumshieldbar.png<barDirectives><hueDirectives>"
+                "image" : "ultimatiumshieldbar.png<barDirectives>"
               }
             }
           }
         }
-      },
-      "energybarframe" : {
-        "properties" : {
-          "centered" : true,
-          "fullbright" : true,
-          "offset" : [0, 3.0]
-        },
+	  },
+	  "energybarframe" : {
+	    "properties" : {
+		  "transformationGroups" : [ "energybar" ],
+		  "centered" : true,
+		  "fullbright" : true,
+		  "offset" : [0, 3.0]
+		},
         "partStates" : {
           "energybar" : {
             "off" : {
@@ -54,12 +54,12 @@
             },
             "on" : {
               "properties" : {
-                "image" : "ultimatiumshieldbarframe.png<hueDirectives>"
+                "image" : "ultimatiumshieldbarframe.png"
               }
             }
           }
         }
-      }
+	  }
     }
   },
 
@@ -68,7 +68,7 @@
   },
   "sounds" : {
     "hit" : ["/sfx/gun/omnicannon_shot2.ogg"],
-    "break" : ["/sfx/npc/boss/apeboss_death.ogg"],
-    "charged" : ["/sfx/melee/giantsword_charge_full.ogg"]
+	"break" : ["/sfx/npc/boss/apeboss_death.ogg"],
+	"charged" : ["/sfx/melee/giantsword_charge_full.ogg"]
   }
 }

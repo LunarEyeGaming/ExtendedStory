@@ -3,7 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A remnant holding an impossible amount of power.",
+  "description" : "A remnant of the supervoid eye's power. It can still destroy everything.",
   "shortdescription" : "^#a8009e;The Obliterator^reset;",
   "tooltipKind" : "base",
   "category" : "^black;???",
@@ -11,8 +11,8 @@
   "itemTags" : ["weapon","ranged"],
   "level" : 10,
   
-  //"critChance" : 66,
-  //"critBonus" : 666,
+  "critChance" : 66,
+  "critBonus" : 666,
 
   "inventoryIcon" : "supervoidobliterator.png:empty",
 
@@ -31,20 +31,20 @@
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {
     "chargeLevels" : [
-      {
+	  {
         "time" : 0,
         "energyCost" : 15,
         "cooldown" : 0.1,
         "projectileType" : "supervoidenergyshardplayer",
         "projectileCount" : 1,
         "projectileParameters" : {
-          "actionOnReap" : [
+		  "actionOnReap" : [
             {
               "action" : "config",
               "file" : "/projectiles/explosions/supervoidexplosion/supervoidexplosionplayer.config"
             }
           ]
-        },
+		},
         "inaccuracy" : 0.05,
         "baseDamage" : 8,
         "fireSound" : "fire"
@@ -55,27 +55,27 @@
         "cooldown" : 0.2,
         "projectileType" : "presupervoidbullet",
         "projectileParameters" : {
-          "speed" : 40,
-          "timeToLive" : 1,
-          "periodicActions" : [
-            {
+		  "speed" : 40,
+		  "timeToLive" : 1,
+		  "periodicActions" : [
+		    {
               "action" : "projectile",
               "type" : "supervoidenergyshardplayer",
               "fuzzAngle" : 45,
               "inheritDamageFactor" : 1,
               "inheritSpeedFactor" : 3,
-              "time" : 0.1
+			  "time" : 0.1
             }
-          ],
-          "actionOnReap" : [
-            {
-              "action" : "config",
-              "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
-            }
-          ]
-        },
+		  ],
+		  "actionOnReap" : [
+		    {
+			  "action" : "config",
+			  "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"
+			}
+		  ]
+		},
         "inaccuracy" : 0,
-        "baseDamage" : 12,
+        "baseDamage" : 200,
         "fireSound" : "fire2"
       },
       {
@@ -84,63 +84,63 @@
         "cooldown" : 0.3,
         "projectileType" : "invisibleprojectile",
         "projectileParameters" : {
-          "speed" : 800,
-          "timeToLive" : 0.12,
-          "damageTeam" : { "type" : "friendly" },
-          "periodicActions" : [
-            {
+		  "speed" : 800,
+		  "timeToLive" : 0.12,
+		  "damageTeam" : { "type" : "friendly" },
+		  "periodicActions" : [
+		    {
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 15, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 15, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             },
-            {
+		    {
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 30, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 30, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             },
-            {
+			{
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 60, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 60, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             },
-            {
+			{
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 90, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 90, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             },
-            {
+			{
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 120, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 120, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             },
-            {
+			{
               "action" : "projectile",
               "type" : "ancientrailgunshot",
-              "repeat" : false,
-              "time" : 0.01,
-              "config" : { "speed" : 150, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
+			  "repeat" : false,
+			  "time" : 0.01,
+			  "config" : { "speed" : 150, "processing" : "?replace;ffffff=db00ce;d29ce7=c400b9;a451c4=a8009e" }
             }
-          ],
-          "actionOnReap" : [
-            {
+		  ],
+		  "actionOnReap" : [
+		    {
               "action" : "projectile",
               "type" : "invisibleprojectile",
-              "config" : { "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"}], "timeToLive" : 0.0, "damageTeam" : { "type" : "friendly" } }
+			  "config" : { "actionOnReap" : [{"action" : "config", "file" : "/projectiles/explosions/supervoidexplosionplayer/supervoidexplosionplayer.config"}], "timeToLive" : 0.0, "damageTeam" : { "type" : "friendly" } }
             }
-          ]
-        },
+		  ]
+		},
         "inaccuracy" : 0,
-        "baseDamage" : 15,
+        "baseDamage" : 200,
         "fireSound" : "fire3"
       },
       {
@@ -149,43 +149,43 @@
         "cooldown" : 0.4,
         "projectileType" : "supervoidenergyshardplayer",
         "projectileParameters" : {
-          "bounces" : 0,
-          "piercing" : true,
-          "actionOnReap" : [
-            {
-              "action" : "projectile",
-              "type" : "supervoidenergyshardhoming",
-              "offsetRange" : [-5, 50, 5, 50],
-              "direction" : [0.0, -1.0]
-            },
-            {
-              "action" : "projectile",
-              "type" : "supervoidenergyshardhoming",
-              "offsetRange" : [-5, 50, 5, 50],
-              "direction" : [0.0, -1.0]
-            },
-            {
-              "action" : "projectile",
-              "type" : "supervoidenergyshardhoming",
-              "offsetRange" : [-5, 50, 5, 50],
-              "direction" : [0.0, -1.0]
-            },
-            {
-              "action" : "projectile",
-              "type" : "supervoidenergyshardhoming",
-              "offsetRange" : [-5, 50, 5, 50],
-              "direction" : [0.0, -1.0]
-            },
-            {
-              "action" : "projectile",
-              "type" : "supervoidenergyshardhoming",
-              "offsetRange" : [-5, 50, 5, 50],
-              "direction" : [0.0, -1.0]
-            }
-          ]
-        },
+		  "bounces" : 0,
+		  "piercing" : true,
+		  "actionOnReap" : [
+		    {
+			  "action" : "projectile",
+			  "type" : "supervoidenergyshardhoming",
+			  "offsetRange" : [-5, 50, 5, 50],
+			  "direction" : [0.0, -1.0]
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "supervoidenergyshardhoming",
+			  "offsetRange" : [-5, 50, 5, 50],
+			  "direction" : [0.0, -1.0]
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "supervoidenergyshardhoming",
+			  "offsetRange" : [-5, 50, 5, 50],
+			  "direction" : [0.0, -1.0]
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "supervoidenergyshardhoming",
+			  "offsetRange" : [-5, 50, 5, 50],
+			  "direction" : [0.0, -1.0]
+			},
+			{
+			  "action" : "projectile",
+			  "type" : "supervoidenergyshardhoming",
+			  "offsetRange" : [-5, 50, 5, 50],
+			  "direction" : [0.0, -1.0]
+			}
+		  ]
+		},
         "inaccuracy" : 0,
-        "baseDamage" : 18,
+        "baseDamage" : 200,
         "fireSound" : "fire4"
       },
       {
@@ -195,7 +195,7 @@
         "projectileType" : "supervoidblast",
         "projectileParameters" : {},
         "inaccuracy" : 0,
-        "baseDamage" : 40,
+        "baseDamage" : 200,
         "fireSound" : "fire5"
       }
     ],
@@ -242,13 +242,13 @@
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {
-        "projectileType" : "supervoidgrenade",
-        "projectileParameters" : {}
-      }
+	    "projectileType" : "supervoidgrenade",
+		"projectileParameters" : {}
+	  }
     },
-    "fireTime" : 2.0,
-    "energyUsage" : 20,
-    "baseDps" : 50
+	"fireTime" : 2.0,
+	"energyUsage" : 20,
+	"baseDps" : 50
   },
   "learnBlueprintsOnPickup" : [ "supervoidobliterator" ],
 

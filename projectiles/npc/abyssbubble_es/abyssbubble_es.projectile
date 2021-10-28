@@ -6,7 +6,7 @@
   "animationLoops" : true,
   "damageKindImage" : "/interface/statuses/fire.png",
   "frameNumber" : 3,
-  "power" : 300,
+  "power" : 50,
   "speed" : 25,
   "timeToLive" : 10,
   "bounces" : -1,
@@ -21,35 +21,32 @@
   "orientationLocked" : true,
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "targetingprojectile",
-      "inheritDamageFactor" : 1,
-      "config" : {
-        "actionOnReap" : [
-          {
-            "action" : "projectile",
-            "type" : "abyssspit",
-            "inheritDamageFactor" : 1,
-            "angleAdjust" : 0
-          },
-          {
-            "action" : "projectile",
-            "type" : "abyssspit",
-            "inheritDamageFactor" : 1,
-            "angleAdjust" : 15
-          },
-          {
-            "action" : "projectile",
-            "type" : "abyssspit",
-            "inheritDamageFactor" : 1,
-            "angleAdjust" : -15
-          }
-        ]
-      }
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/abyssbubbleexplosion_es/abyssbubbleexplosion_es.config"
-    }
+	  "action" : "projectile",
+	  "type" : "targetingprojectile",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "abyssspit",
+			"angleAdjust" : 0
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "abyssspit",
+			"angleAdjust" : 15
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "abyssspit",
+			"angleAdjust" : -15
+		  }
+		]
+	  }
+	},
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/abyssbubbleexplosion_es/abyssbubbleexplosion_es.config"
+	}
   ]
 }

@@ -3,42 +3,54 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "^#5ac240;Nothing can stop you from warping gravity itself!",
-  "shortdescription" : "^#a2e362;Gravity Warper^reset;",
+  "description" : "^#aced2b;Nothing can stop you from warping gravity itself!",
+  "shortdescription" : "^#caf58c;Gravity Warper^reset;",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","rocketLauncher"],
   "level" : 6,
   
-  //"critChance" : 2,
-  //"critBonus" : 5,
+  "critChance" : 2,
+  "critBonus" : 5,
 
   "inventoryIcon" : [
-    { "image" : "gun.png:idle.1" }
+    { "image" : "gun.png" }
   ],
 
-  "animation" : "gravwarp_es.animation",
+  "animation" : "/items/active/weapons/ranged/energygun_es.animation",
   "animationParts" : {
     "butt" : "",
     "middle" : "gun.png",
     "middleFullbright" : "gununlit.png",
     "barrel" : "",
-    "muzzleFlash" : ""
+    "muzzleFlash" : "muzzleflash.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/gravwarp_fire.ogg"], "altFire" : ["/sfx/gun/gravwarp_altfire.ogg"]
+      "fire" : ["/sfx/gun/plasmacannon_fire.ogg"], "altFire" : ["/sfx/gun/magnetargun_fire.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
         "color" : [172, 237, 43]
       }
-    }
+    },
+	"animatedParts" : {
+	  "stateTypes" : {
+	    "firing" : {
+		  "states" : {
+		    "fire" : {
+			  "frames" : 3,
+			  "cycle" : 0.15
+			}
+		  }
+		}
+	  }
+	}
   },
 
   "baseOffset" : [0.3, 0.5],
-  "muzzleOffset" : [1.5, 0.2],
+  "muzzleOffset" : [3.1, 0.2],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -48,15 +60,35 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 1.5,
-    "baseDps" : 6.5,
-    "energyUsage" : 30,
+    "fireTime" : 1,
+    "baseDps" : 2,
+    "energyUsage" : 45,
     "projectileCount" : 1,
-    "inaccuracy" : 0.01,
-    "fireType" : "auto",
+	"burstCount" : 3,
+	"burstTime" : 0.33,
+    "inaccuracy" : 0.05,
+    "fireType" : "burst",
 
-    "projectileType" : "gravwarpshot_es",
-    "projectileParameters" : { },
+    "projectileType" : "gravwarpshot1",
+    "projectileParameters" : {
+	  "periodicActions" : [
+	    {
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "gravwarpshot2"
+		},
+		{
+		  "time" : 0,
+		  "repeat" : false,
+		  "action" : "projectile",
+		  "type" : "gravwarpshot2",
+		  "config" : {
+		    "waveAmplitude" : -0.5
+		  }
+		}
+	  ]
+	},
 
     "stances" : {
       "idle" : {
@@ -68,21 +100,18 @@
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0.0,
-        "armRotation" : 5,
-        "weaponRotation" : 5,
+        "duration" : 0,
+        "armRotation" : 2,
+        "weaponRotation" : 2,
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-        "animationStates" : {
-          "middle" : "fire"
-        }
+        "allowFlip" : false
       },
       "cooldown" : {
-        "duration" : 1.0,
-        "armRotation" : 5,
-        "weaponRotation" : 5,
+        "duration" : 0.2,
+        "armRotation" : 2,
+        "weaponRotation" : 2,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -91,21 +120,20 @@
     }
   },
 
+  "altAbilityType" : "explosiveshot",
   "altAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
-    "class" : "AltFireAttack",
-
-    "fireTime" : 1.5,
-    "baseDps" : 4,
+    "name" : "Singularity",
+	"elementalConfig" : {
+	  "physical" : {
+	    "projectileType" : "gravwarpshotalt"
+	  }
+	},
+	"projectileParameters" : {"periodicActions" : []},
     "energyUsage" : 50,
-    "projectileCount" : 1,
-    "inaccuracy" : 0.05,
-    "fireType" : "auto",
-    "hidePrimaryMuzzleFlash" : true,
-    "useParticleEmitter" : false,
-
-    "projectileType" : "gravwarpmine_es",
-    "projectileParameters" : { }
+	"fireTime" : 3.0,
+	"projectileCount" : 1,
+	"inaccuracy" : 0,
+    "fireType" : "auto"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

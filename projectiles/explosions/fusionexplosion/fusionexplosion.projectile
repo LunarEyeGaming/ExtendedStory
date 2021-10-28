@@ -1,9 +1,9 @@
 {
   "projectileName" : "fusionexplosion",
   "image" : "fusionexplosion.png",
-  "timeToLive" : 0.495,
-  "animationCycle" : 0.495,
-  "frameNumber" : 9,
+  "timeToLive" : 0.33,
+  "animationCycle" : 0.33,
+  "frameNumber" : 6,
   "fullbright" : true,
   "speed" : 0,
   "damagePoly" : [ [-40, 0], [-25, -25], [0, -40], [25, -25], [40, 0], [25, 25], [0, 40], [-25, 25] ],
@@ -13,9 +13,9 @@
   "flippable" : true,
   "lightColor" : [150, 255, 255],
   "statusEffects" : [
-    "ionized"
+    "gammarays",
+	"ionized"
   ],
   "power" : 20,
-  "damageKind" : "plasma",
-  "knockback" : 30
+  "damageKind" : "plasma"
 }

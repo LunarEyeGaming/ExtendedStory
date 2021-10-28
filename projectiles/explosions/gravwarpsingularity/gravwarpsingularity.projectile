@@ -55,9 +55,8 @@
   "frameNumber" : 5,
   "power" : 5,
   "damagePoly" : [ [-22, 0], [-16, -16], [0, -22], [16, -16], [22, 0], [16, 16], [0, 22], [-16, 16] ],
-  "damageRepeatTimeout" : 0.3,
   "persistentAudio" : "/sfx/npc/boss/tentacleboss_portal_loop.ogg",
-  "damageKind" : "plasma",
+  "damageKind" : "abyss",
   "actionOnReap" : [
     {
 	  "action" : "projectile",

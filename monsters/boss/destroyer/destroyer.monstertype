@@ -1,6 +1,6 @@
 {
   "type" : "destroyer",
-  "shortdescription" : "The Destroyer of Worlds", // Proposed name change: World Reaper
+  "shortdescription" : "The Destroyer of Worlds",
 
   "categories" : [ "destroyer" ],
   "parts" : [ "ufo", "background" ],
@@ -39,7 +39,7 @@
         "enterPhase" : "destroyerSkyGapAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.6,
-        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyMegaLaserAttack", "destroyerSkyGapAttack", "destroyerGiantLaserShotAttack", "destroyerDestructionShowerAttack"]
+        "skills" : ["destroyerBulletCirclesAttack", "destroyerSkyMegaLaserAttack", "destroyerScatterAttack", "destroyerSkyGapAttack", "destroyerSkyMegaLaserAttack", "destroyerGiantLaserShotAttack", "destroyerDestructionShowerAttack"]
       },
       {
         "enterPhase" : "destroyerSkyMegaLaserAttack",
@@ -112,10 +112,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 1250
         },
         "protection" : {
-          "baseValue" : 20.0
+          "baseValue" : 50.0
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -161,6 +161,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 
@@ -186,7 +195,7 @@
 
     "attackTime" : 5.0,
     "fireInterval" : 0.6,
-    "cooldownTime" : 0,
+    "cooldownTime" : 0.25,
 
     "projectiles" : {
       "deathexplosion" : {

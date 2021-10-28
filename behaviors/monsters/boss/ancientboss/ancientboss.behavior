@@ -9,7 +9,6 @@
     "/scripts/actions/world.lua",
     "/scripts/actions/status.lua",
     "/scripts/actions/monster.lua",
-    "/scripts/actions/notification.lua",
     "/scripts/actions/animator.lua",
     "/scripts/actions/projectiles.lua"
   ],
@@ -20,226 +19,6 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepstart"}
-        },
-        "output": {
-          "entity": "upperSweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "uppersweepend"}
-        },
-        "output": {
-          "entity": "upperSweepEnd"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepstart"}
-        },
-        "output": {
-          "entity": "lowerSweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "lowersweepend"}
-        },
-        "output": {
-          "entity": "lowerSweepEnd"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "shieldcore1"}
-        },
-        "output": {
-          "entity": "shieldCoreMarker1"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "shieldcore2"}
-        },
-        "output": {
-          "entity": "shieldCoreMarker2"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "laserpos1"}
-        },
-        "output": {
-          "entity": "laserPos1Ent"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "laserpos2"}
-        },
-        "output": {
-          "entity": "laserPos2Ent"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "laserpos3"}
-        },
-        "output": {
-          "entity": "laserPos3Ent"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "laserpos4"}
-        },
-        "output": {
-          "entity": "laserPos4Ent"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "upperSweepStart"}
-        },
-        "output": {
-          "position": "upperSweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "upperSweepEnd"}
-        },
-        "output": {
-          "position": "upperSweepEndPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "lowerSweepStart"}
-        },
-        "output": {
-          "position": "lowerSweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "lowerSweepEnd"}
-        },
-        "output": {
-          "position": "lowerSweepEndPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "shieldCoreMarker1"}
-        },
-        "output": {
-          "position": "shieldCorePos1"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "shieldCoreMarker2"}
-        },
-        "output": {
-          "position": "shieldCorePos2"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "laserPos1Ent"}
-        },
-        "output": {
-          "position": "laserPos1"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "laserPos2Ent"}
-        },
-        "output": {
-          "position": "laserPos2"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "laserPos3Ent"}
-        },
-        "output": {
-          "position": "laserPos3"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "laserPos4Ent"}
-        },
-        "output": {
-          "position": "laserPos4"
-        }
-      },
       {
         "title": "setDying",
         "type": "action",
@@ -361,7 +140,7 @@
                                 "type": "action",
                                 "name": "resourcePercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.75},
+                                  "percentage": {"value": 0.8},
                                   "resource": {"value": "health"}
                                 }
                               },
@@ -380,10 +159,38 @@
                                   "parameters": {},
                                   "children": [
                                     {
-                                      "title": "ancientboss-sidesweep",
+                                      "title": "ancientboss-uppersweep",
                                       "type": "module",
-                                      "name": "ancientboss-sidesweep",
+                                      "name": "ancientboss-uppersweep",
                                       "parameters": {}
+                                    },
+                                    {
+                                      "title": "repeater",
+                                      "type": "decorator",
+                                      "name": "repeater",
+                                      "parameters": {
+                                        "maxLoops": {"value": 2}
+                                      },
+                                      "child": {
+                                        "title": "sequence",
+                                        "type": "composite",
+                                        "name": "sequence",
+                                        "parameters": {},
+                                        "children": [
+                                          {
+                                            "title": "ancientboss-playersweep",
+                                            "type": "module",
+                                            "name": "ancientboss-playersweep",
+                                            "parameters": {}
+                                          },
+                                          {
+                                            "title": "ancientboss-playersweep2",
+                                            "type": "module",
+                                            "name": "ancientboss-playersweep2",
+                                            "parameters": {}
+                                          }
+                                        ]
+                                      }
                                     },
                                     {
                                       "title": "ancientboss-playersweep",
@@ -398,15 +205,6 @@
                                       "parameters": {}
                                     }
                                   ]
-                                }
-                              },
-                              {
-                                "title": "setGlobalTag",
-                                "type": "action",
-                                "name": "setGlobalTag",
-                                "parameters": {
-                                  "tag": {"value": "phase1"},
-                                  "type": {"value": "phase"}
                                 }
                               }
                             ]
@@ -425,7 +223,7 @@
                                 "type": "action",
                                 "name": "resourcePercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.5},
+                                  "percentage": {"value": 0.6},
                                   "resource": {"value": "health"}
                                 }
                               },
@@ -456,21 +254,43 @@
                                       "parameters": {},
                                       "children": [
                                         {
-                                          "title": "ancientboss-shockwaveattack",
+                                          "title": "ancientboss-minionattack",
                                           "type": "module",
-                                          "name": "ancientboss-shockwaveattack",
+                                          "name": "ancientboss-minionattack",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-sidesweep",
-                                          "type": "module",
-                                          "name": "ancientboss-sidesweep",
-                                          "parameters": {}
+                                          "title": "repeater",
+                                          "type": "decorator",
+                                          "name": "repeater",
+                                          "parameters": {
+                                            "maxLoops": {"value": 2}
+                                          },
+                                          "child": {
+                                            "title": "sequence",
+                                            "type": "composite",
+                                            "name": "sequence",
+                                            "parameters": {},
+                                            "children": [
+                                              {
+                                                "title": "ancientboss-playersweep",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep",
+                                                "parameters": {}
+                                              },
+                                              {
+                                                "title": "ancientboss-playersweep2",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep2",
+                                                "parameters": {}
+                                              }
+                                            ]
+                                          }
                                         },
                                         {
-                                          "title": "ancientboss-lowerram",
+                                          "title": "ancientboss-playersweep",
                                           "type": "module",
-                                          "name": "ancientboss-lowerram",
+                                          "name": "ancientboss-playersweep",
                                           "parameters": {}
                                         },
                                         {
@@ -480,9 +300,21 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-playersweep",
+                                          "title": "ancientboss-minionattack2",
                                           "type": "module",
-                                          "name": "ancientboss-playersweep",
+                                          "name": "ancientboss-minionattack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-uppersweep",
+                                          "type": "module",
+                                          "name": "ancientboss-uppersweep",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-lowerram",
+                                          "type": "module",
+                                          "name": "ancientboss-lowerram",
                                           "parameters": {}
                                         }
                                       ]
@@ -515,7 +347,7 @@
                                 "type": "action",
                                 "name": "resourcePercentage",
                                 "parameters": {
-                                  "percentage": {"value": 0.3},
+                                  "percentage": {"value": 0.4},
                                   "resource": {"value": "health"}
                                 }
                               },
@@ -541,7 +373,7 @@
                                       "type": "module",
                                       "name": "ancientboss-shieldattack",
                                       "parameters": {
-                                        "numCols": {"value": 3}
+                                        "shieldCoreCount": {"value": 5}
                                       }
                                     }
                                   },
@@ -560,21 +392,49 @@
                                       "parameters": {},
                                       "children": [
                                         {
+                                          "title": "ancientboss-uppersweep",
+                                          "type": "module",
+                                          "name": "ancientboss-uppersweep",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "repeater",
+                                          "type": "decorator",
+                                          "name": "repeater",
+                                          "parameters": {
+                                            "maxLoops": {"value": 2}
+                                          },
+                                          "child": {
+                                            "title": "sequence",
+                                            "type": "composite",
+                                            "name": "sequence",
+                                            "parameters": {},
+                                            "children": [
+                                              {
+                                                "title": "ancientboss-playersweep",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep",
+                                                "parameters": {}
+                                              },
+                                              {
+                                                "title": "ancientboss-playersweep2",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep2",
+                                                "parameters": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "title": "ancientboss-playersweep",
+                                          "type": "module",
+                                          "name": "ancientboss-playersweep",
+                                          "parameters": {}
+                                        },
+                                        {
                                           "title": "ancientboss-plasmasweep",
                                           "type": "module",
                                           "name": "ancientboss-plasmasweep",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-playersweep2",
-                                          "type": "module",
-                                          "name": "ancientboss-playersweep2",
-                                          "parameters": {}
-                                        },
-                                        {
-                                          "title": "ancientboss-sidesweep",
-                                          "type": "module",
-                                          "name": "ancientboss-sidesweep",
                                           "parameters": {}
                                         },
                                         {
@@ -590,9 +450,9 @@
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-shockwaveattack2",
+                                          "title": "ancientboss-minionattack2",
                                           "type": "module",
-                                          "name": "ancientboss-shockwaveattack2",
+                                          "name": "ancientboss-minionattack2",
                                           "parameters": {}
                                         }
                                       ]
@@ -601,10 +461,69 @@
                                 ]
                               },
                               {
-                                "title": "ancientboss-shield",
-                                "type": "module",
-                                "name": "ancientboss-shield",
-                                "parameters": {}
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.01}
+                                      }
+                                    },
+                                    {
+                                      "title": "parallel",
+                                      "type": "composite",
+                                      "name": "parallel",
+                                      "parameters": {
+                                        "fail": {"value": 1},
+                                        "success": {"value": -1}
+                                      },
+                                      "children": [
+                                        {
+                                          "title": "findMonster",
+                                          "type": "action",
+                                          "name": "findMonster",
+                                          "parameters": {
+                                            "orderBy": {"value": "nearest"},
+                                            "position": {"key": "self"},
+                                            "range": {"value": 200},
+                                            "type": {"value": "ancientfragment"}
+                                          }
+                                        },
+                                        {
+                                          "title": "animate",
+                                          "type": "action",
+                                          "name": "animate",
+                                          "parameters": {
+                                            "fallback": {"value": "disappear"},
+                                            "state": {"value": "appear"},
+                                            "type": {"value": "shield"}
+                                          }
+                                        },
+                                        {
+                                          "title": "addEphemeralEffect",
+                                          "type": "action",
+                                          "name": "addEphemeralEffect",
+                                          "parameters": {
+                                            "name": {"value": "abyssalgazerattackimmunity"}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               },
                               {
                                 "title": "setGlobalTag",
@@ -657,11 +576,7 @@
                                       "type": "module",
                                       "name": "ancientboss-shieldattack",
                                       "parameters": {
-                                        "shieldCoreCount": {"value": 8},
-                                        "shieldCoreMinX": {"value": -50},
-                                        "shieldCoreMaxX": {"value": 50},
-                                        "shieldCoreMinY": {"value": -15},
-                                        "shieldCoreMaxY": {"value": 15}
+                                        "shieldCoreCount": {"value": 8}
                                       }
                                     }
                                   },
@@ -680,33 +595,85 @@
                                       "parameters": {},
                                       "children": [
                                         {
-                                          "title": "ancientboss-plasmasweepfast",
+                                          "title": "ancientboss-plasmasweep",
                                           "type": "module",
-                                          "name": "ancientboss-plasmasweepfast",
+                                          "name": "ancientboss-plasmasweep",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-slam2",
+                                          "title": "ancientboss-minionattack",
                                           "type": "module",
-                                          "name": "ancientboss-slam2",
+                                          "name": "ancientboss-minionattack",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-shockwaveattack2",
+                                          "title": "repeater",
+                                          "type": "decorator",
+                                          "name": "repeater",
+                                          "parameters": {
+                                            "maxLoops": {"value": 2}
+                                          },
+                                          "child": {
+                                            "title": "sequence",
+                                            "type": "composite",
+                                            "name": "sequence",
+                                            "parameters": {},
+                                            "children": [
+                                              {
+                                                "title": "ancientboss-playersweep",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep",
+                                                "parameters": {}
+                                              },
+                                              {
+                                                "title": "ancientboss-playersweep2",
+                                                "type": "module",
+                                                "name": "ancientboss-playersweep2",
+                                                "parameters": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "title": "ancientboss-playersweep",
                                           "type": "module",
-                                          "name": "ancientboss-shockwaveattack2",
+                                          "name": "ancientboss-playersweep",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-sidesweep",
+                                          "title": "ancientboss-plasmachaos",
                                           "type": "module",
-                                          "name": "ancientboss-sidesweep",
+                                          "name": "ancientboss-plasmachaos",
                                           "parameters": {}
                                         },
                                         {
-                                          "title": "ancientboss-playersweep2",
+                                          "title": "ancientboss-slam",
                                           "type": "module",
-                                          "name": "ancientboss-playersweep2",
+                                          "name": "ancientboss-slam",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-plasmasweep",
+                                          "type": "module",
+                                          "name": "ancientboss-plasmasweep",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-lowerram",
+                                          "type": "module",
+                                          "name": "ancientboss-lowerram",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-minionattack2",
+                                          "type": "module",
+                                          "name": "ancientboss-minionattack2",
+                                          "parameters": {}
+                                        },
+                                        {
+                                          "title": "ancientboss-laserattack",
+                                          "type": "module",
+                                          "name": "ancientboss-laserattack",
                                           "parameters": {}
                                         },
                                         {
@@ -721,10 +688,69 @@
                                 ]
                               },
                               {
-                                "title": "ancientboss-shield",
-                                "type": "module",
-                                "name": "ancientboss-shield",
-                                "parameters": {}
+                                "title": "repeater",
+                                "type": "decorator",
+                                "name": "repeater",
+                                "parameters": {
+                                  "maxLoops": {"value": -1},
+                                  "untilSuccess": {"value": false}
+                                },
+                                "child": {
+                                  "title": "sequence",
+                                  "type": "composite",
+                                  "name": "sequence",
+                                  "parameters": {},
+                                  "children": [
+                                    {
+                                      "title": "timer",
+                                      "type": "action",
+                                      "name": "timer",
+                                      "parameters": {
+                                        "time": {"value": 0.01}
+                                      }
+                                    },
+                                    {
+                                      "title": "parallel",
+                                      "type": "composite",
+                                      "name": "parallel",
+                                      "parameters": {
+                                        "fail": {"value": 1},
+                                        "success": {"value": -1}
+                                      },
+                                      "children": [
+                                        {
+                                          "title": "findMonster",
+                                          "type": "action",
+                                          "name": "findMonster",
+                                          "parameters": {
+                                            "orderBy": {"value": "nearest"},
+                                            "position": {"key": "self"},
+                                            "range": {"value": 200},
+                                            "type": {"value": "ancientfragment"}
+                                          }
+                                        },
+                                        {
+                                          "title": "animate",
+                                          "type": "action",
+                                          "name": "animate",
+                                          "parameters": {
+                                            "fallback": {"value": "disappear"},
+                                            "state": {"value": "appear"},
+                                            "type": {"value": "shield"}
+                                          }
+                                        },
+                                        {
+                                          "title": "addEphemeralEffect",
+                                          "type": "action",
+                                          "name": "addEphemeralEffect",
+                                          "parameters": {
+                                            "name": {"value": "abyssalgazerattackimmunity"}
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               },
                               {
                                 "title": "setGlobalTag",
@@ -773,95 +799,6 @@
                     }
                   },
                   {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "each",
-                      "type": "decorator",
-                      "name": "each",
-                      "parameters": {
-                        "list": {"key": "barriers"},
-                        "type": {"value": "entity"}
-                      },
-                      "child": {
-                        "title": "succeeder",
-                        "type": "decorator",
-                        "name": "succeeder",
-                        "parameters": {},
-                        "child": {
-                          "title": "sendNotification",
-                          "type": "action",
-                          "name": "sendNotification",
-                          "parameters": {
-                            "entity": {"key": "eachItem"},
-                            "type": {"value": "deactivate"}
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "title": "listClear",
-                    "type": "action",
-                    "name": "listClear",
-                    "parameters": {},
-                    "output": {
-                      "list": "barriers"
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "queryEntity",
-                          "type": "action",
-                          "name": "queryEntity",
-                          "parameters": {
-                            "entityTypes": {"value": ["projectile"]},
-                            "range": {"value": 100}
-                          },
-                          "output": {
-                            "list": "projectiles"
-                          }
-                        },
-                        {
-                          "title": "each",
-                          "type": "decorator",
-                          "name": "each",
-                          "parameters": {
-                            "list": {"key": "projectiles"},
-                            "type": {"value": "entity"}
-                          },
-                          "child": {
-                            "title": "succeeder",
-                            "type": "decorator",
-                            "name": "succeeder",
-                            "parameters": {},
-                            "child": {
-                              "title": "sendEntityMessage",
-                              "type": "action",
-                              "name": "sendEntityMessage",
-                              "parameters": {
-                                "entity": {"key": "eachItem"},
-                                "message": {"value": "kill"}
-                              }
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
                     "title": "ancientboss-dying",
                     "type": "module",
                     "name": "ancientboss-dying",
@@ -883,75 +820,6 @@
                 "name": "sequence",
                 "parameters": {},
                 "children": [
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "each",
-                      "type": "decorator",
-                      "name": "each",
-                      "parameters": {
-                        "list": {"key": "shieldCores"},
-                        "type": {"value": "entity"}
-                      },
-                      "child": {
-                        "title": "succeeder",
-                        "type": "decorator",
-                        "name": "succeeder",
-                        "parameters": {},
-                        "child": {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "eachItem"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "title": "listClear",
-                    "type": "action",
-                    "name": "listClear",
-                    "parameters": {},
-                    "output": {
-                      "list": "shieldCores"
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "each",
-                      "type": "decorator",
-                      "name": "each",
-                      "parameters": {
-                        "list": {"key": "barriers"},
-                        "type": {"value": "entity"}
-                      },
-                      "child": {
-                        "title": "succeeder",
-                        "type": "decorator",
-                        "name": "succeeder",
-                        "parameters": {},
-                        "child": {
-                          "title": "sendNotification",
-                          "type": "action",
-                          "name": "sendNotification",
-                          "parameters": {
-                            "entity": {"key": "eachItem"},
-                            "type": {"value": "deactivate"}
-                          }
-                        }
-                      }
-                    }
-                  },
                   {
                     "title": "setAggressive",
                     "type": "action",
@@ -986,73 +854,20 @@
                     }
                   },
                   {
+                    "title": "flyToPosition",
+                    "type": "action",
+                    "name": "flyToPosition",
+                    "parameters": {
+                      "position": {"key": "spawn"},
+                      "tolerance": {"value": 1}
+                    }
+                  },
+                  {
                     "title": "setVelocity",
                     "type": "action",
                     "name": "setVelocity",
                     "parameters": {
                       "velocity": {"value": [0, 0]}
-                    }
-                  },
-                  {
-                    "title": "ancientboss-reset",
-                    "type": "module",
-                    "name": "ancientboss-reset",
-                    "parameters": { }
-                  },
-                  {
-                    "title": "ancientboss-teleportto",
-                    "type": "module",
-                    "name": "ancientboss-teleportto",
-                    "parameters": {
-                      "teleportPosition": {"key": "spawn"}
-                    }
-                  },
-                  {
-                    "title": "succeeder",
-                    "type": "decorator",
-                    "name": "succeeder",
-                    "parameters": {},
-                    "child": {
-                      "title": "each",
-                      "type": "decorator",
-                      "name": "each",
-                      "parameters": {
-                        "list": {"key": "barriers"},
-                        "type": {"value": "entity"}
-                      },
-                      "child": {
-                        "title": "succeeder",
-                        "type": "decorator",
-                        "name": "succeeder",
-                        "parameters": {},
-                        "child": {
-                          "title": "sendEntityMessage",
-                          "type": "action",
-                          "name": "sendEntityMessage",
-                          "parameters": {
-                            "entity": {"key": "eachItem"},
-                            "message": {"value": "despawn"}
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "title": "listClear",
-                    "type": "action",
-                    "name": "listClear",
-                    "parameters": {},
-                    "output": {
-                      "list": "barriers"
-                    }
-                  },
-                  {
-                    "title": "setGlobalTag",
-                    "type": "action",
-                    "name": "setGlobalTag",
-                    "parameters": {
-                      "tag": {"value": "phase1"},
-                      "type": {"value": "phase"}
                     }
                   },
                   {

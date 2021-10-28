@@ -9,13 +9,13 @@
   "category" : "Ancient Rifle",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
-  "level" : 8,
+  "level" : 10,
   
   "critChance" : 1,
   "critBonus" : 5,
 
   "inventoryIcon" : [
-    { "image" : "ancientrifleicon.png" }
+    { "image" : "ancientrifle.png:auto.1" }
   ],
 
   "animation" : "ancientrifle.animation",
@@ -37,8 +37,8 @@
     }
   },
 
-  "baseOffset" : [1.0, 0.5],
-  "muzzleOffset" : [2.5625, 0],
+  "baseOffset" : [1.0, 0.0],
+  "muzzleOffset" : [1.3, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -49,14 +49,16 @@
     "class" : "GunFire",
 
     "fireTime" : 0.1,
-    "baseDps" : 12,
+    "baseDps" : 10,
     "energyUsage" : 40,
     "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "inaccuracy" : 0.01,
     "fireType" : "auto",
 
     "projectileType" : "ancientlasershot",
-    "projectileParameters" : {},
+    "projectileParameters" : {
+      "knockback" : 20
+    },
 
     "stances" : {
       "idle" : {

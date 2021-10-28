@@ -21,7 +21,7 @@
         "bounceFactor" : 0.1
       }
     },
-	"forceRegions" : {
+    "forceRegions" : {
       "vacuum" : {
         "type" : "RadialForceRegion",
         "outerRadius" : 300,
@@ -87,7 +87,7 @@
 
         "damageTeam" : 0
       },
-	  "stage3orb1" : {
+      "stage3orb1" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -95,7 +95,7 @@
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0
       },
-	  "stage3orb2" : {
+      "stage3orb2" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -103,7 +103,7 @@
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0
       },
-	  "stage3orb3" : {
+      "stage3orb3" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -111,7 +111,7 @@
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0
       },
-	  "stage3orb4" : {
+      "stage3orb4" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -119,7 +119,7 @@
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0
       },
-	  "stage3orb5" : {
+      "stage3orb5" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -127,7 +127,7 @@
         "knockback" : 0,
         "damageRepeatTimeout" : 1.0
       },
-	  "stage3orb6" : {
+      "stage3orb6" : {
         "damage" : 40,
 
         "teamType" : "enemy",
@@ -136,7 +136,7 @@
         "damageRepeatTimeout" : 1.0
       }
     },
-	"damageSources" : {
+    "damageSources" : {
       "windswept" : {
         "poly" : [ [63, 63], [63, -63], [-63, -63], [-63, 63] ],
         "damage" : 0.0,
@@ -245,27 +245,27 @@
         "ionizedImmunity" : {
           "baseValue" : 1.0
         },
-		"megadamageResistance" : {
-		  "baseValue" : 1.0
-		},
-		"abyssResistance" : {
-		  "baseValue" : 0.5
-		},
-		"electricResistance" : {
-		  "baseValue" : 0.5
-		},
-		"fireResistance" : {
-		  "baseValue" : 0.5
-		},
-		"iceResistance" : {
-		  "baseValue" : 0.5
-		},
-		"ionResistance" : {
-		  "baseValue" : 0.5
-		},
-		"poisonResistance" : {
-		  "baseValue" : 0.5
-		},
+        "megadamageResistance" : {
+          "baseValue" : 1.0
+        },
+        "abyssResistance" : {
+          "baseValue" : 0.5
+        },
+        "electricResistance" : {
+          "baseValue" : 0.5
+        },
+        "fireResistance" : {
+          "baseValue" : 0.5
+        },
+        "iceResistance" : {
+          "baseValue" : 0.5
+        },
+        "ionResistance" : {
+          "baseValue" : 0.5
+        },
+        "poisonResistance" : {
+          "baseValue" : 0.5
+        },
         "shadowImmunity" : {
          "baseValue" : 1
         },
@@ -274,6 +274,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

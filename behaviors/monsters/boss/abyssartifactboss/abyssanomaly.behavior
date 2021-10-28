@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -36,15 +36,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -55,15 +55,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -74,15 +74,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -93,15 +93,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -112,15 +112,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -131,15 +131,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -150,15 +150,15 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
       {
         "title": "timer",
@@ -169,17 +169,17 @@
         }
       },
       {
-        "title": "spawnProjectile",
-        "type": "action",
-        "name": "spawnProjectile",
-        "parameters": {
-          "aimVector": {"value": [0, 0]},
-          "offset": {"value": [0, 0]},
-          "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
-          "projectileType": {"value": "targetingprojectile"}
-        }
+    	"title": "spawnProjectile",
+    	"type": "action",
+    	"name": "spawnProjectile",
+    	"parameters": {
+    	  "aimVector": {"value": [0, 0]},
+    	  "offset": {"value": [0, 0]},
+    	  "projectileConfig": {"value": {"actionOnReap": [{"action": "projectile", "type": "abyssanomalyopen"}]}},
+    	  "projectileType": {"value": "targetingprojectile"}
+    	}
       },
-      {
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",

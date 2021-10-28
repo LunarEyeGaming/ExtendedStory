@@ -28,15 +28,15 @@
       "targetOutOfSightTime" : 5.0,
 
       "foundTargetActions" : [ 
-        {
+	    {
           "name" : "action-animate",
           "parameters" : {
             "stateType" : "body",
             "state" : "aggro",
-            "animationTimer" : 0.25
+            "animationTime" : 0.25
           }
         }
-      ],
+	  ],
 
       "fleeActions" : [ ],
 
@@ -66,28 +66,28 @@
             "winddownState" : ""
           }
         },
-        {
-          "name" : "action-fire",
-          "cooldown" : 2,
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 40,
-            "minimumRange" : 10,
-            "windupStopForce" : 0,
-            "faceTarget" : true,
-            "windupState" : "windup",
-            "windupTime" : 0.5,
-            "projectileType" : "shock",
-            "projectileParameters" : {"speed" : 100},
-            "fireOffset" : [0, 0],
-            "onGround" : false,
-            "fireState" : "",
-            "fireSound" : "fire",
-            "winddownStopForce" : 0,
-            "winddownState" : "idle",
-            "winddownTime" : 0.2
-          }
-        }
+		{
+		  "name" : "action-fire",
+		  "cooldown" : 2,
+		  "parameters" : {
+		    "requireLineOfSight" : true,
+			"maximumRange" : 40,
+			"minimumRange" : 10,
+			"windupStopForce" : 0,
+			"faceTarget" : true,
+			"windupState" : "windup",
+			"windupTime" : 0.5,
+			"projectileType" : "shock",
+			"projectileParameters" : {"speed" : 100},
+			"fireOffset" : [0, 0],
+			"onGround" : false,
+			"fireState" : "",
+			"fireSound" : "fire",
+			"winddownStopForce" : 0,
+			"winddownState" : "idle",
+			"winddownTime" : 0.2
+		  }
+		}
       ],
 
       "periodicActions" : [ ],

@@ -4,13 +4,21 @@
   // VANILLA CRAFTING STATIONS
   
       // Empty Hands
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguidearmor-codex"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguidebiomes-codex"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguidegettingstarted-codex"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguideitems-codex"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguidemonsters-codex"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ivguideweapons-codex"} },
   
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "superchallengedoor"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "bossvaultdoorgrind"} },
   
       // Foraging Table and Medical Table
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "antirotstim"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "copperpickaxe"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "silverpickaxe"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "goldpickaxe"} },
   
       // Furnace
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "arkite"} },
@@ -96,14 +104,12 @@
   
       // Ancient Weapons
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientbow"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientbroadsword_es"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancienthammer_es"} },
+  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientmagnorbs"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientpistol"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientrailgun"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientrifle"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientrocketlauncher"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientshotgun"} },
-  { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientspear_es"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientstaff"} },
   { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item": "ancientturretlauncher"} },
   
@@ -120,8 +126,7 @@
   
   
   // ***SCRIPTS***
+  {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/destroyerspawn.lua"},
   {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/tilestatusdetection_es.lua"},
   {"op":"add","path":"/statusControllerSettings/primaryScriptSources/-","value":"/scripts/passiveitems_es.lua"}
-
-  // {"op":"add","path":"/genericScriptContexts/maxHealthTracker","value":"/scripts/player/maxhealthtracker.lua"}
 ]

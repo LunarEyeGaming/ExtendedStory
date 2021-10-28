@@ -3,33 +3,33 @@
   "price" : 480,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A gun that makes a chain-like beam. It also fires bullets rapidly, like a normal chain gun.",
-  "shortdescription" : "^magenta; ^reset;", 
-  "tooltipKind" : "chaingun_es",
-  "category" : "Ancient Chain Gun",
+  "description" : "A heavy-duty weapon used for stronger enemies that a standard-issue ancient rifle cannot take out.",
+  "shortdescription" : "^magenta; ^reset;", 
+  "tooltipKind" : "gun",
+  "category" : "Ancient Chaos Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
-  "level" : 8,
+  "level" : 10,
   
-  //"critChance" : 4,
-  //"critBonus" : 10,
+  "critChance" : 4,
+  "critBonus" : 10,
 
-  "inventoryIcon" : "ancientchaingunicon.png",
+  "inventoryIcon" : "ancientchaingunnew.png:idle",
 
   "animation" : "ancientchaingun.animation",
   "animationParts" : {
-    "beamorigin" : "rainbowmuzzle.png",
-    "gun" : "gun.png",
-    "gunFullbright" : "gunfullbright.png",
-    "meter" : "meter.png",
+    "butt" : "",
+	"beamorigin" : "rainbowmuzzle.png",
+    "middle" : "ancientchaingunnew.png",
+	"middleFullbright" : "ancientchaingunnewfullbright.png",
+    "barrel" : "",
     "muzzleFlash" : "ancientmuzzleflash.png"
   },
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/ancientchaingun_fire.ogg"],
-      "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart2.ogg" ],
+	  "fireStart" : [ "/sfx/gun/ancientchaingun_beamstart.ogg" ],
       "fireLoop" : [ "/sfx/gun/ancientchaingun_beamloop.ogg" ],
-      "fireBedding" : [ "/sfx/gun/ancientchaingun_beamloop_bedding.ogg" ],
       "fireEnd" : [ "/sfx/gun/ancientchaingun_beamstop.ogg" ],
       "beamImpact" : [ "/sfx/gun/ancientchaingun_beamimpact.ogg" ]
     },
@@ -42,49 +42,88 @@
         "particles" : [
           { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] },
           { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] },
-          { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] }
+		  { "particle" : "energybeamimpact", "offset" : [0.5, 0.0] }
         ]
-      }
-    },
-    "lights" : {
-      "muzzleFlash" : {
-        "color" : [150, 0, 150]
       }
     }
   },
-  "animationScripts" : ["/items/active/effects/chain2_es.lua"],
+  "animationScripts" : ["/items/active/effects/chain.lua"],
 
-  "baseOffset" : [0, 0.0],
-  "muzzleOffset" : [4.5, -0.875],
+  "baseOffset" : [2, 0.0],
+  "muzzleOffset" : [2.3, 0],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ancient/ancientchaingun/beamability.lua"],
-    "class" : "DblHelixBeamFire",
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
 
-    "windupTime" : 2.0,
-    "startFireTime" : 1.0,
-    "endFireTime" : 0.1,
-    "baseDps" : 25,
-    "energyUsage" : 50,
+    "fireTime" : 0.01,
+    "baseDps" : 42.0,
+    "energyUsage" : 175,
+    "inaccuracy" : 0.08,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "ancientlasershotsmall",
+    "projectileParameters" : {
+      "knockback" : 2
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "animationStates" : {
+          "middle" : "fire"
+        }
+      },
+      "cooldown" : {
+        "duration" : 0.01,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  "altAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/abilities/erchiusbeam/erchiusbeam.lua"],
+    "class" : "BeamFire",
+	"name" : "Ancient Laser",
+
+    "fireTime" : 0.2,
+    "baseDps" : 15,
+    "energyUsage" : 30,
 
     "damageConfig" : {
-      "statusEffects" : [ ],
+      "statusEffects" : [ "gammarays" ],
       "damageSourceKind" : "plasma",
-      "knockback" : 5,
-      "polyXSpread" : 2
+      "knockback" : 5
     },
 
     "beamLength" : 50,
+
     "beamTransitionTime" : 0.25,
-    "beamFrames" : 4,
-    "beamMinPitch" : 0.5,
-    "beamMaxPitch" : 1.2,
-    
-    "meterFrames" : 8,
+    "beamTransitionFrames" : 4,
 
     "chain" : {
       "startOffset" : [0, 0],
@@ -95,9 +134,9 @@
       "overdrawLength" : 0.2,
       "taper" : 0,
       "waveform" : {
-        "frequency" : 10,
-        "amplitude" : 2,
-        "movement" : 10
+        "frequency" : 1.0,
+        "amplitude" : 0.08,
+        "movement" : 5.0
       },
       "fullbright" : true
     },
@@ -109,8 +148,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2"
+        "allowFlip" : true
       },
       "fire" : {
         "armRotation" : 0,
@@ -119,84 +157,28 @@
 
         "allowRotate" : true,
         "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2",
 
         "animationStates" : {
-          //"gun" : "windup",
-          "beamorigin" : "fire"
+          "middle" : "windup",
+		  "beamorigin" : "fire"
         }
       },
       "cooldown" : {
-        "duration" : 0,
+        "duration" : 1,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : true,
 
         "allowRotate" : true,
         "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2",
 
         "animationStates" : {
-          //"gun" : "winddown",
-          "beamorigin" : "idle"
+          "middle" : "winddown",
+		  "beamorigin" : "idle"
         }
       }
     }
   },
-  "altAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
-    "name" : "Erratic Bullet Storm",
 
-    "fireTime" : 0.04,
-    "baseDps" : 25.0,
-    "energyUsage" : 100,
-    "inaccuracy" : 0,
-
-    "projectileCount" : 1,
-    "fireType" : "auto",
-
-    "projectileType" : "ancientlasershoterratic_es",
-    "projectileParameters" : {
-      "knockback" : 2,
-      "turnRate" : [-0.4, 0.4]
-    },
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2"
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2" /*,
-
-        "animationStates" : {
-          "gun" : "fire"
-        }*/
-      },
-      "cooldown" : {
-        "duration" : 0.01,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
-      }
-    }
-  },
-
-  "builder" : "/items/buildscripts/buildchaingun.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

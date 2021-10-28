@@ -8,7 +8,7 @@
 
   "animation" : "ancienttrifangle.animation",
 
-  "dropPools" : ["ancientmessTreasure"],
+  "dropPools" : ["empty"],
 
   "baseParameters" : {
     "scripts" : [
@@ -43,62 +43,62 @@
 
       "hostileActions" : [
         { 
-          "name" : "action-fire",
-          "cooldown" : 2, 
-          "parameters" : { 
-            "requireLineOfSight" : true, 
-            "maximumRange" : 25, 
-            "minimumRange" : 10, 
-            "windupStopForce" : 0, 
-            "faceTarget" : false, 
-            "rotateToTarget" : true, 
-            "windupState" : "firewindup", 
-            "windupTime" : 1.0, 
-            "projectileType" : "ancientlasershotsplit",
-            "projectileParameters" : {},
-            "fireOffset" : [0, 0],
-            "onGround" : false,
-            "fireState" : "",
-            "fireSound" : "fire",
-            "winddownStopForce" : 0,
-            "projectileCount" : 2,
-            "projectileInterval" : 0.05,
-            "winddownState" : "firewinddown",
-            "winddownTime" : 0.2
-          }
-        },
-        {
-          "name" : "action-fire",
-          "cooldown" : 2,
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 25,
-            "minimumRange" : 10,
-            "windupStopForce" : 0,
-            "faceTarget" : false,
-            "rotateToTarget" : true,
-            "windupState" : "firewindup",
-            "windupTime" : 1.0,
-            "projectileType" : "ancientrocket_es",
-            "projectileParameters" : {
-              "speed" : 40,
-              "power" : 25,
-              "actionOnReap" : [
-                {
-                  "action" : "config",
-                  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
-                }
-              ]
-            },
-            "fireOffset" : [0, 0],
-            "onGround" : false,
-            "fireState" : "",
-            "fireSound" : "fire",
-            "winddownStopForce" : 0,
-            "winddownState" : "firewinddown",
-            "winddownTime" : 0.2
-          }
-        },
+		  "name" : "action-fire",
+	      "cooldown" : 2, 
+		  "parameters" : { 
+		    "requireLineOfSight" : true, 
+		    "maximumRange" : 25, 
+		    "minimumRange" : 10, 
+		    "windupStopForce" : 0, 
+		    "faceTarget" : false, 
+		    "rotateToTarget" : true, 
+		    "windupState" : "firewindup", 
+		    "windupTime" : 1.0, 
+		    "projectileType" : "ancientlasershotsplit",
+		    "projectileParameters" : {},
+			"fireOffset" : [0, 0],
+			"onGround" : false,
+			"fireState" : "",
+			"fireSound" : "fire",
+			"winddownStopForce" : 0,
+			"projectileCount" : 2,
+			"projectileInterval" : 0.05,
+			"winddownState" : "firewinddown",
+			"winddownTime" : 0.2
+		  }
+		},
+		{
+		  "name" : "action-fire",
+		  "cooldown" : 2,
+		  "parameters" : {
+		    "requireLineOfSight" : true,
+			"maximumRange" : 25,
+			"minimumRange" : 10,
+			"windupStopForce" : 0,
+			"faceTarget" : false,
+			"rotateToTarget" : true,
+			"windupState" : "firewindup",
+			"windupTime" : 1.0,
+			"projectileType" : "ancientrocket",
+			"projectileParameters" : {
+			  "speed" : 40,
+			  "power" : 25,
+			  "actionOnReap" : [
+			    {
+				  "action" : "config",
+				  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+				}
+			  ]
+			},
+			"fireOffset" : [0, 0],
+			"onGround" : false,
+			"fireState" : "",
+			"fireSound" : "fire",
+			"winddownStopForce" : 0,
+			"winddownState" : "firewinddown",
+			"winddownTime" : 0.2
+		  }
+		},
         {
           "name" : "approach-burn",
           "cooldown" : 0.5,
@@ -122,15 +122,15 @@
             "projectileCount" : 1,
             "projectileType" : "ancientexplosion",
             "projectileParameters" : {
-              "periodicActions" : [
-                {
-                  "time" : 0,
-                  "repeat" : false,
-                  "action" : "sound",
-                  "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
-                }
-              ]
-            },
+			  "periodicActions" : [
+			    {
+				  "time" : 0,
+				  "repeat" : false,
+				  "action" : "sound",
+				  "options" : [ "/sfx/npc/boss/ancient_explosion.ogg" ]
+				}
+			  ]
+			},
             "aimDirection" : [1, 0],
             "inaccuracy" : 0,
             "fireOffset" : [0, 0]

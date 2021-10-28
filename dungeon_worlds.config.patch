@@ -4,14 +4,14 @@
     "path" : "/isolatedvault",
     "value" : {
       "primaryDungeon" : "isolatedvault",
-      "threatLevel" : 8,
+      "threatLevel" : 10,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [300, 300, 300],
       "musicTrack" : "/music/lava-exploration1.ogg",
-      "biome" : "scorchedcity",
-      "environmentStatusEffects" : ["dontstarve", "quickhealnerf_es"]
+      "biome": "scorchedcity",
+      "environmentStatusEffects" : ["dontstarve"]
     }
   },
   {
@@ -19,13 +19,13 @@
     "path" : "/isolatedvault2",
     "value" : {
       "primaryDungeon" : "isolatedvault2",
-      "threatLevel" : 8,
+      "threatLevel" : 10,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [300, 300, 300],
       "musicTrack" : "/music/lava-exploration1.ogg",
-      "biome" : "outpost",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -40,7 +40,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [300, 300, 300],
       "musicTrack" : "/music/on-the-beach-at-night.ogg",
-      "biome" : "garden"
+      "biome": "garden"
     }
   },
   {
@@ -48,15 +48,14 @@
     "path" : "/cyberfacility",
     "value" : {
       "primaryDungeon" : "cyberfacility",
-      "threatLevel" : 9,
+      "threatLevel" : 10,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
-      "dungeonBaseHeight" : 600,
-      "dungeonSurfaceHeight" : 480,
+      "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/error-0xbfaf000.ogg",
-      "biome" : "darkabyss",
-      "environmentStatusEffects" : ["dontstarve", "biomefreezing", "quickhealnerf_es"]
+      "biome": "darkabyss",
+      "environmentStatusEffects" : ["dontstarve", "biomefreezing"]
     }
   },
   {
@@ -71,7 +70,7 @@
       "dungeonSurfaceHeight" : 900,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/body-electric-loop.ogg",
-      "biome" : "voltage",
+      "biome": "voltage",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -87,7 +86,7 @@
       "dungeonSurfaceHeight" : 1400,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/lava-exploration2.ogg",
-      "biome" : "eternalfire",
+      "biome": "eternalfire",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -102,7 +101,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/arctic-exploration2.ogg",
-      "biome" : "eternalfrost",
+      "biome": "eternalfrost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -117,7 +116,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/crystal-exploration1.ogg",
-      "biome" : "undergroundeternalfrost",
+      "biome": "undergroundeternalfrost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -132,7 +131,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/casiopeia.ogg",
-      "biome" : "undergroundeternalfrost",
+      "biome": "undergroundeternalfrost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -148,7 +147,7 @@
       "dungeonSurfaceHeight" : 1400,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/crystal-battle1-loop.ogg",
-      "biome" : "nuclearwasteland",
+      "biome": "nuclearwasteland",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -156,16 +155,14 @@
     "op" : "add",
     "path" : "/abyssartifactdungeon",
     "value" : {
-      "primaryDungeon" : "abyssartifactdungeonbak",
+      "primaryDungeon" : "abyssartifactdungeon",
       "threatLevel" : 10,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
-      "dungeonSurfaceHeight" : 1350,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/penumbra-by-kevinmacleod.ogg",
-      //"musicTrack" : "",
-      "biome" : "darkabyss",
+      "biome": "darkabyss",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -180,7 +177,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/event-horizon-alxdmusic.ogg",
-      "biome" : "outpost",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -195,7 +192,7 @@
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/silence.ogg",
-      "biome" : "outpost",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -209,7 +206,7 @@
     "worldSize" : [2000, 2000],
     "dungeonBaseHeight" : 1000,
     "dungeonSurfaceHeight" : 810,
-    "biome" : "supervoidmission",
+	"biome": "supervoidmission",
     "ambientLightLevel" : [32, 32, 32],
     "musicTrack" : "/music/inviolate-loop.ogg",
     "environmentStatusEffects" : ["dontstarve", "chaoticvoid"]
@@ -220,14 +217,14 @@
     "path" : "/ruinseedmission",
     "value" : {
       "primaryDungeon" : "ruinseedmission",
-      "threatLevel" : 6,
+      "threatLevel" : 5,
       "gravity" : 80,
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
       "dungeonSurfaceHeight" : 1400,
       "ambientLightLevel" : [1200, 1200, 1200],
       "musicTrack" : "/music/drosera.ogg",
-      "biome" : "garden",
+      "biome": "garden",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -241,8 +238,8 @@
       "worldSize" : [2500, 2500],
       "dungeonBaseHeight" : 1500,
       "ambientLightLevel" : [1200, 1200, 1200],
-      "musicTrack" : "",
-      "biome" : "outpost",
+      "musicTrack" : "/music/silence.ogg",
+      "biome": "outpost",
       "environmentStatusEffects" : ["dontstarve"]
     }
   },
@@ -272,7 +269,7 @@
       "dungeonBaseHeight" : 1500,
       "dungeonSurfaceHeight" : 1400,
       "ambientLightLevel" : [1200, 1200, 1200],
-      "musicTrack" : "",
+      "musicTrack" : "/music/temple-of-kluex.ogg",
       "environmentStatusEffects" : ["dontstarve"]
     }
   }

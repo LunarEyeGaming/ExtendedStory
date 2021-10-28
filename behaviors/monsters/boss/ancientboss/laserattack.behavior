@@ -9,24 +9,17 @@
     "/scripts/actions/monster.lua",
     "/scripts/behavior.lua",
     "/scripts/actions/time.lua",
-    "/scripts/actions/notification.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/boss/ancientboss.lua"
   ],
-  "parameters": {
-    "segmentGroupCount": 7,
-    "segmentGroupWidth": 12,
-    "segmentGroupOffset": [12.5, 0],
-    "halfSegmentGroupOffset": [6.25, 0],
-    "gapLoops": 3
-  },
+  "parameters": {},
   "root": {
     "title": "sequence",
     "type": "composite",
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
@@ -42,536 +35,83 @@
           "time": {"value": 1.2}
         }
       },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepStartPos"},
-          "offset": {"value": [-4, -4]}
-        },
-        "output": {
-          "position": "sweepStartPos"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepEndPos"},
-          "offset": {"value": [4, -4]}
-        },
-        "output": {
-          "position": "sweepEndPos"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepStartPos"},
-          "offset": {"value": [-7, -19]}
-        },
-        "output": {
-          "position": "barrierPos"
-        }
-      },
-      {
-        "title": "spawnMonster",
-        "type": "action",
-        "name": "spawnMonster",
-        "parameters": {
-          "type": {"value": "ancientboss2_laserbarrier"},
-          "position": {"key": "barrierPos"}
-        },
-        "output": {
-          "entityId": "barrierId"
-        }
-      },
-      {
-        "title": "listPush",
-        "type": "action",
-        "name": "listPush",
-        "parameters": {
-          "entity": {"key": "barrierId"},
-          "list": {"key": "barriers"}
-        },
-        "output": {
-          "list": "barriers"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepStartPos"},
-          "offset": {"value": [-14, -19]}
-        },
-        "output": {
-          "position": "barrierPos"
-        }
-      },
-      {
-        "title": "spawnMonster",
-        "type": "action",
-        "name": "spawnMonster",
-        "parameters": {
-          "type": {"value": "ancientboss2_laserbarrier"},
-          "position": {"key": "barrierPos"}
-        },
-        "output": {
-          "entityId": "barrierId"
-        }
-      },
-      {
-        "title": "listPush",
-        "type": "action",
-        "name": "listPush",
-        "parameters": {
-          "entity": {"key": "barrierId"},
-          "list": {"key": "barriers"}
-        },
-        "output": {
-          "list": "barriers"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepEndPos"},
-          "offset": {"value": [7, -19]}
-        },
-        "output": {
-          "position": "barrierPos"
-        }
-      },
-      {
-        "title": "spawnMonster",
-        "type": "action",
-        "name": "spawnMonster",
-        "parameters": {
-          "type": {"value": "ancientboss2_laserbarrier"},
-          "position": {"key": "barrierPos"}
-        },
-        "output": {
-          "entityId": "barrierId"
-        }
-      },
-      {
-        "title": "listPush",
-        "type": "action",
-        "name": "listPush",
-        "parameters": {
-          "entity": {"key": "barrierId"},
-          "list": {"key": "barriers"}
-        },
-        "output": {
-          "list": "barriers"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "upperSweepEndPos"},
-          "offset": {"value": [14, -19]}
-        },
-        "output": {
-          "position": "barrierPos"
-        }
-      },
-      {
-        "title": "spawnMonster",
-        "type": "action",
-        "name": "spawnMonster",
-        "parameters": {
-          "type": {"value": "ancientboss2_laserbarrier"},
-          "position": {"key": "barrierPos"}
-        },
-        "output": {
-          "entityId": "barrierId"
-        }
-      },
-      {
-        "title": "listPush",
-        "type": "action",
-        "name": "listPush",
-        "parameters": {
-          "entity": {"key": "barrierId"},
-          "list": {"key": "barriers"}
-        },
-        "output": {
-          "list": "barriers"
-        }
-      },
-      {
-        "title": "flyToPosition",
-        "type": "action",
-        "name": "flyToPosition",
-        "parameters": {
-          "position": {"key": "sweepStartPos"},
-          "speed": {"value": 50}
-        }
-      },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [50, 0]}
-        }
-      },
-      {
-        "title": "ancientboss-movefire",
-        "type": "module",
-        "name": "ancientboss-movefire",
-        "parameters": {
-          "position": {"key": "sweepEndPos"},
-          "flightSpeed": {"value": 50},
-          "projectileInterval": {"value": 0.25},
-          "projectileType": {"value": "ancientbossdelayedlaserbeam2_es"},
-          "projectileOffset": {"value": [0, -1]},
-          "projectileConfig": {"value": {"power": 10}},
-          "aimVector": {"value": [0, -1]},
-          "fireSound": {"value": "minionspawn2"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "teleport"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "teleportOut"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1}
-        }
-      },
-      {
-        "title": "setGlobalTag",
-        "type": "action",
-        "name": "setGlobalTag",
-        "parameters": {
-          "tag": {"value": "I"},
-          "type": {"value": "invisible"}
-        }
-      },
-      {
-        "title": "setParticleEmitterActive",
-        "type": "action",
-        "name": "setParticleEmitterActive",
-        "parameters": {
-          "emitter": {"value": "idle"},
-          "active": {"value": false}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "invisible"},
-          "type": {"value": "movement"}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 2}
-        },
-        "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1}
-            }
-          },
-          {
-            "title": "addEphemeralEffect",
-            "type": "action",
-            "name": "addEphemeralEffect",
-            "parameters": {
-              "name": {"value": "invulnerable"}
-            }
-          }
-        ]
-      },
-      {
-        "title": "removeEphemeralEffect",
-        "type": "action",
-        "name": "removeEphemeralEffect",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "target"}
-        },
-        "output": {
-          "position": "targetPos"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "offset": {"value": [0, 20]},
-          "position": {"key": "targetPos"}
-        },
-        "output": {
-          "position": "preslam"
-        }
-      },
-      {
-        "title": "setPosition",
-        "type": "action",
-        "name": "setPosition",
-        "parameters": {
-          "position": {"key": "preslam"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "teleport"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "teleportIn"}
-        }
-      },
-      {
-        "title": "setGlobalTag",
-        "type": "action",
-        "name": "setGlobalTag",
-        "parameters": {
-          "tag": {"value": ""},
-          "type": {"value": "invisible"}
-        }
-      },
-      {
-        "title": "setParticleEmitterActive",
-        "type": "action",
-        "name": "setParticleEmitterActive",
-        "parameters": {
-          "emitter": {"value": "idle"},
-          "active": {"value": true}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "visible"},
-          "type": {"value": "movement"}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1},
-              "untilSuccess": {"value": false}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "entityPosition",
-                  "type": "action",
-                  "name": "entityPosition",
-                  "parameters": {
-                    "entity": {"key": "target"}
-                  },
-                  "output": {
-                    "position": "targetPos"
-                  }
-                },
-                {
-                  "title": "offsetPosition",
-                  "type": "action",
-                  "name": "offsetPosition",
-                  "parameters": {
-                    "offset": {"value": [0, 20]},
-                    "position": {"key": "targetPos"}
-                  },
-                  "output": {
-                    "position": "preslam"
-                  }
-                },
-                {
-                  "title": "setPosition",
-                  "type": "action",
-                  "name": "setPosition",
-                  "parameters": {
-                    "position": {"key": "preslam"}
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.01}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1.0}
-            }
-          }
-        ]
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.5}
-        }
-      },
-      {
-        "title": "setVelocity",
-        "type": "action",
-        "name": "setVelocity",
-        "parameters": {
-          "velocity": {"value": [0, -50]}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": -1}
-        },
-        "children": [
-          {
-            "title": "controlParameters",
-            "type": "action",
-            "name": "controlParameters",
-            "parameters": {
-              "parameters": {"value": {"gravityEnabled": true}}
-            }
-          },
-          {
-            "title": "setDamageOnTouch",
-            "type": "action",
-            "name": "setDamageOnTouch",
-            "parameters": {
-              "touchDamage": {"value": true}
-            }
-          },
-          {
-            "title": "dynamic",
-            "type": "composite",
-            "name": "dynamic",
-            "parameters": {},
-            "children": [
-              {
-                "title": "onGround",
-                "type": "action",
-                "name": "onGround",
-                "parameters": {}
-              },
-              {
-                "title": "runner",
-                "type": "action",
-                "name": "runner",
-                "parameters": {}
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "setDamageOnTouch",
-        "type": "action",
-        "name": "setDamageOnTouch",
-        "parameters": {
-          "touchDamage": {"value": false}
-        }
-      },
-      {
-        "title": "controlParameters",
-        "type": "action",
-        "name": "controlParameters",
-        "parameters": {
-          "parameters": {"value": {"gravityEnabled": false}}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "landing"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "landing"}
-        }
-      },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "uppersweepstart"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "uppersweepend"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "offset": {"value": [0, -20]}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "sweepEndPos"},
+		  "offset": {"value": [0, -20]}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "speed": {"value": 50}
+		}
+	  },
       {
         "title": "setVelocity",
         "type": "action",
@@ -580,362 +120,25 @@
           "velocity": {"value": [0, 0]}
         }
       },
+	  {
+		"title": "ancientboss-movefire2",
+		"type": "module",
+		"name": "ancientboss-movefire2",
+		"parameters": {
+		  "position": {"key": "sweepEndPos"},
+		  "flightSpeed": {"value": 15},
+		  "projectileInterval": {"value": 1},
+		  "projectileType": {"value": "supernovabeam"},
+		  "projectileOffset": {"value": [0, -1]},
+		  "fireSound": {"value": "minionspawn2"}
+		}
+	  },
       {
-        "title": "queryEntity",
+        "title": "setVelocity",
         "type": "action",
-        "name": "queryEntity",
+        "name": "setVelocity",
         "parameters": {
-          "entityTypes": {"value": ["projectile"]},
-          "range": {"value": 100}
-        },
-        "output": {
-          "list": "projectiles"
-        }
-      },
-      {
-        "title": "succeeder",
-        "type": "decorator",
-        "name": "succeeder",
-        "parameters": {},
-        "child": {
-          "title": "each",
-          "type": "decorator",
-          "name": "each",
-          "parameters": {
-            "list": {"key": "projectiles"},
-            "type": {"value": "entity"}
-          },
-          "child": {
-            "title": "succeeder",
-            "type": "decorator",
-            "name": "succeeder",
-            "parameters": {},
-            "child": {
-              "title": "sendEntityMessage",
-              "type": "action",
-              "name": "sendEntityMessage",
-              "parameters": {
-                "entity": {"key": "eachItem"},
-                "message": {"value": "delayedlaserbeam2_fire"}
-              }
-            }
-          }
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "stunned"},
-          "loops": {"value": -1}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "emitParticles",
-            "type": "action",
-            "name": "emitParticles",
-            "parameters": {
-              "emitter": {"value": "stunned"}
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": "<gapLoops>"}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "offsetPosition",
-                  "type": "action",
-                  "name": "offsetPosition",
-                  "parameters": {
-                    "position": {"key": "sweepStartPos"},
-                    "offset": {"value": "<halfSegmentGroupOffset>"}
-                  },
-                  "output": {
-                    "position": "gapCenter"
-                  }
-                },
-                {
-                  "title": "repeater",
-                  "type": "decorator",
-                  "name": "repeater",
-                  "parameters": {
-                    "maxLoops": {"value": "<segmentGroupCount>"}
-                  },
-                  "child": {
-                    "title": "sequence",
-                    "type": "composite",
-                    "name": "sequence",
-                    "parameters": {},
-                    "children": [
-                      {
-                        "title": "spawnGapProjectiles",
-                        "type": "action",
-                        "name": "spawnGapProjectiles",
-                        "parameters": {
-                          "areaWidth": {"value": "<segmentGroupWidth>"},
-                          "center": {"key": "gapCenter"},
-                          "power": {"value": 20},
-                          "projectileCount": {"value": 4},
-                          "segmentWidth": {"value": 2},
-                          "spawnInterval": {"value": 0.05}
-                        }
-                      },
-                      {
-                        "title": "offsetPosition",
-                        "type": "action",
-                        "name": "offsetPosition",
-                        "parameters": {
-                          "position": {"key": "gapCenter"},
-                          "offset": {"value": "<segmentGroupOffset>"}
-                        },
-                        "output": {
-                          "position": "gapCenter"
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 1.0}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "title": "stopAllSounds",
-        "type": "action",
-        "name": "stopAllSounds",
-        "parameters": {
-          "sound": {"value": "stunned"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.01}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "teleport"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "teleportOut"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1}
-        }
-      },
-      {
-        "title": "setGlobalTag",
-        "type": "action",
-        "name": "setGlobalTag",
-        "parameters": {
-          "tag": {"value": "I"},
-          "type": {"value": "invisible"}
-        }
-      },
-      {
-        "title": "setParticleEmitterActive",
-        "type": "action",
-        "name": "setParticleEmitterActive",
-        "parameters": {
-          "emitter": {"value": "idle"},
-          "active": {"value": false}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "invisible"},
-          "type": {"value": "movement"}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 2}
-        },
-        "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1}
-            }
-          },
-          {
-            "title": "addEphemeralEffect",
-            "type": "action",
-            "name": "addEphemeralEffect",
-            "parameters": {
-              "name": {"value": "invulnerable"}
-            }
-          }
-        ]
-      },
-      {
-        "title": "removeEphemeralEffect",
-        "type": "action",
-        "name": "removeEphemeralEffect",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "target"}
-        },
-        "output": {
-          "position": "targetPos"
-        }
-      },
-      {
-        "title": "setPosition",
-        "type": "action",
-        "name": "setPosition",
-        "parameters": {
-          "position": {"key": "spawn"}
-        }
-      },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "teleport"}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "teleportIn"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 1}
-        }
-      },
-      {
-        "title": "setGlobalTag",
-        "type": "action",
-        "name": "setGlobalTag",
-        "parameters": {
-          "tag": {"value": ""},
-          "type": {"value": "invisible"}
-        }
-      },
-      {
-        "title": "setParticleEmitterActive",
-        "type": "action",
-        "name": "setParticleEmitterActive",
-        "parameters": {
-          "emitter": {"value": "idle"},
-          "active": {"value": true}
-        }
-      },
-      {
-        "title": "setAnimationState",
-        "type": "action",
-        "name": "setAnimationState",
-        "parameters": {
-          "state": {"value": "visible"},
-          "type": {"value": "movement"}
-        }
-      },
-      {
-        "title": "succeeder",
-        "type": "decorator",
-        "name": "succeeder",
-        "parameters": {},
-        "child": {
-          "title": "each",
-          "type": "decorator",
-          "name": "each",
-          "parameters": {
-            "list": {"key": "barriers"},
-            "type": {"value": "entity"}
-          },
-          "child": {
-            "title": "succeeder",
-            "type": "decorator",
-            "name": "succeeder",
-            "parameters": {},
-            "child": {
-              "title": "sendNotification",
-              "type": "action",
-              "name": "sendNotification",
-              "parameters": {
-                "entity": {"key": "eachItem"},
-                "type": {"value": "deactivate"}
-              }
-            }
-          }
-        }
-      },
-      {
-        "title": "listClear",
-        "type": "action",
-        "name": "listClear",
-        "parameters": {},
-        "output": {
-          "list": "barriers"
+          "velocity": {"value": [0, 0]}
         }
       },
       {

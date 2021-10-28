@@ -63,6 +63,27 @@ end
 function destroyRuin()
   quest.setObjectiveList({{self.descriptions.destroyRuin, false}})
 
+  local findBoss = util.uniqueEntityTracker(config.getParameter("bossUid"), self.compassUpdate)
+  while not findBoss() do
+    coroutine.yield()
+  end
+
+  while entity.position()[2] > config.getParameter("brainMessageHeight") do
+    coroutine.yield()
+  end
+
+  local foundCheckpoint = false
+  local queryCheckpoints = util.interval(0.5, function()
+    local nearObjects = world.entityQuery(entity.position(), 20, {includedTypes = {"object"}})
+    if util.find(nearObjects, function(entityId) return world.entityName(entityId) == "checkpoint" end) then
+      foundCheckpoint = true
+    end
+  end)
+  while not foundCheckpoint do
+    queryCheckpoints(script.updateDt())
+    coroutine.yield()
+  end
+
   while storage.stage == 1 do
     coroutine.yield()
   end

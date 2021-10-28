@@ -8,7 +8,7 @@
 
   "animation" : "ancienttrailer.animation",
 
-  "dropPools" : ["ancientmessTreasure"],
+  "dropPools" : ["empty"],
 
   "baseParameters" : {
     "scripts" : [
@@ -54,12 +54,13 @@
 
       "approachActions" : [
         {
-          "name" : "approach-burn",
+          "name" : "approach-fall",
           "parameters" : {
-            "burnState" : "fly",
+            "flyState" : "fly",
             "idleState" : "idle",
-            "burnTime" : 0.5,
-            "rotateGroup" : "body"
+            "friction" : 15,
+            "dampenDistance" : 20,
+            "dampenMultiplier" : 2
           }
         }
       ],

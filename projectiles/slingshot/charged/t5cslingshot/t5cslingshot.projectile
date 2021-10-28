@@ -10,10 +10,9 @@
   "lightColor" : [102, 58, 31],
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion/regularexplosion.config"
-    }
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion/regularexplosion.config"
+	}
   ],
-  "damageKind" : "default",
-  "damageType" : "NoDamage"
+  "damageKind" : "fire"
 }

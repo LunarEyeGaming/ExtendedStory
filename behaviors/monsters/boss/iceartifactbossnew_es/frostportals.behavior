@@ -28,15 +28,15 @@
           "time": {"value": 0.75}
         }
       },
-      {
-        "title": "flyToPosition",
-        "type": "action",
-        "name": "flyToPosition",
-        "parameters": {
-          "position": {"key": "spawn"},
-          "speed": {"value": 50}
-        }
-      },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "speed": {"value": 50}
+		}
+	  },
       {
         "title": "setVelocity",
         "type": "action",
@@ -52,55 +52,55 @@
         "parameters": {
           "maxLoops": {"value": 3}
         },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "entityPosition",
-              "type": "action",
-              "name": "entityPosition",
-              "parameters": {
-                "entity": {"key": "target"}
-              },
-              "output": {
-                "position": "targetPos"
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [1, 0]},
-                "offset": {"value": [0, 0]},
-                "projectileConfig": {"value": {"power": 10}},
-                "projectileType": {"value": "frostportalwindup_es"},
-                "position": {"key": "targetPos"},
-                "scalePower": {"value": true}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 4}
-              }
-            }
-          ]
-        }
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+        	  "title": "entityPosition",
+        	  "type": "action",
+        	  "name": "entityPosition",
+        	  "parameters": {
+			    "entity": {"key": "target"}
+			  },
+			  "output": {
+			    "position": "targetPos"
+			  }
+        	},
+			{
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [1, 0]},
+    		    "offset": {"value": [0, 0]},
+    		    "projectileConfig": {"value": {"power": 10}},
+    		    "projectileType": {"value": "frostportalwindup_es"},
+				"position": {"key": "targetPos"},
+				"scalePower": {"value": true}
+    		  }
+    		},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 4}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.75}
-        }
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.75}
+		}
+	  }
     ]
   }
 }

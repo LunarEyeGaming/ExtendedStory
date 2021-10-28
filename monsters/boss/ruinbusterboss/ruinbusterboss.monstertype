@@ -59,7 +59,7 @@
 
     "touchDamage" : {
       "poly" : [ [8.4375, 16.4375], [16.4375, 8.4375], [16.4375, -8.4375], [8.4375, -16.4375], [-8.4375, -16.4375], [-16.4375, -8.4375], [-16.4375, 8.4375], [-8.4375, 16.4375] ],
-      "damage" : 25,
+      "damage" : 10,
 
       "teamType" : "enemy",
       "damageSourceKind" : "hammer",
@@ -88,7 +88,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 2500
         },
         "protection" : {
           "baseValue" : 25.0
@@ -134,6 +134,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

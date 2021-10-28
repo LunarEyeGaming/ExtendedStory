@@ -1,14 +1,12 @@
 require "/scripts/util.lua"
 
 function init()
-  message.setHandler("setTarget", function(_, _, entityId)
-    self.target = entityId
-  end)
-  message.setHandler("kill", function()
-    shouldFire = false
-    projectile.die()
-  end)
-  shouldFire = true
+  local players = world.entityQuery(entity.position(), 200, {includedTypes = {"player"}})
+  players = util.filter(shuffled(players), function(entityId)
+      return not world.lineTileCollision(entity.position(), world.entityPosition(entityId))
+    end)
+  self.target = players[1]
+  if not self.target then projectile.die() end
 end
 
 function update()
@@ -27,9 +25,9 @@ function update()
 end
 
 function destroy()
-  if shouldFire then
+  if self.target and projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("ancientboss_plasmashot", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 75, power = projectile.getParameter("power")})
+    world.spawnProjectile("ancientboss_plasmashot", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 50, power = projectile.getParameter("power")})
     projectile.processAction(projectile.getParameter("explosionAction"))
   end
 end

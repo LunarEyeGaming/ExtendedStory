@@ -6,18 +6,18 @@
   "periodicActions" : [],
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "laserbeamwinddown_es"
-    }
+	  "action" : "projectile",
+	  "type" : "laserbeamwinddown_es"
+	}
   ],
   "timeToLive" : 1.5,
   "image" : "laserbeam_es.png",
   "fullbright" : true,
   "damageKindImage" : "icon.png",
   "speed" : 0,
-  "animationCycle" : 0.66,
+  "animationCycle" : 0.4,
   "lightColor" : [93, 10, 47],
-  "frameNumber" : 8,
+  "frameNumber" : 4,
   "power" : 50,
   "damagePoly" : [ [-160, -4], [-160, 4], [160, 4], [160, -4] ],
   "damageKind" : "plasma",

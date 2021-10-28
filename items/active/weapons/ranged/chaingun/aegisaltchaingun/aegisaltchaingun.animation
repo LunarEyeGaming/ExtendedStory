@@ -17,22 +17,22 @@
           }
         }
       },
-      "middle" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 1,
-            "cycle" : 1.0,
-            "mode" : "loop"
-          },
-          "fire" : {
-            "frames" : 1,
-            "cycle" : 0.02,
-            "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      }
+	  "middle" : {
+	    "default" : "idle",
+		"states" : {
+		  "idle" : {
+		    "frames" : 1,
+			"cycle" : 1.0,
+			"mode" : "loop"
+		  },
+		  "fire" : {
+		    "frames" : 1,
+			"cycle" : 0.02,
+			"mode" : "transition",
+			"transition" : "idle"
+		  }
+		}
+	  }
     },
 
     "parts" : {
@@ -50,43 +50,43 @@
           "offset" : [0, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         },
-        "partStates" : {
-          "middle" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          }
-        }
-      },
+		"partStates" : {
+		  "middle" : {
+		    "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle"
+			  }
+			},
+			"fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire.<frame>"
+			  }
+			}
+		  }
+		}
+	  },
       "middleFullbright" : {
         "properties" : {
           "centered" : true,
-          "fullbright" : true,
-          "zLevel" : 3,
+		  "fullbright" : true,
+		  "zLevel" : 3,
           "offset" : [1.2, -0.8],
           "transformationGroups" : ["weapon"]
         },
-        "partStates" : {
-          "middle" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          }
-        }
+		"partStates" : {
+		  "middle" : {
+		    "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle"
+			  }
+			},
+			"fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire.<frame>"
+			  }
+			}
+		  }
+		}
       },
       "barrel" : {
         "properties" : {
@@ -136,7 +136,7 @@
       "offsetRegion" : [0, 0, 0, 0],
       "particles" : [ ]
     },
-    "altMuzzleFlash" : {
+	"altMuzzleFlash" : {
       "transformationGroups" : ["muzzle"],
       "offsetRegion" : [0, 0, 0, 0],
       "particles" : [ ]

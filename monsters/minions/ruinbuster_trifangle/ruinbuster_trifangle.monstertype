@@ -22,12 +22,12 @@
 
     "seeThroughLiquid" : false,
     "behaviorConfig" : {
-      "damageOnTouch" : false,
+      "damageOnTouch" : true,
 
-      "targetQueryRange" : 200,
+      "targetQueryRange" : 50,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 200,
+      "keepTargetInRange" : 100,
       "targetOutOfSightTime" : 10.0,
 
       "hurtWaitForGround" : false,
@@ -47,8 +47,8 @@
           "cooldown" : 2,
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 200,
-            "minimumRange" : 5,
+            "maximumRange" : 25,
+            "minimumRange" : 10,
             "windupStopForce" : 0,
             "faceTarget" : false,
             "rotateToTarget" : true,
@@ -58,7 +58,7 @@
             "projectileType" : "heatbeam",
             "projectileParameters" : {
               "speed" : 40,
-              "power" : 15
+              "power" : 25
             },
             "fireOffset" : [0, 0],
             "onGround" : false,
@@ -68,6 +68,17 @@
             "winddownStopForce" : 0,
             "winddownState" : "firewinddown",
             "winddownTime" : 0.2
+          }
+        },
+        {
+          "name" : "approach-burn",
+          "cooldown" : 0.5,
+          "parameters" : {
+            "burnTime" : 0.5,
+            "approachDistance" : 15,
+            "rotateGroup" : "body",
+            "burnState" : "burn",
+            "idleState" : "burnwinddown"
           }
         }
       ],
@@ -80,7 +91,7 @@
 
     "touchDamage" : {
       "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
-      "damage" : 7,
+      "damage" : 10,
 
       "teamType" : "enemy",
       "damageSourceKind" : "impact",
@@ -99,12 +110,12 @@
       "runSpeed" : 12,
       "gravityEnabled" : false,
 
+      "bounceFactor" : 0.25,
       "groundFriction" : 10,
 
       "airFriction" : 0,
       "airForce" : 100,
-      "flySpeed" : 15,
-      "physicsEffectCategories" : ["stationarymonster"]
+      "flySpeed" : 15
     },
 
     "bodyMaterialKind" : "robotic",
@@ -132,13 +143,16 @@
 
       "stats" : {
         "grit" : {
-          "baseValue" : 1.0
+          "baseValue" : 0.25
         },
         "knockbackStunTime" : {
           "baseValue" : 0.3
         },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
         "maxHealth" : {
-          "baseValue" : 100
+          "baseValue" : 150
         },
         "protection" : {
           "baseValue" : 0.0
@@ -157,8 +171,7 @@
       "resources" : {
         "stunned" : {
           "deltaValue" : -1.0,
-          "initialValue" : 0.0,
-          "maxValue" : 0.0
+          "initialValue" : 0.0
         },
         "health" : {
           "maxStat" : "maxHealth",

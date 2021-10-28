@@ -7,7 +7,7 @@
   "spawnProfile" : {
     "groups" : [
       {
-        "select" : 4,
+        "select" : 15,
         "pool" : [
           [ 1.0, "scandroid" ],
           [ 1.0, "petricub" ],
@@ -16,9 +16,14 @@
           [ 1.0, "spookit" ],
           [ 1.0, "darkoise" ],
           [ 1.0, "abysspod" ],
-          [ 1.0, "lostsoul" ],
+          [ 1.0, "apexlostsoul" ],
+          [ 1.0, "avianlostsoul" ],
+          [ 1.0, "floranlostsoul" ],
+          [ 1.0, "humanlostsoul" ],
+          [ 1.0, "hylotllostsoul" ],
+          [ 1.0, "golemflying" ],
           [ 1.0, "darkabysselemental" ],
-          [ 1.0, "annihilatordrone" ]
+		  [ 1.0, "annihilatordrone" ]
         ]
       },
       {

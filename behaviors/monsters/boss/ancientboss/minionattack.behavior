@@ -1,0 +1,139 @@
+{
+  "name": "ancientboss-minionattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/projectiles.lua",
+    "/scripts/actions/boss/ancientboss.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "stopAllSounds",
+        "type": "action",
+        "name": "stopAllSounds",
+        "parameters": {
+		  "sound": {"value": "stunned"}
+		}
+      },
+	  {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "windup2"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.2}
+        }
+      },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "minionstart"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "minionend"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "sweepStartPos"},
+		  "speed": {"value": 50}
+		}
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+	  {
+		"title": "ancientboss-movefire",
+		"type": "module",
+		"name": "ancientboss-movefire",
+		"parameters": {
+		  "position": {"key": "sweepEndPos"},
+		  "flightSpeed": {"value": 75},
+		  "projectileInterval": {"value": 0.25},
+		  "projectileType": {"value": "ancientboss_spawntwigun"},
+		  "projectileOffset": {"value": [0, -5]},
+		  "aimVector": {"value": [0, -1]},
+		  "fireSound": {"value": "minionspawn1"}
+		}
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

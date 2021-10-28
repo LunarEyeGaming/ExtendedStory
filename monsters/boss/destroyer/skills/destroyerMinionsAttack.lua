@@ -81,8 +81,8 @@ end
 function destroyerMinionsAttack.findReinforcements()
   local selfId = entity.id()
   local position = mcontroller.position()
-  local min = { position[1] - 250.0, position[2] - 250.0 }
-  local max = { position[1] + 250.0, position[2] + 250.0 }
+  local min = { position[1] - 50.0, position[2] - 50.0 }
+  local max = { position[1] + 50.0, position[2] + 50.0 }
 
   return world.entityQuery(min, max, { callScript = "isPenguinReinforcement", includedTypes = {"monster"} })
 end

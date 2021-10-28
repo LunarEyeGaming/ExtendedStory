@@ -68,8 +68,8 @@ function onInteraction(args)
         canBookmark = false,
         includePlayerBookmarks = false,
         destinations = { {
-          name = "Frozen Over",
-          planetName = "Frozen Dimension",
+          name = "Frozen Dimension",
+          planetName = "Location of Ice Artifact",
           icon = "default",
           warpAction = string.format("InstanceWorld:iceartifactdungeon", storage.uuid, world.threatLevel())
         } }

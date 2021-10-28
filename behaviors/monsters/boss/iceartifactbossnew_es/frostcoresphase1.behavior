@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -36,25 +36,25 @@
           "time": {"value": 0.75}
         }
       },
-      {
+	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
         "parameters": {
           "aimVector": {"value": [1, 0]},
-          "offset": {"value": [25, 0]},
+          "offset": {"value": [9, 5]},
           "projectileConfig": {"value": {"power": 10}},
           "projectileType": {"value": "frostcorephase1"},
           "scalePower": {"value": true}
         }
       },
-      {
+	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
         "parameters": {
           "aimVector": {"value": [1, 0]},
-          "offset": {"value": [-25, 0]},
+          "offset": {"value": [-9, 5]},
           "projectileConfig": {"value": {"power": 10}},
           "projectileType": {"value": "frostcorephase1"},
           "scalePower": {"value": true}

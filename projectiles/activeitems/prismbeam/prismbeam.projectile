@@ -1,6 +1,6 @@
 {
   "projectileName" : "prismbeam",
-  "physics" : "bullet",
+  "physics" : "laser",
   "bounces" : 0,
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
   "fullbright" : true,
@@ -11,11 +11,11 @@
   "timeToLive" : 5,
   "periodicActions" : [
     {
-      "time" : 0.01,
-      "action" : "particle",
-      "rotate" : true,
-      "specification" : {
-        "type" : "animated",
+	  "time" : 0.01,
+	  "action" : "particle",
+	  "rotate" : true,
+	  "specification" : {
+	    "type" : "animated",
         "animation" : "/animations/prismbeam/prismbeam.animation",
         "position" : [0, 0],
         "initialVelocity" : [0, 0.0],
@@ -32,51 +32,34 @@
         "variance" : {
           "position" : [0.0, 0.0],
           "initialVelocity" : [0, 0]
-        }
-      }
-    }
+	    }
+	  }
+	}
   ],
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "delayprojectile",
-      "inheritDamageFactor" : 1,
-      "config" : {
-        "timeToLive" : 0.1,
-        "damageKind" : "nodamage",
-        "onlyHitTerrain" : false,
-        "movementSettings" : {
-          "collisionEnabled" : false
-        },
-        "actionOnTimeout" : [
-          {
-            "action" : "loop",
-            "count" : 6,
-            "body" : [
-              {
-                "action" : "projectile",
-                "type" : "cellzap1",
-                "angleAdjust" : 180,
-                "fuzzAngle" : 45,
-                "inheritDamageFactor" : 0.5
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "action" : "projectile",
-      "type" : "lightballout",
-      "inheritDamageFactor" : 1.0,
-      "config" : { "processing" : "?scalenearest;2;2", "bounces" : -1 }
-    },
-    {
-      "action" : "sound",
-      "options" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ]
-    }
+	  "action" : "loop",
+	  "count" : 6,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "cellzap1",
+		  "angle" : 90,
+		  "fuzzAngle" : 180,
+		  "inheritDamageFactor" : 0.01
+		}
+	  ]
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "lightballout",
+	  "config" : { "processing" : "?scalenearest;2;2" }
+	},
+	{
+	  "action" : "sound",
+	  "options" : [ "/sfx/gun/grenadeblast_electric1.ogg", "/sfx/gun/grenadeblast_electric2.ogg", "/sfx/gun/grenadeblast_electric3.ogg" ]
+	}
   ],
-  "damageType" : "nodamage",
   "lightColor" : [235, 161, 253],
   "damageKind" : "plasmabullet"
 }

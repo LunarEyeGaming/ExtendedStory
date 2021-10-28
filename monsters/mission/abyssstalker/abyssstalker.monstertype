@@ -29,7 +29,7 @@
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
       "keepTargetInRange" : 200,
-      "targetOutOfSightTime" : 60.0,
+      "targetOutOfSightTime" : 5.0,
 
       "foundTargetActions" : [
         {
@@ -56,9 +56,9 @@
 
             "projectileCount" : 1,
             "projectileType" : "invisibleprojectile",
-            "projectileParameters" : {"onlyHitTerrain" : true},
+            "projectileParameters" : {"timeToLive" : 3.5, "power" : 50, "knockback" : 100, "damageKind" : "abysslash", "actionOnHit" : [{"action" : "projectile", "type" : "orbitalup", "config" : {"speed" : 0, "onlyHitTerrain" : true, "timeToLive" : 0, "actionOnReap" : [{"action" : "loop", "count" : 10, "body" : [{"action" : "sound", "options" : ["/sfx/npc/monsters/oogler_charge.ogg"]}]}]}}], "damageTeam" : {"type" : "enemy"}},
             "rotationCenter" : [0.0, 0.0],
-            "fireSound" : "fire",
+            "fireSound" : "",
             "fireStateType" : "",
             "fireState" : "",
             "fireDelay" : 0.0,
@@ -76,9 +76,6 @@
       "periodicActions" : [ ],
 
       "approachActions" : [
-        {
-          "name" : "approach-teleport"
-        }
       ],
 
       "followActions" : [

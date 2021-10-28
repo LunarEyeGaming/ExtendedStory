@@ -12,8 +12,7 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/monster.lua",
-      "/monsters/mission/truedestroyerminioncap_es.lua"
+      "/monsters/monster.lua"
     ],
 
     "behavior" : "monster",
@@ -109,7 +108,7 @@
 
     "touchDamage" : {
       "poly" : [ [-1.0, -1.0], [1.0, -1.0], [1.0, 1.0], [-1.0, 1.0] ],
-      "damage" : 8,
+      "damage" : 12,
 
       "teamType" : "enemy",
       "damageSourceKind" : "default",
@@ -139,7 +138,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 35
+          "baseValue" : 48
         },
         "protection" : {
           "baseValue" : 0.0
@@ -166,13 +165,13 @@
           "baseValue" : 0.0
         },
         "electricResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : -0.5
         },
         "electricStatusImmunity" : {
           "baseValue" : 0.0
         },
         "poisonResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.5
         },
         "poisonStatusImmunity" : {
           "baseValue" : 1.0

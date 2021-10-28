@@ -7,7 +7,7 @@
       "pool" : [
         {"weight" : 0.950, "pool" : "essenceDrop"},
         {"weight" : 0.025, "item" : "ancientoneaf"},
-        {"weight" : 0.025, "item" : "darkmattercore"}
+		{"weight" : 0.025, "item" : "darkmattercore"}
       ],
       "poolRounds" : [
         [0.80, 0],
@@ -76,7 +76,7 @@
   "truedestroyerTreasure" : [
     [1, {
       "fill" : [ 
-        {"item" : "cybercore"}
+		{"item" : "cybercore"}
       ],
       "pool" : [
         {"weight" : 1.0, "pool" : "essenceDrop"}
@@ -100,7 +100,7 @@
   "endgameguardian" : [
     [0, {
       "fill" : [ 
-        {"item" : ["ultimatiumore", 10]}
+		{"item" : ["ultimatiumore", 10]}
       ],
       "pool" : [
         {"weight" : 1.0, "pool" : "empty"}
@@ -114,8 +114,8 @@
   "irradiateddragonTreasure" : [
     [0, {
       "fill" : [ 
-        {"item" : ["ultimatiumore", 10]},
-        {"item" : ["radyiteore", 50]}
+		{"item" : ["ultimatiumore", 10]},
+		{"item" : ["radyiteore", 50]}
       ],
       "pool" : [
         {"weight" : 1.0, "pool" : "empty"}
@@ -129,8 +129,8 @@
   "ruinbusterTreasure" : [
     [0, {
       "fill" : [
-        {"item" : "weaponamplifier"},
-        {"item" : ["money", 2500]}
+		{"item" : "weaponamplifier"},
+		{"item" : ["money", 2500]}
       ],
       "pool" : [
         {"weight" : 1.0, "pool" : "empty"}
@@ -144,8 +144,8 @@
   "ruinseedTreasure" : [
     [1, {
       "fill" : [
-        {"item" : ["money", 1000]}
-      ],
+        {"item" : "money", "count" : 1000}
+	  ],
       "pool" : [
         {"weight" : 1, "pool" : "uniqueWeapon"}
       ],
@@ -158,19 +158,19 @@
     [1, {
       "fill" : [ 
         {"item" : ["destroyerbar", 20]},
-        {"item" : ["money", 1000]}
+		{"item" : ["money", 1000]}
       ],
       "pool" : [
         {"weight" : 1.0, "item" : ["destroyerbar", 1]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 2]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 3]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 4]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 5]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 6]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 7]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 8]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 9]},
-        {"weight" : 1.0, "item" : ["destroyerbar", 10]}
+		{"weight" : 1.0, "item" : ["destroyerbar", 2]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 3]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 4]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 5]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 6]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 7]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 8]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 9]},
+		{"weight" : 1.0, "item" : ["destroyerbar", 10]}
       ],
       "poolRounds" : [
         [1, 1]
@@ -212,7 +212,7 @@
       "pool" : [
         {"weight" : 0.800, "pool" : "noMeatMonsterTreasure"},
         {"weight" : 0.100, "item" : "staticcell"},
-        {"weight" : 0.100, "item" : "hardenedcarapace"}
+		{"weight" : 0.100, "item" : "hardenedcarapace"}
       ],
       "poolRounds" : [
         [0.20, 0],
@@ -226,7 +226,7 @@
     [1, {
       "pool" : [
         {"weight" : 0.500, "item" : "staticcell"},
-        {"weight" : 0.500, "item" : "hardenedcarapace"}
+		{"weight" : 0.500, "item" : "hardenedcarapace"}
       ],
       "poolRounds" : [
         [0.20, 0],
@@ -406,71 +406,34 @@
       "allowDuplication" : false
     }]
   ],
-
-  "ancientmessTreasure" : [
-    [1, {
-      "pool" : [
-        {"weight" : 0.250, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.100, "item" : ["ancientfragment", 1]},
-        {"weight" : 0.250, "item" : ["ancientfragment", 2]},
-        {"weight" : 0.250, "item" : ["ancientfragment", 3]},
-        {"weight" : 0.080, "item" : ["ancientfragment", 4]},
-        {"weight" : 0.070, "item" : ["ancientfragment", 5]}
-      ],
-      "poolRounds" : [
-        [0.20, 0],
-        [0.80, 1]
-      ],
-      "allowDuplication" : false
-    }]
-  ],
-
-  "ancientmessTreasure2" : [
-    [1, {
-      "pool" : [
-        {"weight" : 0.250, "pool" : "noMeatMonsterTreasure"},
-        {"weight" : 0.100, "item" : ["ancientfragment", 6]},
-        {"weight" : 0.250, "item" : ["ancientfragment", 7]},
-        {"weight" : 0.250, "item" : ["ancientfragment", 8]},
-        {"weight" : 0.080, "item" : ["ancientfragment", 9]},
-        {"weight" : 0.070, "item" : ["ancientfragment", 10]}
-      ],
-      "poolRounds" : [
-        [0.20, 0],
-        [0.80, 1]
-      ],
-      "allowDuplication" : false
-    }]
-  ],
-
   "annihilatorTreasure" : [
     [1, {
       "fill" : [ 
         {"item" : ["liquidfabric", 20]},
-        {"item" : ["annihilatorplate", 20]},
-        {"item" : ["money", 1000]}
+		{"item" : ["annihilatorplate", 20]},
+		{"item" : ["money", 1000]}
       ],
       "pool" : [
         {"weight" : 1.0, "item" : ["liquidfabric", 1]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 2]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 3]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 4]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 5]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 6]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 7]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 8]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 9]},
-        {"weight" : 1.0, "item" : ["liquidfabric", 10]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 1]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 2]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 3]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 4]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 5]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 6]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 7]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 8]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 9]},
-        {"weight" : 1.0, "item" : ["annihilatorplate", 10]}
+		{"weight" : 1.0, "item" : ["liquidfabric", 2]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 3]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 4]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 5]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 6]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 7]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 8]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 9]},
+		{"weight" : 1.0, "item" : ["liquidfabric", 10]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 1]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 2]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 3]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 4]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 5]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 6]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 7]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 8]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 9]},
+		{"weight" : 1.0, "item" : ["annihilatorplate", 10]}
       ],
       "poolRounds" : [
         [1, 1]
@@ -484,7 +447,8 @@
         {"weight" : 0.25, "item" : "annihilatorteleporter"}
       ],
       "poolRounds" : [
-        [1, 1]
+        [0.20, 0],
+        [0.80, 1]
       ],
       "allowDuplication" : false
     }]

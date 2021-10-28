@@ -15,9 +15,9 @@
   ],
   "parameters": {
     "leftfistId": 0,
-    "rightfistId": 0,
-    "target": 123,
-    "sourceId": 123
+	"rightfistId": 0,
+	"target": 123,
+	"sourceId": 123
   },
   "root": {
     "title": "sequence",
@@ -25,7 +25,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "spawnProjectile",
         "type": "action",
         "name": "spawnProjectile",
@@ -44,64 +44,64 @@
           "time": {"value": 0.75}
         }
       },
-      {
-        "title": "repeater",
-        "type": "decorator",
-        "name": "repeater",
-        "parameters": {
-          "maxLoops": {"value": 15}
-        },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [1, 0]},
-                "offset": {"value": [0, 15]},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "unstableiceblock_es"}
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [-1, 0]},
-                "offset": {"value": [0, 15]},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "unstableiceblock_es"}
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [0, 0]},
-                "offset": {"value": [0, 15]},
-                "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "iceshot", "fuzzAngle" : 180, "config": {"power": 100, "speed": 25, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}}]}]}},
-                "projectileType": {"value": "orbitalup"}
-              }
-            },
-            {
-                "title": "timer",
-                "type": "action",
-                "name": "timer",
-                "parameters": {
-                  "time": {"value": 2.0}
-                }
-              }
-          ]
-        }
-      },
-      {
+	  {
+	    "title": "repeater",
+		"type": "decorator",
+		"name": "repeater",
+		"parameters": {
+		  "maxLoops": {"value": 15}
+		},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [1, 0]},
+    		    "offset": {"value": [0, 15]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "unstableiceblock_es"}
+    		  }
+    	    },
+			{
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [-1, 0]},
+    		    "offset": {"value": [0, 15]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "unstableiceblock_es"}
+    		  }
+    	    },
+			{
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [0, 0]},
+    		    "offset": {"value": [0, 15]},
+    		    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "loop", "count": 10, "body": [{"action": "projectile", "type": "iceshot", "fuzzAngle" : 180, "config": {"power": 100, "speed": 25, "actionOnReap": [{"action": "config", "file": "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"}]}}]}]}},
+    		    "projectileType": {"value": "orbitalup"}
+    		  }
+    	    },
+			{
+      		  "title": "timer",
+      		  "type": "action",
+      		  "name": "timer",
+      		  "parameters": {
+      		    "time": {"value": 2.0}
+      		  }
+      		}
+		  ]
+		}
+	  },
+	  {
         "title": "timer",
         "type": "action",
         "name": "timer",

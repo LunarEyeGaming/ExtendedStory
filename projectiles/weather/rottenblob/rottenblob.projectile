@@ -11,23 +11,23 @@
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "actionOnReap" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
-    },
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+	},
     {
-      "action" : "option",
-      "options" : [
-        { 
+	  "action" : "option",
+	  "options" : [
+	    { 
           "action" : "liquid", 
           "liquid" : "rottenwater", "quantity" : 6
         },
-        {
-          "action" : "tile",
-          "materials" : [
-            {"kind" : "rottenjelly"}
-          ]
-        }
-      ]
-    }
+		{
+    	  "action" : "tile",
+    	  "materials" : [
+    	    {"kind" : "rottenjelly"}
+    	  ]
+    	}
+	  ]
+	}
   ]
 }

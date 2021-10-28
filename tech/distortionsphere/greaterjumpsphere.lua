@@ -152,19 +152,29 @@ function update(args)
     if args.moves["down"] and world.liquidAt({mcontroller.position()[1], mcontroller.position()[2] - 2}) then
       mcontroller.controlApproachVelocity({mcontroller.xVelocity(), -100}, 200)
     end
-	
-	--Cursor Blink
-    if args.moves["primaryFire"] then
-      attemptCursorBlink()
-    end
-
-    --Switch Modes
-    if not self.primaryLast and args.moves["altFire"] then
+    --Fire Ability
+    if args.moves["primaryFire"] and self.fireCooldownTimer == 0 and args.moves["run"] then
+	  animator.playSound("fire")
+	  animator.burstParticleEmitter("fire")
+	  world.spawnProjectile(self.projectileType, mcontroller.position(), entity.id(), aimVectorAlt, false, self.projectileParameters)
+	  self.fireCooldownTimer = self.fireCooldown
+	end
+	if args.moves["primaryFire"] and self.fireCooldownTimer2 == 0 and not args.moves["run"] then
+	  animator.playSound("fire")
+	  animator.burstParticleEmitter("fire")
+	  world.spawnProjectile(self.projectileType2, mcontroller.position(), entity.id(), aimVectorAlt, false, self.projectileParameters2)
+	  self.fireCooldownTimer2 = self.fireCooldown2
+	end
+	--Switch Modes
+    if not self.primaryLast and not args.moves["run"] and args.moves["altFire"] then
 	  animator.playSound("switchModes")
       switchModes()
     end
     self.primaryLast = args.moves["altFire"]
-
+	--Cursor Blink
+    if args.moves["altFire"] and args.moves["run"] then
+      attemptCursorBlink()
+    end
     if spikeMode == true then
 	  wallStick(args)
 	  mcontroller.controlParameters(self.transformedMovementParameters2)

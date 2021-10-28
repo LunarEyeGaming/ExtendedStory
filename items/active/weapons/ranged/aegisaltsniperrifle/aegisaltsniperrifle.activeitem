@@ -3,7 +3,7 @@
   "price" : 1080,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A heavy-duty, hi-tech sniper rifle.",
+  "description" : "A sniper rifle that shoots high velocity lasers.",
   "shortdescription" : "Aegisalt Sniper Rifle",
   "tooltipKind" : "gun",
   "category" : "sniperRifle",
@@ -11,8 +11,8 @@
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 6,
   
-  //"critChance" : 25,
-  //"critBonus" : 35,
+  "critChance" : 25,
+  "critBonus" : 35,
 
   "inventoryIcon" : [
     { "image" : "aegisaltsniperrifle.png:idle" }
@@ -28,16 +28,16 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/aegisalt_sniper_fire.ogg"],
-      "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
+      "fire" : ["/sfx/gun/plasma_sniper2.ogg"],
+	  "altFire" : ["/sfx/gun/plasma_sniper3.ogg"]
     },
     "lights" : {
       "muzzleFlash" : {
         "color" : [150, 0, 150]
       }
     },
-    "particleEmitters" : {
-      "altMuzzleFlash" : {
+	"particleEmitters" : {
+	  "altMuzzleFlash" : {
         "active" : false,
         "rotationGroup" : "weapon",
         "emissionRate" : 8,
@@ -47,7 +47,7 @@
           { "particle" : "energybeamimpact", "offset" : [0, 0.5] }
         ]
       }
-    }
+	}
   },
 
   "baseOffset" : [0.9, 0.7],
@@ -61,9 +61,9 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 1.5,
-    "baseDps" : 7.5,
-    "energyUsage" : 45,
+    "fireTime" : 1.0,
+    "baseDps" : 10,
+    "energyUsage" : 60,
     "projectileCount" : 1,
     "inaccuracy" : 0.0,
     "fireType" : "auto",
@@ -71,7 +71,24 @@
     "projectileType" : "aegisaltsnipershot",
     "projectileParameters" : {
       "knockback" : 20,
-      "speed" : 200
+	  "speed" : 200,
+	  "actionOnReap" : [
+	    {
+	      "action" : "projectile",
+	      "type" : "laserburst",
+	      "config" : {
+			"processing" : "?scalenearest=0.5",
+			"periodicActions" : [
+			  {
+				"time" : 0,
+				"repeat" : false,
+				"action" : "sound",
+				"options" : [ "/sfx/gun/plasma_shotgun1.ogg" ]
+		      }
+			]
+		  }
+	    }
+	  ]
     },
 
     "stances" : {
@@ -84,20 +101,20 @@
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0.5,
+        "duration" : 0,
         "armRotation" : 6,
         "weaponRotation" : 6,
         "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false,
-        
-        "animationStates" : {
-          "middle" : "fire"
-        }
+		
+		"animationStates" : {
+		  "middle" : "fire"
+		}
       },
       "cooldown" : {
-        "duration" : 1.0,
+        "duration" : 0.5,
         "armRotation" : 6,
         "weaponRotation" : 6,
         "twoHanded" : true,
@@ -111,13 +128,13 @@
   "altAbilityType" : "markedshot",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "projectileType" : "aegisaltchainshot_es", "projectileParameters" : { } }
+      "physical" : { "projectileType" : "ancientchainshot", "projectileParameters" : { } }
     },
-    "energyUsage" : 40,
-    "cooldownTime" : 1.0,
-    "maxTargets" : 7,
+    "energyUsage" : 20,
+	"cooldownTime" : 1.0,
+	"maxTargets" : 10,
     "targetQueryDistance" : 3,
-    "name" : "Phasing Chain Shot"
+	"name" : "Phasing Chain Shot"
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

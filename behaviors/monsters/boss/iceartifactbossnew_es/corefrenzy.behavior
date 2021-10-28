@@ -20,16 +20,16 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "entityPosition",
         "type": "action",
         "name": "entityPosition",
         "parameters": {
-          "entity": {"key": "target"}
-        },
-        "output": {
-          "position": "targetPos"
-        }
+		  "entity": {"key": "target"}
+		},
+		"output": {
+		  "position": "targetPos"
+		}
       },
       {
         "title": "parallel",
@@ -46,7 +46,7 @@
             "name": "flyToPosition",
             "parameters": {
               "position": {"key": "targetPos"},
-              "speed": {"value": 50},
+			  "speed": {"value": 50},
               "tolerance": {"value": 1}
             }
           },
@@ -83,51 +83,51 @@
         "parameters": {
           "maxLoops": {"value": 20}
         },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "playSound",
-              "type": "action",
-              "name": "playSound",
-              "parameters": {
-                "sound": {"value": "bullethellfire"}
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [0, 0]},
-                "offset": {"value": [0, -4]},
-                "projectileConfig": {"value": {"speed": 0, "power": 10, "timeToLive": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "frostburnfireballsmall_es", "fuzzAngle": 180, "inheritDamageFactor": 1, "config": {"speed": 60}}]}]}},
-                "projectileType": {"value": "orbitalup"},
-                "scalePower": {"value": true}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.6}
-              }
-            }
-          ]
-        }
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+    	      "title": "playSound",
+    	      "type": "action",
+    	      "name": "playSound",
+    	      "parameters": {
+    	        "sound": {"value": "bullethellfire"}
+    	      }
+    	    },
+			{
+    	      "title": "spawnProjectile",
+    	      "type": "action",
+    	      "name": "spawnProjectile",
+    	      "parameters": {
+    	        "aimVector": {"value": [0, 0]},
+    	        "offset": {"value": [0, -4]},
+    	        "projectileConfig": {"value": {"speed": 0, "power": 10, "timeToLive": 0, "onlyHitTerrain": true, "actionOnReap": [{"action": "loop", "count": 20, "body": [{"action": "projectile", "type": "frostburnfireballsmall_es", "fuzzAngle": 180, "inheritDamageFactor": 1, "config": {"speed": 60}}]}]}},
+    	        "projectileType": {"value": "orbitalup"},
+				"scalePower": {"value": true}
+    	      }
+    	    },
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.6}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.75}
-        }
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.75}
+		}
+	  }
     ]
   }
 }

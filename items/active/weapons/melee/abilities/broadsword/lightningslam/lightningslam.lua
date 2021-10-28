@@ -10,12 +10,6 @@ function LightningSlam:init()
   self.cooldownTimer = self.cooldownTime
 end
 
-function LightningSlam:aimVector(inaccuracy)
-  local aimAngle = vec2.angle(world.distance(activeItem.ownerAimPosition(), mcontroller.position()))
-  local aimVector = vec2.rotate({1, 0}, aimAngle + sb.nrand(inaccuracy, 0))
-  return aimVector
-end
-
 function LightningSlam:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
@@ -64,7 +58,7 @@ function LightningSlam:flip()
 
     if self.jumpTimer > 0 then
       self.jumpTimer = self.jumpTimer - self.dt
-      mcontroller.setVelocity(vec2.mul(vec2.norm(self:aimVector(self.jumpInaccuracy or 0)), self.jumpSpeed))
+      mcontroller.setVelocity({self.jumpVelocity[1] * self.weapon.aimDirection, self.jumpVelocity[2]})
     end
 
     local damageArea = partDamageArea("swoosh")
@@ -74,6 +68,8 @@ function LightningSlam:flip()
 
     coroutine.yield()
   end
+
+  status.clearPersistentEffects("weaponMovementAbility")
   animator.setAnimationState("swoosh", "idle")
   mcontroller.setRotation(0)
   animator.setParticleEmitterActive("flip", false)
@@ -113,8 +109,6 @@ function LightningSlam:slam()
   animator.setAnimationState("swoosh", "idle")
   animator.stopAllSounds("slamming")
   self:spawnProjectiles()
-
-  status.clearPersistentEffects("weaponMovementAbility")
   self.cooldownTimer = self.cooldownTime
 end
 
@@ -124,32 +118,31 @@ function LightningSlam:spawnProjectiles()
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
   params.power = params.power * config.getParameter("damageLevelMultiplier")
   position = world.lineCollision(mcontroller.position(), {mcontroller.position()[1], mcontroller.position()[2] - 50}) or mcontroller.position()
+  world.spawnProjectile("lightningboltexplosion", position, activeItem.ownerEntityId(), {0, 0}, false, params)
   local impact, impactHeight = self:impactPosition()
 
   if impact then
-    world.spawnProjectile(self.projectileType, position, activeItem.ownerEntityId(), {0, 0}, false, params)
     self.weapon.weaponOffset = {0, impactHeight + self.impactWeaponOffset}
     local directions = {1}
     if self.bothDirections then directions[2] = -1 end
     local positions = self:shockwaveProjectilePositions(impact, self.maxDistance, directions)
     if #positions > 0 then
       animator.playSound(self.weapon.elementalType.."impact")
-      local shockwaveParams = copy(self.shockwaveProjectileParameters)
-      shockwaveParams.powerMultiplier = activeItem.ownerPowerMultiplier()
-      shockwaveParams.power = shockwaveParams.power * config.getParameter("damageLevelMultiplier")
-      shockwaveParams.onlyHitTerrain = true
-      shockwaveParams.actionOnReap = {
+      local params = copy(self.projectileParameters)
+      params.powerMultiplier = activeItem.ownerPowerMultiplier()
+      params.power = params.power * config.getParameter("damageLevelMultiplier")
+      params.actionOnReap = {
         {
           action = "projectile",
           inheritDamageFactor = 1,
-          type = self.shockwaveProjectileType
+          type = self.projectileType
         }
       }
       for i,position in pairs(positions) do
         local xDistance = world.distance(position, impact)[1]
         local dir = util.toDirection(xDistance)
-        shockwaveParams.timeToLive = (math.floor(math.abs(xDistance))) * 0.025
-        world.spawnProjectile("shockwavespawner", position, activeItem.ownerEntityId(), {dir,0}, false, shockwaveParams)
+        params.timeToLive = (math.floor(math.abs(xDistance))) * 0.025
+        world.spawnProjectile("shockwavespawner", position, activeItem.ownerEntityId(), {dir,0}, false, params)
       end
     end
   end

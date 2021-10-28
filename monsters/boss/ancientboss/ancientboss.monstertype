@@ -1,9 +1,9 @@
 {
   "type" : "ancientboss",
-  "shortdescription" : "Ancient Keeper",
+  "shortdescription" : "The Ancient One",
 
   "categories" : [ "ancientboss" ],
-  "parts" : [ "ufo", "beam" ],
+  "parts" : [ "ufo", "pilot", "bodyglow", "eye", "beam1", "beam2", "beam3", "beam4" ],
 
   "animation" : "ancientboss.animation",
   "reversed" : true,
@@ -18,7 +18,7 @@
     "behaviorUpdateDelta" : 1,
 
     "behavior" : "ancientboss",
-    "facingMode" : "transformation",
+	"facingMode" : "transformation",
 
     "behaviorConfig" : {},
 
@@ -46,18 +46,9 @@
     "knockoutEffect" : "blink",
     "deathParticles" : "deathPoof",
 
-    "damageParts" : {
-      "beam" : {
-        "damage" : 25,
-
-        "teamType" : "enemy",
-        "damageSourceKind" : "plasma"
-      }
-    },
-
     "touchDamage" : {
       "poly" : [ [-14.0, -2.0], [0.0, -6.0], [14.0, -2.0], [14.0, 0.0], [0.0, 6.0], [-14.0, 0.0] ],
-      "damage" : 20,
+      "damage" : 10,
 
       "teamType" : "enemy",
       "damageSourceKind" : "hammer",
@@ -86,10 +77,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1000
+          "baseValue" : 1250
         },
         "protection" : {
-          "baseValue" : 30.0
+          "baseValue" : 50.0
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -132,6 +123,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

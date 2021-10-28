@@ -3,9 +3,7 @@
   "effectConfig" : {
     "shieldHealthMultiplier" : 0.8,
     "initialPercentage" : 1,
-    "rechargeDelay" : 3.0,
-    "maxHueShift" : 268,
-    "barDimensions" : [62, 8]
+    "rechargeDelay" : 3.0
   },
   "defaultDuration" : 1,
 
@@ -15,6 +13,6 @@
 
   "animationConfig" : "ultimatiumshield.animation",
 
-  "label" : "Ultimatium Shield - Absorbs a certain amount of damage",
+  "label" : "Ultimatium Shield - Complete resistance to everything temporarily",
   "icon" : "/interface/statuses/ultimatiumshield.png"
 }

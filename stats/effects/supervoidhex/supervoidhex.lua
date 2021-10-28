@@ -2,7 +2,6 @@ function init()
   --Damage reduction
   self.powerModifier = config.getParameter("powerModifier", 0)
   effect.addStatModifierGroup({{stat = "powerMultiplier", effectiveMultiplier = self.powerModifier}})
-
   healingMultiplier = config.getParameter("healingMultiplier", 0)
 
   local enableParticles = config.getParameter("particles", true)

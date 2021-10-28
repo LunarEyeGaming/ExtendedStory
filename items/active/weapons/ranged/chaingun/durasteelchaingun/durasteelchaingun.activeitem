@@ -5,7 +5,7 @@
   "rarity" : "Uncommon",
   "description" : "A perfectly lethal mix of rapid fire and explosives. ^yellow;Explosive Bullets!",
   "shortdescription" : "Durasteel Chain Gun",
-  "tooltipKind" : "chaingun_es",
+  "tooltipKind" : "gun",
   "category" : "Chain Gun",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","assaultrifle"],
@@ -14,115 +14,37 @@
   "critChance" : 5,
   "critBonus" : 20,
 
-  "inventoryIcon" : "durasteelchaingunicon.png",
+  "inventoryIcon" : "durasteelchaingunnew.png:idle",
 
-  "animation" : "/items/active/weapons/ranged/chaingun/chaingunglow.animation",
+  "animation" : "durasteelchaingun.animation",
   "animationParts" : {
-    "body" : "body.png",
-    "bodyfullbright" : "bodyfullbright.png",
-    "barrel" : "barrel.png",
-    "magazine" : "magazine.png",
+    "butt" : "",
+    "middle" : "durasteelchaingunnew.png",
+	"middleFullbright" : "durasteelchaingunnewunlit.png",
+    "barrel" : "",
     "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
   },
   "animationCustom" : {
-    "animatedParts" : {
-      "stateTypes" : {
-        "magazine" : {
-          "states" : {"reload" : {"cycle" : 0.05}}
-        }
-      },
-      "parts" : {
-        "body" : {"properties" : {"offset" : [0, -0.625]}},
-        "barrel" : {"properties" : {"offset" : [2.5625, 0]}},
-        "magazine" : {"properties" : {"offset" : [0.4375, -0.375]}}
-      }
-    },
     "sounds" : {
       "fire" : ["/sfx/gun/sniper3.ogg"],
-      "whir" : [ "/sfx/gun/durasteel_chaingun_whir.ogg" ]
+	  "altFire" : ["/sfx/gun/rocket2.ogg"]
     }
   },
 
-  "baseOffset" : [0, 0],
-  "muzzleOffset" : [4.0, -0.5],
+  "baseOffset" : [1.2, -0.8],
+  "muzzleOffset" : [2.75, 0.125],
 
   "scripts" : ["/items/active/weapons/ranged/chaingun_es.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
-    "class" : "ChainGunFire",
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
 
-    "windupTime" : 1.5,
-    "startFireTime" : 0.3,
-    "endFireTime" : 0.06,
-    
-    "whirMinPitch" : 1.0,
-    "whirMaxPitch" : 2.0,
-    
-    "spinFrameCount" : 2,
-
-    "baseDps" : 25.0,
-    "energyUsage" : 30,
-    "inaccuracy" : 0.08,
-
-    "projectileCount" : 1,
-    "fireType" : "auto",
-
-    "projectileType" : "titaniumchaingunshot_es",
-    "projectileParameters" : {
-      "knockback" : 2
-    },
-    "stances" : {
-      "idle" : {
-        "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-
-        "allowRotate" : true,
-        "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2"
-      },
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
-      },
-      "cooldown" : {
-        "duration" : 0.01,
-        "armRotation" : -1,
-        "weaponRotation" : -1,
-        "twoHanded" : true,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
-      }
-    }
-  },
-
-  "altAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/chaingunfire_es.lua"],
-    "class" : "ChainGunFire",
-    "name" : "Explosive Bullets",
-
-    "windupTime" : 2.0,
-    "startFireTime" : 0.5,
-    "endFireTime" : 0.1,
-    
-    "whirMinPitch" : 1.0,
-    "whirMaxPitch" : 2.0,
-    
-    "spinFrameCount" : 2,
-
-    "baseDps" : 25.0,
-    "energyUsage" : 40,
+    "fireTime" : 0.03,
+    "baseDps" : 30.0,
+    "energyUsage" : 70,
     "inaccuracy" : 0.08,
 
     "projectileCount" : 1,
@@ -139,8 +61,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-        "frontArmFrame" : "swimIdle.2"
+        "allowFlip" : true
       },
       "fire" : {
         "duration" : 0,
@@ -150,7 +71,9 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
+		"animationStates" : {
+		  "middle" : "fire"
+		}
       },
       "cooldown" : {
         "duration" : 0.01,
@@ -159,11 +82,22 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-        "frontArmFrame" : "swimIdle.2"
+        "allowFlip" : false
       }
     }
   },
+  "altAbilityType" : "explosiveshot",
+  "altAbility" : {
+    "name" : "Grav Bombs",
+	"fireTime" : 0.3,
+	"baseDps" : 13,
+	"cooldownTime" : 0.0,
+	"inaccuracy" : 0.1,
+	"energyUsage" : 40,
+	"elementalConfig" : {
+	  "physical" : { "projectileType" : "energyshardplayer", "projectileParameters" : {"damageType" : "nodamage"} }
+	}
+  },
 
-  "builder" : "/items/buildscripts/buildchaingun.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

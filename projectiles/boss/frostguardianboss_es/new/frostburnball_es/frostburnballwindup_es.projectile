@@ -11,10 +11,10 @@
   "timeToLive" : 0.3,
   "actionOnReap" : [
     {
-      "action" : "projectile",
-      "type" : "frostburnball_es",
-      "inheritDamageFactor" : 1
-    }
+	  "action" : "projectile",
+	  "type" : "frostburnball_es",
+	  "inheritDamageFactor" : 1
+	}
   ],
   "damageKind" : "plasmabullet",
   "onlyHitTerrain" : true

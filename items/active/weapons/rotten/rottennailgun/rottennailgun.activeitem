@@ -29,7 +29,7 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : [ "/sfx/gun/needler1.ogg" ],
-      "altFire" : [ "/sfx/melee/spear_kill_organic1.ogg" ]
+	  "altFire" : [ "/sfx/melee/spear_kill_organic1.ogg" ]
     }
   },
   "baseOffset" : [0.7, 0.5],
@@ -90,10 +90,8 @@
   "altAbility" : {
     "elementalConfig" : {
       "poison" : { "name" : "Tooth Bomb", "projectileType" : "rottentoothbomb", "projectileParameters" : {"speed" : 50}, "baseDps" : 9}
-    },
-    "hidePrimaryMuzzleFlash" : true,
-    "useParticleEmitter" : false,
-    "fireTime" : 3.0
+	  },
+	"fireTime" : 3.0
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

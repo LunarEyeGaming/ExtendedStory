@@ -12,8 +12,7 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/monster.lua",
-      "/monsters/mission/truedestroyerminioncap_es.lua"
+      "/monsters/monster.lua"
     ],
 
     "behavior" : "monster",
@@ -54,9 +53,9 @@
             "projectileType" : "explosivelasershot",
             "projectileParameters" : {
               "speed" : 30,
-              "timeToLive" : 8,
-              "power" : 10
+              "timeToLive" : 8
             },
+            "power" : 20,
             "fireOffset" : [0.0, 0.0],
             "aimAtTarget" : true,
             "inaccuracy" : 0.0,
@@ -129,8 +128,8 @@
       "gravityEnabled" : false,
 
       "airFriction" : 2.0,
-      "airForce" : 50,
-      "flySpeed" : 10
+      "airForce" : 25,
+      "flySpeed" : 4
     },
 
     "bodyMaterialKind" : "stone",
@@ -164,7 +163,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 25
+          "baseValue" : 3
         },
         "protection" : {
           "baseValue" : 0.0

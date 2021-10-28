@@ -96,12 +96,12 @@
                     "name": "sequence",
                     "parameters": {},
                     "children": [
-                      {
-                        "title" : "abyssartifactboss-intro",
-                        "type" : "module",
-                        "name" : "abyssartifactboss-intro",
-                        "parameters" : {}
-                      },
+					  {
+					    "title" : "abyssartifactboss-intro",
+						"type" : "module",
+						"name" : "abyssartifactboss-intro",
+						"parameters" : {}
+					  },
                       {
                         "title": "setDamageBar",
                         "type": "action",
@@ -110,7 +110,7 @@
                           "type": {"value": "Special"}
                         }
                       },
-                      {
+					  {
                         "title": "battleMusic",
                         "type": "action",
                         "name": "battleMusic",
@@ -140,16 +140,16 @@
                         "name": "dynamic",
                         "parameters": {},
                         "children": [
-                          {
+						  {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-                              "fail": {"value": 1},
+							  "fail": {"value": 1},
                               "success": {"value": -1}
-                            },
-                            "children": [
-                              {
+							},
+							"children": [
+							  {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -158,53 +158,53 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-                              {
-                                "title": "repeater",
-                                "type": "decorator",
-                                "name": "repeater",
-                                "parameters": {
-                                  "maxLoops": {"value": -1},
-                                  "untilSuccess": {"value": false}
-                                },
-                                "child": {
-                                  "title": "sequence",
-                                  "type": "composite",
-                                  "name": "sequence",
-                                  "parameters": {},
-                                  "children": [
-                                    {
-                                      "title": "abyssartifactboss-abyssanomaly",
-                                      "type": "module",
-                                      "name": "abyssartifactboss-abyssanomaly",
-                                      "parameters": { }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss-abysstears",
-                                      "type": "module",
-                                      "name": "abyssartifactboss-abysstears",
-                                      "parameters": { }
-                                    },
-                                    {
-                                      "title": "abyssartifactboss-abyssbeam",
-                                      "type": "module",
-                                      "name": "abyssartifactboss-abyssbeam",
-                                      "parameters": { }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
+							  {
+								"title": "repeater",
+								"type": "decorator",
+								"name": "repeater",
+								"parameters": {
+								  "maxLoops": {"value": -1},
+							      "untilSuccess": {"value": false}
+								},
+								"child": {
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+        							  "title": "abyssartifactboss-abyssanomaly",
+        							  "type": "module",
+        							  "name": "abyssartifactboss-abyssanomaly",
+        							  "parameters": { }
+        							},
+									{
+        							  "title": "abyssartifactboss-abysstears",
+        							  "type": "module",
+        							  "name": "abyssartifactboss-abysstears",
+        							  "parameters": { }
+        							},
+									{
+        							  "title": "abyssartifactboss-abyssbeam",
+        							  "type": "module",
+        							  "name": "abyssartifactboss-abyssbeam",
+        							  "parameters": { }
+        							}
+								  ]
+								}
+						      }
+							]
                           },
-                          {
+						  {
                             "title": "parallel",
                             "type": "composite",
                             "name": "parallel",
                             "parameters": {
-                              "fail": {"value": 1},
+							  "fail": {"value": 1},
                               "success": {"value": -1}
-                            },
-                            "children": [
-                              {
+							},
+							"children": [
+							  {
                                 "title": "resourcePercentage",
                                 "type": "action",
                                 "name": "resourcePercentage",
@@ -213,265 +213,265 @@
                                   "resource": {"value": "health"}
                                 }
                               },
-                              {
-                                "title": "sequence",
-                                "type": "composite",
-                                "name": "sequence",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "addEphemeralEffect",
-                                    "type": "action",
-                                    "name": "addEphemeralEffect",
-                                    "parameters": { 
-                                      "name": {"value": "abyssalgazerattackimmunity"},
-                                      "duration": {"value": 5000}
-                                    }
-                                  },
-                                  {
-                                    "title": "setResourcePercentage",
-                                    "type": "action",
-                                    "name": "setResourcePercentage",
-                                    "parameters": {
-                                      "percentage": {"value": 0.5},
+							  {
+							    "title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+        							"title": "addEphemeralEffect",
+        							"type": "action",
+        							"name": "addEphemeralEffect",
+        							"parameters": { 
+									  "name": {"value": "abyssalgazerattackimmunity"},
+									  "duration": {"value": 5000}
+									}
+        						  },
+								  {
+								    "title": "setResourcePercentage",
+									"type": "action",
+									"name": "setResourcePercentage",
+									"parameters": {
+									  "percentage": {"value": 0.5},
                                       "resource": {"value": "health"}
-                                    }
-                                  },
-                                  {
-                                    "title": "abyssartifactboss-transition",
-                                    "type": "module",
-                                    "name": "abyssartifactboss-transition",
-                                    "parameters": {}
-                                  },
-                                  {
-                                    "title": "repeater",
-                                    "type": "decorator",
-                                    "name": "repeater",
-                                    "parameters": {
-                                      "maxLoops": {"value": -1},
-                                      "untilSuccess": {"value": false}
-                                    },
-                                    "child": {
-                                      "title": "sequence",
-                                      "type": "composite",
-                                      "name": "sequence",
-                                      "parameters": {},
-                                      "children": [
-                                        {
-                                          "title": "abyssartifactboss-abyssbeams",
-                                          "type": "module",
-                                          "name": "abyssartifactboss-abyssbeams",
-                                          "parameters": { }
-                                        },
-                                        {
-                                          "title": "abyssartifactboss-abysseyes",
-                                          "type": "module",
-                                          "name": "abyssartifactboss-abysseyes",
-                                          "parameters": { }
-                                        },
-                                        {
-                                          "title": "abyssartifactboss-abysscolumns",
-                                          "type": "module",
-                                          "name": "abyssartifactboss-abysscolumns",
-                                          "parameters": { }
-                                        },
-                                        {
-                                          "title": "setAnimationState",
-                                          "type": "action",
-                                          "name": "setAnimationState",
-                                          "parameters": {
-                                            "state": {"value": "transition2d"},
-                                            "type": {"value": "eyepupil"}
-                                          }
-                                        },
-                                        {
-                                          "title": "setGlobalTag",
-                                          "type": "action",
-                                          "name": "setGlobalTag",
-                                          "parameters": {
-                                            "tag": {"value": "7"},
-                                            "type": {"value": "eyeState"}
-                                          }
-                                        },
-                                        {
-                                          "title": "succeeder",
-                                          "type": "decorator",
-                                          "name": "succeeder",
-                                          "parameters": {},
-                                          "child": {
-                                            "title": "sequence",
-                                            "type": "composite",
-                                            "name": "sequence",
-                                            "parameters": {},
-                                            "children": [
-                                              {
-                                                "title": "inverter",
-                                                "type": "decorator",
-                                                "name": "inverter",
-                                                "parameters": {},
-                                                "child": {
-                                                  "title": "resourcePercentage",
-                                                  "type": "action",
-                                                  "name": "resourcePercentage",
-                                                  "parameters": {
-                                                    "percentage": {"value": 0.35},
-                                                    "resource": {"value": "health"}
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                "title": "abyssartifactboss-abyssvortexesdiagonal",
-                                                "type": "module",
-                                                "name": "abyssartifactboss-abyssvortexesdiagonal",
-                                                "parameters": {}
-                                              },
-                                              {
-                                                "title": "setAnimationState",
-                                                "type": "action",
-                                                "name": "setAnimationState",
-                                                "parameters": {
-                                                  "state": {"value": "transition3d"},
-                                                  "type": {"value": "eyepupil"}
-                                                }
-                                              },
-                                              {
-                                                "title": "setGlobalTag",
-                                                "type": "action",
-                                                "name": "setGlobalTag",
-                                                "parameters": {
-                                                  "tag": {"value": "7"},
-                                                  "type": {"value": "eyeState"}
-                                                }
-                                              },
-                                              {
-                                                "title": "inverter",
-                                                "type": "decorator",
-                                                "name": "inverter",
-                                                "parameters": {},
-                                                "child": {
-                                                  "title": "resourcePercentage",
-                                                  "type": "action",
-                                                  "name": "resourcePercentage",
-                                                  "parameters": {
-                                                    "percentage": {"value": 0.3},
-                                                    "resource": {"value": "health"}
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                "title": "abyssartifactboss-star",
-                                                "type": "module",
-                                                "name": "abyssartifactboss-star",
-                                                "parameters": {}
-                                              },
-                                              {
-                                                "title": "setAnimationState",
-                                                "type": "action",
-                                                "name": "setAnimationState",
-                                                "parameters": {
-                                                  "state": {"value": "transition4d"},
-                                                  "type": {"value": "eyepupil"}
-                                                }
-                                              },
-                                              {
-                                                "title": "setGlobalTag",
-                                                "type": "action",
-                                                "name": "setGlobalTag",
-                                                "parameters": {
-                                                  "tag": {"value": "7"},
-                                                  "type": {"value": "eyeState"}
-                                                }
-                                              },
-                                              {
-                                                "title": "inverter",
-                                                "type": "decorator",
-                                                "name": "inverter",
-                                                "parameters": {},
-                                                "child": {
-                                                  "title": "resourcePercentage",
-                                                  "type": "action",
-                                                  "name": "resourcePercentage",
-                                                  "parameters": {
-                                                    "percentage": {"value": 0.25},
-                                                    "resource": {"value": "health"}
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                "title": "abyssartifactboss-abyssportal",
-                                                "type": "module",
-                                                "name": "abyssartifactboss-abyssportal",
-                                                "parameters": {}
-                                              },
-                                              {
-                                                "title": "setAnimationState",
-                                                "type": "action",
-                                                "name": "setAnimationState",
-                                                "parameters": {
-                                                  "state": {"value": "transition6"},
-                                                  "type": {"value": "eyepupil"}
-                                                }
-                                              },
-                                              {
-                                                "title": "setGlobalTag",
-                                                "type": "action",
-                                                "name": "setGlobalTag",
-                                                "parameters": {
-                                                  "tag": {"value": "7"},
-                                                  "type": {"value": "eyeState"}
-                                                }
-                                              }
-                                            ]
-                                          }
-                                        },
-                                        {
-                                          "title": "abyssartifactboss-deflective",
-                                          "type": "module",
-                                          "name": "abyssartifactboss-deflective",
-                                          "parameters": { }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "title": "sequence",
-                                "type": "composite",
-                                "name": "sequence",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "repeater",
-                                    "type": "decorator",
-                                    "name": "repeater",
-                                    "parameters": {
-                                      "maxLoops": {"value": -1},
-                                      "untilSuccess": {"value": false}
-                                    },
-                                    "child": {
-                                      "title": "sequence",
-                                      "type": "composite",
-                                      "name": "sequence",
-                                      "parameters": {},
-                                      "children": [
-                                        
-                                        {
-                                          "title": "timer",
-                                          "type": "action",
-                                          "name": "timer",
-                                          "parameters": {
-                                            "time": {"value": 0.01}
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
+									}
+								  },
+								  {
+								    "title": "abyssartifactboss-transition",
+									"type": "module",
+									"name": "abyssartifactboss-transition",
+									"parameters": {}
+								  },
+								  {
+									"title": "repeater",
+									"type": "decorator",
+									"name": "repeater",
+									"parameters": {
+									  "maxLoops": {"value": -1},
+								      "untilSuccess": {"value": false}
+									},
+									"child": {
+									  "title": "sequence",
+									  "type": "composite",
+									  "name": "sequence",
+									  "parameters": {},
+									  "children": [
+										{
+        								  "title": "abyssartifactboss-abyssbeams",
+        								  "type": "module",
+        								  "name": "abyssartifactboss-abyssbeams",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "abyssartifactboss-abysseyes",
+        								  "type": "module",
+        								  "name": "abyssartifactboss-abysseyes",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "abyssartifactboss-abysscolumns",
+        								  "type": "module",
+        								  "name": "abyssartifactboss-abysscolumns",
+        								  "parameters": { }
+        								},
+										{
+        								  "title": "setAnimationState",
+        								  "type": "action",
+        								  "name": "setAnimationState",
+        								  "parameters": {
+											"state": {"value": "transition2d"},
+											"type": {"value": "eyepupil"}
+										  }
+        								},
+        								{
+        								  "title": "setGlobalTag",
+        								  "type": "action",
+        								  "name": "setGlobalTag",
+        								  "parameters": {
+        								    "tag": {"value": "7"},
+        								    "type": {"value": "eyeState"}
+        								  }
+        								},
+                                		{
+                                		  "title": "succeeder",
+                                		  "type": "decorator",
+                                		  "name": "succeeder",
+                                		  "parameters": {},
+                                		  "child": {
+                                		    "title": "sequence",
+                                		    "type": "composite",
+                                		    "name": "sequence",
+                                		    "parameters": {},
+                                		    "children": [
+                                		      {
+                                		        "title": "inverter",
+                                		        "type": "decorator",
+                                		        "name": "inverter",
+                                		        "parameters": {},
+                                		        "child": {
+                                		          "title": "resourcePercentage",
+                                		          "type": "action",
+                                		          "name": "resourcePercentage",
+                                		          "parameters": {
+                                		            "percentage": {"value": 0.35},
+                                		            "resource": {"value": "health"}
+                                		          }
+                                		        }
+                                		      },
+                                		      {
+                                		        "title": "abyssartifactboss-abyssvortexesdiagonal",
+                                		        "type": "module",
+                                		        "name": "abyssartifactboss-abyssvortexesdiagonal",
+                                		        "parameters": {}
+                                		      },
+										      {
+        								        "title": "setAnimationState",
+        								        "type": "action",
+        								        "name": "setAnimationState",
+        								        "parameters": {
+										      	"state": {"value": "transition3d"},
+										      	"type": {"value": "eyepupil"}
+										        }
+        								      },
+        								      {
+        								        "title": "setGlobalTag",
+        								        "type": "action",
+        								        "name": "setGlobalTag",
+        								        "parameters": {
+        								          "tag": {"value": "7"},
+        								          "type": {"value": "eyeState"}
+        								        }
+        								      },
+											  {
+                                		        "title": "inverter",
+                                		        "type": "decorator",
+                                		        "name": "inverter",
+                                		        "parameters": {},
+                                		        "child": {
+                                		          "title": "resourcePercentage",
+                                		          "type": "action",
+                                		          "name": "resourcePercentage",
+                                		          "parameters": {
+                                		            "percentage": {"value": 0.3},
+                                		            "resource": {"value": "health"}
+                                		          }
+                                		        }
+                                		      },
+                                		      {
+                                		        "title": "abyssartifactboss-star",
+                                		        "type": "module",
+                                		        "name": "abyssartifactboss-star",
+                                		        "parameters": {}
+                                		      },
+										      {
+        								        "title": "setAnimationState",
+        								        "type": "action",
+        								        "name": "setAnimationState",
+        								        "parameters": {
+										      	"state": {"value": "transition4d"},
+										      	"type": {"value": "eyepupil"}
+										        }
+        								      },
+        								      {
+        								        "title": "setGlobalTag",
+        								        "type": "action",
+        								        "name": "setGlobalTag",
+        								        "parameters": {
+        								          "tag": {"value": "7"},
+        								          "type": {"value": "eyeState"}
+        								        }
+        								      },
+											  {
+                                		        "title": "inverter",
+                                		        "type": "decorator",
+                                		        "name": "inverter",
+                                		        "parameters": {},
+                                		        "child": {
+                                		          "title": "resourcePercentage",
+                                		          "type": "action",
+                                		          "name": "resourcePercentage",
+                                		          "parameters": {
+                                		            "percentage": {"value": 0.25},
+                                		            "resource": {"value": "health"}
+                                		          }
+                                		        }
+                                		      },
+                                		      {
+                                		        "title": "abyssartifactboss-abyssportal",
+                                		        "type": "module",
+                                		        "name": "abyssartifactboss-abyssportal",
+                                		        "parameters": {}
+                                		      },
+										      {
+        								        "title": "setAnimationState",
+        								        "type": "action",
+        								        "name": "setAnimationState",
+        								        "parameters": {
+										      	"state": {"value": "transition6"},
+										      	"type": {"value": "eyepupil"}
+										        }
+        								      },
+        								      {
+        								        "title": "setGlobalTag",
+        								        "type": "action",
+        								        "name": "setGlobalTag",
+        								        "parameters": {
+        								          "tag": {"value": "7"},
+        								          "type": {"value": "eyeState"}
+        								        }
+        								      }
+                                		    ]
+                                		  }
+                                		},
+										{
+        								  "title": "abyssartifactboss-deflective",
+        								  "type": "module",
+        								  "name": "abyssartifactboss-deflective",
+        								  "parameters": { }
+        								}
+									  ]
+									}
+						    	  }
+								]
+							  },
+							  {
+							    "title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+									"title": "repeater",
+									"type": "decorator",
+									"name": "repeater",
+									"parameters": {
+									  "maxLoops": {"value": -1},
+								      "untilSuccess": {"value": false}
+									},
+									"child": {
+									  "title": "sequence",
+									  "type": "composite",
+									  "name": "sequence",
+									  "parameters": {},
+									  "children": [
+										
+										{
+										  "title": "timer",
+										  "type": "action",
+										  "name": "timer",
+										  "parameters": {
+										    "time": {"value": 0.01}
+										  }
+										}
+									  ]
+									}
+						    	  }
+								]
+							  }
+							]
                           }
-                        ]
+						]
                       }
                     ]
                   }
@@ -506,12 +506,12 @@
                       "enable": {"value": false}
                     }
                   },
-                  {
-                    "title": "abyssartifactboss-dying",
-                    "type": "module",
-                    "name": "abyssartifactboss-dying",
-                    "parameters": { }
-                  },
+				  {
+        		    "title": "abyssartifactboss-dying",
+        		    "type": "module",
+        		    "name": "abyssartifactboss-dying",
+        		    "parameters": { }
+        		  },
                   {
                     "title": "setDying",
                     "type": "action",
@@ -576,27 +576,27 @@
                     "name": "setParticleEmitterActive",
                     "parameters": {
                       "active": {"value": false},
-                      "emitter": {"value": "idle"}
+					  "emitter": {"value": "idle"}
                     }
                   },
-                  {
-                    "title": "removeEphemeralEffect",
-                    "type": "action",
-                    "name": "removeEphemeralEffect",
-                    "parameters": { 
-                      "name": {"value": "abyssalgazerattackimmunity"}
-                    }
-                  },
-                  {
-                    "title": "setParticleEmitterActive",
-                    "type": "action",
-                    "name": "setParticleEmitterActive",
-                    "parameters": {
-                      "active": {"value": false},
-                      "emitter": {"value": "starattack"}
-                    }
-                  },
-                  {
+				  {
+        			"title": "removeEphemeralEffect",
+        			"type": "action",
+        			"name": "removeEphemeralEffect",
+        			"parameters": { 
+					  "name": {"value": "abyssalgazerattackimmunity"}
+					}
+        		  },
+        		  {
+        		    "title": "setParticleEmitterActive",
+        		    "type": "action",
+        		    "name": "setParticleEmitterActive",
+        		    "parameters": {
+        		      "active": {"value": false},
+        		      "emitter": {"value": "starattack"}
+        		    }
+        		  },
+				  {
                     "title": "battleMusic",
                     "type": "action",
                     "name": "battleMusic",

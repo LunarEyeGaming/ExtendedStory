@@ -14,283 +14,212 @@
   ],
   "parameters": {},
   "root": {
-    "title": "succeeder",
-    "type": "decorator",
-    "name": "succeeder",
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
     "parameters": {},
-    "child": {
-      "title": "sequence",
-      "type": "composite",
-      "name": "sequence",
-      "parameters": {},
-      "children": [
-        {
-          "title": "inverter",
-          "type": "decorator",
-          "name": "inverter",
-          "parameters": {},
-          "child": {
-            "title": "sequence",
-            "type": "composite",
-            "name": "sequence",
-            "parameters": {},
-            "children": [
-              {
-                "title": "listSize",
-                "type": "action",
-                "name": "listSize",
-                "parameters": {
-                  "list": {"key": "minions"}
-                },
-                "output": {
-                  "number": "minionCount"
-                }
-              },
-              {
-                "title": "greaterThan",
-                "type": "action",
-                "name": "greaterThan",
-                "parameters": {
-                  "first": {"key": "minionCount"},
-                  "second": {"value": 0}
-                }
-              }
-            ]
-          }
-        },
-        {
-          "title": "loadUniqueEntity",
-          "type": "action",
-          "name": "loadUniqueEntity",
-          "parameters": {
-            "uniqueId": {"value": "pos1"}
-          },
-          "output": {
-            "entity": "sweepStart"
-          }
-        },
-        {
-          "title": "loadUniqueEntity",
-          "type": "action",
-          "name": "loadUniqueEntity",
-          "parameters": {
-            "uniqueId": {"value": "pos4"}
-          },
-          "output": {
-            "entity": "sweepEnd"
-          }
-        },
-        {
-          "title": "entityPosition",
-          "type": "action",
-          "name": "entityPosition",
-          "parameters": {
-            "entity": {"key": "sweepStart"}
-          },
-          "output": {
-            "position": "sweepStartPos"
-          }
-        },
-        {
-          "title": "entityPosition",
-          "type": "action",
-          "name": "entityPosition",
-          "parameters": {
-            "entity": {"key": "sweepEnd"}
-          },
-          "output": {
-            "position": "sweepEndPos"
-          }
-        },
-        {
-          "title": "parallel",
-          "type": "composite",
-          "name": "parallel",
-          "parameters": {
-            "fail": {"value": -1},
-            "success": {"value": 1}
-          },
-          "children": [
-            {
-              "title": "animate",
-              "type": "action",
-              "name": "animate",
-              "parameters": {
-                "fallback": {"value": "winddown"},
-                "state": {"value": "windup"},
-                "type": {"value": "thrusters"}
-              }
-            },
-            {
-              "title": "flyToPosition",
-              "type": "action",
-              "name": "flyToPosition",
-              "parameters": {
-                "position": {"key": "sweepStartPos"},
-                "speed": {"value": 50}
-              }
-            }
-          ]
-        },
-        {
-          "title": "setVelocity",
-          "type": "action",
-          "name": "setVelocity",
-          "parameters": {
-            "velocity": {"value": [0, 0]}
-          }
-        },
-        {
-          "title": "parallel",
-          "type": "composite",
-          "name": "parallel",
-          "parameters": {
-            "fail": {"value": -1},
-            "success": {"value": 1}
-          },
-          "children": [
-            {
-              "title": "animate",
-              "type": "action",
-              "name": "animate",
-              "parameters": {
-                "fallback": {"value": "winddown"},
-                "state": {"value": "windup"},
-                "type": {"value": "thrusters"}
-              }
-            },
-            {
-              "title": "flyToPosition",
-              "type": "action",
-              "name": "flyToPosition",
-              "parameters": {
-                "position": {"key": "sweepEndPos"},
-                "speed": {"value": 25}
-              }
-            },
-            {
-              "title": "repeater",
-              "type": "decorator",
-              "name": "repeater",
-              "parameters": {
-                "maxLoops": {"value": -1}
-              },
-              "child": {
-                "title": "sequence",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "self"},
-                      "offset": {"value": [0, 12]}
-                    },
-                    "output": {
-                      "position": "minionPos1"
-                    }
-                  },
-                  {
-                    "title": "offsetPosition",
-                    "type": "action",
-                    "name": "offsetPosition",
-                    "parameters": {
-                      "position": {"key": "self"},
-                      "offset": {"value": [0, -12]}
-                    },
-                    "output": {
-                      "position": "minionPos2"
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "ruinbuster_trifangle"},
-                      "position": {"key": "minionPos1"}
-                    },
-                    "output": {
-                      "entityId": "minionId"
-                    }
-                  },
-                  {
-                    "title": "listPush",
-                    "type": "action",
-                    "name": "listPush",
-                    "parameters": {
-                      "entity": {"key": "minionId"},
-                      "list": {"key": "minions"}
-                    },
-                    "output": {
-                      "list": "minions"
-                    }
-                  },
-                  {
-                    "title": "spawnMonster",
-                    "type": "action",
-                    "name": "spawnMonster",
-                    "parameters": {
-                      "type": {"value": "ruinbuster_trifangle"},
-                      "position": {"key": "minionPos2"}
-                    },
-                    "output": {
-                      "entityId": "minionId"
-                    }
-                  },
-                  {
-                    "title": "listPush",
-                    "type": "action",
-                    "name": "listPush",
-                    "parameters": {
-                      "entity": {"key": "minionId"},
-                      "list": {"key": "minions"}
-                    },
-                    "output": {
-                      "list": "minions"
-                    }
-                  },
-                  {
-                    "title": "playSound",
-                    "type": "action",
-                    "name": "playSound",
-                    "parameters": {
-                      "sound": {"value": "rocketfire"}
-                    }
-                  },
-                  {
-                    "title": "timer",
-                    "type": "action",
-                    "name": "timer",
-                    "parameters": {
-                      "time": {"value": 1.5}
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "setVelocity",
-          "type": "action",
-          "name": "setVelocity",
-          "parameters": {
-            "velocity": {"value": [0, 0]}
-          }
-        },
-        {
-          "title": "timer",
-          "type": "action",
-          "name": "timer",
-          "parameters": {
-            "time": {"value": 1.5}
-          }
+    "children": [
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "pos1"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "pos4"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+			"title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepStartPos"},
+			  "speed": {"value": 50}
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
         }
-      ]
-    }
+      },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepEndPos"},
+			  "speed": {"value": 25}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+        	        "target": {"key": "target"}
+        	      },
+        	      "output": {
+        	        "vector": "aimVector"
+        	      }
+        	    },
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, -12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "spawnmonster", "type": "ruinbuster_trifangle", "level": 10}]}},
+                    "projectileType": {"value": "orbitalup"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+			    {
+    		      "title": "spawnProjectile",
+                  "type": "action",
+                  "name": "spawnProjectile",
+                  "parameters": {
+                    "aimVector": {"key": "aimVector"},
+                    "offset": {"value": [0, 12]},
+                    "position": {"key": "self"},
+                    "projectileConfig": {"value": {"timeToLive": 0, "actionOnReap": [{"action": "spawnmonster", "type": "ruinbuster_trifangle", "level": 10}]}},
+                    "projectileType": {"value": "orbitalup"},
+                    "scalePower": {"value": true},
+                    "sourceEntity": {"key": "self"},
+                    "trackSource": {"value": false}
+                  }
+                },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "rocketfire"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 1.5}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1.5}
+        }
+      }
+    ]
   }
 }

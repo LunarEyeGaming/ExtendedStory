@@ -1,20 +1,21 @@
 {
   "projectileName" : "magnetarexplosiontrigger",
   "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
-  "animationCycle" : 1,
-  "frameNumber" : 1,
+  "animationCycle" : 0.8,
+  "frameNumber" : 10,
   "speed" : 0,
+  "damagePoly" : [ [-36, 18], [-18, 36], [18, 36], [36, 18], [36, -18], [18, -36], [-18, -36], [-36, -18] ],
   "animationLoops" : false,
   "piercing" : true,
   "flippable" : true,
   "power" : 0,
   "damageKind" : "default",
-  "timeToLive" : 0,
-  "onlyHitTerrain" : true,
-  "actionOnReap" : [
+  "periodicActions" : [
     {
-      "action" : "config",
-      "file" : "/projectiles/explosions/magnetarexplosion/magnetarexplosion.config"
-    }
+	  "time" : 0,
+	  "repeat" : false,
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/magnetarexplosion/magnetarexplosion.config"
+	}
   ]
 }

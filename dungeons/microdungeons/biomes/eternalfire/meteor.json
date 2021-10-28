@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJzt2UkOwjAMBdCchYtwGu7BfemuEmtgEZFFnNjxGNWLL1HU0rz+DhE9SnkemUwmk8lkMplMRjSvUkrk7GJ83Pzt3l1Zuj061egYY7Y+\/j+npnVm9uiyXdaye3Y78lme1xa+uly\/q589zmmrfnsdt34Lr5Vt1q92z5be1tbLzt7ePYnq1Zx3afeLieYYLLxYJ9b8BhLdey\/\/UK5hyEsxWzx7IStkHvXMNUt5of3NrKOeqed2tH6xXuzxjehtzdpejNn6eSRhje4dmVefv1G8o\/un5FwjyvU78kLmlXnDLl6JOUNvP9jtInmx45aYX0mZuV7N46Tx\/0Z6Y1h73lWzV6ecbq\/qXTFH90q+Q\/K2zrzS7wm9rZCX6qTYuWOU8koYa87v7+2SK1m5Zu9xp1fPupO5jlPynhXZLu2MbNa0RnNbWb3N1k6OGbtdbz1PJ9WPXd97\/Byz9zgy18sHsaZhqQ==",
+         "data":"eJzt2bESgzAMA9B8ev+3bL3r3C5sQGMsW06tQVsCeoQLHGxjPDZFURRFURRFUaB5jjEqp4MRZWf3zXSzO2aa2d2yzexemV52p2wzu4+8cV52l2wzu4e88nbzvk\/SzWsxr+RFmFFe630V4f7H9ZXXZpZ3jVTxXu2fiOfJ1Xlm5lXxWs3dvbPzKnlneyPer1BmrzfyOkV835C3hvXIe9fMWlPP2nb13jFX9yL\/IbGtv7zo\/4Rs65nX6rTYvR1RXoRxz+t7vFXSyeo1s3vLG2ddybz3RO5Zle1oZ2VzpLWaO8vKNmc7PebZeUfjmE6rf3Y8u7\/HzO6h9MsHBiSwKQ==",
          "encoding":"base64",
          "height":60,
          "name":"back",
@@ -17,13 +17,13 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1EsOwjAMBNCchYtwGk7fJRJrlEVEsJxgu3Y+dEayCDRt83DTlBAEQRAEQRAEQdbM4zZ7BYgmrx+VQ3u6Qo\/pGrXnSN0rWHO49WnPyZU9B\/nOHT\/I+GhcNyqtnmjmt\/zcmPOWotegxz3y61mUzuf6WX4rYzqnZ+XmRFo5t2bfcj2u\/dSjfSd4eK0ubX\/pXG15eCX\/h8Rb27jy8FrNkvM1z6vFa7VHeLX9ldTZvnp5rSV1rmCO9N7Tp6L2sNbtdb+etWX29ErNEV7O2uvzVbye1tHe2jzSq02EV7J\/R\/Z0hnnmnh1pjnw\/nTV72kdZPbxe5pV98K5b8P6vNyqzXfDCCy+88H7nuVFdyXrWPHvd8MZZdzKn6tMzs11RPe1ltm2ktc5s50hryVWcdaxrtcxbMdqerNQ7a3ZeO7J33ga1ziQ=",
+         "data":"eJzt1EsOwjAMBNCchYtwEu6\/6BKJNcoiIlhOsF07HzojWQSatnm4aUoIgiAIgiAIgiBr5nGbvQJEk9ePyqE9XaHHdI3ac6TuFaw53Pq05+TKnoN8544fZHw0rhuVVk8081t+bsx5S9Fr0OMe+fUsSudz\/Sy\/lTGd07NycyKtnFuzb7ke137q0b4TPLxWl7a\/dK62PLyS\/0PirW1ceXitZsn5mufV4rXaI7za\/krqbF+9vNaSOlcwR3rv6VNRe1jr9rpfz9oye3ql5ggvZ+31+SpeT+tob20e6dUmwivZvyN7OsM8c8+ONEe+n86aPe2jrB5eL\/PKPnjXLXj\/1xuV2S544YUXXni\/89yormQ9a569bnjjrDuZU\/XpmdmuqJ72Mts20lpntnOkteQqzjrWtVrmrRhtT1bqnTU7rx3ZO29I7snk",
          "encoding":"base64",
          "height":60,
          "name":"front",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -497,7 +497,7 @@
         }, 
         {
          "firstgid":8793,
-         "source":"..\/..\/..\/..\/tilesets\/tilesandliquids\/extendedstorytiles.json"
+         "source":"..\/..\/..\/..\/tilesets\/isolatedvaulttileset\/ivtileset2.json"
         }],
  "tilewidth":8,
  "type":"map",

@@ -22,7 +22,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "rotateTransformationGroup",
         "type": "action",
         "name": "rotateTransformationGroup",
@@ -32,14 +32,14 @@
           "transformationGroup": {"value": "head"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.35}
-        }
-      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.35}
+		}
+	  },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -49,30 +49,30 @@
           "type": {"value": "attack"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.35}
-        }
-      },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "dragonArrival"}
-        }
-      },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 2.5}
-        }
-      },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.35}
+		}
+	  },
+	  {
+	    "title": "playSound",
+		"type": "action",
+		"name": "playSound",
+		"parameters": {
+		  "sound": {"value": "dragonArrival"}
+		}
+	  },
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 2.5}
+		}
+	  },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -90,20 +90,20 @@
           "transformationGroup": {"value": "head"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.5}
-        }
-      },
-      {
-        "title": "poisondragonboss-poisonshower",
-        "type": "module",
-        "name": "poisondragonboss-poisonshower",
-        "parameters": {}
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.5}
+		}
+	  },
+	  {
+	    "title": "poisondragonboss-poisonshower",
+		"type": "module",
+		"name": "poisondragonboss-poisonshower",
+		"parameters": {}
+	  }
     ]
   }
 }

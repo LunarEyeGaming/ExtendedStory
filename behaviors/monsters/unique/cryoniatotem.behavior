@@ -10,8 +10,8 @@
     "/scripts/actions/position.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
-    "/scripts/actions/monster.lua",
-    "/scripts/actions/movement.lua"
+	"/scripts/actions/monster.lua",
+	"/scripts/actions/movement.lua"
   ],
   "parameters": {},
   "root": {
@@ -199,18 +199,18 @@
                                   "name": "sequence",
                                   "parameters": {},
                                   "children": [
-                                    {
-                                      "title": "spawnProjectile",
-                                      "type": "action",
-                                      "name": "spawnProjectile",
-                                      "parameters": {
-                                        "aimVector": {"value": [0, 0]},
-                                        "offset": {"value": [0, 5]},
-                                        "projectileConfig": {"value": {"power": 10}},
-                                        "projectileType": {"value": "frostportalwindup_es"},
-                                        "scalePower": {"value": true}
-                                      }
-                                    }
+			                        {
+    		                          "title": "spawnProjectile",
+    		                          "type": "action",
+    		                          "name": "spawnProjectile",
+    		                          "parameters": {
+    		                            "aimVector": {"value": [0, 0]},
+    		                            "offset": {"value": [0, 5]},
+    		                            "projectileConfig": {"value": {"power": 10}},
+    		                            "projectileType": {"value": "frostportalwindup_es"},
+			                        	"scalePower": {"value": true}
+    		                          }
+    		                        }
                                   ]
                                 }
                               ]
@@ -246,62 +246,62 @@
                                     "time": {"value": 0.5}
                                   }
                                 },
-                                {
-                                  "title": "repeater",
-                                  "type": "decorator",
-                                  "name": "repeater",
-                                  "parameters": {
-                                    "maxLoops": {"value": 5}
-                                  },
-                                  "child": {
-                                    "title": "sequence",
-                                    "type": "composite",
-                                    "name": "sequence",
-                                    "parameters": {},
-                                    "children": [
-                                      {
-                                        "title": "entityDirection",
-                                        "type": "action",
-                                        "name": "entityDirection",
-                                        "parameters": {
-                                          "target": {"key": "target"},
+								{
+			                      "title": "repeater",
+			                      "type": "decorator",
+			                      "name": "repeater",
+			                      "parameters": {
+			                        "maxLoops": {"value": 5}
+			                      },
+			                      "child": {
+			                        "title": "sequence",
+				                    "type": "composite",
+				                    "name": "sequence",
+				                    "parameters": {},
+				                    "children": [
+			                          {
+        	                            "title": "entityDirection",
+        	                            "type": "action",
+        	                            "name": "entityDirection",
+        	                            "parameters": {
+        	                              "target": {"key": "target"},
                                           "offset": {"value": [0.75, -0.75]}
-                                        },
-                                        "output": {
-                                          "vector": "aimVector"
-                                        }
-                                      },
-                                      {
-                                        "title": "spawnProjectile",
-                                        "type": "action",
-                                        "name": "spawnProjectile",
-                                        "parameters": {
-                                          "aimVector": {"key": "aimVector"},
-                                          "offset": {"value": [0.75, -0.75]},
-                                          "projectileConfig": {"value": {}},
-                                          "projectileType": {"value": "frostburnfireballsmallhoming_es"},
-                                          "scalePower": {"value": true}
-                                        }
-                                      },
-                                      {
-                                        "title": "timer",
-                                        "type": "action",
-                                        "name": "timer",
-                                        "parameters": {
-                                          "time": {"value": 0.1}
-                                        }
-                                      },
-                                      {
-                                        "title": "playSound",
-                                        "type": "action",
-                                        "name": "playSound",
-                                        "parameters": {
-                                          "sound": {"value": "fire2"}
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
+        	                            },
+        	                            "output": {
+        	                              "vector": "aimVector"
+        	                            }
+        	                          },
+				                      {
+    	    	                        "title": "spawnProjectile",
+    	    	                        "type": "action",
+    	    	                        "name": "spawnProjectile",
+    	    	                        "parameters": {
+    	    	                          "aimVector": {"key": "aimVector"},
+    	    	                          "offset": {"value": [0.75, -0.75]},
+    	    	                          "projectileConfig": {"value": {}},
+    	    	                          "projectileType": {"value": "frostburnfireballsmallhoming_es"},
+					                      "scalePower": {"value": true}
+    	    	                        }
+    	    	                      },
+    	    	                      {
+    	    	                        "title": "timer",
+    	    	                        "type": "action",
+    	    	                        "name": "timer",
+    	    	                        "parameters": {
+    	    	                          "time": {"value": 0.1}
+    	    	                        }
+    	    	                      },
+    	    	                      {
+    	    	                        "title": "playSound",
+    	    	                        "type": "action",
+    	    	                        "name": "playSound",
+    	    	                        "parameters": {
+    	    	                          "sound": {"value": "fire2"}
+    	    	                        }
+    	    	                      }
+				                    ]
+			                      }
+			                    }
                               ]
                             },
                             {
@@ -343,30 +343,30 @@
                                     "sound": {"value": "slam"}
                                   }
                                 },
-                                {
-                                  "title": "spawnProjectile",
-                                  "type": "action",
-                                  "name": "spawnProjectile",
-                                  "parameters": {
-                                    "aimVector": {"value": [-1, 0]},
-                                    "offset": {"value": [0, 0]},
-                                    "projectileConfig": {"value": {}},
-                                    "projectileType": {"value": "icicleshockwave_es"},
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [-1, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {}},
+    	                            "projectileType": {"value": "icicleshockwave_es"},
                                     "scalePower": {"value": true}
-                                  }
-                                },
-                                {
-                                  "title": "spawnProjectile",
-                                  "type": "action",
-                                  "name": "spawnProjectile",
-                                  "parameters": {
-                                    "aimVector": {"value": [1, 0]},
-                                    "offset": {"value": [0, 0]},
-                                    "projectileConfig": {"value": {}},
-                                    "projectileType": {"value": "icicleshockwave_es"},
+    	                          }
+    	                        },
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [1, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {}},
+    	                            "projectileType": {"value": "icicleshockwave_es"},
                                     "scalePower": {"value": true}
-                                  }
-                                }
+    	                          }
+    	                        }
                               ]
                             },
                             {
@@ -378,95 +378,89 @@
                               }
                             },
                             {
-                              "title": "succeeder",
-                              "type": "decorator",
-                              "name": "succeeder",
+                              "title": "sequence",
+                              "type": "composite",
+                              "name": "sequence",
                               "parameters": {},
-                              "child": {
-                                "title": "sequence",
-                                "type": "composite",
-                                "name": "sequence",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "inverter",
-                                    "type": "decorator",
-                                    "name": "inverter",
-                                    "parameters": {},
-                                    "child": {
-                                      "title": "findMonster",
-                                      "type": "action",
-                                      "name": "findMonster",
-                                      "parameters": {
-                                        "position": {"key": "self"},
-                                        "range": {"value": 100},
-                                        "type": {"value": "iceartifactboss_iceprobe"}
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "title": "setAnimationState",
-                                    "type": "action",
-                                    "name": "setAnimationState",
-                                    "parameters": {
-                                      "state": {"value": "fire"},
-                                      "type": {"value": "body"}
-                                    }
-                                  },
-                                  {
-                                    "title": "timer",
-                                    "type": "action",
-                                    "name": "timer",
-                                    "parameters": {
-                                      "time": {"value": 0.7}
-                                    }
-                                  },
-                                  {
-                                    "title": "playSound",
-                                    "type": "action",
-                                    "name": "playSound",
-                                    "parameters": {
-                                      "sound": {"value": "fire"}
-                                    }
-                                  },
-                                  {
-                                    "title": "repeater",
-                                    "type": "decorator",
-                                    "name": "repeater",
-                                    "parameters": {
-                                      "maxLoops": {"value": 3}
-                                    },
-                                    "child": {
-                                      "title": "sequence",
-                                      "type": "composite",
-                                      "name": "sequence",
-                                      "parameters": {},
-                                      "children": [
-                                        {
-                                          "title": "spawnProjectile",
-                                          "type": "action",
-                                          "name": "spawnProjectile",
-                                          "parameters": {
-                                            "aimVector": {"value": [0, 0]},
-                                            "offset": {"value": [0, 0]},
-                                            "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "sound", "options": [ "/sfx/gun/flamethrower_stop.ogg" ]}, {"action": "projectile", "type": "iceprobespawn_es", "fuzzAngle": 180}]}},
-                                            "projectileType": {"value": "frostburnfireballsmall_es"},
-                                            "scalePower": {"value": true}
-                                          }
-                                        },
-                                        {
-                                          "title": "timer",
-                                          "type": "action",
-                                          "name": "timer",
-                                          "parameters": {
-                                            "time": {"value": 0.1}
-                                          }
-                                        }
-                                      ]
-                                    }
+                              "children": [
+                                {
+                                  "title": "setAnimationState",
+                                  "type": "action",
+                                  "name": "setAnimationState",
+                                  "parameters": {
+                                    "state": {"value": "fire"},
+                                    "type": {"value": "body"}
                                   }
-                                ]
-                              }
+                                },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.7}
+                                  }
+                                },
+                                {
+                                  "title": "playSound",
+                                  "type": "action",
+                                  "name": "playSound",
+                                  "parameters": {
+                                    "sound": {"value": "fire"}
+                                  }
+                                },
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [0, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "sound", "options": [ "/sfx/gun/flamethrower_stop.ogg" ]}, {"action": "projectile", "type": "iceprobespawn_es", "fuzzAngle": 180}]}},
+    	                            "projectileType": {"value": "frostburnfireballsmall_es"},
+                                    "scalePower": {"value": true}
+    	                          }
+    	                        },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [0, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "sound", "options": [ "/sfx/gun/flamethrower_stop.ogg" ]}, {"action": "projectile", "type": "iceprobespawn_es", "fuzzAngle": 180}]}},
+    	                            "projectileType": {"value": "frostburnfireballsmall_es"},
+                                    "scalePower": {"value": true}
+    	                          }
+    	                        },
+                                {
+                                  "title": "timer",
+                                  "type": "action",
+                                  "name": "timer",
+                                  "parameters": {
+                                    "time": {"value": 0.1}
+                                  }
+                                },
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [0, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {"timeToLive": 0, "power": 0, "actionOnReap": [{"action": "sound", "options": [ "/sfx/gun/flamethrower_stop.ogg" ]}, {"action": "projectile", "type": "iceprobespawn_es", "fuzzAngle": 180}]}},
+    	                            "projectileType": {"value": "frostburnfireballsmall_es"},
+                                    "scalePower": {"value": true}
+    	                          }
+    	                        }
+                              ]
                             },
                             {
                               "title": "timer",

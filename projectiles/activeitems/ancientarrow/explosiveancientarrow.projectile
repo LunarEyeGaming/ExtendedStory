@@ -40,6 +40,13 @@
       "specification" : "energyblade2",
       "time" : 0.07,
       "repeat" : true
+    },
+    {
+      "action" : "particle",
+      "specification" : "ancientarrowtrail",
+      "rotate" : true,
+      "time" : 0.032,
+      "repeat" : true
     }
   ],
   "actionOnReap" : [
@@ -61,11 +68,11 @@
         }
       ]
     },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
-    },
-    {
+	{
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/ancientexplosion/ancientexplosion.config"
+	},
+	{
       "action" : "projectile",
       "type" : "chargedancientarrow",
       "angleAdjust" : -50,
@@ -103,7 +110,7 @@
   ],
   "image" : "ancientarrow.png",
   "animationCycle" : 0.1,
-  "frameNumber" : 1,
+  "frameNumber" : 2,
   "lightColor" : [130, 70, 160],
   "fullbright" : true,
   "emitters" : ["energyweapon"],

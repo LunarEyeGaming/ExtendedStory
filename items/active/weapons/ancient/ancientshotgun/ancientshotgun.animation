@@ -17,105 +17,82 @@
           }
         }
       },
-      "gun" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 8,
-            "cycle" : 0.5,
-            "mode" : "loop"
-          },
-          "fire" : {
-            "frames" : 1,
-            "cycle" : 0.1,
-            "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      },
-      "shells" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 1,
-            "cycle" : 1,
-            "mode" : "loop"
-          },
-          "fire" : {
-            "frames" : 8,
-            "cycle" : 0.75,
-            "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      }
+	  "middle" : {
+	    "default" : "idle",
+		"states" : {
+		  "idle" : {
+		    "frames" : 1,
+			"cycle" : 1,
+			"mode" : "loop"
+		  },
+		  "fire" : {
+		    "frames" : 5,
+			"cycle" : 0.75,
+			"mode" : "transition",
+			"transition" : "idle"
+		  }
+		}
+	  }
     },
 
     "parts" : {
-      "gun" : {
+      "butt" : {
         "properties" : {
           "centered" : true,
-          "offset" : [1.5, 0.5], // x offset is set dynamically
+          "image" : "<partImage><paletteSwaps>",
+          "offset" : [0, 0], // x offset is set dynamically
+          "transformationGroups" : ["weapon"]
+        }
+      },
+      "middle" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         },
-        "partStates" : {
-          "gun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          }
-        }
-      },
-      "gunFullbright" : {
+		"partStates" : {
+		  "middle" : {
+		    "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle.<frame>"
+			  }
+			},
+			"fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire.<frame>"
+			  }
+			}
+		  }
+		}
+	  },
+      "middleFullbright" : {
         "properties" : {
-          "anchorPart" : "gun",
+		  "anchorPart" : "middle",
           "centered" : true,
-          "zLevel" : 1,
-          "fullbright" : true
+		  "zLevel" : 1,
+		  "fullbright" : true
         },
-        "partStates" : {
-          "gun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          }
-        }
+		"partStates" : {
+		  "middle" : {
+		    "idle" : {
+			  "properties" : {
+			    "image" : "<partImage>:idle.<frame>"
+			  }
+			},
+			"fire" : {
+			  "properties" : {
+			    "image" : "<partImage>:fire.<frame>"
+			  }
+			}
+		  }
+		}
       },
-      "shells" : {
+      "barrel" : {
         "properties" : {
-          "anchorPart" : "gun",
-          "offset" : [1.125, 0.8125],
           "centered" : true,
-          "zLevel" : -1,
-          "fullbright" : true
-        },
-        "partStates" : {
-          "shells" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          }
+          "image" : "<partImage><paletteSwaps>",
+          "offset" : [0, 0], // x offset is set dynamically
+          "transformationGroups" : ["weapon"]
         }
       },
       "muzzleFlash" : {
@@ -163,7 +140,7 @@
     "muzzleFlash" : {
       "active" : false,
       "position" : [0, 0],
-      "color" : [150, 0, 150]
+      "color" : [90, 90, 0]
     }
   },
 

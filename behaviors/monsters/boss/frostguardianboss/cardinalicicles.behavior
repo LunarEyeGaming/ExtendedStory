@@ -52,56 +52,56 @@
         "parameters": {
           "maxLoops": {"value": 20}
         },
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "entityPosition",
-              "type": "action",
-              "name": "entityPosition",
-              "parameters": {
-                "entity": {"key": "target"}
-              },
-              "output": {
-                "position": "targetPos"
-              }
-            },
-            {
-              "title": "spawnProjectile",
-              "type": "action",
-              "name": "spawnProjectile",
-              "parameters": {
-                "aimVector": {"value": [1, 0]},
-                "offset": {"value": [0, 0]},
-                "projectileConfig": {"value": {}},
-                "projectileType": {"value": "fg_cardinaliciclesslower_es"},
-                "position": {"key": "targetPos"}
-              }
-            },
-            {
-              "title": "addEphemeralEffect",
-              "type": "action",
-              "name": "addEphemeralEffect",
-              "parameters": {
-                "name": {"value": "invulnerable"},
-              "duration": {"value": 1.5}
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.75}
-              }
-            }
-          ]
-        }
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
+        	  "title": "entityPosition",
+        	  "type": "action",
+        	  "name": "entityPosition",
+        	  "parameters": {
+			    "entity": {"key": "target"}
+			  },
+			  "output": {
+			    "position": "targetPos"
+			  }
+        	},
+			{
+    		  "title": "spawnProjectile",
+    		  "type": "action",
+    		  "name": "spawnProjectile",
+    		  "parameters": {
+    		    "aimVector": {"value": [1, 0]},
+    		    "offset": {"value": [0, 0]},
+    		    "projectileConfig": {"value": {}},
+    		    "projectileType": {"value": "fg_cardinaliciclesslower_es"},
+				"position": {"key": "targetPos"}
+    		  }
+    		},
+			{
+    		  "title": "addEphemeralEffect",
+    		  "type": "action",
+    		  "name": "addEphemeralEffect",
+    		  "parameters": {
+    		    "name": {"value": "invulnerable"},
+			  "duration": {"value": 1.5}
+    		  }
+    		},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.75}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -118,14 +118,14 @@
           "sound": {"value": "frostblockwinddown"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 2.0}
-        }
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 2.0}
+		}
+	  }
     ]
   }
 }

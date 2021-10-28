@@ -10,8 +10,8 @@
     "/scripts/actions/position.lua",
     "/scripts/actions/projectiles.lua",
     "/scripts/actions/status.lua",
-    "/scripts/actions/monster.lua",
-    "/scripts/actions/movement.lua"
+	"/scripts/actions/monster.lua",
+	"/scripts/actions/movement.lua"
   ],
   "parameters": {},
   "root": {
@@ -191,18 +191,18 @@
                                   "name": "sequence",
                                   "parameters": {},
                                   "children": [
-                                    {
-                                      "title": "spawnProjectile",
-                                      "type": "action",
-                                      "name": "spawnProjectile",
-                                      "parameters": {
-                                        "aimVector": {"value": [0, 0]},
-                                        "offset": {"value": [0, 5]},
-                                        "projectileConfig": {"value": {"power": 10}},
-                                        "projectileType": {"value": "frostportalwindup2_es"},
-                                        "scalePower": {"value": true}
-                                      }
-                                    }
+			                        {
+    		                          "title": "spawnProjectile",
+    		                          "type": "action",
+    		                          "name": "spawnProjectile",
+    		                          "parameters": {
+    		                            "aimVector": {"value": [0, 0]},
+    		                            "offset": {"value": [0, 5]},
+    		                            "projectileConfig": {"value": {"power": 10}},
+    		                            "projectileType": {"value": "frostportalwindup_es"},
+			                        	"scalePower": {"value": true}
+    		                          }
+    		                        }
                                   ]
                                 }
                               ]
@@ -238,62 +238,62 @@
                                     "time": {"value": 0.5}
                                   }
                                 },
-                                {
-                                  "title": "repeater",
-                                  "type": "decorator",
-                                  "name": "repeater",
-                                  "parameters": {
-                                    "maxLoops": {"value": 5}
-                                  },
-                                  "child": {
-                                    "title": "sequence",
-                                    "type": "composite",
-                                    "name": "sequence",
-                                    "parameters": {},
-                                    "children": [
-                                      {
-                                        "title": "entityDirection",
-                                        "type": "action",
-                                        "name": "entityDirection",
-                                        "parameters": {
-                                          "target": {"key": "target"},
+								{
+			                      "title": "repeater",
+			                      "type": "decorator",
+			                      "name": "repeater",
+			                      "parameters": {
+			                        "maxLoops": {"value": 5}
+			                      },
+			                      "child": {
+			                        "title": "sequence",
+				                    "type": "composite",
+				                    "name": "sequence",
+				                    "parameters": {},
+				                    "children": [
+			                          {
+        	                            "title": "entityDirection",
+        	                            "type": "action",
+        	                            "name": "entityDirection",
+        	                            "parameters": {
+        	                              "target": {"key": "target"},
                                           "offset": {"value": [0.75, -0.75]}
-                                        },
-                                        "output": {
-                                          "vector": "aimVector"
-                                        }
-                                      },
-                                      {
-                                        "title": "spawnProjectile",
-                                        "type": "action",
-                                        "name": "spawnProjectile",
-                                        "parameters": {
-                                          "aimVector": {"key": "aimVector"},
-                                          "offset": {"value": [0.75, -0.75]},
-                                          "projectileConfig": {"value": {"speed": 60}},
-                                          "projectileType": {"value": "frostburnfireballsmall_es"},
-                                          "scalePower": {"value": true}
-                                        }
-                                      },
-                                      {
-                                        "title": "timer",
-                                        "type": "action",
-                                        "name": "timer",
-                                        "parameters": {
-                                          "time": {"value": 0.1}
-                                        }
-                                      },
-                                      {
-                                        "title": "playSound",
-                                        "type": "action",
-                                        "name": "playSound",
-                                        "parameters": {
-                                          "sound": {"value": "fire2"}
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
+        	                            },
+        	                            "output": {
+        	                              "vector": "aimVector"
+        	                            }
+        	                          },
+				                      {
+    	    	                        "title": "spawnProjectile",
+    	    	                        "type": "action",
+    	    	                        "name": "spawnProjectile",
+    	    	                        "parameters": {
+    	    	                          "aimVector": {"key": "aimVector"},
+    	    	                          "offset": {"value": [0.75, -0.75]},
+    	    	                          "projectileConfig": {"value": {}},
+    	    	                          "projectileType": {"value": "frostburnfireballsmallhoming_es"},
+					                      "scalePower": {"value": true}
+    	    	                        }
+    	    	                      },
+    	    	                      {
+    	    	                        "title": "timer",
+    	    	                        "type": "action",
+    	    	                        "name": "timer",
+    	    	                        "parameters": {
+    	    	                          "time": {"value": 0.1}
+    	    	                        }
+    	    	                      },
+    	    	                      {
+    	    	                        "title": "playSound",
+    	    	                        "type": "action",
+    	    	                        "name": "playSound",
+    	    	                        "parameters": {
+    	    	                          "sound": {"value": "fire2"}
+    	    	                        }
+    	    	                      }
+				                    ]
+			                      }
+			                    }
                               ]
                             },
                             {
@@ -335,30 +335,30 @@
                                     "sound": {"value": "slam"}
                                   }
                                 },
-                                {
-                                  "title": "spawnProjectile",
-                                  "type": "action",
-                                  "name": "spawnProjectile",
-                                  "parameters": {
-                                    "aimVector": {"value": [-1, 0]},
-                                    "offset": {"value": [0, 0]},
-                                    "projectileConfig": {"value": {}},
-                                    "projectileType": {"value": "icicleshockwave_es"},
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [-1, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {}},
+    	                            "projectileType": {"value": "icicleshockwave_es"},
                                     "scalePower": {"value": true}
-                                  }
-                                },
-                                {
-                                  "title": "spawnProjectile",
-                                  "type": "action",
-                                  "name": "spawnProjectile",
-                                  "parameters": {
-                                    "aimVector": {"value": [1, 0]},
-                                    "offset": {"value": [0, 0]},
-                                    "projectileConfig": {"value": {}},
-                                    "projectileType": {"value": "icicleshockwave_es"},
+    	                          }
+    	                        },
+		                        {
+    	                          "title": "spawnProjectile",
+    	                          "type": "action",
+    	                          "name": "spawnProjectile",
+    	                          "parameters": {
+    	                            "aimVector": {"value": [1, 0]},
+    	                            "offset": {"value": [0, 0]},
+    	                            "projectileConfig": {"value": {}},
+    	                            "projectileType": {"value": "icicleshockwave_es"},
                                     "scalePower": {"value": true}
-                                  }
-                                }
+    	                          }
+    	                        }
                               ]
                             },
                             {

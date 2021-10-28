@@ -33,7 +33,7 @@
       },
 
       "projectileDirection" : [0, 1],
-      "projectilePosition" : [0, 2.5],
+      "projectilePosition" : [0, 0.7],
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
@@ -50,7 +50,7 @@
       },
 
       "projectileDirection" : [0, 1],
-      "projectilePosition" : [1, 2.5],
+      "projectilePosition" : [1, 0.7],
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
@@ -67,7 +67,7 @@
       },
 
       "projectileDirection" : [1, 0],
-      "projectilePosition" : [2.5, 0],
+      "projectilePosition" : [0.7, 0],
 
       "spaceScan" : 0.1,
       "anchors" : [ "left" ]
@@ -84,7 +84,7 @@
       },
 
       "projectileDirection" : [-1, 0],
-      "projectilePosition" : [-1.5, 0],
+      "projectilePosition" : [0.3, 0],
 
       "spaceScan" : 0.1,
       "anchors" : [ "right" ]
@@ -102,7 +102,7 @@
       },
 
       "projectileDirection" : [0, -1],
-      "projectilePosition" : [0, -1.5],
+      "projectilePosition" : [0, 0.3],
 
       "spaceScan" : 0.1,
       "anchors" : [ "top" ]
@@ -119,7 +119,7 @@
       },
 
       "projectileDirection" : [0, -1],
-      "projectilePosition" : [1, -1.5],
+      "projectilePosition" : [1, 0.3],
 
       "spaceScan" : 0.1,
       "anchors" : [ "top" ]
@@ -147,11 +147,20 @@
 
   "fireTime" : 3.0, // rate of fire
   "fireTimeVariance" : 0.0, // variation in rate of fire
-  "projectile" : "icespikewindup_es", // name of projectile (required)
+  "projectile" : "orbitalup", // name of projectile (required)
   "projectileConfig" : { // extra configuration overrides for projectile
     "damageTeam" : { "type" : "environment" },
     "power" : 100,
-    "speed" : 0
+    "speed" : 16,
+	"timeToLive" : 0.1,
+	"onlyHitTerrain" : true,
+	"actionOnReap" : [
+	  {
+	    "action" : "projectile",
+		"type" : "icespikewindup_es",
+		"inheritDamageFactor" : 1
+	  }
+	]
   },
   
   "health" : 5,

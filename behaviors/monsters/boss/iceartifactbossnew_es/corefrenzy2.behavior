@@ -17,22 +17,22 @@
     "type": "composite",
     "name": "parallel",
     "parameters": {
-      "fail": {"value": -1},
-      "success": {"value": 1}
-    },
+	  "fail": {"value": -1},
+	  "success": {"value": 1}
+	},
     "children": [
       {
-        "title": "failer",
-        "type": "decorator",
-        "name": "failer",
-        "parameters": {},
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
+	    "title": "failer",
+		"type": "decorator",
+		"name": "failer",
+		"parameters": {},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+		    {
               "title": "entityDirection",
               "type": "action",
               "name": "entityDirection",
@@ -43,203 +43,203 @@
                 "vector": "aimVector"
               }
             },
-            {
-              "title": "vecAngle",
-              "type": "action",
-              "name": "vecAngle",
-              "parameters": {
-                "vector": {"key": "aimVector"}
-              },
-              "output": {
-                "angle": "targetAngle"
-              }
-            },
-            {
-              "title": "vecRotate",
-              "type": "action",
-              "name": "vecRotate",
-              "parameters": {
-                "vector": {"value": [5, 0]},
-                "angle": {"key": "targetAngle"}
-              },
-              "output": {
-                "vector": "targetVelocity"
-              }
-            },
-            {
-              "title": "controlApproachVelocity",
-              "type": "action",
-              "name": "controlApproachVelocity",
-              "parameters": {
-                "force": {"value": 200},
-                "velocity": {"key": "targetVelocity"}
-              }
-            }
-          ]
-        }
-      },
-      {
+		    {
+	          "title": "vecAngle",
+	          "type": "action",
+	          "name": "vecAngle",
+	          "parameters": {
+	            "vector": {"key": "aimVector"}
+	          },
+	          "output": {
+	            "angle": "targetAngle"
+	          }
+	        },
+		    {
+	          "title": "vecRotate",
+	          "type": "action",
+	          "name": "vecRotate",
+	          "parameters": {
+	            "vector": {"value": [5, 0]},
+				"angle": {"key": "targetAngle"}
+	          },
+	          "output": {
+	            "vector": "targetVelocity"
+	    	  }
+	        },
+			{
+			  "title": "controlApproachVelocity",
+			  "type": "action",
+			  "name": "controlApproachVelocity",
+			  "parameters": {
+			    "force": {"value": 200},
+				"velocity": {"key": "targetVelocity"}
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
         "title": "failer",
         "type": "decorator",
         "name": "failer",
         "parameters": {},
-        "child": {
-          "title": "iceartifactbossnew_es-beamattack",
-          "type": "module",
-          "name": "iceartifactbossnew_es-beamattack",
-          "parameters": {}
-        }
+		"child": {
+		  "title": "iceartifactbossnew_es-beamattack",
+		  "type": "module",
+		  "name": "iceartifactbossnew_es-beamattack",
+		  "parameters": {}
+		}
       },
-      {
+	  {
         "title": "failer",
         "type": "decorator",
         "name": "failer",
         "parameters": {},
-        "child": {
-          "title": "sequence",
-          "type": "composite",
-          "name": "sequence",
-          "parameters": {},
-          "children": [
-            {
-              "title": "repeater",
-              "type": "decorator",
-              "name": "repeater",
-              "parameters": {
-                "maxLoops": {"value": 5}
-              },
-              "child": {
-                "title": "sequence",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "entityDirection",
-                    "type": "action",
-                    "name": "entityDirection",
-                    "parameters": {
-                      "target": {"key": "target"},
+		"child": {
+		  "title": "sequence",
+		  "type": "composite",
+		  "name": "sequence",
+		  "parameters": {},
+		  "children": [
+			{
+			  "title": "repeater",
+			  "type": "decorator",
+			  "name": "repeater",
+			  "parameters": {
+			    "maxLoops": {"value": 5}
+			  },
+			  "child": {
+			    "title": "sequence",
+				"type": "composite",
+				"name": "sequence",
+				"parameters": {},
+				"children": [
+			      {
+        	        "title": "entityDirection",
+        	        "type": "action",
+        	        "name": "entityDirection",
+        	        "parameters": {
+        	          "target": {"key": "target"},
                       "offset": {"value": [6, -3]}
-                    },
-                    "output": {
-                      "vector": "aimVector"
-                    }
-                  },
-                  {
-                    "title": "spawnProjectile",
-                    "type": "action",
-                    "name": "spawnProjectile",
-                    "parameters": {
-                      "aimVector": {"key": "aimVector"},
-                      "offset": {"value": [6, -3]},
-                      "projectileConfig": {"value": {}},
-                      "projectileType": {"value": "frostburnfireballsmallhoming_es"},
-                      "scalePower": {"value": true}
-                    }
-                  },
-                  {
-                    "title": "timer",
-                    "type": "action",
-                    "name": "timer",
-                    "parameters": {
-                      "time": {"value": 0.1}
-                    }
-                  },
-                  {
-                    "title": "playSound",
-                    "type": "action",
-                    "name": "playSound",
-                    "parameters": {
-                      "sound": {"value": "bullethellfire"}
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.25}
-              }
-            },
-            {
-              "title": "repeater",
-              "type": "decorator",
-              "name": "repeater",
-              "parameters": {
-                "maxLoops": {"value": 5}
-              },
-              "child": {
-                "title": "sequence",
-                "type": "composite",
-                "name": "sequence",
-                "parameters": {},
-                "children": [
-                  {
-                    "title": "entityDirection",
-                    "type": "action",
-                    "name": "entityDirection",
-                    "parameters": {
-                      "target": {"key": "target"},
+        	        },
+        	        "output": {
+        	          "vector": "aimVector"
+        	        }
+        	      },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"key": "aimVector"},
+    	    	      "offset": {"value": [6, -3]},
+    	    	      "projectileConfig": {"value": {}},
+    	    	      "projectileType": {"value": "frostburnfireballsmallhoming_es"},
+					  "scalePower": {"value": true}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 0.1}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "playSound",
+    	    	    "type": "action",
+    	    	    "name": "playSound",
+    	    	    "parameters": {
+    	    	      "sound": {"value": "bullethellfire"}
+    	    	    }
+    	    	  }
+				]
+			  }
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.25}
+    	      }
+    	    },
+			{
+			  "title": "repeater",
+			  "type": "decorator",
+			  "name": "repeater",
+			  "parameters": {
+			    "maxLoops": {"value": 5}
+			  },
+			  "child": {
+			    "title": "sequence",
+				"type": "composite",
+				"name": "sequence",
+				"parameters": {},
+				"children": [
+			      {
+        	        "title": "entityDirection",
+        	        "type": "action",
+        	        "name": "entityDirection",
+        	        "parameters": {
+        	          "target": {"key": "target"},
                       "offset": {"value": [-6, -3]}
-                    },
-                    "output": {
-                      "vector": "aimVector"
-                    }
-                  },
-                  {
-                    "title": "spawnProjectile",
-                    "type": "action",
-                    "name": "spawnProjectile",
-                    "parameters": {
-                      "aimVector": {"key": "aimVector"},
-                      "offset": {"value": [-6, -3]},
-                      "projectileConfig": {"value": {}},
-                      "projectileType": {"value": "frostburnfireballsmallhoming_es"},
-                      "scalePower": {"value": true}
-                    }
-                  },
-                  {
-                    "title": "timer",
-                    "type": "action",
-                    "name": "timer",
-                    "parameters": {
-                      "time": {"value": 0.1}
-                    }
-                  },
-                  {
-                    "title": "playSound",
-                    "type": "action",
-                    "name": "playSound",
-                    "parameters": {
-                      "sound": {"value": "bullethellfire"}
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "title": "timer",
-              "type": "action",
-              "name": "timer",
-              "parameters": {
-                "time": {"value": 0.75}
-              }
-            }
-          ]
-        }
+        	        },
+        	        "output": {
+        	          "vector": "aimVector"
+        	        }
+        	      },
+				  {
+    	    	    "title": "spawnProjectile",
+    	    	    "type": "action",
+    	    	    "name": "spawnProjectile",
+    	    	    "parameters": {
+    	    	      "aimVector": {"key": "aimVector"},
+    	    	      "offset": {"value": [-6, -3]},
+    	    	      "projectileConfig": {"value": {}},
+    	    	      "projectileType": {"value": "frostburnfireballsmallhoming_es"},
+					  "scalePower": {"value": true}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "timer",
+    	    	    "type": "action",
+    	    	    "name": "timer",
+    	    	    "parameters": {
+    	    	      "time": {"value": 0.1}
+    	    	    }
+    	    	  },
+    	    	  {
+    	    	    "title": "playSound",
+    	    	    "type": "action",
+    	    	    "name": "playSound",
+    	    	    "parameters": {
+    	    	      "sound": {"value": "bullethellfire"}
+    	    	    }
+    	    	  }
+				]
+			  }
+			},
+    	    {
+    	      "title": "timer",
+    	      "type": "action",
+    	      "name": "timer",
+    	      "parameters": {
+    	        "time": {"value": 0.75}
+    	      }
+    	    }
+		  ]
+		}
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 20.0}
-        }
-      }
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 20.0}
+		}
+	  }
     ]
   }
 }

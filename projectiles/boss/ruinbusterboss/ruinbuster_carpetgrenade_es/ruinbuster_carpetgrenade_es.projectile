@@ -1,7 +1,6 @@
 {
   "projectileName" : "ruinbuster_carpetgrenade_es",
   "physics" : "grenade",
-  "speed" : 50,
   "bounces" : -1,
   "timeToLive" : 3,
   "damageKindImage" : "fireicon.png",
@@ -13,8 +12,26 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/fireexplosionlarge/fireexplosionlargestatus.config"
-    }
+      "file" : "/projectiles/explosions/fireexplosionlarge/fireexplosionlarge.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "flamethrower",
+	  "angle" : 90,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "flamethrower",
+	  "angle" : 45,
+	  "inheritDamageFactor" : 0.5
+	},
+	{
+	  "action" : "projectile",
+	  "type" : "flamethrower",
+	  "angle" : 135,
+	  "inheritDamageFactor" : 0.5
+	}
   ],
   "power" : 50,
   "damageType" : "NoDamage",

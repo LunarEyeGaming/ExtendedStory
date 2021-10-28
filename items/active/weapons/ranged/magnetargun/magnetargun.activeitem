@@ -9,7 +9,7 @@
   "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged"],
-  "level" : 6,
+  "level" : 10,
 
   "inventoryIcon" : "magnetargun.png:empty",
 
@@ -24,65 +24,65 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "physical",
-  "stances" : {
-    "charged" : {
-      "armRotation" : 0,
-      "weaponRotation" : 0,
-      "twoHanded" : true,
+	"stances" : {
+      "charged" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
 
-      "allowRotate" : true,
-      "allowFlip" : true
-    },
-    "discharge" : {
-      "duration" : 0.1,
-      "armRotation" : 0,
-      "weaponRotation" : 0,
-      "twoHanded" : true,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "discharge" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+  
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+	  "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
 
-      "allowRotate" : true,
-      "allowFlip" : true
-    },
-    "idle" : {
-      "armRotation" : 0,
-      "weaponRotation" : 0,
-      "twoHanded" : true,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+	    "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
 
-      "allowRotate" : true,
-      "allowFlip" : true
-    },
-    "charge" : {
-      "duration" : 0,
-      "armRotation" : 0,
-      "weaponRotation" : 0,
-      "twoHanded" : true,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
 
-      "allowRotate" : true,
-      "allowFlip" : true
-    },
-    "fire" : {
-      "duration" : 0,
-      "armRotation" : 5,
-      "weaponRotation" : 5,
-      "twoHanded" : true,
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+	  "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
 
-      "allowRotate" : false,
-      "allowFlip" : false
-    },
-    "cooldown" : {
-      "duration" : 0.25,
-      "armRotation" : 0,
-      "weaponRotation" : 0,
-      "twoHanded" : true,
-
-      "allowRotate" : true,
-      "allowFlip" : false
-    }
-  },
+        "allowRotate" : true,
+        "allowFlip" : false
+      }
+	},
 
   "primaryAbilityType" : "chargefire_es",
   "primaryAbility" : {
     "chargeLevels" : [
-      {
+	  {
         "time" : 0,
         "energyCost" : 10,
         "cooldown" : 0.12,
@@ -90,45 +90,45 @@
         "projectileCount" : 2,
         "projectileParameters" : {},
         "inaccuracy" : 0.1,
-        "spreadAngle" : 4,
-        "baseDamage" : 3,
+		"spreadAngle" : 4,
+        "baseDamage" : 2,
         "fireSound" : "fire"
       },
       {
         "time" : 1.0,
-        "energyCost" : 120,
+        "energyCost" : 60,
         "cooldown" : 0.8,
         "projectileType" : "magnetarorb",
         "projectileParameters" : { },
         "inaccuracy" : 0,
-        "baseDamage" : 5,
+        "baseDamage" : 6,
         "fireSound" : "fire2"
       }
     ],
-    "stances" : {
+	"stances" : {
       "cooldown" : {
         "duration" : 0.25,
-        "armRotation" : 5,
-        "weaponRotation" : 5,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
         "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false
       }
-    }
+	}
   },
 
   "altAbilityType" : "kluexshooter",
   "altAbility" : {
     "elementalConfig" : {
       "physical" : {
-        "projectileType" : "magnetarmine",
-        "projectileParameters" : { "baseDamage" : 4 }
-      }
+	    "projectileType" : "magnetarmine",
+		"projectileParameters" : { }
+	  }
     },
-    "maxCastRange" : 90,
+	"maxCastRange" : 90,
 
-    "energyPerShot" : 30,
+    "energyPerShot" : 12,
     "projectileSpawnInterval" : 0.33,
 
     "projectileDelayEach" : 0.20

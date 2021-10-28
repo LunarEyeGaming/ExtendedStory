@@ -2,11 +2,11 @@
   "itemName" : "ancientgrenade",
   "price" : 50,
   "rarity" : "Legendary",
-  "category" : "Unstable Gem",
+  "category" : "Ancient Grenade",
   "inventoryIcon" : "ancientgrenade.png",
-  "image" : "ancientgrenadesmall.png",
-  "shortdescription" : "^magenta; ^reset;",
-  "description" : "Gems that have been destabilized and will explode moments after being thrown.",
+  "image" : "ancientgrenade.png",
+  "shortdescription" : "^magenta;^reset;",
+  "description" : "Handheld ancient grenades. Careful! They're very deadly.",
 
   "ammoUsage" : 1,
 
@@ -16,7 +16,7 @@
 
   "projectileType" : "ancientgrenadethrown",
   "projectileConfig" : {
-    "speed" : 50,
+    "speed" : 25,
     "power" : 40,
     "periodicActions" : [
       {

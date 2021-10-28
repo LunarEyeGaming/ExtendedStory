@@ -1,6 +1,6 @@
 {
   "type" : "truedestroyer",
-  "shortdescription" : "Omega, the Quantum Sentry",
+  "shortdescription" : "Omega the Quantum Sentry",
 
   "categories" : [ "truedestroyer" ],
   "parts" : [ "ufo", "pilot", "ufolit" ],
@@ -12,7 +12,7 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/boss/truedestroyer/bossMonster_truedestroyer.lua",
+      "/monsters/boss/bossMonster.lua",
       "/monsters/simpleRangedAttack.lua",
       "/scripts/stateMachine.lua",
       "/scripts/util.lua",
@@ -27,25 +27,37 @@
 
     "phases" : [
       {
-        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack", "quantumsentryDestructionAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack"]
+        "skills" : ["destroyerLaserShotsAttack", "destroyerSwoopAttack"]
       },
       {
         "enterPhase" : "destroyerMinionsAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.75,
-        "skills" : ["destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "quantumsentryDestructionAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
+        "healthPercentage" : 0.8,
+        "skills" : ["destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerLaserShotsAttack", "destroyerMinionsAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMinionsAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.6,
+        "skills" : ["destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "destroyerMegaLaserAttack", "destroyerSprayNPrayAttack"]
       },
       {
         "enterPhase" : "destroyerMegaLaserAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.5,
+        "healthPercentage" : 0.4,
+        "skills" : ["destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "destroyerMinionsAttack", "destroyerSprayNPrayAttack", "destroyerLaserShotsAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack"]
+      },
+      {
+        "enterPhase" : "destroyerMegaLaserAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.2,
         "skills" : ["ufoTeleportAttack", "destroyerSprayNPrayAttack", "ufoTeleportAttack", "destroyerLaserShotsAttack", "ufoTeleportAttack", "destroyerMegaLaserAttack", "ufoTeleportAttack", "destroyerMinionsAttack", "ufoTeleportAttack"]
       },
       {
-        "enterPhase" : "quantumsentryDestructionAttack",
+        "enterPhase" : "destroyerSwoopAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.2,
-        "skills" : ["ufoTeleportAttack"]
+        "healthPercentage" : 0.1,
+        "skills" : ["destroyerSwoopAttack", "destroyerSwoopAttack", "ufoTeleportAttack", "quantumsentryDestructionAttack", "destroyerLaserShotsAttack", "destroyerSprayNPrayAttack", "destroyerMegaLaserAttack", "destroyerSwoopAttack", "destroyerMinionsAttack", "destroyerSwoopAttack", "ufoTeleportAttack"]
       }
     ],
 
@@ -149,6 +161,15 @@
         },
         "acidicbacteriaImmunity" : { 
           "baseValue" : 1
+        },
+        "demonicStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "holyStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "bleedStatusImmunity" : {
+          "baseValue" : 1.0
         }
       },
 

@@ -6,17 +6,17 @@
         "states" : {
           "idle" : {
             "frames" : 5,
-            "cycle" : 0.5,
-            "mode" : "transition",
-            "transition" : "squirm",
-            "properties" : {
+			"cycle" : 0.5,
+			"mode" : "transition",
+			"transition" : "squirm",
+			"properties" : {
               "lightsOff" : ["fire", "idle"],
               "particleEmittersOn" : ["reload"],
-              "particleEmittersOff" : ["fire"]
+			  "particleEmittersOff" : ["fire"]
             },
-            "frameProperties" : {
-              "immediateSound" : ["/sfx/gun/reload/rocket_reload_clip1.ogg", "", "", "", "/sfx/gun/mech_gravitymine_reload.ogg"]
-            }
+			"frameProperties" : {
+			  "immediateSound" : ["/sfx/gun/reload/rocket_reload_clip1.ogg", "", "", "", "/sfx/gun/mech_gravitymine_reload.ogg"]
+			}
           },
           "squirm" : {
             "frames" : 5,
@@ -35,7 +35,7 @@
             "properties" : {
               "lightsOff" : ["idle"],
               "lightsOn" : ["fire"],
-              "particleEmittersOn" : ["fire"]
+			  "particleEmittersOn" : ["fire"]
             }
           }
         }
@@ -86,7 +86,7 @@
       "gnomefullbright" : {
         "properties" : {
           "centered" : true,
-          "fullbright" : true,
+		  "fullbright" : true,
           "offset" : [0.5, 0.5],
           "zLevel" : 1,
           
@@ -189,7 +189,7 @@
             "timeToLive" : 0.5,
             "fullbright" : true,
             "layer" : "front",
-            "light" : [59, 217, 215],
+			"light" : [59, 217, 215],
             "collidesForeground" : false,
             "variance" : {
               "position" : [0.0, 0.0],
@@ -199,7 +199,7 @@
         }
       ]
     },
-    "reload" : {
+	"reload" : {
       "active" : false,
       "transformationGroups" : ["weapon"],
       "emissionRate" : 2,
@@ -209,30 +209,30 @@
         }
       ]
     },
-    "fire" : {
-      "active" : false,
-      "emissionRate" : 100,
-      "offsetRegion" : [0.5, 0.25, 1, 0.25],
-      "particles" : [
-        {
-          "particle" : {
-            "type" : "animated",
-            "animation" : "/animations/ionfire_es/ionfire_es.animation",
-            "position" : [1, 0],
-            "initialVelocity" : [5, 0],
-            "finalVelocity" : [0, 10],
+	"fire" : {
+	  "active" : false,
+	  "emissionRate" : 100,
+	  "offsetRegion" : [0.5, 0.25, 1, 0.25],
+	  "particles" : [
+	    {
+		  "particle" : {
+		    "type" : "animated",
+			"animation" : "/animations/ionfire_es/ionfire_es.animation",
+			"position" : [1, 0],
+			"initialVelocity" : [5, 0],
+			"finalVelocity" : [0, 10],
             "approach" : [0, 10],
-            "light" : [0, 97, 91],
-            "fade" : 1,
-            "timeToLive" : 1,
-            "fullbright" : true,
-            "destructionAction" : "shrink",
-            "destructionTime" : 0.2,
-            "size" : 0.6
-          }
-        }
-      ]
-    }
+			"light" : [0, 97, 91],
+			"fade" : 1,
+			"timeToLive" : 1,
+			"fullbright" : true,
+			"destructionAction" : "shrink",
+			"destructionTime" : 0.2,
+			"size" : 0.6
+		  }
+		}
+	  ]
+	}
   },
 
   "sounds" : {

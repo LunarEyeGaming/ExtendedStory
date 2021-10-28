@@ -1,0 +1,21 @@
+{
+  "projectileName" : "aegisaltsnipershot",
+  "physics" : "laser",
+  "image" : "aegisaltsnipershot.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 100,
+  "animationCycle" : 0.5,
+  "frameNumber" : 2,
+  "power" : 50,
+  "timeToLive" : 5,
+  "fullbright" : true,
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/laserburst/laserburst.config"
+	}
+  ],
+  "emitters" : [ ],
+  "damageKind" : "plasmabullet",
+  "lightColor" : [83, 28, 97]
+}

@@ -414,7 +414,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-        "skyColoring" : {
+    	"skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 24, 55], [255, 140, 49] ],
@@ -426,7 +426,7 @@
           "dayLightColor" : [200, 200, 200],
           "eveningLightColor" : [160, 120, 180],
           "nightLightColor" : [40, 20, 60]
-        }
+    	}
       }
     }
   },
@@ -483,7 +483,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-        "skyColoring" : {
+    	"skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 0, 0], [0, 0, 0] ],
@@ -495,7 +495,7 @@
           "dayLightColor" : [0, 0, 0],
           "eveningLightColor" : [0, 0, 0],
           "nightLightColor" : [0, 0, 0]
-        }
+    	}
       }
     }
   },
@@ -552,7 +552,7 @@
         "dayLength" : 1153.36,
         "surfaceLevel" : 1200,
         "seed" : -5288806180628666923,
-        "skyColoring" : {
+    	"skyColoring" : {
           "mainColor" : [255, 255, 255],
 
           "morningColors" : [ [0, 0, 0], [0, 0, 0] ],
@@ -564,7 +564,7 @@
           "dayLightColor" : [0, 0, 0],
           "eveningLightColor" : [0, 0, 0],
           "nightLightColor" : [0, 0, 0]
-        }
+    	}
       }
     }
   },
@@ -647,6 +647,7 @@
       "beamUpRule" : "AnywhereWithWarning",
       "dungeonWorld" : "abyssartifactdungeon",
       "disableDeathDrops" : true,
+      "seed" : 1234,
 
       "skyParameters" : {
         "spaceLevel" : 3000,
@@ -671,10 +672,19 @@
           } ]
         } ],
         "planet" : {
-          "pos" : [ 1.2, 1.05 ],
+          "pos" : [ 0.00538729, 0.46961 ],
           "layers" : [ {
-            "scale" : 0.3,
-            "image" : "/celestial/darkabyssdimensionvortex/vortex.png"
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/shadows/9.png"
           } ]
         },
         "skyType" : "barren",

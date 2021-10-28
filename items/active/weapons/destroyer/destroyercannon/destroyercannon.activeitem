@@ -3,7 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A cannon of great power and destruction. ^red;Causes extreme lag.",
+  "description" : "A cannon of great power and destruction. Beware extreme power like this.",
   "shortdescription" : "^#cc0000;Cannon of Destruction^reset;",
   "tooltipKind" : "base",
   "category" : "^#660000;Destroyer Weapon",
@@ -23,9 +23,9 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "altFire" : ["/sfx/gun/plasma_pistol4.ogg"]
-    },
-    "particleEmitters" : {
+	  "altFire" : ["/sfx/gun/plasma_pistol4.ogg"]
+	},
+	"particleEmitters" : {
       "altMuzzleFlash" : {
         "active" : false,
         "transformationGroups" : ["muzzle"],
@@ -119,9 +119,9 @@
       "physical" : { "name" : "Destroyer Spray", "projectileType" : "explosivelasershot", "projectileCount" : 1, "fireTime" : 0.07, "inaccuracy" : 0.08, "projectileParameters" : {"speed" : 100}}
     },
     "energyUsage" : 20,
-    "baseDps" : 5,
-    "stances" : {
-      "fire" : {
+	"baseDps" : 5,
+	"stances" : {
+	  "fire" : {
         "duration" : 0,
         "armRotation" : 2,
         "weaponRotation" : 2,
@@ -139,7 +139,7 @@
         "allowRotate" : false,
         "allowFlip" : false
       }
-    }
+	}
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"

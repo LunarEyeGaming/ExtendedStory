@@ -2,7 +2,9 @@
   "name" : "abysseffect",
   "blockingStat" : "abysseffectImmunity",
 
-  "effectConfig" : {},
+  "effectConfig" : {
+	"healingMultiplier" : 0.5
+  },
   "defaultDuration" : 5.0,
 
   "scripts" : [

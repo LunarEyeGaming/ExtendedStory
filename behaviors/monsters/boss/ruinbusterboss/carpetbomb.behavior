@@ -19,80 +19,80 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "pos1"}
-        },
-        "output": {
-          "entity": "sweepStart"
-        }
-      },
-      {
-        "title": "loadUniqueEntity",
-        "type": "action",
-        "name": "loadUniqueEntity",
-        "parameters": {
-          "uniqueId": {"value": "pos4"}
-        },
-        "output": {
-          "entity": "sweepEnd"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepStart"}
-        },
-        "output": {
-          "position": "sweepStartPos"
-        }
-      },
-      {
-        "title": "entityPosition",
-        "type": "action",
-        "name": "entityPosition",
-        "parameters": {
-          "entity": {"key": "sweepEnd"}
-        },
-        "output": {
-          "position": "sweepEndPos"
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "animate",
-            "type": "action",
-            "name": "animate",
-            "parameters": {
-              "fallback": {"value": "winddown"},
-              "state": {"value": "windup"},
-              "type": {"value": "thrusters"}
-            }
-          },
-          {
-            "title": "flyToPosition",
-            "type": "action",
-            "name": "flyToPosition",
-            "parameters": {
-              "position": {"key": "sweepStartPos"},
-              "speed": {"value": 50}
-            }
-          }
-        ]
-      },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "pos1"}
+		},
+		"output": {
+		  "entity": "sweepStart"
+		}
+	  },
+	  {
+		"title": "loadUniqueEntity",
+		"type": "action",
+		"name": "loadUniqueEntity",
+		"parameters": {
+		  "uniqueId": {"value": "pos4"}
+		},
+		"output": {
+		  "entity": "sweepEnd"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepStart"}
+		},
+		"output": {
+		  "position": "sweepStartPos"
+		}
+	  },
+	  {
+	    "title": "entityPosition",
+		"type": "action",
+		"name": "entityPosition",
+		"parameters": {
+		  "entity": {"key": "sweepEnd"}
+		},
+		"output": {
+		  "position": "sweepEndPos"
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+			"title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepStartPos"},
+			  "speed": {"value": 50}
+			}
+		  }
+		]
+	  },
       {
         "title": "setVelocity",
         "type": "action",
@@ -101,83 +101,83 @@
           "velocity": {"value": [0, 0]}
         }
       },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "animate",
-            "type": "action",
-            "name": "animate",
-            "parameters": {
-              "fallback": {"value": "winddown"},
-              "state": {"value": "windup"},
-              "type": {"value": "thrusters"}
-            }
-          },
-          {
-            "title": "flyToPosition",
-            "type": "action",
-            "name": "flyToPosition",
-            "parameters": {
-              "position": {"key": "sweepEndPos"},
-              "speed": {"value": 50}
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "spawnProjectile",
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "sweepEndPos"},
+			  "speed": {"value": 25}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    		      "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"value": [0, 0]},
                     "offset": {"value": [0, 0]},
                     "position": {"key": "self"},
-                    "projectileConfig": {"value": {"power": 25}},
+                    "projectileConfig": {"value": {}},
                     "projectileType": {"value": "ruinbuster_carpetgrenade_es"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
                     "trackSource": {"value": false}
                   }
                 },
-                {
-                  "title": "playSound",
-                  "type": "action",
-                  "name": "playSound",
-                  "parameters": {
-                    "sound": {"value": "rocketfire"}
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.1}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "rocketfire"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
       {
         "title": "setVelocity",
         "type": "action",

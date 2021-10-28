@@ -18,7 +18,7 @@
         "config" : {
           "speed" : 0,
           "power" : 0,
-          "damageTeam" : { "type" : "enemy" },
+		  "damageTeam" : { "type" : "enemy" },
           "periodicActions" : [
             {
               "time" : 0,
@@ -26,21 +26,21 @@
               "action" : "sound",
               "options" : [ "/sfx/projectiles/astraltear_stop2.ogg" ]
             },
-            {
-              "time" : 0,
-              "repeat" : false,
-              "action" : "loop",
-              "count" : 20,
-              "body" : [
-                {
-                  "action" : "projectile",
-                  "type" : "redplasmatorpedo",
-                  "angle" : -90,
-                  "offsetRange" : [-50, 30, 50, 30],
-                  "config" : {"power" : 225, "speed" : 1, "acceleration" : 40, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ { "time" : 0, "repeat" : false, "action" : "projectile", "type" : "redpulsecannonexplosion"} ] }
-                }
-              ]
-            }
+			{
+			  "time" : 0,
+			  "repeat" : false,
+			  "action" : "loop",
+			  "count" : 20,
+			  "body" : [
+			    {
+				  "action" : "projectile",
+				  "type" : "redplasmatorpedo",
+				  "angle" : -90,
+				  "offsetRange" : [-50, 50, 50, 50],
+				  "config" : {"power" : 225, "speed" : 20, "movementSettings" : { "collisionEnabled" : false }, "periodicActions" : [ { "time" : 0, "repeat" : false, "action" : "projectile", "type" : "redpulsecannonexplosion"} ] }
+				}
+			  ]
+			}
           ]
         }
       }

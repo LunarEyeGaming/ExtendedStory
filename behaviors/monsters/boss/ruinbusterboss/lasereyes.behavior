@@ -19,27 +19,27 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "failer",
+			"type": "decorator",
+			"name": "failer",
+			"parameters": {},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
                   "title": "entityDirection",
                   "type": "action",
                   "name": "entityDirection",
@@ -50,123 +50,123 @@
                     "vector": "aimVector"
                   }
                 },
-                {
-                  "title": "vecAngle",
-                  "type": "action",
-                  "name": "vecAngle",
-                  "parameters": {
-                    "vector": {"key": "aimVector"}
-                  },
-                  "output": {
-                    "angle": "targetAngle"
-                  }
-                },
-                {
-                  "title": "vecRotate",
-                  "type": "action",
-                  "name": "vecRotate",
-                  "parameters": {
-                    "vector": {"value": [12, 0]},
-                    "angle": {"key": "targetAngle"}
-                  },
-                  "output": {
-                    "vector": "targetVelocity"
-                  }
-                },
-                {
-                  "title": "controlApproachVelocity",
-                  "type": "action",
-                  "name": "controlApproachVelocity",
-                  "parameters": {
-                    "force": {"value": 200},
-                    "velocity": {"key": "targetVelocity"}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "rotateTransformationGroup",
-                  "type": "action",
-                  "name": "rotateTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"},
-                    "angle": {"key": "targetAngle"}
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.01}
-                  }
-                },
-                {
-                  "title": "resetTransformationGroup",
-                  "type": "action",
-                  "name": "resetTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "animate",
-            "type": "action",
-            "name": "animate",
-            "parameters": {
-              "fallback": {"value": "winddown"},
-              "state": {"value": "windup"},
-              "type": {"value": "thrusters"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 2}
-            }
-          }
-        ]
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "failer",
-            "type": "decorator",
-            "name": "failer",
-            "parameters": {},
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
+			    {
+	              "title": "vecAngle",
+	        	  "type": "action",
+	        	  "name": "vecAngle",
+	        	  "parameters": {
+	        	    "vector": {"key": "aimVector"}
+	        	  },
+	        	  "output": {
+	        	    "angle": "targetAngle"
+	        	  }
+	            },
+			    {
+	              "title": "vecRotate",
+	        	  "type": "action",
+	        	  "name": "vecRotate",
+	        	  "parameters": {
+	        	    "vector": {"value": [12, 0]},
+					"angle": {"key": "targetAngle"}
+	        	  },
+	        	  "output": {
+	        	    "vector": "targetVelocity"
+	        	  }
+	            },
+				{
+				  "title": "controlApproachVelocity",
+				  "type": "action",
+				  "name": "controlApproachVelocity",
+				  "parameters": {
+				    "force": {"value": 200},
+					"velocity": {"key": "targetVelocity"}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+				{
+				  "title": "rotateTransformationGroup",
+				  "type": "action",
+				  "name": "rotateTransformationGroup",
+				  "parameters": {
+				    "transformationGroup": {"value": "body"},
+					"angle": {"key": "targetAngle"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				},
+				{
+				  "title": "resetTransformationGroup",
+				  "type": "action",
+				  "name": "resetTransformationGroup",
+				  "parameters": {
+				    "transformationGroup": {"value": "body"}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+			"title": "timer",
+			"type": "action",
+			"name": "timer",
+			"parameters": {
+			  "time": {"value": 2}
+			}
+		  }
+		]
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "failer",
+			"type": "decorator",
+			"name": "failer",
+			"parameters": {},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
                   "title": "entityDirection",
                   "type": "action",
                   "name": "entityDirection",
@@ -177,217 +177,217 @@
                     "vector": "aimVector"
                   }
                 },
-                {
-                  "title": "vecAngle",
-                  "type": "action",
-                  "name": "vecAngle",
-                  "parameters": {
-                    "vector": {"key": "aimVector"}
-                  },
-                  "output": {
-                    "angle": "targetAngle"
-                  }
-                },
-                {
-                  "title": "vecRotate",
-                  "type": "action",
-                  "name": "vecRotate",
-                  "parameters": {
-                    "vector": {"value": [1, 0]},
-                    "angle": {"key": "targetAngle"}
-                  },
-                  "output": {
-                    "vector": "targetVelocity"
-                  }
-                },
-                {
-                  "title": "controlApproachVelocity",
-                  "type": "action",
-                  "name": "controlApproachVelocity",
-                  "parameters": {
-                    "force": {"value": 200},
-                    "velocity": {"key": "targetVelocity"}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "rotateTransformationGroup",
-                  "type": "action",
-                  "name": "rotateTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"},
-                    "angle": {"key": "targetAngle"}
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.01}
-                  }
-                },
-                {
-                  "title": "resetTransformationGroup",
-                  "type": "action",
-                  "name": "resetTransformationGroup",
-                  "parameters": {
-                    "transformationGroup": {"value": "body"}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "entityDirection",
-                  "type": "action",
-                  "name": "entityDirection",
-                  "parameters": {
-                    "target": {"key": "target"}
-                  },
-                  "output": {
-                    "vector": "aimVector"
-                  }
-                },
-                {
-                  "title": "vecRotate",
-                  "type": "action",
-                  "name": "vecRotate",
-                  "parameters": {
-                    "vector": {"value": [8, 4]},
-                    "angle": {"key": "targetAngle"}
-                  },
-                  "output": {
-                    "vector": "laserOffset1"
-                  }
-                },
-                {
-                  "title": "vecRotate",
-                  "type": "action",
-                  "name": "vecRotate",
-                  "parameters": {
-                    "vector": {"value": [8, -4]},
-                    "angle": {"key": "targetAngle"}
-                  },
-                  "output": {
-                    "vector": "laserOffset2"
-                  }
-                },
-                {
-                  "title": "spawnProjectile",
+			    {
+	              "title": "vecAngle",
+	        	  "type": "action",
+	        	  "name": "vecAngle",
+	        	  "parameters": {
+	        	    "vector": {"key": "aimVector"}
+	        	  },
+	        	  "output": {
+	        	    "angle": "targetAngle"
+	        	  }
+	            },
+			    {
+	              "title": "vecRotate",
+	        	  "type": "action",
+	        	  "name": "vecRotate",
+	        	  "parameters": {
+	        	    "vector": {"value": [1, 0]},
+					"angle": {"key": "targetAngle"}
+	        	  },
+	        	  "output": {
+	        	    "vector": "targetVelocity"
+	        	  }
+	            },
+				{
+				  "title": "controlApproachVelocity",
+				  "type": "action",
+				  "name": "controlApproachVelocity",
+				  "parameters": {
+				    "force": {"value": 200},
+					"velocity": {"key": "targetVelocity"}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+				{
+				  "title": "rotateTransformationGroup",
+				  "type": "action",
+				  "name": "rotateTransformationGroup",
+				  "parameters": {
+				    "transformationGroup": {"value": "body"},
+					"angle": {"key": "targetAngle"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.01}
+				  }
+				},
+				{
+				  "title": "resetTransformationGroup",
+				  "type": "action",
+				  "name": "resetTransformationGroup",
+				  "parameters": {
+				    "transformationGroup": {"value": "body"}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+        	      "title": "entityDirection",
+        	      "type": "action",
+        	      "name": "entityDirection",
+        	      "parameters": {
+        	        "target": {"key": "target"}
+        	      },
+        	      "output": {
+        	        "vector": "aimVector"
+        	      }
+        	    },
+			    {
+	              "title": "vecRotate",
+	        	  "type": "action",
+	        	  "name": "vecRotate",
+	        	  "parameters": {
+	        	    "vector": {"value": [8, 4]},
+					"angle": {"key": "targetAngle"}
+	        	  },
+	        	  "output": {
+	        	    "vector": "laserOffset1"
+	        	  }
+	            },
+			    {
+	              "title": "vecRotate",
+	        	  "type": "action",
+	        	  "name": "vecRotate",
+	        	  "parameters": {
+	        	    "vector": {"value": [8, -4]},
+					"angle": {"key": "targetAngle"}
+	        	  },
+	        	  "output": {
+	        	    "vector": "laserOffset2"
+	        	  }
+	            },
+			    {
+    		      "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
                     "offset": {"key": "laserOffset1"},
                     "position": {"key": "self"},
-                    "projectileConfig": {"value": {"timeToLive": 0, "power": 3, "actionOnReap": [{"action": "projectile", "type": "genericlaser", "fuzzAngle": 15, "inheritDamageFactor": 1, "config": {"processing": "?hueshift=149", "speed": 80}}]}},
+                    "projectileConfig": {"value": {"timeToLive": 0, "power": 2, "actionOnReap": [{"action": "projectile", "type": "genericlaser", "fuzzAngle": 15, "inheritDamageFactor": 1, "config": {"processing": "?hueshift=149", "speed": 35}}]}},
                     "projectileType": {"value": "delayprojectile"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
                     "trackSource": {"value": false}
                   }
                 },
-                {
-                  "title": "spawnProjectile",
+			    {
+    		      "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
                     "aimVector": {"key": "aimVector"},
                     "offset": {"key": "laserOffset2"},
                     "position": {"key": "self"},
-                    "projectileConfig": {"value": {"timeToLive": 0, "power": 3, "actionOnReap": [{"action": "projectile", "type": "genericlaser", "fuzzAngle": 15, "inheritDamageFactor": 1, "config": {"processing": "?hueshift=149", "speed": 80}}]}},
+                    "projectileConfig": {"value": {"timeToLive": 0, "power": 2, "actionOnReap": [{"action": "projectile", "type": "genericlaser", "fuzzAngle": 15, "inheritDamageFactor": 1, "config": {"processing": "?hueshift=149", "speed": 35}}]}},
                     "projectileType": {"value": "delayprojectile"},
                     "scalePower": {"value": true},
                     "sourceEntity": {"key": "self"},
                     "trackSource": {"value": false}
                   }
                 },
-                {
-                  "title": "playSound",
-                  "type": "action",
-                  "name": "playSound",
-                  "parameters": {
-                    "sound": {"value": "laserfire"}
-                  }
-                },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.1}
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "title": "animate",
-            "type": "action",
-            "name": "animate",
-            "parameters": {
-              "fallback": {"value": "winddown"},
-              "state": {"value": "windup"},
-              "type": {"value": "thrusters"}
-            }
-          },
-          {
-            "title": "animate",
-            "type": "action",
-            "name": "animate",
-            "parameters": {
-              "fallback": {"value": "winddown"},
-              "state": {"value": "windup"},
-              "type": {"value": "eyes"}
-            }
-          },
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 5}
-            }
-          }
-        ]
-      },
-      {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-          "transformationGroup": {"value": "body"}
-        }
-      },
+				{
+				  "title": "playSound",
+				  "type": "action",
+				  "name": "playSound",
+				  "parameters": {
+				    "sound": {"value": "laserfire"}
+				  }
+				},
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.1}
+				  }
+				}
+			  ]
+			}
+		  },
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "thrusters"}
+			}
+		  },
+		  {
+		    "title": "animate",
+			"type": "action",
+			"name": "animate",
+			"parameters": {
+			  "fallback": {"value": "winddown"},
+			  "state": {"value": "windup"},
+			  "type": {"value": "eyes"}
+			}
+		  },
+		  {
+			"title": "timer",
+			"type": "action",
+			"name": "timer",
+			"parameters": {
+			  "time": {"value": 5}
+			}
+		  }
+		]
+	  },
+	  {
+		"title": "resetTransformationGroup",
+		"type": "action",
+		"name": "resetTransformationGroup",
+		"parameters": {
+		  "transformationGroup": {"value": "body"}
+		}
+	  },
       {
         "title": "setVelocity",
         "type": "action",

@@ -9,7 +9,7 @@
   "category" : "Ancient Pistol",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged","machinepistol"],
-  "level" : 8,
+  "level" : 10,
   
   "critChance" : 2,
   "critBonus" : 5,
@@ -27,11 +27,6 @@
   "animationCustom" : {
     "sounds" : {
       "fire" : ["/sfx/gun/ancientpistol_fire.ogg"]
-    },
-    "lights" : {
-      "muzzleFlash" : {
-        "color" : [100, 0, 100]
-      }
     }
   },
 
@@ -50,8 +45,8 @@
 
     "fireTime" : 0.11,
     "baseDps" : 8.0,
-    "energyUsage" : 40,
-    "inaccuracy" : 0.02,
+    "energyUsage" : 10,
+    "inaccuracy" : 0.0,
 
     "projectileCount" : 1,
     "fireType" : "auto",

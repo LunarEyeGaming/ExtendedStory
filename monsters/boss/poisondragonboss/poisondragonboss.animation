@@ -77,7 +77,7 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
-          "transformationGroups" : ["body"]
+		  "transformationGroups" : ["body"]
         },
 
         "partStates" : {
@@ -180,7 +180,7 @@
 
   "transformationGroups" : {
     "head" : { "interpolated" : true},
-    "body" : {"interpolated" : true}
+	"body" : {"interpolated" : true}
   },
 
   "particleEmitters" : {
@@ -194,7 +194,7 @@
         { "particle" : "firesmoke" }
       ]
     },
-    "firewindup" : {
+	"firewindup" : {
       "active" : false,
       "emissionRate" : 100,
       "offsetRegion" : [4.125, 2.5, 4.125, 2.5],
@@ -207,7 +207,7 @@
             "rotation" : 0,
             "initialVelocity" : [0, 0],
             "layer" : "front",
-            "fullbright" : true,
+			"fullbright" : true,
             "variance" : {
               "rotation" : 180
             }
@@ -222,7 +222,7 @@
         { "particle" : "dust4" }
       ]
     },
-    "spitwindup" : {
+	"spitwindup" : {
       "active" : false,
       "burstCount" : 75,
       "offsetRegion" : [4.125, 2.5, 13, 0],
@@ -235,7 +235,7 @@
             "rotation" : 0,
             "initialVelocity" : [0, 0],
             "layer" : "front",
-            "fullbright" : true,
+			"fullbright" : true,
             "variance" : {
               "rotation" : 180
             }
@@ -255,7 +255,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -270,7 +270,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -285,7 +285,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -300,7 +300,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -315,7 +315,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -330,7 +330,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -345,7 +345,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -360,7 +360,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -375,7 +375,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -390,7 +390,7 @@
             "destructionTime" : 0,
             "fade" : 1,
             "size" : 1,
-            "position": [0, 0],
+			"position": [0, 0],
             "layer" : "front",
             "timeToLive" : 0.6,
             "variance" : {
@@ -398,14 +398,14 @@
             }
           }
         },
-        {
+	    {
           "particle" : {
             "type" : "textured",
             "image" : "/animations/destroyerteleport/destroyerteleport.png:8",
             "position" : [0, 0],
             "layer" : "front",
             "timeToLive" : 0.0,
-            "size" : 10,
+	    	"size" : 10,
             "destructionTime" : 0.5,
             "destructionAction" : "fade",
             "fullbright" : true
@@ -422,22 +422,22 @@
       "pool" : [ "/sfx/npc/boss/dragonboss_fireball1.ogg", "/sfx/npc/boss/dragonboss_fireball3.ogg", "/sfx/npc/boss/dragonboss_fireball4.ogg", "/sfx/npc/boss/dragonboss_fireball5.ogg" ],
       "rangeMultiplier" : 2.0
     },
-    "fire" : {
-      "pool" : ["/sfx/npc/boss/dragonboss_fireball1.ogg"],
-      "rangeMultiplier" : 2.0
-    },
-    "spitwindup" : {
-      "pool" : ["/sfx/npc/monsters/pteropod_windup.ogg"],
-      "rangeMultiplier" : 2.0
-    },
-    "spit" : {
-      "pool" : ["/sfx/npc/boss/poisondragonboss_spit.ogg"],
-      "rangeMultiplier" : 2.0
-    },
-    "firebreath" : {
-      "pool" : ["/sfx/objects/flametrap_loop.ogg"],
-      "rangeMultiplier" : 2.0
-    },
+	"fire" : {
+	  "pool" : ["/sfx/npc/boss/dragonboss_fireball1.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"spitwindup" : {
+	  "pool" : ["/sfx/npc/monsters/pteropod_windup.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"spit" : {
+	  "pool" : ["/sfx/npc/boss/poisondragonboss_spit.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
+	"firebreath" : {
+	  "pool" : ["/sfx/objects/flametrap_loop.ogg"],
+	  "rangeMultiplier" : 2.0
+	},
     "blockBuster1" : {
       "pool" : [ "/sfx/npc/boss/dragonboss_blockbuster_start.ogg" ],
       "rangeMultiplier" : 2.0
@@ -459,9 +459,9 @@
       "rangeMultiplier" : 2.0
     },
     "slam" : {
-      "pool" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
-      "rangeMultiplier" : 2.0
-    }
+	  "pool" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
+	  "rangeMultiplier" : 2.0
+	}
   },
 
   "effects" : {

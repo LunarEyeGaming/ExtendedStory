@@ -19,7 +19,7 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
+	  {
         "title": "burstParticleEmitter",
         "type": "action",
         "name": "burstParticleEmitter",
@@ -27,13 +27,13 @@
           "emitter": {"value": "teleport"}
         }
       },
-      {
-        "title": "playSound",
-        "type": "action",
-        "name": "playSound",
-        "parameters": {
-          "sound": {"value": "teleportOut"}
-        }
+	  {
+    	"title": "playSound",
+    	"type": "action",
+    	"name": "playSound",
+    	"parameters": {
+    	  "sound": {"value": "teleportOut"}
+    	}
       },
       {
         "title": "timer",
@@ -52,7 +52,7 @@
           "type": {"value": "invisible"}
         }
       },
-      {
+	  {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",
@@ -61,7 +61,7 @@
           "active": {"value": false}
         }
       },
-      {
+	  {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -70,7 +70,7 @@
           "type": {"value": "movement"}
         }
       },
-      {
+	  {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -79,32 +79,32 @@
           "success": {"value": 2}
         },
         "children": [
-          {
-            "title": "timer",
-            "type": "action",
-            "name": "timer",
-            "parameters": {
-              "time": {"value": 1}
-            }
-          },
-          {
-            "title": "addEphemeralEffect",
-            "type": "action",
-            "name": "addEphemeralEffect",
-            "parameters": {
-              "name": {"value": "invulnerable"}
-            }
-          }
-        ]
-      },
-      {
-        "title": "removeEphemeralEffect",
-        "type": "action",
-        "name": "removeEphemeralEffect",
-        "parameters": {
-          "name": {"value": "invulnerable"}
-        }
-      },
+		  {
+    	    "title": "timer",
+    	    "type": "action",
+    	    "name": "timer",
+    	    "parameters": {
+    	      "time": {"value": 1}
+    	    }
+    	  },
+		  {
+		    "title": "addEphemeralEffect",
+		    "type": "action",
+		    "name": "addEphemeralEffect",
+		    "parameters": {
+		      "name": {"value": "invulnerable"}
+		    }
+		  }
+		]
+	  },
+	  {
+	    "title": "removeEphemeralEffect",
+	    "type": "action",
+	    "name": "removeEphemeralEffect",
+	    "parameters": {
+	      "name": {"value": "invulnerable"}
+	    }
+	  },
       {
         "title": "entityPosition",
         "type": "action",
@@ -161,7 +161,7 @@
           "type": {"value": "invisible"}
         }
       },
-      {
+	  {
         "title": "setParticleEmitterActive",
         "type": "action",
         "name": "setParticleEmitterActive",
@@ -262,7 +262,7 @@
           "time": {"value": 0.5}
         }
       },
-      {
+	  {
         "title": "setVelocity",
         "type": "action",
         "name": "setVelocity",
@@ -270,15 +270,7 @@
           "velocity": {"value": [0, -50]}
         }
       },
-      {
-        "title": "setDamageOnTouch",
-        "type": "action",
-        "name": "setDamageOnTouch",
-        "parameters": {
-          "touchDamage": {"value": true}
-        }
-      },
-      {
+	  {
         "title": "parallel",
         "type": "composite",
         "name": "parallel",
@@ -287,7 +279,7 @@
           "success": {"value": -1}
         },
         "children": [
-          {
+		  {
             "title": "controlParameters",
             "type": "action",
             "name": "controlParameters",
@@ -323,8 +315,8 @@
               }
             ]
           }
-        ]
-      },
+		]
+	  },
       {
         "title": "setDamageOnTouch",
         "type": "action",
@@ -333,7 +325,7 @@
           "touchDamage": {"value": false}
         }
       },
-      {
+	  {
         "title": "controlParameters",
         "type": "action",
         "name": "controlParameters",
@@ -341,22 +333,22 @@
           "parameters": {"value": {"gravityEnabled": false}}
         }
       },
-      {
+	  {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-          "sound": {"value": "landing"}
-        }
+		  "sound": {"value": "landing"}
+		}
       },
-      {
-        "title": "burstParticleEmitter",
-        "type": "action",
-        "name": "burstParticleEmitter",
-        "parameters": {
-          "emitter": {"value": "landing"}
-        }
-      },
+	  {
+		"title": "burstParticleEmitter",
+		"type": "action",
+		"name": "burstParticleEmitter",
+		"parameters": {
+		  "emitter": {"value": "landing"}
+		}
+	  },
       {
         "title": "setVelocity",
         "type": "action",
@@ -365,14 +357,14 @@
           "velocity": {"value": [0, 0]}
         }
       },
-      {
+	  {
         "title": "playSound",
         "type": "action",
         "name": "playSound",
         "parameters": {
-          "sound": {"value": "stunned"},
-          "loops": {"value": -1}
-        }
+		  "sound": {"value": "stunned"},
+		  "loops": {"value": -1}
+		}
       },
       {
         "title": "parallel",
@@ -401,20 +393,176 @@
           }
         ]
       },
-      {
+	  {
         "title": "stopAllSounds",
         "type": "action",
         "name": "stopAllSounds",
         "parameters": {
-          "sound": {"value": "stunned"}
+		  "sound": {"value": "stunned"}
+		}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.01}
+        }
+      },
+	  {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "teleport"}
+        }
+      },
+	  {
+    	"title": "playSound",
+    	"type": "action",
+    	"name": "playSound",
+    	"parameters": {
+    	  "sound": {"value": "teleportOut"}
+    	}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
         }
       },
       {
-        "title": "ancientboss-teleportto",
-        "type": "module",
-        "name": "ancientboss-teleportto",
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
         "parameters": {
-          "teleportPosition": {"key": "spawn"}
+          "tag": {"value": "I"},
+          "type": {"value": "invisible"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": false}
+        }
+      },
+	  {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "invisible"},
+          "type": {"value": "movement"}
+        }
+      },
+	  {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": 2}
+        },
+        "children": [
+		  {
+    	    "title": "timer",
+    	    "type": "action",
+    	    "name": "timer",
+    	    "parameters": {
+    	      "time": {"value": 1}
+    	    }
+    	  },
+		  {
+		    "title": "addEphemeralEffect",
+		    "type": "action",
+		    "name": "addEphemeralEffect",
+		    "parameters": {
+		      "name": {"value": "invulnerable"}
+		    }
+		  }
+		]
+	  },
+	  {
+	    "title": "removeEphemeralEffect",
+	    "type": "action",
+	    "name": "removeEphemeralEffect",
+	    "parameters": {
+	      "name": {"value": "invulnerable"}
+	    }
+	  },
+      {
+        "title": "entityPosition",
+        "type": "action",
+        "name": "entityPosition",
+        "parameters": {
+          "entity": {"key": "target"}
+        },
+        "output": {
+          "position": "targetPos"
+        }
+      },
+      {
+        "title": "setPosition",
+        "type": "action",
+        "name": "setPosition",
+        "parameters": {
+          "position": {"key": "spawn"}
+        }
+      },
+      {
+        "title": "burstParticleEmitter",
+        "type": "action",
+        "name": "burstParticleEmitter",
+        "parameters": {
+          "emitter": {"value": "teleport"}
+        }
+      },
+      {
+        "title": "playSound",
+        "type": "action",
+        "name": "playSound",
+        "parameters": {
+          "sound": {"value": "teleportIn"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      },
+      {
+        "title": "setGlobalTag",
+        "type": "action",
+        "name": "setGlobalTag",
+        "parameters": {
+          "tag": {"value": ""},
+          "type": {"value": "invisible"}
+        }
+      },
+	  {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "emitter": {"value": "idle"},
+          "active": {"value": true}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "visible"},
+          "type": {"value": "movement"}
         }
       }
     ]

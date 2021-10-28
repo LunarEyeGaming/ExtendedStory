@@ -28,39 +28,39 @@
           "emitter": {"value": "predeath"}
         }
       },
-      {
-        "title": "stopAllSounds",
-        "type": "action",
-        "name": "stopAllSounds",
-        "parameters": {
-          "sound": {"value": "firebreath"}
-        }
-      },
-      {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-          "transformationGroup": {"value": "head"}
-        }
-      },
-      {
-        "title": "resetTransformationGroup",
-        "type": "action",
-        "name": "resetTransformationGroup",
-        "parameters": {
-          "transformationGroup": {"value": "body"}
-        }
-      },
-      {
-        "title": "setParticleEmitterActive",
-        "type": "action",
-        "name": "setParticleEmitterActive",
-        "parameters": {
-          "emitter": {"value": "firewindup"},
-          "active": {"value": false}
-        }
-      },
+	  {
+	    "title": "stopAllSounds",
+		"type": "action",
+		"name": "stopAllSounds",
+		"parameters": {
+		  "sound": {"value": "firebreath"}
+		}
+	  },
+	  {
+	    "title": "resetTransformationGroup",
+		"type": "action",
+		"name": "resetTransformationGroup",
+		"parameters": {
+		  "transformationGroup": {"value": "head"}
+		}
+	  },
+	  {
+	    "title": "resetTransformationGroup",
+		"type": "action",
+		"name": "resetTransformationGroup",
+		"parameters": {
+		  "transformationGroup": {"value": "body"}
+		}
+	  },
+	  {
+	    "title": "setParticleEmitterActive",
+		"type": "action",
+		"name": "setParticleEmitterActive",
+		"parameters": {
+		  "emitter": {"value": "firewindup"},
+		  "active": {"value": false}
+		}
+	  },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -70,7 +70,7 @@
           "type": {"value": "attack"}
         }
       },
-      {
+	  {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",

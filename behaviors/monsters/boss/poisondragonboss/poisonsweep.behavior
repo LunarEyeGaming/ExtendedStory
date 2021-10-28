@@ -13,9 +13,9 @@
   ],
   "parameters": {
     "startingPos": [50, 0],
-    "endingPos": [-50, 0],
-    "aimVector": [1, 0],
-    "projectileOffset": [7.875, -1.5]
+	"endingPos": [-50, 0],
+	"aimVector": [1, 0],
+	"projectileOffset": [7.875, -1.5]
   },
   "root": {
     "title": "sequence",
@@ -24,38 +24,38 @@
     "parameters": {},
     "children": [
       {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "spawn"},
-          "offset": {"key": "<startingPos>"}
-        },
-        "output": {
-          "position": "startingPosition"
-        }
-      },
-      {
-        "title": "offsetPosition",
-        "type": "action",
-        "name": "offsetPosition",
-        "parameters": {
-          "position": {"key": "spawn"},
-          "offset": {"key": "<endingPos>"}
-        },
-        "output": {
-          "position": "endingPosition"
-        }
-      },
-      {
-        "title": "flyToPosition",
-        "type": "action",
-        "name": "flyToPosition",
-        "parameters": {
-          "position": {"key": "startingPosition"},
-          "speed": {"value": 25}
-        }
-      },
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "offset": {"key": "<startingPos>"}
+		},
+		"output": {
+		  "position": "startingPosition"
+		}
+	  },
+	  {
+		"title": "offsetPosition",
+		"type": "action",
+		"name": "offsetPosition",
+		"parameters": {
+		  "position": {"key": "spawn"},
+		  "offset": {"key": "<endingPos>"}
+		},
+		"output": {
+		  "position": "endingPosition"
+		}
+	  },
+	  {
+		"title": "flyToPosition",
+		"type": "action",
+		"name": "flyToPosition",
+		"parameters": {
+		  "position": {"key": "startingPosition"},
+		  "speed": {"value": 25}
+		}
+	  },
       {
         "title": "setAnimationState",
         "type": "action",
@@ -65,47 +65,47 @@
           "type": {"value": "attack"}
         }
       },
-      {
-        "title": "timer",
-        "type": "action",
-        "name": "timer",
-        "parameters": {
-          "time": {"value": 0.35}
-        }
-      },
-      {
-        "title": "parallel",
-        "type": "composite",
-        "name": "parallel",
-        "parameters": {
-          "fail": {"value": -1},
-          "success": {"value": 1}
-        },
-        "children": [
-          {
-            "title": "flyToPosition",
-            "type": "action",
-            "name": "flyToPosition",
-            "parameters": {
-              "position": {"key": "endingPosition"},
-              "speed": {"value": 75}
-            }
-          },
-          {
-            "title": "repeater",
-            "type": "decorator",
-            "name": "repeater",
-            "parameters": {
-              "maxLoops": {"value": -1}
-            },
-            "child": {
-              "title": "sequence",
-              "type": "composite",
-              "name": "sequence",
-              "parameters": {},
-              "children": [
-                {
-                  "title": "spawnProjectile",
+	  {
+	    "title": "timer",
+		"type": "action",
+		"name": "timer",
+		"parameters": {
+		  "time": {"value": 0.35}
+		}
+	  },
+	  {
+	    "title": "parallel",
+		"type": "composite",
+		"name": "parallel",
+		"parameters": {
+		  "fail": {"value": -1},
+		  "success": {"value": 1}
+		},
+		"children": [
+		  {
+		    "title": "flyToPosition",
+			"type": "action",
+			"name": "flyToPosition",
+			"parameters": {
+			  "position": {"key": "endingPosition"},
+			  "speed": {"value": 75}
+			}
+		  },
+		  {
+		    "title": "repeater",
+			"type": "decorator",
+			"name": "repeater",
+			"parameters": {
+			  "maxLoops": {"value": -1}
+			},
+			"child": {
+			  "title": "sequence",
+			  "type": "composite",
+			  "name": "sequence",
+			  "parameters": {},
+			  "children": [
+			    {
+    		      "title": "spawnProjectile",
                   "type": "action",
                   "name": "spawnProjectile",
                   "parameters": {
@@ -127,19 +127,19 @@
                     "sound": {"value": "flameBreath"}
                   }
                 },
-                {
-                  "title": "timer",
-                  "type": "action",
-                  "name": "timer",
-                  "parameters": {
-                    "time": {"value": 0.2}
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
+				{
+				  "title": "timer",
+				  "type": "action",
+				  "name": "timer",
+				  "parameters": {
+				    "time": {"value": 0.2}
+				  }
+				}
+			  ]
+			}
+		  }
+		]
+	  },
       {
         "title": "setAnimationState",
         "type": "action",
