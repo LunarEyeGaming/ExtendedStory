@@ -17,7 +17,7 @@
 	}
   ],
   "emitters" : [ ],
-  "damageKind" : "nodamage",
+  "damageKind" : "applystatus",
   "statusEffects" : [ "healthgiverstatus_es", "healimpairedblock_es", "healthplagueblock_es" ],
   "lightColor" : [0, 128, 0]
 }

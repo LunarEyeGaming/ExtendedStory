@@ -14,12 +14,13 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-	  {
+      {
         "title": "flyToPosition",
         "type": "action",
         "name": "flyToPosition",
         "parameters": {
           "position": {"key": "hover"},
+          "speed": {"value": 20},
           "tolerance": {"value": 1}
         }
       },
@@ -31,23 +32,23 @@
           "velocity": {"value": [0, 0]}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "faceDirection",
         "type": "action",
         "name": "faceDirection",
         "parameters": {
-		  "direction": {"value": 1}
-		}
+          "direction": {"value": 1}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -56,22 +57,22 @@
           "type": {"value": "eye4"}
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 3.0}
-		}
+          "time": {"value": 3.0}
+        }
       },
-	  {
+      {
         "title": "repeater",
         "type": "decorator",
         "name": "repeater",
         "parameters": {
-		  "maxLoops": {"value": 1},
-		  "untilSuccess": {"value": false}
-		},
+          "maxLoops": {"value": 1},
+          "untilSuccess": {"value": false}
+        },
         "child": {
           "title": "sequence",
           "type": "composite",
@@ -96,22 +97,22 @@
           ]
         }
       },
-	  {
+      {
         "title": "timer",
         "type": "action",
         "name": "timer",
         "parameters": {
-		  "time": {"value": 0.5}
-		}
+          "time": {"value": 0.5}
+        }
       },
-	  {
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
         "parameters": {
           "state": {"value": "winddown"},
           "type": {"value": "eye4"}
-		}
+        }
       }
     ]
   }

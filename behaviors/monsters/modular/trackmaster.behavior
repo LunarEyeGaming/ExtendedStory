@@ -1,0 +1,15 @@
+{
+  "name": "trackmaster_es",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/trackmaster_es.lua"
+  ],
+  "parameters": {
+  },
+  "root": {
+    "title": "trackMaster_es",
+    "type": "action",
+    "name": "trackMaster_es",
+    "parameters": {}
+  }
+}
