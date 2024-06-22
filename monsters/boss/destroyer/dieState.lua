@@ -3,7 +3,7 @@ dieState = {}
 
 dieState.enterWith = function(params)
   if not params.die then return nil end
-  
+
   rangedAttack.setConfig(config.getParameter("projectiles.deathexplosion.type"), config.getParameter("projectiles.deathexplosion.config"), 0.2)
 
   return {
@@ -15,7 +15,12 @@ end
 function dieState.enteringState(stateData)
   animator.setAnimationState("movesound", "off")
   animator.setAnimationState("movement", "visible")
-  world.sendEntityMessage("destroyerborder", "destroyerDefeated")
+
+  local queried = world.entityQuery(mcontroller.position(), 1000, {includedTypes = {"projectile"}})
+
+  for _, entityId in ipairs(queried) do
+    world.sendEntityMessage(entityId, "destroyerDefeated")
+  end
 end
 
 function dieState.update(dt, stateData)

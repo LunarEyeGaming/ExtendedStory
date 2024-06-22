@@ -21,42 +21,42 @@
       "action" : "sound",
       "options" : [ "/sfx/objects/flametrap_on.ogg" ]
     },
-	{
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/mediumflamefire/mediumflamefire.animation",
-		"fullbright" : true,
-		"light" : [218, 83, 2],
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 1],
-		"position" : [0, 32],
-		"timeToLive" : 1,
-		"variance" : {
-		  "position" : [3, 32],
-		  "initialVelocity" : [2, 0]
-		}
-	  }
-	},
-	{
-	  "time" : 0.01,
-	  "action" : "particle",
-	  "specification" : {
-	    "type" : "animated",
-		"animation" : "/animations/statuseffects/burning/burning.animation",
-		"fullbright" : true,
-		"light" : [148, 55, 0],
-		"initialVelocity" : [0, 0],
-		"finalVelocity" : [0, 1],
-		"position" : [0, 0],
-		"timeToLive" : 1,
-		"variance" : {
-		  "position" : [3, 0],
-		  "initialVelocity" : [2, 0]
-		}
-	  }
-	}
+    {
+      "time" : 0.01,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/mediumflamefire/mediumflamefire.animation",
+        "fullbright" : true,
+        "light" : [218, 83, 2],
+        "initialVelocity" : [0, 0],
+        "finalVelocity" : [0, 1],
+        "position" : [0, 32],
+        "timeToLive" : 1,
+        "variance" : {
+          "position" : [3, 32],
+          "initialVelocity" : [2, 0]
+        }
+      }
+    },
+    {
+      "time" : 0.01,
+      "action" : "particle",
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/statuseffects/burning/burning.animation",
+        "fullbright" : true,
+        "light" : [148, 55, 0],
+        "initialVelocity" : [0, 0],
+        "finalVelocity" : [0, 1],
+        "position" : [0, 0],
+        "timeToLive" : 1,
+        "variance" : {
+          "position" : [3, 0],
+          "initialVelocity" : [2, 0]
+        }
+      }
+    }
   ],
   "actionOnReap" : [
     {
