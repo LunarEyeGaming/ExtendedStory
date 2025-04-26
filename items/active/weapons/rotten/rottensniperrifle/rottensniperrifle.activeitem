@@ -89,7 +89,13 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "elementalConfig" : {
-      "poison" : { "name" : "Blob Cluster", "projectileType" : "rottenblobplayer", "projectileParameters" : {"speed" : 50}}
+      "poison" : { "name" : "Blob Cluster", "projectileType" : "rottenblobplayer", "projectileParameters" : {"speed" : 50,
+      "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    }
+  ]}}
 	  },
 	"burstCount" : 3,
 	"inaccuracy" : 0.1,

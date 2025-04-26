@@ -95,7 +95,13 @@
 	"inaccuracy" : 0.1,
 	"energyUsage" : 40,
 	"elementalConfig" : {
-	  "physical" : { "projectileType" : "energyshardplayer", "projectileParameters" : {"damageType" : "nodamage"} }
+	  "physical" : { "projectileType" : "energyshardplayer", "projectileParameters" : {"damageType" : "nodamage",
+    "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/energyshardexplosion/playerenergyshardexplosion.config"
+    }
+  ]} }
 	}
   },
 

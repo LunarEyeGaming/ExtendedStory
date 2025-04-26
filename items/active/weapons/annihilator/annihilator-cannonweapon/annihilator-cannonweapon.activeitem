@@ -93,7 +93,15 @@
     "name" : "Rebounding Orbs",
 	"elementalConfig" : {
 	  "physical" : {
-	    "projectileType" : "reboundingorbs"
+	    "projectileType" : "reboundingorbs",
+      "projectileParameters" : {
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/destroyerexplosion/destroyerexplosion.config"
+          }
+        ]
+      }
 	  }
 	},
     "energyUsage" : 50,

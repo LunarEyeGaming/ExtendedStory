@@ -92,7 +92,26 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "elementalConfig" : {
-      "poison" : { "name" : "Super Blob", "projectileType" : "rottenblobplayer2", "projectileParameters" : {"speed" : 50}}
+      "poison" : { "name" : "Super Blob", "projectileType" : "rottenblobplayer2", "projectileParameters" : {"speed" : 50,
+      "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    },
+	{
+	  "action" : "loop",
+	  "count" : 5,
+	  "body" : [
+	    {
+		  "action" : "projectile",
+		  "type" : "rottenblobplayer",
+		  "angle" : 90,
+		  "fuzzAngle" : 180,
+          "inheritDamageFactor" : 0.2
+		}
+	  ]
+	}
+  ]}}
 	  },
 	"fireTime" : 3.0
   },

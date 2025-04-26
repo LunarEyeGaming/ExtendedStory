@@ -100,7 +100,19 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "elementalConfig" : {
-      "physical" : { "name" : "Ancient Vortex", "projectileType" : "ancientvortexprepare", "projectileParameters" : {"speed" : 80}}
+      "physical" : { 
+        "name" : "Ancient Vortex",
+        "projectileType" : "ancientvortexprepare",
+        "projectileParameters" : {
+          "speed" : 80,
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/explosions/ancientvortex/ancientvortex.config"
+            }
+          ]
+        }
+      }
 	  },
 
     "stances" : {

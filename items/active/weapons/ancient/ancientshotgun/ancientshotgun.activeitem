@@ -97,7 +97,15 @@
     "name" : "Cluster Ball",
 	"elementalConfig" : {
 	  "physical" : {
-	    "projectileType" : "ancientclusterball_es"
+	    "projectileType" : "ancientclusterball_es",
+      "projectileParameters" : {
+        "actionOnReap" : [
+          {
+            "action" : "config",
+            "file" : "/projectiles/explosions/ancientexplosion/ancientexplosionnontile.config"
+          }
+        ]
+      }
 	  }
 	},
     "energyUsage" : 125,

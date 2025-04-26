@@ -89,7 +89,13 @@
   "altAbilityType" : "explosiveshot",
   "altAbility" : {
     "elementalConfig" : {
-      "poison" : { "name" : "Tooth Bomb", "projectileType" : "rottentoothbomb", "projectileParameters" : {"speed" : 50}, "baseDps" : 9}
+      "poison" : { "name" : "Tooth Bomb", "projectileType" : "rottentoothbomb", "projectileParameters" : {"speed" : 50,
+      "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/rottenexplosion/rottenexplosion.config"
+    }
+  ]}, "baseDps" : 9}
 	  },
 	"fireTime" : 3.0
   },

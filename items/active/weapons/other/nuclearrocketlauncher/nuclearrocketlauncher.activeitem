@@ -42,7 +42,7 @@
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "electric",
+  "elementalType" : "physical",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
@@ -97,7 +97,7 @@
   "altAbilityType" : "grenadelaunchernosprite",
   "altAbility" : {
     "elementalConfig" : {
-      "electric" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}, "fireTime" : 5}
+      "physical" : { "name" : "Super Fusion Shot", "projectileType" : "fusionbubble", "projectileParameters" : {"speed" : 60, "actionOnReap" : [{"action" : "projectile", "type" : "nuclearfusespawner"}]}, "fireTime" : 5}
 	},
 
     "stances" : {

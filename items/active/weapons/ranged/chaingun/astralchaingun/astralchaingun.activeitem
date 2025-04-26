@@ -95,7 +95,12 @@
 	"inaccuracy" : 0.06,
 	"energyUsage" : 100,
 	"elementalConfig" : {
-	  "physical" : { "projectileType" : "astralburst", "projectileParameters" : {} }
+	  "physical" : { "projectileType" : "astralburst", "projectileParameters" : {"actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/astralexplosion/astralburstexplosion.config"
+    }
+  ]} }
 	}
   },
 

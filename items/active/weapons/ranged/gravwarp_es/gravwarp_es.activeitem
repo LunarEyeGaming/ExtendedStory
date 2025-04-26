@@ -125,15 +125,21 @@
     "name" : "Singularity",
 	"elementalConfig" : {
 	  "physical" : {
-	    "projectileType" : "gravwarpshotalt"
+	    "projectileType" : "gravwarpshotalt",
+      "projectileParameters" : {"periodicActions" : [],
+      "actionOnReap" : [
+        {
+          "action" : "config",
+          "file" : "/projectiles/explosions/gravwarpsingularity/gravwarpsingularity.config"
+        }
+      ]},
+        "energyUsage" : 50,
+      "fireTime" : 3.0,
+      "projectileCount" : 1,
+      "inaccuracy" : 0,
+        "fireType" : "auto"
 	  }
-	},
-	"projectileParameters" : {"periodicActions" : []},
-    "energyUsage" : 50,
-	"fireTime" : 3.0,
-	"projectileCount" : 1,
-	"inaccuracy" : 0,
-    "fireType" : "auto"
+	}
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
